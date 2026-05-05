@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Maes Family · Disneyland · July 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --aqua-pale: #C4E4E1;
+  --aqua-mist: #EAF3F2;
+  --aqua: #75AFB1;
+  --aqua-dark: #4F8A8C;
+  --sand: #ECE7DC;
+  --sand-light: #F4F1E9;
+  --gold-whisper: #D6C8A8;
+  --white: #FFFFFF;
+  --paper: #FBFDFD;
+  --ink: #2B2420;
+  --ink-soft: #6B6359;
+  --line: #E5E9E8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.65;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width: 780px; margin: 0 auto; padding: 0 22px; }
+
+/* ============= HERO ============= */
+.hero {
+  background: var(--aqua-mist);
+  padding: 64px 0 52px;
+  border-bottom: 1px solid var(--line);
+  text-align: center;
+}
+.hero-eyebrow {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 19px;
+  color: var(--aqua-dark);
+  margin-bottom: 14px;
+  letter-spacing: 0.5px;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 46px;
+  line-height: 1.1;
+  color: var(--ink);
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+.hero-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 22px;
+  color: var(--ink-soft);
+  margin-bottom: 26px;
+}
+.hero-meta {
+  display: inline-block;
+  border-top: 1px solid var(--gold-whisper);
+  border-bottom: 1px solid var(--gold-whisper);
+  padding: 12px 22px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--ink);
+  letter-spacing: 0.4px;
+}
+
+/* ============= OVERVIEW STRIP ============= */
+.overview-strip {
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+  padding: 28px 0;
+}
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.overview-cell {
+  text-align: center;
+  padding: 0 8px;
+}
+.overview-cell svg {
+  display: block;
+  margin: 0 auto 8px;
+  color: var(--aqua-dark);
+}
+.overview-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-bottom: 4px;
+  letter-spacing: 0.3px;
+}
+.overview-value {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--ink);
+  line-height: 1.35;
+}
+
+/* ============= INTRO ============= */
+.intro {
+  padding: 52px 0 36px;
+  text-align: center;
+}
+.intro p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--ink);
+  max-width: 620px;
+  margin: 0 auto;
+}
+.intro .small-italic {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 17px;
+  color: var(--ink-soft);
+  margin-top: 14px;
+  display: block;
+}
+
+/* ============= SECTION HEADING ============= */
+.section-heading {
+  text-align: center;
+  margin: 36px 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+.section-heading svg { color: var(--aqua-dark); opacity: 0.65; }
+.section-heading h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 28px;
+  color: var(--ink);
+  letter-spacing: -0.3px;
+}
+.section-sub {
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 17px;
+  color: var(--ink-soft);
+  margin-top: -16px;
+  margin-bottom: 28px;
+}
+
+/* ============= FLIGHTS INFORMATIONAL ============= */
+.flights-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 28px 26px;
+  margin-bottom: 24px;
+}
+.flights-meta {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 15px;
+  color: var(--aqua-dark);
+  text-align: center;
+  margin-bottom: 18px;
+}
+.flight-leg {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 14px;
+  align-items: center;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+}
+.flight-leg:first-of-type { border-top: none; }
+.flight-leg-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--aqua-mist);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--aqua-dark);
+}
+.flight-leg-main {
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--ink);
+  line-height: 1.4;
+}
+.flight-leg-times {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin-top: 2px;
+}
+.flight-leg-route {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  letter-spacing: 0.5px;
+}
+.flights-note {
+  margin-top: 18px;
+  padding: 14px 16px;
+  background: var(--sand-light);
+  border-left: 2px solid var(--gold-whisper);
+  font-size: 14px;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.55;
+}
+
+/* dual airline option cards */
+.flights-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+.flight-option {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 20px 18px 16px;
+  display: flex;
+  flex-direction: column;
+}
+.flight-option-airline {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+.flight-option-route {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--aqua-dark);
+  margin-bottom: 4px;
+}
+.flight-option-price {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--ink);
+  letter-spacing: 0.2px;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+.flight-option-price .delta {
+  font-weight: 400;
+  color: var(--ink-soft);
+  font-size: 13px;
+  margin-left: 4px;
+}
+.flight-option .flight-leg {
+  padding: 8px 0;
+  font-size: 13.5px;
+}
+.flight-option .flight-leg-icon {
+  width: 28px;
+  height: 28px;
+}
+.flight-option .flight-leg-icon svg { width: 14px; height: 14px; }
+.flight-option .flight-leg-main { font-size: 13.5px; line-height: 1.35; }
+.flight-option .flight-leg-times { font-size: 12.5px; }
+.flight-option .flight-leg-route { font-size: 11.5px; }
+.flight-option-trade {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 13.5px;
+  color: var(--ink);
+  line-height: 1.5;
+  flex-grow: 1;
+}
+.flight-option-trade strong {
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--aqua-dark);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* ============= RESORT CARDS ============= */
+.resort-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  margin-bottom: 22px;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.resort-card:has(input[type="radio"]:checked) {
+  border-color: var(--aqua-dark);
+  box-shadow: 0 0 0 1px var(--aqua-dark);
+}
+.resort-card-inner { padding: 28px 26px 24px; }
+
+.resort-kicker {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--aqua-dark);
+  margin-bottom: 8px;
+  letter-spacing: 0.4px;
+}
+.resort-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: 6px;
+  letter-spacing: -0.3px;
+}
+.resort-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--ink-soft);
+  margin-bottom: 18px;
+}
+.resort-body p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+.resort-body p:last-child { margin-bottom: 0; }
+
+/* image strip */
+.image-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 20px 0;
+}
+.image-strip img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  border-radius: 3px;
+}
+
+/* amenity grid */
+.amenity-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 22px;
+  margin: 22px 0;
+  padding: 18px 20px;
+  background: var(--sand-light);
+  border-radius: 4px;
+}
+.amenity-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--ink);
+}
+.amenity-item svg {
+  flex-shrink: 0;
+  color: var(--aqua-dark);
+  margin-top: 2px;
+}
+.amenity-item strong { font-weight: 600; }
+
+/* room section */
+.room-section {
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+  margin-top: 18px;
+}
+.room-section h4 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 17px;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.room-section .room-meta {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--aqua-dark);
+  margin-bottom: 8px;
+}
+.room-section p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+/* package pricing box */
+.package-box {
+  background: var(--aqua-pale);
+  border-radius: 4px;
+  padding: 22px 22px 20px;
+  margin: 22px 0 18px;
+}
+.package-kicker {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--aqua-dark);
+  margin-bottom: 4px;
+  letter-spacing: 0.3px;
+}
+.package-amount {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 32px;
+  color: var(--ink);
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+.package-pp {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-top: 4px;
+  font-weight: 400;
+}
+.package-includes {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(79, 138, 140, 0.25);
+}
+.package-includes-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--aqua-dark);
+  margin-bottom: 8px;
+}
+.package-includes ul {
+  list-style: none;
+  font-size: 13.5px;
+  color: var(--ink);
+  line-height: 1.55;
+}
+.package-includes li {
+  padding-left: 14px;
+  position: relative;
+  margin-bottom: 3px;
+}
+.package-includes li:before {
+  content: "·";
+  position: absolute;
+  left: 4px;
+  color: var(--aqua-dark);
+  font-weight: 700;
+}
+.package-fine {
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-top: 12px;
+  font-style: italic;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* selection radio pill */
+.resort-select-row { display: flex; align-items: center; justify-content: center; }
+.resort-radio {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 28px;
+  border: 1.5px solid var(--aqua-dark);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--aqua-dark);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.18s;
+  user-select: none;
+  min-height: 48px;
+}
+.resort-radio:hover { background: var(--aqua-mist); }
+.resort-radio input { display: none; }
+.resort-card:has(input[type="radio"]:checked) .resort-radio {
+  background: var(--aqua-dark);
+  color: var(--white);
+}
+.resort-radio .radio-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1.5px solid currentColor;
+  position: relative;
+}
+.resort-card:has(input[type="radio"]:checked) .radio-dot:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--white);
+}
+
+/* ============= ADD-ONS ============= */
+.addons-section {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 28px 26px;
+  margin-bottom: 24px;
+}
+.addons-section h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--ink);
+  margin-bottom: 6px;
+  text-align: center;
+}
+.addons-intro {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--ink-soft);
+  text-align: center;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+.addon {
+  border-top: 1px solid var(--line);
+  padding: 22px 0;
+}
+.addon:first-of-type { border-top: none; padding-top: 6px; }
+.addon-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+.addon-icon {
+  width: 38px;
+  height: 38px;
+  background: var(--aqua-mist);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--aqua-dark);
+  flex-shrink: 0;
+}
+.addon-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.addon-price {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--aqua-dark);
+}
+.addon-desc {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+.addon-desc em {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 14.5px;
+}
+
+/* addon options - radio pills */
+.addon-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+.addon-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  background: var(--white);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  cursor: pointer;
+  transition: all 0.15s;
+  user-select: none;
+  min-height: 44px;
+}
+.addon-pill:hover { border-color: var(--aqua); background: var(--aqua-mist); }
+.addon-pill input { display: none; }
+.addon-pill.checked,
+.addon-pill:has(input:checked) {
+  background: var(--aqua-dark);
+  color: var(--white);
+  border-color: var(--aqua-dark);
+}
+
+/* ============= NOTES ============= */
+.notes-section {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 24px 26px;
+  margin-bottom: 24px;
+}
+.notes-section h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.notes-section .notes-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 15px;
+  color: var(--ink-soft);
+  margin-bottom: 14px;
+}
+textarea#trip-notes {
+  width: 100%;
+  min-height: 100px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  color: var(--ink);
+  background: var(--paper);
+  resize: vertical;
+  line-height: 1.5;
+}
+textarea#trip-notes:focus {
+  outline: none;
+  border-color: var(--aqua-dark);
+}
+
+/* ============= RUNNING TOTAL ============= */
+.running-total {
+  background: var(--aqua-pale);
+  border-top: 1px solid var(--aqua);
+  border-bottom: 1px solid var(--aqua);
+  padding: 14px 0;
+  margin: 30px 0 0;
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+}
+.running-total-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.running-total-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--aqua-dark);
+}
+.running-total-amount {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--ink);
+  letter-spacing: -0.3px;
+}
+.running-total-pp {
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-top: 2px;
+  font-weight: 400;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ============= FORM ============= */
+.form-section {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 32px 28px;
+  margin: 30px 0 0;
+}
+.form-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 26px;
+  color: var(--ink);
+  text-align: center;
+  margin-bottom: 6px;
+}
+.form-section .form-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--ink-soft);
+  text-align: center;
+  margin-bottom: 26px;
+}
+.form-group { margin-bottom: 16px; }
+.form-group label.field-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  color: var(--ink);
+  background: var(--paper);
+}
+.form-group input:focus { outline: none; border-color: var(--aqua-dark); }
+
+.insurance-block {
+  background: var(--sand-light);
+  border-radius: 4px;
+  padding: 18px 20px;
+  margin: 22px 0;
+}
+.insurance-block .insurance-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.insurance-block .insurance-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+.insurance-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 0;
+  font-size: 14px;
+  color: var(--ink);
+  line-height: 1.5;
+  cursor: pointer;
+}
+.insurance-option input { margin-top: 4px; flex-shrink: 0; }
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 16px 24px;
+  background: var(--aqua-dark);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background 0.18s;
+  min-height: 52px;
+  margin-top: 10px;
+}
+button[type="submit"]:hover { background: var(--aqua); }
+
+#thanksMsg {
+  display: none;
+  background: var(--aqua-mist);
+  border: 1px solid var(--aqua);
+  border-radius: 6px;
+  padding: 36px 28px;
+  text-align: center;
+  margin: 30px 0 0;
+}
+#thanksMsg.show { display: block; }
+#thanksMsg h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 26px;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+#thanksMsg p {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 17px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+/* ============= FOOTER ============= */
+.footer {
+  background: var(--sand-light);
+  border-top: 1px solid var(--line);
+  padding: 40px 0 36px;
+  margin-top: 40px;
+  text-align: center;
+}
+.footer-name {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.footer-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--ink-soft);
+  margin-bottom: 18px;
+}
+.footer-contact {
+  font-size: 14.5px;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.footer-contact a {
+  color: var(--aqua-dark);
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold-whisper);
+}
+.footer-contact a:hover { border-bottom-color: var(--aqua-dark); }
+.footer-disclosure {
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+}
+
+/* ============= MOBILE ============= */
+@media (max-width: 768px) {
+  body { font-size: 16px; }
+  .hero { padding: 48px 0 40px; }
+  .hero h1 { font-size: 34px; }
+  .hero-sub { font-size: 19px; }
+  .overview-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px 12px;
+  }
+  .intro p { font-size: 16px; }
+  .flights-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .image-strip {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .image-strip img { height: 220px; }
+  .amenity-grid { grid-template-columns: 1fr; gap: 10px; }
+  .resort-card-inner { padding: 24px 20px 22px; }
+  .resort-card h3 { font-size: 22px; }
+  .package-amount { font-size: 28px; }
+  .running-total-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .running-total { padding: 12px 0; }
+  .running-total-amount { font-size: 22px; }
+  .form-section { padding: 26px 22px; }
+  .addons-section { padding: 24px 20px; }
+  .section-heading h2 { font-size: 24px; }
+  .footer { padding: 32px 0 28px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-eyebrow">Prepared for the Maes Family</div>
+    <h1>Disneyland</h1>
+    <div class="hero-sub">Three nights at the Happiest Place on Earth</div>
+    <div class="hero-meta">JULY 20 — JULY 23, 2026 &nbsp;·&nbsp; ANAHEIM, CALIFORNIA</div>
+  </div>
+</section>
+
+<!-- OVERVIEW STRIP -->
+<section class="overview-strip">
+  <div class="wrap">
+    <div class="overview-grid">
+      <div class="overview-cell">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="7" r="2.5"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M16 15a3 3 0 0 1 3 3v3"/></svg>
+        <div class="overview-label">Travelers</div>
+        <div class="overview-value">2 adults<br>+ 3 children</div>
+      </div>
+      <div class="overview-cell">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21v-9l9-7 9 7v9"/><path d="M9 21v-6h6v6"/></svg>
+        <div class="overview-label">Stay</div>
+        <div class="overview-value">3 nights<br>1 room</div>
+      </div>
+      <div class="overview-cell">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div class="overview-label">Region</div>
+        <div class="overview-value">Anaheim<br>Good Neighbor area</div>
+      </div>
+      <div class="overview-cell">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+        <div class="overview-label">Departing from</div>
+        <div class="overview-value">Houston<br>HOU or IAH</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="wrap">
+    <p>
+      Three nights in Anaheim, two days in the parks, and a Park Hopper upgrade that's <em>free for the kids 3-9</em> through Disney's summer offer. Below are three Good Neighbor hotels — each with a real reason to choose it. Pick the one that feels right, then add the optional pieces (Park Hopper, Lightning Lane, flights) that match how your family wants to do this trip.
+    </p>
+    <span class="small-italic">All packages priced for one room — 2 adults plus 3 children, ages 4, 6, and 10.</span>
+  </div>
+</section>
+
+<!-- FLIGHTS INFORMATIONAL -->
+<section class="wrap">
+  <div class="section-heading">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+    <h2>Your flights</h2>
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+  </div>
+
+  <div class="flights-card">
+    <div class="flights-meta">Two air options for your family of 5 — pick one in the add-ons below, or skip and book on your own</div>
+
+    <div class="flights-grid">
+
+      <!-- Southwest from LAX -->
+      <div class="flight-option">
+        <div class="flight-option-airline">Southwest Airlines</div>
+        <div class="flight-option-route">Houston (HOU) ↔ Los Angeles (LAX)</div>
+        <div class="flight-option-price">$2,319 / family of 5</div>
+
+        <div class="flight-leg">
+          <div class="flight-leg-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+          </div>
+          <div>
+            <div class="flight-leg-main">Mon Jul 20 · 7:30 AM — 8:55 AM</div>
+            <div class="flight-leg-times">Nonstop · 3h 25m</div>
+          </div>
+          <div class="flight-leg-route">HOU → LAX</div>
+        </div>
+
+        <div class="flight-leg">
+          <div class="flight-leg-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+          </div>
+          <div>
+            <div class="flight-leg-main">Thu Jul 23 · 6:50 PM — 12:05 AM<sup>+1</sup></div>
+            <div class="flight-leg-times">Nonstop · 3h 15m</div>
+          </div>
+          <div class="flight-leg-route">LAX → HOU</div>
+        </div>
+
+        <div class="flight-option-trade">
+          <strong>The trade</strong>
+          You get a full first day at the parks (arrive 8:55 AM), and Southwest includes 2 free checked bags per person. The cost is a return that lands in Houston past midnight, plus a 30–50 minute drive from LAX to Anaheim depending on traffic.
+        </div>
+      </div>
+
+      <!-- United from Santa Ana -->
+      <div class="flight-option">
+        <div class="flight-option-airline">United Airlines</div>
+        <div class="flight-option-route">Houston (IAH) ↔ Santa Ana (SNA)</div>
+        <div class="flight-option-price">$2,484 / family of 5 <span class="delta">+$165 vs Southwest</span></div>
+
+        <div class="flight-leg">
+          <div class="flight-leg-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+          </div>
+          <div>
+            <div class="flight-leg-main">Mon Jul 20 · 8:12 PM — 9:45 PM</div>
+            <div class="flight-leg-times">Nonstop · 3h 33m</div>
+          </div>
+          <div class="flight-leg-route">IAH → SNA</div>
+        </div>
+
+        <div class="flight-leg">
+          <div class="flight-leg-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1);"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+          </div>
+          <div>
+            <div class="flight-leg-main">Thu Jul 23 · 3:05 PM — 8:27 PM</div>
+            <div class="flight-leg-times">Nonstop · 3h 22m</div>
+          </div>
+          <div class="flight-leg-route">SNA → IAH</div>
+        </div>
+
+        <div class="flight-option-trade">
+          <strong>The trade</strong>
+          Santa Ana sits 15 minutes from Disneyland — you bypass LAX traffic entirely. The return lands at IAH at 8:27 PM, so factoring in the drive home you are pulling in around 10 PM with the kids in bed by 10:30. The cost is a late arrival on Day 1 (around 10 PM at the hotel) and bag fees that aren't included. Best fit if you've already planned to use the arrival night to settle in.
+        </div>
+      </div>
+    </div>
+
+    <div class="flights-note">
+      Both fares are nonstop on the same trip dates. Pick one in the Flights add-on below to bundle into your package, or skip and book directly with the airline.
+    </div>
+  </div>
+</section>
+
+<!-- RESORT OPTIONS -->
+<section class="wrap">
+  <div class="section-heading">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21v-9l9-7 9 7v9"/><path d="M9 21v-9h6v9"/></svg>
+    <h2>Choose your hotel</h2>
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21v-9l9-7 9 7v9"/><path d="M9 21v-9h6v9"/></svg>
+  </div>
+  <p class="section-sub">Three Good Neighbor hotels packaged with two days of theme park admission</p>
+
+  <!-- OPTION 1: BEST WESTERN PARK PLACE -->
+  <div class="resort-card">
+    <div class="resort-card-inner">
+      <div class="resort-kicker">Option 1 &nbsp;·&nbsp; Across the street &nbsp;·&nbsp; 1 room &nbsp;·&nbsp; sleeps 6</div>
+      <h3>Best Western Plus Park Place Inn &amp; Mini Suites</h3>
+      <div class="resort-tagline">The closest of the three to the parks, with the most flexible bedding</div>
+
+      <div class="resort-body">
+        <p>Best Western Park Place sits directly across Harbor Boulevard from Disneyland's main entrance — under a five-minute walk to the security check, the shortest of any option here. The Mini Suite layout is what makes it work for a family of five: two queen beds plus a separate queen-size sleeper sofa in a sitting area, sleeping up to six adults legally. Parents can take one queen, the older child the other, and the younger two share the sleeper.</p>
+        <p>The property is a workhorse, not a showpiece — clean rooms, friendly staff, a small heated pool, and a continental breakfast in the morning. What you're paying for is location and the legal occupancy for five.</p>
+      </div>
+
+      <div class="image-strip">
+        <img src="https://placehold.co/800x500/EAF3F2/4F8A8C/png?text=Mini+Suite+living+area" alt="Mini suite living area">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/31/14/c8/7f/pool.jpg?w=700&h=-1&s=1" alt="Heated outdoor pool">
+        <img src="https://best-western-plus-park-place-inn-mini-suites.orange-county-hotels.com/data/Photos/OriginalPhoto/17051/1705106/1705106394.JPEG" alt="Across the street from Disneyland">
+      </div>
+
+      <div class="amenity-grid">
+        <div class="amenity-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/><path d="M12 3v18"/></svg>
+          <div><strong>Across the street</strong> from Disneyland — under 5 min walk</div>
+        </div>
+        <div class="amenity-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-7a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v7"/><path d="M2 18h20"/><path d="M7 11h4"/><path d="M13 11h4"/></svg>
+          <div><strong>2 queens + queen sleeper</strong> — sleeps up to 6 adults</div>
+        </div>
+        <div class="amenity-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 21c0-1 1-2 2-2h16c1 0 2 1 2 2"/><path d="M5 19V8c0-2 2-3 4-3h6c2 0 4 1 4 3v11"/></svg>
+          <div>Continental <strong>breakfast included</strong> daily</div>
+        </div>
+        <div class="amenity-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16c2-1 4-1 6 0s4 1 6 0 4-1 6 0"/><path d="M2 21c2-1 4-1 6 0s4 1 6 0 4-1 6 0"/><circle cx="9" cy="6" r="2"/><path d="M9 8v6"/></svg>
+          <div>Heated outdoor <strong>pool &amp; jacuzzi</strong></div>
+        </div>
+        <div class="amenity-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18"/><path d="M12 3a14 14 0 0 0 0 18"/></svg>
+          <div>Disney's <strong>Good Neighbor</strong> Moderate tier</div>
+        </div>
+        <div class="amenity-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.93 19.07l2.83-2.83"/><path d="M16.24 7.76l2.83-2.83"/></svg>
+          <div>Mini-fridge, microwave, <strong>in-room coffee</strong></div>
+        </div>
+      </div>
+
+      <div class="room-section">
+        <h4>One Mini Suite — sleeps the full family</h4>
+        <div class="room-meta">2 queen beds + 1 queen-size sleeper sofa</div>
+        <p>The Mini Suite is the standard room category at this property. Includes a separate sitting area with the sleeper sofa, mini-fridge, microwave, and in-room coffee maker. Room views vary and are subject to availability — we will request a quiet floor and pool-side view if preferred.</p>
+      </div>
+
+      <div class="package-box">
+        <div class="package-kicker">Package rate · Hotel + 2-Day theme park tickets</div>
+        <div class="package-amount">Est. $2,606<span style="font-size:18px; opacity:0.7;">.32</span></div>
+        <div class="package-pp">Per family of 5 · ~$521 per person · 3 nights</div>
+        <div class="package-includes">
+          <div class="package-includes-label">Includes</div>
+          <ul>
+            <li>3 nights at Best Western Plus Park Place Inn — Mini Suite</li>
+            <li>2-Day theme park tickets, 1 park per day</li>
+            <li>Kids' Summer Ticket Offer applied (Park Hopper free for ages 3-9)</li>
+            <li>All taxes &amp; resort fees</li>
+          </ul>
+        </div>
+        <div class="package-fine">$200–$500 low deposit, balance due closer to travel date. Final pricing confirmed by Christina before booking.</div>
+      </div>
+
+      <div class="resort-select-row">
+        <label class="resort-radio">
+          <input type="radio" name="hotel_choice" value="Best Western Plus Park Place Inn — $2,606.32" data-price="2606.32" onclick="updateTotal()">
+          <span class="radio-dot"></span>
+          <span>Choose Best Western Park Place</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- OPTION 2: HOME2 SUITES BY HILTON -->
+  <div class="resort-card">
+    <div class="resort-card-inner">
+      <div class="resort-kicker">Option 2 &nbsp;·&nbsp; Half-mile walk &nbsp;·&nbsp; Studio suite &nbsp;·&nbsp; Free breakfast</div>
+      <h3>Home2 Suites by Hilton Anaheim Resort</h3>
+      <div class="resort-tagline">All-suite layout, kitchenette, hot breakfast included for the family</div>
+
+      <div class="resort-body">
+        <p>Home2 Suites is Hilton's newer extended-stay brand, and the entire hotel is built as suites — every room has a separate sitting area, a kitchenette with full-size fridge and microwave, and a workspace. The Studio Suite for your group has two queen beds plus a full-size sleeper sofa, sleeping the family of five comfortably.</p>
+        <p>The free hot breakfast is the practical headline. For a family of five, breakfast at park gates or even quick-service spots runs $50–80 a day; eating before you leave the hotel saves real money over three mornings and gets you to the gate fed and ready. Just under half a mile to Disneyland's main entrance — about a 10-minute walk, or a quick ART shuttle ride.</p>
+      </div>
+
+      <div class="image-strip">
+        <img src="https://www.hilton.com/im/en/SNAAEHT/15553356/aam-9391-2-3.jpg?impolicy=crop&cw=3750&ch=2812&gravity=NorthWest&xposition=625&yposition=0&rw=1200&rh=900" alt="Studio Suite layout">
+        <img src="https://www.hilton.com/im/en/SNAAEHT/19870562/14-aam-4947-48-49-50-51.jpg?impolicy=crop&cw=5000&ch=2799&gravity=NorthWest&xposition=0&yposition=267&rw=768&rh=430" alt="Outdoor pool">
+        <img src="https://h2anaheimresort.com/gallery/image58.jpg" alt="Hot breakfast included">
+      </div>
+
+      <div class="amenity-grid">
+        <div class="amenity-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3l-2 9h12l-2-9"/><path d="M3 12h12"/><circle cx="9" cy="17" r="2"/></svg>
+          <div>Less than <strong>half a mile</strong> to Disneyland — walk or ART shuttle</div>
+        </div>
+        <div class="amenity-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-7a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v7"/><path d="M2 18h20"/></svg>
+          <div><strong>2 queens + full sleeper sofa</strong> — Studio Suite</div>
+        </div>
+        <div class="amenity-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h14v8a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3z"/><path d="M9 14v4"/><path d="M15 14v4"/></svg>
+          <div><strong>Full hot breakfast</strong> included daily — Hilton standard</div>
+        </div>
+        <div class="amenity-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M7 10h2"/><path d="M11 10h6"/><path d="M7 14h10"/></svg>
+          <div><strong>In-suite kitchenette</strong> — full fridge, microwave, dishware</div>
+        </div>
+        <div class="amenity-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16c2-1 4-1 6 0s4 1 6 0 4-1 6 0"/><path d="M2 21c2-1 4-1 6 0s4 1 6 0 4-1 6 0"/></svg>
+          <div>Saline outdoor <strong>pool</strong> &amp; fitness center</div>
+        </div>
+        <div class="amenity-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
+          <div>Disney's Good Neighbor <strong>Suite tier</strong></div>
+        </div>
+      </div>
+
+      <div class="room-section">
+        <h4>One Studio Suite — kitchenette + sleeper sofa</h4>
+        <div class="room-meta">2 queen beds + 1 full-size sleeper sofa</div>
+        <p>The Studio Suite is the standard room category. Includes a kitchenette with full-size refrigerator, microwave, dishwasher, and dishware — enough to handle breakfast, snacks, and packed lunches for the parks. Separate sitting area with the sleeper sofa.</p>
+      </div>
+
+      <div class="package-box">
+        <div class="package-kicker">Package rate · Hotel + 2-Day theme park tickets</div>
+        <div class="package-amount">Est. $2,670<span style="font-size:18px; opacity:0.7;">.61</span></div>
+        <div class="package-pp">Per family of 5 · ~$534 per person · 3 nights</div>
+        <div class="package-includes">
+          <div class="package-includes-label">Includes</div>
+          <ul>
+            <li>3 nights at Home2 Suites by Hilton — Studio Suite</li>
+            <li>Full hot breakfast for the family every morning</li>
+            <li>2-Day theme park tickets, 1 park per day</li>
+            <li>Kids' Summer Ticket Offer applied (Park Hopper free for ages 3-9)</li>
+            <li>All taxes &amp; resort fees</li>
+          </ul>
+        </div>
+        <div class="package-fine">$200–$500 low deposit, balance due closer to travel date. Final pricing confirmed by Christina before booking.</div>
+      </div>
+
+      <div class="resort-select-row">
+        <label class="resort-radio">
+          <input type="radio" name="hotel_choice" value="Home2 Suites by Hilton — $2,670.61" data-price="2670.61" onclick="updateTotal()">
+          <span class="radio-dot"></span>
+          <span>Choose Home2 Suites</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- OPTION 3: COURTYARD MARRIOTT -->
+  <div class="resort-card">
+    <div class="resort-card-inner">
+      <div class="resort-kicker">Option 3 &nbsp;·&nbsp; Across the street &nbsp;·&nbsp; Marriott Deluxe &nbsp;·&nbsp; Built-in bunk bed</div>
+      <h3>Courtyard by Marriott Anaheim Theme Park Entrance</h3>
+      <div class="resort-tagline">Disney's only Deluxe-tier option of the three, with a kid-built room layout</div>
+
+      <div class="resort-body">
+        <p>The Courtyard sits across the street from Disneyland's main entrance, the same five-minute walk as Best Western. What sets it apart is Marriott's family-configured room: two queen beds plus a built-in bunk bed in the same room — purpose-designed for families with kids. Younger ones will see the bunks before they see anything else and want to climb in.</p>
+        <p>Disney rates the Courtyard at the Deluxe tier (their middle category between Moderate and Premium), which translates to newer finishes, a larger pool deck, an on-site Bistro for breakfast and dinner, and Marriott's tighter brand standards. The trade you're making for the extra $220 over Best Western is brand consistency and the bunk-bed feature, not location.</p>
+      </div>
+
+      <div class="image-strip">
+        <img src="https://www.disneytouristblog.com/wp-content/uploads/2016/02/courtyard-anaheim-theme-park-entrance-marriott-disneyland-004.jpg" alt="Family room with bunk bed">
+        <img src="https://runway-media-production.global.ssl.fastly.net/us/originals/2022/10/20221017_Marriott-Courtyard-Anaheim-Theme-Park-Entrance-Disneyland_SHull-46.jpg" alt="Pool area">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/32/3d/bd/d7/hotel-exterior.jpg?w=900&h=500&s=1" alt="Courtyard exterior">
+      </div>
+
+      <div class="amenity-grid">
+        <div class="amenity-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/><path d="M12 3v18"/></svg>
+          <div><strong>Across the street</strong> from Disneyland — under 5 min walk</div>
+        </div>
+        <div class="amenity-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-7a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v7"/><path d="M2 18h20"/><path d="M16 8V4h-3"/></svg>
+          <div><strong>2 queens + bunk bed</strong> — purpose-built family room</div>
+        </div>
+        <div class="amenity-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
+          <div>Disney's Good Neighbor <strong>Deluxe tier</strong></div>
+        </div>
+        <div class="amenity-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14v3a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3z"/><path d="M9 10v9"/><path d="M15 10v9"/></svg>
+          <div>On-site <strong>Bistro</strong> — breakfast, dinner, Starbucks</div>
+        </div>
+        <div class="amenity-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16c2-1 4-1 6 0s4 1 6 0 4-1 6 0"/><path d="M2 21c2-1 4-1 6 0s4 1 6 0 4-1 6 0"/></svg>
+          <div>Heated outdoor <strong>pool &amp; spa</strong> with deck</div>
+        </div>
+        <div class="amenity-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 3v3"/><path d="M12 18v3"/><path d="M21 12h-3"/><path d="M6 12H3"/></svg>
+          <div>Marriott Bonvoy points eligible <strong>(if member)</strong></div>
+        </div>
+      </div>
+
+      <div class="room-section">
+        <h4>One Standard Family Room — built for kids</h4>
+        <div class="room-meta">2 queen beds + 1 built-in bunk bed</div>
+        <p>The Standard room with the bunk-bed configuration. Parents take one queen, the older child the other, the kids 4 and 6 take the bunks. Newly refreshed rooms with Marriott's current Courtyard fit-out — quieter HVAC, better blackout shades, larger work surfaces.</p>
+      </div>
+
+      <div class="package-box">
+        <div class="package-kicker">Package rate · Hotel + 2-Day theme park tickets</div>
+        <div class="package-amount">Est. $2,826<span style="font-size:18px; opacity:0.7;">.69</span></div>
+        <div class="package-pp">Per family of 5 · ~$565 per person · 3 nights</div>
+        <div class="package-includes">
+          <div class="package-includes-label">Includes</div>
+          <ul>
+            <li>3 nights at Courtyard by Marriott — Standard family room</li>
+            <li>2-Day theme park tickets, 1 park per day</li>
+            <li>Kids' Summer Ticket Offer applied (Park Hopper free for ages 3-9)</li>
+            <li>All taxes &amp; resort fees</li>
+          </ul>
+        </div>
+        <div class="package-fine">$200–$500 low deposit, balance due closer to travel date. Final pricing confirmed by Christina before booking.</div>
+      </div>
+
+      <div class="resort-select-row">
+        <label class="resort-radio">
+          <input type="radio" name="hotel_choice" value="Courtyard by Marriott — $2,826.69" data-price="2826.69" onclick="updateTotal()">
+          <span class="radio-dot"></span>
+          <span>Choose Courtyard by Marriott</span>
+        </label>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADD-ONS -->
+<section class="wrap">
+  <div class="section-heading">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.5 6.5L21 9l-5 4.5L17.5 21 12 17.5 6.5 21 8 13.5 3 9l6.5-.5z"/></svg>
+    <h2>Add-ons</h2>
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.5 6.5L21 9l-5 4.5L17.5 21 12 17.5 6.5 21 8 13.5 3 9l6.5-.5z"/></svg>
+  </div>
+  <p class="section-sub">Optional pieces — pick what fits your family, leave the rest</p>
+
+  <div class="addons-section">
+    <h3>Tailor your trip</h3>
+    <p class="addons-intro">Each item below is optional. Toggle on what you want and the running total updates as you go.</p>
+
+    <!-- ADDON 1: PARK HOPPER -->
+    <div class="addon">
+      <div class="addon-head">
+        <div class="addon-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h7"/><path d="M14 12h7"/><path d="M10 12l2-3 2 3"/><path d="M10 12l2 3 2-3"/></svg>
+        </div>
+        <div>
+          <div class="addon-title">Park Hopper upgrade</div>
+          <div class="addon-price">+$900 for the family &nbsp;·&nbsp; kids ages 3-9 free with the summer offer</div>
+        </div>
+      </div>
+      <div class="addon-desc">
+        With a Park Hopper, you can move between Disneyland Park and California Adventure on the same day after 11 AM — useful when one park has a ride the kids want and the other has shorter lines or character meets. Disney's <em>Kids' Summer Ticket Offer</em> covers the upgrade for kids 3-9 at no extra cost; you only pay for the three guests ages 10+ ($300 each = $900 total).
+      </div>
+      <div class="addon-options">
+        <label class="addon-pill">
+          <input type="radio" name="park_hopper" value="No — keep 1-Park Per Day" data-price="0" checked onclick="updateTotal()">
+          <span>Skip — keep 1-Park Per Day</span>
+        </label>
+        <label class="addon-pill">
+          <input type="radio" name="park_hopper" value="Yes — add Park Hopper (+$900)" data-price="900" onclick="updateTotal()">
+          <span>Add Park Hopper · +$900</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- ADDON 2: LIGHTNING LANE -->
+    <div class="addon">
+      <div class="addon-head">
+        <div class="addon-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h8l-1 8 10-12h-8z"/></svg>
+        </div>
+        <div>
+          <div class="addon-title">Lightning Lane Multi Pass</div>
+          <div class="addon-price">+$340 for the family · covers both park days</div>
+        </div>
+      </div>
+      <div class="addon-desc">
+        Skip the standby line at select headliner attractions and use the Lightning Lane entrance instead. Includes unlimited Disney PhotoPass downloads and AR PhotoPass Lenses across both park days. Honest trade — you can absolutely have a great trip without it by arriving at park opening (rope drop) and hitting headliners in the first 90 minutes. <em>For peak summer crowds with a 4-year-old, the family that adds Lightning Lane will feel noticeably less in-line stress over the two days.</em>
+      </div>
+      <div class="addon-options">
+        <label class="addon-pill">
+          <input type="radio" name="lightning_lane" value="Skip Lightning Lane" data-price="0" checked onclick="updateTotal()">
+          <span>Skip — rope drop strategy</span>
+        </label>
+        <label class="addon-pill">
+          <input type="radio" name="lightning_lane" value="Add Lightning Lane Multi Pass (+$340)" data-price="340" onclick="updateTotal()">
+          <span>Add Lightning Lane · +$340</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- ADDON 3: FLIGHTS -->
+    <div class="addon">
+      <div class="addon-head">
+        <div class="addon-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+        </div>
+        <div>
+          <div class="addon-title">Flights</div>
+          <div class="addon-price">Pick one of the two airline options above, or book your own</div>
+        </div>
+      </div>
+      <div class="addon-desc">
+        Adding flights to your package means Christina handles seat assignments, check-in, and any changes during the trip. <em>If you'd rather earn miles or use a companion pass, skip this and book direct.</em>
+      </div>
+      <div class="addon-options">
+        <label class="addon-pill">
+          <input type="radio" name="flights_addon" value="No — book on my own" data-price="0" checked onclick="updateTotal()">
+          <span>Skip — I will book my own</span>
+        </label>
+        <label class="addon-pill">
+          <input type="radio" name="flights_addon" value="Southwest from LAX (+$2,319)" data-price="2319" onclick="updateTotal()">
+          <span>Southwest · LAX · +$2,319</span>
+        </label>
+        <label class="addon-pill">
+          <input type="radio" name="flights_addon" value="United from Santa Ana (+$2,484)" data-price="2484" onclick="updateTotal()">
+          <span>United · SNA · +$2,484</span>
+        </label>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NOTES -->
+<section class="wrap">
+  <div class="notes-section">
+    <h3>Anything else we should know?</h3>
+    <p class="notes-sub">Dietary needs, room preferences, return-flight timing concerns, or anything else.</p>
+    <textarea id="trip-notes" placeholder="Optional — any preferences, questions, or things to know about your family"></textarea>
+  </div>
+</section>
+
+<!-- RUNNING TOTAL -->
+<div class="running-total">
+  <div class="wrap">
+    <div class="running-total-inner">
+      <div>
+        <div class="running-total-label">Estimated package total</div>
+        <div class="running-total-pp" id="rt-detail">Select a hotel to begin</div>
+      </div>
+      <div class="running-total-amount" id="rt-amount">Est. $0</div>
+    </div>
+  </div>
+</div>
+
+<!-- FORM -->
+<section class="wrap">
+  <div class="form-section">
+    <h2>Send your selections to Christina</h2>
+    <p class="form-sub">She will confirm everything, lock in pricing, and walk you through next steps.</p>
+
+    <form id="tripForm">
+      <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+      <input type="hidden" name="subject" value="Maes Family — Disneyland July 2026 Selections">
+      <input type="hidden" name="from_name" value="Maes Family — PMTP Disneyland Quote">
+      <input type="hidden" name="redirect" value="false">
+
+      <input type="hidden" name="Hotel_Choice" id="hidden_hotel">
+      <input type="hidden" name="Park_Hopper" id="hidden_ph">
+      <input type="hidden" name="Lightning_Lane" id="hidden_ll">
+      <input type="hidden" name="Flights_Addon" id="hidden_flights">
+      <input type="hidden" name="Estimated_Total" id="hidden_total">
+      <input type="hidden" name="Trip_Notes" id="hidden_notes">
+
+      <div class="form-group">
+        <label class="field-label" for="name">Your name</label>
+        <input type="text" id="name" name="Name" required autocomplete="name">
+      </div>
+
+      <div class="form-group">
+        <label class="field-label" for="email">Email</label>
+        <input type="email" id="email" name="Email" required autocomplete="email">
+      </div>
+
+      <div class="form-group">
+        <label class="field-label" for="phone">Phone</label>
+        <input type="tel" id="phone" name="Phone" autocomplete="tel">
+      </div>
+
+      <div class="insurance-block">
+        <div class="insurance-title">Travel insurance — please choose one</div>
+        <div class="insurance-sub">A Disney trip with kids has a lot of moving parts. Travel insurance covers cancellations, medical issues, and trip interruptions. We need a yes or no on the record before booking.</div>
+        <label class="insurance-option">
+          <input type="radio" name="Insurance_Choice" value="Yes — please send me a travel insurance quote" required>
+          <span><strong>Yes</strong> — please send me a travel insurance quote</span>
+        </label>
+        <label class="insurance-option">
+          <input type="radio" name="Insurance_Choice" value="No — I decline travel insurance and accept the risks of traveling without coverage" required>
+          <span><strong>No</strong> — I decline insurance and understand the risks of traveling without coverage</span>
+        </label>
+      </div>
+
+      <button type="submit">Send my selections</button>
+    </form>
+
+    <div id="thanksMsg">
+      <h2>Got it — thank you</h2>
+      <p>Christina will be in touch shortly to confirm pricing and walk you through next steps.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-name">Christina Garcia</div>
+    <div class="footer-tagline">Point Me to Paradise Travel</div>
+    <div class="footer-contact"><a id="emailLink" href="#"></a></div>
+    <div class="footer-contact">(281) 229-0862</div>
+    <div class="footer-disclosure">
+      Individual hotels, transfers, and tours in your quote are priced at publicly available rates — and in many cases lower than what you'd find on your own. You don't have to worry about overpaying for a piece of your trip. What you're paying for is the rest: the right rooms at the right property, operators we've used for years, the trip app, and a human who answers when something doesn't go to plan.
+    </div>
+  </div>
+</footer>
+
+<script>
+// Email assembly via JS (Cloudflare protection)
+(function() {
+  var addr = 'Christina' + '@' + 'PointMeToParadise.com';
+  var el = document.getElementById('emailLink');
+  if (el) {
+    el.href = 'mailto:' + addr;
+    el.textContent = addr;
+  }
+})();
+
+// Running total
+function updateTotal() {
+  var hotel = document.querySelector('input[name="hotel_choice"]:checked');
+  var ph = document.querySelector('input[name="park_hopper"]:checked');
+  var ll = document.querySelector('input[name="lightning_lane"]:checked');
+  var flights = document.querySelector('input[name="flights_addon"]:checked');
+
+  var hotelPrice = hotel ? parseFloat(hotel.dataset.price) : 0;
+  var phPrice = ph ? parseFloat(ph.dataset.price) : 0;
+  var llPrice = ll ? parseFloat(ll.dataset.price) : 0;
+  var flightsPrice = flights ? parseFloat(flights.dataset.price) : 0;
+
+  var total = hotelPrice + phPrice + llPrice + flightsPrice;
+
+  var amountEl = document.getElementById('rt-amount');
+  var detailEl = document.getElementById('rt-detail');
+
+  if (total > 0) {
+    amountEl.textContent = 'Est. $' + total.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+    var pp = total / 5;
+    var pieces = [];
+    if (hotel) pieces.push('hotel + 2-day tix');
+    if (ph && phPrice > 0) pieces.push('Park Hopper');
+    if (ll && llPrice > 0) pieces.push('Lightning Lane');
+    if (flights && flightsPrice > 0) pieces.push('flights');
+    detailEl.textContent = '~$' + pp.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0}) + ' per person · ' + pieces.join(' + ');
+  } else {
+    amountEl.textContent = 'Est. $0';
+    detailEl.textContent = 'Select a hotel to begin';
+  }
+}
+
+// Initialize total on load
+updateTotal();
+
+// Form submission
+document.getElementById('tripForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var form = e.target;
+
+  // Populate hidden fields
+  var hotel = document.querySelector('input[name="hotel_choice"]:checked');
+  var ph = document.querySelector('input[name="park_hopper"]:checked');
+  var ll = document.querySelector('input[name="lightning_lane"]:checked');
+  var flights = document.querySelector('input[name="flights_addon"]:checked');
+
+  if (!hotel) {
+    alert('Please choose a hotel before submitting.');
+    return;
+  }
+
+  document.getElementById('hidden_hotel').value = hotel.value;
+  document.getElementById('hidden_ph').value = ph ? ph.value : '';
+  document.getElementById('hidden_ll').value = ll ? ll.value : '';
+  document.getElementById('hidden_flights').value = flights ? flights.value : '';
+  document.getElementById('hidden_total').value = document.getElementById('rt-amount').textContent;
+  document.getElementById('hidden_notes').value = document.getElementById('trip-notes').value;
+
+  var data = new FormData(form);
+
+  fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    body: data
+  })
+  .then(function(res) { return res.json(); })
+  .then(function(json) {
+    if (json.success) {
+      form.style.display = 'none';
+      document.getElementById('thanksMsg').classList.add('show');
+      window.scrollTo({ top: document.getElementById('thanksMsg').offsetTop - 40, behavior: 'smooth' });
+    } else {
+      alert('Something went wrong. Please email Christina directly or text (281) 229-0862.');
+    }
+  })
+  .catch(function() {
+    alert('Something went wrong. Please email Christina directly or text (281) 229-0862.');
+  });
+});
+</script>
+
+</body>
+</html>
