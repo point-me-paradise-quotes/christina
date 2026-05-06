@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caribbean Getaway · The Kraemer Party · May 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --aqua-pale: #C4E4E1;
+  --aqua-mist: #EAF3F2;
+  --aqua: #75AFB1;
+  --aqua-dark: #4F8A8C;
+  --sand: #ECE7DC;
+  --sand-light: #F4F1E9;
+  --gold-whisper: #D6C8A8;
+  --white: #FFFFFF;
+  --paper: #FBFDFD;
+  --ink: #2B2420;
+  --ink-soft: #6B6359;
+  --line: #E5E9E8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 500; color: var(--ink); }
+
+.container { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+
+/* HERO */
+.hero {
+  background: linear-gradient(180deg, var(--aqua-mist), var(--paper));
+  padding: 64px 20px 48px;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+}
+.hero .kicker {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--aqua-dark);
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+.hero .gold-rule {
+  width: 60px; height: 1px; background: var(--gold-whisper);
+  margin: 12px auto 24px;
+}
+.hero h1 {
+  font-size: 52px;
+  letter-spacing: -0.5px;
+  line-height: 1.05;
+  margin-bottom: 14px;
+}
+.hero .dates {
+  font-size: 16px;
+  color: var(--ink-soft);
+  margin-bottom: 14px;
+  letter-spacing: 0.3px;
+}
+.hero .prepared {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 22px;
+  color: var(--aqua-dark);
+}
+
+@media (max-width: 600px) {
+  .hero { padding: 44px 18px 32px; }
+  .hero h1 { font-size: 38px; }
+  .hero .prepared { font-size: 18px; }
+}
+
+/* OVERVIEW STRIP */
+.overview {
+  background: var(--aqua-mist);
+  padding: 28px 20px;
+  border-bottom: 1px solid var(--line);
+}
+.overview-grid {
+  max-width: 880px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.overview-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+}
+.overview-item .icon { color: var(--aqua-dark); }
+.overview-item .label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+.overview-item .value { font-size: 14px; color: var(--ink); font-weight: 500; }
+
+@media (max-width: 600px) {
+  .overview-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+}
+
+/* INTRO */
+.intro { padding: 48px 20px 24px; }
+.intro p {
+  font-size: 16px;
+  color: var(--ink);
+  max-width: 720px;
+  margin: 0 auto 16px;
+  line-height: 1.65;
+}
+
+/* CALLOUT */
+.callout {
+  max-width: 720px;
+  margin: 24px auto 0;
+  background: var(--aqua-mist);
+  border-left: 3px solid var(--aqua-dark);
+  padding: 22px 26px;
+  border-radius: 4px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.callout .icon { color: var(--aqua-dark); flex-shrink: 0; margin-top: 3px; }
+.callout .content { font-size: 15px; line-height: 1.6; color: var(--ink); }
+.callout .content strong { font-weight: 600; }
+
+/* SECTIONS */
+section.dest-section { padding: 56px 20px; }
+section.dest-section.alt { background: var(--aqua-mist); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+.section-header { text-align: center; max-width: 720px; margin: 0 auto 36px; }
+.section-header .kicker {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--aqua-dark);
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+.section-header h2 {
+  font-size: 40px;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+.section-header .gold-rule {
+  width: 50px; height: 1px; background: var(--gold-whisper);
+  margin: 14px auto 18px;
+}
+.section-header p {
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.65;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* FLIGHT INFO CARD */
+.flight-card {
+  max-width: 800px;
+  margin: 0 auto 28px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 24px 28px;
+}
+.flight-card h3 {
+  font-size: 22px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.flight-card h3 .icon { color: var(--aqua-dark); }
+.flight-route {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 16px;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+.flight-route:last-of-type { border-bottom: none; }
+.route-point { display: flex; flex-direction: column; }
+.route-point .time { font-size: 18px; font-weight: 600; color: var(--ink); }
+.route-point .airport { font-size: 14px; color: var(--ink-soft); margin-top: 2px; }
+.route-point .city { font-size: 12px; color: var(--ink-soft); }
+.route-line {
+  font-size: 12px;
+  color: var(--ink-soft);
+  text-align: center;
+  padding: 0 12px;
+  line-height: 1.5;
+}
+.flight-pricing-row {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.flight-pricing-row .label { font-size: 13px; color: var(--ink-soft); }
+.flight-pricing-row .amount {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+@media (max-width: 600px) {
+  .flight-card { padding: 20px; }
+  .flight-route { grid-template-columns: 1fr auto 1fr; gap: 8px; }
+  .route-point .time { font-size: 16px; }
+}
+
+/* RESORT CARDS */
+.resort-card {
+  max-width: 800px;
+  margin: 0 auto 28px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 32px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.resort-card.has-radio:has(input[type="radio"]:checked) {
+  border-color: var(--aqua-dark);
+  box-shadow: 0 0 0 3px var(--aqua-pale);
+}
+.resort-card .kicker {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--aqua-dark);
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.resort-card h3 {
+  font-size: 30px;
+  margin-bottom: 6px;
+  letter-spacing: -0.3px;
+}
+.resort-card .tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+.resort-card .gold-rule {
+  width: 40px; height: 1px; background: var(--gold-whisper);
+  margin: 16px 0 22px;
+}
+.resort-card .body p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+.resort-card .body p:last-child { margin-bottom: 0; }
+
+@media (max-width: 600px) {
+  .resort-card { padding: 24px 20px; }
+  .resort-card h3 { font-size: 24px; }
+}
+
+/* AMENITIES */
+.amenity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 22px;
+  background: var(--sand-light);
+  padding: 20px 24px;
+  border-radius: 6px;
+  margin: 22px 0;
+}
+.amenity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--ink);
+}
+.amenity .icon { color: var(--aqua-dark); flex-shrink: 0; }
+
+@media (max-width: 600px) {
+  .amenity-grid { grid-template-columns: 1fr; }
+}
+
+/* ROOM SECTION */
+.room-section {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.room-section h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.room-section p {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  margin-bottom: 16px;
+}
+
+/* PACKAGE PRICING BOX */
+.package-pricing {
+  background: var(--aqua-pale);
+  padding: 18px 22px;
+  border-radius: 6px;
+  margin: 16px 0;
+}
+.package-pricing .package-kicker {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--aqua-dark);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.package-pricing .package-numbers {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.package-pricing .package-amount {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--ink);
+}
+.package-pricing .package-pp {
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+.package-pricing .deposit-line {
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(43,36,32,0.08);
+  line-height: 1.5;
+}
+.package-pricing .deposit-line.refundable { color: var(--aqua-dark); font-weight: 500; }
+
+/* RADIO PILL */
+.resort-select {
+  display: block;
+  margin-top: 16px;
+  cursor: pointer;
+}
+.resort-select input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.resort-select span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  border: 1.5px solid var(--aqua-dark);
+  background: var(--white);
+  color: var(--aqua-dark);
+  border-radius: 4px;
+  transition: all 0.15s;
+  min-height: 50px;
+}
+.resort-select:hover span { background: var(--aqua-mist); }
+.resort-select input[type="radio"]:checked + span {
+  background: var(--aqua-dark);
+  color: var(--white);
+}
+
+.transfer-note {
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-top: 18px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* INFO CARD (Anguilla) */
+.info-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 32px;
+}
+.info-card h3 { font-size: 26px; margin-bottom: 6px; letter-spacing: -0.2px; }
+.info-card .tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+.info-card .gold-rule {
+  width: 40px; height: 1px; background: var(--gold-whisper);
+  margin: 16px 0 20px;
+}
+.info-card p { font-size: 15px; line-height: 1.65; margin-bottom: 12px; color: var(--ink); }
+.info-card .info-cta {
+  background: var(--sand-light);
+  padding: 18px 22px;
+  border-radius: 6px;
+  margin-top: 22px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+@media (max-width: 600px) {
+  .info-card { padding: 24px 20px; }
+  .info-card h3 { font-size: 22px; }
+}
+
+/* PRICE-SHOP CALLOUT */
+.priceshop {
+  max-width: 800px;
+  margin: 0 auto 32px;
+  background: var(--aqua-pale);
+  padding: 26px 30px;
+  border-radius: 6px;
+}
+.priceshop h3 { font-size: 22px; margin-bottom: 10px; color: var(--ink); }
+.priceshop p { font-size: 14px; line-height: 1.65; color: var(--ink); margin-bottom: 10px; }
+.priceshop p:last-child { margin-bottom: 0; }
+
+/* NOTES + FORM */
+.form-section { padding: 56px 20px; max-width: 800px; margin: 0 auto; }
+
+.notes-block { margin-bottom: 32px; }
+.notes-block label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+.notes-block textarea {
+  width: 100%;
+  min-height: 110px;
+  padding: 14px 16px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--white);
+  color: var(--ink);
+  resize: vertical;
+}
+.notes-block textarea:focus { outline: 2px solid var(--aqua); outline-offset: 0; border-color: var(--aqua-dark); }
+
+/* RUNNING TOTAL */
+.running-total {
+  background: var(--aqua-pale);
+  padding: 16px 24px;
+  margin: 0 auto 32px;
+  max-width: 800px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+.running-total .rt-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--aqua-dark);
+}
+.running-total .rt-amount {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--ink);
+}
+.running-total .rt-pp { font-size: 12px; color: var(--ink-soft); margin-top: 4px; }
+.running-total .rt-right { text-align: right; }
+
+@media (max-width: 600px) {
+  .running-total {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 14px 18px;
+  }
+  .running-total .rt-right { text-align: left; }
+}
+
+/* CONTACT FORM */
+.contact-form { background: var(--white); border: 1px solid var(--line); border-radius: 8px; padding: 28px; }
+.contact-form h3 { font-size: 22px; margin-bottom: 18px; }
+.form-grid { display: grid; gap: 14px; }
+.form-grid input[type="text"],
+.form-grid input[type="email"],
+.form-grid input[type="tel"] {
+  width: 100%;
+  padding: 14px 16px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--white);
+  color: var(--ink);
+}
+.form-grid input:focus { outline: 2px solid var(--aqua); outline-offset: 0; border-color: var(--aqua-dark); }
+
+.insurance-block { margin-top: 22px; padding-top: 22px; border-top: 1px solid var(--line); }
+.insurance-block .ins-label { font-size: 14px; font-weight: 600; margin-bottom: 12px; color: var(--ink); }
+.insurance-block label.option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+  cursor: pointer;
+  min-height: 50px;
+  background: var(--white);
+}
+.insurance-block label.option:hover { background: var(--aqua-mist); }
+.insurance-block label.option input[type="radio"] {
+  flex-shrink: 0;
+  margin-top: 3px;
+  accent-color: var(--aqua-dark);
+  width: 18px;
+  height: 18px;
+}
+
+.submit-button {
+  width: 100%;
+  margin-top: 22px;
+  padding: 16px 24px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  background: var(--aqua-dark);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  min-height: 52px;
+  transition: background 0.15s;
+}
+.submit-button:hover { background: var(--ink); }
+
+.thanks-msg {
+  display: none;
+  background: var(--aqua-pale);
+  padding: 32px 28px;
+  border-radius: 8px;
+  text-align: center;
+}
+.thanks-msg.show { display: block; }
+.thanks-msg h3 { font-size: 24px; margin-bottom: 12px; }
+.thanks-msg p { font-size: 15px; color: var(--ink); line-height: 1.6; }
+
+/* FOOTER */
+footer {
+  background: var(--sand-light);
+  padding: 48px 20px;
+  text-align: center;
+  color: var(--ink);
+}
+footer .gold-rule { width: 50px; height: 1px; background: var(--gold-whisper); margin: 0 auto 24px; }
+footer h3 { font-size: 22px; margin-bottom: 12px; }
+footer .contact-info { font-size: 14px; line-height: 1.7; margin-bottom: 28px; color: var(--ink); }
+footer .contact-info a { color: var(--aqua-dark); text-decoration: none; }
+footer .contact-info a:hover { text-decoration: underline; }
+footer .disclosure {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 12px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+/* BADGES */
+.refundable-badge {
+  display: inline-block;
+  background: var(--aqua-mist);
+  color: var(--aqua-dark);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  border: 1px solid var(--aqua);
+}
+.nonrefund-badge {
+  display: inline-block;
+  background: var(--sand-light);
+  color: var(--ink-soft);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  border: 1px solid var(--sand);
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="kicker">last-minute Caribbean getaway</div>
+  <div class="gold-rule"></div>
+  <h1>Three Caribbean Islands</h1>
+  <div class="dates">May 17 – 22, 2026 · 5 nights</div>
+  <div class="prepared">prepared for the Kraemer party</div>
+</header>
+
+<!-- OVERVIEW STRIP -->
+<div class="overview">
+  <div class="overview-grid">
+    <div class="overview-item">
+      <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+      <span class="label">Travelers</span>
+      <span class="value">4 adults</span>
+    </div>
+    <div class="overview-item">
+      <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a3 3 0 013-3h12a3 3 0 013 3v6"/><path d="M3 18h18"/><path d="M7 9V6a2 2 0 012-2h6a2 2 0 012 2v3"/></svg>
+      <span class="label">Rooms</span>
+      <span class="value">2 rooms · 2 adults each</span>
+    </div>
+    <div class="overview-item">
+      <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span class="label">Length</span>
+      <span class="value">5 nights</span>
+    </div>
+    <div class="overview-item">
+      <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+      <span class="label">Departing</span>
+      <span class="value">Houston (IAH)</span>
+    </div>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="container">
+    <p>Three Caribbean destinations for a long-weekend getaway — Grenada, Anguilla, and Antigua. Each section below shows the air component, then the hotel options, with estimated package totals (round-trip air for four plus two rooms for five nights, all-in for the stay) so you can compare across islands.</p>
+    <p>A note on this booking window: last-minute Caribbean inventory in May runs lean. Most of the better-rated all-inclusives are non-refundable at this stage. The two exceptions where refundable inventory still exists through May 10 are flagged on each card.</p>
+
+    <!-- SANDALS NOTE — prominent -->
+    <div class="callout">
+      <svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <div class="content">
+        <strong>One thing still pending — Sandals last-minute offers.</strong> I wanted to pull Sandals' specific last-minute promos for this window before sending these options, but their booking system is down for scheduled maintenance right now. I'll check first thing tomorrow and follow up if anything they're running beats what's below. Sandals frequently moves aggressively on last-minute couples-only inventory, so it's worth a beat if you're not in a rush to lock something in tonight.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================
+     DESTINATION 1: GRENADA
+     ========================================= -->
+<section class="dest-section alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="kicker">Destination 1</div>
+      <h2>Grenada</h2>
+      <div class="gold-rule"></div>
+      <p>The "spice island" — quieter and less developed than its Caribbean neighbors. Known for nutmeg plantations, untouched beaches on the north coast, and a slow, unhurried rhythm. Best fit for travelers who want fewer crowds and natural beauty over big-resort polish.</p>
+    </div>
+
+    <!-- FLIGHT INFO: GRENADA -->
+    <div class="flight-card">
+      <h3>
+        <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+        Flights to Grenada (GND)
+      </h3>
+      <div class="flight-route">
+        <div class="route-point">
+          <span class="time">5:35 AM</span>
+          <span class="airport">IAH</span>
+          <span class="city">Houston</span>
+        </div>
+        <div class="route-line">7h 43m · 1 stop MIA<br>Sun, May 17</div>
+        <div class="route-point">
+          <span class="time">2:18 PM</span>
+          <span class="airport">GND</span>
+          <span class="city">Grenada</span>
+        </div>
+      </div>
+      <div class="flight-route">
+        <div class="route-point">
+          <span class="time">2:58 PM</span>
+          <span class="airport">GND</span>
+          <span class="city">Grenada</span>
+        </div>
+        <div class="route-line">10h 1m · 1 stop MIA<br>Fri, May 22</div>
+        <div class="route-point">
+          <span class="time">11:59 PM</span>
+          <span class="airport">IAH</span>
+          <span class="city">Houston</span>
+        </div>
+      </div>
+      <div class="flight-pricing-row">
+        <span class="label">American · main cabin · 4 passengers · round trip</span>
+        <span class="amount">Est. $4,169</span>
+      </div>
+    </div>
+
+    <!-- PROPERTY: PETITE ANSE -->
+    <article class="resort-card has-radio">
+      <div class="kicker">Option 1 · Boutique · 12 rooms · north coast</div>
+      <h3>Petite Anse Hotel</h3>
+      <div class="tagline">an upscale boutique near Sauteurs</div>
+      <div class="gold-rule"></div>
+
+      <div class="body">
+        <p>Petite Anse is a small, owner-run hotel on Grenada's far north coast, near Duquesne and Levera Beaches. Twelve rooms, a poolside bar, a terrace overlooking the Caribbean, and a kitchen that does its own thing rather than chasing the buffet-resort formula. 9.8 across 132 reviews — the highest-rated property on the island that isn't pricing on last-minute distress.</p>
+        <p>This is a different category of property than the Antigua all-inclusives below. Expect honest charm, attentive small-team service, and a slower pace — not a multi-restaurant resort with nightly entertainment. Closer in spirit to a high-end inn than a corporate AI.</p>
+        <p>One thing to know: the property is roughly 75 minutes from Maurice Bishop International (GND) at the south end of the island. The drive is part of the experience but is real driving — winding interior roads through villages and rainforest.</p>
+      </div>
+
+      <div class="amenity-grid">
+        <div class="amenity">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15 8.5 22 9.3 17 14 18.5 21 12 17.8 5.5 21 7 14 2 9.3 9 8.5 12 2"/></svg>
+          <span>9.8 / 10 · 132 reviews</span>
+        </div>
+        <div class="amenity">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>North coast · Duquesne &amp; Levera Beaches</span>
+        </div>
+        <div class="amenity">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M5 12V8a3 3 0 016 0v4"/><path d="M13 12V8a3 3 0 016 0v4"/><path d="M3 16h18"/><path d="M3 20h18"/></svg>
+          <span>Poolside bar · terrace · garden</span>
+        </div>
+        <div class="amenity">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C9 6 6 9 6 13a6 6 0 0012 0c0-4-3-7-6-11z"/></svg>
+          <span>Spa · deep tissue · facials · mani-pedi</span>
+        </div>
+        <div class="amenity">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19l4-7 5 4 4-6 5 9z"/><path d="M3 19h18"/></svg>
+          <span>Hiking · biking · ecotours onsite</span>
+        </div>
+        <div class="amenity">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 4h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+          <span>Library · free WiFi</span>
+        </div>
+      </div>
+
+      <!-- ROOM 1 — Romantic Double -->
+      <div class="room-section">
+        <h4>Romantic Double · Queen · ocean view <span class="refundable-badge">refundable thru May 10</span></h4>
+        <p>37 sq m. Queen bed, balcony, ocean view, breakfast included as the standard plan. With the all-inclusive food &amp; beverage upgrade applied, all meals and drinks are bundled in across the stay.</p>
+
+        <div class="package-pricing">
+          <div class="package-kicker">Package estimate · all-in for the stay</div>
+          <div class="package-numbers">
+            <span class="package-amount">Est. $9,911</span>
+            <span class="package-pp">Est. $2,478 per person · 4 adults</span>
+          </div>
+          <p class="deposit-line refundable">Round-trip air for 4 (~$4,169) · 2 rooms × 5 nights with AI upgrade (~$5,742). Hotel inventory fully refundable through May 10. Final supplier rate confirmed by Christina before booking.</p>
+        </div>
+
+        <label class="resort-select">
+          <input type="radio" name="resort_choice" value="Grenada · Petite Anse · Romantic Double Ocean View · AI · 2 rooms (Est. $9,911)" data-price="9911" onclick="setTimeout(updateTotal,0)">
+          <span>Choose Petite Anse · Romantic Double</span>
+        </label>
+      </div>
+
+      <!-- ROOM 2 — Honeymoon Double -->
+      <div class="room-section">
+        <h4>Honeymoon Double · King · beach view (Grenadine wing) <span class="refundable-badge">refundable thru May 10</span></h4>
+        <p>65 sq m — significantly larger than the Romantic Double. King bed, terrace, beach view from the Grenadine wing. With the all-inclusive upgrade applied.</p>
+
+        <div class="package-pricing">
+          <div class="package-kicker">Package estimate · all-in for the stay</div>
+          <div class="package-numbers">
+            <span class="package-amount">Est. $10,518</span>
+            <span class="package-pp">Est. $2,630 per person · 4 adults</span>
+          </div>
+          <p class="deposit-line refundable">Round-trip air for 4 (~$4,169) · 2 rooms × 5 nights with AI upgrade (~$6,349). Hotel inventory fully refundable through May 10. Final supplier rate confirmed by Christina before booking.</p>
+        </div>
+
+        <label class="resort-select">
+          <input type="radio" name="resort_choice" value="Grenada · Petite Anse · Honeymoon Beach View King · AI · 2 rooms (Est. $10,518)" data-price="10518" onclick="setTimeout(updateTotal,0)">
+          <span>Choose Petite Anse · Honeymoon Beach View</span>
+        </label>
+      </div>
+
+      <p class="transfer-note">Round-trip airport transfers (~75 min from GND) are not bundled in this rate. Christina will quote a private transfer separately.</p>
+    </article>
+  </div>
+</section>
+
+<!-- =========================================
+     DESTINATION 2: ANGUILLA (info card)
+     ========================================= -->
+<section class="dest-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="kicker">Destination 2</div>
+      <h2>Anguilla</h2>
+      <div class="gold-rule"></div>
+      <p>A different kind of trip entirely — Anguilla operates outside the all-inclusive model. Worth knowing about, but only worth pursuing if non-AI luxury is on the table.</p>
+    </div>
+
+    <div class="info-card">
+      <h3>About Anguilla as a destination</h3>
+      <div class="tagline">luxury beachfront, but not all-inclusive</div>
+      <div class="gold-rule"></div>
+
+      <p>Unlike Grenada and Antigua, Anguilla doesn't have an established all-inclusive resort category. The properties here — Cap Juluca, Four Seasons, Aurora, Malliouhana, Zemi Beach — operate as premium European Plan resorts, where rooms are billed separately from food and beverage.</p>
+      <p>What that means for this trip: a five-night stay for two rooms typically runs $1,000–$1,800 per room per night base on the secondary properties and $2,000+ on the marquee names. Food and drink is on top of that. It's a meaningfully different price point than the all-inclusive options on Grenada or Antigua.</p>
+      <p>Round-trip air for four: <strong>Est. $4,655</strong> (American main cabin, IAH–AXA via MIA, roughly 8 hours each way).</p>
+
+      <div class="info-cta">
+        <strong>If Anguilla is interesting:</strong> mention it in the notes section below, and Christina will pull specific resort options at price points you specify. Otherwise, the all-inclusive inventory worth comparing is in Grenada or Antigua.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================
+     DESTINATION 3: ANTIGUA
+     ========================================= -->
+<section class="dest-section alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="kicker">Destination 3</div>
+      <h2>Antigua</h2>
+      <div class="gold-rule"></div>
+      <p>The strongest last-minute inventory of the three islands — three solid all-inclusive resorts in this date window. One family-friendly AI on the south coast, two adults-only AIs on the east coast. Antigua is famously known for "365 beaches, one for every day of the year" and has a relaxed, well-developed resort scene.</p>
+    </div>
+
+    <!-- FLIGHT INFO: ANTIGUA -->
+    <div class="flight-card">
+      <h3>
+        <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+        Flights to Antigua (ANU)
+      </h3>
+      <div class="flight-route">
+        <div class="route-point">
+          <span class="time">7:17 AM</span>
+          <span class="airport">IAH</span>
+          <span class="city">Houston</span>
+        </div>
+        <div class="route-line">8h 2m · 1 stop MIA<br>Sun, May 17</div>
+        <div class="route-point">
+          <span class="time">4:19 PM</span>
+          <span class="airport">ANU</span>
+          <span class="city">Antigua</span>
+        </div>
+      </div>
+      <div class="flight-route">
+        <div class="route-point">
+          <span class="time">2:33 PM</span>
+          <span class="airport">ANU</span>
+          <span class="city">Antigua</span>
+        </div>
+        <div class="route-line">7h 58m · 1 stop MIA<br>Fri, May 22</div>
+        <div class="route-point">
+          <span class="time">9:31 PM</span>
+          <span class="airport">IAH</span>
+          <span class="city">Houston</span>
+        </div>
+      </div>
+      <div class="flight-pricing-row">
+        <span class="label">American · main cabin · 4 passengers · round trip</span>
+        <span class="amount">Est. $4,499</span>
+      </div>
+    </div>
+
+    <!-- PROPERTY: ST. JAMES'S CLUB -->
+    <article class="resort-card has-radio">
+      <div class="kicker">Option 2 · Family-friendly · all-inclusive · Mamora Bay</div>
+      <h3>St. James's Club Antigua</h3>
+      <div class="tagline">a 100-acre estate on the south coast</div>
+      <div class="gold-rule"></div>
+
+      <div class="body">
+        <p>St. James's Club sits on Mamora Bay on Antigua's south coast, a 30-minute drive from V.C. Bird International. Two beaches, six pools, a Tranquility Body &amp; Soul Spa, an international restaurant program, and a kid-friendly footprint that distinguishes it from the adults-only options below.</p>
+        <p>This is the right call if the Kraemer party doesn't need an adults-only environment and would prefer the resort scale and pricing advantage. 8.4 across 804 reviews.</p>
+      </div>
+
+      <div class="amenity-grid">
+        <div class="amenity">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          <span>Mixed-age · all-ages welcome</span>
+        </div>
+        <div class="amenity">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-8 10-8 10 8 10 8-4 8-10 8-10-8-10-8z"/><path d="M2 12c2 0 4-1 6-3"/><path d="M16 9c2 2 4 3 6 3"/></svg>
+          <span>6 outdoor pools · on the beach</span>
+        </div>
+        <div class="amenity">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C9 6 6 9 6 13a6 6 0 0012 0c0-4-3-7-6-11z"/></svg>
+          <span>Tranquility Body &amp; Soul Spa</span>
+        </div>
+        <div class="amenity">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2v6a6 6 0 0012 0V2"/><path d="M6 14a6 6 0 0012 0"/><line x1="6" y1="22" x2="18" y2="22"/></svg>
+          <span>International cuisine · multiple bars</span>
+        </div>
+        <div class="amenity">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>30-min drive from ANU airport</span>
+        </div>
+        <div class="amenity">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15 8.5 22 9.3 17 14 18.5 21 12 17.8 5.5 21 7 14 2 9.3 9 8.5 12 2"/></svg>
+          <span>8.4 / 10 · 804 reviews</span>
+        </div>
+      </div>
+
+      <!-- ROOM 1 — Club Room -->
+      <div class="room-section">
+        <h4>Club Room · King · all-inclusive <span class="nonrefund-badge">non-refundable</span></h4>
+        <p>King bed, AI included (food, beverages, snacks). 20% off spa treatments once per stay. Free parking, free WiFi.</p>
+
+        <div class="package-pricing">
+          <div class="package-kicker">Package estimate · all-in for the stay</div>
+          <div class="package-numbers">
+            <span class="package-amount">Est. $8,833</span>
+            <span class="package-pp">Est. $2,208 per person · 4 adults</span>
+          </div>
+          <p class="deposit-line">Round-trip air for 4 (~$4,499) · 2 rooms × 5 nights AI included (~$4,334). Non-refundable inventory at this rate; full payment at booking. Final supplier rate confirmed by Christina before booking.</p>
+        </div>
+
+        <label class="resort-select">
+          <input type="radio" name="resort_choice" value="Antigua · St. James's Club · Club Room AI · 2 rooms (Est. $8,833)" data-price="8833" onclick="setTimeout(updateTotal,0)">
+          <span>Choose St. James's Club · Club Room</span>
+        </label>
+      </div>
+
+      <!-- ROOM 2 — Premium Room -->
+      <div class="room-section">
+        <h4>Premium Room · King · all-inclusive <span class="nonrefund-badge">non-refundable</span></h4>
+        <p>Upgraded category with King bed and a more premium positioning on property. AI included. Same spa, parking, WiFi benefits as the Club Room.</p>
+
+        <div class="package-pricing">
+          <div class="package-kicker">Package estimate · all-in for the stay</div>
+          <div class="package-numbers">
+            <span class="package-amount">Est. $9,207</span>
+            <span class="package-pp">Est. $2,302 per person · 4 adults</span>
+          </div>
+          <p class="deposit-line">Round-trip air for 4 (~$4,499) · 2 rooms × 5 nights AI included (~$4,708). Non-refundable inventory at this rate. Final supplier rate confirmed by Christina before booking.</p>
+        </div>
+
+        <label class="resort-select">
+          <input type="radio" name="resort_choice" value="Antigua · St. James's Club · Premium Room AI · 2 rooms (Est. $9,207)" data-price="9207" onclick="setTimeout(updateTotal,0)">
+          <span>Choose St. James's Club · Premium Room</span>
+        </label>
+      </div>
+
+      <p class="transfer-note">Round-trip airport transfers not bundled in this rate; Christina will quote separately.</p>
+    </article>
+
+    <!-- PROPERTY: THE VERANDAH -->
+    <article class="resort-card has-radio">
+      <div class="kicker">Option 3 · Adults-only · all-inclusive · east coast</div>
+      <h3>The Verandah Antigua</h3>
+      <div class="tagline">two private beaches in St. Philip parish</div>
+      <div class="gold-rule"></div>
+
+      <div class="body">
+        <p>The Verandah is on Antigua's east coast — Indian Town Road in the parish of St. Philip, near Long Bay and Devil's Bridge. Two private beaches: a tranquil one (Rasta Beach) and a livelier one with a beach bar. Four pools, a beachfront American-style restaurant, and the watersports list (snorkel, sail, paddleboard) is included.</p>
+        <p>Adults-only. 27-minute drive from ANU. 8.6 across 595 reviews. The east coast runs breezier and quieter than the south — a different feel than the St. James's Club above.</p>
+      </div>
+
+      <div class="amenity-grid">
+        <div class="amenity">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          <span>Adults-only environment</span>
+        </div>
+        <div class="amenity">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17h20"/><path d="M3 17c2-3 5-3 7 0s5 3 7 0"/><path d="M3 13c2-3 5-3 7 0s5 3 7 0"/></svg>
+          <span>Two private beaches</span>
+        </div>
+        <div class="amenity">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-8 10-8 10 8 10 8-4 8-10 8-10-8-10-8z"/></svg>
+          <span>4 outdoor pools</span>
+        </div>
+        <div class="amenity">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2v6a6 6 0 0012 0V2"/><path d="M6 14a6 6 0 0012 0"/><line x1="6" y1="22" x2="18" y2="22"/></svg>
+          <span>Beachfront American restaurant</span>
+        </div>
+        <div class="amenity">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l5-5 5 5-5 5z"/><path d="M11 11l5-5 5 5-5 5z"/></svg>
+          <span>Snorkel · sail · paddleboard included</span>
+        </div>
+        <div class="amenity">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15 8.5 22 9.3 17 14 18.5 21 12 17.8 5.5 21 7 14 2 9.3 9 8.5 12 2"/></svg>
+          <span>8.6 / 10 · 595 reviews</span>
+        </div>
+      </div>
+
+      <!-- ROOM 1 — Waterview Suite -->
+      <div class="room-section">
+        <h4>Waterview Suite · King · all-inclusive <span class="nonrefund-badge">non-refundable</span></h4>
+        <p>King bed, water-view positioning. AI included with food, beverages, and snacks. 20% off spa once per stay. Free WiFi.</p>
+
+        <div class="package-pricing">
+          <div class="package-kicker">Package estimate · all-in for the stay</div>
+          <div class="package-numbers">
+            <span class="package-amount">Est. $9,481</span>
+            <span class="package-pp">Est. $2,370 per person · 4 adults</span>
+          </div>
+          <p class="deposit-line">Round-trip air for 4 (~$4,499) · 2 rooms × 5 nights AI included (~$4,982). Non-refundable inventory at this rate. Final supplier rate confirmed by Christina before booking.</p>
+        </div>
+
+        <label class="resort-select">
+          <input type="radio" name="resort_choice" value="Antigua · The Verandah · Waterview Suite King AI · 2 rooms (Est. $9,481)" data-price="9481" onclick="setTimeout(updateTotal,0)">
+          <span>Choose The Verandah · Waterview Suite</span>
+        </label>
+      </div>
+
+      <!-- ROOM 2 — Waterfront Suite -->
+      <div class="room-section">
+        <h4>Waterfront Suite · King · all-inclusive <span class="nonrefund-badge">non-refundable</span></h4>
+        <p>Upgraded suite with closer-to-the-water positioning on property. King bed. AI included.</p>
+
+        <div class="package-pricing">
+          <div class="package-kicker">Package estimate · all-in for the stay</div>
+          <div class="package-numbers">
+            <span class="package-amount">Est. $9,905</span>
+            <span class="package-pp">Est. $2,476 per person · 4 adults</span>
+          </div>
+          <p class="deposit-line">Round-trip air for 4 (~$4,499) · 2 rooms × 5 nights AI included (~$5,406). Non-refundable inventory at this rate. Final supplier rate confirmed by Christina before booking.</p>
+        </div>
+
+        <label class="resort-select">
+          <input type="radio" name="resort_choice" value="Antigua · The Verandah · Waterfront Suite King AI · 2 rooms (Est. $9,905)" data-price="9905" onclick="setTimeout(updateTotal,0)">
+          <span>Choose The Verandah · Waterfront Suite</span>
+        </label>
+      </div>
+
+      <p class="transfer-note">Round-trip airport transfers not bundled in this rate; Christina will quote separately.</p>
+    </article>
+
+    <!-- PROPERTY: THE ESCAPE AT NONSUCH -->
+    <article class="resort-card has-radio">
+      <div class="kicker">Option 4 · Adults-only · plunge pool in every room</div>
+      <h3>The Escape at Nonsuch Bay</h3>
+      <div class="tagline">a luxury bayside sanctuary</div>
+      <div class="gold-rule"></div>
+
+      <div class="body">
+        <p>The Escape sits on Hughes Point at Nonsuch Bay on Antigua's east coast. Every room has its own private plunge pool. The restaurant runs daily-changing à la carte menus rather than a buffet, and the property's 9.0 across 913 reviews is the highest of the three Antigua options here.</p>
+        <p>Kayaks, snorkel gear, and a turtle excursion program are included. There's a 24-hour airport shuttle available — unusual at this price point.</p>
+        <p>This is the most differentiated product in the comparison. If a private plunge pool per room moves the needle, this is the option that delivers it.</p>
+      </div>
+
+      <div class="amenity-grid">
+        <div class="amenity">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          <span>Adults-only environment</span>
+        </div>
+        <div class="amenity">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M2 12s4-8 10-8 10 8 10 8-4 8-10 8-10-8-10-8z"/></svg>
+          <span>Private plunge pool in every room</span>
+        </div>
+        <div class="amenity">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2v6a6 6 0 0012 0V2"/><path d="M6 14a6 6 0 0012 0"/><line x1="6" y1="22" x2="18" y2="22"/></svg>
+          <span>Daily-changing à la carte menus</span>
+        </div>
+        <div class="amenity">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C9 6 6 9 6 13a6 6 0 0012 0c0-4-3-7-6-11z"/></svg>
+          <span>Aromatherapy spa treatments</span>
+        </div>
+        <div class="amenity">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="2"/><circle cx="18" cy="17" r="2"/><path d="M2 17h2m4 0h8m4 0h2"/><path d="M6 12V7h12l3 5v5"/></svg>
+          <span>24-hour airport shuttle available</span>
+        </div>
+        <div class="amenity">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15 8.5 22 9.3 17 14 18.5 21 12 17.8 5.5 21 7 14 2 9.3 9 8.5 12 2"/></svg>
+          <span>9.0 / 10 · 913 reviews</span>
+        </div>
+      </div>
+
+      <!-- ROOM 1 — Standard Plunge Pool -->
+      <div class="room-section">
+        <h4>Standard Room · King · plunge pool · garden view <span class="refundable-badge">refundable thru May 10</span></h4>
+        <p>56 sq m. King bed, private plunge pool, garden-view positioning. AI included. The adults-only entry category.</p>
+
+        <div class="package-pricing">
+          <div class="package-kicker">Package estimate · all-in for the stay</div>
+          <div class="package-numbers">
+            <span class="package-amount">Est. $10,336</span>
+            <span class="package-pp">Est. $2,584 per person · 4 adults</span>
+          </div>
+          <p class="deposit-line refundable">Round-trip air for 4 (~$4,499) · 2 rooms × 5 nights AI included (~$5,837). Hotel fully refundable through May 10. Final supplier rate confirmed by Christina before booking.</p>
+        </div>
+
+        <label class="resort-select">
+          <input type="radio" name="resort_choice" value="Antigua · The Escape at Nonsuch · Standard Plunge Pool Garden View · 2 rooms (Est. $10,336)" data-price="10336" onclick="setTimeout(updateTotal,0)">
+          <span>Choose The Escape · Standard Plunge Pool</span>
+        </label>
+      </div>
+
+      <!-- ROOM 2 — Romantic Suite Plunge Pool Bay View -->
+      <div class="room-section">
+        <h4>Romantic Suite · King · plunge pool · bay view <span class="refundable-badge">refundable thru May 10</span></h4>
+        <p>56 sq m. King bed, private plunge pool with bay view (the differentiator), bathrobes, in-room kitchen, espresso maker. AI included.</p>
+
+        <div class="package-pricing">
+          <div class="package-kicker">Package estimate · all-in for the stay</div>
+          <div class="package-numbers">
+            <span class="package-amount">Est. $11,380</span>
+            <span class="package-pp">Est. $2,845 per person · 4 adults</span>
+          </div>
+          <p class="deposit-line refundable">Round-trip air for 4 (~$4,499) · 2 rooms × 5 nights AI included (~$6,881). Hotel fully refundable through May 10. Final supplier rate confirmed by Christina before booking.</p>
+        </div>
+
+        <label class="resort-select">
+          <input type="radio" name="resort_choice" value="Antigua · The Escape at Nonsuch · Romantic Suite Plunge Pool Bay View · 2 rooms (Est. $11,380)" data-price="11380" onclick="setTimeout(updateTotal,0)">
+          <span>Choose The Escape · Romantic Suite Bay View</span>
+        </label>
+      </div>
+
+      <p class="transfer-note">24-hour airport shuttle availability noted by the property; Christina will confirm what's bundled vs. additional.</p>
+    </article>
+  </div>
+</section>
+
+<!-- =========================================
+     SIDE NOTE: U.S. VIRGIN ISLANDS
+     ========================================= -->
+<section class="dest-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="kicker">also worth knowing</div>
+      <h2>U.S. Virgin Islands</h2>
+      <div class="gold-rule"></div>
+      <p>St. Thomas and St. Croix are on the table as well, with one real practical advantage worth flagging — no passport needed for U.S. citizens. The trade is that the all-inclusive scene here isn't their strong suit.</p>
+    </div>
+
+    <div class="info-card">
+      <h3>St. Thomas &amp; St. Croix</h3>
+      <div class="tagline">passport-free Caribbean — different resort model</div>
+      <div class="gold-rule"></div>
+
+      <p>The USVI run on a different model than the AI-driven islands above. Most properties operate European Plan (room-only) or include a light continental breakfast. A handful of all-inclusive resorts exist, but they don't compete on scale or quality with what you'd get at the Antigua AIs.</p>
+
+      <p>What they do have is U.S. territory status — no passport required for U.S. citizens, just a current driver's license or birth certificate. That's a meaningful simplification if anyone in the party is short on a current passport or would rather not deal with an international entry process.</p>
+
+      <p style="margin-top: 4px;"><strong>Round-trip air for the party of 4 from Houston:</strong></p>
+      <ul style="font-size: 14px; line-height: 1.85; padding-left: 22px; color: var(--ink); margin-top: 8px; margin-bottom: 4px;">
+        <li><strong>St. Thomas (STT)</strong> — Est. $4,600, United, nonstop from IAH</li>
+        <li><strong>St. Croix (STX)</strong> — Est. $3,062, one stop (the lowest air on the table)</li>
+      </ul>
+
+      <div class="info-cta">
+        <strong>If passport-free travel or nonstop air outweighs all-inclusive value</strong> — say so in the notes below and Christina will pull specific resort options for either island. Otherwise, the strongest AI play in this comparison stays in Antigua, with Grenada as the boutique alternative.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================
+     FORM SECTION
+     ========================================= -->
+<section class="form-section">
+
+  <!-- PRICE-SHOP CALLOUT -->
+  <div class="priceshop">
+    <h3>One more thing — once you narrow it down</h3>
+    <p>Once you point me at a destination or property, I'll run it across multiple supplier channels (Apple Vacations, Funjet, Travel Impressions, Sandals direct, hotel direct) to make sure you're getting the best available rate. The numbers above are starting points — supplier-packaged rates often beat them by 8–15% on Caribbean all-inclusives, and last-minute promos can move further.</p>
+    <p>You don't have to commit on this page. Pick what looks right, send it through, and I'll come back with the price-shopped version before anything is booked.</p>
+  </div>
+
+  <!-- NOTES -->
+  <div class="notes-block">
+    <label for="notes">Anything I should know?</label>
+    <textarea id="notes" name="notes" placeholder="Date flexibility, room preferences, dietary needs, transfer preferences, Anguilla interest, anniversary or special occasion — anything helpful."></textarea>
+  </div>
+
+  <!-- RUNNING TOTAL -->
+  <div class="running-total">
+    <span class="rt-label">your selection · estimated package</span>
+    <div class="rt-right">
+      <span class="rt-amount" id="totalAmount">— select an option —</span>
+      <div class="rt-pp" id="totalPP"></div>
+    </div>
+  </div>
+
+  <!-- CONTACT FORM -->
+  <form id="tripForm" class="contact-form">
+    <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+    <input type="hidden" name="subject" value="Kraemer — Caribbean Last-Minute Selections">
+    <input type="hidden" name="from_name" value="Kraemer party — PMTP Trip Form">
+    <input type="hidden" name="redirect" value="false">
+
+    <input type="hidden" name="Resort_Choice" id="hidden_resort">
+    <input type="hidden" name="Estimated_Total" id="hidden_total">
+    <input type="hidden" name="Trip_Notes" id="hidden_notes">
+
+    <h3>Send your selections</h3>
+
+    <div class="form-grid">
+      <input type="text" name="Name" placeholder="Full name" required>
+      <input type="email" name="Email" placeholder="Email address" required>
+      <input type="tel" name="Phone" placeholder="Phone number">
+    </div>
+
+    <div class="insurance-block">
+      <div class="ins-label">Travel insurance — required selection</div>
+      <label class="option">
+        <input type="radio" name="Insurance_Choice" value="Yes — please send me a travel insurance quote" required>
+        <span>Yes, please send me a travel insurance quote.</span>
+      </label>
+      <label class="option">
+        <input type="radio" name="Insurance_Choice" value="No — I decline travel insurance and accept the risks of traveling without coverage" required>
+        <span>No, I decline travel insurance and accept the risks of traveling without coverage — including cancellation penalties, medical expenses abroad, and missed travel days with no refund.</span>
+      </label>
+    </div>
+
+    <button type="submit" class="submit-button">Send my selections</button>
+  </form>
+
+  <div id="thanksMsg" class="thanks-msg">
+    <h3>Got it — thank you.</h3>
+    <p>Christina will be in touch shortly with confirmed pricing and next steps.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="gold-rule"></div>
+  <h3>Christina Garcia</h3>
+  <div class="contact-info">
+    Point Me to Paradise Travel<br>
+    <a id="emailLink" href="#">loading…</a><br>
+    (281) 229-0862
+  </div>
+  <p class="disclosure">Individual hotels, transfers, and tours in your quote are priced at publicly available rates — and in many cases lower than what you'd find on your own. You don't have to worry about overpaying for a piece of your trip. What you're paying for is the rest: the right rooms at the right property, operators we've used for years, the trip app, and a human who answers when something doesn't go to plan.</p>
+</footer>
+
+<script>
+// Email assembly (Cloudflare protection)
+(function() {
+  var addr = 'Christina' + '@' + 'PointMeToParadise.com';
+  var link = document.getElementById('emailLink');
+  if (link) {
+    link.href = 'mailto:' + addr;
+    link.textContent = addr;
+  }
+})();
+
+// Total update
+function updateTotal() {
+  var radios = document.querySelectorAll('input[name="resort_choice"]');
+  var totalAmt = document.getElementById('totalAmount');
+  var totalPP = document.getElementById('totalPP');
+  var hiddenResort = document.getElementById('hidden_resort');
+  var hiddenTotal = document.getElementById('hidden_total');
+
+  for (var i = 0; i < radios.length; i++) {
+    if (radios[i].checked) {
+      var price = parseInt(radios[i].getAttribute('data-price'), 10);
+      var pp = Math.round(price / 4);
+      totalAmt.textContent = 'Est. $' + price.toLocaleString();
+      totalPP.textContent = 'Est. $' + pp.toLocaleString() + ' per person · 4 adults';
+      hiddenResort.value = radios[i].value;
+      hiddenTotal.value = '$' + price.toLocaleString();
+      return;
+    }
+  }
+  totalAmt.textContent = '— select an option —';
+  totalPP.textContent = '';
+  hiddenResort.value = '';
+  hiddenTotal.value = '';
+}
+
+// Form submit handler
+document.getElementById('tripForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var form = e.target;
+
+  // Sync notes into hidden field
+  var notesEl = document.getElementById('notes');
+  document.getElementById('hidden_notes').value = notesEl ? notesEl.value : '';
+
+  var data = new FormData(form);
+
+  fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    body: data
+  })
+  .then(function(res) { return res.json(); })
+  .then(function(json) {
+    if (json.success) {
+      form.style.display = 'none';
+      document.getElementById('thanksMsg').classList.add('show');
+      var thanksEl = document.getElementById('thanksMsg');
+      window.scrollTo({ top: thanksEl.offsetTop - 40, behavior: 'smooth' });
+    } else {
+      alert('Something went wrong. Please email Christina directly or text (281) 229-0862.');
+    }
+  })
+  .catch(function() {
+    alert('Something went wrong. Please email Christina directly or text (281) 229-0862.');
+  });
+});
+</script>
+</body>
+</html>
