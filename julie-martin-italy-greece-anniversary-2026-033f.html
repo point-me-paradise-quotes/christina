@@ -1,0 +1,1769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Julie & Family — Italy & Greece Anniversary 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --aqua-pale: #C4E4E1;
+    --aqua-mist: #EAF3F2;
+    --aqua: #75AFB1;
+    --aqua-dark: #4F8A8C;
+    --sand: #ECE7DC;
+    --sand-light: #F4F1E9;
+    --gold-whisper: #D6C8A8;
+    --white: #FFFFFF;
+    --paper: #FBFDFD;
+    --ink: #2B2420;
+    --ink-soft: #6B6359;
+    --line: #E5E9E8;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: 96px; /* room for sticky total bar */
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+
+  .italic-accent {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--aqua-dark);
+  }
+
+  .container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 1.75rem;
+  }
+
+  .container-narrow {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 1.75rem;
+  }
+
+  /* ====================== HERO ====================== */
+  .hero {
+    background: var(--white);
+    padding: 4.5rem 0 3rem;
+    border-bottom: 1px solid var(--line);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    right: -120px;
+    width: 320px;
+    height: 320px;
+    border: 1px solid var(--aqua-pale);
+    border-radius: 50%;
+    opacity: 0.7;
+    z-index: 0;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    left: -80px;
+    width: 200px;
+    height: 200px;
+    border: 1px solid var(--gold-whisper);
+    border-radius: 50%;
+    opacity: 0.5;
+    z-index: 0;
+  }
+
+  .hero-content { position: relative; z-index: 1; text-align: center; }
+
+  .brand-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--aqua-dark);
+    letter-spacing: 0.02em;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--gold-whisper);
+  }
+
+  .eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--ink-soft);
+    margin-bottom: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.4rem, 5.5vw, 4rem);
+    line-height: 1.05;
+    margin-bottom: 1.25rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .hero h1 em {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--aqua-dark);
+    font-weight: 400;
+  }
+
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: var(--ink-soft);
+    margin-bottom: 2rem;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-meta {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+  }
+
+  .hero-meta div { display: flex; flex-direction: column; gap: 0.15rem; }
+  .hero-meta .label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--aqua-dark);
+  }
+  .hero-meta .value {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--ink);
+  }
+
+  /* ====================== APP SIGNATURE STRIP ====================== */
+  .app-signature {
+    background: var(--aqua-mist);
+    padding: 2.5rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .app-signature-wrap {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.75rem;
+    align-items: center;
+  }
+
+  .app-icon {
+    width: 64px;
+    height: 64px;
+    background: var(--white);
+    border: 1px solid var(--aqua);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .app-signature h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+  }
+
+  .app-signature .tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--aqua-dark);
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .app-signature p {
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    max-width: 720px;
+  }
+
+  /* ====================== SECTION DEFAULTS ====================== */
+  section.standard {
+    padding: 4.5rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  section.standard.alt {
+    background: var(--aqua-mist);
+  }
+
+  section.standard.sand {
+    background: var(--sand-light);
+  }
+
+  .section-head {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .section-head h2 {
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    margin-bottom: 0.6rem;
+  }
+
+  .section-head .gold-line {
+    display: inline-block;
+    width: 60px;
+    height: 1px;
+    background: var(--gold-whisper);
+    margin: 1rem 0;
+  }
+
+  .section-head .lead {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.25rem;
+    color: var(--ink-soft);
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+
+  .section-note {
+    font-size: 0.93rem;
+    color: var(--ink-soft);
+    max-width: 620px;
+    margin: 1.5rem auto 0;
+    line-height: 1.65;
+    padding: 0.85rem 1.25rem;
+    border-left: 2px solid var(--aqua-pale);
+    background: var(--white);
+    text-align: left;
+    border-radius: 0 3px 3px 0;
+  }
+
+  .section-note strong {
+    color: var(--aqua-dark);
+    font-weight: 500;
+  }
+
+  /* ====================== FLOW NARRATIVE ====================== */
+  .flow {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .flow-leg {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--aqua);
+    padding: 2rem 2.25rem;
+    border-radius: 4px;
+    position: relative;
+  }
+
+  .flow-leg-image {
+    width: calc(100% + 4.5rem);
+    height: 240px;
+    margin: -2rem -2.25rem 1.75rem -2.25rem;
+    overflow: hidden;
+    position: relative;
+    border-top-right-radius: 2px;
+  }
+
+  .flow-leg-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+  }
+
+  .flow-leg:hover .flow-leg-image img {
+    transform: scale(1.03);
+  }
+
+  .flow-leg-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background: linear-gradient(to bottom, transparent, rgba(43, 36, 32, 0.18));
+    pointer-events: none;
+  }
+
+  .flow-leg .leg-num {
+    position: absolute;
+    top: -12px;
+    left: 1.5rem;
+    background: var(--aqua-dark);
+    color: var(--white);
+    font-family: 'Playfair Display', serif;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 500;
+    z-index: 2;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  }
+
+  .flow-leg h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .flow-leg .leg-dates {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--aqua-dark);
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+  }
+
+  .flow-leg p {
+    color: var(--ink-soft);
+    line-height: 1.75;
+    font-size: 0.98rem;
+  }
+
+  .flow-leg p + p { margin-top: 1rem; }
+
+  /* ====================== HOTEL OPTION CARDS ====================== */
+  .hotel-options {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+
+  .hotel-slot {
+    background: var(--white);
+    border: 1px solid var(--line);
+    padding: 1.75rem;
+    border-radius: 4px;
+  }
+
+  .hotel-slot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 1.25rem;
+  }
+
+  .hotel-slot-header .destination {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--ink);
+  }
+
+  .hotel-slot-header .nights {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 1.05rem;
+  }
+
+  .hotel-option {
+    display: block;
+    padding: 1.1rem 1.25rem;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+    transition: all 0.18s ease;
+    background: var(--paper);
+  }
+
+  .hotel-option:hover {
+    border-color: var(--aqua);
+    background: var(--white);
+  }
+
+  .hotel-option input[type="radio"] {
+    display: none;
+  }
+
+  .hotel-option-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .radio-circle {
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid var(--aqua);
+    border-radius: 50%;
+    flex-shrink: 0;
+    position: relative;
+    transition: all 0.18s ease;
+  }
+
+  .hotel-option input[type="radio"]:checked ~ .hotel-option-row .radio-circle {
+    background: var(--aqua-dark);
+    border-color: var(--aqua-dark);
+  }
+
+  .hotel-option input[type="radio"]:checked ~ .hotel-option-row .radio-circle::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: var(--white);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .hotel-option:has(input:checked) {
+    border-color: var(--aqua-dark);
+    background: var(--white);
+    box-shadow: 0 1px 0 var(--aqua-pale);
+  }
+
+  .hotel-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .hotel-images img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 3px;
+    display: block;
+    border: 1px solid var(--line);
+  }
+
+  .hotel-info { flex: 1; min-width: 0; }
+
+  .hotel-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 1.05rem;
+    color: var(--ink);
+    margin-bottom: 0.15rem;
+  }
+
+  .hotel-meta {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    line-height: 1.4;
+  }
+
+  .hotel-delta {
+    flex-shrink: 0;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  .delta-default {
+    color: var(--aqua-dark);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1rem;
+  }
+
+  .delta-up { color: var(--ink); }
+  .delta-down { color: var(--aqua-dark); }
+
+  /* ====================== TOUR EXPERIENCE LIST ====================== */
+  .tour-block {
+    background: var(--white);
+    border: 1px solid var(--line);
+    padding: 1.75rem;
+    border-radius: 4px;
+    margin-top: 2rem;
+  }
+
+  .tour-block h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .tour-block .sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--ink-soft);
+    margin-bottom: 1.4rem;
+    font-size: 1rem;
+  }
+
+  .tour-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .tour-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.18s ease;
+    background: var(--paper);
+    min-height: 48px;
+  }
+
+  .tour-option:hover {
+    border-color: var(--aqua);
+    background: var(--white);
+  }
+
+  .tour-option input[type="checkbox"] {
+    display: none;
+  }
+
+  .check-box {
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid var(--aqua);
+    border-radius: 3px;
+    flex-shrink: 0;
+    position: relative;
+    margin-top: 2px;
+    transition: all 0.18s ease;
+  }
+
+  .tour-option input[type="checkbox"]:checked ~ .check-box {
+    background: var(--aqua-dark);
+    border-color: var(--aqua-dark);
+  }
+
+  .tour-option input[type="checkbox"]:checked ~ .check-box::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 9px;
+    border-right: 2px solid var(--white);
+    border-bottom: 2px solid var(--white);
+    top: 1px;
+    left: 5px;
+    transform: rotate(45deg);
+  }
+
+  .tour-option:has(input:checked) {
+    border-color: var(--aqua-dark);
+    background: var(--white);
+  }
+
+  .tour-info { flex: 1; }
+
+  .tour-name {
+    font-weight: 500;
+    color: var(--ink);
+    font-size: 0.98rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .tour-desc {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    line-height: 1.4;
+  }
+
+  /* ====================== INCLUDED LIST ====================== */
+  .included-list {
+    background: var(--white);
+    border: 1px solid var(--line);
+    padding: 2rem 2.25rem;
+    border-radius: 4px;
+  }
+
+  .included-list ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.7rem 2rem;
+  }
+
+  .included-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    font-size: 0.95rem;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+
+  .check-icon {
+    flex-shrink: 0;
+    margin-top: 4px;
+    color: var(--aqua-dark);
+  }
+
+  /* ====================== QUESTIONS / TEXTAREA INPUTS ====================== */
+  .input-block {
+    margin-bottom: 1.75rem;
+  }
+
+  .input-block label {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 0.4rem;
+    font-size: 1.05rem;
+  }
+
+  .input-block .helper {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+  }
+
+  textarea, input[type="text"], input[type="email"], input[type="tel"] {
+    width: 100%;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px; /* iOS auto-zoom prevention */
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: var(--white);
+    color: var(--ink);
+    transition: border-color 0.18s ease;
+    line-height: 1.5;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 90px;
+  }
+
+  textarea:focus, input:focus {
+    outline: none;
+    border-color: var(--aqua);
+  }
+
+  /* ====================== INSURANCE / RADIO BLOCKS ====================== */
+  .insurance-options {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .insurance-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    cursor: pointer;
+    background: var(--paper);
+    transition: all 0.18s ease;
+    min-height: 48px;
+  }
+
+  .insurance-option:hover {
+    border-color: var(--aqua);
+    background: var(--white);
+  }
+
+  .insurance-option input[type="radio"] { display: none; }
+
+  .insurance-option:has(input:checked) {
+    border-color: var(--aqua-dark);
+    background: var(--white);
+  }
+
+  .insurance-option .label-text {
+    font-size: 0.95rem;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+
+  /* ====================== SUBMIT BUTTON ====================== */
+  button[type="submit"] {
+    width: 100%;
+    background: var(--aqua-dark);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1.02rem;
+    padding: 1.1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    letter-spacing: 0.04em;
+    transition: background 0.18s ease;
+    min-height: 56px;
+  }
+
+  button[type="submit"]:hover {
+    background: var(--aqua-dark);
+    box-shadow: 0 4px 14px rgba(79, 138, 140, 0.35);
+    transform: translateY(-1px);
+  }
+
+  /* ====================== STICKY TOTAL BAR ====================== */
+  .total-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--aqua-pale);
+    border-top: 1px solid var(--aqua);
+    padding: 0.75rem 1.75rem;
+    z-index: 100;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
+  }
+
+  .total-bar-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .total-bar .left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.05rem;
+  }
+
+  .total-bar .total-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--aqua-dark);
+  }
+
+  .total-bar .total-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .total-bar .right {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 0.05rem;
+  }
+
+  .total-bar .pp-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--aqua-dark);
+  }
+
+  .total-bar .pp-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* ====================== FOOTER ====================== */
+  footer {
+    background: var(--sand-light);
+    padding: 3.5rem 0 2rem;
+    color: var(--ink);
+  }
+
+  footer h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  footer .footer-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--aqua-dark);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  footer .contact-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+  }
+
+  footer a {
+    color: var(--aqua-dark);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold-whisper);
+    padding-bottom: 1px;
+  }
+
+  footer a:hover { color: var(--ink); }
+
+  footer .disclosure {
+    border-top: 1px solid var(--line);
+    padding-top: 1.5rem;
+    font-size: 0.83rem;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    max-width: 720px;
+  }
+
+  /* ====================== THANK YOU MESSAGE ====================== */
+  .thanks-msg {
+    display: none;
+    background: var(--aqua-mist);
+    border: 1px solid var(--aqua);
+    padding: 2.5rem;
+    border-radius: 4px;
+    text-align: center;
+  }
+
+  .thanks-msg.show { display: block; }
+
+  .thanks-msg h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: var(--aqua-dark);
+  }
+
+  .thanks-msg p {
+    color: var(--ink);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  /* ====================== RESPONSIVE ====================== */
+  @media (max-width: 720px) {
+    body { padding-bottom: 110px; }
+
+    .hero { padding: 3rem 0 2.25rem; }
+    .hero::before, .hero::after { display: none; }
+
+    section.standard { padding: 3rem 0; }
+
+    .container, .container-narrow { padding: 0 1.25rem; }
+
+    .app-signature-wrap {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    .app-icon { margin: 0 auto; }
+    .app-signature { text-align: center; padding: 2rem 0; }
+
+    .included-list ul {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-meta { gap: 1.25rem; }
+
+    .total-bar { padding: 0.7rem 1rem; }
+    .total-bar-inner { flex-wrap: wrap; gap: 0.4rem; }
+    .total-bar .total-amount { font-size: 1.2rem; }
+    .total-bar .pp-amount { font-size: 0.95rem; }
+
+    .flow-leg { padding: 1.5rem 1.4rem; }
+    .flow-leg-image {
+      width: calc(100% + 2.8rem);
+      height: 180px;
+      margin: -1.5rem -1.4rem 1.25rem -1.4rem;
+    }
+    .hotel-slot { padding: 1.4rem; }
+    .hotel-option-row { flex-wrap: nowrap; }
+    .hotel-name { font-size: 0.98rem; }
+
+    .hotel-images {
+      gap: 0.4rem;
+      margin-top: 0.75rem;
+    }
+    .hotel-images img {
+      height: 75px;
+    }
+
+    .tour-block { padding: 1.4rem; }
+    .included-list { padding: 1.4rem; }
+  }
+
+  /* ====================== UTILS ====================== */
+  .mt-2 { margin-top: 0.75rem; }
+  .mt-3 { margin-top: 1.25rem; }
+  .text-soft { color: var(--ink-soft); }
+  .small { font-size: 0.88rem; }
+
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container hero-content">
+    <span class="brand-mark">Point Me to Paradise Travel</span>
+    <div class="eyebrow">Anniversary Itinerary &middot; Two Travelers</div>
+    <h1>Italy <em>&amp;</em> Greece,<br>Designed Around You</h1>
+    <p class="hero-sub">Five days on the Amalfi Coast, five along the Cycladic shore, four on the Santorini caldera, and one quiet night in Rome before you fly home.</p>
+    <div class="hero-meta">
+      <div>
+        <span class="label">Dates</span>
+        <span class="value">Sept 19 &mdash; Oct 5, 2026</span>
+      </div>
+      <div>
+        <span class="label">Length</span>
+        <span class="value">15 nights</span>
+      </div>
+      <div>
+        <span class="label">Departing</span>
+        <span class="value">Houston (IAH)</span>
+      </div>
+      <div>
+        <span class="label">Travelers</span>
+        <span class="value">The Martins</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APP SIGNATURE STRIP ============ -->
+<section class="app-signature">
+  <div class="container">
+    <div class="app-signature-wrap">
+      <div class="app-icon">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#4F8A8C" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="7" y="3" width="18" height="26" rx="3"/>
+          <line x1="14" y1="25.5" x2="18" y2="25.5"/>
+          <path d="M16 8 C13.8 8 12 9.8 12 12 C12 14.7 16 19 16 19 C16 19 20 14.7 20 12 C20 9.8 18.2 8 16 8 Z"/>
+          <circle cx="16" cy="12" r="1.4" fill="#4F8A8C"/>
+        </svg>
+      </div>
+      <div>
+        <h3>Your trip includes the PMTP App</h3>
+        <p class="tagline">Self-guided tours, scenic driving routes, and local picks for every destination on this itinerary.</p>
+        <p>A signature feature for our clients &mdash; loaded onto your phone before departure with restaurant recommendations, walking tours of every village, driving routes through Naxos's interior, hidden beaches, and the kind of local detail that turns a trip into yours. Free with your booking.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORM WRAPPER START ============ -->
+<form id="tripForm">
+  <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+  <input type="hidden" name="subject" value="Julie Martin — Italy & Greece Anniversary Selections">
+  <input type="hidden" name="from_name" value="Julie Martin — PMTP Trip Form">
+  <input type="hidden" name="redirect" value="false">
+
+  <!-- Hidden state-tracking fields populated by JS on submit -->
+  <input type="hidden" name="Selected_Praiano" id="hidden_praiano">
+  <input type="hidden" name="Selected_Naxos" id="hidden_naxos">
+  <input type="hidden" name="Selected_Santorini" id="hidden_santorini">
+  <input type="hidden" name="Calculated_Total" id="hidden_total">
+  <input type="hidden" name="Calculated_Per_Person" id="hidden_pp">
+  <input type="hidden" name="Selected_Tours_Italy" id="hidden_tours_italy">
+  <input type="hidden" name="Selected_Tours_Naxos" id="hidden_tours_naxos">
+  <input type="hidden" name="Selected_Tours_Santorini" id="hidden_tours_santorini">
+
+<!-- ============ THE FLOW ============ -->
+<section class="standard">
+  <div class="container-narrow">
+    <div class="section-head">
+      <div class="eyebrow">The Flow</div>
+      <h2>How the trip unfolds</h2>
+      <span class="gold-line"></span>
+      <p class="lead">The shape of your fifteen days, leg by leg. Each section is built to give you depth in one place before the next move.</p>
+    </div>
+
+    <div class="flow">
+
+      <div class="flow-leg">
+        <div class="flow-leg-image">
+          <img src="https://images.pexels.com/photos/19990859/pexels-photo-19990859.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Cliffside houses on the Amalfi Coast" loading="lazy">
+        </div>
+        <span class="leg-num">1</span>
+        <h3>The Amalfi Coast</h3>
+        <div class="leg-dates">Praiano &middot; September 20 &mdash; 25 &middot; five nights</div>
+        <p>You leave Houston Saturday evening on ITA Airways, change planes once in Rome, and land in Naples Sunday afternoon. A private driver meets you at NAP and runs you down the SS-163 to Praiano — a working village west of Positano, perched between Positano's drama and Amalfi's history. Quieter than its famous neighbors, with the same sea.</p>
+        <p>You'll stay in a one-bedroom apartment with a private terrace, a three-minute walk from the village center and eight minutes from the beach. Five days to settle into the rhythm: cliffside mornings, long lunches, sunset walks down to Marina di Praia. Day trips to Capri, Ravello, and Amalfi Town from this base.</p>
+      </div>
+
+      <div class="flow-leg">
+        <div class="flow-leg-image">
+          <img src="https://images.pexels.com/photos/32507664/pexels-photo-32507664.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Aerial view of Naxos seaside" loading="lazy">
+        </div>
+        <span class="leg-num">2</span>
+        <h3>The Cycladic Heartland</h3>
+        <div class="leg-dates">Naxos &middot; September 25 &mdash; 30 &middot; five nights</div>
+        <p>Friday morning a private driver takes you back to Naples. You fly Aegean to Athens, connect to Olympic Air, and land in Naxos by mid-afternoon. A short ride to Plaka Beach — a four-star beachfront property, white sand at the doorstep, daily breakfast included.</p>
+        <p>Naxos is the largest of the Cyclades and the least polished of the famous islands. Mountain villages inland — Apiranthos, Halki, Filoti — long sand beaches along the west coast, and Mt. Zas where the ancients said Zeus was born. The pace is slower than Santorini and the prices are gentler. We strongly recommend a rental car for the inland and beach-hopping days.</p>
+      </div>
+
+      <div class="flow-leg">
+        <div class="flow-leg-image">
+          <img src="https://images.pexels.com/photos/13356921/pexels-photo-13356921.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="White buildings of Oia overlooking the Santorini caldera" loading="lazy">
+        </div>
+        <span class="leg-num">3</span>
+        <h3>The Caldera</h3>
+        <div class="leg-dates">Santorini &middot; September 30 &mdash; October 4 &middot; four nights</div>
+        <p>Wednesday afternoon a fast ferry runs you across to Santorini in just over an hour. A private driver takes you up to Imerovigli — the highest point on the caldera rim, often called the Balcony of Santorini, and the quieter alternative to Oia and Fira.</p>
+        <p>You'll stay in an adults-only cave hotel carved into the volcanic cliff. Loft suite with king bed, sea views, breakfast served on your private terrace. Four full days for the iconic moments — caldera sunsets, Oia at dawn, a volcano boat day, the wineries — without overstaying a small island.</p>
+      </div>
+
+      <div class="flow-leg">
+        <div class="flow-leg-image">
+          <img src="https://cdn.audleytravel.com/1050/750/79/1018521-rome-skyline-italy.webp" alt="Rome skyline" loading="lazy">
+        </div>
+        <span class="leg-num">4</span>
+        <h3>One Night in Rome</h3>
+        <div class="leg-dates">Fiumicino &middot; October 4 &mdash; 5 &middot; one night</div>
+        <p>Saturday morning, a non-stop flight from Santorini lands you at Rome Fiumicino just past noon. Your hotel is connected directly to Terminal 3 by a covered walkway — five minutes from gate to room. If you'd like to spend the afternoon in Rome city center, the Leonardo Express train runs from the same terminal and reaches central Rome in 32 minutes.</p>
+        <p>Sunday morning, a five-minute walk back to the terminal. ITA non-stop to Houston, landing late afternoon.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOTEL OPTIONS ============ -->
+<section class="standard alt">
+  <div class="container-narrow">
+    <div class="section-head">
+      <div class="eyebrow">Where You'll Stay</div>
+      <h2>Default selections, with options</h2>
+      <span class="gold-line"></span>
+      <p class="lead">I've picked the defaults for character, fit, and value &mdash; the property names below have a reason for being here. If something doesn't feel right, switch the selection or note your own preference further down the page.</p>
+      <div class="section-note">
+        <strong>Want an Airbnb instead?</strong> These are my picks, but they're not your only path. If you'd rather book any leg as a private apartment, villa, or Airbnb-style stay instead of a hotel, tell me which one in the swap field below and I'll source options. The trip works either way &mdash; pick whichever feels right for the rhythm you want.
+      </div>
+    </div>
+
+    <div class="hotel-options">
+
+      <!-- =========== PRAIANO =========== -->
+      <div class="hotel-slot">
+        <div class="hotel-slot-header">
+          <span class="destination">Praiano, Amalfi Coast</span>
+          <span class="nights">5 nights &middot; Sept 20 &mdash; 25</span>
+        </div>
+
+        <label class="hotel-option">
+          <input type="radio" name="hotel-praiano" value="Casa Rosetta" data-delta="0" checked>
+          <div class="hotel-option-row">
+            <span class="radio-circle"></span>
+            <div class="hotel-info">
+              <div class="hotel-name">The Press of Casa Rosetta &mdash; <em style="font-style:italic;color:var(--aqua-dark);font-weight:400;">recommended</em></div>
+              <div class="hotel-meta">Central Praiano apartment &middot; 1BR &middot; private terrace, sea view, full kitchen &middot; hosted by Flora</div>
+            </div>
+            <div class="hotel-delta delta-default">Default</div>
+          </div>
+        </label>
+
+        <label class="hotel-option">
+          <input type="radio" name="hotel-praiano" value="Le Marelle" data-delta="-444">
+          <div class="hotel-option-row">
+            <span class="radio-circle"></span>
+            <div class="hotel-info">
+              <div class="hotel-name">Le Marelle (Furore)</div>
+              <div class="hotel-meta">Smaller village west of Praiano &middot; hotel room with sea-view balcony &middot; breakfast included &middot; quieter, fewer dinner options</div>
+            </div>
+            <div class="hotel-delta delta-down">&minus;$444</div>
+          </div>
+          <div class="hotel-images">
+            <img src="https://www.lemarelle.it/gallery/20200820_181340.jpg" alt="Le Marelle Furore view" loading="lazy">
+            <img src="https://www.lemarelle.it/gallery/20200817_201248.jpg" alt="Le Marelle Furore property" loading="lazy">
+            <img src="https://www.lemarelle.it/gallery/0Y6A9063.jpg" alt="Le Marelle Furore detail" loading="lazy">
+          </div>
+        </label>
+
+        <label class="hotel-option">
+          <input type="radio" name="hotel-praiano" value="Miga Sea View" data-delta="104">
+          <div class="hotel-option-row">
+            <span class="radio-circle"></span>
+            <div class="hotel-info">
+              <div class="hotel-name">Mig&agrave; Sea View Charming House (Conca dei Marini)</div>
+              <div class="hotel-meta">Quiet village near Emerald Grotto &middot; entire home with kitchen &middot; private balcony &middot; note: 200 steps to access from road</div>
+            </div>
+            <div class="hotel-delta delta-up">+$104</div>
+          </div>
+        </label>
+      </div>
+
+      <!-- =========== NAXOS =========== -->
+      <div class="hotel-slot">
+        <div class="hotel-slot-header">
+          <span class="destination">Naxos, Cyclades</span>
+          <span class="nights">5 nights &middot; Sept 25 &mdash; 30</span>
+        </div>
+
+        <label class="hotel-option">
+          <input type="radio" name="hotel-naxos" value="Sundunes Hotel Naxos" data-delta="0" checked>
+          <div class="hotel-option-row">
+            <span class="radio-circle"></span>
+            <div class="hotel-info">
+              <div class="hotel-name">Sundunes Hotel Naxos &mdash; <em style="font-style:italic;color:var(--aqua-dark);font-weight:400;">recommended</em></div>
+              <div class="hotel-meta">4-star beachfront property on Plaka Beach &middot; Deluxe Suite &middot; daily breakfast &middot; loungers and umbrellas on the white sand</div>
+            </div>
+            <div class="hotel-delta delta-default">Default</div>
+          </div>
+          <div class="hotel-images">
+            <img src="https://www.sundunes.gr/wp-content/uploads/2026/02/sundunes-beach-03.jpg" alt="Sundunes Hotel Plaka Beach" loading="lazy">
+            <img src="https://www.sundunes.gr/wp-content/uploads/2026/01/deluxe-suite-002.jpg" alt="Sundunes Hotel Deluxe Suite interior" loading="lazy">
+            <img src="https://www.sundunes.gr/wp-content/uploads/2026/01/sun-dunes-naxos-pool.jpg" alt="Sundunes Hotel Naxos pool" loading="lazy">
+          </div>
+        </label>
+
+        <label class="hotel-option">
+          <input type="radio" name="hotel-naxos" value="Laguna Coast Resort SLH" data-delta="1991">
+          <div class="hotel-option-row">
+            <span class="radio-circle"></span>
+            <div class="hotel-info">
+              <div class="hotel-name">Laguna Coast Resort &mdash; Small Luxury Hotels of the World</div>
+              <div class="hotel-meta">5-star luxury upgrade in Stelida &middot; Flamingo Valley Suite with private hot tub, 56 sqm &middot; full-service spa &middot; near Agios Prokopios beach</div>
+            </div>
+            <div class="hotel-delta delta-up">+$1,991</div>
+          </div>
+          <div class="hotel-images">
+            <img src="https://lagunacoastresort.com/wp-content/uploads/elementor/thumbs/ABOVE-Lagouna-Coast-Reaort-2-9-r50sm0fy81u4vz01b0oivvfurre2axqyql3yjz8epg.jpg" alt="Laguna Coast Resort aerial view" loading="lazy">
+            <img src="https://lagunacoastresort.com/wp-content/uploads/2025/06/lagunaresort-grid-3.jpg" alt="Laguna Coast Resort property" loading="lazy">
+            <img src="https://lagunacoastresort.com/wp-content/uploads/2026/03/IMG_8588-1-1.avif" alt="Laguna Coast Resort interior" loading="lazy">
+          </div>
+        </label>
+      </div>
+
+      <!-- =========== SANTORINI =========== -->
+      <div class="hotel-slot">
+        <div class="hotel-slot-header">
+          <span class="destination">Santorini, Imerovigli</span>
+          <span class="nights">4 nights &middot; Sept 30 &mdash; Oct 4</span>
+        </div>
+
+        <label class="hotel-option">
+          <input type="radio" name="hotel-santorini" value="Iconic Santorini Loft" data-delta="0" checked>
+          <div class="hotel-option-row">
+            <span class="radio-circle"></span>
+            <div class="hotel-info">
+              <div class="hotel-name">Iconic Santorini by Sandglass &mdash; Loft Suite &mdash; <em style="font-style:italic;color:var(--aqua-dark);font-weight:400;">recommended</em></div>
+              <div class="hotel-meta">Adults-only cave hotel in Imerovigli &middot; King bed, sea view, mezzanine layout &middot; breakfast on your private terrace &middot; full-service spa</div>
+            </div>
+            <div class="hotel-delta delta-default">Default</div>
+          </div>
+          <div class="hotel-images">
+            <img src="https://iconicsantorini.com/wp-content/uploads/2023/01/Iconic-Santorini-1710.jpg" alt="Iconic Santorini caldera view" loading="lazy">
+            <img src="https://iconicsantorini.com/wp-content/uploads/2023/01/Iconic-Santorini-1271.jpg" alt="Iconic Santorini cave suite interior" loading="lazy">
+            <img src="https://iconicsantorini.com/wp-content/uploads/2024/12/ZON_2382-1-scaled.jpg" alt="Iconic Santorini terrace and pool" loading="lazy">
+          </div>
+        </label>
+
+        <label class="hotel-option">
+          <input type="radio" name="hotel-santorini" value="Iconic Santorini Deluxe" data-delta="220">
+          <div class="hotel-option-row">
+            <span class="radio-circle"></span>
+            <div class="hotel-info">
+              <div class="hotel-name">Iconic Santorini by Sandglass &mdash; Deluxe Room</div>
+              <div class="hotel-meta">Same Imerovigli cave hotel &middot; standard layout (no mezzanine) &middot; premium bedding &middot; same private terrace breakfast</div>
+            </div>
+            <div class="hotel-delta delta-up">+$220</div>
+          </div>
+          <div class="hotel-images">
+            <img src="https://iconicsantorini.com/wp-content/uploads/2023/01/Iconic-Santorini-1710.jpg" alt="Iconic Santorini caldera view" loading="lazy">
+            <img src="https://iconicsantorini.com/wp-content/uploads/2023/01/Iconic-Santorini-1271.jpg" alt="Iconic Santorini cave suite interior" loading="lazy">
+            <img src="https://iconicsantorini.com/wp-content/uploads/2024/12/ZON_2382-1-scaled.jpg" alt="Iconic Santorini terrace and pool" loading="lazy">
+          </div>
+        </label>
+
+        <label class="hotel-option">
+          <input type="radio" name="hotel-santorini" value="Athina Luxury Suites" data-delta="40">
+          <div class="hotel-option-row">
+            <span class="radio-circle"></span>
+            <div class="hotel-info">
+              <div class="hotel-name">Athina Luxury Suites (Fira)</div>
+              <div class="hotel-meta">Junior Suite with indoor jacuzzi &middot; in town, walkable to restaurants and nightlife &middot; busier than Imerovigli &middot; shared balcony</div>
+            </div>
+            <div class="hotel-delta delta-up">+$40</div>
+          </div>
+          <div class="hotel-images">
+            <img src="https://www.athinasuites.com/images/gallery/0001.jpg" alt="Athina Luxury Suites Fira view" loading="lazy">
+            <img src="https://www.athinasuites.com/images/gallery/0014.jpg" alt="Athina Luxury Suites property" loading="lazy">
+            <img src="https://www.athinasuites.com/images/gallery/0045.jpg" alt="Athina Luxury Suites interior" loading="lazy">
+          </div>
+        </label>
+      </div>
+
+      <!-- =========== ROME =========== -->
+      <div class="hotel-slot">
+        <div class="hotel-slot-header">
+          <span class="destination">Rome, Fiumicino</span>
+          <span class="nights">1 night &middot; Oct 4 &mdash; 5</span>
+        </div>
+
+        <label class="hotel-option" style="cursor:default;">
+          <input type="radio" name="hotel-rome" value="Hilton Rome Airport" data-delta="0" checked>
+          <div class="hotel-option-row">
+            <span class="radio-circle" style="background: var(--aqua-dark); border-color: var(--aqua-dark);"></span>
+            <div class="hotel-info">
+              <div class="hotel-name">Hilton Rome Airport &mdash; King Room</div>
+              <div class="hotel-meta">Connected to Terminal 3 by covered walkway &middot; five minutes from your Sunday gate &middot; eliminates departure-day transit stress</div>
+            </div>
+            <div class="hotel-delta delta-default">Included</div>
+          </div>
+          <div class="hotel-images">
+            <img src="https://www.hilton.com/im/en/ROMAPTW/4944673/romaptw-exterior-2.jpg?impolicy=crop&cw=2258&ch=1264&gravity=NorthWest&xposition=0&yposition=117&rw=768&rh=430" alt="Hilton Rome Airport exterior" loading="lazy">
+            <img src="https://www.hilton.com/im/en/ROMAPTW/27075145/romaptw-guest-room-bedroom-027.jpg?impolicy=crop&cw=5000&ch=2799&gravity=NorthWest&xposition=0&yposition=266&rw=768&rh=430" alt="Hilton Rome Airport King Room" loading="lazy">
+            <img src="https://www.hilton.com/im/en/ROMAPTW/27075180/romaptw-food-beverage-dining-035.jpg?impolicy=crop&cw=5000&ch=2799&gravity=NorthWest&xposition=0&yposition=266&rw=768&rh=430" alt="Hilton Rome Airport dining" loading="lazy">
+          </div>
+        </label>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOUR EXPERIENCES ============ -->
+<section class="standard">
+  <div class="container-narrow">
+    <div class="section-head">
+      <div class="eyebrow">Choose Your Moments</div>
+      <h2>Suggested experiences</h2>
+      <span class="gold-line"></span>
+      <p class="lead">Mark anything that appeals. These aren't priced into the package &mdash; check what you want and I'll come back with a quote that includes everything you've selected. None of these are committed until you say go.</p>
+      <div class="section-note">
+        <strong>A note on availability.</strong> Tour schedules shift with the season. Late September into early October is shoulder season &mdash; some experiences run reduced schedules, and a few wind down for the year by early October. I'll confirm availability for everything you select when I prepare your final quote, and offer alternatives if anything you've picked isn't running on your dates.
+      </div>
+    </div>
+
+    <!-- ITALY TOURS -->
+    <div class="tour-block">
+      <h3>On the Amalfi Coast</h3>
+      <p class="sub">Day trips and experiences during your five Praiano nights.</p>
+
+      <div class="tour-grid">
+
+        <label class="tour-option">
+          <input type="checkbox" name="tour_italy" value="Capri ferry day with Mt. Solaro chairlift">
+          <span class="check-box"></span>
+          <div class="tour-info">
+            <div class="tour-name">Capri day &mdash; ferry from Positano + Mt. Solaro chairlift</div>
+            <div class="tour-desc">Ferry from Positano marina, chairlift to the island's high point (the open-chair ride that's often called "the gondola"), lunch on the island, return ferry. Half to full day.</div>
+          </div>
+        </label>
+
+        <label class="tour-option">
+          <input type="checkbox" name="tour_italy" value="Capri private boat day from Praiano">
+          <span class="check-box"></span>
+          <div class="tour-info">
+            <div class="tour-name">Capri private boat day from Praiano <em style="font-style:italic;color:var(--aqua-dark);font-weight:400;">&mdash; alternative to the ferry day</em></div>
+            <div class="tour-desc">Full day on a small wooden gozzo from Praiano marina. Capri grottos, swimming stops, lunch ashore, sunset return. The romantic upgrade.</div>
+          </div>
+        </label>
+
+        <label class="tour-option">
+          <input type="checkbox" name="tour_italy" value="Ravello day with private driver">
+          <span class="check-box"></span>
+          <div class="tour-info">
+            <div class="tour-name">Ravello day with private driver</div>
+            <div class="tour-desc">Villa Cimbrone gardens, Villa Rufolo, the Terrace of Infinity. Long lunch in the hill town. Driver covers all logistics so you're not negotiating buses.</div>
+          </div>
+        </label>
+
+        <label class="tour-option">
+          <input type="checkbox" name="tour_italy" value="Cooking class - Mamma Agata Ravello">
+          <span class="check-box"></span>
+          <div class="tour-info">
+            <div class="tour-name">Cooking class &mdash; Mamma Agata (Ravello)</div>
+            <div class="tour-desc">The famous one. Pavarotti and Jackie Onassis lineage. Books out months ahead. Half-day commitment, includes the meal.</div>
+          </div>
+        </label>
+
+        <label class="tour-option">
+          <input type="checkbox" name="tour_italy" value="Cooking class - Furore lemon grove">
+          <span class="check-box"></span>
+          <div class="tour-info">
+            <div class="tour-name">Cooking class &mdash; Cooking with Nonna (Furore)</div>
+            <div class="tour-desc">Smaller, quieter, less performative. Lemon-grove setting. The local-feeling alternative if Mamma Agata is too produced.</div>
+          </div>
+        </label>
+
+        <label class="tour-option">
+          <input type="checkbox" name="tour_italy" value="Cooking class - Sorrento half-day">
+          <span class="check-box"></span>
+          <div class="tour-info">
+            <div class="tour-name">Cooking class &mdash; Sorrento half-day</div>
+            <div class="tour-desc">Broader options on the Sorrento side. Good if you want to see Sorrento as part of the day rather than a deeper Amalfi cooking experience.</div>
+          </div>
+        </label>
+
+        <label class="tour-option">
+          <input type="checkbox" name="tour_italy" value="Private boat day along Amalfi Coast">
+          <span class="check-box"></span>
+          <div class="tour-info">
+            <div class="tour-name">Private boat day along the Amalfi Coast</div>
+            <div class="tour-desc">Full day on the water from Praiano marina &mdash; Positano, Amalfi, the Furore Fjord, swimming stops. Lunch on board or ashore.</div>
+          </div>
+        </label>
+
+        <label class="tour-option">
+          <input type="checkbox" name="tour_italy" value="Path of the Gods guided hike">
+          <span class="check-box"></span>
+          <div class="tour-info">
+            <div class="tour-name">Path of the Gods guided hike</div>
+            <div class="tour-desc">The classic ridge-line hike above Praiano with panoramic coast views. Moderate, 4-ish hours. Well-suited to the husband's go-and-do energy.</div>
+          </div>
+        </label>
+
+      </div>
+    </div>
+
+    <!-- NAXOS TOURS -->
+    <div class="tour-block">
+      <h3>On Naxos</h3>
+      <p class="sub">Five days of beaches, mountain villages, and Cycladic exploration.</p>
+
+      <div class="tour-grid">
+
+        <label class="tour-option">
+          <input type="checkbox" name="tour_naxos" value="Naxos rental car (3-day)">
+          <span class="check-box"></span>
+          <div class="tour-info">
+            <div class="tour-name">Naxos rental car &mdash; 3 days <em style="font-style:italic;color:var(--aqua-dark);font-weight:400;">&mdash; strongly recommended</em></div>
+            <div class="tour-desc">Naxos rewards driving &mdash; mountain villages and hidden beaches aren't reachable by bus without losing half the day to logistics. Compact car, full insurance, hotel pickup. Booked separately direct with a local supplier; we'll send recommendations.</div>
+          </div>
+        </label>
+
+        <label class="tour-option">
+          <input type="checkbox" name="tour_naxos" value="Mt. Zas guided hike">
+          <span class="check-box"></span>
+          <div class="tour-info">
+            <div class="tour-name">Mt. Zas guided hike</div>
+            <div class="tour-desc">Mythological birthplace of Zeus &mdash; moderate ~3-hour round trip with a guide who knows the route and the stories. Good half-day for active mornings.</div>
+          </div>
+        </label>
+
+        <label class="tour-option">
+          <input type="checkbox" name="tour_naxos" value="Small Cyclades private boat day">
+          <span class="check-box"></span>
+          <div class="tour-info">
+            <div class="tour-name">Small Cyclades private boat day</div>
+            <div class="tour-desc">Full-day boat to Koufonisi and Schinoussa &mdash; the islands almost no one visits. Swimming stops, traditional lunch, return by sunset.</div>
+          </div>
+        </label>
+
+      </div>
+    </div>
+
+    <!-- SANTORINI TOURS -->
+    <div class="tour-block">
+      <h3>On Santorini</h3>
+      <p class="sub">Four days for the iconic moments and a few earned ones.</p>
+
+      <div class="tour-grid">
+
+        <label class="tour-option">
+          <input type="checkbox" name="tour_santorini" value="Volcano boat tour with hot springs">
+          <span class="check-box"></span>
+          <div class="tour-info">
+            <div class="tour-name">Volcano boat tour with hot springs</div>
+            <div class="tour-desc">Half-day from Old Port. Hike the volcanic crater, swim in the sulfur hot springs of Palea Kameni. The classic Santorini half-day.</div>
+          </div>
+        </label>
+
+        <label class="tour-option">
+          <input type="checkbox" name="tour_santorini" value="Volcano + sunset boat tour">
+          <span class="check-box"></span>
+          <div class="tour-info">
+            <div class="tour-name">Volcano + sunset boat tour <em style="font-style:italic;color:var(--aqua-dark);font-weight:400;">&mdash; upgrade to the half-day</em></div>
+            <div class="tour-desc">Same volcano + hot springs day, but extended through dinner on board returning under the Santorini sunset rather than from a hotel terrace.</div>
+          </div>
+        </label>
+
+        <label class="tour-option">
+          <input type="checkbox" name="tour_santorini" value="Akrotiri archaeology + winery tour">
+          <span class="check-box"></span>
+          <div class="tour-info">
+            <div class="tour-name">Akrotiri archaeological site + winery tour</div>
+            <div class="tour-desc">Bronze-Age city preserved by the Thera eruption (1600 BCE), then a winery for tastings of the volcanic-soil whites &mdash; Santo Wines, Domaine Sigalas, or Venetsanos.</div>
+          </div>
+        </label>
+
+        <label class="tour-option">
+          <input type="checkbox" name="tour_santorini" value="Caldera path guided walk Fira to Oia">
+          <span class="check-box"></span>
+          <div class="tour-info">
+            <div class="tour-name">Caldera path guided walk &mdash; Fira to Oia</div>
+            <div class="tour-desc">The walk along the cliff edge between Fira and Oia, ~3 hours, the best photographs you'll get on the island. Best done with a guide who knows where to stop.</div>
+          </div>
+        </label>
+
+        <label class="tour-option">
+          <input type="checkbox" name="tour_santorini" value="Beach day Perissa or Kamari with transfer">
+          <span class="check-box"></span>
+          <div class="tour-info">
+            <div class="tour-name">Beach day &mdash; Perissa or Kamari (with transfer)</div>
+            <div class="tour-desc">Black-sand beaches on the east coast, 25 min by car from Imerovigli. Beach club with loungers and lunch. Round-trip private transfer included.</div>
+          </div>
+        </label>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ INCLUDED LIST ============ -->
+<section class="standard sand">
+  <div class="container-narrow">
+    <div class="section-head">
+      <div class="eyebrow">In Your Package</div>
+      <h2>What's already covered</h2>
+      <span class="gold-line"></span>
+    </div>
+
+    <div class="included-list">
+      <ul>
+        <li>
+          <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg>
+          <span>Round-trip flights Houston &harr; Italy on ITA Airways (Economy Saver fare)</span>
+        </li>
+        <li>
+          <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg>
+          <span>Inter-Europe flights: Naples &rarr; Naxos &middot; Santorini &rarr; Rome (non-stop)</span>
+        </li>
+        <li>
+          <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg>
+          <span>Fast ferry Naxos &rarr; Santorini</span>
+        </li>
+        <li>
+          <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg>
+          <span>Private transfer Naples airport &rarr; Praiano</span>
+        </li>
+        <li>
+          <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg>
+          <span>Private transfer Praiano &rarr; Naples airport</span>
+        </li>
+        <li>
+          <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg>
+          <span>Naxos transfer to ferry port</span>
+        </li>
+        <li>
+          <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg>
+          <span>Santorini transfers (port &rarr; hotel and hotel &rarr; airport)</span>
+        </li>
+        <li>
+          <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg>
+          <span>5 nights Praiano accommodation</span>
+        </li>
+        <li>
+          <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg>
+          <span>5 nights Naxos accommodation, daily breakfast</span>
+        </li>
+        <li>
+          <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg>
+          <span>4 nights Santorini accommodation, daily breakfast on terrace</span>
+        </li>
+        <li>
+          <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg>
+          <span>1 night Rome (Hilton Fiumicino), daily breakfast</span>
+        </li>
+        <li>
+          <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg>
+          <span>The PMTP App with self-guided tours and driving routes</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============ QUESTIONS + NOTES ============ -->
+<section class="standard">
+  <div class="container-narrow">
+    <div class="section-head">
+      <div class="eyebrow">A Few Questions</div>
+      <h2>Help me sharpen the details</h2>
+      <span class="gold-line"></span>
+      <p class="lead">Quick clarifications from the wishlist you sent &mdash; answer what you can, skip what you can't.</p>
+    </div>
+
+    <div class="input-block">
+      <label>Osteria Al Portego</label>
+      <p class="helper">The restaurant you mentioned is in Venice, not the Amalfi Coast. Did the recommendation come from a different trip, or was the city misattributed? If you suddenly want a Venice add-on, that's a different conversation we can have.</p>
+      <textarea name="Q_Osteria" placeholder="Where you got the recommendation, or how you'd like to handle it..."></textarea>
+    </div>
+
+    <div class="input-block">
+      <label>The "gondola" experience on Capri</label>
+      <p class="helper">Most likely you were picturing the Mt. Solaro chairlift &mdash; open single-chairs to the island's high point. Is that what you meant, or were you thinking of something on the water?</p>
+      <textarea name="Q_Gondola" placeholder="Mt. Solaro chairlift, or something else..."></textarea>
+    </div>
+
+    <div class="input-block">
+      <label>Niki restaurant</label>
+      <p class="helper">Your lash-girl source mentioned this. Niki is in Athens, not Santorini. Worth circling back with her to confirm the city. If it really is a Santorini place, send the source detail and I'll track it down.</p>
+      <textarea name="Q_Niki" placeholder="Anything you can confirm or check on the source..."></textarea>
+    </div>
+
+    <div class="input-block">
+      <label>Restaurant recommendations from your lash girl</label>
+      <p class="helper">When you have her list (and her niece's husband's recommendations), drop them in here. I'll cross-check each one for location and integrate them into your daily plan as suggested dinners.</p>
+      <textarea name="Q_Lash_Recs" placeholder="Names, cities if known, anything else she mentioned..." style="min-height:120px;"></textarea>
+    </div>
+
+    <div class="input-block">
+      <label>Want to swap a hotel or go Airbnb?</label>
+      <p class="helper">If anything in the Where You'll Stay section above doesn't feel right &mdash; including if you'd prefer an Airbnb-style apartment or villa for any leg instead of a hotel &mdash; tell me which leg and what you're picturing, and I'll send alternatives.</p>
+      <textarea name="Q_Hotel_Swap" placeholder="Which leg, what you're imagining instead..."></textarea>
+    </div>
+
+    <div class="input-block">
+      <label>Anything else I should know</label>
+      <p class="helper">Pace preferences, dietary considerations, anniversary moments you want me to plan around, things that matter to you that I might be missing.</p>
+      <textarea name="Q_Notes" placeholder="Free-form notes..." style="min-height:120px;"></textarea>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ DEPOSIT NOTE + CONTACT FORM ============ -->
+<section class="standard alt">
+  <div class="container-narrow">
+    <div class="section-head">
+      <div class="eyebrow">Send Your Selections</div>
+      <h2>One last step</h2>
+      <span class="gold-line"></span>
+      <p class="lead">Your contact details and an insurance choice. After you submit, I'll come back with a finalized quote based on everything you've selected.</p>
+    </div>
+
+    <div style="background: var(--white); border: 1px solid var(--line); padding: 1.75rem; border-radius: 4px; margin-bottom: 2rem;">
+      <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">A note on the deposit</h3>
+      <p style="color: var(--ink-soft); font-size: 0.95rem; line-height: 1.65;">When we move from quote to booking, the initial deposit covers your air travel plus a roughly $500 service deposit &mdash; for this trip, that lands around $4,300. The balance is due closer to travel. I'll send the full payment schedule with your finalized quote.</p>
+    </div>
+
+    <div class="input-block">
+      <label for="form-name">Your name</label>
+      <input type="text" name="Name" id="form-name" required>
+    </div>
+
+    <div class="input-block">
+      <label for="form-email">Email</label>
+      <input type="email" name="Email" id="form-email" required>
+    </div>
+
+    <div class="input-block">
+      <label for="form-phone">Phone</label>
+      <input type="tel" name="Phone" id="form-phone">
+    </div>
+
+    <div class="input-block">
+      <label>Travel insurance</label>
+      <p class="helper">Required: pick one. Travel insurance is something I strongly recommend for a trip of this scale &mdash; if you'd like a quote, I'll send options separately.</p>
+
+      <div class="insurance-options">
+        <label class="insurance-option">
+          <input type="radio" name="Insurance_Choice" value="Yes — please send me a travel insurance quote" required>
+          <span class="check-box"></span>
+          <span class="label-text">Yes, please send me a travel insurance quote</span>
+        </label>
+        <label class="insurance-option">
+          <input type="radio" name="Insurance_Choice" value="No — I decline travel insurance and accept the risks of traveling without coverage" required>
+          <span class="check-box"></span>
+          <span class="label-text">No, I decline insurance and understand the risks of traveling without coverage</span>
+        </label>
+      </div>
+    </div>
+
+    <button type="submit">Send my selections to Christina</button>
+
+  </div>
+</section>
+
+</form>
+<!-- ============ FORM WRAPPER END ============ -->
+
+<!-- ============ THANK YOU MESSAGE ============ -->
+<section class="standard" id="thanksWrap" style="display:none;">
+  <div class="container-narrow">
+    <div class="thanks-msg" id="thanksMsg">
+      <h3>Got it &mdash; selections received</h3>
+      <p>Thank you, Julie. I'll come back to you with a finalized quote based on everything you've selected. Usually within 24 to 48 hours. If you think of anything else in the meantime, text or email me directly.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container-narrow">
+    <h4>Christina Garcia</h4>
+    <div class="footer-name">Owner &amp; Travel Advisor &middot; Point Me to Paradise Travel</div>
+
+    <div class="contact-row">
+      <span><strong>Email:</strong> <a href="#" id="emailLink">loading...</a></span>
+      <span><strong>Phone:</strong> <a href="tel:+12812290862">(281) 229-0862</a></span>
+    </div>
+
+    <p class="disclosure">Individual hotels, transfers, and tours in your quote are priced at publicly available rates &mdash; and in many cases lower than what you'd find on your own. You don't have to worry about overpaying for a piece of your trip. What you're paying for is the rest: the right rooms at the right property, operators we've used for years, the trip app, and a human who answers when something doesn't go to plan.</p>
+  </div>
+</footer>
+
+<!-- ============ STICKY TOTAL BAR ============ -->
+<div class="total-bar" id="totalBar">
+  <div class="total-bar-inner">
+    <div class="left">
+      <span class="total-label">Trip Total</span>
+      <span class="total-amount" id="totalAmount">$11,900</span>
+    </div>
+    <div class="right">
+      <span class="pp-label">Per Person</span>
+      <span class="pp-amount" id="ppAmount">$5,950</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ============ Email assembly (Cloudflare-safe) ============
+  (function() {
+    var addr = 'Christina' + '@' + 'PointMeToParadise' + '.com';
+    var link = document.getElementById('emailLink');
+    if (link) {
+      link.href = 'mailto:' + addr;
+      link.textContent = addr;
+    }
+  })();
+
+  // ============ Pricing logic ============
+  var BASE_TOTAL = 11900; // Locked default package, markup baked in
+
+  function recalcTotal() {
+    var delta = 0;
+    var hotelInputs = document.querySelectorAll('input[type="radio"][name^="hotel-"]:checked');
+    hotelInputs.forEach(function(input) {
+      var d = parseInt(input.getAttribute('data-delta') || '0', 10);
+      if (!isNaN(d)) delta += d;
+    });
+    var total = BASE_TOTAL + delta;
+    var perPerson = Math.round(total / 2);
+
+    document.getElementById('totalAmount').textContent = '$' + total.toLocaleString();
+    document.getElementById('ppAmount').textContent = '$' + perPerson.toLocaleString();
+
+    return { total: total, perPerson: perPerson };
+  }
+
+  // Recalc when any hotel radio changes
+  document.querySelectorAll('input[type="radio"][name^="hotel-"]').forEach(function(input) {
+    input.addEventListener('change', recalcTotal);
+  });
+
+  // ============ Form submission ============
+  document.getElementById('tripForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    var form = e.target;
+    var formData = new FormData(form);
+    var pricing = recalcTotal();
+
+    // Capture hotel selections
+    var praianoEl = document.querySelector('input[name="hotel-praiano"]:checked');
+    var naxosEl = document.querySelector('input[name="hotel-naxos"]:checked');
+    var santoriniEl = document.querySelector('input[name="hotel-santorini"]:checked');
+
+    formData.set('Selected_Praiano', praianoEl ? praianoEl.value : '');
+    formData.set('Selected_Naxos', naxosEl ? naxosEl.value : '');
+    formData.set('Selected_Santorini', santoriniEl ? santoriniEl.value : '');
+
+    // Capture tour selections by region
+    var italyTours = [];
+    document.querySelectorAll('input[name="tour_italy"]:checked').forEach(function(cb) {
+      italyTours.push(cb.value);
+    });
+    var naxosTours = [];
+    document.querySelectorAll('input[name="tour_naxos"]:checked').forEach(function(cb) {
+      naxosTours.push(cb.value);
+    });
+    var santoriniTours = [];
+    document.querySelectorAll('input[name="tour_santorini"]:checked').forEach(function(cb) {
+      santoriniTours.push(cb.value);
+    });
+
+    formData.set('Selected_Tours_Italy', italyTours.length ? italyTours.join(' | ') : 'None selected');
+    formData.set('Selected_Tours_Naxos', naxosTours.length ? naxosTours.join(' | ') : 'None selected');
+    formData.set('Selected_Tours_Santorini', santoriniTours.length ? santoriniTours.join(' | ') : 'None selected');
+
+    // Capture pricing
+    formData.set('Calculated_Total', '$' + pricing.total.toLocaleString());
+    formData.set('Calculated_Per_Person', '$' + pricing.perPerson.toLocaleString());
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
+    })
+    .then(function(res) { return res.json(); })
+    .then(function(json) {
+      if (json.success) {
+        form.style.display = 'none';
+        document.getElementById('totalBar').style.display = 'none';
+        var thanksWrap = document.getElementById('thanksWrap');
+        thanksWrap.style.display = 'block';
+        var thanksMsg = document.getElementById('thanksMsg');
+        thanksMsg.classList.add('show');
+        thanksWrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        var errAddr = 'Christina' + '@' + 'PointMeToParadise' + '.com';
+        alert('Something went wrong with the submission. Please email Christina directly at ' + errAddr + ' or text (281) 229-0862.');
+      }
+    })
+    .catch(function() {
+      var errAddr = 'Christina' + '@' + 'PointMeToParadise' + '.com';
+      alert('Something went wrong with the submission. Please email Christina directly at ' + errAddr + ' or text (281) 229-0862.');
+    });
+  });
+
+  // Initial calculation on page load
+  recalcTotal();
+</script>
+
+</body>
+</html>
