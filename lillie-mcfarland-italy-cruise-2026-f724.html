@@ -1,0 +1,1701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mediterranean & Greek Isles Cruise — Prepared for Lillie McFarland</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --aqua-pale: #C4E4E1;
+  --aqua-mist: #EAF3F2;
+  --aqua: #75AFB1;
+  --aqua-dark: #4F8A8C;
+  --sand: #ECE7DC;
+  --sand-light: #F4F1E9;
+  --gold-whisper: #D6C8A8;
+  --white: #FFFFFF;
+  --paper: #FBFDFD;
+  --ink: #2B2420;
+  --ink-soft: #6B6359;
+  --line: #E5E9E8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 500; color: var(--ink); }
+
+.italic-accent {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--aqua-dark);
+}
+
+.container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+/* ============================ HERO ============================ */
+.hero {
+  background: var(--white);
+  padding: 64px 24px 48px;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+}
+.hero .kicker {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 22px;
+  color: var(--aqua-dark);
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+}
+.hero h1 {
+  font-size: clamp(34px, 5vw, 52px);
+  line-height: 1.1;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+.hero .ship-line {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 24px;
+  color: var(--ink-soft);
+  margin-bottom: 32px;
+}
+.hero .gold-rule {
+  width: 60px;
+  height: 1px;
+  background: var(--gold-whisper);
+  margin: 0 auto 32px;
+}
+.hero .prepared-for {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--ink);
+}
+.hero .prepared-for span { font-style: italic; font-family: 'Cormorant Garamond', serif; color: var(--aqua-dark); font-size: 24px; }
+.hero .dates {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 10px 24px;
+  background: var(--aqua-mist);
+  color: var(--aqua-dark);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+}
+
+/* ============================ OVERVIEW STRIP ============================ */
+.overview {
+  background: var(--aqua-mist);
+  padding: 36px 24px;
+}
+.overview-grid {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  text-align: center;
+}
+.overview-item .icon {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto 12px;
+  color: var(--aqua-dark);
+}
+.overview-item .label {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 16px;
+}
+.overview-item .value {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: var(--ink);
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* ============================ SECTION ============================ */
+section { padding: 56px 24px; }
+section.alt { background: var(--white); }
+
+.section-head { text-align: center; margin-bottom: 40px; }
+.section-head .kicker {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--aqua-dark);
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.section-head h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+.section-head .gold-rule {
+  width: 50px;
+  height: 1px;
+  background: var(--gold-whisper);
+  margin: 16px auto 0;
+}
+
+.intro-text {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 19px;
+  line-height: 1.75;
+  color: var(--ink);
+}
+.intro-text p { margin-bottom: 16px; }
+.intro-text p:last-child { margin-bottom: 0; }
+
+/* ============================ INCLUDED / NOT INCLUDED ============================ */
+.inclusions-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+.inclusion-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 32px;
+}
+.inclusion-card.included { border-top: 3px solid var(--aqua-dark); }
+.inclusion-card.extra { border-top: 3px solid var(--gold-whisper); }
+.inclusion-card h3 {
+  font-size: 22px;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+.inclusion-card .sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+.inclusion-list {
+  list-style: none;
+  padding: 0;
+}
+.inclusion-list li {
+  padding: 10px 0 10px 32px;
+  position: relative;
+  border-bottom: 1px solid var(--line);
+  font-size: 17px;
+  line-height: 1.5;
+}
+.inclusion-list li:last-child { border-bottom: none; }
+.inclusion-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.inclusion-card.included .inclusion-list li::before {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234F8A8C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>");
+}
+.inclusion-card.extra .inclusion-list li::before {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D6C8A8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='12' y1='5' x2='12' y2='19'/><line x1='5' y1='12' x2='19' y2='12'/></svg>");
+}
+
+.note-strip {
+  max-width: 760px;
+  margin: 32px auto 0;
+  padding: 20px 24px;
+  background: var(--aqua-mist);
+  border-radius: 6px;
+  font-size: 17px;
+  text-align: center;
+  color: var(--ink);
+  line-height: 1.6;
+}
+.note-strip strong { color: var(--aqua-dark); }
+
+/* ============================ ITINERARY ============================ */
+.itinerary {
+  max-width: 820px;
+  margin: 0 auto;
+}
+.day-card {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+  align-items: start;
+}
+.day-card:last-child { border-bottom: none; }
+.day-marker {
+  text-align: center;
+  padding: 12px 8px;
+  background: var(--aqua-mist);
+  border-radius: 6px;
+}
+.day-card.sea-day .day-marker { background: var(--sand-light); }
+.day-marker .day-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--aqua-dark);
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.day-marker .day-num-big {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1;
+  margin-top: 2px;
+}
+.day-marker .day-date {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-top: 4px;
+}
+.day-content h4 {
+  font-size: 24px;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+.day-content .country {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--aqua-dark);
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.day-content .times {
+  display: inline-block;
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin-bottom: 12px;
+  padding: 4px 12px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.day-content .description {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink);
+}
+.day-content .tender-note {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 10px;
+  background: var(--sand-light);
+  font-size: 14px;
+  color: var(--ink-soft);
+  border-radius: 3px;
+  font-style: italic;
+}
+
+/* ============================ CABIN SELECTION ============================ */
+.cabin-tier {
+  margin-bottom: 48px;
+}
+.tier-header {
+  text-align: center;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--gold-whisper);
+}
+.tier-header .tier-kicker {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--aqua-dark);
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.tier-header h3 {
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.tier-header .tier-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 18px;
+}
+
+.cabin-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.cabin-grid.three-col { grid-template-columns: repeat(3, 1fr); }
+
+.cabin-card {
+  display: block;
+  position: relative;
+  background: var(--white);
+  border: 2px solid var(--line);
+  border-radius: 6px;
+  padding: 24px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.cabin-card:hover { border-color: var(--aqua); }
+.cabin-card input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.cabin-card:has(input:checked) {
+  border-color: var(--aqua-dark);
+  background: var(--aqua-mist);
+  box-shadow: 0 0 0 1px var(--aqua-dark);
+}
+
+.cabin-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+.cabin-code {
+  display: inline-block;
+  padding: 4px 10px;
+  background: var(--aqua-dark);
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 3px;
+  letter-spacing: 0.5px;
+}
+.cabin-card h4 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  flex: 1;
+}
+
+.cabin-meta {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 17px;
+  margin-bottom: 16px;
+}
+
+.cabin-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 16px;
+}
+.cabin-features li {
+  padding: 6px 0 6px 22px;
+  position: relative;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.cabin-features li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 12px;
+  height: 1px;
+  background: var(--aqua);
+}
+
+.honest-trade {
+  background: var(--sand-light);
+  padding: 12px 14px;
+  border-left: 2px solid var(--gold-whisper);
+  margin-bottom: 16px;
+  font-size: 15px;
+  line-height: 1.5;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--ink);
+}
+
+.price-block {
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  margin-bottom: 16px;
+}
+.price-est {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.price-amount {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-top: 2px;
+  line-height: 1;
+}
+.price-per {
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin-top: 6px;
+}
+
+.select-pill {
+  display: block;
+  text-align: center;
+  padding: 12px 16px;
+  border: 1.5px solid var(--aqua-dark);
+  color: var(--aqua-dark);
+  background: var(--white);
+  border-radius: 4px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+  transition: all 0.2s ease;
+}
+.cabin-card:has(input:checked) .select-pill {
+  background: var(--aqua-dark);
+  color: var(--white);
+}
+
+/* ============================ NOTES ============================ */
+.notes-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.notes-wrap label {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.notes-wrap .helper {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 17px;
+  margin-bottom: 16px;
+}
+.notes-wrap textarea {
+  width: 100%;
+  min-height: 130px;
+  padding: 16px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  resize: vertical;
+}
+.notes-wrap textarea:focus {
+  outline: none;
+  border-color: var(--aqua-dark);
+}
+
+/* ============================ RUNNING TOTAL ============================ */
+.total-bar {
+  position: sticky;
+  bottom: 0;
+  background: var(--aqua-pale);
+  padding: 14px 24px;
+  border-top: 1px solid var(--aqua);
+  z-index: 100;
+}
+.total-bar-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.total-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--aqua-dark);
+  font-size: 17px;
+}
+.total-label .selection {
+  font-family: 'Playfair Display', serif;
+  font-style: normal;
+  color: var(--ink);
+  font-size: 17px;
+  font-weight: 500;
+}
+.total-amount {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--ink);
+}
+.total-amount .per-person {
+  display: block;
+  font-size: 13px;
+  color: var(--ink-soft);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  margin-top: 2px;
+}
+
+/* ============================ FORM ============================ */
+.form-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 36px;
+}
+.form-wrap h3 {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.form-wrap .form-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.form-row { margin-bottom: 18px; }
+.form-row label {
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row input[type="tel"] {
+  width: 100%;
+  padding: 14px 16px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  color: var(--ink);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+}
+.form-row input:focus {
+  outline: none;
+  border-color: var(--aqua-dark);
+}
+
+.insurance-block {
+  background: var(--aqua-mist);
+  padding: 22px;
+  border-radius: 6px;
+  margin: 24px 0;
+}
+.insurance-block .ins-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+.insurance-block .ins-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+.insurance-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 14px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1.5;
+  min-height: 48px;
+}
+.insurance-option:has(input:checked) {
+  border-color: var(--aqua-dark);
+  background: var(--aqua-mist);
+}
+.insurance-option input[type="radio"] {
+  margin-top: 4px;
+  width: 20px;
+  height: 20px;
+  accent-color: var(--aqua-dark);
+  flex-shrink: 0;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 18px 24px;
+  background: var(--aqua-dark);
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  min-height: 56px;
+}
+.submit-btn:hover { background: var(--ink); }
+
+.thanks-msg {
+  display: none;
+  text-align: center;
+  padding: 40px 20px;
+}
+.thanks-msg.show { display: block; }
+.thanks-msg h3 {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: var(--aqua-dark);
+}
+.thanks-msg p {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 20px;
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+/* ============================ FOOTER ============================ */
+footer {
+  background: var(--sand-light);
+  color: var(--ink);
+  padding: 48px 24px 32px;
+  border-top: 1px solid var(--line);
+}
+.footer-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+.footer-logo .accent {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--aqua-dark);
+  font-weight: 400;
+}
+.footer-tag {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 17px;
+  margin-bottom: 24px;
+}
+.footer-contact {
+  font-size: 16px;
+  margin-bottom: 24px;
+  line-height: 1.8;
+}
+.footer-contact a {
+  color: var(--aqua-dark);
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold-whisper);
+}
+.gold-rule-sm {
+  width: 40px;
+  height: 1px;
+  background: var(--gold-whisper);
+  margin: 24px auto;
+}
+.footer-disclosure {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.footer-payment {
+  margin-top: 20px;
+  padding: 14px 20px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  font-size: 15px;
+  color: var(--ink);
+}
+.footer-payment strong { color: var(--aqua-dark); }
+
+/* ============================ MOBILE ============================ */
+@media (max-width: 768px) {
+  body { font-size: 17px; }
+  .hero { padding: 48px 20px 36px; }
+  .overview-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+  section { padding: 44px 16px; }
+  .inclusions-wrapper {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .inclusion-card { padding: 24px; }
+  .day-card {
+    grid-template-columns: 80px 1fr;
+    gap: 14px;
+    padding: 18px 0;
+  }
+  .day-marker .day-num-big { font-size: 24px; }
+  .day-content h4 { font-size: 21px; }
+  .cabin-grid,
+  .cabin-grid.three-col {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .total-bar-inner {
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+  }
+  .total-amount { font-size: 22px; }
+  .form-wrap { padding: 24px 20px; }
+}
+
+/* ============================ UTILS ============================ */
+.icon-svg {
+  width: 32px;
+  height: 32px;
+  stroke: var(--aqua-dark);
+  fill: none;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="kicker">a curated cruise quote</div>
+  <h1>Mediterranean &amp; Greek Isles</h1>
+  <div class="ship-line">aboard the Enchanted Princess</div>
+  <div class="gold-rule"></div>
+  <div class="prepared-for">Prepared for <span>Lillie McFarland &amp; the Italy Cruise Crew</span></div>
+  <div class="dates">October 20 – 31, 2026 &nbsp;·&nbsp; 11 Nights</div>
+</header>
+
+<!-- OVERVIEW STRIP -->
+<div class="overview">
+  <div class="overview-grid">
+    <div class="overview-item">
+      <svg class="icon-svg" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><circle cx="17" cy="7" r="3"/><path d="M14 14h3a4 4 0 0 1 4 4v2"/></svg>
+      <div class="value">2 Travelers</div>
+      <div class="label">per stateroom</div>
+    </div>
+    <div class="overview-item">
+      <svg class="icon-svg" viewBox="0 0 24 24"><path d="M3 18c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 2-2"/><path d="M3 13c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 2-2"/><path d="M3 8c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 2-2"/></svg>
+      <div class="value">11 Nights</div>
+      <div class="label">at sea</div>
+    </div>
+    <div class="overview-item">
+      <svg class="icon-svg" viewBox="0 0 24 24"><path d="M3 12c0-5 4-9 9-9s9 4 9 9-4 9-9 9-9-4-9-9z"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+      <div class="value">Rome → Athens</div>
+      <div class="label">embark to debark</div>
+    </div>
+    <div class="overview-item">
+      <svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 2v6"/><circle cx="12" cy="11" r="3"/><path d="M12 14v8"/><path d="M5 22h14"/><path d="M9 8l-3 3"/><path d="M15 8l3 3"/></svg>
+      <div class="value">9 Ports</div>
+      <div class="label">across 4 countries</div>
+    </div>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Your Voyage</div>
+      <h2>From the Italian coast to the Aegean</h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="intro-text">
+      <p>Eleven nights aboard the Enchanted Princess, beginning in Rome and ending in Athens — with stops along the way in Sardinia, the gateway to Cinque Terre, the doorstep of Florence and Pisa, the medieval streets of Valletta, the Sicilian coast at Messina, and three Greek and Turkish ports that include Mykonos, Rhodes, and the ancient ruins of Ephesus.</p>
+      <p>This quote shows every available stateroom category — from the entry-level balconies on Decks 9 through 14, all the way up to the Penthouse Suite. Prices below reflect the full cabin cost for two guests sharing one stateroom.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INCLUDED -->
+<section class="alt">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Important to know</div>
+      <h2>What your fare includes — and what it doesn't</h2>
+      <div class="gold-rule"></div>
+    </div>
+
+    <div class="inclusions-wrapper">
+
+      <div class="inclusion-card included">
+        <h3>Included in your cabin price</h3>
+        <div class="sub">covered, no extra cost</div>
+        <ul class="inclusion-list">
+          <li>Your stateroom for all 11 nights</li>
+          <li>All meals in the main dining room</li>
+          <li>All meals at the buffet</li>
+          <li>Casual dining venues (poolside, café-style)</li>
+          <li>24-hour room service basics</li>
+          <li>Onboard entertainment, shows, and live music</li>
+          <li>Use of pools, hot tubs, and the fitness center</li>
+          <li>Daily activities, lectures, and trivia</li>
+          <li>All port taxes and government fees</li>
+        </ul>
+      </div>
+
+      <div class="inclusion-card extra">
+        <h3>Not included — these are extras</h3>
+        <div class="sub">add anytime; Christina can help</div>
+        <ul class="inclusion-list">
+          <li>Drink packages (sodas, specialty coffee, wine, cocktails)</li>
+          <li>Tips for the crew (about $17–$20 per person, per day)</li>
+          <li>Specialty restaurants (steakhouse, Italian, seafood)</li>
+          <li>Internet / Wi-Fi onboard</li>
+          <li>Shore excursion credits or Princess-led shore tours</li>
+          <li>Spa treatments and salon services</li>
+          <li>Princess MedallionClass premium features</li>
+          <li>Photos taken by ship photographers</li>
+          <li>Casino, bingo, and onboard shopping</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="note-strip">
+      <strong>A friendly note —</strong> the cabin price below is the base fare only. If you'd like to add a drink package, internet, or pre-paid tips before sailing, just say so in the notes section near the bottom. Christina will quote each one separately so you can decide what's worth it to you.
+    </div>
+  </div>
+</section>
+
+<!-- ITINERARY -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Day by day</div>
+      <h2>Your itinerary</h2>
+      <div class="gold-rule"></div>
+    </div>
+
+    <div class="itinerary">
+
+      <div class="day-card">
+        <div class="day-marker">
+          <div class="day-num">Day</div>
+          <div class="day-num-big">1</div>
+          <div class="day-date">Tue · Oct 20</div>
+        </div>
+        <div class="day-content">
+          <h4>Civitavecchia (Rome)</h4>
+          <div class="country">Italy · Embarkation</div>
+          <div class="times">Depart 6:00 PM</div>
+          <div class="description">Board the Enchanted Princess at Civitavecchia, Rome's deep-water cruise port about an hour and a half northwest of the city. Settle into your stateroom, take a turn around the ship, and watch the Italian coast slide away as the sun sets over the Tyrrhenian Sea.</div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-marker">
+          <div class="day-num">Day</div>
+          <div class="day-num-big">2</div>
+          <div class="day-date">Wed · Oct 21</div>
+        </div>
+        <div class="day-content">
+          <h4>Sardinia (Alghero)</h4>
+          <div class="country">Italy</div>
+          <div class="times">8:00 AM – 5:00 PM</div>
+          <div class="description">Alghero feels more Catalan than Italian — the result of Spanish rule that left its mark on the language, the architecture, and the daily rhythm. Whitewashed buildings ring a small harbor, the old town is walled and walkable, and the coastline is famous for its pink coral.</div>
+          <div class="tender-note">Tender port — small boats shuttle guests ashore</div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-marker">
+          <div class="day-num">Day</div>
+          <div class="day-num-big">3</div>
+          <div class="day-date">Thu · Oct 22</div>
+        </div>
+        <div class="day-content">
+          <h4>Genoa (Cinque Terre)</h4>
+          <div class="country">Italy</div>
+          <div class="times">8:00 AM – 8:00 PM</div>
+          <div class="description">Genoa is Italy's largest historic port and the gateway to the five villages of Cinque Terre — Monterosso, Vernazza, Corniglia, Manarola, and Riomaggiore — perched in pastel terraces above the Ligurian Sea. The villages are connected by a regional train; most visitors choose two or three rather than rushing through all five.</div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-marker">
+          <div class="day-num">Day</div>
+          <div class="day-num-big">4</div>
+          <div class="day-date">Fri · Oct 23</div>
+        </div>
+        <div class="day-content">
+          <h4>Livorno (Florence &amp; Pisa)</h4>
+          <div class="country">Italy</div>
+          <div class="times">7:00 AM – 7:00 PM</div>
+          <div class="description">Livorno is the working port that opens onto Tuscany. Florence is about 90 minutes inland by motorcoach or train — long enough to see the Duomo, walk the Ponte Vecchio, and stand in front of Michelangelo's David. Pisa is closer at 30 minutes, and the Leaning Tower is everything the photos suggest.</div>
+        </div>
+      </div>
+
+      <div class="day-card sea-day">
+        <div class="day-marker">
+          <div class="day-num">Day</div>
+          <div class="day-num-big">5</div>
+          <div class="day-date">Sat · Oct 24</div>
+        </div>
+        <div class="day-content">
+          <h4>Day at sea</h4>
+          <div class="country">Tyrrhenian Sea</div>
+          <div class="description">A welcome breath between the busy Italian ports and the second half of the voyage. The pools, the spa, the lounges, the lecture series, and the long lunches on your private balcony are all yours. Pack a book; the Mediterranean obliges.</div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-marker">
+          <div class="day-num">Day</div>
+          <div class="day-num-big">6</div>
+          <div class="day-date">Sun · Oct 25</div>
+        </div>
+        <div class="day-content">
+          <h4>Valletta</h4>
+          <div class="country">Malta</div>
+          <div class="times">8:00 AM – 9:00 PM</div>
+          <div class="description">Valletta is small, fortified, and entirely walkable from the cruise pier. The whole city is a UNESCO site — a 16th-century walled capital built by the Knights of St. John, with limestone bastions, baroque churches, and one of the most spectacular natural harbors in the Mediterranean. The late-evening departure means you can stay for dinner ashore.</div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-marker">
+          <div class="day-num">Day</div>
+          <div class="day-num-big">7</div>
+          <div class="day-date">Mon · Oct 26</div>
+        </div>
+        <div class="day-content">
+          <h4>Sicily (Messina)</h4>
+          <div class="country">Italy</div>
+          <div class="times">8:00 AM – 6:00 PM</div>
+          <div class="description">Messina sits at the narrow strait separating Sicily from the Italian mainland. Two excursion options usually frame the day: Mount Etna, Europe's most active volcano, an hour and a half south; or Taormina, a hilltop town of Greek and Roman ruins with sweeping views of the coast and Etna in the distance.</div>
+        </div>
+      </div>
+
+      <div class="day-card sea-day">
+        <div class="day-marker">
+          <div class="day-num">Day</div>
+          <div class="day-num-big">8</div>
+          <div class="day-date">Tue · Oct 27</div>
+        </div>
+        <div class="day-content">
+          <h4>Day at sea</h4>
+          <div class="country">Ionian Sea</div>
+          <div class="description">The crossing from Sicily into the Aegean. Watch the geography shift: Italian shoreline behind, Greek islands ahead. A perfect day for the spa, an unhurried lunch, or simply a chair on the open deck.</div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-marker">
+          <div class="day-num">Day</div>
+          <div class="day-num-big">9</div>
+          <div class="day-date">Wed · Oct 28</div>
+        </div>
+        <div class="day-content">
+          <h4>Mykonos</h4>
+          <div class="country">Greece</div>
+          <div class="times">7:00 AM – 9:00 PM</div>
+          <div class="description">Whitewashed houses, blue-domed churches, and the famous windmills above the old town. The neighborhood called Little Venice is best in late afternoon, when the sun lowers over the water and the cafés along the seawall fill up. The long port day means there's no need to rush.</div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-marker">
+          <div class="day-num">Day</div>
+          <div class="day-num-big">10</div>
+          <div class="day-date">Thu · Oct 29</div>
+        </div>
+        <div class="day-content">
+          <h4>Rhodes</h4>
+          <div class="country">Greece</div>
+          <div class="times">9:00 AM – 6:00 PM</div>
+          <div class="description">The Old Town of Rhodes is one of Europe's oldest continuously inhabited medieval cities — cobbled streets, the Palace of the Grand Master, and the Knights' Quarter, all inside intact 14th-century walls. About an hour south, the village of Lindos sits on a hilltop above a turquoise bay, crowned by an ancient acropolis.</div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-marker">
+          <div class="day-num">Day</div>
+          <div class="day-num-big">11</div>
+          <div class="day-date">Fri · Oct 30</div>
+        </div>
+        <div class="day-content">
+          <h4>Kuşadası (Ephesus)</h4>
+          <div class="country">Türkiye</div>
+          <div class="times">8:00 AM – 5:00 PM</div>
+          <div class="description">Kuşadası is the seaside gateway to Ephesus, one of the best-preserved Roman cities in the Mediterranean. The ruins are about 30 minutes inland — the Library of Celsus, the Great Theatre, marble streets that once carried Roman senators and apostles. Excursions almost always include time at a Turkish carpet workshop or local market.</div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-marker">
+          <div class="day-num">Day</div>
+          <div class="day-num-big">12</div>
+          <div class="day-date">Sat · Oct 31</div>
+        </div>
+        <div class="day-content">
+          <h4>Athens (Piraeus)</h4>
+          <div class="country">Greece · Disembarkation</div>
+          <div class="times">Arrive 6:00 AM</div>
+          <div class="description">The cruise ends at Piraeus, the ancient port that has served Athens for nearly three thousand years. The Acropolis, the Parthenon, and the Plaka neighborhood all sit about 30 minutes from the port. If your travel home allows it, an extra night or two in Athens is well worth it — most travelers regret not adding the time.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="note-strip" style="margin-top:36px;">
+      Ports of call may vary by departure date and are subject to weather and other conditions. Times shown are local arrival and departure times.
+    </div>
+  </div>
+</section>
+
+<!-- CABIN SELECTION -->
+<section class="alt">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Choose your stateroom</div>
+      <h2>Every available cabin, organized by tier</h2>
+      <div class="gold-rule"></div>
+    </div>
+
+    <div class="intro-text" style="text-align:center; max-width:680px; font-size:18px; margin-bottom:48px;">
+      <p>All prices below are the <strong>total cost for two guests</strong> sharing one cabin (1 senior, 1 adult), including the $100 onboard credit promotion already applied. Tap a cabin to select it — the running total will appear at the bottom of the screen.</p>
+    </div>
+
+    <!-- TIER 1: STANDARD BALCONIES -->
+    <div class="cabin-tier">
+      <div class="tier-header">
+        <div class="tier-kicker">Tier One</div>
+        <h3>Standard Balcony Staterooms</h3>
+        <div class="tier-sub">about 222 sq ft · queen or two twins · private balcony · floor-to-ceiling glass</div>
+      </div>
+
+      <div class="cabin-grid">
+
+        <!-- BD -->
+        <label class="cabin-card">
+          <input type="radio" name="cabin" value="BD Balcony — $5,388" data-amount="5388" onclick="setTimeout(updateTotal,0)">
+          <div class="cabin-head">
+            <span class="cabin-code">BD</span>
+            <h4>Standard Balcony</h4>
+          </div>
+          <div class="cabin-meta">Decks 9, 10, 11, 12, 14 · 222 sq ft</div>
+          <ul class="cabin-features">
+            <li>Lowest-cost balcony category</li>
+            <li>Private balcony with two chairs and a small table</li>
+            <li>Refrigerator, flat-panel TV, in-room safe</li>
+            <li>Spread across mid-decks of the ship</li>
+          </ul>
+          <div class="price-block">
+            <div class="price-est">Est. Cabin Total</div>
+            <div class="price-amount">$5,388</div>
+            <div class="price-per">$2,694 per person · 2 guests</div>
+          </div>
+          <span class="select-pill">Select this stateroom</span>
+        </label>
+
+        <!-- BC -->
+        <label class="cabin-card">
+          <input type="radio" name="cabin" value="BC Balcony — $5,544" data-amount="5544" onclick="setTimeout(updateTotal,0)">
+          <div class="cabin-head">
+            <span class="cabin-code">BC</span>
+            <h4>Standard Balcony</h4>
+          </div>
+          <div class="cabin-meta">Decks 15, 16, 17 · 222–231 sq ft</div>
+          <ul class="cabin-features">
+            <li>The highest decks on the ship</li>
+            <li>Closer to the pool deck, buffet, and top-deck venues</li>
+            <li>Slightly larger range than BD due to layout variations</li>
+            <li>Same in-room features as BD</li>
+          </ul>
+          <div class="honest-trade">$156 more than BD for a higher-deck position — closer to the pools, the buffet, and the top-deck views.</div>
+          <div class="price-block">
+            <div class="price-est">Est. Cabin Total</div>
+            <div class="price-amount">$5,544</div>
+            <div class="price-per">$2,772 per person · 2 guests</div>
+          </div>
+          <span class="select-pill">Select this stateroom</span>
+        </label>
+
+        <!-- BB -->
+        <label class="cabin-card">
+          <input type="radio" name="cabin" value="BB Balcony — $5,598" data-amount="5598" onclick="setTimeout(updateTotal,0)">
+          <div class="cabin-head">
+            <span class="cabin-code">BB</span>
+            <h4>Standard Balcony</h4>
+          </div>
+          <div class="cabin-meta">Decks 9, 10, 11, 12, 14, 15 · 222 sq ft</div>
+          <ul class="cabin-features">
+            <li>Premium location within the standard balcony category</li>
+            <li>Range across mid- and upper-mid decks</li>
+            <li>Same room layout and features as BD/BC</li>
+          </ul>
+          <div class="price-block">
+            <div class="price-est">Est. Cabin Total</div>
+            <div class="price-amount">$5,598</div>
+            <div class="price-per">$2,799 per person · 2 guests</div>
+          </div>
+          <span class="select-pill">Select this stateroom</span>
+        </label>
+
+        <!-- BA -->
+        <label class="cabin-card">
+          <input type="radio" name="cabin" value="BA Balcony — $5,702" data-amount="5702" onclick="setTimeout(updateTotal,0)">
+          <div class="cabin-head">
+            <span class="cabin-code">BA</span>
+            <h4>Standard Balcony</h4>
+          </div>
+          <div class="cabin-meta">Decks 9, 10, 11, 12, 14 · 222–237 sq ft</div>
+          <ul class="cabin-features">
+            <li>Top-tier standard balcony</li>
+            <li>Slightly larger size range — some run up to 237 sq ft</li>
+            <li>Best-located rooms within the standard balcony tier</li>
+          </ul>
+          <div class="honest-trade">Same price as the DE Deluxe Balcony below — but the DE is bigger and includes a sofa bed. Worth comparing the two side by side.</div>
+          <div class="price-block">
+            <div class="price-est">Est. Cabin Total</div>
+            <div class="price-amount">$5,702</div>
+            <div class="price-per">$2,851 per person · 2 guests</div>
+          </div>
+          <span class="select-pill">Select this stateroom</span>
+        </label>
+
+      </div>
+    </div>
+
+    <!-- TIER 2: DELUXE BALCONIES -->
+    <div class="cabin-tier">
+      <div class="tier-header">
+        <div class="tier-kicker">Tier Two</div>
+        <h3>Deluxe Balcony Staterooms</h3>
+        <div class="tier-sub">larger room · separate seating with sofa bed · same balcony as standard</div>
+      </div>
+
+      <div class="cabin-grid">
+
+        <!-- DE -->
+        <label class="cabin-card">
+          <input type="radio" name="cabin" value="DE Deluxe Balcony — $5,702" data-amount="5702" onclick="setTimeout(updateTotal,0)">
+          <div class="cabin-head">
+            <span class="cabin-code">DE</span>
+            <h4>Deluxe Balcony</h4>
+          </div>
+          <div class="cabin-meta">Decks 9, 10, 11, 12, 14, 15 · 233–252 sq ft</div>
+          <ul class="cabin-features">
+            <li>11 to 30 sq ft larger than a standard balcony</li>
+            <li>Includes a sofa bed (helpful for stretching out, reading, daytime use)</li>
+            <li>Same balcony, glass doors, and in-room features</li>
+          </ul>
+          <div class="honest-trade">Best-value upgrade on the page. Same price as the BA standard balcony, but you gain real square footage and a sofa.</div>
+          <div class="price-block">
+            <div class="price-est">Est. Cabin Total</div>
+            <div class="price-amount">$5,702</div>
+            <div class="price-per">$2,851 per person · 2 guests</div>
+          </div>
+          <span class="select-pill">Select this stateroom</span>
+        </label>
+
+        <!-- DC -->
+        <label class="cabin-card">
+          <input type="radio" name="cabin" value="DC Deluxe Balcony — $5,912" data-amount="5912" onclick="setTimeout(updateTotal,0)">
+          <div class="cabin-head">
+            <span class="cabin-code">DC</span>
+            <h4>Deluxe Balcony</h4>
+          </div>
+          <div class="cabin-meta">Decks 15, 16 · 233 sq ft</div>
+          <ul class="cabin-features">
+            <li>Top-deck deluxe balcony location</li>
+            <li>Includes sofa bed and full deluxe room layout</li>
+            <li>Steps from the top-deck pools, buffet, and lounges</li>
+          </ul>
+          <div class="price-block">
+            <div class="price-est">Est. Cabin Total</div>
+            <div class="price-amount">$5,912</div>
+            <div class="price-per">$2,956 per person · 2 guests</div>
+          </div>
+          <span class="select-pill">Select this stateroom</span>
+        </label>
+
+        <!-- DB -->
+        <label class="cabin-card">
+          <input type="radio" name="cabin" value="DB Deluxe Balcony — $5,964" data-amount="5964" onclick="setTimeout(updateTotal,0)">
+          <div class="cabin-head">
+            <span class="cabin-code">DB</span>
+            <h4>Deluxe Balcony</h4>
+          </div>
+          <div class="cabin-meta">Decks 9, 10, 11, 12, 14 · 233 sq ft</div>
+          <ul class="cabin-features">
+            <li>Premium-located deluxe rooms on mid-decks</li>
+            <li>Lower decks generally feel less ship motion</li>
+            <li>Same sofa bed and deluxe layout</li>
+          </ul>
+          <div class="price-block">
+            <div class="price-est">Est. Cabin Total</div>
+            <div class="price-amount">$5,964</div>
+            <div class="price-per">$2,982 per person · 2 guests</div>
+          </div>
+          <span class="select-pill">Select this stateroom</span>
+        </label>
+
+        <!-- D4 -->
+        <label class="cabin-card">
+          <input type="radio" name="cabin" value="D4 Premium Deluxe Balcony — $6,226" data-amount="6226" onclick="setTimeout(updateTotal,0)">
+          <div class="cabin-head">
+            <span class="cabin-code">D4</span>
+            <h4>Premium Deluxe Balcony</h4>
+          </div>
+          <div class="cabin-meta">Decks 8, 9, 10, 11, 12, 14, 15 · 242–312 sq ft</div>
+          <ul class="cabin-features">
+            <li>Largest balcony category before stepping into Mini Suites</li>
+            <li>Largest size range here — some rooms reach 312 sq ft</li>
+            <li>Best-located deluxe rooms on the ship — described by Princess as offering "dramatic views"</li>
+            <li>Sofa bed included</li>
+          </ul>
+          <div class="price-block">
+            <div class="price-est">Est. Cabin Total</div>
+            <div class="price-amount">$6,226</div>
+            <div class="price-per">$3,113 per person · 2 guests</div>
+          </div>
+          <span class="select-pill">Select this stateroom</span>
+        </label>
+
+      </div>
+    </div>
+
+    <!-- TIER 3: MINI SUITES -->
+    <div class="cabin-tier">
+      <div class="tier-header">
+        <div class="tier-kicker">Tier Three</div>
+        <h3>Mini Suites</h3>
+        <div class="tier-sub">about 299 sq ft · separate sitting area · full bathtub with massage shower · two televisions</div>
+      </div>
+
+      <div class="cabin-grid">
+
+        <!-- MF -->
+        <label class="cabin-card">
+          <input type="radio" name="cabin" value="MF Mini Suite — $6,838" data-amount="6838" onclick="setTimeout(updateTotal,0)">
+          <div class="cabin-head">
+            <span class="cabin-code">MF</span>
+            <h4>Mini Suite</h4>
+          </div>
+          <div class="cabin-meta">Deck 8, 15, 16 · 299 sq ft</div>
+          <ul class="cabin-features">
+            <li>Entry into the Mini Suite tier</li>
+            <li>Separate seating area with sofa bed and coffee table</li>
+            <li>Full bathroom with tub plus massage shower head</li>
+            <li>Two flat-panel TVs · luxury mattress topper</li>
+          </ul>
+          <div class="honest-trade">First real upgrade in living space — almost 80 sq ft larger than the entry-level balcony, with a tub instead of just a shower.</div>
+          <div class="price-block">
+            <div class="price-est">Est. Cabin Total</div>
+            <div class="price-amount">$6,838</div>
+            <div class="price-per">$3,419 per person · 2 guests</div>
+          </div>
+          <span class="select-pill">Select this stateroom</span>
+        </label>
+
+        <!-- ME -->
+        <label class="cabin-card">
+          <input type="radio" name="cabin" value="ME Mini Suite — $7,406" data-amount="7406" onclick="setTimeout(updateTotal,0)">
+          <div class="cabin-head">
+            <span class="cabin-code">ME</span>
+            <h4>Mini Suite</h4>
+          </div>
+          <div class="cabin-meta">Deck 8, 12, 14 · 299 sq ft</div>
+          <ul class="cabin-features">
+            <li>Same Mini Suite features as MF</li>
+            <li>Mid-deck position — typically less ship motion</li>
+            <li>Located across more central decks of the ship</li>
+          </ul>
+          <div class="price-block">
+            <div class="price-est">Est. Cabin Total</div>
+            <div class="price-amount">$7,406</div>
+            <div class="price-per">$3,703 per person · 2 guests</div>
+          </div>
+          <span class="select-pill">Select this stateroom</span>
+        </label>
+
+        <!-- MC -->
+        <label class="cabin-card">
+          <input type="radio" name="cabin" value="MC Mini Suite — $7,476" data-amount="7476" onclick="setTimeout(updateTotal,0)">
+          <div class="cabin-head">
+            <span class="cabin-code">MC</span>
+            <h4>Mini Suite</h4>
+          </div>
+          <div class="cabin-meta">Deck 8, 15, 16 · 299–329 sq ft</div>
+          <ul class="cabin-features">
+            <li>Slightly larger size range than MF/ME — up to 329 sq ft</li>
+            <li>Top-deck location with quick access to pools and buffet</li>
+            <li>Full Mini Suite layout with seating area and bathtub</li>
+          </ul>
+          <div class="price-block">
+            <div class="price-est">Est. Cabin Total</div>
+            <div class="price-amount">$7,476</div>
+            <div class="price-per">$3,738 per person · 2 guests</div>
+          </div>
+          <span class="select-pill">Select this stateroom</span>
+        </label>
+
+        <!-- MB -->
+        <label class="cabin-card">
+          <input type="radio" name="cabin" value="MB Mini Suite — $7,548" data-amount="7548" onclick="setTimeout(updateTotal,0)">
+          <div class="cabin-head">
+            <span class="cabin-code">MB</span>
+            <h4>Mini Suite</h4>
+          </div>
+          <div class="cabin-meta">Decks 10, 11, 12, 14, 15 · 299–329 sq ft</div>
+          <ul class="cabin-features">
+            <li>Premium mid-to-upper-deck Mini Suite location</li>
+            <li>Up to 329 sq ft</li>
+            <li>Full Mini Suite layout</li>
+          </ul>
+          <div class="price-block">
+            <div class="price-est">Est. Cabin Total</div>
+            <div class="price-amount">$7,548</div>
+            <div class="price-per">$3,774 per person · 2 guests</div>
+          </div>
+          <span class="select-pill">Select this stateroom</span>
+        </label>
+
+        <!-- MA -->
+        <label class="cabin-card">
+          <input type="radio" name="cabin" value="MA Mini Suite — $7,974" data-amount="7974" onclick="setTimeout(updateTotal,0)">
+          <div class="cabin-head">
+            <span class="cabin-code">MA</span>
+            <h4>Mini Suite</h4>
+          </div>
+          <div class="cabin-meta">Decks 10, 11, 12, 14 · 299–329 sq ft</div>
+          <ul class="cabin-features">
+            <li>Top-tier Mini Suite — best locations on mid-ship decks</li>
+            <li>Up to 329 sq ft</li>
+            <li>Mid-decks typically feel the least motion</li>
+          </ul>
+          <div class="price-block">
+            <div class="price-est">Est. Cabin Total</div>
+            <div class="price-amount">$7,974</div>
+            <div class="price-per">$3,987 per person · 2 guests</div>
+          </div>
+          <span class="select-pill">Select this stateroom</span>
+        </label>
+
+      </div>
+    </div>
+
+    <!-- TIER 4: SUITES & RESERVE -->
+    <div class="cabin-tier">
+      <div class="tier-header">
+        <div class="tier-kicker">Tier Four</div>
+        <h3>Suites &amp; Reserve Collection</h3>
+        <div class="tier-sub">premium dining · priority embark and debark · enhanced room service · luxury amenities</div>
+      </div>
+
+      <div class="cabin-grid three-col">
+
+        <!-- S6 -->
+        <label class="cabin-card">
+          <input type="radio" name="cabin" value="S6 Vista Suite — $8,338" data-amount="8338" onclick="setTimeout(updateTotal,0)">
+          <div class="cabin-head">
+            <span class="cabin-code">S6</span>
+            <h4>Vista Suite</h4>
+          </div>
+          <div class="cabin-meta">Deck 17 · 484–527 sq ft · aft-facing</div>
+          <ul class="cabin-features">
+            <li>The first true Suite tier — nearly double the size of a standard balcony</li>
+            <li>Aft-facing balcony — sweeping view of the ship's wake</li>
+            <li>All Reserve Collection Mini-Suite amenities, plus full Suite premiums</li>
+            <li>Separate seating area with sofa bed</li>
+            <li>Suite-only restaurant access and priority everything</li>
+          </ul>
+          <div class="price-block">
+            <div class="price-est">Est. Cabin Total</div>
+            <div class="price-amount">$8,338</div>
+            <div class="price-per">$4,169 per person · 2 guests</div>
+          </div>
+          <span class="select-pill">Select this stateroom</span>
+        </label>
+
+        <!-- M1 Reserve -->
+        <label class="cabin-card">
+          <input type="radio" name="cabin" value="M1 Reserve Collection Mini Suite — $8,634" data-amount="8634" onclick="setTimeout(updateTotal,0)">
+          <div class="cabin-head">
+            <span class="cabin-code">M1</span>
+            <h4>Reserve Mini Suite</h4>
+          </div>
+          <div class="cabin-meta">Decks 11, 12, 14 · 299–329 sq ft</div>
+          <ul class="cabin-features">
+            <li>Best-located Mini Suites on the ship</li>
+            <li><strong>Reserve Dining</strong> — private restaurant section, expanded menu, attentive service</li>
+            <li>Priority embark and debark</li>
+            <li>Priority specialty dining reservations</li>
+            <li>Evening canapés on request, upgraded bathrobes</li>
+          </ul>
+          <div class="honest-trade">The dining perk is the real upgrade here. Reserve Dining is quieter, less rushed, and better staffed than the main dining room — meaningful if dinner is your favorite part of the day.</div>
+          <div class="price-block">
+            <div class="price-est">Est. Cabin Total</div>
+            <div class="price-amount">$8,634</div>
+            <div class="price-per">$4,317 per person · 2 guests</div>
+          </div>
+          <span class="select-pill">Select this stateroom</span>
+        </label>
+
+        <!-- S4 Penthouse -->
+        <label class="cabin-card">
+          <input type="radio" name="cabin" value="S4 Penthouse Suite — $8,854" data-amount="8854" onclick="setTimeout(updateTotal,0)">
+          <div class="cabin-head">
+            <span class="cabin-code">S4</span>
+            <h4>Penthouse Suite</h4>
+          </div>
+          <div class="cabin-meta">Deck 14 · 440 sq ft</div>
+          <ul class="cabin-features">
+            <li>Full Suite tier with separate seating area and sofa bed</li>
+            <li>All Reserve Mini Suite amenities <em>plus</em> Suite premiums</li>
+            <li>Mid-ship Deck 14 — least motion of the Suite options</li>
+            <li>Suite-only restaurant access, priority everything</li>
+          </ul>
+          <div class="honest-trade">Just $220 more than the M1 Reserve, but you also gain Suite-tier access — a notable step up for very little extra.</div>
+          <div class="price-block">
+            <div class="price-est">Est. Cabin Total</div>
+            <div class="price-amount">$8,854</div>
+            <div class="price-per">$4,427 per person · 2 guests</div>
+          </div>
+          <span class="select-pill">Select this stateroom</span>
+        </label>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- NOTES -->
+<section>
+  <div class="container">
+    <div class="notes-wrap">
+      <label for="notes">Tell Christina anything special</label>
+      <div class="helper">Celebrations, mobility needs, dietary restrictions, dining preferences, interest in adding a drink package or Wi-Fi, questions about excursions — anything at all.</div>
+      <textarea id="notes" placeholder="Type any preferences, questions, or special requests here..."></textarea>
+    </div>
+  </div>
+</section>
+
+<!-- RUNNING TOTAL BAR -->
+<div class="total-bar" id="totalBar">
+  <div class="total-bar-inner">
+    <div class="total-label">Your selection: <span class="selection" id="totalSelection">none yet — tap a stateroom above</span></div>
+    <div class="total-amount" id="totalAmount">
+      Est. $0
+      <span class="per-person" id="totalPerPerson">final pricing confirmed by Christina</span>
+    </div>
+  </div>
+</div>
+
+<!-- FORM -->
+<section class="alt">
+  <div class="container">
+    <div class="form-wrap">
+      <h3>Send your selections to Christina</h3>
+      <div class="form-sub">she'll confirm pricing, hold your stateroom, and walk you through next steps</div>
+
+      <div class="thanks-msg" id="thanksMsg">
+        <h3>Thank you — your selections are on the way</h3>
+        <p>Christina will be in touch within 24 hours to confirm pricing and reserve your stateroom. If anything comes up before then, please call or text <strong>(281) 229-0862</strong>.</p>
+      </div>
+
+      <form id="tripForm">
+        <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+        <input type="hidden" name="subject" value="Lillie McFarland — Mediterranean & Greek Isles Cruise Selections">
+        <input type="hidden" name="from_name" value="Lillie McFarland — PMTP Cruise Quote">
+        <input type="hidden" name="redirect" value="false">
+
+        <input type="hidden" name="Cabin_Choice" id="hidden_cabin">
+        <input type="hidden" name="Estimated_Total" id="hidden_total">
+        <input type="hidden" name="Trip_Notes" id="hidden_notes">
+
+        <div class="form-row">
+          <label for="name">Your full name</label>
+          <input type="text" id="name" name="Name" required>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="Email" required>
+        </div>
+
+        <div class="form-row">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="Phone">
+        </div>
+
+        <div class="insurance-block">
+          <div class="ins-title">Travel insurance</div>
+          <div class="ins-sub">Required choice — please select one. Travel insurance protects your investment if you need to cancel, are delayed, or have a medical issue overseas.</div>
+
+          <label class="insurance-option">
+            <input type="radio" name="Insurance_Choice" value="Yes — please send me a travel insurance quote" required>
+            <span>Yes — please send me a travel insurance quote so I can review coverage and pricing.</span>
+          </label>
+
+          <label class="insurance-option">
+            <input type="radio" name="Insurance_Choice" value="No — I decline travel insurance and accept the risks of traveling without coverage" required>
+            <span>No — I decline travel insurance and understand I am accepting the risks of traveling without coverage.</span>
+          </label>
+        </div>
+
+        <button type="submit" class="submit-btn">Send my selections to Christina</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Point Me to Paradise <span class="accent">Travel</span></div>
+    <div class="footer-tag">curated travel, thoughtfully planned</div>
+
+    <div class="footer-contact">
+      <strong>Christina Garcia</strong><br>
+      <a id="emailLink" href="#"></a><br>
+      (281) 229-0862
+    </div>
+
+    <div class="footer-payment">
+      <strong>Payment schedule:</strong> $198 deposit per cabin due May 10, 2026 · final balance due July 22, 2026.
+    </div>
+
+    <div class="gold-rule-sm"></div>
+
+    <p class="footer-disclosure">Individual hotels, transfers, and tours in your quote are priced at publicly available rates — and in many cases lower than what you'd find on your own. You don't have to worry about overpaying for a piece of your trip. What you're paying for is the rest: the right rooms at the right property, operators we've used for years, the trip app, and a human who answers when something doesn't go to plan.</p>
+  </div>
+</footer>
+
+<script>
+// Email assembly (Cloudflare-safe)
+(function() {
+  var addr = 'Christina' + '@' + 'PointMeToParadise.com';
+  var link = document.getElementById('emailLink');
+  if (link) {
+    link.href = 'mailto:' + addr;
+    link.textContent = addr;
+  }
+})();
+
+// Running total update
+function updateTotal() {
+  var selected = document.querySelector('input[name="cabin"]:checked');
+  var totalSelectionEl = document.getElementById('totalSelection');
+  var totalAmountEl = document.getElementById('totalAmount');
+  var totalPerPersonEl = document.getElementById('totalPerPerson');
+  var hiddenCabin = document.getElementById('hidden_cabin');
+  var hiddenTotal = document.getElementById('hidden_total');
+
+  if (selected) {
+    var label = selected.value;
+    var amount = parseFloat(selected.getAttribute('data-amount')) || 0;
+    var perPerson = (amount / 2).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+
+    totalSelectionEl.textContent = label;
+    totalAmountEl.firstChild.nodeValue = 'Est. $' + amount.toLocaleString('en-US') + ' ';
+    totalPerPersonEl.textContent = '$' + perPerson + ' per person · final pricing confirmed by Christina';
+
+    hiddenCabin.value = label;
+    hiddenTotal.value = 'Est. $' + amount.toLocaleString('en-US');
+  }
+}
+
+// Form submission
+document.getElementById('tripForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var form = e.target;
+
+  // Capture notes into hidden field
+  var notesEl = document.getElementById('notes');
+  document.getElementById('hidden_notes').value = notesEl ? notesEl.value : '';
+
+  var data = new FormData(form);
+
+  fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    body: data
+  })
+  .then(function(res) { return res.json(); })
+  .then(function(json) {
+    if (json.success) {
+      form.style.display = 'none';
+      document.getElementById('thanksMsg').classList.add('show');
+      window.scrollTo({ top: document.getElementById('thanksMsg').offsetTop - 100, behavior: 'smooth' });
+    } else {
+      alert('Something went wrong sending your selections. Please email Christina directly at Christina@PointMeToParadise.com or text (281) 229-0862.');
+    }
+  })
+  .catch(function() {
+    alert('Something went wrong sending your selections. Please email Christina directly at Christina@PointMeToParadise.com or text (281) 229-0862.');
+  });
+});
+</script>
+
+</body>
+</html>
