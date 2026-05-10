@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ideas for Ilona · Summer 2026 — Point Me to Paradise Travel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --aqua-pale: #C4E4E1;
+    --aqua-mist: #EAF3F2;
+    --aqua: #75AFB1;
+    --aqua-dark: #4F8A8C;
+    --sand: #ECE7DC;
+    --sand-light: #F4F1E9;
+    --gold-whisper: #D6C8A8;
+    --white: #FFFFFF;
+    --paper: #FBFDFD;
+    --ink: #2B2420;
+    --ink-soft: #6B6359;
+    --line: #E5E9E8;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+
+  .italic-accent {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--aqua-dark);
+  }
+
+  .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  .container-narrow { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    background-image:
+      linear-gradient(180deg,
+        rgba(255, 255, 255, 0.55) 0%,
+        rgba(196, 228, 225, 0.72) 38%,
+        rgba(234, 243, 242, 0.88) 75%,
+        rgba(251, 253, 253, 0.98) 100%),
+      url('https://images.photowall.com/products/49097/tropical-view-from-under-a-palm-tree.jpg?h=699&q=85');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 110px 24px 88px;
+    text-align: center;
+    border-bottom: 1px solid var(--line);
+  }
+  .hero-brand {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--aqua-dark);
+    font-weight: 600;
+    margin-bottom: 26px;
+  }
+  .hero h1 {
+    font-size: clamp(40px, 6vw, 64px);
+    font-weight: 500;
+    line-height: 1.05;
+    margin-bottom: 4px;
+  }
+  .hero-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(19px, 2.2vw, 24px);
+    color: var(--ink);
+    font-weight: 400;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .hero-signature {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--ink-soft);
+    font-weight: 400;
+    margin-top: 22px;
+    letter-spacing: 0.02em;
+  }
+  .gold-rule {
+    width: 60px;
+    height: 1px;
+    background: var(--gold-whisper);
+    margin: 28px auto;
+  }
+
+  /* OVERVIEW STRIP */
+  .overview {
+    background: var(--white);
+    padding: 28px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .overview-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    text-align: center;
+  }
+  .overview-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .overview-icon { color: var(--aqua-dark); }
+  .overview-label {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 500;
+  }
+  .overview-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* TRIO / VALUE STRIP */
+  .trio-section {
+    background: var(--sand-light);
+    padding: 68px 0 72px;
+    border-bottom: 1px solid var(--line);
+  }
+  .trio-heading {
+    text-align: center;
+    margin-bottom: 6px;
+  }
+  .trio-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 3.2vw, 34px);
+    font-weight: 500;
+    color: var(--ink);
+  }
+  .trio-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 42px;
+  }
+  .trio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+  }
+  .trio-item {
+    padding: 0 30px;
+    text-align: center;
+    position: relative;
+  }
+  .trio-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 14%;
+    bottom: 14%;
+    width: 1px;
+    background: var(--gold-whisper);
+  }
+  .trio-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    color: var(--aqua-dark);
+  }
+  .trio-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+  }
+  .trio-item p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: var(--ink);
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  /* SECTION FRAMING */
+  section.body-section { padding: 64px 0; }
+  section.alt { background: var(--aqua-mist); }
+  section.sand { background: var(--sand-light); }
+
+  .section-heading {
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  .section-heading h2 {
+    font-size: clamp(28px, 3.6vw, 40px);
+    font-weight: 500;
+  }
+  .section-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 19px;
+    text-align: center;
+    margin-bottom: 36px;
+  }
+
+  /* INTRO */
+  .intro p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--ink);
+    margin-bottom: 14px;
+  }
+  .intro p:last-child { margin-bottom: 0; }
+
+  /* CARD: SHARED */
+  .card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 28px;
+  }
+  .card-feature {
+    border: 2px solid var(--aqua-dark);
+  }
+
+  .card-header {
+    padding: 28px 32px 20px;
+    border-bottom: 1px solid var(--line);
+  }
+  .card-kicker {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+  .card-tag {
+    background: var(--aqua-dark);
+    color: var(--white);
+    padding: 4px 10px;
+    border-radius: 3px;
+    letter-spacing: 0.14em;
+    font-size: 10px;
+    font-weight: 600;
+  }
+  .card h3 {
+    font-size: clamp(24px, 2.8vw, 30px);
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  .card-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--aqua-dark);
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .card-body {
+    padding: 24px 32px 28px;
+  }
+  .card-body p {
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: var(--ink);
+    margin-bottom: 14px;
+  }
+  .card-body p:last-child { margin-bottom: 0; }
+
+  /* IMAGE STRIP */
+  .image-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    background: var(--line);
+  }
+  .image-strip img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* AMENITY GRID */
+  .amenities {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 24px;
+    margin: 18px 0 6px;
+    padding: 18px 0 0;
+    border-top: 1px solid var(--line);
+  }
+  .amenity {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--ink);
+  }
+  .amenity-icon {
+    flex-shrink: 0;
+    color: var(--aqua-dark);
+    margin-top: 2px;
+  }
+
+  /* PRICING BOX */
+  .pricing-box {
+    background: var(--aqua-pale);
+    border-radius: 4px;
+    padding: 22px 24px;
+    margin-top: 22px;
+  }
+  .pricing-kicker {
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--aqua-dark);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .pricing-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    color: var(--ink);
+    font-weight: 500;
+    line-height: 1.1;
+  }
+  .pricing-pp {
+    font-size: 14px;
+    color: var(--ink-soft);
+    margin-top: 4px;
+  }
+  .pricing-fine {
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(43,36,32,0.12);
+    line-height: 1.5;
+  }
+
+  /* CRUISE COMPARE TABLE */
+  .cruise-compare {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 28px;
+  }
+  .cruise-row {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .cruise-row:last-child { border-bottom: none; }
+  .cruise-info { padding: 24px 28px; }
+  .cruise-rates {
+    background: var(--aqua-mist);
+    padding: 24px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .cruise-info h4 {
+    font-size: 21px;
+    margin-bottom: 4px;
+    font-weight: 500;
+  }
+  .cruise-info .sail-date {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--aqua-dark);
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .cruise-info .ports {
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  .cruise-info .promo {
+    font-size: 12px;
+    color: var(--aqua-dark);
+    font-weight: 500;
+    margin-top: 6px;
+  }
+  .cruise-rate-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 4px 0;
+    font-size: 14px;
+  }
+  .cruise-rate-row span:first-child { color: var(--ink-soft); }
+  .cruise-rate-row span:last-child { color: var(--ink); font-weight: 500; }
+  .cruise-rate-pp {
+    font-size: 11px;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid var(--line);
+  }
+
+  /* SHIP CONTEXT BOX */
+  .ship-context {
+    background: var(--sand-light);
+    border-left: 3px solid var(--aqua-dark);
+    padding: 22px 26px;
+    margin-bottom: 32px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  .ship-context strong { font-family: 'Playfair Display', serif; font-weight: 500; }
+
+  .itin-map {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 4px;
+    margin-top: 12px;
+    border: 1px solid var(--line);
+  }
+
+  .explore-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--aqua-dark);
+    text-decoration: none;
+    border-bottom: 1px solid var(--aqua-dark);
+    padding-bottom: 1px;
+    font-weight: 500;
+  }
+  .explore-link:hover { color: var(--ink); border-bottom-color: var(--ink); }
+
+  /* OTHER IDEAS GRID */
+  .ideas-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-top: 8px;
+  }
+  .idea-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 24px 22px;
+  }
+  .idea-card h4 {
+    font-size: 19px;
+    margin-bottom: 4px;
+  }
+  .idea-card .idea-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--aqua-dark);
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .idea-card p {
+    font-size: 14px;
+    color: var(--ink);
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  .idea-card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 8px;
+  }
+  .idea-card li {
+    font-size: 13px;
+    color: var(--ink-soft);
+    padding-left: 14px;
+    position: relative;
+    margin-bottom: 4px;
+  }
+  .idea-card li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 4px;
+    height: 1px;
+    background: var(--gold-whisper);
+  }
+
+  /* TWO-COL FLEX FOR CRUISE OVERVIEW */
+  .cruise-info-row {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .cruise-info-text { flex: 1 1 300px; }
+  .cruise-info-image { flex: 0 0 auto; }
+
+  /* FORM */
+  .form-section { padding: 56px 0 64px; }
+  .form-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 36px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .form-card h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .form-card .form-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--ink-soft);
+    text-align: center;
+    margin-bottom: 28px;
+    font-size: 18px;
+  }
+  .form-grid { display: grid; gap: 16px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  label {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  input[type=text], input[type=email], input[type=tel], textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    color: var(--ink);
+    background: var(--paper);
+    transition: border-color 0.2s;
+  }
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--aqua-dark);
+    background: var(--white);
+  }
+  textarea { min-height: 130px; resize: vertical; line-height: 1.5; }
+
+  button[type=submit] {
+    width: 100%;
+    padding: 16px;
+    background: var(--aqua-dark);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.2s;
+    min-height: 52px;
+  }
+  button[type=submit]:hover { background: var(--ink); }
+
+  .thanks-msg {
+    display: none;
+    text-align: center;
+    padding: 40px 24px;
+    background: var(--aqua-pale);
+    border-radius: 6px;
+  }
+  .thanks-msg.show { display: block; }
+  .thanks-msg h3 {
+    font-size: 26px;
+    margin-bottom: 8px;
+  }
+  .thanks-msg p {
+    color: var(--ink);
+    font-size: 16px;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--sand-light);
+    padding: 48px 24px 36px;
+    border-top: 1px solid var(--line);
+  }
+  .footer-content { max-width: 720px; margin: 0 auto; text-align: center; }
+  .footer-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--ink);
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  .footer-role {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--aqua-dark);
+    margin-bottom: 14px;
+    font-size: 16px;
+  }
+  .footer-contact {
+    font-size: 14px;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .footer-contact a {
+    color: var(--aqua-dark);
+    text-decoration: none;
+    border-bottom: 1px solid var(--aqua-dark);
+    padding-bottom: 1px;
+  }
+  .footer-disclosure {
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid var(--gold-whisper);
+    text-align: left;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .hero { padding: 60px 20px 48px; }
+    section.body-section { padding: 44px 0; }
+    .overview-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+    .ideas-grid { grid-template-columns: 1fr; }
+    .image-strip { grid-template-columns: 1fr; }
+    .image-strip img { height: 220px; }
+    .cruise-row { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .card-header, .card-body { padding-left: 22px; padding-right: 22px; }
+    .form-card { padding: 28px 22px; }
+    .amenities { grid-template-columns: 1fr; }
+    .itin-map { max-width: 100%; }
+    .trio-grid { grid-template-columns: 1fr; gap: 38px; }
+    .trio-item { padding: 0 16px; }
+    .trio-item:not(:last-child)::after {
+      right: auto;
+      left: 50%;
+      top: auto;
+      bottom: -22px;
+      transform: translateX(-50%);
+      width: 48px;
+      height: 1px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container-narrow">
+    <div class="hero-brand">Point Me to Paradise Travel</div>
+    <h1>A Caribbean Getaway</h1>
+    <div class="gold-rule"></div>
+    <p class="hero-tagline">Ideas &amp; options for Ilona &mdash; late June to early July, 2026</p>
+    <div class="hero-signature">Prepared by Christina Garcia</div>
+  </div>
+</header>
+
+<!-- OVERVIEW STRIP -->
+<div class="overview">
+  <div class="container">
+    <div class="overview-grid">
+      <div class="overview-item">
+        <svg class="overview-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <span class="overview-label">Window</span>
+        <span class="overview-value">Late June &mdash; Early July 2026</span>
+      </div>
+      <div class="overview-item">
+        <svg class="overview-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <span class="overview-label">Travelers</span>
+        <span class="overview-value">2 adults</span>
+      </div>
+      <div class="overview-item">
+        <svg class="overview-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+        <span class="overview-label">Departure</span>
+        <span class="overview-value">Houston (IAH or Galveston)</span>
+      </div>
+      <div class="overview-item">
+        <svg class="overview-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span class="overview-label">Style</span>
+        <span class="overview-value">Couples &middot; All-inclusive or cruise</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BEYOND THE BOOKING -->
+<section class="trio-section">
+  <div class="container">
+    <div class="trio-heading">
+      <h2>Beyond the booking</h2>
+    </div>
+    <p class="trio-sub">What's included with every Point Me to Paradise trip</p>
+
+    <div class="trio-grid">
+      <div class="trio-item">
+        <div class="trio-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <h3>The Trip Guide</h3>
+        <p>A document built for your week &mdash; restaurants we'd return to, neighborhoods worth the walk, what to skip, the places open on a Sunday. Not pulled from a database. Researched against where you're staying and what you've told us matters.</p>
+      </div>
+
+      <div class="trio-item">
+        <div class="trio-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        </div>
+        <h3>The Trip App</h3>
+        <p>Itinerary, confirmation numbers, transfer windows, and ground contacts in one place &mdash; accessible offline, updated in real time. If a flight shifts or weather moves, the app moves with it.</p>
+      </div>
+
+      <div class="trio-item">
+        <div class="trio-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <h3>Best-Rate Assurance</h3>
+        <p>Every hotel night, cruise rate, and tour in your quote is priced at publicly available rates. If you find the same component for less elsewhere, we'll match it &mdash; you don't have to wonder whether you're overpaying for a piece of your trip.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="body-section intro">
+  <div class="container-narrow">
+    <p>This is a thinking-out-loud document, not a final quote. I've pulled together a handful of options across two formats &mdash; <em>cruise from Galveston</em> or <em>fly to a Caribbean beach</em> &mdash; so you can feel out which direction pulls you. Once we know which way you're leaning, I'll narrow it down and lock in real pricing.</p>
+    <p>If something on this page sparks a question, or you want to point in a different direction altogether, the form at the bottom is the fastest way to send your thoughts back. Or just text me &mdash; whichever's easier.</p>
+  </div>
+</section>
+
+<!-- =============== LAND STAYS =============== -->
+<section class="body-section alt">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Caribbean Resort Stays</h2>
+    </div>
+    <p class="section-sub">Five nights, one beach, room service every morning if you want it.</p>
+
+    <!-- SANDALS ROYAL BAHAMIAN — FEATURED -->
+    <article class="card card-feature">
+      <div class="card-header">
+        <div class="card-kicker">
+          <span class="card-tag">Top Recommendation</span>
+          <span>Adults-only &middot; couples-only &middot; all-inclusive</span>
+        </div>
+        <h3>Sandals Royal Bahamian</h3>
+        <div class="card-tagline">A historic Cable Beach hideaway with its own offshore island</div>
+      </div>
+
+      <div class="image-strip">
+        <img src="https://cdn.sandals.com/libs/ui/brands/assets/uploads/SRB_main_image_landscape_badaec5385.jpg" alt="Sandals Royal Bahamian beachfront" loading="lazy">
+        <img src="https://cdn.sandals.com/libs/ui/brands/assets/uploads/collage_02_01_c38eef3d13.jpg" alt="Sandals Royal Bahamian pool" loading="lazy">
+        <img src="https://cdn.sandals.com/libs/ui/brands/assets/uploads/collage_02_05_5d99989e17.jpg" alt="Sandals Royal Bahamian dining" loading="lazy">
+      </div>
+
+      <div class="card-body">
+        <p>Of everything I'm sending, this is the option I'd push hardest if you want a true couples' week. Sandals Royal Bahamian sits on the long crescent of Cable Beach in Nassau &mdash; a property with real history (the original Balmoral Club hosted the Duke and Duchess of Windsor) but renovated to feel current rather than dated. The whole resort is for couples only. No kids, no spring break, no piped-in pool music when you're trying to read.</p>
+        <p>What sets it apart from every other Sandals: <strong>Barefoot Cay</strong>, their private offshore island. A short water taxi from the resort lands you on a separate cay with a Zen garden, two beaches (one for swimming, one for snorkeling), a spa pavilion, and food trucks for casual lunches. It's the closest thing to a stay-on-resort excursion in the Caribbean.</p>
+        <p>Top-shelf liquor, Robert Mondavi wines, in-room minibar, ten restaurants, and round-trip airport transfers are all genuinely included &mdash; this is one of the few all-inclusives where there's no upcharge dance.</p>
+
+        <div class="amenities">
+          <div class="amenity">
+            <svg class="amenity-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <span>Adults-only, couples-only</span>
+          </div>
+          <div class="amenity">
+            <svg class="amenity-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 1 0 20"/><path d="M2 12h10"/><path d="M5 8s2-4 7-4"/><path d="M5 16s2 4 7 4"/></svg>
+            <span>Cable Beach, Nassau</span>
+          </div>
+          <div class="amenity">
+            <svg class="amenity-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M3 12s2-7 9-7 9 7 9 7"/><circle cx="12" cy="12" r="2"/></svg>
+            <span>Private offshore island</span>
+          </div>
+          <div class="amenity">
+            <svg class="amenity-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
+            <span>10 restaurants &middot; 8 bars</span>
+          </div>
+          <div class="amenity">
+            <svg class="amenity-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            <span>Top-shelf liquor included</span>
+          </div>
+          <div class="amenity">
+            <svg class="amenity-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M5 7h14M7 12h10"/><circle cx="12" cy="12" r="10"/></svg>
+            <span>Round-trip transfers</span>
+          </div>
+        </div>
+
+        <div class="pricing-box">
+          <div class="pricing-kicker">Estimated package &middot; resort + air for 2</div>
+          <div class="pricing-amount">Est. $6,398</div>
+          <div class="pricing-pp">$3,199 per person &middot; 5 nights, June 30 &mdash; July 5</div>
+          <div class="pricing-fine">East Bay Oceanview Luxury room &middot; resort total $4,866 (already at 55%+7% off rack, plus $555 + $100 instant credits) &middot; United IAH&harr;NAS nonstop $1,532 for 2 &middot; final pricing confirmed by Christina before booking. Free room cancellation through May 15, 2026; hold for $98.</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ZEMI MICHES -->
+    <article class="card">
+      <div class="card-header">
+        <div class="card-kicker">
+          <span>Family-welcome &middot; All-inclusive &middot; Hilton Curio Collection</span>
+        </div>
+        <h3>Zemi Miches Punta Cana</h3>
+        <div class="card-tagline">A new resort on a quieter Dominican coastline</div>
+      </div>
+
+      <div class="image-strip">
+        <img src="https://img.cdnpth.com/media/521045/ac561871-770b-4601-84bd-dcf09ba8ebf1_main.jpg" alt="Zemi Miches resort" loading="lazy">
+        <img src="https://img.cdnpth.com/media/521045/a3474ddc-24d7-45c0-a567-934a206a4cc4.jpg" alt="Zemi Miches grounds" loading="lazy">
+        <img src="https://img.cdnpth.com/media/521045/0edc4020-0600-4446-b2dc-75cd70503c73.jpg" alt="Zemi Miches pool" loading="lazy">
+      </div>
+
+      <div class="card-body">
+        <p>Zemi Miches opened in 2025 as Hilton's first Curio Collection all-inclusive in the Dominican Republic. It sits on Playa Esmeralda &mdash; a stretch of unspoiled coastline north of the better-known Punta Cana resort strip, near Redonda Mountain. The whole property leans into Dominican and Taíno cultural identity (the name <em>Zemi</em> is the Taíno word for "sacred place") with a signature restaurant called Anacaona that serves locally inspired cooking, and a spa built around Taíno-inspired treatments.</p>
+        <p><strong>The honest trade vs. Sandals:</strong> Zemi is family-friendly rather than couples-only, and the airport transfer is meaningfully longer &mdash; about 90 minutes from PUJ vs. 25 minutes to the standard Bávaro strip &mdash; because Miches is genuinely off the beaten path. The reward is a quieter beach, fewer crowds, and a property that feels new and design-forward rather than pre-renovation Caribbean. Some guests note the beach directly in front is rocky in spots; a 10-minute walk reveals the wider sandy stretch.</p>
+        <p>Eleven dining venues, four pools (including a rooftop infinity pool for adults), a waterpark for kids, and beachfront bungalows with private plunge pools for the upgrade-curious.</p>
+
+        <div class="amenities">
+          <div class="amenity">
+            <svg class="amenity-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/></svg>
+            <span>Playa Esmeralda, Miches</span>
+          </div>
+          <div class="amenity">
+            <svg class="amenity-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>~90 min from PUJ airport</span>
+          </div>
+          <div class="amenity">
+            <svg class="amenity-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-5v12L3 14v-3z"/></svg>
+            <span>11 restaurants &amp; bars</span>
+          </div>
+          <div class="amenity">
+            <svg class="amenity-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M5 12s2-4 7-4 7 4 7 4-2 4-7 4-7-4-7-4z"/></svg>
+            <span>Four pools, kids' waterpark</span>
+          </div>
+          <div class="amenity">
+            <svg class="amenity-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <span>Acana Spa &middot; Taíno-inspired</span>
+          </div>
+          <div class="amenity">
+            <svg class="amenity-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            <span>Club Azure tier available</span>
+          </div>
+        </div>
+
+        <div class="pricing-box">
+          <div class="pricing-kicker">Estimated package &middot; resort + air for 2</div>
+          <div class="pricing-amount">Est. $4,314 &mdash; $4,966</div>
+          <div class="pricing-pp">$2,157 &mdash; $2,483 per person &middot; 5 nights, July 4 &mdash; 9</div>
+          <div class="pricing-fine">Tropical View room from $2,520, Oceanfront $2,920, Plunge Pool Tropical $3,172 (currently $793 off) &middot; United IAH&harr;PUJ nonstop $1,794 for 2 &middot; airport transfer not included by the resort, typically arranged separately &middot; final pricing confirmed by Christina before booking.</div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- =============== CRUISES =============== -->
+<section class="body-section">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Cruise from Galveston</h2>
+    </div>
+    <p class="section-sub">Drive to the port. No flights, no transfers, no airport mornings.</p>
+
+    <div class="ship-context">
+      <p><strong>Two ships are doing the Galveston run this summer.</strong> Both are good in different ways. Mariner of the Seas is a refurbished modern classic &mdash; smaller (3,114 guests at double occupancy), 2003-built, given a $120 million Royal Amplification in 2018 and another light refresh in March 2026. Symphony of the Seas is the bigger, newer Oasis-class option (over 5,500 guests, 2018-built) with more onboard pretty much everything: more pools, more dining, more entertainment, longer itineraries. Mariner is "I want a cruise without committing a week." Symphony is "I want the whole show."</p>
+    </div>
+
+    <!-- MARINER 4-NIGHT -->
+    <div class="cruise-compare">
+      <div class="cruise-row">
+        <div class="cruise-info">
+          <h4>Mariner of the Seas &middot; 4 nights</h4>
+          <div class="sail-date">Sails July 2, 2026</div>
+          <div class="ports">Galveston &rarr; Cozumel &rarr; Galveston</div>
+          <div class="cruise-info-row">
+            <div class="cruise-info-text">
+              <p style="font-size: 14px; color: var(--ink); line-height: 1.6; margin-bottom: 8px;">A short, sharp Cozumel run &mdash; one port day, two sea days. Best if you want a taste of cruising without committing a full week.</p>
+              <p class="promo">$50 per couple onboard credit</p>
+              <a class="explore-link" href="https://booking.sigtn.com/swift/cruise/package/1575584--4-Night-Western-Caribbean-Cruise?siid=344202&lang=1&slgenuid=NjIxNDk4" target="_blank" rel="noopener">Explore this sailing &rarr;</a>
+            </div>
+            <div class="cruise-info-image">
+              <img class="itin-map" src="https://contents.odysol.com//content/images/Itineraries/GLS_CZM_GLS.jpg" alt="Galveston to Cozumel itinerary map" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <div class="cruise-rates">
+          <div class="cruise-rate-row"><span>Inside</span><span>$769</span></div>
+          <div class="cruise-rate-row"><span>Oceanview</span><span>$1,084</span></div>
+          <div class="cruise-rate-row"><span>Balcony</span><span>$1,069</span></div>
+          <div class="cruise-rate-row"><span>Suite</span><span>$2,513</span></div>
+          <div class="cruise-rate-pp">Per person &middot; double occupancy</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MARINER 5-NIGHT -->
+    <div class="cruise-compare">
+      <div class="cruise-row">
+        <div class="cruise-info">
+          <h4>Mariner of the Seas &middot; 5 nights</h4>
+          <div class="sail-date">Sails July 6, 2026</div>
+          <div class="ports">Galveston &rarr; Puerto Costa Maya &rarr; Cozumel &rarr; Galveston</div>
+          <div class="cruise-info-row">
+            <div class="cruise-info-text">
+              <p style="font-size: 14px; color: var(--ink); line-height: 1.6; margin-bottom: 8px;">Two ports instead of one, and an extra night to settle in. Costa Maya is the quieter Mexican stop &mdash; less commercial than Cozumel, with Mayan ruins (Chacchoben) within reach.</p>
+              <p class="promo">$50 per couple onboard credit</p>
+              <a class="explore-link" href="https://booking.sigtn.com/swift/cruise/package/1575646--5-Night-Western-Caribbean-Cruise?siid=344202&lang=1&slgenuid=NjIxNDk4" target="_blank" rel="noopener">Explore this sailing &rarr;</a>
+            </div>
+            <div class="cruise-info-image">
+              <img class="itin-map" src="https://contents.odysol.com//content/images/Itineraries/GLS_CST_CZM_GLS.jpg" alt="Galveston Costa Maya Cozumel itinerary map" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <div class="cruise-rates">
+          <div class="cruise-rate-row"><span>Inside</span><span>$1,100</span></div>
+          <div class="cruise-rate-row"><span>Oceanview</span><span>$1,237</span></div>
+          <div class="cruise-rate-row"><span>Balcony</span><span>$1,407</span></div>
+          <div class="cruise-rate-row"><span>Suite</span><span>&mdash;</span></div>
+          <div class="cruise-rate-pp">Per person &middot; double occupancy</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SYMPHONY 8-NIGHT -->
+    <div class="cruise-compare">
+      <div class="cruise-row">
+        <div class="cruise-info">
+          <h4>Symphony of the Seas &middot; 8 nights</h4>
+          <div class="sail-date">Sails July 4, 2026</div>
+          <div class="ports">Galveston &rarr; Cozumel &rarr; Nassau &rarr; Perfect Day at CocoCay &rarr; Galveston</div>
+          <div class="cruise-info-row">
+            <div class="cruise-info-text">
+              <p style="font-size: 14px; color: var(--ink); line-height: 1.6; margin-bottom: 8px;">Royal's biggest, newest ship in Galveston this summer &mdash; and per night, this is the strongest value of the three cruises. Includes Perfect Day at CocoCay, Royal's private island in the Bahamas with the largest waterpark at sea.</p>
+              <p class="promo">Free Soda Package for two on balcony or suite &middot; $50 per couple onboard credit</p>
+              <a class="explore-link" href="https://booking.sigtn.com/swift/cruise/package/1555102--8-Night-Western-Caribbean---Perfect-Day?siid=344202&lang=1&slgenuid=NjIxNDk4" target="_blank" rel="noopener">Explore this sailing &rarr;</a>
+            </div>
+            <div class="cruise-info-image">
+              <img class="itin-map" src="https://contents.odysol.com//content/images/Itineraries/GLS_CZM_NAS_CCY_GLS.jpg" alt="Galveston Cozumel Nassau CocoCay itinerary map" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <div class="cruise-rates">
+          <div class="cruise-rate-row"><span>Inside</span><span>$1,394</span></div>
+          <div class="cruise-rate-row"><span>Oceanview</span><span>$1,688</span></div>
+          <div class="cruise-rate-row"><span>Balcony</span><span>$1,607</span></div>
+          <div class="cruise-rate-row"><span>Suite</span><span>$4,762</span></div>
+          <div class="cruise-rate-pp">Per person &middot; double occupancy</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== OTHER IDEAS =============== -->
+<section class="body-section sand">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Other Directions Worth a Look</h2>
+    </div>
+    <p class="section-sub">If none of the above is calling, here's where I'd point next.</p>
+
+    <div class="ideas-grid">
+      <div class="idea-card">
+        <h4>Mexico</h4>
+        <div class="idea-sub">Cancún &amp; Playa Mujeres, ~2½ hr nonstop</div>
+        <p>The Mexican Caribbean has had a strong run of new properties built specifically for couples. A few I'd shortlist:</p>
+        <ul>
+          <li><strong>Atelier Playa Mujeres</strong> &mdash; Mexican-owned design-forward all-inclusive</li>
+          <li><strong>Hotel Xcaret México</strong> &mdash; cultural concept; included access to Xcaret theme parks</li>
+          <li><strong>SLS Playa Mujeres</strong> &mdash; newer luxury all-inclusive on the quieter peninsula</li>
+          <li><strong>Excellence Playa Mujeres</strong> &mdash; adults-only, classic luxury all-inclusive</li>
+        </ul>
+      </div>
+
+      <div class="idea-card">
+        <h4>Jamaica</h4>
+        <div class="idea-sub">Montego Bay or Negril, ~3½ hr nonstop</div>
+        <p>United runs IAH&harr;Montego Bay year-round. Jamaica's all-inclusive density is the highest in the Caribbean &mdash; Sandals has multiple properties on the island including the flagship Sandals Royal Caribbean and Sandals South Coast (a peaceful estate with overwater bungalows).</p>
+        <ul>
+          <li>Best for those who want a Sandals experience but a different vibe than Nassau</li>
+          <li>Stronger green/mountain backdrop than the Bahamas</li>
+        </ul>
+      </div>
+
+      <div class="idea-card">
+        <h4>Grand Cayman</h4>
+        <div class="idea-sub">Seven Mile Beach, ~3 hr nonstop</div>
+        <p>Different model: Grand Cayman doesn't really do all-inclusives, but the resort experience is exceptional. Think Kimpton Seafire, Ritz-Carlton Grand Cayman, Palm Heights &mdash; sophisticated, design-driven, with a calm and safe island culture. Food scene punches above its weight.</p>
+        <ul>
+          <li>Better for couples who'd rather choose restaurants than have meals included</li>
+          <li>Seven Mile Beach is genuinely one of the best beaches in the Caribbean</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== FORM =============== -->
+<section class="form-section">
+  <div class="container-narrow">
+    <div class="form-card">
+      <div id="formContent">
+        <h2>Tell Me What You're Thinking</h2>
+        <p class="form-sub">Even a one-line reply is enough &mdash; I'll come back with more detail in the direction you're leaning.</p>
+
+        <form id="tripForm">
+          <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+          <input type="hidden" name="subject" value="Ilona Capuano — Summer 2026 Getaway Ideas Response">
+          <input type="hidden" name="from_name" value="Ilona Capuano — PMTP Ideas Form">
+          <input type="hidden" name="redirect" value="false">
+
+          <div class="form-grid">
+            <div class="form-row">
+              <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="Name" required>
+              </div>
+              <div>
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="Phone">
+              </div>
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="Email" required>
+            </div>
+            <div>
+              <label for="thoughts">Which direction interests you? Any questions or preferences?</label>
+              <textarea id="thoughts" name="Thoughts" placeholder="e.g., 'Sandals sounds perfect, but tell me about Jamaica too' or 'Send me more on Symphony — what's the cabin like?'"></textarea>
+            </div>
+          </div>
+
+          <button type="submit">Send my thoughts</button>
+        </form>
+      </div>
+
+      <div id="thanksMsg" class="thanks-msg">
+        <h3>Got it &mdash; thank you, Ilona.</h3>
+        <p>I'll review your note and follow up shortly with the next round of detail.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== FOOTER =============== -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-name">Christina Garcia</div>
+    <div class="footer-role">Travel Advisor &middot; Point Me to Paradise Travel</div>
+    <div class="footer-contact"><a id="emailLink" href="#">email</a></div>
+    <div class="footer-contact">(281) 229-0862</div>
+
+    <p class="footer-disclosure">Individual hotels, transfers, and tours in your quote are priced at publicly available rates &mdash; and in many cases lower than what you'd find on your own. You don't have to worry about overpaying for a piece of your trip. What you're paying for is the rest: the right rooms at the right property, operators we've used for years, the trip app, and a human who answers when something doesn't go to plan. Final pricing is confirmed by Christina before booking. Cruise rates shown are per person at double occupancy and may shift with availability; resort rates reflect current promotional pricing as displayed by suppliers.</p>
+  </div>
+</footer>
+
+<script>
+  // Email assembly (avoids Cloudflare obfuscation)
+  (function() {
+    var addr = 'Christina' + '@' + 'PointMeToParadise.com';
+    var link = document.getElementById('emailLink');
+    if (link) {
+      link.href = 'mailto:' + addr;
+      link.textContent = addr;
+    }
+  })();
+
+  // Form submission via Web3Forms
+  document.getElementById('tripForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var form = e.target;
+    var data = new FormData(form);
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: data
+    })
+    .then(function(res) { return res.json(); })
+    .then(function(json) {
+      if (json.success) {
+        document.getElementById('formContent').style.display = 'none';
+        document.getElementById('thanksMsg').classList.add('show');
+        document.getElementById('thanksMsg').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        alert('Something went wrong. Please email Christina directly or text (281) 229-0862.');
+      }
+    })
+    .catch(function() {
+      alert('Something went wrong. Please email Christina directly or text (281) 229-0862.');
+    });
+  });
+</script>
+
+</body>
+</html>
