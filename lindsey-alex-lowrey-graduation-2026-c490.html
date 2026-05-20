@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <title>Lowrey Family — Graduation Celebration 2026 | Point Me to Paradise Travel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --aqua-pale: #C4E4E1;
+      --aqua-mist: #EAF3F2;
+      --aqua: #75AFB1;
+      --aqua-dark: #4F8A8C;
+      --sand: #ECE7DC;
+      --sand-light: #F4F1E9;
+      --gold-whisper: #D6C8A8;
+      --white: #FFFFFF;
+      --paper: #FBFDFD;
+      --ink: #2B2420;
+      --ink-soft: #6B6359;
+      --line: #E5E9E8;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.7;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(180deg, var(--aqua-mist) 0%, var(--paper) 100%);
+      padding: 88px 24px 64px;
+      text-align: center;
+      border-bottom: 1px solid var(--line);
+    }
+    .hero-brand {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--aqua-dark);
+      margin-bottom: 20px;
+    }
+    .hero-kicker {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--aqua-dark);
+      margin-bottom: 14px;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 5vw, 54px);
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .hero-rule {
+      width: 60px;
+      height: 1px;
+      background: var(--gold-whisper);
+      margin: 0 auto 16px;
+    }
+    .hero-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(17px, 2vw, 22px);
+      color: var(--ink-soft);
+    }
+
+    /* ── OVERVIEW STRIP ── */
+    .overview-strip {
+      background: var(--white);
+      border-bottom: 1px solid var(--line);
+      padding: 32px 24px;
+    }
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .overview-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 16px;
+      border-right: 1px solid var(--line);
+    }
+    .overview-item:last-child { border-right: none; }
+    .overview-icon { color: var(--aqua-dark); margin-bottom: 8px; }
+    .overview-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin-bottom: 3px;
+    }
+    .overview-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      color: var(--ink);
+    }
+
+    /* ── VALUE STRIP ── */
+    .value-strip {
+      background: var(--sand-light);
+      padding: 56px 24px;
+      border-bottom: 1px solid var(--line);
+    }
+    .value-strip-header { text-align: center; margin-bottom: 40px; }
+    .value-strip-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+    .value-strip-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 18px;
+      color: var(--ink-soft);
+    }
+    .value-trio {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .value-item {
+      padding: 0 32px;
+      border-right: 1px solid var(--gold-whisper);
+    }
+    .value-item:last-child { border-right: none; }
+    .value-icon { color: var(--aqua-dark); margin-bottom: 14px; }
+    .value-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 21px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+    .value-copy { font-size: 14px; line-height: 1.75; color: var(--ink-soft); }
+
+    /* ── CONTENT WRAPPER ── */
+    .content {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── INTRO ── */
+    .intro { padding: 52px 0 0; }
+    .section-header { text-align: center; margin-bottom: 32px; }
+    .section-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--aqua-dark);
+      margin-bottom: 10px;
+    }
+    .section-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(24px, 3.5vw, 36px);
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+    .section-rule {
+      width: 60px;
+      height: 1px;
+      background: var(--gold-whisper);
+      margin: 12px auto;
+    }
+    .section-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 17px;
+      color: var(--ink-soft);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .intro-body p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+
+    /* ── SARGASSUM CALLOUT ── */
+    .sargassum-callout {
+      background: var(--aqua-mist);
+      border: 1px solid var(--aqua);
+      border-radius: 6px;
+      padding: 26px 30px;
+      margin: 36px 0 0;
+    }
+    .sargassum-callout-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--aqua-dark);
+      margin-bottom: 10px;
+    }
+    .sargassum-callout p {
+      font-size: 14px;
+      line-height: 1.75;
+      color: var(--ink-soft);
+      margin-bottom: 10px;
+    }
+    .sargassum-callout p:last-child { margin-bottom: 0; }
+
+    /* ── OPTION DIVIDER ── */
+    .option-divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 52px 0 28px;
+    }
+    .option-divider-line { flex: 1; height: 1px; background: var(--line); }
+    .option-divider-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--aqua-dark);
+      white-space: nowrap;
+    }
+
+    /* ── OPTION CARD ── */
+    .option-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 12px;
+    }
+    .card-header {
+      padding: 24px 28px 20px;
+      border-bottom: 1px solid var(--line);
+    }
+    .card-kicker {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin-bottom: 6px;
+    }
+    .card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(20px, 2.5vw, 26px);
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+    .card-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 16px;
+      color: var(--aqua-dark);
+    }
+
+    /* ── IMAGE STRIP ── */
+    .image-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3px;
+      background: var(--line);
+    }
+    .image-strip img {
+      width: 100%;
+      height: 175px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ── CARD BODY ── */
+    .card-body { padding: 28px; }
+    .card-copy p {
+      font-size: 14.5px;
+      line-height: 1.8;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+    .card-copy p:last-child { margin-bottom: 0; }
+
+    /* ── INSIDER NOTE ── */
+    .insider-note {
+      background: var(--sand-light);
+      border-left: 3px solid var(--aqua-dark);
+      padding: 15px 20px;
+      margin: 22px 0;
+      border-radius: 0 4px 4px 0;
+    }
+    .insider-note p {
+      font-size: 13.5px;
+      line-height: 1.7;
+      color: var(--ink-soft);
+      font-style: italic;
+    }
+
+    /* ── AMENITY GRID ── */
+    .amenity-section {
+      margin-top: 24px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+    }
+    .amenity-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin-bottom: 14px;
+    }
+    .amenity-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px 20px;
+    }
+    .amenity-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13.5px;
+      color: var(--ink-soft);
+      line-height: 1.5;
+    }
+    .amenity-item svg { flex-shrink: 0; color: var(--aqua-dark); margin-top: 1px; }
+
+    /* ── ROOM SECTION ── */
+    .room-section {
+      margin-top: 26px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+    }
+    .room-section h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+    .room-desc {
+      font-size: 13.5px;
+      line-height: 1.7;
+      color: var(--ink-soft);
+      margin-bottom: 16px;
+    }
+
+    /* ── RADIO ROOM OPTIONS ── */
+    .room-options { display: flex; flex-direction: column; gap: 10px; }
+    .room-option { position: relative; }
+    .room-option input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .room-option label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 18px;
+      border: 1.5px solid var(--line);
+      border-radius: 6px;
+      cursor: pointer;
+      background: var(--white);
+      transition: border-color 0.15s, background 0.15s;
+      min-height: 52px;
+      gap: 12px;
+    }
+    .room-option label:hover {
+      border-color: var(--aqua);
+      background: var(--aqua-mist);
+    }
+    .room-option input[type="radio"]:checked + label {
+      border-color: var(--aqua-dark);
+      background: var(--aqua-pale);
+    }
+    .room-option-left { flex: 1; }
+    .room-option-name { font-size: 14px; font-weight: 500; color: var(--ink); }
+    .room-option-detail { font-size: 12px; color: var(--ink-soft); margin-top: 2px; }
+    .room-option-price { text-align: right; flex-shrink: 0; }
+    .room-price-total {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--aqua-dark);
+      white-space: nowrap;
+    }
+    .room-price-pp { font-size: 11px; color: var(--ink-soft); white-space: nowrap; }
+
+    /* ── PRICING BOX ── */
+    .pricing-box {
+      background: var(--aqua-pale);
+      border-radius: 6px;
+      padding: 22px 24px;
+      margin-top: 20px;
+    }
+    .pricing-box-kicker {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--aqua-dark);
+      margin-bottom: 5px;
+    }
+    .pricing-box-total {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 2px;
+    }
+    .pricing-box-pp { font-size: 13px; color: var(--ink-soft); margin-bottom: 14px; }
+    .pricing-includes {
+      font-size: 12px;
+      color: var(--ink-soft);
+      border-top: 1px solid var(--aqua);
+      padding-top: 12px;
+    }
+    .pricing-includes ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px 18px;
+      margin-top: 6px;
+    }
+    .pricing-includes li { display: flex; align-items: center; gap: 6px; }
+    .pricing-includes li::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--aqua-dark);
+      flex-shrink: 0;
+    }
+    .payment-note {
+      font-size: 12px;
+      color: var(--ink-soft);
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--aqua);
+      font-style: italic;
+    }
+
+    /* ── FLIGHT CARDS ── */
+    .flight-pair { margin-top: 14px; display: flex; flex-direction: column; gap: 10px; }
+    .flight-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 18px 22px;
+    }
+    .flight-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+    }
+    .flight-direction {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--aqua-dark);
+    }
+    .flight-date { font-size: 12px; color: var(--ink-soft); }
+    .flight-row { display: flex; align-items: center; gap: 14px; }
+    .flight-endpoint {}
+    .flight-time {
+      font-family: 'Playfair Display', serif;
+      font-size: 21px;
+      font-weight: 500;
+      color: var(--ink);
+    }
+    .flight-airport { font-size: 11px; color: var(--ink-soft); margin-top: 1px; }
+    .flight-line {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+    .flight-duration { font-size: 11px; color: var(--ink-soft); letter-spacing: 0.04em; }
+    .flight-track {
+      width: 100%;
+      height: 1px;
+      background: var(--aqua);
+      position: relative;
+    }
+    .flight-track::after {
+      content: '';
+      position: absolute;
+      right: -3px;
+      top: -3px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--aqua-dark);
+    }
+    .flight-meta { margin-top: 10px; font-size: 11.5px; color: var(--ink-soft); }
+    .flight-delay-note {
+      display: inline-block;
+      background: #FEF9EC;
+      color: #7A5C0B;
+      border: 1px solid #E8D080;
+      border-radius: 3px;
+      padding: 3px 9px;
+      font-size: 11px;
+      font-weight: 500;
+      margin-top: 8px;
+    }
+
+    /* ── NOTES ── */
+    .notes-section { padding: 44px 0 0; }
+    .notes-section h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+    .notes-section .notes-sub {
+      font-size: 13.5px;
+      color: var(--ink-soft);
+      margin-bottom: 12px;
+    }
+    .notes-section textarea {
+      width: 100%;
+      min-height: 100px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 13px 15px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      color: var(--ink);
+      background: var(--white);
+      resize: vertical;
+      line-height: 1.6;
+    }
+    .notes-section textarea:focus {
+      outline: none;
+      border-color: var(--aqua-dark);
+    }
+
+    /* ── TOTAL BAR ── */
+    .total-bar {
+      background: var(--aqua-pale);
+      border-top: 1px solid var(--aqua);
+      border-bottom: 1px solid var(--aqua);
+      padding: 11px 24px;
+      text-align: center;
+      margin: 36px 0 0;
+    }
+    .total-bar-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--aqua-dark);
+      margin-bottom: 2px;
+    }
+    .total-bar-amount {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 500;
+      color: var(--ink);
+    }
+    .total-bar-pp { font-size: 12px; color: var(--ink-soft); margin-top: 1px; }
+
+    /* ── FORM ── */
+    .form-section { padding: 40px 0 52px; }
+    .form-section h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+    .form-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 16px;
+      color: var(--ink-soft);
+      margin-bottom: 24px;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    .form-field label {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin-bottom: 6px;
+    }
+    .form-field input {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      padding: 10px 13px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      color: var(--ink);
+      background: var(--white);
+      transition: border-color 0.15s;
+    }
+    .form-field input:focus {
+      outline: none;
+      border-color: var(--aqua-dark);
+    }
+    .insurance-section { margin-bottom: 24px; }
+    .insurance-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin-bottom: 10px;
+    }
+    .insurance-options { display: flex; flex-direction: column; gap: 8px; }
+    .insurance-option {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 12px 16px;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      cursor: pointer;
+      background: var(--white);
+      transition: border-color 0.15s, background 0.15s;
+      min-height: 48px;
+    }
+    .insurance-option:has(input:checked) {
+      border-color: var(--aqua-dark);
+      background: var(--aqua-mist);
+    }
+    .insurance-option input[type="radio"] {
+      margin-top: 2px;
+      accent-color: var(--aqua-dark);
+      flex-shrink: 0;
+    }
+    .insurance-option span { font-size: 14px; color: var(--ink); line-height: 1.5; }
+    .submit-btn {
+      background: var(--aqua-dark);
+      color: var(--white);
+      border: none;
+      border-radius: 5px;
+      padding: 16px 36px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      width: 100%;
+      min-height: 54px;
+      transition: background 0.18s;
+    }
+    .submit-btn:hover { background: #3d6d6f; }
+
+    /* ── THANKS ── */
+    .thanks-msg {
+      display: none;
+      text-align: center;
+      padding: 48px 24px;
+      background: var(--aqua-mist);
+      border-radius: 8px;
+      margin-top: 24px;
+    }
+    .thanks-msg.show { display: block; }
+    .thanks-msg h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+    .thanks-msg p { font-size: 15px; color: var(--ink-soft); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--sand-light);
+      border-top: 1px solid var(--line);
+      padding: 48px 24px;
+    }
+    .footer-inner {
+      max-width: 880px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 40px;
+    }
+    .footer-brand {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--aqua-dark);
+      margin-bottom: 10px;
+    }
+    .footer-contact p { font-size: 14px; color: var(--ink-soft); margin-bottom: 4px; }
+    .footer-contact a { color: var(--aqua-dark); text-decoration: none; }
+    .footer-disclosure {
+      font-size: 12.5px;
+      line-height: 1.8;
+      color: var(--ink-soft);
+      font-style: italic;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .overview-grid { grid-template-columns: repeat(2, 1fr); gap: 20px 0; }
+      .overview-item:nth-child(2) { border-right: none; }
+      .overview-item:nth-child(3) { border-right: 1px solid var(--line); }
+
+      .value-trio { grid-template-columns: 1fr; }
+      .value-item {
+        border-right: none;
+        border-bottom: 1px solid var(--gold-whisper);
+        padding: 0 0 28px;
+        margin-bottom: 28px;
+      }
+      .value-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+      .image-strip { grid-template-columns: repeat(2, 1fr); }
+      .image-strip img { height: 140px; }
+
+      .amenity-grid { grid-template-columns: 1fr; }
+
+      .form-grid { grid-template-columns: 1fr; }
+
+      .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+
+      .room-option label { flex-direction: column; align-items: flex-start; }
+      .room-option-price { text-align: left; }
+    }
+
+    @media (max-width: 480px) {
+      .image-strip { grid-template-columns: 1fr; }
+      .image-strip img { height: 200px; }
+      .flight-time { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-brand">Point Me to Paradise Travel</div>
+  <div class="hero-kicker">Prepared for Lindsey &amp; Alex Lowrey</div>
+  <h1 class="hero-title">Graduation Celebration</h1>
+  <div class="hero-rule"></div>
+  <p class="hero-tagline">Dominican Republic or Mexico &mdash; July 9&ndash;14, 2026</p>
+</header>
+
+<!-- OVERVIEW STRIP -->
+<section class="overview-strip">
+  <div class="overview-grid">
+    <div class="overview-item">
+      <div class="overview-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+      </div>
+      <div class="overview-label">Travelers</div>
+      <div class="overview-value">4 adults</div>
+    </div>
+    <div class="overview-item">
+      <div class="overview-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>
+        </svg>
+      </div>
+      <div class="overview-label">Dates</div>
+      <div class="overview-value">Jul 9 – 14, 2026</div>
+    </div>
+    <div class="overview-item">
+      <div class="overview-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+      </div>
+      <div class="overview-label">Destination</div>
+      <div class="overview-value">DR or Mexico</div>
+    </div>
+    <div class="overview-item">
+      <div class="overview-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+        </svg>
+      </div>
+      <div class="overview-label">Flying From</div>
+      <div class="overview-value">Houston (IAH)</div>
+    </div>
+  </div>
+</section>
+
+<!-- BEYOND THE BOOKING -->
+<section class="value-strip">
+  <div class="value-strip-header">
+    <h2 class="value-strip-heading">Beyond the booking</h2>
+    <p class="value-strip-sub">What's included with every Point Me to Paradise trip</p>
+  </div>
+  <div class="value-trio">
+    <div class="value-item">
+      <div class="value-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+        </svg>
+      </div>
+      <h3 class="value-heading">The Trip Guide</h3>
+      <p class="value-copy">A document built for your week — restaurants we'd return to, neighborhoods worth the walk, what to skip, the places open on a Sunday. Not pulled from a database. Researched against where you're staying and what you've told us matters.</p>
+    </div>
+    <div class="value-item">
+      <div class="value-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+          <line x1="12" y1="18" x2="12.01" y2="18"/>
+        </svg>
+      </div>
+      <h3 class="value-heading">The Trip App</h3>
+      <p class="value-copy">Itinerary, confirmation numbers, transfer windows, and ground contacts in one place — accessible offline, updated in real time. If a flight shifts or weather moves, the app moves with it.</p>
+    </div>
+    <div class="value-item">
+      <div class="value-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 11 12 14 22 4"/>
+          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+        </svg>
+      </div>
+      <h3 class="value-heading">Best-Rate Assurance</h3>
+      <p class="value-copy">Every hotel night, cruise rate, and tour in your quote is priced at publicly available rates. If you find the same component for less elsewhere, we'll match it — you don't have to wonder whether you're overpaying for a piece of your trip.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN -->
+<main class="content">
+
+  <!-- INTRO -->
+  <div class="intro">
+    <div class="section-header">
+      <div class="section-label">Your Celebration Trip</div>
+      <h2 class="section-heading">Two destinations. One milestone.</h2>
+      <div class="section-rule"></div>
+      <p class="section-sub">Both packages are priced for 4 adults — 2 parents, 2 graduates — 5 nights all-inclusive.</p>
+    </div>
+    <div class="intro-body">
+      <p>A graduation is worth doing properly. I put real research into this quote before presenting two options — each with a distinct personality, in two different countries, at two meaningfully different price points. One is a newly opened design-forward resort on a stretch of coast most travelers haven't found yet. The other is a larger, high-energy all-suite property built for exactly this kind of family celebration.</p>
+      <p>I looked at several destinations before landing here. Aruba priced out significantly higher for a group of four in July with no comparable upgrade in experience. Isla Mujeres — while the water at Playa Norte is genuinely among the most beautiful in Mexico — doesn't have the all-inclusive resort infrastructure this trip calls for. A number of other Caribbean destinations were ruled out because reaching them from Houston requires two connections, which adds meaningful risk and travel time to a five-night trip. Costa Rica was on the list early, but July sits squarely in its rainy season — the water clarity and beach conditions aren't what you'd want for a celebration built around the beach. Both options below solve for all of that.</p>
+    </div>
+
+    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--ink-soft);margin-bottom:32px;">The July 9–14 dates are an example — I chose them because the air pricing looked strong and they made the math clean. If you want to look at different dates, just mention it in the notes below or reach out directly and I'll come back with options quickly.</p>
+
+    <div class="sargassum-callout">
+      <div class="sargassum-callout-label">A note on sargassum</div>
+      <p>Sargassum — brown Atlantic seaweed — washes ashore across the Caribbean and Mexico between April and October, with July squarely in peak season. It has become a genuine issue along much of the Riviera Maya, the Yucatan Hotel Zone, and parts of the eastern Caribbean. I research it actively for every beach recommendation I make.</p>
+      <p>Both properties below were selected in part because their geography provides natural protection from the heaviest drift patterns. I can't promise a completely clear beach on any given day — no one can. What I can tell you is that both locations consistently outperform most of the region, and I'll be monitoring conditions before your trip. If anything changes materially, I'll contact you directly.</p>
+    </div>
+  </div>
+
+  <!-- ───────────── OPTION 1: ZEMI MICHES ───────────── -->
+  <div class="option-divider">
+    <div class="option-divider-line"></div>
+    <div class="option-divider-label">Option 1 — Dominican Republic</div>
+    <div class="option-divider-line"></div>
+  </div>
+
+  <div class="option-card">
+    <div class="card-header">
+      <div class="card-kicker">Option 1 · 4 adults · 5 nights all-inclusive</div>
+      <h2 class="card-title">Zemi Miches Punta Cana All-Inclusive Resort</h2>
+      <p class="card-tagline">Curio Collection by Hilton &middot; Playa Esmeralda, Miches, Dominican Republic</p>
+    </div>
+
+    <div class="image-strip">
+      <img src="https://assets.hiltonstatic.com/hilton-asset-cache/image/upload/c_fill,w_1920,h_1080,q_70,f_auto,g_auto/Imagery/Property%20Photography/Curio%20Collection/P/PUJMIQQ/ZemiMiches_Aereal_Main_pool_Beach.jpg" alt="Zemi Miches aerial pool and beach" loading="lazy">
+      <img src="https://stories.hilton.com/uploads/2025/06/5-Zemi-Miches-Punta-Cana-All-Inclusive-Resort-Curio-Collection-by-Hilton-Pool-Lounges.jpg" alt="Zemi Miches pool lounges" loading="lazy">
+      <img src="https://assets.hiltonstatic.com/hilton-asset-cache/image/upload/c_fill,w_940,h_626,q_80,f_auto,g_auto/Imagery/Lifestyle%20Photography/Curio%20Collection/P/PUJMIQQ/CURIO_ZEMIMICHES_PUNTACANA_CLUB%20AZURE_SH6510.jpg" alt="Zemi Miches Club Azure" loading="lazy">
+      <img src="https://www.grandmichesresort.com/images/slides/slide-26.jpg" alt="Zemi Miches beach and grounds" loading="lazy">
+    </div>
+
+    <div class="card-body">
+      <div class="card-copy">
+        <p>Opened in 2025, Zemi Miches is Hilton's first Curio Collection all-inclusive in the Dominican Republic — and it arrived fully formed. Set on 2,000 feet of Playa Esmeralda inside a protected bay, this is a property built around the idea that luxury and cultural authenticity don't compete. Every detail — the architecture, the art, the food, the daily programming — draws from the Taino heritage of the DR, creating a sense of place that most all-inclusives never attempt.</p>
+        <p>Dramatic multilevel pools, fire-pit lounges floating in the water, rattan cabanas framing a calm turquoise bay, mountain views behind. The overall feeling is intimate and unhurried — a 500-room property that manages to feel like a private retreat. Fourteen globally inspired restaurants and bars span Thai street food, live-fire Dominican cooking, fresh-pressed juice markets, and a rooftop pool bar. The Acana Spa draws from ancestral Taino healing rituals. Evenings bring live performances at an outdoor theater. Paddleboarding, kayaking, and snorkeling fill the days.</p>
+        <p>On sargassum: Miches sits inside a protected bay on the northeastern DR coast. The peninsula's geography diverts Atlantic drift northward before it reaches Playa Esmeralda — one of the most consistently clear stretches in the entire country, even during the 2025 record-high sargassum season.</p>
+      </div>
+
+      <div class="insider-note">
+        <p>One of our advisors returned from Zemi Miches this month — on her own time, her own choice. She has not stopped talking about it. When a travel professional visits a resort without being asked and comes back genuinely enthusiastic, that tells you something the brochure can't.</p>
+      </div>
+
+      <div class="amenity-section">
+        <div class="amenity-label">What's included</div>
+        <div class="amenity-grid">
+          <div class="amenity-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            All-inclusive dining &amp; drinks (14 restaurants &amp; bars)
+          </div>
+          <div class="amenity-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            Daily cultural programming — pottery, mixology, artisan workshops
+          </div>
+          <div class="amenity-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            Acana Spa — Taino-inspired treatments
+          </div>
+          <div class="amenity-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            Non-motorized water sports (paddleboard, kayak, snorkel)
+          </div>
+          <div class="amenity-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Nightly outdoor theater &amp; live entertainment
+          </div>
+          <div class="amenity-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            Round-trip airport transfers (PUJ &harr; Miches, ~90 min)
+          </div>
+        </div>
+      </div>
+
+      <!-- FLIGHTS OPTION 1 -->
+      <div class="room-section">
+        <h4>Flights — Houston (IAH) to Punta Cana (PUJ)</h4>
+        <p class="room-desc">United Airlines &middot; Economy &middot; Boeing 737 MAX 9 &middot; Both legs</p>
+      </div>
+
+      <div class="flight-pair">
+        <div class="flight-card">
+          <div class="flight-card-header">
+            <span class="flight-direction">Outbound</span>
+            <span class="flight-date">Thu, Jul 9, 2026</span>
+          </div>
+          <div class="flight-row">
+            <div class="flight-endpoint">
+              <div class="flight-time">10:05 AM</div>
+              <div class="flight-airport">IAH &middot; Houston</div>
+            </div>
+            <div class="flight-line">
+              <div class="flight-duration">4 hr 25 min &middot; UA 420</div>
+              <div class="flight-track"></div>
+            </div>
+            <div class="flight-endpoint" style="text-align:right;">
+              <div class="flight-time">3:30 PM</div>
+              <div class="flight-airport">PUJ &middot; Punta Cana</div>
+            </div>
+          </div>
+          <div class="flight-meta">In-seat power &middot; Media streaming &middot; Wi-Fi for a fee</div>
+        </div>
+
+        <div class="flight-card">
+          <div class="flight-card-header">
+            <span class="flight-direction">Return</span>
+            <span class="flight-date">Tue, Jul 14, 2026</span>
+          </div>
+          <div class="flight-row">
+            <div class="flight-endpoint">
+              <div class="flight-time">4:00 PM</div>
+              <div class="flight-airport">PUJ &middot; Punta Cana</div>
+            </div>
+            <div class="flight-line">
+              <div class="flight-duration">4 hr 44 min &middot; UA 1284</div>
+              <div class="flight-track"></div>
+            </div>
+            <div class="flight-endpoint" style="text-align:right;">
+              <div class="flight-time">7:44 PM</div>
+              <div class="flight-airport">IAH &middot; Houston</div>
+            </div>
+          </div>
+          <div class="flight-meta">In-seat power &middot; Media streaming &middot; Wi-Fi for a fee</div>
+        </div>
+      </div>
+
+      <!-- ROOM SELECTION -->
+      <div class="room-section">
+        <h4>Select your room</h4>
+        <p class="room-desc">All three rooms include 2 queen beds and accommodate all 4 travelers. Choose your preferred view and amenity level — your package total updates below.</p>
+
+        <div class="room-options">
+          <div class="room-option">
+            <input type="radio" name="selection" id="zemi-1" value="zemi-1"
+              data-label="Zemi Miches — Plunge Pool Ocean-Beach View Room"
+              data-total="8290" data-pp="2073">
+            <label for="zemi-1">
+              <div class="room-option-left">
+                <div class="room-option-name">Plunge Pool Ocean-Beach View</div>
+                <div class="room-option-detail">2 queens &middot; private plunge pool &middot; ocean &amp; beach view &middot; taxes included</div>
+              </div>
+              <div class="room-option-price">
+                <div class="room-price-total">Est. $8,290</div>
+                <div class="room-price-pp">$2,073 per person</div>
+              </div>
+            </label>
+          </div>
+
+          <div class="room-option">
+            <input type="radio" name="selection" id="zemi-2" value="zemi-2"
+              data-label="Zemi Miches — Ocean Vista View Room"
+              data-total="8330" data-pp="2083">
+            <label for="zemi-2">
+              <div class="room-option-left">
+                <div class="room-option-name">Ocean Vista View</div>
+                <div class="room-option-detail">2 queens &middot; furnished balcony &middot; ocean views &middot; taxes included</div>
+              </div>
+              <div class="room-option-price">
+                <div class="room-price-total">Est. $8,330</div>
+                <div class="room-price-pp">$2,083 per person</div>
+              </div>
+            </label>
+          </div>
+
+          <div class="room-option">
+            <input type="radio" name="selection" id="zemi-3" value="zemi-3"
+              data-label="Zemi Miches — Plunge Pool Beach View Room"
+              data-total="8455" data-pp="2114">
+            <label for="zemi-3">
+              <div class="room-option-left">
+                <div class="room-option-name">Plunge Pool Beach View</div>
+                <div class="room-option-detail">2 queens &middot; private plunge pool &middot; beach view &middot; taxes included</div>
+              </div>
+              <div class="room-option-price">
+                <div class="room-price-total">Est. $8,455</div>
+                <div class="room-price-pp">$2,114 per person</div>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRICING BOX OPTION 1 -->
+      <div class="pricing-box">
+        <div class="pricing-box-kicker">Package rate &middot; all-in</div>
+        <div class="pricing-box-total">Est. $8,290 – $8,455</div>
+        <div class="pricing-box-pp">Est. $2,073 – $2,114 per person &middot; 4 adults</div>
+        <div class="pricing-includes">
+          Includes:
+          <ul>
+            <li>Round-trip flights, 4 travelers</li>
+            <li>5 nights all-inclusive, taxes included</li>
+            <li>Round-trip airport transfers (PUJ &harr; Miches)</li>
+          </ul>
+        </div>
+        <div class="payment-note">
+          Deposit: $3,804 (flights) due at booking &middot; Balance due June 18, 2026
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ───────────── OPTION 2: CATALONIA GRAND ───────────── -->
+  <div class="option-divider">
+    <div class="option-divider-line"></div>
+    <div class="option-divider-label">Option 2 — Mexico</div>
+    <div class="option-divider-line"></div>
+  </div>
+
+  <div class="option-card">
+    <div class="card-header">
+      <div class="card-kicker">Option 2 · 4 adults · 5 nights all-inclusive · transfers included</div>
+      <h2 class="card-title">Catalonia Grand Costa Mujeres All Suites &amp; Spa</h2>
+      <p class="card-tagline">All-Inclusive &middot; Costa Mujeres, Mexico &middot; Transfers Included</p>
+    </div>
+
+    <div class="image-strip">
+      <img src="https://www.onesmileymonkey.com/wp-content/uploads/2025/03/GrandCostaMujeres-Maloo-01.jpg-scaled.webp" alt="Catalonia Grand pool" loading="lazy">
+      <img src="https://www.cataloniaplayamujeres.com/images/slides/slide-74.jpg" alt="Catalonia Grand beach" loading="lazy">
+      <img src="https://www.cataloniaplayamujeres.com/images/slides/slide-80.jpg" alt="Catalonia Grand resort view" loading="lazy">
+      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/ad/3e/c4/alberca-con-swip-up-bar.jpg?w=500&h=-1&s=1" alt="Catalonia Grand swim-up bar" loading="lazy">
+    </div>
+
+    <div class="card-body">
+      <div class="card-copy">
+        <p>The Catalonia Grand Costa Mujeres is a 496-suite all-inclusive set directly on a private white-sand beach north of Cancun — one of the most naturally protected stretches of coastline on the Yucatan Peninsula. It manages to feel both expansive and energetic: large enough to have everything your group needs across five nights, with enough variety that no two days feel the same.</p>
+        <p>At the center of the property is La Quinta Avenida — a pedestrian street modeled on Playa del Carmen's famous Fifth Avenue — lined with specialty restaurants, bars, and boutiques. It gives the resort an energy and variety that most all-inclusives simply can't replicate. Days flow naturally: beach in the morning, a specialty restaurant for lunch, the pools in the afternoon, the spa before dinner, live entertainment in the evening. Fourteen dining venues span Asian teppanyaki, Italian, Mexican, seafood, steakhouse, a gourmet buffet, a food truck, and a coffee shop. Two large pools with swim-up bars and a nightclub give the graduates what they're looking for. The parents have the Alegria Spa and genuinely great food.</p>
+        <p>On sargassum: Costa Mujeres faces slightly northwest rather than directly into the Caribbean, which gives it natural protection from prevailing Atlantic currents. Even on heavier days, dedicated beach cleanup crews have swimming areas clear by 9 AM — it consistently outperforms Cancun's Hotel Zone and the Riviera Maya.</p>
+      </div>
+
+      <div class="amenity-section">
+        <div class="amenity-label">What's included</div>
+        <div class="amenity-grid">
+          <div class="amenity-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            All-inclusive dining &amp; drinks (14 venues)
+          </div>
+          <div class="amenity-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            Nightly live shows &amp; nightclub
+          </div>
+          <div class="amenity-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            Alegria Spa
+          </div>
+          <div class="amenity-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            Non-motorized water sports &amp; fitness center
+          </div>
+          <div class="amenity-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            La Quinta Avenida restaurant &amp; bar street
+          </div>
+          <div class="amenity-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            Round-trip CUN airport transfers (included)
+          </div>
+        </div>
+      </div>
+
+      <!-- SUITE -->
+      <div class="room-section">
+        <h4>Family Suite Superior &middot; 4 adults &middot; 1 suite</h4>
+        <p class="room-desc">2 queen beds plus a sofa bed. Parents in one queen, graduates in the other — sofa bed as overflow. Balcony/terrace, rain shower, walk-in closet, minibar, coffee maker, smart TV, in-room safe (fits a laptop), wireless internet.</p>
+
+        <div class="room-options">
+          <div class="room-option">
+            <input type="radio" name="selection" id="catalonia-1" value="catalonia-1"
+              data-label="Catalonia Grand — Family Suite Superior"
+              data-total="5188" data-pp="1297">
+            <label for="catalonia-1">
+              <div class="room-option-left">
+                <div class="room-option-name">Family Suite Superior</div>
+                <div class="room-option-detail">2 queens + sofa bed &middot; balcony &middot; flights, hotel, &amp; transfers all included</div>
+              </div>
+              <div class="room-option-price">
+                <div class="room-price-total">Est. $5,188</div>
+                <div class="room-price-pp">$1,297 per person</div>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- FLIGHTS OPTION 2 -->
+      <div class="room-section">
+        <h4>Flights — Houston (IAH) to Cancun (CUN)</h4>
+        <p class="room-desc">United Airlines &middot; Economy</p>
+      </div>
+
+      <div class="flight-pair">
+        <div class="flight-card">
+          <div class="flight-card-header">
+            <span class="flight-direction">Outbound</span>
+            <span class="flight-date">Thu, Jul 9, 2026</span>
+          </div>
+          <div class="flight-row">
+            <div class="flight-endpoint">
+              <div class="flight-time">9:42 AM</div>
+              <div class="flight-airport">IAH &middot; Houston</div>
+            </div>
+            <div class="flight-line">
+              <div class="flight-duration">2 hr 20 min &middot; UA 1018</div>
+              <div class="flight-track"></div>
+            </div>
+            <div class="flight-endpoint" style="text-align:right;">
+              <div class="flight-time">12:02 PM</div>
+              <div class="flight-airport">CUN &middot; Cancun</div>
+            </div>
+          </div>
+          <div class="flight-meta">Boeing 737 &middot; Average legroom (30 in) &middot; In-seat power &middot; Media streaming</div>
+        </div>
+
+        <div class="flight-card">
+          <div class="flight-card-header">
+            <span class="flight-direction">Return</span>
+            <span class="flight-date">Tue, Jul 14, 2026</span>
+          </div>
+          <div class="flight-row">
+            <div class="flight-endpoint">
+              <div class="flight-time">3:24 PM</div>
+              <div class="flight-airport">CUN &middot; Cancun</div>
+            </div>
+            <div class="flight-line">
+              <div class="flight-duration">2 hr 33 min &middot; UA 1019</div>
+              <div class="flight-track"></div>
+            </div>
+            <div class="flight-endpoint" style="text-align:right;">
+              <div class="flight-time">5:57 PM</div>
+              <div class="flight-airport">IAH &middot; Houston</div>
+            </div>
+          </div>
+          <div class="flight-meta">Boeing 737 MAX 9 &middot; In-seat power &middot; Wi-Fi for a fee</div>
+          <div class="flight-delay-note">This flight is often delayed 30+ minutes — plan ground transportation accordingly</div>
+        </div>
+      </div>
+
+      <!-- PRICING BOX OPTION 2 -->
+      <div class="pricing-box">
+        <div class="pricing-box-kicker">Package rate &middot; all-in</div>
+        <div class="pricing-box-total">Est. $5,188</div>
+        <div class="pricing-box-pp">Est. $1,297 per person &middot; 4 adults</div>
+        <div class="pricing-includes">
+          Includes:
+          <ul>
+            <li>Round-trip flights, 4 travelers</li>
+            <li>5 nights all-inclusive</li>
+            <li>Round-trip CUN airport transfers</li>
+          </ul>
+        </div>
+        <div class="payment-note">
+          Deposit: $2,190 (flights) due at booking &middot; Balance due June 18, 2026
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTES -->
+  <div class="notes-section">
+    <h3>Notes &amp; preferences</h3>
+    <p class="notes-sub">Anything you want Christina to know — room preferences, special occasions to note at the resort, dietary needs, or questions about either option.</p>
+    <textarea id="tripNotes" placeholder="Add notes, questions, or special requests here..."></textarea>
+  </div>
+
+  <!-- TOTAL BAR -->
+  <div class="total-bar">
+    <div class="total-bar-label">Selected package total</div>
+    <div class="total-bar-amount" id="totalDisplay">— select an option above —</div>
+    <div class="total-bar-pp" id="totalPP"></div>
+  </div>
+
+  <!-- FORM -->
+  <div class="form-section">
+    <h3>Send your selections</h3>
+    <p class="form-sub">Choose your option above, then submit — Christina will follow up to confirm availability and next steps.</p>
+
+    <form id="tripForm">
+      <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+      <input type="hidden" name="subject" value="Lowrey Family — Graduation 2026 Selections">
+      <input type="hidden" name="from_name" value="Lowrey Family — PMTP Trip Form">
+      <input type="hidden" name="redirect" value="false">
+      <input type="hidden" name="Package_Selection" id="hidden_selection">
+      <input type="hidden" name="Estimated_Total" id="hidden_total">
+      <input type="hidden" name="Trip_Notes" id="hidden_notes">
+
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="f-name">Name</label>
+          <input type="text" id="f-name" name="Name" placeholder="Your name" required>
+        </div>
+        <div class="form-field">
+          <label for="f-email">Email</label>
+          <input type="email" id="f-email" name="Email" placeholder="your@email.com" required>
+        </div>
+        <div class="form-field">
+          <label for="f-phone">Phone</label>
+          <input type="tel" id="f-phone" name="Phone" placeholder="(555) 555-5555">
+        </div>
+      </div>
+
+      <div class="insurance-section">
+        <div class="insurance-label">Travel insurance</div>
+        <div class="insurance-options">
+          <label class="insurance-option">
+            <input type="radio" name="Insurance_Choice" value="Yes — please send me a travel insurance quote" required>
+            <span>Yes — please send me a travel insurance quote</span>
+          </label>
+          <label class="insurance-option">
+            <input type="radio" name="Insurance_Choice" value="No — I decline travel insurance and accept the risks of traveling without coverage">
+            <span>No — I decline travel insurance and understand the risks</span>
+          </label>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">Send my selections to Christina</button>
+    </form>
+
+    <div class="thanks-msg" id="thanksMsg">
+      <h3>Thank you, Lowrey family!</h3>
+      <p>Christina received your selections and will be in touch shortly to confirm everything.</p>
+      <p style="margin-top: 10px; font-size: 13px; color: var(--ink-soft);">Questions in the meantime? Text or call <strong>(281) 229-0862</strong>.</p>
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-contact">
+      <div class="footer-brand">Point Me to Paradise Travel</div>
+      <p><strong>Christina Garcia</strong></p>
+      <p><a href="#" id="emailLink"></a></p>
+      <p>(281) 229-0862</p>
+    </div>
+    <div class="footer-disclosure">
+      <em>Individual hotels, transfers, and tours in your quote are priced at publicly available rates — and in many cases lower than what you'd find on your own. You don't have to worry about overpaying for a piece of your trip. What you're paying for is the rest: the right rooms at the right property, operators we've used for years, the trip app, and a human who answers when something doesn't go to plan.</em>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Email assembly
+  (function() {
+    var addr = 'Christina' + '@' + 'PointMeToParadise.com';
+    var el = document.getElementById('emailLink');
+    if (el) { el.href = 'mailto:' + addr; el.textContent = addr; }
+  })();
+
+  // Running total
+  function updateTotal() {
+    var selected = document.querySelector('input[name="selection"]:checked');
+    var totalDisplay = document.getElementById('totalDisplay');
+    var totalPP = document.getElementById('totalPP');
+    var hiddenSel = document.getElementById('hidden_selection');
+    var hiddenTot = document.getElementById('hidden_total');
+
+    if (!selected) {
+      totalDisplay.textContent = '\u2014 select an option above \u2014';
+      totalPP.textContent = '';
+      if (hiddenSel) hiddenSel.value = '';
+      if (hiddenTot) hiddenTot.value = '';
+      return;
+    }
+
+    var total = parseInt(selected.getAttribute('data-total'));
+    var pp = parseInt(selected.getAttribute('data-pp'));
+    var label = selected.getAttribute('data-label');
+
+    totalDisplay.textContent = 'Est. $' + total.toLocaleString();
+    totalPP.textContent = 'Est. $' + pp.toLocaleString() + ' per person \u00B7 4 adults';
+    if (hiddenSel) hiddenSel.value = label;
+    if (hiddenTot) hiddenTot.value = 'Est. $' + total.toLocaleString();
+  }
+
+  document.querySelectorAll('input[name="selection"]').forEach(function(r) {
+    r.addEventListener('change', updateTotal);
+  });
+
+  // Form submit
+  document.getElementById('tripForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var notes = document.getElementById('tripNotes');
+    var hiddenNotes = document.getElementById('hidden_notes');
+    if (notes && hiddenNotes) hiddenNotes.value = notes.value;
+
+    var data = new FormData(e.target);
+    fetch('https://api.web3forms.com/submit', { method: 'POST', body: data })
+      .then(function(r) { return r.json(); })
+      .then(function(j) {
+        if (j.success) {
+          e.target.style.display = 'none';
+          document.getElementById('thanksMsg').classList.add('show');
+        } else {
+          alert('Something went wrong. Please email Christina directly or text (281) 229-0862.');
+        }
+      })
+      .catch(function() {
+        alert('Something went wrong. Please email Christina directly or text (281) 229-0862.');
+      });
+  });
+</script>
+</body>
+</html>
