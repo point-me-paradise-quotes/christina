@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <title>Parker Family — MSC Seascape · July 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --aqua-pale: #C4E4E1; --aqua-mist: #EAF3F2; --aqua: #75AFB1; --aqua-dark: #4F8A8C;
+      --sand: #ECE7DC; --sand-light: #F4F1E9; --gold-whisper: #D6C8A8;
+      --white: #FFFFFF; --paper: #FBFDFD; --ink: #2B2420; --ink-soft: #6B6359; --line: #E5E9E8;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--paper); color: var(--ink); font-size: 16px; line-height: 1.65; }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      background-image:
+        linear-gradient(180deg, rgba(255,255,255,.50) 0%, rgba(196,228,225,.72) 38%, rgba(234,243,242,.90) 72%, rgba(251,253,253,.99) 100%),
+        url('https://runway-media-production.global.ssl.fastly.net/us/originals/2024/10/20241025_MSC-Seascape_KTolley_197.jpg?width=2000&crop=16%3A9%2Coffset-x50%2Coffset-y50');
+      background-size: cover; background-position: center 40%;
+      padding: 110px 24px 88px; text-align: center; border-bottom: 1px solid var(--line);
+    }
+    .hero-brand { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; color: var(--aqua-dark); margin-bottom: 30px; }
+    .hero-title { font-family: 'Playfair Display', serif; font-weight: 500; font-size: clamp(38px,6vw,62px); color: var(--ink); line-height: 1.12; margin-bottom: 18px; }
+    .hero-rule { width: 60px; height: 1px; background: var(--gold-whisper); margin: 0 auto 20px; }
+    .hero-sub { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(18px,2.2vw,23px); color: var(--ink); margin-bottom: 16px; line-height: 1.4; }
+    .hero-sig { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 16px; color: var(--ink-soft); }
+
+    /* ── OVERVIEW ── */
+    .overview { background: var(--white); border-bottom: 1px solid var(--line); padding: 24px 16px; }
+    .ov-inner { display: flex; justify-content: center; flex-wrap: wrap; max-width: 920px; margin: 0 auto; }
+    .ov-item { display: flex; align-items: center; gap: 10px; padding: 10px 28px; border-right: 1px solid var(--line); }
+    .ov-item:last-child { border-right: none; }
+    .ov-lbl { font-size: 11px; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: var(--ink-soft); }
+    .ov-val { font-size: 14px; font-weight: 500; color: var(--ink); }
+
+    /* ── VALUE STRIP ── */
+    .vs { background: var(--sand-light); padding: 60px 24px; border-bottom: 1px solid var(--line); }
+    .vs-head { text-align: center; margin-bottom: 48px; }
+    .vs-head h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .vs-head p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; color: var(--ink-soft); }
+    .vs-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; max-width: 960px; margin: 0 auto; }
+    .vs-col { padding: 0 40px; border-right: 1px solid var(--gold-whisper); text-align: center; }
+    .vs-col:last-child { border-right: none; }
+    .vs-icon { display: block; margin: 0 auto 16px; color: var(--aqua-dark); }
+    .vs-col h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 500; color: var(--ink); margin-bottom: 12px; }
+    .vs-col p { font-size: 13.5px; line-height: 1.75; color: var(--ink-soft); text-align: left; }
+
+    /* ── BANDS ── */
+    .band { border-bottom: 1px solid var(--line); }
+    .bw { background: var(--white); }
+    .bm { background: var(--aqua-mist); }
+    .inner { max-width: 900px; margin: 0 auto; padding: 56px 24px; }
+
+    /* ── SECTION HEADS ── */
+    .sh { text-align: center; margin-bottom: 32px; }
+    .sh h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 500; color: var(--ink); display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 8px; }
+    .gr { width: 60px; height: 1px; background: var(--gold-whisper); margin: 0 auto 10px; }
+    .sh p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 17px; color: var(--ink-soft); }
+
+    /* ── PHOTOS ── */
+    .pgrid { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-top: 28px; }
+    .pgrid img { width: 100%; height: 175px; object-fit: cover; border-radius: 4px; border: 1px solid var(--line); display: block; }
+    .pgrid img:nth-child(4) { grid-column: span 1; }
+    .pgrid img:nth-child(5) { grid-column: span 2; }
+
+    /* ── ITINERARY ── */
+    .ilay { display: grid; grid-template-columns: 1fr 290px; gap: 36px; align-items: start; margin-top: 28px; }
+    .imap img { width: 100%; border: 1px solid var(--line); border-radius: 4px; display: block; }
+    .itbl { width: 100%; border-collapse: collapse; font-size: 14px; }
+    .itbl th { font-size: 10px; font-weight: 600; letter-spacing: .10em; text-transform: uppercase; color: var(--ink-soft); border-bottom: 1px solid var(--line); padding: 7px 10px; text-align: left; }
+    .itbl td { padding: 11px 10px; border-bottom: 1px solid var(--line); color: var(--ink); vertical-align: middle; }
+    .itbl tr:last-child td { border-bottom: none; }
+    .pb { font-weight: 500; }
+    .as { color: var(--ink-soft); font-style: italic; }
+    .pdot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--aqua-dark); margin-right: 7px; vertical-align: middle; }
+
+    /* ── EXPERIENCE TIERS ── */
+    .egrid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 28px; }
+    .ecard { background: var(--white); border: 1px solid var(--line); border-radius: 6px; padding: 22px 20px; }
+    .ecard.au { border-top: 3px solid var(--aqua-dark); }
+    .ecard.fa { border-top: 3px solid var(--aqua); }
+    .ecard.be { border-top: 3px solid var(--gold-whisper); }
+    .ekick { font-size: 10px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 5px; }
+    .ecard h4 { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 500; color: var(--ink); margin-bottom: 14px; }
+    .elist { list-style: none; font-size: 13px; line-height: 1.7; color: var(--ink-soft); }
+    .elist li { padding-left: 14px; position: relative; margin-bottom: 4px; }
+    .elist li::before { content: ''; position: absolute; left: 0; top: 9px; width: 5px; height: 5px; border-radius: 50%; background: var(--aqua-dark); }
+    .bella-flag { margin-top: 14px; background: #FFFBF0; border: 1px solid #E8CC80; border-left: 4px solid #B89A30; border-radius: 4px; padding: 12px 14px; font-size: 12.5px; line-height: 1.65; color: var(--ink); }
+    .bella-flag strong { font-weight: 700; color: #7A5C00; display: block; margin-bottom: 4px; }
+    .drinks-note { margin-top: 10px; background: var(--aqua-mist); border-left: 3px solid var(--aqua-dark); border-radius: 4px; padding: 10px 13px; font-size: 12.5px; line-height: 1.6; color: var(--ink-soft); }
+
+    /* ── ROOMS ── */
+    .rwrap { display: flex; flex-direction: column; gap: 24px; margin-top: 8px; }
+    .rcard { background: var(--white); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+    .rhdr { background: var(--aqua-mist); border-bottom: 1px solid var(--line); padding: 16px 22px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .rhdr-l h3 { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 500; color: var(--ink); margin-bottom: 2px; }
+    .rdesc { font-size: 12.5px; color: var(--ink-soft); }
+
+    /* senior toggle */
+    .stog { display: flex; align-items: center; gap: 8px; padding: 7px 14px; background: var(--white); border: 1px solid var(--aqua); border-radius: 20px; cursor: pointer; user-select: none; font-size: 12.5px; font-weight: 500; color: var(--aqua-dark); white-space: nowrap; }
+    .stog:hover { border-color: var(--aqua-dark); }
+    .stog.on { background: var(--aqua-mist); border-color: var(--aqua-dark); }
+    .ttrack { width: 32px; height: 18px; background: var(--line); border-radius: 9px; position: relative; flex-shrink: 0; transition: background .2s; }
+    .ttrack::after { content: ''; position: absolute; width: 12px; height: 12px; background: var(--white); border-radius: 50%; top: 3px; left: 3px; transition: transform .2s; }
+    .stog.on .ttrack { background: var(--aqua-dark); }
+    .stog.on .ttrack::after { transform: translateX(14px); }
+
+    /* rate rows */
+    .rtbl { width: 100%; }
+    .rrow { display: flex; align-items: center; gap: 14px; padding: 14px 22px; border-bottom: 1px solid var(--line); cursor: pointer; transition: background .12s; position: relative; }
+    .rrow:last-child { border-bottom: none; }
+    .rrow:hover { background: var(--aqua-mist); }
+    .rrow.sel { background: var(--aqua-mist); }
+    .rrow.sel::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--aqua-dark); border-radius: 0 2px 2px 0; }
+    .rrow input[type="radio"] { display: none; }
+    .rdot { width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--aqua); flex-shrink: 0; display: flex; align-items: center; justify-content: center; transition: all .12s; }
+    .rrow.sel .rdot { background: var(--aqua-dark); border-color: var(--aqua-dark); }
+    .rdot::after { content: ''; width: 6px; height: 6px; border-radius: 50%; background: transparent; }
+    .rrow.sel .rdot::after { background: var(--white); }
+    .rinfo { flex: 1; min-width: 0; }
+    .tbadge { display: inline-block; font-size: 9.5px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; padding: 2px 8px; border-radius: 3px; margin-bottom: 3px; }
+    .tau { background: var(--aqua-dark); color: var(--white); }
+    .tfa { background: var(--aqua-pale); color: var(--aqua-dark); }
+    .tbe { background: var(--sand); color: var(--ink-soft); }
+    .cname { font-size: 14px; font-weight: 500; color: var(--ink); line-height: 1.3; }
+    .cdet { font-size: 11.5px; color: var(--ink-soft); margin-top: 1px; }
+    .rprice { text-align: right; flex-shrink: 0; }
+    .ramt { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 500; color: var(--ink); }
+    .rlbl { font-size: 10.5px; color: var(--ink-soft); margin-top: 1px; }
+
+    /* status match */
+    .smatch { background: var(--sand-light); border: 1px solid var(--gold-whisper); border-left: 4px solid var(--aqua-dark); border-radius: 6px; padding: 24px 28px; margin-top: 28px; }
+    .smatch h4 { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 500; color: var(--ink); margin-bottom: 10px; }
+    .smatch p { font-size: 14px; line-height: 1.75; color: var(--ink-soft); }
+
+    /* running total */
+    .rtot { position: sticky; bottom: 0; background: var(--aqua-pale); border-top: 1px solid var(--aqua); padding: 10px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px; z-index: 200; }
+    .rtl { display: flex; flex-direction: column; gap: 1px; }
+    .rtlbl { font-size: 11px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--aqua-dark); }
+    .rtst { font-size: 11.5px; color: var(--ink-soft); }
+    .rtr { text-align: right; }
+    .rtamt { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 500; color: var(--ink); line-height: 1.1; }
+    .rtpp { font-size: 11.5px; color: var(--ink-soft); margin-top: 1px; }
+
+    /* form */
+    .fwrap { background: var(--white); border: 1px solid var(--line); border-radius: 8px; padding: 32px; margin-top: 4px; }
+    .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .fg { display: flex; flex-direction: column; gap: 5px; }
+    .fg label { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+    .fg input, .fg textarea { font-family: 'DM Sans', sans-serif; font-size: 16px; padding: 10px 13px; border: 1px solid var(--line); border-radius: 4px; background: var(--white); color: var(--ink); outline: none; transition: border-color .15s; min-height: 48px; }
+    .fg input:focus, .fg textarea:focus { border-color: var(--aqua-dark); }
+    .fg textarea { min-height: 96px; resize: vertical; }
+    .inslbl { font-size: 12px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--ink); margin-bottom: 10px; }
+    .insopt { display: flex; align-items: flex-start; gap: 10px; padding: 12px 15px; border: 1px solid var(--line); border-radius: 4px; margin-bottom: 8px; cursor: pointer; font-size: 14px; color: var(--ink); transition: border-color .15s; min-height: 48px; }
+    .insopt:hover { border-color: var(--aqua); }
+    .insopt input { margin-top: 2px; accent-color: var(--aqua-dark); flex-shrink: 0; }
+    .sbtn { width: 100%; min-height: 48px; margin-top: 20px; background: var(--aqua-dark); color: var(--white); border: none; border-radius: 4px; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600; letter-spacing: .04em; cursor: pointer; transition: background .15s; }
+    .sbtn:hover { background: #3d7072; }
+    .tymsg { display: none; text-align: center; padding: 36px 24px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; color: var(--aqua-dark); line-height: 1.6; }
+    .tymsg.show { display: block; }
+
+    /* footer */
+    footer { background: var(--sand-light); border-top: 1px solid var(--line); padding: 52px 24px; text-align: center; }
+    .fbrand { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .28em; text-transform: uppercase; color: var(--aqua-dark); margin-bottom: 10px; }
+    .fcon { font-size: 14px; color: var(--ink-soft); margin-bottom: 28px; }
+    .fcon a { color: var(--aqua-dark); text-decoration: none; }
+    .fdisc { max-width: 660px; margin: 0 auto; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 14px; color: var(--ink-soft); line-height: 1.75; }
+
+    /* responsive */
+    @media (max-width: 768px) {
+      .ov-item { border-right: none; padding: 8px 16px; width: 50%; }
+      .vs-cols { grid-template-columns: 1fr; }
+      .vs-col { border-right: none; padding: 28px 0; border-bottom: 1px solid var(--gold-whisper); }
+      .vs-col:last-child { border-bottom: none; }
+      .pgrid { grid-template-columns: 1fr; }
+      .pgrid img, .pgrid img:nth-child(5) { height: 220px; grid-column: span 1; }
+      .ilay { grid-template-columns: 1fr; }
+      .imap { order: -1; }
+      .egrid { grid-template-columns: 1fr; }
+      .rhdr { flex-direction: column; align-items: flex-start; }
+      .rrow { padding: 12px 16px; }
+      .frow { grid-template-columns: 1fr; }
+      .rtot { padding: 10px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <p class="hero-brand">Point Me to Paradise Travel</p>
+  <h1 class="hero-title">MSC Seascape<br>Western Caribbean</h1>
+  <div class="hero-rule"></div>
+  <p class="hero-sub">Seven nights from Galveston &mdash; Costa Maya &middot; Roat&aacute;n &middot; Cozumel</p>
+  <p class="hero-sig">Prepared for the Parker Family &nbsp;&middot;&nbsp; by Christina Garcia</p>
+</header>
+
+<!-- OVERVIEW -->
+<div class="overview">
+  <div class="ov-inner">
+    <div class="ov-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--aqua-dark)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <div><div class="ov-lbl">Travelers</div><div class="ov-val">7 guests &middot; 3 staterooms</div></div>
+    </div>
+    <div class="ov-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--aqua-dark)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <div><div class="ov-lbl">Voyage dates</div><div class="ov-val">July 5&ndash;12, 2026</div></div>
+    </div>
+    <div class="ov-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--aqua-dark)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      <div><div class="ov-lbl">Ports of call</div><div class="ov-val">Costa Maya &middot; Roat&aacute;n &middot; Cozumel</div></div>
+    </div>
+    <div class="ov-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--aqua-dark)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <div><div class="ov-lbl">Homeport</div><div class="ov-val">Galveston, Texas</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- VALUE STRIP -->
+<div class="vs band">
+  <div class="vs-head">
+    <h2>Beyond the booking</h2>
+    <p>What&rsquo;s included with every Point Me to Paradise trip</p>
+  </div>
+  <div class="vs-cols">
+    <div class="vs-col">
+      <svg class="vs-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="20" height="22" rx="2"/><line x1="8" y1="9" x2="20" y2="9"/><line x1="8" y1="13" x2="20" y2="13"/><line x1="8" y1="17" x2="15" y2="17"/></svg>
+      <h3>The Trip Guide</h3>
+      <p>A document built for your week &mdash; restaurants we&rsquo;d return to, neighborhoods worth the walk, what to skip, the places open on a Sunday. Not pulled from a database. Researched against where you&rsquo;re staying and what you&rsquo;ve told us matters.</p>
+    </div>
+    <div class="vs-col">
+      <svg class="vs-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="12" height="24" rx="2"/><line x1="12" y1="19" x2="16" y2="19"/></svg>
+      <h3>The Trip App</h3>
+      <p>Itinerary, confirmation numbers, transfer windows, and ground contacts in one place &mdash; accessible offline, updated in real time. If a flight shifts or weather moves, the app moves with it.</p>
+    </div>
+    <div class="vs-col">
+      <svg class="vs-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3l2.6 7.9H24l-6.7 4.9 2.6 7.9L14 19l-5.9 4.7 2.6-7.9L4 10.9h7.4z"/></svg>
+      <h3>Best-Rate Assurance</h3>
+      <p>Every hotel night, cruise rate, and tour in your quote is priced at publicly available rates. If you find the same component for less elsewhere, we&rsquo;ll match it &mdash; you don&rsquo;t have to wonder whether you&rsquo;re overpaying for a piece of your trip.</p>
+    </div>
+  </div>
+</div>
+
+<!-- THE SHIP -->
+<div class="band bw">
+  <div class="inner">
+    <div class="sh">
+      <h2>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--aqua-dark)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity=".65"><path d="M2 20l3-12 7-6 7 6 3 12H2z"/><line x1="12" y1="2" x2="12" y2="20"/></svg>
+        MSC Seascape
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--aqua-dark)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity=".65" style="transform:scaleX(-1)"><path d="M2 20l3-12 7-6 7 6 3 12H2z"/><line x1="12" y1="2" x2="12" y2="20"/></svg>
+      </h2>
+      <div class="gr"></div>
+      <p>Seaside EVO class &mdash; one of MSC&rsquo;s newest flagships, purpose-built for Caribbean sailing.</p>
+    </div>
+    <p style="font-size:15px;line-height:1.8;color:var(--ink-soft);max-width:720px;margin:0 auto 28px;text-align:center;">
+      MSC Seascape was christened in New York City on December 7, 2022, then repositioned to Galveston for Caribbean sailings &mdash; meaning no flights, no airport mornings, just a drive to the port. At 170,000 gross tons and 1,112 feet, she is the longest ship in the MSC fleet. She holds 4,540 passengers at double occupancy and carries a crew of 1,648. The ship is designed around New York City as a theme: there is a Statue of Liberty replica at the center of the casino, Broadway-style shows in the theater, and the Robotron thrill ride on the upper decks. Specialty dining includes a teppanyaki restaurant (Kaito), a steakhouse (Butcher&rsquo;s Cut), a seafood restaurant (Ocean Cay), a sushi bar, and a Latin street food concept. Big enough to keep the whole group busy; well-organized enough to find quiet corners when you want them.
+    </p>
+    <div class="pgrid">
+      <img src="https://travelingcanucks.com/wp-content/uploads/2025/11/MSC-Seacsape-cruise-ship-135.jpg" alt="MSC Seascape at sea">
+      <img src="https://i0.wp.com/gigglesgobblesandgulps.com/wp-content/uploads/2023/02/668EA7AE-3AD8-4CEF-94B2-B032850EE489-scaled.jpeg?ssl=1" alt="MSC Seascape pool deck">
+      <img src="https://www.msccruises.fi/-/media/global-contents/ships/fleet/seascape/public-area/incanto-del-mare_item.jpg?bc=transparent&as=1&mh=600&mw=750&hash=0CA4F9F477B76216A5ECE3D15DB66DE5" alt="MSC Seascape dining venue">
+      <img src="https://attractionsmagazine.com/wp-content/uploads/2022/12/Robotron-on-MSC-Seascape-Photo-coutesy-of-MSC.jpeg.jpg" alt="Robotron thrill ride">
+      <img src="https://i0.wp.com/dallasvoice.com/wp-content/uploads/2025/11/Header-1-scaled.jpg?fit=780%2C585&ssl=1" alt="MSC Seascape onboard">
+    </div>
+  </div>
+</div>
+
+<!-- ITINERARY -->
+<div class="band bm">
+  <div class="inner">
+    <div class="sh">
+      <h2>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--aqua-dark)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity=".65"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        Your Itinerary
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--aqua-dark)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity=".65" style="transform:scaleX(-1)"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      </h2>
+      <div class="gr"></div>
+      <p>Seven nights. Drive to the port. Three countries. Back by Sunday morning.</p>
+    </div>
+    <div class="ilay">
+      <table class="itbl">
+        <thead><tr><th>Day</th><th>Date</th><th>Port</th><th>Arrive</th><th>Depart</th></tr></thead>
+        <tbody>
+          <tr><td>Sunday</td><td>Jul 5</td><td class="pb"><span class="pdot"></span>Galveston, Texas</td><td>&mdash;</td><td>5:00 PM</td></tr>
+          <tr><td>Monday</td><td>Jul 6</td><td class="as">At Sea</td><td>&mdash;</td><td>&mdash;</td></tr>
+          <tr><td>Tuesday</td><td>Jul 7</td><td class="as">At Sea</td><td>&mdash;</td><td>&mdash;</td></tr>
+          <tr><td>Wednesday</td><td>Jul 8</td><td class="pb"><span class="pdot"></span>Costa Maya, Mexico</td><td>8:00 AM</td><td>6:00 PM</td></tr>
+          <tr><td>Thursday</td><td>Jul 9</td><td class="pb"><span class="pdot"></span>Isla de Roat&aacute;n, Honduras</td><td>8:00 AM</td><td>4:00 PM</td></tr>
+          <tr><td>Friday</td><td>Jul 10</td><td class="pb"><span class="pdot"></span>Cozumel, Mexico</td><td>8:00 AM</td><td>4:00 PM</td></tr>
+          <tr><td>Saturday</td><td>Jul 11</td><td class="as">At Sea</td><td>&mdash;</td><td>&mdash;</td></tr>
+          <tr><td>Sunday</td><td>Jul 12</td><td class="pb"><span class="pdot"></span>Galveston, Texas</td><td>7:00 AM</td><td>&mdash;</td></tr>
+        </tbody>
+      </table>
+      <div class="imap"><img src="https://www.msccruises.com//images/msc/iti/itin/UUPM.jpg" alt="Western Caribbean itinerary map"></div>
+    </div>
+  </div>
+</div>
+
+<!-- EXPERIENCE TIERS -->
+<div class="band bw">
+  <div class="inner">
+    <div class="sh">
+      <h2>Understanding Your Experience Tier</h2>
+      <div class="gr"></div>
+      <p>Three levels, meaningfully different &mdash; here is what each one actually includes.</p>
+    </div>
+    <div class="egrid">
+
+      <div class="ecard au">
+        <div class="ekick">Premium</div>
+        <h4>Aurea Experience</h4>
+        <ul class="elist">
+          <li>Best balcony cabin locations on the ship &mdash; highest-demand areas reserved for Aurea</li>
+          <li>Priority boarding and luggage drop-off at embarkation</li>
+          <li>Anytime dining (MyChoice) &mdash; no fixed seating, dine when you want</li>
+          <li>Access to the Thermal Spa area (adult-only, once per day)</li>
+          <li>Access to the exclusive Aurea solarium (adults only)</li>
+          <li>Welcome Prosecco and chocolates on arrival</li>
+          <li>Bathrobes and slippers in cabin</li>
+          <li>Complimentary continental breakfast room service delivery</li>
+          <li>24-hour room service with free delivery (food items charged individually)</li>
+          <li>Spa discounts, 20% off pre-paid specialty dining packages</li>
+          <li>One free cruise change (30 days before sailing)</li>
+        </ul>
+        <div class="drinks-note">Drinks are not included with Aurea &mdash; that benefit was discontinued in 2022. A drinks package can be added at a discount when booking.</div>
+      </div>
+
+      <div class="ecard fa">
+        <div class="ekick">Mid-tier &mdash; most popular for families</div>
+        <h4>Fantastica Experience</h4>
+        <ul class="elist">
+          <li>Choose your specific cabin and location within the category (more options than Bella, but not the best positions &mdash; those go to Aurea)</li>
+          <li>Dining time priority &mdash; Fantastica guests get first pick of early or late fixed seating over Bella guests</li>
+          <li>Complimentary continental breakfast room service delivery</li>
+          <li>24-hour room service with free delivery (food items charged individually)</li>
+          <li>20% off pre-paid specialty dining packages</li>
+          <li>One free cruise change (30 days before sailing)</li>
+        </ul>
+      </div>
+
+      <div class="ecard be">
+        <div class="ekick">Entry-level &mdash; read carefully before selecting</div>
+        <h4>Bella Experience</h4>
+        <ul class="elist">
+          <li>MSC assigns your specific stateroom up to 4 days before departure &mdash; no control over deck or location</li>
+          <li>Possible placements: forward, aft, or near high-traffic venues (nightclub above, busy corridors)</li>
+          <li>Dining time: you can submit a preference for early or late seating, but Fantastica and Aurea guests are served first</li>
+          <li>Continental breakfast room service available; delivery fee applies</li>
+          <li>Cruise changes for a fee</li>
+          <li>Lowest rate in each balcony category</li>
+        </ul>
+        <div class="bella-flag">
+          <strong>Two things the Parker family should know about Bella balconies</strong>
+          First, Bella balcony cabins sometimes have a metal railing instead of glass &mdash; younger children (roughly 6 and under) cannot see over it when seated, and it can make the balcony feel less useful. Second, for groups of 3&ndash;4 in one cabin, MSC may split you into two cabins on the same deck and side if availability requires it. Neither happens every time, but both are worth knowing before you commit to Bella.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- CABIN SELECTION -->
+<div class="band bm">
+  <div class="inner">
+    <div class="sh">
+      <h2>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--aqua-dark)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity=".65"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Choose Your Staterooms
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--aqua-dark)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity=".65" style="transform:scaleX(-1)"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </h2>
+      <div class="gr"></div>
+      <p>Select one cabin tier per room &mdash; the running total updates at the bottom of the page.</p>
+    </div>
+
+    <div class="rwrap">
+
+      <!-- ROOM 1: 2 adults (standard or senior) -->
+      <div class="rcard">
+        <div class="rhdr">
+          <div class="rhdr-l">
+            <h3>Room 1 &mdash; Two Adults</h3>
+            <div class="rdesc">Select a cabin tier &nbsp;&middot;&nbsp; Toggle below if both adults are 65 or older</div>
+          </div>
+          <div class="stog" id="stog" onclick="toggleSenior(event)">
+            <div class="ttrack"></div>
+            <span>Both adults are 65 or older</span>
+          </div>
+        </div>
+
+        <!-- Standard rates -->
+        <div id="r1std" class="rtbl">
+          <label class="rrow" onclick="pick(this,'r1',2317.58,'BGA Aurea Premium Balcony Deck 9 — standard rate')"><input type="radio" name="r1s"><div class="rdot"></div><div class="rinfo"><span class="tbadge tau">Aurea</span><div class="cname">Premium Balcony Aurea &mdash; Deck 9 (BGA)</div><div class="cdet">Approx. 183 ft&sup2; &nbsp;&middot;&nbsp; Balcony approx. 172 ft&sup2;</div></div><div class="rprice"><div class="ramt">$2,318</div><div class="rlbl">2 adults &middot; total</div></div></label>
+          <label class="rrow" onclick="pick(this,'r1',1957.58,'BA Aurea Deluxe Balcony Deck 9-15 — standard rate')"><input type="radio" name="r1s"><div class="rdot"></div><div class="rinfo"><span class="tbadge tau">Aurea</span><div class="cname">Deluxe Balcony Aurea &mdash; Deck 9&ndash;15 (BA)</div><div class="cdet">Approx. 183 ft&sup2; &nbsp;&middot;&nbsp; Balcony 54&ndash;97 ft&sup2;</div></div><div class="rprice"><div class="ramt">$1,958</div><div class="rlbl">2 adults &middot; total</div></div></label>
+          <label class="rrow" onclick="pick(this,'r1',1577.58,'BR4 Fantastica Deluxe Balcony Deck 15 — standard rate')"><input type="radio" name="r1s"><div class="rdot"></div><div class="rinfo"><span class="tbadge tfa">Fantastica</span><div class="cname">Deluxe Balcony &mdash; Deck 15 (BR4)</div><div class="cdet">Approx. 183 ft&sup2; &nbsp;&middot;&nbsp; Balcony 54&ndash;65 ft&sup2;</div></div><div class="rprice"><div class="ramt">$1,578</div><div class="rlbl">2 adults &middot; total</div></div></label>
+          <label class="rrow" onclick="pick(this,'r1',1557.58,'BR3 Fantastica Deluxe Balcony Deck 13-14 — standard rate')"><input type="radio" name="r1s"><div class="rdot"></div><div class="rinfo"><span class="tbadge tfa">Fantastica</span><div class="cname">Deluxe Balcony &mdash; Deck 13&ndash;14 (BR3)</div><div class="cdet">Approx. 172&ndash;183 ft&sup2; &nbsp;&middot;&nbsp; Balcony 54&ndash;65 ft&sup2;</div></div><div class="rprice"><div class="ramt">$1,558</div><div class="rlbl">2 adults &middot; total</div></div></label>
+          <label class="rrow" onclick="pick(this,'r1',1537.58,'BR2 Fantastica Deluxe Balcony Deck 11-12 — standard rate')"><input type="radio" name="r1s"><div class="rdot"></div><div class="rinfo"><span class="tbadge tfa">Fantastica</span><div class="cname">Deluxe Balcony &mdash; Deck 11&ndash;12 (BR2)</div><div class="cdet">Approx. 172&ndash;183 ft&sup2; &nbsp;&middot;&nbsp; Balcony 54&ndash;65 ft&sup2;</div></div><div class="rprice"><div class="ramt">$1,538</div><div class="rlbl">2 adults &middot; total</div></div></label>
+          <label class="rrow" onclick="pick(this,'r1',1517.58,'BR1 Fantastica Deluxe Balcony Deck 9-10 — standard rate')"><input type="radio" name="r1s"><div class="rdot"></div><div class="rinfo"><span class="tbadge tfa">Fantastica</span><div class="cname">Deluxe Balcony &mdash; Deck 9&ndash;10 (BR1)</div><div class="cdet">Approx. 172&ndash;183 ft&sup2; &nbsp;&middot;&nbsp; Balcony 54&ndash;97 ft&sup2;</div></div><div class="rprice"><div class="ramt">$1,518</div><div class="rlbl">2 adults &middot; total</div></div></label>
+          <label class="rrow" onclick="pick(this,'r1',1377.58,'BB Bella Guaranteed Balcony — standard rate')"><input type="radio" name="r1s"><div class="rdot"></div><div class="rinfo"><span class="tbadge tbe">Bella</span><div class="cname">Balcony Bella &mdash; Guaranteed (BB)</div><div class="cdet">Balcony guaranteed &nbsp;&middot;&nbsp; MSC assigns deck and stateroom location &nbsp;&middot;&nbsp; See notes above</div></div><div class="rprice"><div class="ramt">$1,378</div><div class="rlbl">2 adults &middot; total</div></div></label>
+        </div>
+
+        <!-- Senior (65+) rates -->
+        <div id="r1sen" class="rtbl" style="display:none;">
+          <label class="rrow" onclick="pick(this,'r1',2088.78,'BGA Aurea Premium Balcony Deck 9 — 65+ rate')"><input type="radio" name="r1n"><div class="rdot"></div><div class="rinfo"><span class="tbadge tau">Aurea</span><div class="cname">Premium Balcony Aurea &mdash; Deck 9 (BGA)</div><div class="cdet">Approx. 183 ft&sup2; &nbsp;&middot;&nbsp; Balcony approx. 172 ft&sup2; &nbsp;&middot;&nbsp; 65+ rate</div></div><div class="rprice"><div class="ramt">$2,089</div><div class="rlbl">2 seniors &middot; total</div></div></label>
+          <label class="rrow" onclick="pick(this,'r1',1764.78,'BA Aurea Deluxe Balcony Deck 9-15 — 65+ rate')"><input type="radio" name="r1n"><div class="rdot"></div><div class="rinfo"><span class="tbadge tau">Aurea</span><div class="cname">Deluxe Balcony Aurea &mdash; Deck 9&ndash;15 (BA)</div><div class="cdet">Approx. 183 ft&sup2; &nbsp;&middot;&nbsp; Balcony 54&ndash;97 ft&sup2; &nbsp;&middot;&nbsp; 65+ rate</div></div><div class="rprice"><div class="ramt">$1,765</div><div class="rlbl">2 seniors &middot; total</div></div></label>
+          <label class="rrow" onclick="pick(this,'r1',1422.78,'BR4 Fantastica Deluxe Balcony Deck 15 — 65+ rate')"><input type="radio" name="r1n"><div class="rdot"></div><div class="rinfo"><span class="tbadge tfa">Fantastica</span><div class="cname">Deluxe Balcony &mdash; Deck 15 (BR4)</div><div class="cdet">Approx. 183 ft&sup2; &nbsp;&middot;&nbsp; Balcony 54&ndash;65 ft&sup2; &nbsp;&middot;&nbsp; 65+ rate</div></div><div class="rprice"><div class="ramt">$1,423</div><div class="rlbl">2 seniors &middot; total</div></div></label>
+          <label class="rrow" onclick="pick(this,'r1',1404.78,'BR3 Fantastica Deluxe Balcony Deck 13-14 — 65+ rate')"><input type="radio" name="r1n"><div class="rdot"></div><div class="rinfo"><span class="tbadge tfa">Fantastica</span><div class="cname">Deluxe Balcony &mdash; Deck 13&ndash;14 (BR3)</div><div class="cdet">Approx. 172&ndash;183 ft&sup2; &nbsp;&middot;&nbsp; Balcony 54&ndash;65 ft&sup2; &nbsp;&middot;&nbsp; 65+ rate</div></div><div class="rprice"><div class="ramt">$1,405</div><div class="rlbl">2 seniors &middot; total</div></div></label>
+          <label class="rrow" onclick="pick(this,'r1',1386.78,'BR2 Fantastica Deluxe Balcony Deck 11-12 — 65+ rate')"><input type="radio" name="r1n"><div class="rdot"></div><div class="rinfo"><span class="tbadge tfa">Fantastica</span><div class="cname">Deluxe Balcony &mdash; Deck 11&ndash;12 (BR2)</div><div class="cdet">Approx. 172&ndash;183 ft&sup2; &nbsp;&middot;&nbsp; Balcony 54&ndash;65 ft&sup2; &nbsp;&middot;&nbsp; 65+ rate</div></div><div class="rprice"><div class="ramt">$1,387</div><div class="rlbl">2 seniors &middot; total</div></div></label>
+          <label class="rrow" onclick="pick(this,'r1',1368.78,'BR1 Fantastica Deluxe Balcony Deck 9-10 — 65+ rate')"><input type="radio" name="r1n"><div class="rdot"></div><div class="rinfo"><span class="tbadge tfa">Fantastica</span><div class="cname">Deluxe Balcony &mdash; Deck 9&ndash;10 (BR1)</div><div class="cdet">Approx. 172&ndash;183 ft&sup2; &nbsp;&middot;&nbsp; Balcony 54&ndash;97 ft&sup2; &nbsp;&middot;&nbsp; 65+ rate</div></div><div class="rprice"><div class="ramt">$1,369</div><div class="rlbl">2 seniors &middot; total</div></div></label>
+          <label class="rrow" onclick="pick(this,'r1',1242.78,'BB Bella Guaranteed Balcony — 65+ rate')"><input type="radio" name="r1n"><div class="rdot"></div><div class="rinfo"><span class="tbadge tbe">Bella</span><div class="cname">Balcony Bella &mdash; Guaranteed (BB)</div><div class="cdet">Balcony guaranteed &nbsp;&middot;&nbsp; MSC assigns deck and location &nbsp;&middot;&nbsp; 65+ rate &nbsp;&middot;&nbsp; See notes above</div></div><div class="rprice"><div class="ramt">$1,243</div><div class="rlbl">2 seniors &middot; total</div></div></label>
+        </div>
+      </div>
+
+      <!-- ROOM 2: 2 adults + 7yo -->
+      <div class="rcard">
+        <div class="rhdr">
+          <div class="rhdr-l">
+            <h3>Room 2 &mdash; Two Adults + Child (age 7)</h3>
+            <div class="rdesc">3 guests &nbsp;&middot;&nbsp; Select a cabin tier</div>
+          </div>
+        </div>
+        <div class="rtbl">
+          <label class="rrow" onclick="pick(this,'r2',2992.37,'BGA Aurea Premium Balcony Deck 9')"><input type="radio" name="r2"><div class="rdot"></div><div class="rinfo"><span class="tbadge tau">Aurea</span><div class="cname">Premium Balcony Aurea &mdash; Deck 9 (BGA)</div><div class="cdet">Approx. 183 ft&sup2; &nbsp;&middot;&nbsp; Balcony approx. 172 ft&sup2;</div></div><div class="rprice"><div class="ramt">$2,992</div><div class="rlbl">3 guests &middot; total</div></div></label>
+          <label class="rrow" onclick="pick(this,'r2',2562.37,'BA Aurea Deluxe Balcony Deck 9-15')"><input type="radio" name="r2"><div class="rdot"></div><div class="rinfo"><span class="tbadge tau">Aurea</span><div class="cname">Deluxe Balcony Aurea &mdash; Deck 9&ndash;15 (BA)</div><div class="cdet">Approx. 183 ft&sup2; &nbsp;&middot;&nbsp; Balcony 54&ndash;97 ft&sup2;</div></div><div class="rprice"><div class="ramt">$2,562</div><div class="rlbl">3 guests &middot; total</div></div></label>
+          <label class="rrow" onclick="pick(this,'r2',2112.37,'BR4 Fantastica Deluxe Balcony Deck 15')"><input type="radio" name="r2"><div class="rdot"></div><div class="rinfo"><span class="tbadge tfa">Fantastica</span><div class="cname">Deluxe Balcony &mdash; Deck 15 (BR4)</div><div class="cdet">Approx. 183 ft&sup2; &nbsp;&middot;&nbsp; Balcony 54&ndash;65 ft&sup2;</div></div><div class="rprice"><div class="ramt">$2,112</div><div class="rlbl">3 guests &middot; total</div></div></label>
+          <label class="rrow" onclick="pick(this,'r2',2092.37,'BR3 Fantastica Deluxe Balcony Deck 13-14')"><input type="radio" name="r2"><div class="rdot"></div><div class="rinfo"><span class="tbadge tfa">Fantastica</span><div class="cname">Deluxe Balcony &mdash; Deck 13&ndash;14 (BR3)</div><div class="cdet">Approx. 172&ndash;183 ft&sup2; &nbsp;&middot;&nbsp; Balcony 54&ndash;65 ft&sup2;</div></div><div class="rprice"><div class="ramt">$2,092</div><div class="rlbl">3 guests &middot; total</div></div></label>
+          <label class="rrow" onclick="pick(this,'r2',2062.37,'BR2 Fantastica Deluxe Balcony Deck 11-12')"><input type="radio" name="r2"><div class="rdot"></div><div class="rinfo"><span class="tbadge tfa">Fantastica</span><div class="cname">Deluxe Balcony &mdash; Deck 11&ndash;12 (BR2)</div><div class="cdet">Approx. 172&ndash;183 ft&sup2; &nbsp;&middot;&nbsp; Balcony 54&ndash;65 ft&sup2;</div></div><div class="rprice"><div class="ramt">$2,062</div><div class="rlbl">3 guests &middot; total</div></div></label>
+          <label class="rrow" onclick="pick(this,'r2',2042.37,'BR1 Fantastica Deluxe Balcony Deck 9-10')"><input type="radio" name="r2"><div class="rdot"></div><div class="rinfo"><span class="tbadge tfa">Fantastica</span><div class="cname">Deluxe Balcony &mdash; Deck 9&ndash;10 (BR1)</div><div class="cdet">Approx. 172&ndash;183 ft&sup2; &nbsp;&middot;&nbsp; Balcony 54&ndash;97 ft&sup2;</div></div><div class="rprice"><div class="ramt">$2,042</div><div class="rlbl">3 guests &middot; total</div></div></label>
+        </div>
+      </div>
+
+      <!-- ROOM 3: 2 adults + 13yo + 8yo -->
+      <div class="rcard">
+        <div class="rhdr">
+          <div class="rhdr-l">
+            <h3>Room 3 &mdash; Two Adults + Two Children (ages 13 &amp; 8)</h3>
+            <div class="rdesc">4 guests &nbsp;&middot;&nbsp; Select a cabin tier</div>
+          </div>
+        </div>
+        <div class="rtbl">
+          <label class="rrow" onclick="pick(this,'r3',3667.16,'BGA Aurea Premium Balcony Deck 9')"><input type="radio" name="r3"><div class="rdot"></div><div class="rinfo"><span class="tbadge tau">Aurea</span><div class="cname">Premium Balcony Aurea &mdash; Deck 9 (BGA)</div><div class="cdet">Approx. 183 ft&sup2; &nbsp;&middot;&nbsp; Balcony approx. 172 ft&sup2;</div></div><div class="rprice"><div class="ramt">$3,667</div><div class="rlbl">4 guests &middot; total</div></div></label>
+          <label class="rrow" onclick="pick(this,'r3',3167.16,'BA Aurea Deluxe Balcony Deck 9-15')"><input type="radio" name="r3"><div class="rdot"></div><div class="rinfo"><span class="tbadge tau">Aurea</span><div class="cname">Deluxe Balcony Aurea &mdash; Deck 9&ndash;15 (BA)</div><div class="cdet">Approx. 183 ft&sup2; &nbsp;&middot;&nbsp; Balcony 54&ndash;97 ft&sup2;</div></div><div class="rprice"><div class="ramt">$3,167</div><div class="rlbl">4 guests &middot; total</div></div></label>
+          <label class="rrow" onclick="pick(this,'r3',2647.16,'BR4 Fantastica Deluxe Balcony Deck 15')"><input type="radio" name="r3"><div class="rdot"></div><div class="rinfo"><span class="tbadge tfa">Fantastica</span><div class="cname">Deluxe Balcony &mdash; Deck 15 (BR4)</div><div class="cdet">Approx. 183 ft&sup2; &nbsp;&middot;&nbsp; Balcony 54&ndash;65 ft&sup2;</div></div><div class="rprice"><div class="ramt">$2,647</div><div class="rlbl">4 guests &middot; total</div></div></label>
+          <label class="rrow" onclick="pick(this,'r3',2627.16,'BR3 Fantastica Deluxe Balcony Deck 13-14')"><input type="radio" name="r3"><div class="rdot"></div><div class="rinfo"><span class="tbadge tfa">Fantastica</span><div class="cname">Deluxe Balcony &mdash; Deck 13&ndash;14 (BR3)</div><div class="cdet">Approx. 172&ndash;183 ft&sup2; &nbsp;&middot;&nbsp; Balcony 54&ndash;65 ft&sup2;</div></div><div class="rprice"><div class="ramt">$2,627</div><div class="rlbl">4 guests &middot; total</div></div></label>
+          <label class="rrow" onclick="pick(this,'r3',2587.16,'BR2 Fantastica Deluxe Balcony Deck 11-12')"><input type="radio" name="r3"><div class="rdot"></div><div class="rinfo"><span class="tbadge tfa">Fantastica</span><div class="cname">Deluxe Balcony &mdash; Deck 11&ndash;12 (BR2)</div><div class="cdet">Approx. 172&ndash;183 ft&sup2; &nbsp;&middot;&nbsp; Balcony 54&ndash;65 ft&sup2;</div></div><div class="rprice"><div class="ramt">$2,587</div><div class="rlbl">4 guests &middot; total</div></div></label>
+          <label class="rrow" onclick="pick(this,'r3',2567.16,'BR1 Fantastica Deluxe Balcony Deck 9-10')"><input type="radio" name="r3"><div class="rdot"></div><div class="rinfo"><span class="tbadge tfa">Fantastica</span><div class="cname">Deluxe Balcony &mdash; Deck 9&ndash;10 (BR1)</div><div class="cdet">Approx. 172&ndash;183 ft&sup2; &nbsp;&middot;&nbsp; Balcony 54&ndash;97 ft&sup2;</div></div><div class="rprice"><div class="ramt">$2,567</div><div class="rlbl">4 guests &middot; total</div></div></label>
+        </div>
+      </div>
+
+    </div><!-- /rwrap -->
+
+    <!-- STATUS MATCH -->
+    <div class="smatch">
+      <h4>MSC Status Match &mdash; You May Already Qualify</h4>
+      <p>If anyone in your group holds loyalty status with a hotel program (Marriott Bonvoy, Hilton Honors, World of Hyatt, IHG, and others) or with another cruise line, MSC may match that status to their Voyagers Club &mdash; giving you onboard benefits before you&rsquo;ve sailed a single mile with them. I&rsquo;m happy to send you the status match form or walk you through it. Just mention it in your notes below or reach out directly.</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- RUNNING TOTAL -->
+<div class="rtot" id="rtot">
+  <div class="rtl">
+    <div class="rtlbl">Est. Total &mdash; All 3 Staterooms</div>
+    <div class="rtst" id="rtst">Select a cabin in each room to see your total</div>
+  </div>
+  <div class="rtr">
+    <div class="rtamt" id="rtamt">&mdash;</div>
+    <div class="rtpp" id="rtpp"></div>
+  </div>
+</div>
+
+<!-- FORM -->
+<div class="band bw">
+  <div class="inner">
+    <div class="sh">
+      <h2>Send Your Selections</h2>
+      <div class="gr"></div>
+      <p>Christina will confirm availability and final pricing before anything is booked.</p>
+    </div>
+    <div class="fwrap">
+      <div id="tymsg" class="tymsg">Your selections are on their way to Christina. She&rsquo;ll be in touch shortly to confirm availability and next steps.</div>
+      <form id="tripForm">
+        <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+        <input type="hidden" name="subject" value="Parker Family — MSC Seascape July 2026 Selections">
+        <input type="hidden" name="from_name" value="Parker Family — PMTP Cruise Quote">
+        <input type="hidden" name="redirect" value="false">
+        <input type="hidden" name="Room_1_Stateroom" id="hr1">
+        <input type="hidden" name="Room_2_Stateroom" id="hr2">
+        <input type="hidden" name="Room_3_Stateroom" id="hr3">
+        <input type="hidden" name="Senior_Rate_Room_1" id="hsen">
+        <input type="hidden" name="Estimated_Total" id="htot">
+        <div class="frow">
+          <div class="fg"><label for="fn">Name</label><input type="text" id="fn" name="Name" placeholder="Your name" required></div>
+          <div class="fg"><label for="fe">Email</label><input type="email" id="fe" name="Email" placeholder="Your email" required></div>
+        </div>
+        <div class="fg" style="margin-bottom:16px;"><label for="fp">Phone</label><input type="tel" id="fp" name="Phone" placeholder="Best number to reach you"></div>
+        <div class="fg" style="margin-bottom:20px;"><label for="fnotes">Notes &mdash; cabin placement preferences, adjacent rooms request, status to match, questions</label><textarea id="fnotes" name="Notes" placeholder="Anything Christina should know &mdash; whether you want the rooms close together or on the same deck, any accessibility needs, hotel or cruise loyalty status, or questions about the ports..."></textarea></div>
+        <div style="margin:20px 0 0;">
+          <div class="inslbl">Travel Insurance</div>
+          <label class="insopt"><input type="radio" name="Insurance_Choice" value="Yes — please send me a travel insurance quote" required>Yes, please send me a travel insurance quote</label>
+          <label class="insopt"><input type="radio" name="Insurance_Choice" value="No — I decline travel insurance and accept the risks of traveling without coverage">No, I decline travel insurance and understand the risks of traveling without coverage</label>
+        </div>
+        <button type="submit" class="sbtn">Send my selections to Christina</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fbrand">Point Me to Paradise Travel</div>
+  <div class="fcon"><a href="#" id="emailLink">Christina@PointMeToParadise.com</a>&nbsp;&middot;&nbsp;<a href="tel:+12812290862">(281) 229-0862</a></div>
+  <div class="fdisc">Individual hotels, transfers, and tours in your quote are priced at publicly available rates &mdash; and in many cases lower than what you&rsquo;d find on your own. You don&rsquo;t have to worry about overpaying for a piece of your trip. What you&rsquo;re paying for is the rest: the right rooms at the right property, operators we&rsquo;ve used for years, the trip app, and a human who answers when something doesn&rsquo;t go to plan.</div>
+</footer>
+
+<script>
+  // Email assembly
+  (function(){var a='Christina'+'@'+'PointMeToParadise.com';var el=document.getElementById('emailLink');el.href='mailto:'+a;el.textContent=a;})();
+
+  var sel={r1:null,r2:null,r3:null};
+  var lbl={r1:'',r2:'',r3:''};
+  var senOn=false;
+
+  function toggleSenior(e){
+    senOn=!senOn;
+    var t=document.getElementById('stog');
+    senOn?t.classList.add('on'):t.classList.remove('on');
+    sel.r1=null; lbl.r1='';
+    document.querySelectorAll('#r1std .rrow,#r1sen .rrow').forEach(function(r){r.classList.remove('sel');});
+    document.querySelectorAll('input[name="r1s"],input[name="r1n"]').forEach(function(i){i.checked=false;});
+    document.getElementById('r1std').style.display=senOn?'none':'block';
+    document.getElementById('r1sen').style.display=senOn?'block':'none';
+    refresh();
+  }
+
+  function pick(row,room,amt,label){
+    var tbl=row.closest('.rtbl');
+    tbl.querySelectorAll('.rrow').forEach(function(r){r.classList.remove('sel');});
+    row.classList.add('sel');
+    sel[room]=amt; lbl[room]=label+' ($'+amt.toFixed(2)+')';
+    refresh(); sync();
+  }
+
+  function refresh(){
+    var rooms=['r1','r2','r3'];
+    var total=0; var picked=0; var miss=[];
+    rooms.forEach(function(r,i){
+      if(sel[r]!==null){total+=sel[r];picked++;}
+      else{miss.push('Room '+(i+1));}
+    });
+    var aEl=document.getElementById('rtamt');
+    var pEl=document.getElementById('rtpp');
+    var sEl=document.getElementById('rtst');
+    if(picked===3){
+      aEl.textContent='Est. $'+Math.round(total).toLocaleString('en-US');
+      pEl.textContent='Est. $'+Math.round(total/7).toLocaleString('en-US')+' avg per guest \u00B7 7 total';
+      sEl.textContent='All 3 staterooms selected';
+    } else if(picked>0){
+      aEl.textContent='Est. $'+Math.round(total).toLocaleString('en-US')+'*';
+      pEl.textContent=''; sEl.textContent='Still need: '+miss.join(', ');
+    } else {
+      aEl.textContent='\u2014'; pEl.textContent='';
+      sEl.textContent='Select a cabin in each room to see your total';
+    }
+  }
+
+  function sync(){
+    document.getElementById('hr1').value=lbl.r1||'Not selected';
+    document.getElementById('hr2').value=lbl.r2||'Not selected';
+    document.getElementById('hr3').value=lbl.r3||'Not selected';
+    document.getElementById('hsen').value=senOn?'Yes — 65+ rate applied to Room 1':'No — standard adult rate for Room 1';
+    var t=(sel.r1||0)+(sel.r2||0)+(sel.r3||0);
+    document.getElementById('htot').value=t>0?'Est. $'+t.toFixed(2)+' (all 3 rooms combined)':'Incomplete';
+  }
+
+  document.getElementById('tripForm').addEventListener('submit',function(e){
+    e.preventDefault(); sync();
+    var data=new FormData(e.target);
+    fetch('https://api.web3forms.com/submit',{method:'POST',body:data})
+    .then(function(r){return r.json();})
+    .then(function(j){
+      if(j.success){
+        e.target.style.display='none';
+        var m=document.getElementById('tymsg'); m.classList.add('show');
+        m.scrollIntoView({behavior:'smooth',block:'center'});
+      } else {alert('Something went wrong. Please email Christina directly or text (281) 229-0862.');}
+    })
+    .catch(function(){alert('Something went wrong. Please email Christina directly or text (281) 229-0862.');});
+  });
+</script>
+</body>
+</html>
