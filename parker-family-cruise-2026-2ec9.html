@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parker Family · Mariner of the Seas · July 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── TOKENS ───────────────────────────────────────────────────── */
+    :root {
+      --aqua-pale:    #C4E4E1;
+      --aqua-mist:    #EAF3F2;
+      --aqua:         #75AFB1;
+      --aqua-dark:    #4F8A8C;
+      --sand:         #ECE7DC;
+      --sand-light:   #F4F1E9;
+      --gold-whisper: #D6C8A8;
+      --white:        #FFFFFF;
+      --paper:        #FBFDFD;
+      --ink:          #2B2420;
+      --ink-soft:     #6B6359;
+      --line:         #E5E9E8;
+    }
+
+    /* ─── RESET ────────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    img { display: block; max-width: 100%; }
+
+    /* ─── HERO ─────────────────────────────────────────────────────── */
+    .pmtp-hero {
+      position: relative;
+      background-image:
+        linear-gradient(to bottom, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0.60) 100%),
+        url('https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/content/ship/mariner-of-the-seas/overview/hero-pic/mariner-MA-night-lights.jpg?$1440x600$');
+      background-size: cover;
+      background-position: center 40%;
+      padding: 80px 32px 64px;
+      text-align: center;
+    }
+
+    .pmtp-wordmark {
+      font-family: 'Playfair Display', serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--aqua-pale);
+      margin-bottom: 22px;
+    }
+
+    .hero-for {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.72);
+      margin-bottom: 6px;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 6vw, 3.8rem);
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+
+    .hero-ship {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      color: rgba(255,255,255,0.78);
+      margin-bottom: 32px;
+    }
+
+    .hero-pills {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hero-pill {
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.28);
+      border-radius: 40px;
+      padding: 7px 18px;
+      color: var(--white);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      backdrop-filter: blur(4px);
+    }
+
+    /* ─── LAYOUT HELPERS ───────────────────────────────────────────── */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section { padding: 60px 24px; }
+    .section-max { max-width: 960px; margin: 0 auto; }
+
+    .band { background: var(--aqua-mist); padding: 60px 24px; }
+    .band-inner { max-width: 960px; margin: 0 auto; }
+
+    .eyebrow {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--aqua-dark);
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .section-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--ink-soft);
+      margin-bottom: 28px;
+    }
+
+    hr.divider {
+      border: none;
+      border-top: 1px solid var(--line);
+      margin: 0;
+    }
+
+    /* ─── COMMITMENT CALLOUTS ──────────────────────────────────────── */
+    .callout {
+      border-left: 3px solid var(--aqua-dark);
+      background: var(--aqua-pale);
+      border-radius: 0 6px 6px 0;
+      padding: 18px 22px;
+    }
+
+    .callout p {
+      font-size: 0.925rem;
+      color: var(--ink);
+      font-weight: 500;
+      line-height: 1.7;
+    }
+
+    /* ─── TRIP OVERVIEW GRID ───────────────────────────────────────── */
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .overview-tile {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px 18px;
+    }
+
+    .overview-tile .label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin-bottom: 4px;
+    }
+
+    .overview-tile .value {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .ship-prose {
+      font-size: 0.975rem;
+      color: var(--ink-soft);
+      line-height: 1.85;
+      margin-top: 24px;
+    }
+
+    /* ─── CONNECTING GROUP ─────────────────────────────────────────── */
+    .connecting-wrap {
+      position: relative;
+      background: var(--white);
+      border: 2px solid var(--aqua);
+      border-radius: 12px;
+      padding: 28px 24px 24px;
+      margin-top: 28px;
+      margin-bottom: 24px;
+    }
+
+    .connecting-badge {
+      position: absolute;
+      top: -13px;
+      left: 20px;
+      background: var(--aqua-dark);
+      color: var(--white);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 20px;
+    }
+
+    .connecting-note {
+      font-size: 0.85rem;
+      font-style: italic;
+      color: var(--aqua-dark);
+      font-family: 'Cormorant Garamond', serif;
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+    }
+
+    .connecting-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    @media (max-width: 580px) {
+      .connecting-pair { grid-template-columns: 1fr; }
+    }
+
+    /* ─── CABIN CARDS ──────────────────────────────────────────────── */
+    .cabin-img-small {
+      width: 100%;
+      height: 155px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 14px;
+    }
+
+    .cabin-guest-tag {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--aqua-dark);
+      margin-bottom: 4px;
+    }
+
+    .cabin-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .cabin-desc {
+      font-size: 0.875rem;
+      color: var(--ink-soft);
+      line-height: 1.7;
+    }
+
+    .obc-chip {
+      display: inline-block;
+      margin-top: 12px;
+      background: var(--aqua-pale);
+      border-radius: 4px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--aqua-dark);
+      padding: 4px 10px;
+      letter-spacing: 0.04em;
+    }
+
+    /* Standalone cabin card row (3 up) */
+    .cabin-row-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .cabin-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .cabin-card-img {
+      width: 100%;
+      height: 175px;
+      object-fit: cover;
+    }
+
+    .cabin-card-body { padding: 20px; }
+
+    /* ─── PRICING TABLE ────────────────────────────────────────────── */
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 24px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+    }
+
+    .pricing-table thead th {
+      background: var(--white);
+      text-align: left;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .pricing-table tbody td {
+      padding: 14px 16px;
+      font-size: 0.875rem;
+      color: var(--ink);
+      border-bottom: 1px solid var(--line);
+      vertical-align: middle;
+    }
+
+    .pricing-table tbody tr:last-of-type td {
+      border-bottom: none;
+    }
+
+    .pricing-table .subtotal-row td {
+      background: var(--aqua-mist);
+      padding: 18px 16px;
+      border-bottom: none;
+    }
+
+    .subtotal-label {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .subtotal-sub {
+      font-size: 0.78rem;
+      color: var(--aqua-dark);
+      font-weight: 500;
+      margin-top: 3px;
+    }
+
+    .subtotal-amount {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.65rem;
+      font-weight: 600;
+      color: var(--aqua-dark);
+      white-space: nowrap;
+    }
+
+    .rate-check {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin-top: 16px;
+      font-size: 0.875rem;
+      color: var(--ink-soft);
+      font-style: italic;
+      line-height: 1.65;
+    }
+
+    .pricing-disclaimer {
+      font-size: 0.75rem;
+      color: var(--ink-soft);
+      margin-top: 10px;
+      opacity: 0.8;
+      font-style: italic;
+    }
+
+    /* ─── MSC CALLOUT ──────────────────────────────────────────────── */
+    .msc-aside {
+      background: var(--sand-light);
+      border: 1px solid var(--gold-whisper);
+      border-left: 4px solid var(--gold-whisper);
+      border-radius: 8px;
+      padding: 28px 28px;
+      margin-top: 40px;
+    }
+
+    .msc-aside .eyebrow { color: var(--ink-soft); }
+
+    .msc-aside h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin: 6px 0 12px;
+    }
+
+    .msc-aside p {
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+      line-height: 1.75;
+    }
+
+    /* ─── BOTTOM CALLOUT ───────────────────────────────────────────── */
+    .callout-bottom {
+      border-left: 3px solid var(--aqua-dark);
+      background: var(--aqua-pale);
+      border-radius: 0 6px 6px 0;
+      padding: 20px 24px;
+      margin-bottom: 0;
+    }
+
+    .callout-bottom p {
+      font-size: 0.925rem;
+      color: var(--ink);
+      font-weight: 500;
+      line-height: 1.75;
+    }
+
+    /* ─── CONTACT FORM ─────────────────────────────────────────────── */
+    .form-section {
+      background: var(--aqua-mist);
+      padding: 64px 24px;
+    }
+
+    .form-inner {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .form-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .form-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--ink-soft);
+      margin-bottom: 32px;
+    }
+
+    .form-group { margin-bottom: 18px; }
+
+    .form-group label {
+      display: block;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.94rem;
+      color: var(--ink);
+      background: var(--white);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--aqua);
+    }
+
+    .form-group textarea {
+      height: 120px;
+      resize: vertical;
+    }
+
+    .form-submit {
+      width: 100%;
+      background: var(--aqua-dark);
+      color: var(--white);
+      border: none;
+      border-radius: 6px;
+      padding: 14px 24px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.94rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      transition: background 0.2s, opacity 0.2s;
+      margin-top: 6px;
+    }
+
+    .form-submit:hover { background: var(--aqua); }
+    .form-submit:disabled { opacity: 0.55; cursor: not-allowed; }
+
+    #thank-you {
+      display: none;
+      text-align: center;
+      padding: 48px 0;
+    }
+
+    #thank-you h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+
+    #thank-you p {
+      color: var(--ink-soft);
+      font-size: 0.94rem;
+      line-height: 1.7;
+    }
+
+    /* ─── FOOTER ───────────────────────────────────────────────────── */
+    .footer {
+      background: var(--sand-light);
+      padding: 44px 24px 36px;
+      text-align: center;
+    }
+
+    .footer-agency {
+      font-family: 'Playfair Display', serif;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--aqua-dark);
+      margin-bottom: 10px;
+    }
+
+    .footer-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 2px;
+    }
+
+    .footer-role {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+      margin-bottom: 14px;
+    }
+
+    .footer-contact {
+      font-size: 0.875rem;
+      color: var(--ink-soft);
+      line-height: 2;
+    }
+
+    .footer-contact a {
+      color: var(--aqua-dark);
+      text-decoration: none;
+    }
+
+    .footer-fine {
+      margin-top: 24px;
+      font-size: 0.72rem;
+      color: var(--ink-soft);
+      opacity: 0.65;
+      line-height: 1.7;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ─── RESPONSIVE ───────────────────────────────────────────────── */
+    @media (max-width: 620px) {
+      .cabin-row-3 { grid-template-columns: 1fr; }
+      .pricing-table thead { display: none; }
+      .pricing-table tbody td {
+        display: block;
+        border-bottom: none;
+        padding: 6px 14px;
+      }
+      .pricing-table tbody tr { border-bottom: 1px solid var(--line); }
+      .pricing-table .subtotal-row td { display: table-cell; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════ -->
+<div class="pmtp-hero">
+  <div class="pmtp-wordmark">Point Me to Paradise Travel</div>
+  <div class="hero-for">A quote prepared for</div>
+  <h1 class="hero-title">The Parker Family</h1>
+  <div class="hero-ship">Mariner of the Seas · Western Caribbean · Royal Caribbean</div>
+  <div class="hero-pills">
+    <span class="hero-pill">July 6 – 11, 2026</span>
+    <span class="hero-pill">5 Nights</span>
+    <span class="hero-pill">Departs Galveston, TX</span>
+    <span class="hero-pill">6 Adults · 3 Children</span>
+    <span class="hero-pill">5 Staterooms</span>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     TRIP OVERVIEW
+════════════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-max">
+    <div class="eyebrow">Trip Overview</div>
+    <h2 class="section-title">5 Nights, Western Caribbean</h2>
+    <p class="section-sub">Round-trip from Galveston · July 6 – July 11, 2026</p>
+
+    <p class="ship-prose">
+      Mariner of the Seas runs a tight 5-night loop out of Galveston — Western Caribbean ports, back by Saturday morning. At 138,000 gross tons and just over 3,800 guests at full capacity, it's large enough that 9 people can scatter across the ship on a sea day and still find a quiet corner. The FlowRider wave simulator and rock climbing wall draw the under-14 crowd from mid-morning through early afternoon. The adults get the pool decks — or the adults get the FlowRider, no judgment. Onboard dining runs from the main dining room's three-course service to the Windjammer's buffet, which peaks around noon and clears out by 1:30. At the ports, the itinerary is yours — no group flag to follow, no bus schedule to keep.
+    </p>
+
+    <div class="overview-grid">
+      <div class="overview-tile">
+        <div class="label">Ship</div>
+        <div class="value">Mariner of the Seas</div>
+      </div>
+      <div class="overview-tile">
+        <div class="label">Cruise Line</div>
+        <div class="value">Royal Caribbean</div>
+      </div>
+      <div class="overview-tile">
+        <div class="label">Departs</div>
+        <div class="value">Jul 6, 2026</div>
+      </div>
+      <div class="overview-tile">
+        <div class="label">Returns</div>
+        <div class="value">Jul 11, 2026</div>
+      </div>
+      <div class="overview-tile">
+        <div class="label">Duration</div>
+        <div class="value">5 Nights</div>
+      </div>
+      <div class="overview-tile">
+        <div class="label">Home Port</div>
+        <div class="value">Galveston, TX</div>
+      </div>
+      <div class="overview-tile">
+        <div class="label">Travelers</div>
+        <div class="value">6 Adults · 3 Children</div>
+      </div>
+      <div class="overview-tile">
+        <div class="label">Staterooms</div>
+        <div class="value">5 Cabins</div>
+      </div>
+    </div>
+
+    <!-- COMMITMENT #1 -->
+    <div class="callout" style="margin-top: 32px;">
+      <p>We don't book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. The work you'd hate doing — already done.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<!-- ════════════════════════════════════════════════════════
+     CABIN CONFIGURATION
+════════════════════════════════════════════════════════ -->
+<div class="band">
+  <div class="band-inner">
+    <div class="eyebrow">Cabin Configuration</div>
+    <h2 class="section-title">Your Staterooms Aboard</h2>
+    <p class="section-sub">Five cabins · All remaining availability is double occupancy</p>
+
+    <p class="ship-prose" style="margin-top: 0; margin-bottom: 4px;">
+      With quad and triple cabins sold out on this sailing, we configured five double-occupancy staterooms to keep the family together across two deck levels. The connecting pair on Deck 8 puts the 13-year-old with one parent and the 8-year-old with the other — a private interior door between the two rooms means the kids can move freely without going into the hall. On Deck 2, three ocean-facing staterooms handle the grandparents, the youngest child, and the remaining two adults. Every cabin in the group carries a $50 onboard credit from Point Me to Paradise.
+    </p>
+
+    <!-- ── CONNECTING PAIR ─────────────────────────────── -->
+    <div class="connecting-wrap">
+      <div class="connecting-badge">Connecting Cabins · Staterooms 8587 &amp; 8589</div>
+
+      <p class="connecting-note" style="margin-top: 8px; margin-bottom: 20px;">
+        These two rooms share a private interior door — the family moves between them without stepping into the corridor.
+      </p>
+
+      <div class="connecting-pair">
+
+        <!-- Cabin 8587 -->
+        <div>
+          <img
+            class="cabin-img-small"
+            src="https://www.nuvo360.com/wp-content/uploads/2021/12/12.01.2021_23.06.42.jpg"
+            alt="Interior stateroom with Royal Promenade view"
+          />
+          <div class="cabin-guest-tag">Cabin 8587 · 1 Adult + Child (age 13)</div>
+          <div class="cabin-name">Interior Promenade Stateroom</div>
+          <p class="cabin-desc">
+            160 sq ft with floor-to-ceiling windows overlooking the Royal Promenade — the ship's enclosed main boulevard. The view into the promenade is livelier than a porthole: café lights, the occasional parade, street performers. The 13-year-old can come and go between rooms through the connecting door. Deck 8 puts them near the pool, the FlowRider, and the climbing wall.
+          </p>
+          <span class="obc-chip">$50 Onboard Credit · PMTP</span>
+        </div>
+
+        <!-- Cabin 8589 -->
+        <div>
+          <img
+            class="cabin-img-small"
+            src="https://www.nuvo360.com/wp-content/uploads/2021/12/12.01.2021_23.06.42.jpg"
+            alt="Interior stateroom with Royal Promenade view"
+          />
+          <div class="cabin-guest-tag">Cabin 8589 · 1 Adult + Child (age 8)</div>
+          <div class="cabin-name">Interior Promenade Stateroom</div>
+          <p class="cabin-desc">
+            Mirror configuration of 8587 — same 160 sq ft, same promenade windows, same door between the two rooms. The 8-year-old is right next to the other parent; the grown-ups can close the adjoining door when the 9 p.m. bedtime holds and doesn't.
+          </p>
+          <span class="obc-chip">$50 Onboard Credit · PMTP</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── THREE OCEANVIEW CARDS ───────────────────────── -->
+    <div class="cabin-row-3">
+
+      <!-- Cabin 3: Grandparent + 7yo -->
+      <div class="cabin-card">
+        <img
+          class="cabin-card-img"
+          src="https://www.royalcaribbeanincentives.com/content/uploads/FR-Oceanview-CatF.webp"
+          alt="Oceanview stateroom Deck 2"
+        />
+        <div class="cabin-card-body">
+          <div class="cabin-guest-tag">Deck 2 Oceanview · 1 Adult + Child (age 7)</div>
+          <div class="cabin-name">Oceanview Stateroom</div>
+          <p class="cabin-desc" style="margin-top: 10px;">
+            161 sq ft with a fixed porthole window facing the ocean. Deck 2 is low and quiet — the hum from the engines is a background note by the time you fall asleep, not a distraction. Available staterooms in this category: 2630, 2640, 2548, 2560, 2552, 2344, 2652 (exact cabin assigned at booking, subject to availability).
+          </p>
+          <span class="obc-chip">$50 Onboard Credit · PMTP</span>
+        </div>
+      </div>
+
+      <!-- Cabin 4: Grandparent Solo -->
+      <div class="cabin-card">
+        <img
+          class="cabin-card-img"
+          src="https://www.royalcaribbeanincentives.com/content/uploads/FR-Oceanview-CatF.webp"
+          alt="Oceanview stateroom Deck 2"
+        />
+        <div class="cabin-card-body">
+          <div class="cabin-guest-tag">Deck 2 Oceanview · 1 Adult (Solo)</div>
+          <div class="cabin-name">Oceanview Stateroom — Solo Occupancy</div>
+          <p class="cabin-desc" style="margin-top: 10px;">
+            161 sq ft, one adult. Cruise ships price cabins for two — this rate reflects the cabin cost for double occupancy minus the port fees and taxes for the second passenger who isn't traveling. Same category and deck as the adjacent family oceanview rooms. Available staterooms: 2630, 2640, 2548, 2560, 2552, 2344, 2652.
+          </p>
+          <span class="obc-chip">$50 Onboard Credit · PMTP</span>
+        </div>
+      </div>
+
+      <!-- Cabin 5: 2 Adults -->
+      <div class="cabin-card">
+        <img
+          class="cabin-card-img"
+          src="https://www.royalcaribbeanincentives.com/content/uploads/FR-Oceanview-CatF.webp"
+          alt="Oceanview stateroom Deck 2"
+        />
+        <div class="cabin-card-body">
+          <div class="cabin-guest-tag">Deck 2 Oceanview · 2 Adults</div>
+          <div class="cabin-name">Oceanview Stateroom</div>
+          <p class="cabin-desc" style="margin-top: 10px;">
+            161 sq ft, double occupancy. Same ocean-facing stateroom category and deck level as the rest of the Deck 2 group — the family stays on the same corridor. Available staterooms: 2630, 2640, 2548, 2560, 2552, 2344, 2652, subject to availability at time of booking.
+          </p>
+          <span class="obc-chip">$50 Onboard Credit · PMTP</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<!-- ════════════════════════════════════════════════════════
+     PRICING SUMMARY
+════════════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-max">
+    <div class="eyebrow">Pricing Summary</div>
+    <h2 class="section-title">All 5 Cabins · 9 Travelers</h2>
+    <p class="section-sub">Estimated total for the full family group</p>
+
+    <table class="pricing-table">
+      <thead>
+        <tr>
+          <th>Stateroom</th>
+          <th>Guests</th>
+          <th style="text-align:right;">Cabin Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Cabin 8587</strong> — Interior Promenade, Deck 8</td>
+          <td style="color:var(--ink-soft);">1 Adult + Child (13)</td>
+          <td style="text-align:right;">$2,252.38</td>
+        </tr>
+        <tr>
+          <td><strong>Cabin 8589</strong> — Interior Promenade, Deck 8 (Connecting)</td>
+          <td style="color:var(--ink-soft);">1 Adult + Child (8)</td>
+          <td style="text-align:right;">$2,252.38</td>
+        </tr>
+        <tr>
+          <td><strong>Oceanview</strong> — Deck 2</td>
+          <td style="color:var(--ink-soft);">1 Adult + Child (7)</td>
+          <td style="text-align:right;">$2,497.38</td>
+        </tr>
+        <tr>
+          <td><strong>Oceanview</strong> — Deck 2 (Solo Occupancy)</td>
+          <td style="color:var(--ink-soft);">1 Adult</td>
+          <td style="text-align:right;">$2,368.69</td>
+        </tr>
+        <tr>
+          <td><strong>Oceanview</strong> — Deck 2</td>
+          <td style="color:var(--ink-soft);">2 Adults</td>
+          <td style="text-align:right;">$2,497.38</td>
+        </tr>
+        <tr class="subtotal-row">
+          <td colspan="2">
+            <div class="subtotal-label">Est. Total · 5 Cabins · 9 Travelers</div>
+            <div class="subtotal-sub">Includes $250 total onboard credit (5 cabins × $50, compliments of Point Me to Paradise)</div>
+          </td>
+          <td style="text-align:right; vertical-align:middle;">
+            <span class="subtotal-amount">$11,868.21</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="rate-check">
+      We check every component against public rates and meet or beat them. You're not paying a premium for our convenience — you're paying for the rest of what we do.
+    </div>
+    <div class="pricing-disclaimer">
+      Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor.
+    </div>
+
+    <!-- MSC ALTERNATIVE -->
+    <div class="msc-aside">
+      <div class="eyebrow">Worth Knowing</div>
+      <h3>Also Available: MSC Seascape — 7 Nights, July 5th</h3>
+      <p>
+        If the Parker family has any flexibility on dates — or if the inventory picture on Mariner feels tight across five double-occupancy cabins — the MSC Seascape has a 7-night Western Caribbean sailing departing July 5th with solid availability, including balcony staterooms that are sold out on Mariner. MSC runs competitive rates on family-sized bookings, and the extra two nights give the trip more breathing room between ports. If a comparison quote on Seascape sounds worth a look, just reach out — we can put it together.
+      </p>
+    </div>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<!-- ════════════════════════════════════════════════════════
+     BOTTOM COMMITMENT + FORM
+════════════════════════════════════════════════════════ -->
+<div class="form-section">
+  <div class="form-inner">
+
+    <!-- COMMITMENT #4 -->
+    <div class="callout-bottom" style="margin-bottom: 40px;">
+      <p>What's coming after this quote: a destination guide built for your trip — PDF or interactive in-app, with Google Maps links to every place we send you — a trip app where everything lives, and us when something goes sideways at midnight. You travel; we handle the rest.</p>
+    </div>
+
+    <div class="eyebrow">Ready to Move Forward?</div>
+    <h2 class="form-title">Reach Out to Christina</h2>
+    <p class="form-sub">Questions on a specific cabin, the MSC option, or ready to confirm — send a note and we'll be in touch.</p>
+
+    <div id="form-container">
+      <form
+        action="https://api.web3forms.com/submit"
+        method="POST"
+        onsubmit="handleFormSubmit(event)"
+      >
+        <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1" />
+        <input type="hidden" name="subject" value="Quote Response — Parker Family | Mariner of the Seas July 2026" />
+        <input type="hidden" name="redirect" value="false" />
+
+        <div class="form-group">
+          <label for="f-name">Your Name *</label>
+          <input type="text" id="f-name" name="name" required placeholder="Full name" />
+        </div>
+
+        <div class="form-group">
+          <label for="f-email">Email Address *</label>
+          <input type="email" id="f-email" name="email" required placeholder="your@email.com" />
+        </div>
+
+        <div class="form-group">
+          <label for="f-phone">Phone Number</label>
+          <input type="tel" id="f-phone" name="phone" placeholder="Optional" />
+        </div>
+
+        <div class="form-group">
+          <label for="f-message">Questions or Notes</label>
+          <textarea id="f-message" name="message" placeholder="Cabin preferences, questions about the MSC option, anything on your mind."></textarea>
+        </div>
+
+        <button type="submit" class="form-submit" id="submit-btn">Send to Christina</button>
+      </form>
+    </div>
+
+    <div id="thank-you">
+      <h3>Message Received</h3>
+      <p>Christina will be in touch shortly. Check your inbox — and your spam folder, just in case.</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════ -->
+<div class="footer">
+  <div class="footer-agency">Point Me to Paradise Travel</div>
+  <div class="footer-name">Christina Garcia</div>
+  <div class="footer-role">Travel Advisor</div>
+  <div class="footer-contact" id="footer-contact">
+    281-229-0862
+  </div>
+  <div class="footer-fine">
+    © 2026 Point Me to Paradise Travel. This quote is prepared exclusively for the Parker Family and is not transferable. All pricing and availability are subject to change until confirmed in writing by your advisor. Onboard credit offers are subject to Royal Caribbean's standard terms and conditions.
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     SCRIPTS
+════════════════════════════════════════════════════════ -->
+<script>
+  /* ── Email assembly (never hardcode @ in HTML) ──────── */
+  (function () {
+    var u = 'christina';
+    var d = 'pointmetoparadise.com';
+    var a = '\u0040';
+    var email = u + a + d;
+    var el = document.getElementById('footer-contact');
+    var br = document.createElement('br');
+    var link = document.createElement('a');
+    link.href = 'mailto:' + email;
+    link.textContent = email;
+    el.appendChild(br);
+    el.appendChild(link);
+  })();
+
+  /* ── Form submission ────────────────────────────────── */
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    var btn = document.getElementById('submit-btn');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    var formData = new FormData(e.target);
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
+    })
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        if (data.success) {
+          document.getElementById('form-container').style.display = 'none';
+          document.getElementById('thank-you').style.display = 'block';
+        } else {
+          btn.disabled = false;
+          btn.textContent = 'Send to Christina';
+          alert('Something went wrong. Please email Christina directly.');
+        }
+      })
+      .catch(function () {
+        btn.disabled = false;
+        btn.textContent = 'Send to Christina';
+        alert('Unable to send. Please email Christina directly.');
+      });
+  }
+</script>
+
+</body>
+</html>
