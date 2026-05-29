@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>Sonja Gipson · Birthday Cruise · Carnival Jubilee 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --aqua-pale: #C4E4E1;
+  --aqua-mist: #EAF3F2;
+  --aqua: #75AFB1;
+  --aqua-dark: #4F8A8C;
+  --sand: #ECE7DC;
+  --sand-light: #F4F1E9;
+  --gold-whisper: #D6C8A8;
+  --white: #FFFFFF;
+  --paper: #FBFDFD;
+  --ink: #2B2420;
+  --ink-soft: #6B6359;
+  --line: #E5E9E8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { color-scheme: light; scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--aqua-dark); font-weight: 500; }
+
+.wrap { max-width: 920px; margin: 0 auto; }
+
+/* ---------- HERO (Variant B) ---------- */
+.hero {
+  position: relative;
+  background-color: var(--aqua-mist); /* fallback if image is blocked from hotlinking */
+  background-image:
+    linear-gradient(180deg,
+      rgba(255, 255, 255, 0.55) 0%,
+      rgba(196, 228, 225, 0.72) 38%,
+      rgba(234, 243, 242, 0.88) 75%,
+      rgba(251, 253, 253, 0.98) 100%),
+    url('https://www.carnival.com/-/media/Images/Ships/JB/carnival-jubilee/zones/carnival-jubilee-summer-landing-gallery-1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 110px 24px 88px;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+}
+.brand-mark {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.26em;
+  color: var(--aqua-dark);
+  font-weight: 600;
+  margin-bottom: 28px;
+}
+.hero-title {
+  font-size: clamp(40px, 6vw, 64px);
+  line-height: 1.08;
+  color: var(--ink);
+  font-weight: 500;
+}
+.hairline { width: 60px; height: 1px; background: var(--gold-whisper); margin: 24px auto; border: none; }
+.hero-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: clamp(19px, 2.2vw, 24px);
+  color: var(--ink);
+  max-width: 560px;
+  margin: 0 auto 22px;
+}
+.hero-sig {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--ink-soft);
+}
+
+/* ---------- OVERVIEW STRIP ---------- */
+.overview {
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+  padding: 38px 24px;
+}
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  text-align: center;
+}
+.ov-item { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.ov-item svg { color: var(--aqua-dark); }
+.ov-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--ink-soft); }
+.ov-value { font-size: 15px; font-weight: 500; color: var(--ink); }
+
+/* ---------- VALUE STRIP ---------- */
+.value-strip { background: var(--sand-light); padding: 56px 24px; }
+.value-head { text-align: center; margin-bottom: 40px; }
+.value-head h2 { font-size: 32px; color: var(--ink); }
+.value-head .sub { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--ink-soft); font-size: 18px; margin-top: 6px; }
+.value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
+.value-col { padding: 0 30px; text-align: center; position: relative; }
+.value-col + .value-col::before {
+  content: ''; position: absolute; left: 0; top: 6px; bottom: 6px; width: 1px; background: var(--gold-whisper);
+}
+.value-col svg { color: var(--aqua-dark); margin-bottom: 14px; }
+.value-col h3 { font-size: 21px; color: var(--ink); margin-bottom: 10px; }
+.value-col p { font-size: 14px; color: var(--ink-soft); line-height: 1.65; }
+
+/* ---------- SECTION GENERIC ---------- */
+.section { padding: 56px 24px; }
+.section-mist { background: var(--aqua-mist); }
+.section h2 { font-size: clamp(28px, 4vw, 36px); }
+.section-sub { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--ink-soft); font-size: 18px; margin: 8px 0 28px; }
+.section p { margin-bottom: 16px; font-size: 15.5px; }
+
+.intro-party {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--aqua-dark);
+  padding: 16px 22px;
+  font-size: 15px;
+  margin-top: 6px;
+}
+.intro-party strong { color: var(--aqua-dark); font-weight: 600; }
+
+/* heading flank */
+.flank-head { display: flex; align-items: center; justify-content: center; gap: 16px; text-align: center; }
+.flank-head svg { opacity: 0.65; color: var(--aqua-dark); flex-shrink: 0; }
+
+/* ---------- SHIP CONTEXT ---------- */
+.ship-context {
+  background: var(--sand-light);
+  border-left: 3px solid var(--aqua-dark);
+  padding: 22px 26px;
+  margin-bottom: 32px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+.ship-context h3 { font-size: 20px; margin-bottom: 8px; }
+
+/* ---------- CRUISE CARD ---------- */
+.cruise-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+.cruise-row { display: grid; grid-template-columns: 1.15fr 1fr; }
+.cruise-left { padding: 30px 30px 26px; }
+.cruise-right { background: var(--aqua-mist); padding: 30px 28px; }
+.cc-kicker { font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--ink-soft); margin-bottom: 8px; }
+.cc-name { font-size: 26px; color: var(--ink); line-height: 1.12; }
+.cc-tag { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--ink-soft); font-size: 17px; margin-top: 4px; margin-bottom: 18px; }
+.cc-detail-row { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 12px; font-size: 14px; }
+.cc-detail-row svg { color: var(--aqua-dark); flex-shrink: 0; margin-top: 2px; }
+.cc-detail-row .lbl { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-soft); display: block; }
+.cc-detail-row .val { font-size: 14px; color: var(--ink); }
+
+.map-wrap { margin: 18px 0 0; }
+.map-wrap img { width: 100%; max-width: 320px; border: 1px solid var(--line); border-radius: 4px; display: block; }
+
+.explore-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--aqua-dark);
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  border-bottom: 1px solid var(--aqua-dark);
+  padding-bottom: 2px;
+}
+.promo-line { color: var(--aqua-dark); font-weight: 500; font-size: 12px; margin-top: 16px; }
+
+/* selectable rate rows */
+.rate-select { display: flex; flex-direction: column; gap: 8px; }
+.rate-row {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 14px; border: 1px solid var(--aqua);
+  border-radius: 6px; background: var(--white); cursor: pointer;
+  min-height: 48px; transition: border-color .15s, background .15s;
+}
+.rate-row input { width: 18px; height: 18px; accent-color: var(--aqua-dark); flex-shrink: 0; margin: 0; }
+.rate-row .rr-tier { flex: 1; font-size: 14px; color: var(--ink); }
+.rate-row .rr-tier small { display: block; color: var(--ink-soft); font-size: 11.5px; line-height: 1.3; }
+.rate-row .rr-price { font-weight: 600; color: var(--ink); white-space: nowrap; font-size: 15px; }
+.rate-row:hover { border-color: var(--aqua-dark); }
+.rate-select:has(input:checked) .rate-row:not(:has(input:checked)) { opacity: 0.62; }
+.rate-row:has(input:checked) {
+  border-color: var(--aqua-dark); border-width: 2px;
+  background: var(--white); padding: 11px 13px;
+}
+.rate-row:has(input:checked) .rr-price { color: var(--aqua-dark); }
+.rate-foot {
+  margin-top: 14px;
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+}
+
+/* image strip */
+.img-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; padding: 0 30px 26px; }
+.img-strip img { width: 100%; height: 150px; object-fit: cover; border-radius: 4px; border: 1px solid var(--line); }
+.img-placeholder {
+  height: 150px; border-radius: 4px; border: 1px solid var(--aqua);
+  background: var(--aqua-mist);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+  color: var(--aqua-dark);
+}
+.img-placeholder span {
+  font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 15px; color: var(--ink-soft);
+}
+.img-cap { font-size: 11px; color: var(--ink-soft); text-align: center; padding: 0 30px 24px; font-style: italic; font-family: 'Cormorant Garamond', serif; }
+
+/* cabin detail */
+.cabin-detail { padding: 0 30px 30px; }
+.cabin-detail h4 { font-size: 17px; color: var(--aqua-dark); margin-bottom: 14px; padding-top: 22px; border-top: 1px solid var(--line); }
+.cabin-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.cabin-item { display: flex; gap: 10px; align-items: flex-start; font-size: 13.5px; }
+.cabin-item svg { color: var(--aqua-dark); flex-shrink: 0; margin-top: 2px; }
+.cabin-item strong { display: block; color: var(--ink); font-weight: 600; font-size: 13.5px; }
+.cabin-item span { color: var(--ink-soft); }
+
+/* honest-trade note */
+.trade-note {
+  background: var(--aqua-mist);
+  border: 1px solid var(--aqua);
+  border-radius: 5px;
+  padding: 18px 22px;
+  margin-bottom: 28px;
+  font-size: 14.5px;
+  line-height: 1.7;
+}
+.trade-note strong { color: var(--aqua-dark); }
+
+/* running total bar */
+.total-bar {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  background: var(--aqua-pale);
+  border-radius: 6px;
+  padding: 12px 22px;
+  margin-top: 8px;
+}
+.total-bar .tb-label { font-size: 14px; color: var(--ink); }
+.total-bar .tb-amount { font-size: 18px; font-weight: 600; color: var(--aqua-dark); white-space: nowrap; }
+
+/* notes textarea + form */
+.form-section { background: var(--white); padding: 56px 24px; border-top: 1px solid var(--line); }
+.field { margin-bottom: 18px; }
+.field label { display: block; font-size: 13px; font-weight: 500; color: var(--ink); margin-bottom: 6px; }
+.field input, .field textarea {
+  width: 100%;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  padding: 13px 14px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--paper);
+  color: var(--ink);
+}
+.field textarea { min-height: 110px; resize: vertical; }
+.field input:focus, .field textarea:focus { outline: none; border-color: var(--aqua-dark); }
+
+.insurance-block { margin: 22px 0; }
+.insurance-block > .ins-label { font-size: 13px; font-weight: 600; color: var(--ink); margin-bottom: 12px; }
+.ins-opt {
+  display: flex; align-items: flex-start; gap: 12px;
+  border: 1px solid var(--line); border-radius: 5px;
+  padding: 14px 16px; margin-bottom: 10px; cursor: pointer;
+  font-size: 14px; min-height: 48px;
+}
+.ins-opt input { margin-top: 3px; width: 18px; height: 18px; accent-color: var(--aqua-dark); flex-shrink: 0; }
+.ins-opt:has(input:checked) { border-color: var(--aqua-dark); background: var(--aqua-mist); }
+
+.submit-btn {
+  background: var(--aqua-dark); color: var(--white);
+  border: none; border-radius: 5px;
+  font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600;
+  padding: 16px 32px; cursor: pointer; width: 100%;
+  min-height: 52px; letter-spacing: 0.02em;
+}
+.submit-btn:hover { background: #437678; }
+
+.thanks-msg {
+  display: none; text-align: center; padding: 40px 24px;
+  background: var(--aqua-mist); border-radius: 6px;
+}
+.thanks-msg.show { display: block; }
+.thanks-msg h3 { font-size: 24px; margin-bottom: 8px; }
+
+/* ---------- FOOTER ---------- */
+.footer { background: var(--sand-light); padding: 48px 24px; border-top: 1px solid var(--line); }
+.footer-contact { text-align: center; margin-bottom: 28px; }
+.footer-contact .name { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--aqua-dark); }
+.footer-contact .role { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--ink-soft); font-size: 16px; margin-bottom: 12px; }
+.footer-contact a { color: var(--aqua-dark); text-decoration: none; font-size: 14.5px; }
+.footer-contact .sep { color: var(--ink-soft); margin: 0 8px; }
+.footer-disclosure {
+  max-width: 680px; margin: 0 auto; text-align: center;
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-size: 15px; color: var(--ink-soft); line-height: 1.7;
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+  .overview-grid { grid-template-columns: repeat(2, 1fr); gap: 26px 18px; }
+  .value-grid { grid-template-columns: 1fr; }
+  .value-col { padding: 26px 0; }
+  .value-col + .value-col::before { display: none; }
+  .value-col + .value-col { border-top: 1px solid var(--gold-whisper); }
+  .cruise-row { grid-template-columns: 1fr; }
+  .cruise-right { border-top: 1px solid var(--line); }
+  .img-strip { grid-template-columns: 1fr; padding: 0 20px 22px; }
+  .img-strip img { height: 220px; }
+  .cabin-grid { grid-template-columns: 1fr; }
+  .cabin-detail, .cruise-left, .cruise-right { padding-left: 20px; padding-right: 20px; }
+  .hero { padding: 80px 20px 64px; }
+  .total-bar { flex-direction: column; align-items: flex-start; gap: 4px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO (Variant B) -->
+<header class="hero">
+  <div class="brand-mark">Point Me to Paradise Travel</div>
+  <h1 class="hero-title">A Birthday at Sea</h1>
+  <hr class="hairline">
+  <p class="hero-sub">Eight nights aboard Carnival Jubilee — Galveston to the Bahamas, Half Moon Cay, and Celebration Key</p>
+  <p class="hero-sig">Prepared for Sonja Gipson · by Christina Garcia</p>
+</header>
+
+<!-- OVERVIEW STRIP -->
+<section class="overview">
+  <div class="wrap overview-grid">
+    <div class="ov-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-6 8-6s8 2 8 6"/></svg>
+      <span class="ov-label">Traveler</span>
+      <span class="ov-value">Solo · sailing alone</span>
+    </div>
+    <div class="ov-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18h18"/><path d="M5 18l1.5-7h11L19 18"/><path d="M12 4v7"/><path d="M9 7h6"/></svg>
+      <span class="ov-label">Sailing</span>
+      <span class="ov-value">8 nights · Bahamas</span>
+    </div>
+    <div class="ov-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+      <span class="ov-label">Departs</span>
+      <span class="ov-value">Galveston, TX</span>
+    </div>
+    <div class="ov-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M8 2v4M16 2v4"/></svg>
+      <span class="ov-label">Dates</span>
+      <span class="ov-value">Feb 20–28, 2027</span>
+    </div>
+  </div>
+</section>
+
+<!-- VALUE STRIP -->
+<section class="value-strip">
+  <div class="wrap">
+    <div class="value-head">
+      <h2>Beyond the booking</h2>
+      <p class="sub">What's included with every Point Me to Paradise trip</p>
+    </div>
+    <div class="value-grid">
+      <div class="value-col">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h12l4 4v12H4z"/><path d="M16 4v4h4"/><path d="M8 13h8M8 17h6"/></svg>
+        <h3>The Trip Guide</h3>
+        <p>A document built for your week — restaurants we'd return to, neighborhoods worth the walk, what to skip, the places open on a Sunday. Not pulled from a database. Researched against where you're staying and what you've told us matters.</p>
+      </div>
+      <div class="value-col">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>
+        <h3>The Trip App</h3>
+        <p>Itinerary, confirmation numbers, transfer windows, and ground contacts in one place — accessible offline, updated in real time. If a flight shifts or weather moves, the app moves with it.</p>
+      </div>
+      <div class="value-col">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+        <h3>Best-Rate Assurance</h3>
+        <p>Every hotel night, cruise rate, and tour in your quote is priced at publicly available rates. If you find the same component for less elsewhere, we'll match it — you don't have to wonder whether you're overpaying for a piece of your trip.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="section">
+  <div class="wrap">
+    <h2>Your birthday week</h2>
+    <p class="section-sub">A milestone birthday spent on one of the newest ships at sea — and a ship built, more than most, for someone traveling on her own terms.</p>
+    <p>The Carnival Jubilee is one of three Excel-class ships in Carnival's fleet — the largest the line builds, carrying more than 6,400 guests across 20-plus dining venues and a full deck of bars, lounges, and quiet corners. For a solo traveler, that scale is the point: there's always somewhere to be social and always somewhere to disappear. The Serenity adult-only retreat (21 and over) and the Cloud 9 Spa's thermal suite give you grown-up space away from the family crowd, and Loft 19 up top is there if you want to splurge on a day in a cabana for your birthday.</p>
+    <p>The eight-night route is a Bahamas loop built around three island days: Nassau, the freshly expanded RelaxAway at Half Moon Cay, and Celebration Key — Carnival's brand-new private destination in Grand Bahama. Two sea days on each side bookend the ports, so there's real time to settle in.</p>
+    <div class="intro-party">This quote is priced for <strong>one guest, sailing solo</strong>. Every rate below is the full amount Sonja pays for her own stateroom — not a shared or per-person-double figure.</div>
+  </div>
+</section>
+
+<!-- ITINERARY / SHIP CONTEXT + CRUISE CARD -->
+<section class="section section-mist">
+  <div class="wrap">
+    <div class="flank-head">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18h18"/><path d="M5 18l1.5-7h11L19 18"/><path d="M12 4v7"/><path d="M9 7h6"/></svg>
+      <h2>The sailing</h2>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18h18"/><path d="M5 18l1.5-7h11L19 18"/><path d="M12 4v7"/><path d="M9 7h6"/></svg>
+    </div>
+    <p class="section-sub" style="text-align:center;">One ship, one route — choose the stateroom that fits the week you want.</p>
+
+    <div class="ship-context">
+      <h3>About the Carnival Jubilee</h3>
+      Launched in late 2023, the Jubilee is Carnival's newest Galveston-based ship and the third in its Excel class, alongside Mardi Gras and Carnival Celebration. Expect zones rather than one big crowd: Summer Landing with its patio pool, the Lido tides pool, the BOLT roller coaster up top, and a Serenity retreat reserved for adults. For a birthday solo trip, the spa cabin tiers below are worth a close look — they fold the thermal suite right into your week.
+    </div>
+
+    <div class="cruise-card">
+      <div class="cruise-row">
+        <div class="cruise-left">
+          <div class="cc-kicker">8 nights · round-trip Galveston</div>
+          <div class="cc-name">Carnival Jubilee</div>
+          <div class="cc-tag">Bahamas · Half Moon Cay · Celebration Key</div>
+
+          <div class="cc-detail-row">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M8 2v4M16 2v4"/></svg>
+            <div><span class="lbl">Dates</span><span class="val">February 20 – 28, 2027</span></div>
+          </div>
+          <div class="cc-detail-row">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <div><span class="lbl">Ports of call</span><span class="val">Galveston → 2 sea days → Nassau → RelaxAway at Half Moon Cay → Celebration Key → 2 sea days → Galveston</span></div>
+          </div>
+
+          <div class="map-wrap">
+            <img src="https://contents.odysol.com/MediaImage/MapImage/CARN_707012.jpg" alt="Carnival Jubilee 8-night Bahamas itinerary map" onerror="this.style.display='none'">
+          </div>
+
+          <a class="explore-link" href="https://booking.sigtn.com/swift/cruise/package/1533666--8-day-bahamas?siid=344202&lang=1&slgenuid=NjIxNDk4" target="_blank" rel="noopener">Explore this sailing →</a>
+          <div class="promo-line">Solo cabins carry a single-occupancy rate — pricing below is the full amount for one guest.</div>
+        </div>
+
+        <div class="cruise-right">
+          <div class="rate-title">Choose your stateroom · Sonja, sailing solo</div>
+          <div class="rate-select" role="radiogroup" aria-label="Stateroom selection">
+            <label class="rate-row">
+              <input type="radio" name="selection" value="Interior (Cat 4A)" data-price="1391">
+              <span class="rr-tier">Interior <small>Cat 4A · two convertible beds</small></span>
+              <span class="rr-price">$1,391</span>
+            </label>
+            <label class="rate-row">
+              <input type="radio" name="selection" value="Premium Interior (Cat 4N)" data-price="1511">
+              <span class="rr-tier">Premium Interior <small>Cat 4N · better decks &amp; locations</small></span>
+              <span class="rr-price">$1,511</span>
+            </label>
+            <label class="rate-row">
+              <input type="radio" name="selection" value="Cloud 9 Spa Interior (Cat 4S)" data-price="1521">
+              <span class="rr-tier">Cloud 9 Spa Interior <small>Cat 4S · spa access included</small></span>
+              <span class="rr-price">$1,521</span>
+            </label>
+            <label class="rate-row">
+              <input type="radio" name="selection" value="Havana Interior (Cat HA)" data-price="1601">
+              <span class="rr-tier">Havana Interior <small>Cat HA · Havana pool daytime access</small></span>
+              <span class="rr-price">$1,601</span>
+            </label>
+            <label class="rate-row">
+              <input type="radio" name="selection" value="Oceanview (Cat 6A)" data-price="1831">
+              <span class="rr-tier">Oceanview <small>Cat 6A · picture window + sofa</small></span>
+              <span class="rr-price">$1,831</span>
+            </label>
+            <label class="rate-row">
+              <input type="radio" name="selection" value="Junior Balcony (Cat 7X)" data-price="2041">
+              <span class="rr-tier">Junior Balcony <small>Cat 7X · private balcony, upper decks</small></span>
+              <span class="rr-price">$2,041</span>
+            </label>
+            <label class="rate-row">
+              <input type="radio" name="selection" value="Balcony (Cat 8A)" data-price="2071">
+              <span class="rr-tier">Balcony <small>Cat 8A · full balcony + sofa, Deck 9</small></span>
+              <span class="rr-price">$2,071</span>
+            </label>
+          </div>
+          <div class="rate-foot">Total price · one guest · solo occupancy · incl. taxes &amp; fees</div>
+        </div>
+      </div>
+
+      <!-- image strip -->
+      <div class="img-strip" style="padding-top:26px;">
+        <img src="https://www.carnival.com/-/media/Images/Ships/JB/carnival-jubilee/staterooms/cloud-9-spa-gallery-images/cloud-9-spa-ocean-view-gallery-1.jpg" alt="Cloud 9 Spa ocean-view stateroom aboard Carnival Jubilee" onerror="this.outerHTML='&lt;div class=\'img-placeholder\'&gt;&lt;span&gt;Cloud 9 Spa stateroom&lt;/span&gt;&lt;/div&gt;'">
+        <img src="https://www.carnival.com/awaywego/wp-content/uploads/2021/01/Carnival-Elation-Half-Moon-Cay-0124.jpg" alt="RelaxAway at Half Moon Cay, The Bahamas" onerror="this.outerHTML='&lt;div class=\'img-placeholder\'&gt;&lt;span&gt;RelaxAway · Half Moon Cay&lt;/span&gt;&lt;/div&gt;'">
+        <img src="https://www.carnival.com/-/media/Images/Ships/JB/carnival-jubilee/zones/carnival-jubilee-grand-central-gallery-1.jpg" alt="Grand Central atrium aboard Carnival Jubilee" onerror="this.outerHTML='&lt;div class=\'img-placeholder\'&gt;&lt;span&gt;Carnival Jubilee · Grand Central&lt;/span&gt;&lt;/div&gt;'">
+      </div>
+      <div class="img-cap">Cloud 9 Spa stateroom · RelaxAway at Half Moon Cay · Carnival Jubilee's Grand Central</div>
+
+      <!-- cabin detail -->
+      <div class="cabin-detail">
+        <h4>What the cabin tiers get you</h4>
+        <div class="cabin-grid">
+          <div class="cabin-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="1"/><path d="M3 12h18"/></svg>
+            <div><strong>Interior tiers (4A / 4N)</strong><span>The value play. Same comfortable room; 4N just buys better decks and quieter locations.</span></div>
+          </div>
+          <div class="cabin-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 .5-4 3.5 1.5 5L12 14l-4.5 3 1.5-5-4-3.5 5-.5z"/></svg>
+            <div><strong>Cloud 9 Spa (4S)</strong><span>Priority spa booking + unlimited thermal-suite access (heated loungers, saunas, hydrotherapy). For only $130 over the base interior, the birthday upgrade I'd point to first.</span></div>
+          </div>
+          <div class="cabin-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><circle cx="12" cy="8" r="3"/><path d="M5 18h14"/></svg>
+            <div><strong>Havana (HA)</strong><span>Adults-feel Cuban-themed section with exclusive daytime access to the Havana pool deck. Guests must be 12 or older.</span></div>
+          </div>
+          <div class="cabin-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 14h18"/><path d="M9 4v10"/></svg>
+            <div><strong>Oceanview (6A)</strong><span>A picture window and a sofa — natural light without the balcony price. A solid solo middle ground.</span></div>
+          </div>
+          <div class="cabin-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M14 4v16"/><path d="M17 9h2M17 13h2"/></svg>
+            <div><strong>Balcony tiers (7X / 8A)</strong><span>Your own outdoor space — coffee at sunrise, the ports rolling by. 8A sits on Deck 9 with a full balcony and sofa; 7X is the slightly smaller "junior" balcony on upper decks.</span></div>
+          </div>
+          <div class="cabin-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 8l7-5 7 5"/><path d="M5 8v10h14V8"/></svg>
+            <div><strong>Every tier includes</strong><span>Two convertible beds, full bathroom with shower, vanity with illuminated mirror, in-room safe, dedicated steward, and Carnival Comfort Collection linens.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- honest-trade note -->
+    <div class="trade-note">
+      <strong>The honest trade on a solo cruise:</strong> a stateroom priced for one guest costs more than half of a shared room — cruise pricing is built around two people per cabin, so a solo booking absorbs more of the fixed cost. The upside is the whole room to yourself, no compromise on schedule, and a ship with built-in solo-friendly spaces. If you'd ever consider bringing a friend, sharing roughly halves the per-person cost — say the word and I'll reprice it as a double.
+    </div>
+
+    <!-- running total -->
+    <div class="total-bar" id="totalBar">
+      <span class="tb-label" id="tbLabel">Select a stateroom above to see your total</span>
+      <span class="tb-amount" id="tbAmount"></span>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="form-section">
+  <div class="wrap" style="max-width:620px;">
+    <h2 style="text-align:center;">Send me your selection</h2>
+    <p class="section-sub" style="text-align:center;">Choose a stateroom above, fill in your details, and I'll confirm final pricing and the deposit before anything is booked.</p>
+
+    <form id="tripForm">
+      <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+      <input type="hidden" name="subject" value="Sonja Gipson — Carnival Jubilee Birthday Cruise Selection">
+      <input type="hidden" name="from_name" value="Sonja Gipson — PMTP Trip Form">
+      <input type="hidden" name="redirect" value="false">
+
+      <input type="hidden" name="Stateroom_Choice" id="hidden_cabin" value="None selected">
+      <input type="hidden" name="Estimated_Total" id="hidden_total" value="—">
+      <input type="hidden" name="Sailing" value="Carnival Jubilee · 8-Night Bahamas · Feb 20–28, 2027 · solo occupancy">
+
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="Name" required>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="Email" required>
+      </div>
+      <div class="field">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="Phone">
+      </div>
+      <div class="field">
+        <label for="notes">Anything else — birthday plans, dietary needs, questions?</label>
+        <textarea id="notes" name="Trip_Notes" placeholder="Tell me what would make this week feel like yours."></textarea>
+      </div>
+
+      <div class="insurance-block">
+        <div class="ins-label">Travel insurance</div>
+        <label class="ins-opt">
+          <input type="radio" name="Insurance_Choice" value="Yes — please send me a travel insurance quote" required>
+          <span>Yes, please send me a travel insurance quote</span>
+        </label>
+        <label class="ins-opt">
+          <input type="radio" name="Insurance_Choice" value="No — I decline travel insurance and accept the risks of traveling without coverage" required>
+          <span>No, I decline insurance and understand the risks</span>
+        </label>
+      </div>
+
+      <button type="submit" class="submit-btn">Send my selection</button>
+    </form>
+
+    <div class="thanks-msg" id="thanksMsg">
+      <h3>Got it, Sonja!</h3>
+      <p>Your selection is on its way to me. I'll confirm final pricing and next steps shortly — talk soon.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-contact">
+    <div class="name">Christina Garcia</div>
+    <div class="role">Owner &amp; Travel Advisor · Point Me to Paradise Travel</div>
+    <div><a id="emailLink" href="#">email</a><span class="sep">·</span><a href="tel:+12812290862">(281) 229-0862</a></div>
+  </div>
+  <p class="footer-disclosure">Individual hotels, transfers, and tours in your quote are priced at publicly available rates — and in many cases lower than what you'd find on your own. You don't have to worry about overpaying for a piece of your trip. What you're paying for is the rest: the right rooms at the right property, operators we've used for years, the trip app, and a human who answers when something doesn't go to plan.</p>
+</footer>
+
+<script>
+// Email assembly (Cloudflare obfuscation)
+var addr = 'Christina' + '@' + 'PointMeToParadise.com';
+var el = document.getElementById('emailLink');
+el.href = 'mailto:' + addr;
+el.textContent = addr;
+
+// Stateroom selection -> running total + hidden fields
+function fmt(n) { return '$' + n.toLocaleString('en-US'); }
+function updateTotal() {
+  var sel = document.querySelector('input[name="selection"]:checked');
+  var label = document.getElementById('tbLabel');
+  var amount = document.getElementById('tbAmount');
+  var hCabin = document.getElementById('hidden_cabin');
+  var hTotal = document.getElementById('hidden_total');
+  if (sel) {
+    var price = parseInt(sel.getAttribute('data-price'), 10);
+    label.textContent = sel.value + ' · estimated total, solo occupancy';
+    amount.textContent = 'Est. ' + fmt(price);
+    hCabin.value = sel.value;
+    hTotal.value = 'Est. ' + fmt(price);
+  } else {
+    label.textContent = 'Select a stateroom above to see your total';
+    amount.textContent = '';
+    hCabin.value = 'None selected';
+    hTotal.value = '—';
+  }
+}
+Array.prototype.forEach.call(document.querySelectorAll('input[name="selection"]'), function(r) {
+  r.addEventListener('change', updateTotal);
+});
+updateTotal();
+
+// Form submit
+document.getElementById('tripForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var form = e.target;
+  if (!document.querySelector('input[name="selection"]:checked')) {
+    alert('Please choose a stateroom before sending your selection.');
+    document.getElementById('totalBar').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    return;
+  }
+  var data = new FormData(form);
+  fetch('https://api.web3forms.com/submit', { method: 'POST', body: data })
+    .then(function(res) { return res.json(); })
+    .then(function(json) {
+      if (json.success) {
+        form.style.display = 'none';
+        document.getElementById('thanksMsg').classList.add('show');
+      } else {
+        alert('Something went wrong. Please email Christina directly or text (281) 229-0862.');
+      }
+    })
+    .catch(function() {
+      alert('Something went wrong. Please email Christina directly or text (281) 229-0862.');
+    });
+});
+</script>
+
+</body>
+</html>
