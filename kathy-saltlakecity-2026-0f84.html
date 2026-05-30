@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salt Lake City · Prepared for Kathy &amp; Husband · Point Me to Paradise Travel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --aqua-pale: #C4E4E1;
+    --aqua-mist: #EAF3F2;
+    --aqua: #75AFB1;
+    --aqua-dark: #4F8A8C;
+    --sand: #ECE7DC;
+    --sand-light: #F4F1E9;
+    --gold-whisper: #D6C8A8;
+    --white: #FFFFFF;
+    --paper: #FBFDFD;
+    --ink: #2B2420;
+    --ink-soft: #6B6359;
+    --line: #E5E9E8;
+    color-scheme: light;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.6;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: 96px;
+  }
+
+  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 500; line-height: 1.2; color: var(--ink); }
+
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- HERO (Variant B) ---------- */
+  .hero {
+    position: relative;
+    background-image:
+      linear-gradient(180deg,
+        rgba(255, 255, 255, 0.55) 0%,
+        rgba(196, 228, 225, 0.72) 38%,
+        rgba(234, 243, 242, 0.88) 75%,
+        rgba(251, 253, 253, 0.98) 100%),
+      url('https://www.visitutah.com/azure/cmsroot/visitutah/media/site-assets/three-season-photography/wasatch-metro/salt-lake-city-3/salt-lake-city_wasatch-mountains_skyline_visit-salt-lake.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 110px 24px 88px;
+    text-align: center;
+    border-bottom: 1px solid var(--line);
+  }
+  .hero-mark {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.26em;
+    color: var(--aqua-dark);
+    font-weight: 600;
+    margin-bottom: 26px;
+  }
+  .hero h1 {
+    font-size: clamp(40px, 6vw, 64px);
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 22px;
+  }
+  .hero-rule { width: 60px; height: 1px; background: var(--gold-whisper); margin: 0 auto 24px; }
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(19px, 2.2vw, 24px);
+    color: var(--ink);
+    max-width: 600px;
+    margin: 0 auto 20px;
+  }
+  .hero-sig {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- OVERVIEW STRIP ---------- */
+  .overview {
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+    padding: 34px 24px;
+  }
+  .overview-grid {
+    max-width: 920px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .ov-item { text-align: center; }
+  .ov-item svg { color: var(--aqua-dark); margin-bottom: 8px; }
+  .ov-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--ink-soft); margin-bottom: 3px; }
+  .ov-value { font-size: 15px; font-weight: 500; color: var(--ink); }
+
+  /* ---------- VALUE STRIP ---------- */
+  .value-strip { background: var(--sand-light); padding: 56px 24px; }
+  .value-head { text-align: center; margin-bottom: 40px; }
+  .value-head h2 { font-size: 32px; color: var(--ink); margin-bottom: 8px; }
+  .value-head .sub { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; color: var(--ink-soft); }
+  .value-cols {
+    max-width: 920px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+  .value-col {
+    padding: 0 28px;
+    text-align: center;
+    position: relative;
+  }
+  .value-col + .value-col::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 6px; bottom: 6px;
+    width: 1px;
+    background: var(--gold-whisper);
+  }
+  .value-col svg { color: var(--aqua-dark); margin-bottom: 14px; }
+  .value-col h3 { font-size: 21px; margin-bottom: 12px; }
+  .value-col p { font-size: 14px; color: var(--ink-soft); line-height: 1.65; }
+
+  /* ---------- SECTIONS ---------- */
+  section { padding: 56px 0; }
+  section.band { background: var(--aqua-mist); }
+  .sec-head { margin-bottom: 8px; }
+  h2.sec-title { font-size: clamp(26px, 4vw, 34px); }
+  .sec-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--ink-soft);
+    margin-bottom: 32px;
+  }
+  .intro p { font-size: 16px; color: var(--ink); margin-bottom: 16px; }
+  .intro p:last-child { margin-bottom: 0; }
+
+  /* heading flanks */
+  .flank-head { display: flex; align-items: center; justify-content: center; gap: 16px; text-align: center; }
+  .flank-head svg { color: var(--aqua-dark); opacity: 0.65; flex-shrink: 0; }
+
+  /* ---------- CARDS ---------- */
+  .card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 28px;
+  }
+  .card-feature { border: 2px solid var(--aqua-dark); }
+  .card-body { padding: 30px; }
+  .card-kicker {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-soft);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .card-tag {
+    background: var(--aqua-dark);
+    color: var(--white);
+    padding: 4px 10px;
+    border-radius: 3px;
+    letter-spacing: 0.14em;
+    font-size: 10px;
+    font-weight: 600;
+  }
+  .card h3 { font-size: 28px; margin-bottom: 6px; }
+  .card-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 19px; color: var(--aqua-dark); margin-bottom: 20px; }
+  .card-body p { font-size: 15px; color: var(--ink); margin-bottom: 14px; }
+
+  .img-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 22px 0; }
+  .img-strip img { width: 100%; height: 180px; object-fit: cover; border-radius: 4px; display: block; }
+
+  .amenity-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px 24px;
+    margin: 22px 0;
+    padding: 22px;
+    background: var(--sand-light);
+    border-radius: 4px;
+  }
+  .amenity { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--ink); }
+  .amenity svg { color: var(--aqua-dark); flex-shrink: 0; margin-top: 2px; }
+
+  .room-block { margin: 24px 0; padding-top: 22px; border-top: 1px solid var(--line); }
+  .room-block h4 { font-size: 18px; margin-bottom: 8px; }
+  .room-block p { font-size: 14px; color: var(--ink-soft); margin-bottom: 0; }
+
+  .price-box {
+    background: var(--aqua-pale);
+    border-radius: 5px;
+    padding: 24px;
+    margin-top: 24px;
+  }
+  .price-kicker { font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--aqua-dark); font-weight: 600; margin-bottom: 8px; }
+  .price-amount { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 600; color: var(--ink); line-height: 1; }
+  .price-pp { font-size: 14px; color: var(--ink-soft); margin: 6px 0 18px; }
+  .price-box ul { list-style: none; margin: 0 0 14px; }
+  .price-box li { font-size: 14px; color: var(--ink); padding-left: 22px; position: relative; margin-bottom: 7px; }
+  .price-box li svg { position: absolute; left: 0; top: 3px; color: var(--aqua-dark); }
+  .price-fine { font-size: 12px; color: var(--ink-soft); line-height: 1.6; border-top: 1px solid rgba(79,138,140,0.25); padding-top: 12px; }
+  .extras { margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(79,138,140,0.25); }
+  .extras-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--aqua-dark); font-weight: 600; margin-bottom: 10px; }
+  .extra-row { display: flex; justify-content: space-between; gap: 16px; font-size: 13px; color: var(--ink); padding: 5px 0; border-bottom: 1px dotted rgba(79,138,140,0.2); }
+  .extra-row span:last-child { color: var(--ink-soft); text-align: right; white-space: nowrap; }
+  .extra-note { font-size: 12px; color: var(--ink-soft); line-height: 1.55; margin-top: 10px; }
+
+  /* selection pill */
+  .select-row { margin-top: 22px; }
+  .pill {
+    display: flex; align-items: center; gap: 12px;
+    border: 1.5px solid var(--aqua-dark);
+    border-radius: 4px;
+    padding: 14px 18px;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    min-height: 48px;
+    user-select: none;
+  }
+  .pill input { width: 18px; height: 18px; accent-color: var(--aqua-dark); flex-shrink: 0; }
+  .pill .pill-label { font-size: 15px; font-weight: 500; color: var(--aqua-dark); }
+  .pill:has(input:checked) { background: var(--aqua-dark); }
+  .pill:has(input:checked) .pill-label { color: var(--white); }
+
+  /* ---------- RENTAL CALLOUT ---------- */
+  .rental {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--aqua-dark);
+    border-radius: 6px;
+    padding: 30px;
+  }
+  .rental h3 { font-size: 22px; margin-bottom: 10px; }
+  .rental p { font-size: 15px; color: var(--ink); margin-bottom: 18px; }
+  .btn-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--aqua-dark);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 13px 22px;
+    border-radius: 4px;
+    min-height: 48px;
+  }
+  .btn-link svg { flex-shrink: 0; }
+
+  /* ---------- FLIGHTS ADD-ON ---------- */
+  .flight-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 30px;
+  }
+  .flight-toggle { margin-top: 22px; }
+  .leg { border: 1px solid var(--line); border-radius: 5px; padding: 18px 20px; margin-bottom: 14px; }
+  .leg-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 14px; }
+  .leg-dir { font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--aqua-dark); font-weight: 600; }
+  .leg-date { font-size: 14px; color: var(--ink); font-weight: 500; }
+  .leg-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .leg-point { flex: 1; }
+  .leg-time { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 500; color: var(--ink); }
+  .leg-air { font-size: 13px; color: var(--ink-soft); }
+  .leg-mid { flex: 0 0 auto; text-align: center; color: var(--aqua-dark); padding: 0 8px; }
+  .leg-mid svg { display: block; margin: 0 auto 4px; }
+  .leg-dur { font-size: 11px; color: var(--ink-soft); white-space: nowrap; }
+  .leg-point:last-child { text-align: right; }
+  .leg-meta { font-size: 12px; color: var(--ink-soft); margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--line); }
+
+  /* ---------- NOTES ---------- */
+  .notes-area { margin-top: 8px; }
+  textarea, input[type="text"], input[type="email"], input[type="tel"] {
+    width: 100%;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    color: var(--ink);
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 14px;
+  }
+  textarea { min-height: 110px; resize: vertical; }
+  textarea:focus, input:focus { outline: none; border-color: var(--aqua-dark); }
+
+  /* ---------- FORM ---------- */
+  .form-card { background: var(--white); border: 1px solid var(--line); border-radius: 6px; padding: 32px; }
+  .field { margin-bottom: 18px; }
+  .field label { display: block; font-size: 13px; font-weight: 500; color: var(--ink); margin-bottom: 6px; }
+  .req { color: var(--aqua-dark); }
+  .ins-group { margin: 8px 0 24px; }
+  .ins-opt {
+    display: flex; align-items: flex-start; gap: 12px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 14px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    min-height: 48px;
+  }
+  .ins-opt:has(input:checked) { border-color: var(--aqua-dark); background: var(--aqua-mist); }
+  .ins-opt input { width: 18px; height: 18px; accent-color: var(--aqua-dark); flex-shrink: 0; margin-top: 2px; }
+  .ins-opt span { font-size: 14px; color: var(--ink); }
+  .btn-submit {
+    width: 100%;
+    background: var(--aqua-dark);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    padding: 16px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    min-height: 52px;
+  }
+  .btn-submit:hover { background: #437678; }
+  .thanks { display: none; text-align: center; padding: 40px 20px; }
+  .thanks.show { display: block; }
+  .thanks h3 { font-size: 26px; margin-bottom: 12px; color: var(--aqua-dark); }
+  .thanks p { font-size: 15px; color: var(--ink-soft); }
+
+  /* ---------- RUNNING TOTAL BAR ---------- */
+  .total-bar {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: var(--aqua-pale);
+    border-top: 1px solid var(--aqua);
+    padding: 12px 24px;
+    z-index: 50;
+  }
+  .total-inner {
+    max-width: 920px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .total-label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--aqua-dark); font-weight: 600; }
+  .total-amt { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 600; color: var(--ink); }
+  .total-pp { font-size: 12px; color: var(--ink-soft); }
+
+  /* ---------- FOOTER ---------- */
+  footer { background: var(--sand-light); padding: 48px 24px; border-top: 1px solid var(--line); }
+  .foot-inner { max-width: 920px; margin: 0 auto; text-align: center; }
+  .foot-name { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--ink); margin-bottom: 4px; }
+  .foot-role { font-size: 13px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 16px; }
+  .foot-contact { font-size: 15px; color: var(--ink); margin-bottom: 6px; }
+  .foot-contact a { color: var(--aqua-dark); text-decoration: none; }
+  .foot-rule { width: 60px; height: 1px; background: var(--gold-whisper); margin: 24px auto; }
+  .foot-disclosure { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 15px; color: var(--ink-soft); line-height: 1.7; max-width: 680px; margin: 0 auto; }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 768px) {
+    .overview-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .value-cols { grid-template-columns: 1fr; }
+    .value-col { padding: 24px 0; }
+    .value-col + .value-col::before { display: none; }
+    .value-col + .value-col { border-top: 1px solid var(--gold-whisper); }
+    .img-strip { grid-template-columns: 1fr; }
+    .img-strip img { height: 220px; }
+    .amenity-grid { grid-template-columns: 1fr; }
+    .extra-row { flex-direction: column; gap: 2px; }
+    .extra-row span:last-child { text-align: left; white-space: normal; }
+    .total-inner { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-mark">Point Me to Paradise Travel</div>
+  <h1>Two Weeks in Salt Lake City</h1>
+  <div class="hero-rule"></div>
+  <p class="hero-sub">Fourteen nights downtown, with the Wasatch at the end of every street and the canyons a half-hour drive away.</p>
+  <p class="hero-sig">Prepared for Kathy &amp; her husband by Christina Garcia</p>
+</header>
+
+<!-- OVERVIEW STRIP -->
+<div class="overview">
+  <div class="overview-grid">
+    <div class="ov-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <div class="ov-label">Travelers</div>
+      <div class="ov-value">2 adults</div>
+    </div>
+    <div class="ov-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      <div class="ov-label">Dates</div>
+      <div class="ov-value">Jun 2–16, 2026</div>
+    </div>
+    <div class="ov-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9v.01M9 12v.01M9 15v.01M9 18v.01"/></svg>
+      <div class="ov-label">Nights</div>
+      <div class="ov-value">14 nights</div>
+    </div>
+    <div class="ov-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <div class="ov-label">Region</div>
+      <div class="ov-value">Downtown SLC</div>
+    </div>
+  </div>
+</div>
+
+<!-- VALUE STRIP -->
+<div class="value-strip">
+  <div class="value-head">
+    <h2>Beyond the booking</h2>
+    <div class="sub">What's included with every Point Me to Paradise trip</div>
+  </div>
+  <div class="value-cols">
+    <div class="value-col">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+      <h3>The Trip Guide</h3>
+      <p>A document built for your week — restaurants we'd return to, neighborhoods worth the walk, what to skip, the places open on a Sunday. Not pulled from a database. Researched against where you're staying and what you've told us matters.</p>
+    </div>
+    <div class="value-col">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+      <h3>The Trip App</h3>
+      <p>Itinerary, confirmation numbers, transfer windows, and ground contacts in one place — accessible offline, updated in real time. If a flight shifts or weather moves, the app moves with it.</p>
+    </div>
+    <div class="value-col">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+      <h3>Best-Rate Assurance</h3>
+      <p>Every hotel night, cruise rate, and tour in your quote is priced at publicly available rates. If you find the same component for less elsewhere, we'll match it — you don't have to wonder whether you're overpaying for a piece of your trip.</p>
+    </div>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section>
+  <div class="wrap intro">
+    <div class="sec-head"><h2 class="sec-title">Your two weeks</h2></div>
+    <p class="sec-sub">A long stay, one base, and a city that puts mountains, canyons, and a walkable downtown all within reach.</p>
+    <p>Fourteen nights is enough time to stop being a visitor and start having a routine — a coffee place, a walk you do twice, a canyon drive on a clear morning. The plan below puts you in one downtown base for the whole stretch, so there's no mid-trip move, no second check-in, no living out of a half-unpacked bag.</p>
+    <p>The hotel below is my anchor recommendation for the two of you — priced for one room, two adults, for all fourteen nights. If you'd rather have a kitchen and more room to spread out for a stay this long, I've also pointed you toward vacation rentals further down, and I'm glad to pull specific options for you. Flights are a separate, optional add-on — your call whether to book them through me or on your own.</p>
+  </div>
+</section>
+
+<!-- HOTEL -->
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head flank-head">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9v.01M9 12v.01M9 15v.01M9 18v.01"/></svg>
+      <h2 class="sec-title">Where you'd stay</h2>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9v.01M9 12v.01M9 15v.01M9 18v.01"/></svg>
+    </div>
+    <p class="sec-sub" style="text-align:center;">Two very different stays — one downtown and walkable, one out in Sandy near the canyons. Here's the honest trade between them.</p>
+
+    <div class="card card-feature">
+      <div class="card-body">
+        <div class="card-kicker">
+          <span class="card-tag">TOP RECOMMENDATION</span>
+          <span>Option 1 · 1 room · 2 adults · 14 nights</span>
+        </div>
+        <h3>The Little America Hotel</h3>
+        <div class="card-tagline">Ten acres of private grounds in the middle of downtown.</div>
+
+        <p>Little America opened in 1952 as a single roadside stop and grew, over seventy years, into a 17-story downtown landmark run by the same Utah family that owns the Grand America across the street. It has held a AAA Four Diamond rating for more than two decades, and the interiors lean into it — French Richelieu furnishings, silk wall coverings, English wool carpet, a fireplace going in the lobby.</p>
+
+        <p>For a June stay, the property's own pitch is the Garden rooms, and it holds up: the hotel sits on ten acres of landscaped grounds, which no other downtown SLC hotel can claim, so you get a pocket of quiet and greenery without leaving the center of the city. The half-indoor, half-outdoor pool looks out over the skyline and runs year-round; the seasonal outdoor pool opens for the summer with poolside food and drink service.</p>
+
+        <p>Location does a lot of work here for two weeks without a rush. You're about a mile from Temple Square, steps from the City Creek Center shops and the Salt Palace, and right by the TRAX light-rail Courthouse Station — so a car is optional, not required. The airport is roughly ten minutes out, and the Cottonwood canyons and their ski resorts are about thirty minutes by car if you want a mountain day.</p>
+
+        <div class="img-strip">
+          <img src="https://images.trvl-media.com/lodging/1000000/10000/2900/2841/ce6037c8.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="The Little America Hotel">
+          <img src="https://images.trvl-media.com/lodging/1000000/10000/2900/2841/83d1b3e6.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="The Little America Hotel room">
+          <img src="https://images.trvl-media.com/lodging/1000000/10000/2900/2841/4ebe5f8e.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="The Little America Hotel grounds">
+        </div>
+
+        <div class="amenity-grid">
+          <div class="amenity">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Downtown, ~1 mi from Temple Square; by TRAX light rail</span>
+          </div>
+          <div class="amenity">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M2 12a5 5 0 0 1 5-5h10a5 5 0 0 1 5 5M6 16v2M18 16v2"/></svg>
+            <span>Indoor/outdoor pool year-round + seasonal summer pool</span>
+          </div>
+          <div class="amenity">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v18M6 8h12a2 2 0 0 1 0 4H6"/></svg>
+            <span>Ten acres of private landscaped grounds</span>
+          </div>
+          <div class="amenity">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+            <span>~10 min to SLC airport; ~30 min to Cottonwood canyons</span>
+          </div>
+          <div class="amenity">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4zM6 1v3M10 1v3M14 1v3"/></svg>
+            <span>On-site buffet restaurant, coffee shop &amp; lobby lounge</span>
+          </div>
+          <div class="amenity">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14M2 22h20M9 6V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"/></svg>
+            <span>Fitness center, concierge, gift shops, daily housekeeping</span>
+          </div>
+        </div>
+
+        <div class="room-block">
+          <h4>Garden 1 King · sleeps 2</h4>
+          <p>A 46 sq m (≈495 sq ft) garden-level room with one king bed, a 55-inch TV, mini-fridge, microwave, and coffee maker — opening onto the landscaped grounds rather than a street. Among the more spacious downtown rooms in the city. Upgrades to Tower and Courtside categories are available if you'd like a higher floor or mountain view — just ask and I'll price it.</p>
+        </div>
+
+        <div class="price-box">
+          <div class="price-kicker">Room rate · 14 nights</div>
+          <div class="price-amount">Est. $2,404</div>
+          <div class="price-pp">Est. $1,202 per person · 2 adults · for the full 14-night stay</div>
+          <ul>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Garden 1 King room, 14 nights (Jun 2–16)</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Free WiFi, year-round pool &amp; fitness center access</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Fully refundable if cancelled before Jun 1</li>
+          </ul>
+          <div class="extras">
+            <div class="extras-label">Optional extras · not included in the rate</div>
+            <div class="extra-row"><span>Self parking</span><span>$18 / day · in-out privileges</span></div>
+            <div class="extra-row"><span>Valet parking</span><span>$18 / day · in-out privileges</span></div>
+            <div class="extra-row"><span>Cooked-to-order breakfast</span><span>$2–$25 per person · served 6–11 AM</span></div>
+            <div class="extra-note">Over 14 nights, daily self-parking runs about $252 if you bring or rent a car. Fees may not include tax and are set by the property.</div>
+          </div>
+          <div class="price-fine">Room-only rate; final pricing confirmed by Christina before booking. Final taxes confirmed at booking.</div>
+        </div>
+
+        <div class="select-row">
+          <label class="pill">
+            <input type="radio" name="hotel" value="The Little America Hotel — Garden 1 King — Est. $2,404 (14 nights)" onclick="setTimeout(updateTotal,0)">
+            <span class="pill-label">Select The Little America Hotel</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="card-kicker">
+          <span>Option 2 · 1 room · 2 adults · 14 nights</span>
+        </div>
+        <h3>Best Western Plus CottonTree Inn</h3>
+        <div class="card-tagline">The value play — out in Sandy, closer to the canyons.</div>
+
+        <p>This is the practical, lower-cost alternative, and it earns its place on a different set of strengths than Little America. It sits in Sandy, about twenty miles and twenty-five minutes south of downtown along I-15 — suburban rather than central, but recently renovated throughout, with new beds, new furniture, 40-inch TVs, and a mini-fridge in every room. Guest scores run high (8.8), and couples rate it well.</p>
+
+        <p>Two things come free here that you'd pay for at a downtown hotel: self-parking and a full hot breakfast every morning, served 6 to 10. Over fourteen nights, that's real money back in your pocket — roughly $250 in parking alone that you won't spend. There's an indoor pool and hot tub, a fitness center, and laundry on site.</p>
+
+        <p><em>The honest trade:</em> you're not in the city. Downtown SLC, Temple Square, and the City Creek shops are a 25-minute drive — though a TRAX light-rail station sits about two miles away and runs straight into the center, so a car isn't strictly required. What Sandy gives you instead is position: you're noticeably closer to the Cottonwood canyons and the ski resorts (Snowbird, Brighton, Solitude, Alta), near a ski-bus stop, and within a few minutes of the Living Planet Aquarium, South Towne Center, and Rio Tinto Stadium. If your two weeks lean toward mountains and day trips over downtown evenings, this base actually fits better — and costs less.</p>
+
+        <div class="img-strip">
+          <img src="https://images.trvl-media.com/lodging/1000000/70000/67900/67868/70496730.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="Best Western Plus CottonTree Inn">
+          <img src="https://images.trvl-media.com/lodging/1000000/70000/67900/67868/ae5a43e7.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="Best Western Plus CottonTree Inn room">
+          <img src="https://images.trvl-media.com/lodging/1000000/70000/67900/67868/cfade9ba.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="Best Western Plus CottonTree Inn interior">
+        </div>
+
+        <div class="amenity-grid">
+          <div class="amenity">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Sandy, ~20 mi / 25 min south of downtown; 2 mi to TRAX</span>
+          </div>
+          <div class="amenity">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 8h4a2 2 0 0 1 0 4H9V8zM9 12v4"/></svg>
+            <span>Free self-parking — no daily charge</span>
+          </div>
+          <div class="amenity">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4zM6 1v3M10 1v3M14 1v3"/></svg>
+            <span>Free full hot breakfast daily, 6–10 AM</span>
+          </div>
+          <div class="amenity">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M2 12a5 5 0 0 1 5-5h10a5 5 0 0 1 5 5M6 16v2M18 16v2"/></svg>
+            <span>Indoor pool &amp; hot tub; fitness center (18+)</span>
+          </div>
+          <div class="amenity">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v3M16 3v3M3 9l9 6 9-6M5 21h14a2 2 0 0 0 2-2V7H3v12a2 2 0 0 0 2 2z"/></svg>
+            <span>Closer to Cottonwood canyons &amp; ski resorts; ski-bus stop</span>
+          </div>
+          <div class="amenity">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg>
+            <span>Newly renovated; steps from South Towne Center</span>
+          </div>
+        </div>
+
+        <div class="room-block">
+          <h4>Standard King · sleeps 2</h4>
+          <p>One king bed, non-smoking, with a mini-refrigerator, new 40-inch flat-screen TV, and free WiFi. Renovated furnishings throughout. Reserve-now-pay-later available. Suite upgrades exist for added space if you'd like more room to spread out over two weeks — just ask and I'll price it.</p>
+        </div>
+
+        <div class="price-box">
+          <div class="price-kicker">Room rate · 14 nights</div>
+          <div class="price-amount">Est. $2,669</div>
+          <div class="price-pp">Est. $1,335 per person · 2 adults · for the full 14-night stay</div>
+          <ul>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Standard King room, 14 nights (Jun 2–16)</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Free full breakfast, free parking, WiFi, pool &amp; gym</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Fully refundable if cancelled before Jun 1</li>
+          </ul>
+          <div class="price-fine">Room-only rate; final pricing confirmed by Christina before booking. Breakfast and self-parking are included at no charge. Pets $25/night if applicable. Final taxes confirmed at booking.</div>
+        </div>
+
+        <div class="select-row">
+          <label class="pill">
+            <input type="radio" name="hotel" value="Best Western Plus CottonTree Inn — Standard King — Est. $2,669 (14 nights)" onclick="setTimeout(updateTotal,0)">
+            <span class="pill-label">Select Best Western Plus CottonTree Inn</span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLIGHTS -->
+<section>
+  <div class="wrap">
+    <div class="sec-head flank-head">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+      <h2 class="sec-title">Flights</h2>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+    </div>
+    <p class="sec-sub" style="text-align:center;">Optional — add these to your total, or book your own. Whatever's easiest for you.</p>
+
+    <div class="flight-card">
+      <img src="https://ik.imgkit.net/3vlqs5axxjf/TAW/ik-seo/uploadedImages/Content-Travel_Types/Aviation/Features/SouthwestChanges_HERO/Southwest-Airlines-Announces-Major-Changes-Assigne.jpg?tr=w-1008%2Ch-567%2Cfo-auto" alt="Southwest Airlines" style="width:100%;height:200px;object-fit:cover;border-radius:5px;margin-bottom:22px;display:block;">
+      <p style="font-size:15px;color:var(--ink);margin-bottom:22px;">Nonstop both ways on Southwest, in and out of Hobby — no connections, no early-morning scramble. These dates line up exactly with your hotel stay. Flights are optional: add them here and they'll fold into your total, or skip them and book your own.</p>
+
+      <div class="leg">
+        <div class="leg-head">
+          <span class="leg-dir">Departing</span>
+          <span class="leg-date">Tue, Jun 2</span>
+        </div>
+        <div class="leg-row">
+          <div class="leg-point">
+            <div class="leg-time">8:45 AM</div>
+            <div class="leg-air">Houston Hobby (HOU)</div>
+          </div>
+          <div class="leg-mid">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+            <span class="leg-dur">3h 15m · nonstop</span>
+          </div>
+          <div class="leg-point">
+            <div class="leg-time">11:00 AM</div>
+            <div class="leg-air">Salt Lake City (SLC)</div>
+          </div>
+        </div>
+        <div class="leg-meta">Southwest · Choice fare · Boeing 737 MAX 8 · WN 3511</div>
+      </div>
+
+      <div class="leg">
+        <div class="leg-head">
+          <span class="leg-dir">Returning</span>
+          <span class="leg-date">Tue, Jun 16</span>
+        </div>
+        <div class="leg-row">
+          <div class="leg-point">
+            <div class="leg-time">2:25 PM</div>
+            <div class="leg-air">Salt Lake City (SLC)</div>
+          </div>
+          <div class="leg-mid">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="transform:scaleX(-1);"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+            <span class="leg-dur">3h · nonstop</span>
+          </div>
+          <div class="leg-point">
+            <div class="leg-time">6:25 PM</div>
+            <div class="leg-air">Houston Hobby (HOU)</div>
+          </div>
+        </div>
+        <div class="leg-meta">Southwest · Choice fare · Boeing 737 · WN 3595</div>
+      </div>
+
+      <div class="price-box" style="margin-top:24px;">
+        <div class="price-kicker">Round-trip air · 2 travelers</div>
+        <div class="price-amount">Est. $1,624</div>
+        <div class="price-pp">Est. $812 per person · round trip · Southwest Choice fare</div>
+        <div class="price-fine" style="border-top:none;padding-top:0;">Choice fare (not Basic) — includes seat selection and same-day change flexibility. Final fare confirmed at booking; airfare can move until ticketed.</div>
+      </div>
+
+      <div class="flight-toggle">
+        <label class="pill">
+          <input type="checkbox" name="flights" value="Round-trip Southwest flights HOU-SLC — Est. $1,624 (2 travelers)" onclick="setTimeout(updateTotal,0)">
+          <span class="pill-label">Add round-trip flights · Est. $1,624</span>
+        </label>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAR RENTAL -->
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head flank-head">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M5 17a2 2 0 0 1-2-2v-3l2-5a2 2 0 0 1 2-1.5h8a2 2 0 0 1 2 1.5l2 5v3a2 2 0 0 1-2 2M7 17v1a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1M20 17v1a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1M6.5 13h11"/></svg>
+      <h2 class="sec-title">A car for the two weeks</h2>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M5 17a2 2 0 0 1-2-2v-3l2-5a2 2 0 0 1 2-1.5h8a2 2 0 0 1 2 1.5l2 5v3a2 2 0 0 1-2 2M7 17v1a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1M20 17v1a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1M6.5 13h11"/></svg>
+    </div>
+    <p class="sec-sub" style="text-align:center;">Optional — but worth it for canyon mornings, ski-resort day trips, and the drive in from Sandy.</p>
+
+    <div class="flight-card">
+      <p style="font-size:15px;color:var(--ink);margin-bottom:22px;">For two weeks with mountains and canyons on the table, a car earns its keep — and it's close to essential if you land on the Sandy hotel, where downtown and the resorts are a drive away. Picked up and dropped right at the airport terminal, so no shuttle to an off-site lot.</p>
+
+      <div class="leg" style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;">
+        <div style="flex:1;min-width:200px;">
+          <div class="leg-dir" style="margin-bottom:6px;">Midsize SUV · Thrifty</div>
+          <div style="font-family:'Playfair Display',serif;font-size:20px;color:var(--ink);margin-bottom:4px;">Nissan Rogue or similar</div>
+          <div style="font-size:13px;color:var(--ink-soft);">Seats 5 · automatic · unlimited mileage · counter &amp; car in terminal</div>
+        </div>
+        <div style="flex:0 0 auto;">
+          <div style="font-size:13px;color:var(--aqua-dark);font-weight:500;">Free cancellation · pay at pick-up</div>
+        </div>
+      </div>
+
+      <div class="price-box" style="margin-top:24px;">
+        <div class="price-kicker">Rental · 14 days</div>
+        <div class="price-amount">Est. $814</div>
+        <div class="price-pp">Est. $58 per day · pay at pick-up, free cancellation</div>
+        <div class="price-fine" style="border-top:none;padding-top:0;">Midsize SUV (Nissan Rogue or similar). Final rate confirmed at booking; taxes, fees, and any optional coverage are settled with the rental desk at pick-up. Driver must meet the rental company's age and license requirements.</div>
+      </div>
+
+      <div class="flight-toggle">
+        <label class="pill">
+          <input type="checkbox" name="car" value="Midsize SUV rental (Thrifty, Nissan Rogue or similar) — Est. $814 (14 days)" onclick="setTimeout(updateTotal,0)">
+          <span class="pill-label">Add a midsize SUV · Est. $814</span>
+        </label>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VACATION RENTALS -->
+<section>
+  <div class="wrap">
+    <div class="sec-head"><h2 class="sec-title">Prefer a vacation rental?</h2></div>
+    <p class="sec-sub">For a two-week stay, a kitchen and a little more room can change the whole rhythm of the trip.</p>
+    <div class="rental">
+      <h3>Vacation rentals in Salt Lake City</h3>
+      <p>If a hotel for fourteen nights feels long, a vacation rental gives you a full kitchen, laundry, and separate living space — which tends to suit a longer stay where you'll want a few nights in. I've set up a search filtered to your exact dates (June 2–16) for two guests in the Salt Lake City area so you can browse what's out there. Find something you like, or want me to narrow it down? Send me the link or the name and I'll take it from there.</p>
+      <a class="btn-link" href="https://www.whimstay.com/vacation-rentals/Salt-Lake-City--Utah--USA?adultCount=2&bounds=40.6998931,-111.740515,40.8539459,-112.1013539,40.6998931,-112.1013539,40.8539459,-111.740515&endDate=2026-06-16&lat=40.7605601&lng=-111.8881397&name=Salt%20Lake%20City%2C%20UT%2C%20USA&noOfDays=14&numberOfGuest=2&placeDesc=Salt-Lake-City,-UT,-USA&placeId=ChIJ7THRiJQ9UocRyjFNSKC3U1s&placeType=locality&startDate=2026-06-02&toggleOn=true&isBoundaryVisible=false&nearByProperties=true&limit=21" target="_blank" rel="noopener">
+        Browse vacation rentals for your dates
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- NOTES + FORM -->
+<section>
+  <div class="wrap">
+    <div class="sec-head"><h2 class="sec-title">Tell me what you're thinking</h2></div>
+    <p class="sec-sub">Preferences, questions, a room upgrade, dietary needs — anything that helps me tighten this up.</p>
+
+    <div class="notes-area" style="margin-bottom:28px;">
+      <textarea id="notesField" placeholder="Anything on your mind — room upgrades, a kitchen instead of a hotel, a mountain day, dining preferences, or whether you'd like me to quote your flights."></textarea>
+    </div>
+
+    <div class="form-card">
+      <form id="tripForm">
+        <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+        <input type="hidden" name="subject" value="Kathy — Salt Lake City Stay Selections">
+        <input type="hidden" name="from_name" value="Kathy — PMTP Trip Form">
+        <input type="hidden" name="redirect" value="false">
+
+        <input type="hidden" name="Hotel_Choice" id="hidden_hotel">
+        <input type="hidden" name="Flights" id="hidden_flights">
+        <input type="hidden" name="Car_Rental" id="hidden_car">
+        <input type="hidden" name="Estimated_Total" id="hidden_total">
+        <input type="hidden" name="Trip_Notes" id="hidden_notes">
+
+        <div class="field">
+          <label>Name <span class="req">*</span></label>
+          <input type="text" name="Name" required>
+        </div>
+        <div class="field">
+          <label>Email <span class="req">*</span></label>
+          <input type="email" name="Email" required>
+        </div>
+        <div class="field">
+          <label>Phone</label>
+          <input type="tel" name="Phone">
+        </div>
+
+        <label style="display:block;font-size:13px;font-weight:500;margin-bottom:6px;">Travel insurance <span class="req">*</span></label>
+        <div class="ins-group">
+          <label class="ins-opt">
+            <input type="radio" name="Insurance_Choice" value="Yes — please send me a travel insurance quote" required>
+            <span>Yes, please send me a travel insurance quote</span>
+          </label>
+          <label class="ins-opt">
+            <input type="radio" name="Insurance_Choice" value="No — I decline travel insurance and accept the risks of traveling without coverage" required>
+            <span>No, I decline insurance and understand the risks</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn-submit">Send my selections</button>
+      </form>
+
+      <div class="thanks" id="thanksMsg">
+        <h3>Got it — thank you.</h3>
+        <p>Your selections are on their way to me. I'll be in touch shortly to confirm details and answer anything outstanding.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-name">Christina Garcia</div>
+    <div class="foot-role">Owner &amp; Travel Advisor · Point Me to Paradise Travel</div>
+    <div class="foot-contact"><a id="emailLink" href="#"></a></div>
+    <div class="foot-contact">(281) 229-0862</div>
+    <div class="foot-rule"></div>
+    <p class="foot-disclosure">Individual hotels, transfers, and tours in your quote are priced at publicly available rates — and in many cases lower than what you'd find on your own. You don't have to worry about overpaying for a piece of your trip. What you're paying for is the rest: the right rooms at the right property, operators we've used for years, the trip app, and a human who answers when something doesn't go to plan.</p>
+  </div>
+</footer>
+
+<!-- RUNNING TOTAL BAR -->
+<div class="total-bar">
+  <div class="total-inner">
+    <div>
+      <div class="total-label">Estimated total</div>
+      <div class="total-pp" id="totalPP">Select your hotel to begin</div>
+    </div>
+    <div class="total-amt" id="totalAmt">Est. $0</div>
+  </div>
+</div>
+
+<script>
+  // Email assembly (Cloudflare-safe)
+  var addr = 'Christina' + '@' + 'PointMeToParadise.com';
+  document.getElementById('emailLink').href = 'mailto:' + addr;
+  document.getElementById('emailLink').textContent = addr;
+
+  // Pricing data
+  var HOTEL_PRICES = {
+    "The Little America Hotel — Garden 1 King — Est. $2,404 (14 nights)": 2404,
+    "Best Western Plus CottonTree Inn — Standard King — Est. $2,669 (14 nights)": 2669
+  };
+  var FLIGHT_PRICE = 1624;
+  var CAR_PRICE = 814;
+
+  function updateTotal() {
+    var total = 0;
+    var hotelSel = document.querySelector('input[name="hotel"]:checked');
+    if (hotelSel && HOTEL_PRICES[hotelSel.value]) total += HOTEL_PRICES[hotelSel.value];
+
+    var flightSel = document.querySelector('input[name="flights"]:checked');
+    if (flightSel) total += FLIGHT_PRICE;
+
+    var carSel = document.querySelector('input[name="car"]:checked');
+    if (carSel) total += CAR_PRICE;
+
+    var amtEl = document.getElementById('totalAmt');
+    var ppEl = document.getElementById('totalPP');
+
+    amtEl.textContent = 'Est. $' + total.toLocaleString();
+    if (total > 0) {
+      ppEl.textContent = 'Est. $' + Math.round(total / 2).toLocaleString() + ' per person · based on 2 travelers';
+    } else {
+      ppEl.textContent = 'Select your hotel to begin';
+    }
+
+    // sync hidden fields
+    document.getElementById('hidden_hotel').value = hotelSel ? hotelSel.value : '';
+    document.getElementById('hidden_total').value = 'Est. $' + total.toLocaleString();
+  }
+
+  // Form submit
+  document.getElementById('tripForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var form = e.target;
+
+    document.getElementById('hidden_notes').value = document.getElementById('notesField').value;
+    var flightSel = document.querySelector('input[name="flights"]:checked');
+    document.getElementById('hidden_flights').value = flightSel ? flightSel.value : 'Not added';
+    var carSel = document.querySelector('input[name="car"]:checked');
+    document.getElementById('hidden_car').value = carSel ? carSel.value : 'Not added';
+
+    var data = new FormData(form);
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: data
+    })
+    .then(function(res) { return res.json(); })
+    .then(function(json) {
+      if (json.success) {
+        form.style.display = 'none';
+        document.getElementById('thanksMsg').classList.add('show');
+      } else {
+        alert('Something went wrong. Please email Christina directly or text (281) 229-0862.');
+      }
+    })
+    .catch(function() {
+      alert('Something went wrong. Please email Christina directly or text (281) 229-0862.');
+    });
+  });
+
+  updateTotal();
+</script>
+
+</body>
+</html>
