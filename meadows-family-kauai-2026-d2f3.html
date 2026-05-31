@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>Kauai · Summer 2026 — Prepared by Point Me to Paradise Travel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --aqua-pale:#C4E4E1; --aqua-mist:#EAF3F2; --aqua:#75AFB1; --aqua-dark:#4F8A8C;
+  --sand:#ECE7DC; --sand-light:#F4F1E9; --gold-whisper:#D6C8A8;
+  --white:#FFFFFF; --paper:#FBFDFD; --ink:#2B2420; --ink-soft:#6B6359; --line:#E5E9E8;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{color-scheme:light}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;color:var(--aqua-dark);font-weight:500;line-height:1.2}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.kicker{font-family:'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:11px;font-weight:600;color:var(--aqua-dark)}
+.accent{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-soft)}
+.hairline{width:60px;height:1px;background:var(--gold-whisper);border:0;margin:18px auto}
+
+/* HERO — Variant B cover */
+.hero{position:relative;text-align:center;border-bottom:1px solid var(--line);padding:110px 24px 88px;
+  background-image:linear-gradient(180deg,rgba(255,255,255,.55) 0%,rgba(196,228,225,.72) 38%,rgba(234,243,242,.88) 75%,rgba(251,253,253,.98) 100%),url('https://image-tc.galaxy.tf/wijpeg-2250j1gp1alxd29ln83za3767/local-experiences_og-image.jpg');
+  background-size:cover;background-position:center;background-repeat:no-repeat}
+.hero .brandmark{font-family:'DM Sans',sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:.26em;color:var(--aqua-dark);font-weight:600}
+.hero h1{font-size:clamp(40px,6vw,64px);margin:22px 0 0}
+.hero .sub{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink);font-size:clamp(19px,2.2vw,24px);max-width:640px;margin:0 auto}
+.hero .sig{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-soft);font-size:16px;margin-top:24px}
+
+/* OVERVIEW STRIP */
+.overview{background:var(--aqua-mist);border-bottom:1px solid var(--line);padding:30px 24px}
+.overview-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1040px;margin:0 auto;text-align:center}
+.ov-item{display:flex;flex-direction:column;align-items:center;gap:8px}
+.ov-item svg{color:var(--aqua-dark)}
+.ov-label{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--ink-soft);font-weight:600}
+.ov-value{font-family:'Playfair Display',serif;font-size:18px;color:var(--aqua-dark)}
+
+/* VALUE STRIP */
+.value-strip{background:var(--sand-light);padding:56px 24px}
+.value-strip h2{font-size:32px;text-align:center}
+.value-strip .vs-sub{text-align:center;font-size:18px;margin-top:6px;margin-bottom:38px}
+.vs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;max-width:980px;margin:0 auto}
+.vs-col{padding:0 30px;text-align:center;position:relative}
+.vs-col+.vs-col::before{content:"";position:absolute;left:0;top:8px;bottom:8px;width:1px;background:var(--gold-whisper)}
+.vs-col svg{color:var(--aqua-dark);margin-bottom:14px}
+.vs-col h3{font-size:21px;margin-bottom:10px}
+.vs-col p{font-size:14.5px;color:var(--ink-soft)}
+
+/* SECTIONS */
+section.body-sec{padding:56px 24px}
+.intro p{font-size:17px;max-width:760px;margin:0 auto 16px;text-align:center}
+.intro .lead{font-size:19px}
+.sec-head{text-align:center;margin-bottom:8px}
+.sec-head h2{font-size:34px}
+.sec-sub{text-align:center;font-size:18px;max-width:680px;margin:0 auto 36px}
+
+/* AREA BANNER */
+.area-banner{display:flex;align-items:center;justify-content:center;gap:16px;margin:8px 0 28px}
+.area-banner svg{color:var(--aqua-dark);opacity:.65}
+.area-banner h2{font-size:30px}
+
+/* FLIGHTS CARD */
+.flights{background:var(--white);border:1px solid var(--line);border-radius:8px;padding:30px 32px;max-width:880px;margin:0 auto}
+.flights .fl-head{display:flex;align-items:center;gap:12px;justify-content:center;margin-bottom:6px}
+.flights .fl-head svg{color:var(--aqua-dark);opacity:.65}
+.flights h3{font-size:24px;text-align:center}
+.flights .fl-note{font-size:14px;color:var(--ink-soft);text-align:center;max-width:680px;margin:10px auto 26px;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:17px}
+.leg{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:center;padding:18px 0;border-top:1px solid var(--line)}
+.leg:first-of-type{border-top:0}
+.leg .pt{text-align:center}
+.leg .time{font-family:'Playfair Display',serif;font-size:22px;color:var(--aqua-dark)}
+.leg .apt{font-size:13px;color:var(--ink-soft);font-weight:600;letter-spacing:.04em}
+.leg .mid{text-align:center;font-size:11px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.1em}
+.leg .mid svg{display:block;margin:4px auto;color:var(--aqua)}
+.leg .meta{font-size:12px;color:var(--ink-soft);margin-top:3px}
+.fl-tag{display:inline-block;background:var(--aqua-mist);color:var(--aqua-dark);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:3px;margin-bottom:18px}
+.fl-redeye{background:var(--sand-light);border-left:3px solid var(--aqua-dark);padding:16px 20px;margin-top:22px;font-size:14px;border-radius:0 4px 4px 0}
+
+/* RESORT CARDS */
+.card{background:var(--white);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:0 auto 34px;max-width:880px}
+.card-inner{padding:30px 32px}
+.card .ckicker{font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:var(--ink-soft);font-weight:600;margin-bottom:10px}
+.card h3{font-size:28px}
+.card .ctag{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-soft);font-size:19px;margin-bottom:14px}
+.card p{font-size:15px;margin-bottom:12px}
+.card p.lead-copy{color:var(--ink)}
+.img-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:18px 0 22px}
+.img-strip img{width:100%;height:180px;object-fit:cover;border-radius:4px;display:block;background:var(--aqua-mist)}
+.amenities{display:grid;grid-template-columns:1fr 1fr;gap:14px 28px;margin:8px 0 22px;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.am{display:flex;gap:11px;align-items:flex-start;font-size:14px}
+.am svg{flex-shrink:0;color:var(--aqua-dark);margin-top:2px}
+.am b{font-weight:600;display:block}
+.am span{color:var(--ink-soft);font-size:13px}
+.room-block h4{font-family:'Playfair Display',serif;font-size:18px;color:var(--aqua-dark);margin:6px 0 8px}
+.honest{background:var(--aqua-mist);border-radius:6px;padding:14px 18px;font-size:14px;margin:14px 0;border-left:3px solid var(--aqua)}
+.honest b{color:var(--aqua-dark)}
+
+/* PRICE BOX */
+.pricebox{background:var(--aqua-pale);border-radius:8px;padding:22px 26px;margin-top:22px}
+.pricebox .pk{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--aqua-dark);font-weight:600}
+.pricebox .amt{font-family:'Playfair Display',serif;font-size:34px;color:var(--ink);margin:4px 0 2px}
+.pricebox .pp{font-size:14px;color:var(--ink-soft)}
+.pricebox .inc{font-size:13px;color:var(--ink);margin-top:14px}
+.pricebox .inc b{color:var(--aqua-dark);font-size:11px;text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:6px}
+.pricebox ul{list-style:none;font-size:13px;color:var(--ink-soft)}
+.pricebox li{padding:2px 0 2px 18px;position:relative}
+.pricebox li::before{content:"";position:absolute;left:0;top:10px;width:5px;height:5px;border-radius:50%;background:var(--aqua-dark)}
+.pricebox .fine{font-size:12px;color:var(--ink-soft);margin-top:14px;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:14px}
+
+/* dual-room mini table */
+.rooms2{margin:14px 0}
+.rooms2 .rrow{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:12px 0;border-top:1px solid var(--line)}
+.rooms2 .rrow:first-child{border-top:0}
+.rooms2 .rname{font-size:14px}
+.rooms2 .rname b{display:block;color:var(--aqua-dark);font-family:'Playfair Display',serif;font-size:16px}
+.rooms2 .rname span{font-size:12px;color:var(--ink-soft)}
+.rooms2 .rprice{text-align:right;white-space:nowrap}
+.rooms2 .rprice b{font-family:'Playfair Display',serif;font-size:20px;color:var(--ink)}
+.rooms2 .rprice span{display:block;font-size:12px;color:var(--ink-soft)}
+
+/* IMAGE CAROUSEL */
+.carousel{position:relative;border-radius:8px;overflow:hidden;margin:18px 0 22px;background:var(--aqua-mist)}
+.carousel-track{display:flex;transition:transform .35s ease;will-change:transform}
+.carousel-slide{min-width:100%;box-sizing:border-box}
+.carousel-slide img{width:100%;height:380px;object-fit:cover;display:block}
+.carousel-btn{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;background:rgba(251,253,253,.85);border:1px solid var(--line);color:var(--aqua-dark);cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:5;transition:background .15s}
+.carousel-btn:hover{background:var(--paper-pure,#fff)}
+.carousel-btn.prev{left:12px}
+.carousel-btn.next{right:12px}
+.carousel-counter{position:absolute;bottom:12px;right:14px;background:rgba(43,36,32,.55);color:#fff;font-size:12px;font-weight:500;padding:3px 10px;border-radius:12px;z-index:5;letter-spacing:.03em}
+.carousel-dots{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;padding:12px 14px 4px}
+.carousel-dot{width:7px;height:7px;border-radius:50%;background:var(--line);border:0;padding:0;cursor:pointer;transition:background .15s}
+.carousel-dot.active{background:var(--aqua-dark)}
+@media(max-width:768px){
+  .carousel-slide img{height:260px}
+  .carousel-btn{width:34px;height:34px}
+}
+
+/* SELECTABLE OPTIONS */
+.select-row{display:flex;align-items:center;gap:14px;background:var(--white);border:1.5px solid var(--line);border-radius:8px;padding:16px 18px;margin-top:12px;cursor:pointer;transition:border-color .15s,background .15s;min-height:48px}
+.select-row:hover{border-color:var(--aqua)}
+.select-row input[type=radio]{position:absolute;opacity:0;width:0;height:0}
+.select-row .radio-dot{flex-shrink:0;width:22px;height:22px;border:2px solid var(--aqua);border-radius:50%;position:relative;transition:border-color .15s}
+.select-row .radio-dot::after{content:"";position:absolute;inset:4px;border-radius:50%;background:var(--aqua-dark);transform:scale(0);transition:transform .15s}
+.select-row .sel-label{flex:1;font-size:14px}
+.select-row .sel-label b{display:block;font-family:'Playfair Display',serif;font-size:16px;color:var(--aqua-dark)}
+.select-row .sel-label span{font-size:12.5px;color:var(--ink-soft)}
+.select-row .sel-price{text-align:right;white-space:nowrap}
+.select-row .sel-price b{font-family:'Playfair Display',serif;font-size:19px;color:var(--ink)}
+.select-row .sel-price span{display:block;font-size:11.5px;color:var(--ink-soft)}
+.select-row:has(input:checked){border-color:var(--aqua-dark);background:var(--aqua-mist)}
+.select-row:has(input:checked) .radio-dot{border-color:var(--aqua-dark)}
+.select-row:has(input:checked) .radio-dot::after{transform:scale(1)}
+.select-hint{font-size:12px;color:var(--ink-soft);font-style:italic;font-family:'Cormorant Garamond',serif;font-size:14px;margin-top:14px;text-align:center}
+
+/* PAYMENT BREAKDOWN inside pricebox */
+.paysplit{margin-top:14px;border-top:1px solid rgba(79,138,140,.25);padding-top:12px}
+.paysplit .prow{display:flex;justify-content:space-between;font-size:13px;padding:3px 0}
+.paysplit .prow b{color:var(--aqua-dark)}
+.paysplit .prow.bal{color:var(--ink-soft)}
+
+/* RUNNING TOTAL BAR (slim sticky) */
+.totalbar{position:sticky;bottom:0;z-index:40;background:var(--aqua-pale);border-top:1px solid var(--aqua);padding:11px 24px;box-shadow:0 -2px 12px rgba(43,36,32,.07)}
+.totalbar-inner{max-width:1040px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.totalbar .tb-label{font-size:13px;color:var(--ink)}
+.totalbar .tb-label b{color:var(--aqua-dark)}
+.totalbar .tb-amt{font-family:'Playfair Display',serif;font-size:20px;color:var(--ink);white-space:nowrap}
+.totalbar .tb-amt span{font-size:12px;color:var(--ink-soft);font-family:'DM Sans',sans-serif;display:block;text-align:right}
+
+/* RENTAL CARD */
+.rental{background:var(--white);border:1px solid var(--line);border-radius:8px;padding:30px 32px;max-width:880px;margin:0 auto}
+.rental .rl-head{display:flex;align-items:center;gap:12px;justify-content:center;margin-bottom:6px}
+.rental .rl-head svg{color:var(--aqua-dark);opacity:.65}
+.rental h3{font-size:24px;text-align:center}
+.rental .rl-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:var(--ink-soft);text-align:center;max-width:680px;margin:10px auto 26px}
+.rental-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rl-item{background:var(--sand-light);border:1px solid var(--line);border-radius:8px;padding:20px 22px;text-align:center}
+.rl-item svg{color:var(--aqua-dark);margin-bottom:10px}
+.rl-item .rl-name{font-family:'Playfair Display',serif;font-size:18px;color:var(--aqua-dark);margin-bottom:4px}
+.rl-item .rl-price{font-family:'Playfair Display',serif;font-size:22px;color:var(--ink);margin:6px 0 2px}
+.rl-item .rl-week{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft);font-weight:600}
+.rl-item .rl-for{font-size:13px;color:var(--ink-soft);margin-top:8px}
+.rl-foot{background:var(--aqua-mist);border-radius:6px;padding:14px 18px;font-size:13.5px;color:var(--ink);margin-top:20px;text-align:center}
+
+/* FORM */
+.formsec{background:var(--sand-light);padding:56px 24px}
+.formcard{background:var(--white);border:1px solid var(--line);border-radius:10px;max-width:620px;margin:0 auto;padding:34px 32px}
+.formcard h2{font-size:28px;text-align:center}
+.formcard .fsub{text-align:center;font-size:17px;margin-bottom:24px}
+.formcard label{display:block;font-size:13px;font-weight:600;color:var(--ink);margin:14px 0 6px;letter-spacing:.02em}
+.formcard input,.formcard textarea{width:100%;font-family:'DM Sans',sans-serif;font-size:16px;padding:12px 14px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink)}
+.formcard textarea{min-height:110px;resize:vertical}
+.formcard input:focus,.formcard textarea:focus{outline:none;border-color:var(--aqua-dark)}
+.ins-group{margin-top:6px}
+.ins-opt{display:flex;align-items:flex-start;gap:10px;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:12px 14px;margin-top:8px;cursor:pointer;font-size:14px;font-weight:400}
+.ins-opt:hover{border-color:var(--aqua)}
+.ins-opt input{width:auto;margin-top:3px;flex-shrink:0}
+.ins-opt:has(input:checked){border-color:var(--aqua-dark);background:var(--aqua-mist)}
+.sel-summary{background:var(--aqua-mist);border:1px solid var(--aqua);border-radius:8px;padding:16px 18px;margin-bottom:8px;font-size:14px}
+.sel-summary .ss-none{color:var(--ink-soft);font-style:italic;font-family:'Cormorant Garamond',serif;font-size:16px}
+.sel-summary .ss-pick b{font-family:'Playfair Display',serif;color:var(--aqua-dark);font-size:16px;display:block}
+.sel-summary .ss-pay{margin-top:8px;font-size:13px}
+.sel-summary .ss-pay div{display:flex;justify-content:space-between;padding:2px 0}
+.sel-summary .ss-pay b{color:var(--aqua-dark)}
+.sel-summary .ss-note{margin-top:10px;font-size:12px;line-height:1.55;color:var(--ink-soft);background:var(--cream-light,#F5EFDF);border-left:3px solid var(--gold-dark,#B89E6A);padding:9px 12px;border-radius:0 4px 4px 0}
+.atprop{display:flex;gap:11px;align-items:flex-start;background:var(--cream-light,#F5EFDF);border:1px solid var(--gold-dark,#B89E6A);border-left:4px solid var(--gold-dark,#B89E6A);border-radius:6px;padding:13px 15px;margin-top:14px;font-size:13px;line-height:1.5}
+.atprop svg{flex-shrink:0;color:var(--gold-dark,#B89E6A);margin-top:1px}
+.atprop b{color:var(--ink)}
+.atprop .ap-amt{font-family:'Playfair Display',serif;color:var(--ink);font-weight:600}
+.submit-btn{width:100%;margin-top:22px;background:var(--aqua-dark);color:var(--white);border:0;border-radius:6px;padding:15px;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;letter-spacing:.04em;cursor:pointer;min-height:48px}
+.submit-btn:hover{background:#43787a}
+.submit-btn:disabled{background:var(--aqua);opacity:.6;cursor:not-allowed}
+.thanks{display:none;text-align:center;padding:30px 10px}
+.thanks.show{display:block}
+.thanks h3{font-size:26px;margin-bottom:10px}
+.thanks p{font-size:16px;color:var(--ink-soft)}
+
+/* FOOTER */
+footer{background:var(--sand-light);padding:48px 24px;border-top:1px solid var(--line)}
+.foot-inner{max-width:760px;margin:0 auto;text-align:center}
+.foot-inner .fname{font-family:'Playfair Display',serif;font-size:22px;color:var(--aqua-dark)}
+.foot-inner .fcontact{font-size:15px;margin:8px 0 22px}
+.foot-inner .fcontact a{color:var(--aqua-dark);text-decoration:none}
+.foot-disclosure{font-size:13px;color:var(--ink-soft);line-height:1.7;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:15px;max-width:680px;margin:0 auto}
+
+@media(max-width:768px){
+  .overview-grid{grid-template-columns:1fr 1fr;gap:24px}
+  .totalbar-inner{flex-direction:column;gap:4px;text-align:center}
+  .totalbar .tb-amt span{text-align:center}
+  .select-row{flex-wrap:wrap}
+  .select-row .sel-price{text-align:left;width:100%;padding-left:36px}
+  .vs-grid{grid-template-columns:1fr}
+  .vs-col{padding:24px 0}
+  .vs-col+.vs-col::before{display:none}
+  .vs-col+.vs-col{border-top:1px solid var(--gold-whisper)}
+  .img-strip{grid-template-columns:1fr}
+  .img-strip img{height:220px}
+  .amenities{grid-template-columns:1fr}
+  .rental-grid{grid-template-columns:1fr}
+  .leg{grid-template-columns:1fr;gap:6px;text-align:center}
+  .leg .mid{margin:6px 0}
+  .card-inner,.flights{padding-left:22px;padding-right:22px}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="brandmark">Point Me to Paradise Travel</div>
+  <h1>A Week on Kauai</h1>
+  <hr class="hairline">
+  <p class="sub">Seven days on the Garden Isle &mdash; Hawaii&rsquo;s greenest, most cinematic coastline, and a handful of ways to call it home for a week.</p>
+  <p class="sig">Prepared for the Meadows Family &middot; by Christina Garcia</p>
+  <p class="accent" style="font-size:15px;margin-top:10px">July 15&ndash;22 are a starting point &mdash; your dates are flexible, and I'll happily shift the week to fit you.</p>
+</header>
+
+<!-- OVERVIEW STRIP -->
+<div class="overview">
+  <div class="overview-grid">
+    <div class="ov-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><path d="M2 21v-1a6 6 0 0 1 6-6h2a6 6 0 0 1 6 6v1"/><path d="M16 3.5a3 3 0 0 1 0 7"/><path d="M22 21v-1a6 6 0 0 0-4-5.6"/></svg>
+      <div class="ov-label">Travelers</div>
+      <div class="ov-value">2 adults, 2 kids</div>
+    </div>
+    <div class="ov-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13"/><path d="M3 21h18"/><path d="M9 21v-6h6v6"/></svg>
+      <div class="ov-label">Stay</div>
+      <div class="ov-value">7 nights</div>
+    </div>
+    <div class="ov-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+      <div class="ov-label">Island</div>
+      <div class="ov-value">Kauai</div>
+    </div>
+    <div class="ov-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5a2.12 2.12 0 0 0-3-3L13 8 4.8 6.2a.5.5 0 0 0-.5.8l4 4-2 2-2-.5a.5.5 0 0 0-.5.8L6 17l2.7 2.7.7-2 2-2 4 4a.5.5 0 0 0 .8-.5z"/></svg>
+      <div class="ov-label">Flying from</div>
+      <div class="ov-value">Houston (IAH)</div>
+    </div>
+  </div>
+</div>
+
+<!-- VALUE STRIP -->
+<div class="value-strip">
+  <h2>Beyond the booking</h2>
+  <p class="vs-sub accent">What's included with every Point Me to Paradise trip</p>
+  <div class="vs-grid">
+    <div class="vs-col">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h11l5 5v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"/><path d="M14 4v5h5"/><path d="M8 13h8M8 17h5"/></svg>
+      <h3>The Trip Guide</h3>
+      <p>A document built for your week &mdash; restaurants we'd return to, neighborhoods worth the walk, what to skip, the places open on a Sunday. Not pulled from a database. Researched against where you're staying and what you've told us matters.</p>
+    </div>
+    <div class="vs-col">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>
+      <h3>The Trip App</h3>
+      <p>Itinerary, confirmation numbers, transfer windows, and ground contacts in one place &mdash; accessible offline, updated in real time. If a flight shifts or weather moves, the app moves with it.</p>
+    </div>
+    <div class="vs-col">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6z"/><path d="m9 12 2 2 4-4"/></svg>
+      <h3>Best-Rate Assurance</h3>
+      <p>Every hotel night, cruise rate, and tour in your quote is priced at publicly available rates. If you find the same component for less elsewhere, we'll match it &mdash; you don't have to wonder whether you're overpaying for a piece of your trip.</p>
+    </div>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="body-sec intro">
+  <div class="wrap">
+    <p class="lead">You've got the island and the week &mdash; Kauai, July 15 to 22. Kauai trades nightlife and crowds for scenery: it's the island you choose when you want green over glitz and quiet over busy.</p>
+    <p>Everything below is priced for <b>two adults and two children</b> (ages 6 and 8), with the same United flights from Houston built into every option. Kauai is the quietest and greenest of the main islands &mdash; the Napali cliffs, Waimea Canyon, and calm beaches rather than big resort strips. Your options here range from a full-service resort to private vacation homes and condos, clustered on the sunny <b>south shore (Poipu)</b> with one home up on the lush <b>north shore (Princeville)</b>. <b>Select the package you'd like below</b> &mdash; your running total updates as you choose, and you can send your pick straight to me at the bottom.</p>
+  </div>
+</section>
+
+<!-- FLIGHTS -->
+<section class="body-sec" style="padding-top:0">
+  <div class="flights">
+    <div class="fl-head">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5a2.12 2.12 0 0 0-3-3L13 8 4.8 6.2a.5.5 0 0 0-.5.8l4 4-2 2-2-.5a.5.5 0 0 0-.5.8L6 17l2.7 2.7.7-2 2-2 4 4a.5.5 0 0 0 .8-.5z"/></svg>
+      <h3>Your flights</h3>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="transform:scaleX(-1)"><path d="M17.8 19.2 16 11l3.5-3.5a2.12 2.12 0 0 0-3-3L13 8 4.8 6.2a.5.5 0 0 0-.5.8l4 4-2 2-2-.5a.5.5 0 0 0-.5.8L6 17l2.7 2.7.7-2 2-2 4 4a.5.5 0 0 0 .8-.5z"/></svg>
+    </div>
+    <p class="fl-note">These United flights are included in every option below. I chose dates with the best air rates for your week &mdash; want different days or times? Mention it in the notes below or reach out directly, and I'll come back with options quickly.</p>
+
+    <div style="text-align:center"><span class="fl-tag">Outbound &middot; Wed, Jul 15 &middot; United Economy</span></div>
+    <div class="leg">
+      <div class="pt"><div class="time">12:58 PM</div><div class="apt">IAH &middot; Houston</div></div>
+      <div class="mid">4h 5m
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="15 7 20 12 15 17"/></svg>
+        UA 2756</div>
+      <div class="pt"><div class="time">3:03 PM</div><div class="apt">SFO &middot; San Francisco</div></div>
+    </div>
+    <div class="leg">
+      <div class="pt"><div class="time">4:55 PM</div><div class="apt">SFO &middot; San Francisco</div><div class="meta">1h 52m connection</div></div>
+      <div class="mid">5h 47m
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="15 7 20 12 15 17"/></svg>
+        UA 1684</div>
+      <div class="pt"><div class="time">7:42 PM</div><div class="apt">LIH &middot; Kauai</div></div>
+    </div>
+
+    <div style="text-align:center;margin-top:26px"><span class="fl-tag">Return &middot; Wed, Jul 22 &middot; United Economy</span></div>
+    <div class="leg">
+      <div class="pt"><div class="time">7:35 PM</div><div class="apt">LIH &middot; Kauai</div></div>
+      <div class="mid">overnight
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="15 7 20 12 15 17"/></svg>
+        UA 2308</div>
+      <div class="pt"><div class="time">6:28 AM<span style="font-size:11px;vertical-align:super">+1</span></div><div class="apt">DEN &middot; Denver</div></div>
+    </div>
+    <div class="leg">
+      <div class="pt"><div class="time">7:42 AM<span style="font-size:11px;vertical-align:super">+1</span></div><div class="apt">DEN &middot; Denver</div><div class="meta">1h 14m connection</div></div>
+      <div class="mid">2h 33m
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="15 7 20 12 15 17"/></svg>
+        UA 1720</div>
+      <div class="pt"><div class="time">11:15 AM<span style="font-size:11px;vertical-align:super">+1</span></div><div class="apt">IAH &middot; Houston</div></div>
+    </div>
+
+    <div class="fl-redeye">
+      <b>A note on the return:</b> like nearly every Hawaii-to-mainland trip, the flight home is an overnight &mdash; you'll leave Kauai Wednesday evening and land in Houston late Wednesday morning the next day, connecting through Denver. It's the standard routing for the islands, and it gives you the full last day on Kauai before heading to the airport. If you'd rather look at a different return, just say so and I'll see what's available.
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESORT OPTIONS ============ -->
+<section class="body-sec" style="background:var(--paper);padding-bottom:20px">
+  <div class="wrap">
+    <div class="sec-head"><h2>Where you'll stay</h2></div>
+    <p class="sec-sub accent">Select a package below &mdash; your running total updates as you choose, and you can send your pick straight to me at the bottom.</p>
+  </div>
+</section>
+
+<!-- KOLOA LANDING -->
+<div class="card">
+  <div class="card-inner">
+    <div class="ckicker">Option 1 &middot; Poipu, south shore &middot; 1 villa &middot; 2 adults, 2 kids</div>
+    <h3>Koloa Landing Resort at Poipu, Autograph Collection</h3>
+    <div class="ctag">A one-bedroom villa, a full kitchen, and the pool that keeps winning Best in America.</div>
+    <p class="lead-copy">This is the rare family room that isn't a room at all &mdash; it's an <b>80-square-metre one-bedroom villa</b> with a separate bedroom (a door that closes, a king for the two of you), a queen sofa bed for the kids in the living area, a <b>full kitchen, and an in-room washer/dryer</b>. For a week with a 6- and 8-year-old, that's the difference between everyone on top of each other and everyone with their own corner.</p>
+    <p>The pool is the headline, and it's earned: Koloa Landing's 350,000-gallon main pool has been voted <b>Best Pool in America six years running (2020&ndash;2025)</b>, with an infinity edge, swim-through grottos, and two waterslides (one for all ages, one for kids 48 inches and up). There's a separate 6,100-square-foot family lagoon pool with a basketball hoop, a quieter adults' pool, and five hot tubs. Poipu Beach &mdash; calm, swimmable, with resident sea turtles &mdash; is a few minutes away on Kauai's sunny south shore.</p>
+    <div class="img-strip">
+      <img src="https://img.cdnpth.com/media/173920/3812333-837b2e72_z_main.jpg" alt="Koloa Landing Resort at Poipu">
+      <img src="https://img.cdnpth.com/media/173920/3812333-baa9e6ad_z.jpg" alt="Koloa Landing award-winning pool">
+      <img src="https://img.cdnpth.com/media/173920/3812333-fac516e5_z.jpg" alt="Koloa Landing villa grounds">
+    </div>
+    <img src="https://img.cdnpth.com/media/173920/3812333-c4de76af_z.jpg" alt="Koloa Landing Resort pool and waterslides" style="width:100%;height:260px;object-fit:cover;border-radius:4px;display:block;margin:0 0 8px;background:var(--aqua-mist)">
+    <img src="https://img.cdnpth.com/media/173920/3812333-9afaf66a_z.jpg" alt="Koloa Landing Resort villa interior" style="width:100%;height:260px;object-fit:cover;border-radius:4px;display:block;margin:0 0 22px;background:var(--aqua-mist)">
+    <div class="amenities">
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M2 12a10 10 0 0 1 20 0M5 12v4a7 7 0 0 0 14 0v-4"/></svg><div><b>"Best Pool in America" 2020&ndash;2025</b><span>350,000-gal main pool, grottos, two waterslides</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3zM3 9h18M9 9v12"/></svg><div><b>One-bedroom villa, full kitchen</b><span>80 sq m, separate bedroom, in-room washer/dryer</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18 12 4l9 14M3 18h18"/></svg><div><b>Walk to Lawai &amp; Poipu Beach</b><span>Calm south-shore swimming, resident sea turtles</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6M12 8c-3 0-5 2-5 5s2 5 5 5 5-2 5-5-2-5-5-5z"/></svg><div><b>Weekly s'mores &amp; cultural classes</b><span>Complimentary firepit s'mores, hula, yoga (sign up)</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18l-1 9H4z"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><div><b>Holoholo Grill on site</b><span>Poolside dining with a children's menu</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/><circle cx="12" cy="12" r="10"/></svg><div><b>No drop-off kids' club</b><span>Low-key resort; activities are walk-up, not staffed childcare</span></div></div>
+    </div>
+    <div class="room-block">
+      <h4>Villa, 1 Bedroom, Kitchen (Island View) &middot; sleeps 4</h4>
+      <p>80 sq m. King bed in a separate bedroom, queen sofa bed in the living area, full kitchen, in-room washer/dryer, free welcome drink. The most space and privacy of any option here.</p>
+    </div>
+    <div class="honest"><b>Honest trade:</b> Koloa Landing is deliberately low-key &mdash; the draw is the pool, the villa space, and the kitchen, not a packed activity calendar or a staffed kids' club. There's no beach directly on property (Poipu Beach is a short walk or quick drive), and you'll want a rental car, as there's no airport shuttle. For a family that wants room to spread out and a world-class pool, it's hard to beat.</div>
+    <div class="pricebox">
+      <div class="pk">Select this package &middot; air + villa, all in</div>
+      <label class="select-row">
+        <input type="radio" name="selection" value="Koloa Landing Resort at Poipu — 1-Bedroom Villa, Kitchen (Island View)" data-total="10696" data-deposit="3185" data-balance="7181" data-balancedue="June 30" data-atprop="330" onclick="setTimeout(updateSelection,0)">
+        <span class="radio-dot"></span>
+        <span class="sel-label"><b>1-Bedroom Villa, Kitchen (Island View)</b><span>80 sq m &middot; king + queen sofa &middot; sleeps 4</span></span>
+        <span class="sel-price"><b>Est. $10,696</b><span>~$2,674 pp</span></span>
+      </label>
+      <div class="inc" style="margin-top:16px"><b>Includes</b>
+        <ul>
+          <li>Round-trip United flights, Houston&ndash;Kauai, all 4 travelers</li>
+          <li>7 nights, 1-Bedroom Villa with full kitchen &amp; washer/dryer</li>
+          <li>Complimentary self-parking &amp; welcome drink</li>
+        </ul>
+      </div>
+      <div class="paysplit">
+        <div class="prow"><span>Deposit today &mdash; your flights</span><b>$3,185</b></div>
+        <div class="prow bal"><span>Villa balance due June 30</span><span>$7,181</span></div>
+      </div>
+      <div class="atprop">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4a1 1 0 0 1 1-1h11l-2 4 2 4H5"/></svg>
+        <div><b>Paid at the hotel:</b> a resort fee of $39.74/night plus local tax &mdash; about <span class="ap-amt">$330</span> for the week &mdash; is collected directly at the property at checkout, not pre-paid. It's already part of the package total above; we're just flagging when you'll pay it.</div>
+      </div>
+      <div class="fine">Your flights act as the deposit; the villa balance is due June 30. Final pricing confirmed by Christina before booking.</div>
+    </div>
+  </div>
+</div>
+
+<!-- HALF MOON HANA (vacation home) -->
+<div class="card">
+  <div class="card-inner">
+    <div class="ckicker">Option 2 &middot; Princeville, north shore &middot; private home &middot; 2 adults, 2 kids</div>
+    <h3>Princeville Bluff House &mdash; a private home on the north shore</h3>
+    <div class="ctag">Three bedrooms, a real kitchen, and 3,500 square feet to spread out in.</div>
+    <p class="lead-copy">This is the option for a family that wants a <b>house, not a hotel room</b>. This home is a single-level, ~3,500-square-foot home in one of Princeville's resort communities &mdash; three separate bedrooms, three full baths, vaulted ceilings, and walls of windows framing ocean, mountain, and golf-course views. With room for eight here, the four of you have more space and privacy than any resort here can offer: the kids get their own rooms, you get yours, and there's a bonus room with a sofa bed on top.</p>
+    <p>The covered lanai is built for open-air dinners over the fairways and the Pacific, the kitchen is fully equipped for real cooking, and you're steps from the Makai Golf Course and minutes from Hanalei Bay, Anini Beach, and Queen's Bath. It's the north shore at its most residential and relaxed.</p>
+    <div class="carousel">
+      <div class="carousel-track">
+        <div class="carousel-slide"><img src="https://as.wemaste.com/elitepacific/299744/px4wRx9XNfME" alt="Princeville Bluff House photo 1" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/elitepacific/299744/DR1Y692dn3j8" alt="Princeville Bluff House photo 2" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/elitepacific/299744/2WvA7fFeX5eL" alt="Princeville Bluff House photo 3" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/elitepacific/299744/RUBl6zc9T9Gc" alt="Princeville Bluff House photo 4" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/elitepacific/299744/zmQR5QM0kmr1" alt="Princeville Bluff House photo 5" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/elitepacific/299744/Oy3s4YJP9MqB" alt="Princeville Bluff House photo 6" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/elitepacific/299744/HbuTXH865uzs" alt="Princeville Bluff House photo 7" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/elitepacific/299744/QjiD66JrU1k2_webfull" alt="Princeville Bluff House photo 8" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/elitepacific/299744/XpqiSl1KV1zG" alt="Princeville Bluff House photo 9" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/elitepacific/299744/3s2lyAMhdFU7" alt="Princeville Bluff House photo 10" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/elitepacific/299744/15dDNWf5dUKv" alt="Princeville Bluff House photo 11" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/elitepacific/299744/20c4a61a54dc91a18a5c883b571b43d5-37" alt="Princeville Bluff House photo 12" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/elitepacific/299744/374wmq8dQKaQ" alt="Princeville Bluff House photo 13" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/elitepacific/299744/2oHc75w06c89" alt="Princeville Bluff House photo 14" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/elitepacific/299744/FIOb3bQn8naM" alt="Princeville Bluff House photo 15" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/elitepacific/299744/h85zXSo466u4" alt="Princeville Bluff House photo 16" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/elitepacific/299744/NrQkJpa1zB2v" alt="Princeville Bluff House photo 17" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/elitepacific/299744/Nh6X5PxY4uOU" alt="Princeville Bluff House photo 18" loading="lazy"></div>
+      </div>
+      <button class="carousel-btn prev" aria-label="Previous photo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+      <button class="carousel-btn next" aria-label="Next photo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+      <div class="carousel-counter"></div>
+    </div>
+    <div class="carousel-dots"><button class="carousel-dot" aria-label="Go to photo 1"></button><button class="carousel-dot" aria-label="Go to photo 2"></button><button class="carousel-dot" aria-label="Go to photo 3"></button><button class="carousel-dot" aria-label="Go to photo 4"></button><button class="carousel-dot" aria-label="Go to photo 5"></button><button class="carousel-dot" aria-label="Go to photo 6"></button><button class="carousel-dot" aria-label="Go to photo 7"></button><button class="carousel-dot" aria-label="Go to photo 8"></button><button class="carousel-dot" aria-label="Go to photo 9"></button><button class="carousel-dot" aria-label="Go to photo 10"></button><button class="carousel-dot" aria-label="Go to photo 11"></button><button class="carousel-dot" aria-label="Go to photo 12"></button><button class="carousel-dot" aria-label="Go to photo 13"></button><button class="carousel-dot" aria-label="Go to photo 14"></button><button class="carousel-dot" aria-label="Go to photo 15"></button><button class="carousel-dot" aria-label="Go to photo 16"></button><button class="carousel-dot" aria-label="Go to photo 17"></button><button class="carousel-dot" aria-label="Go to photo 18"></button></div>
+    <div class="amenities">
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13"/><path d="M3 21h18"/><path d="M9 21v-6h6v6"/></svg><div><b>3 bedrooms, 3 baths, ~3,500 sq ft</b><span>Single-level; two kings, a queen, plus a sofa-bed bonus room</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3zM3 9h18M9 9v12"/></svg><div><b>Full chef's kitchen</b><span>Stainless appliances, dishwasher, bar seating, washer/dryer</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16M4 9V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2M4 9v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9"/></svg><div><b>Covered lanai, ocean &amp; fairway views</b><span>Seamless indoor-outdoor flow, alfresco dining</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18 12 4l9 14M3 18h18"/></svg><div><b>Steps to Makai Golf Course</b><span>Minutes to Hanalei Bay, Anini Beach, Queen's Bath</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 8l7-5 7 5"/></svg><div><b>Central A/C &amp; beach gear</b><span>A/C in select rooms, beach chairs &amp; umbrellas provided</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/><circle cx="12" cy="12" r="10"/></svg><div><b>No pools or resort services</b><span>A private home &mdash; no kids' club, housekeeping, or on-site dining</span></div></div>
+    </div>
+    <div class="room-block">
+      <h4>The whole home &middot; sleeps up to 8</h4>
+      <p>Primary bedroom with a king, ensuite, and soaking tub; a second king bedroom with ensuite; a queen guest bedroom; and a bonus room with a sofa bed. For a family of four, that's a bedroom each for the kids and room to spare.</p>
+    </div>
+    <div class="honest"><b>Honest trade:</b> a house gives you the most space, privacy, and kitchen of anything here &mdash; three real bedrooms versus one room with a sofa bed at the resorts. What you give up is the resort experience: there's no pool, no kids' club, no daily housekeeping, no restaurant downstairs. It's also Princeville's north shore &mdash; greener and more dramatic than sunny Poipu, but historically wetter. Best for a family that wants to settle in, cook, and use the home as a base for exploring.</div>
+    <div class="pricebox">
+      <div class="pk">Select this stay &middot; air + home, all in</div>
+      <label class="select-row">
+        <input type="radio" name="selection" value="Half Moon Hana — 3BR private home, Princeville" data-total="12130" data-deposit="3185" data-balance="8945" data-balancedue="confirmed at booking" data-payfull="1" onclick="setTimeout(updateSelection,0)">
+        <span class="radio-dot"></span>
+        <span class="sel-label"><b>Princeville Bluff House &mdash; whole home, 3 bed / 3 bath</b><span>~3,500 sq ft &middot; sleeps up to 8</span></span>
+        <span class="sel-price"><b>Est. $12,130</b><span>~$3,033 pp</span></span>
+      </label>
+      <div class="inc" style="margin-top:16px"><b>Includes</b>
+        <ul>
+          <li>Round-trip United flights, Houston&ndash;Kauai, all 4 travelers</li>
+          <li>7 nights, entire 3-bedroom home (cleaning &amp; taxes included)</li>
+          <li>Full kitchen, washer/dryer, beach gear</li>
+          
+        </ul>
+      </div>
+      <div class="paysplit">
+        <div class="prow"><span>Due at booking &mdash; flights + home, paid in full</span><b>$12,130</b></div>
+        <div class="prow bal"><span>No balance later &mdash; this home is paid in full to reserve</span><span>&mdash;</span></div>
+      </div>
+      <div class="fine">Unlike the resort packages, this vacation home is paid in full at booking rather than held with a deposit. Final pricing confirmed by Christina before booking.</div>
+    </div>
+  </div>
+</div>
+
+<!-- MAKAHUENA CONDO (vacation rental) -->
+<div class="card">
+  <div class="card-inner">
+    <div class="ckicker">Option 3 &middot; Poipu, south shore &middot; oceanfront condo &middot; 2 adults, 2 kids</div>
+    <h3>Poipu Point Oceanfront Residence &mdash; oceanfront condo</h3>
+    <div class="ctag">A condo's space and kitchen, with a waterslide pool and athletic club thrown in.</div>
+    <p class="lead-copy">This one threads the needle between a private rental and a resort. It's a <b>two-bedroom, two-bath oceanfront condo</b> (~1,400 sq ft) perched on the Poipu coastline, with a front-row lanai over the water, AC throughout, a full kitchen, and a washer/dryer. Two king bedrooms plus a queen sofa bed sleep your family of four with room to spare, and traditional shoji doors give real separation between the bedrooms and living space.</p>
+    <p>What sets it apart from a standalone rental: guests get <b>access to the Poipu Beach Athletic Club</b> (for up to five), which gives you the resort amenities a condo usually lacks &mdash; a resort-style pool with a waterslide, a hot tub, tennis, pickleball, basketball, a full gym, and the Cabana Bar &amp; Grill. There's also an ocean-view pool, tennis/pickleball, and a community BBQ right on site. Sunny Poipu's beaches are minutes away.</p>
+    <div class="carousel">
+      <div class="carousel-track">
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/1045987/328b9f5e76b3e85c94866cc7663c6c2f-0_webfull" alt="Poipu Point Oceanfront Residence photo 1" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/1045987/ba017a6c288ccaaf9bd5203ae3a67d48-1" alt="Poipu Point Oceanfront Residence photo 2" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/1045987/e16977c280b4c2c6393e580eba3db5b5-2" alt="Poipu Point Oceanfront Residence photo 3" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/1045987/b77ed7a4b8311f9a5f1f4825d5ccf71a-3" alt="Poipu Point Oceanfront Residence photo 4" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/1045987/3f166ce41169909f8de16eae39090a75-4" alt="Poipu Point Oceanfront Residence photo 5" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/1045987/11b7bab8ae9e3d3ddbbe4d85723c373d-5" alt="Poipu Point Oceanfront Residence photo 6" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/1045987/5bb50ce20a56b3f14e57ed2aa7a97741-6" alt="Poipu Point Oceanfront Residence photo 7" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/1045987/9e6d813735f97605d760af2a6eb014d3-7" alt="Poipu Point Oceanfront Residence photo 8" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/1045987/656cd2282e03b4d0e3b6aa12a704a700-8" alt="Poipu Point Oceanfront Residence photo 9" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/1045987/73b6755b162532fd6a5a851f771067b0-9" alt="Poipu Point Oceanfront Residence photo 10" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/1045987/5e5915b197f51b11d9f5838cd289cbf3-10" alt="Poipu Point Oceanfront Residence photo 11" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/1045987/25d3713b83abed06205606821365def6-12" alt="Poipu Point Oceanfront Residence photo 12" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/1045987/674c42feea6a628fb5ee37e5b189ff82-13" alt="Poipu Point Oceanfront Residence photo 13" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/1045987/2e81eb99b3d1ecffcc36c4c8e8fc9a7f-14" alt="Poipu Point Oceanfront Residence photo 14" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/1045987/ac19ea016b123bb9d80feb6864d600a8-15" alt="Poipu Point Oceanfront Residence photo 15" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/1045987/040661c8c042886e21aac1a0d4a02af7-17" alt="Poipu Point Oceanfront Residence photo 16" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/1045987/c99caea3492046d6d32a12c5d1936429-19" alt="Poipu Point Oceanfront Residence photo 17" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/1045987/d83f63bda7593259c0b7fedbd07e1032-20" alt="Poipu Point Oceanfront Residence photo 18" loading="lazy"></div>
+      </div>
+      <button class="carousel-btn prev" aria-label="Previous photo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+      <button class="carousel-btn next" aria-label="Next photo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+      <div class="carousel-counter"></div>
+    </div>
+    <div class="carousel-dots"><button class="carousel-dot" aria-label="Go to photo 1"></button><button class="carousel-dot" aria-label="Go to photo 2"></button><button class="carousel-dot" aria-label="Go to photo 3"></button><button class="carousel-dot" aria-label="Go to photo 4"></button><button class="carousel-dot" aria-label="Go to photo 5"></button><button class="carousel-dot" aria-label="Go to photo 6"></button><button class="carousel-dot" aria-label="Go to photo 7"></button><button class="carousel-dot" aria-label="Go to photo 8"></button><button class="carousel-dot" aria-label="Go to photo 9"></button><button class="carousel-dot" aria-label="Go to photo 10"></button><button class="carousel-dot" aria-label="Go to photo 11"></button><button class="carousel-dot" aria-label="Go to photo 12"></button><button class="carousel-dot" aria-label="Go to photo 13"></button><button class="carousel-dot" aria-label="Go to photo 14"></button><button class="carousel-dot" aria-label="Go to photo 15"></button><button class="carousel-dot" aria-label="Go to photo 16"></button><button class="carousel-dot" aria-label="Go to photo 17"></button><button class="carousel-dot" aria-label="Go to photo 18"></button></div>
+    <div class="amenities">
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18 12 4l9 14M3 18h18"/></svg><div><b>Oceanfront, second-floor lanai</b><span>Unobstructed Poipu coastline &amp; surf views</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M2 12a10 10 0 0 1 20 0M5 12v4a7 7 0 0 0 14 0v-4"/></svg><div><b>Athletic Club access</b><span>Waterslide pool, hot tub, tennis, gym, Cabana grill (up to 5)</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3zM3 9h18M9 9v12"/></svg><div><b>Full kitchen + washer/dryer</b><span>~1,400 sq ft, AC throughout, dishwasher, bar seating</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16M4 9h16M4 14h10M4 19h10"/></svg><div><b>Two king bedrooms + sofa bed</b><span>Shoji doors separate bedrooms from living space</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M2 12a10 10 0 0 1 20 0M5 12v4a7 7 0 0 0 14 0v-4"/></svg><div><b>Ocean-view pool &amp; BBQ on site</b><span>Complimentary self-parking, beach chairs &amp; towels provided</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Sunny south shore (Poipu)</b><span>Minutes to Poipu's beaches; no daily housekeeping</span></div></div>
+    </div>
+    <div class="room-block">
+      <h4>2-Bedroom Oceanfront Condo &middot; sleeps up to 6</h4>
+      <p>Primary suite with a king, ocean views, AC, and ensuite; guest suite with a king and full bath; queen sleeper sofa in the living room. Vaulted ceilings, full kitchen, in-unit laundry.</p>
+    </div>
+    <div class="honest"><b>Honest trade:</b> this is the middle path &mdash; more space and a kitchen like a rental, but with the Athletic Club's waterslide pool and amenities a standalone home doesn't have. Two things to know plainly: there's no daily housekeeping (it's a private condo), and the path from the parking lot to the unit has stairs &mdash; minor, but worth knowing with kids and beach gear.</div>
+    <div class="pricebox">
+      <div class="pk">Select this stay &middot; air + condo, all in</div>
+      <label class="select-row">
+        <input type="radio" name="selection" value="Makahuena 5202 — Oceanfront 2BR Condo, Poipu" data-total="10850" data-deposit="3185" data-balance="7665" data-balancedue="paid in full" data-payfull="1" onclick="setTimeout(updateSelection,0)">
+        <span class="radio-dot"></span>
+        <span class="sel-label"><b>Poipu Point Oceanfront Residence &mdash; oceanfront 2BR condo</b><span>~1,400 sq ft &middot; 2 kings + sofa bed &middot; sleeps up to 6</span></span>
+        <span class="sel-price"><b>Est. $10,850</b><span>~$2,713 pp</span></span>
+      </label>
+      <div class="inc" style="margin-top:16px"><b>Includes</b>
+        <ul>
+          <li>Round-trip United flights, Houston&ndash;Kauai, all 4 travelers</li>
+          <li>7 nights, entire 2-bedroom oceanfront condo (cleaning &amp; taxes included)</li>
+          <li>Poipu Beach Athletic Club access (up to 5 guests)</li>
+          <li>Full kitchen, AC throughout, washer/dryer, beach gear</li>
+        </ul>
+      </div>
+      <div class="paysplit">
+        <div class="prow"><span>Due at booking &mdash; flights + condo, paid in full</span><b>$10,850</b></div>
+        <div class="prow bal"><span>No balance later &mdash; this condo is paid in full to reserve</span><span>&mdash;</span></div>
+      </div>
+      <div class="fine">Like the home option, this condo is paid in full at booking rather than held with a deposit. Final pricing confirmed by Christina before booking.</div>
+    </div>
+  </div>
+</div>
+
+<!-- POIPU KAPILI (vacation rental) -->
+<div class="card">
+  <div class="card-inner">
+    <div class="ckicker">Option 4 &middot; Poipu, south shore &middot; oceanfront villa &middot; 2 adults, 2 kids</div>
+    <h3>Poipu Coast Corner Villa &mdash; oceanfront end unit</h3>
+    <div class="ctag">The most space and the highest-end finish of the rentals &mdash; a true oceanfront corner unit.</div>
+    <p class="lead-copy">If the condo idea appeals but you want more room and a quieter, more polished setting than the Poipu Point condo, this is it. This is a <b>~1,800-square-foot, two-level oceanfront corner villa</b> in a boutique-luxury setting in the heart of Poipu &mdash; the largest of the rental options. The great-room level opens to an oceanfront lanai with AC and ocean views throughout; upstairs, <b>two king suites each with their own full bathroom</b> (the primary is oceanfront with a Jacuzzi tub).</p>
+    <p>The complex keeps it low-key but well-equipped: an ocean-view pool, tennis and pickleball courts, multiple BBQ areas, even an herb garden. You're minutes from Poipu's beaches, shops, and dining on Kauai's sunny south shore. Full kitchen, washer/dryer, AC and ceiling fans in every room.</p>
+    <div class="carousel">
+      <div class="carousel-track">
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/278503/bec9e0b73a73d14aa830fca050339ded-0" alt="Poipu Coast Corner Villa photo 1" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/278503/cd1089f61c9de2334fe544414b338f2e-1" alt="Poipu Coast Corner Villa photo 2" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/278503/3157beb7e47df0f385fbf65b03628ddd-2" alt="Poipu Coast Corner Villa photo 3" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/278503/fa0c437b1a64d0a3bdf1bb49bc61e9a2-3" alt="Poipu Coast Corner Villa photo 4" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/278503/e3c96d6c9b759677c9f18081a8ba9538-4" alt="Poipu Coast Corner Villa photo 5" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/278503/4e817ff47e54b1584a053ad89727ef0b-5" alt="Poipu Coast Corner Villa photo 6" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/278503/b006f484368eeb67a961c89b946be73b-6" alt="Poipu Coast Corner Villa photo 7" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/278503/2ce2d704f7b79469824dc9c2bc6ad762-7" alt="Poipu Coast Corner Villa photo 8" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/278503/b7ef1e8f50deb90c829c1a0516743b20-8" alt="Poipu Coast Corner Villa photo 9" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/278503/4dafc3fa6e6e79958b64eba70e6e8243-12" alt="Poipu Coast Corner Villa photo 10" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/278503/17fccf8655f660224d9f1686835d25a4-13" alt="Poipu Coast Corner Villa photo 11" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/278503/e522f6ceb491bfc7e2cc2301f09cf477-14" alt="Poipu Coast Corner Villa photo 12" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/278503/156cdc3c8a2dbe2187c284cac979c1bc-15" alt="Poipu Coast Corner Villa photo 13" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/278503/e8d2a974063a1fe3ec595eabe8400a57-16" alt="Poipu Coast Corner Villa photo 14" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/278503/69eba5dfade00c268d76c1c652a4f6aa-17" alt="Poipu Coast Corner Villa photo 15" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/278503/51ab590c4654c5eb6e76e7f75c29e2bc-18" alt="Poipu Coast Corner Villa photo 16" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/278503/9022e1eef090c34bd60bc449efacc2e4-19" alt="Poipu Coast Corner Villa photo 17" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/278503/d710670726cb32ebd8cb2d55a0042791-20" alt="Poipu Coast Corner Villa photo 18" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/278503/985756d0ece39beab162c919d1699564-21" alt="Poipu Coast Corner Villa photo 19" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/278503/8bf2c852ae41f9b2a005adff9f882da5-22" alt="Poipu Coast Corner Villa photo 20" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/278503/faa05e2db736e00e5867dbb87afc371d-23" alt="Poipu Coast Corner Villa photo 21" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/278503/455b83d8c9d62ae87f30ffc082b65520-24" alt="Poipu Coast Corner Villa photo 22" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/278503/2ae063d0c475664c441697e90b703fd9-26" alt="Poipu Coast Corner Villa photo 23" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/278503/9714d9222a3cbc61ed6c18c0c9331e55-27" alt="Poipu Coast Corner Villa photo 24" loading="lazy"></div>
+        <div class="carousel-slide"><img src="https://as.wemaste.com/2b0ghi/278503/87862d4d2565d9ad1803d786859a8a46-28" alt="Poipu Coast Corner Villa photo 25" loading="lazy"></div>
+      </div>
+      <button class="carousel-btn prev" aria-label="Previous photo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+      <button class="carousel-btn next" aria-label="Next photo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+      <div class="carousel-counter"></div>
+    </div>
+    <div class="carousel-dots"><button class="carousel-dot" aria-label="Go to photo 1"></button><button class="carousel-dot" aria-label="Go to photo 2"></button><button class="carousel-dot" aria-label="Go to photo 3"></button><button class="carousel-dot" aria-label="Go to photo 4"></button><button class="carousel-dot" aria-label="Go to photo 5"></button><button class="carousel-dot" aria-label="Go to photo 6"></button><button class="carousel-dot" aria-label="Go to photo 7"></button><button class="carousel-dot" aria-label="Go to photo 8"></button><button class="carousel-dot" aria-label="Go to photo 9"></button><button class="carousel-dot" aria-label="Go to photo 10"></button><button class="carousel-dot" aria-label="Go to photo 11"></button><button class="carousel-dot" aria-label="Go to photo 12"></button><button class="carousel-dot" aria-label="Go to photo 13"></button><button class="carousel-dot" aria-label="Go to photo 14"></button><button class="carousel-dot" aria-label="Go to photo 15"></button><button class="carousel-dot" aria-label="Go to photo 16"></button><button class="carousel-dot" aria-label="Go to photo 17"></button><button class="carousel-dot" aria-label="Go to photo 18"></button><button class="carousel-dot" aria-label="Go to photo 19"></button><button class="carousel-dot" aria-label="Go to photo 20"></button><button class="carousel-dot" aria-label="Go to photo 21"></button><button class="carousel-dot" aria-label="Go to photo 22"></button><button class="carousel-dot" aria-label="Go to photo 23"></button><button class="carousel-dot" aria-label="Go to photo 24"></button><button class="carousel-dot" aria-label="Go to photo 25"></button></div>
+    <div class="amenities">
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18 12 4l9 14M3 18h18"/></svg><div><b>Oceanfront corner unit</b><span>~1,800 sq ft, two levels, ocean views throughout</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16M4 9h16M4 14h10M4 19h10"/></svg><div><b>Two king suites, 3 baths</b><span>Each bedroom ensuite; primary oceanfront with Jacuzzi tub</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3zM3 9h18M9 9v12"/></svg><div><b>Full kitchen + washer/dryer</b><span>AC &amp; ceiling fans throughout, in-unit laundry</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M2 12a10 10 0 0 1 20 0M5 12v4a7 7 0 0 0 14 0v-4"/></svg><div><b>Ocean-view pool &amp; tennis</b><span>Pickleball, multiple BBQ areas, herb garden</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Heart of Poipu, south shore</b><span>Minutes to beaches, shops &amp; dining; assigned parking</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/><circle cx="12" cy="12" r="10"/></svg><div><b>Sleeps 4, two levels</b><span>No sofa bed; stairs between floors, no daily housekeeping</span></div></div>
+    </div>
+    <div class="room-block">
+      <h4>Oceanfront Corner Villa, 2 king suites &middot; sleeps 4</h4>
+      <p>Primary suite oceanfront with a king, walk-in shower, and separate Jacuzzi tub; second king suite (garden view) with its own full bath; a third guest bath on the entry level. Great-room living/dining/kitchen with ocean views. Note it sleeps exactly four &mdash; a good fit for your family, with no sofa-bed spare.</p>
+    </div>
+    <div class="honest"><b>Honest trade vs. the Poipu Point condo:</b> this villa is bigger (~1,800 vs. ~1,400 sq ft), higher-end, with two full king ensuites and three bathrooms &mdash; the more spacious, polished, grown-up-feeling rental. What it doesn't have is the Poipu Point condo's Athletic Club waterslide pool; the on-site amenities here are a quieter pool, tennis, and pickleball. It's also a two-level unit with stairs and sleeps exactly four. Best for a family that prioritizes space and calm over a big pool scene.</div>
+    <div class="pricebox">
+      <div class="pk">Select this stay &middot; air + villa, all in</div>
+      <label class="select-row">
+        <input type="radio" name="selection" value="Poipu Kapili Unit 1 — Oceanfront Corner Villa, Poipu" data-total="11545" data-deposit="3185" data-balance="8360" data-balancedue="paid in full" data-payfull="1" onclick="setTimeout(updateSelection,0)">
+        <span class="radio-dot"></span>
+        <span class="sel-label"><b>Poipu Coast Corner Villa &mdash; oceanfront end unit</b><span>~1,800 sq ft &middot; two king suites &middot; sleeps 4</span></span>
+        <span class="sel-price"><b>Est. $11,545</b><span>~$2,886 pp</span></span>
+      </label>
+      <div class="inc" style="margin-top:16px"><b>Includes</b>
+        <ul>
+          <li>Round-trip United flights, Houston&ndash;Kauai, all 4 travelers</li>
+          <li>7 nights, entire oceanfront corner villa (cleaning &amp; taxes included)</li>
+          <li>Ocean-view pool, tennis &amp; pickleball, BBQ areas</li>
+          <li>Full kitchen, AC throughout, washer/dryer</li>
+        </ul>
+      </div>
+      <div class="paysplit">
+        <div class="prow"><span>Due at booking &mdash; flights + villa, paid in full</span><b>$11,545</b></div>
+        <div class="prow bal"><span>No balance later &mdash; this villa is paid in full to reserve</span><span>&mdash;</span></div>
+      </div>
+      <div class="fine">Like the other rentals, this villa is paid in full at booking rather than held with a deposit. Final pricing confirmed by Christina before booking.</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- RENTAL VEHICLES -->
+<section class="body-sec" style="padding-top:0">
+  <div class="rental">
+    <div class="rl-head">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M5 17l1.5-5h11L19 17M5 17v2M19 17v2M7 12l1-4h8l1 4"/><circle cx="7.5" cy="17" r="1.5"/><circle cx="16.5" cy="17" r="1.5"/></svg>
+      <h3>Getting around the island</h3>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="transform:scaleX(-1)"><path d="M5 17h14M5 17l1.5-5h11L19 17M5 17v2M19 17v2M7 12l1-4h8l1 4"/><circle cx="7.5" cy="17" r="1.5"/><circle cx="16.5" cy="17" r="1.5"/></svg>
+    </div>
+    <p class="rl-note">A car is essential on Kauai &mdash; there's no real public transit, and the island's best beaches and lookouts are spread along one coastal highway. These are example rates for the week; tell me what suits your family and I'll match the right vehicle.</p>
+    <div class="rental-grid">
+      <div class="rl-item">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13h18M3 13l2-6h14l2 6M3 13v4h2M21 13v4h-2M7 17h10"/><circle cx="6.5" cy="17" r="1.5"/><circle cx="17.5" cy="17" r="1.5"/></svg>
+        <div class="rl-name">Jeep Compass</div>
+        <div class="rl-price">Est. $867</div>
+        <div class="rl-week">for the week</div>
+        <div class="rl-for">Compact SUV &mdash; fits four plus luggage, easiest to park</div>
+      </div>
+      <div class="rl-item">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13h18M4 13l1.5-5h13L20 13M4 13v4h2M20 13v4h-2M8 17h8M7 8V6M17 8V6"/><circle cx="6.5" cy="17" r="1.5"/><circle cx="17.5" cy="17" r="1.5"/></svg>
+        <div class="rl-name">Jeep Wrangler, 4-door</div>
+        <div class="rl-price">Est. $1,016</div>
+        <div class="rl-week">for the week</div>
+        <div class="rl-for">The classic open-top island drive &mdash; built for Waimea Canyon and the north shore</div>
+      </div>
+      <div class="rl-item">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 14h20M2 14l2-7h16l2 7M2 14v4h2M22 14v4h-2M6 18h12"/><circle cx="5.5" cy="18" r="1.5"/><circle cx="18.5" cy="18" r="1.5"/></svg>
+        <div class="rl-name">Full-size SUV</div>
+        <div class="rl-price">Est. $1,200</div>
+        <div class="rl-week">for the week</div>
+        <div class="rl-for">Suburban, Tahoe or similar &mdash; most room for gear and comfort</div>
+      </div>
+    </div>
+    <div class="rl-foot">Rental rates are examples, estimated, and <b>paid directly at pickup</b> &mdash; they're not included in the package totals above. Final rates confirmed when you book.</div>
+  </div>
+</section>
+<!-- RUNNING TOTAL BAR -->
+<div class="totalbar" id="totalBar">
+  <div class="totalbar-inner">
+    <div class="tb-label" id="tbLabel"><b>No package selected yet</b> &mdash; choose an option above</div>
+    <div class="tb-amt" id="tbAmt">&mdash;</div>
+  </div>
+</div>
+
+<!-- FORM -->
+<div class="formsec">
+  <div class="formcard">
+    <div id="formWrap">
+      <h2>Tell me what you're thinking</h2>
+      <p class="fsub accent">Lean toward one of these, or have questions about any of them &mdash; either way, send it over. Nothing here is locked in: if you'd like to mix and match, adjust dates, or look at something different, just say so in the notes and we'll take it from there. Once you're happy, I'll confirm every detail with you before anything is booked.</p>
+
+      <div class="sel-summary" id="selSummary">
+        <div class="ss-none" id="ssNone">No package selected yet &mdash; choose one above and it'll appear here.</div>
+        <div class="ss-pick" id="ssPick" style="display:none">
+          <b id="ssName"></b>
+          <div class="ss-pay">
+            <div><span>Estimated package</span><span id="ssTotal"></span></div>
+            <div><span id="ssDepositLabel">Deposit today (your flights)</span><b id="ssDeposit"></b></div>
+            <div id="ssBalanceRow"><span><span id="ssBalanceLabel">Balance due </span><span id="ssDueDate"></span></span><span id="ssBalance"></span></div>
+            <div id="ssAtPropRow" style="display:none"><span>Paid at hotel (resort fee + tax)</span><span id="ssAtProp"></span></div>
+          </div>
+          <p id="ssAtPropNote" class="ss-note" style="display:none">The estimated package above already includes this resort fee &amp; local tax &mdash; that portion is simply collected by the hotel at checkout rather than pre-paid, so nothing here is an extra cost on top of the total.</p>
+        </div>
+      </div>
+
+      <form id="tripForm">
+        <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+        <input type="hidden" name="subject" value="Meadows Family — Kauai Summer 2026 Selection">
+        <input type="hidden" name="from_name" value="Meadows Family — PMTP Kauai Trip Form">
+        <input type="hidden" name="redirect" value="false">
+
+        <input type="hidden" name="Package_Selected" id="hidden_selection">
+        <input type="hidden" name="Estimated_Total" id="hidden_total">
+        <input type="hidden" name="Deposit_Due_Now" id="hidden_deposit">
+        <input type="hidden" name="Balance_Due" id="hidden_balance">
+        <input type="hidden" name="Paid_At_Property" id="hidden_atprop">
+
+        <label for="nm">Name</label>
+        <input id="nm" type="text" name="Name" required>
+        <label for="em">Email</label>
+        <input id="em" type="email" name="Email" required>
+        <label for="ph">Phone</label>
+        <input id="ph" type="tel" name="Phone">
+
+        <label>Travel insurance</label>
+        <div class="ins-group">
+          <label class="ins-opt">
+            <input type="radio" name="Insurance_Choice" value="Yes — please send me a travel insurance quote" required>
+            <span>Yes, please send me a travel insurance quote</span>
+          </label>
+          <label class="ins-opt">
+            <input type="radio" name="Insurance_Choice" value="No — I decline travel insurance and accept the risks of traveling without coverage" required>
+            <span>No, I decline insurance and understand the risks of traveling without coverage</span>
+          </label>
+        </div>
+
+        <label for="th">Notes &amp; special requests</label>
+        <textarea id="th" name="Trip_Notes" placeholder="Different dates, a daytime flight home, a room upgrade, a rental car preference — anything you'd like me to know."></textarea>
+
+        <button type="submit" class="submit-btn" id="submitBtn">Send it to me</button>
+        <p class="select-hint" id="submitHint">Select a package above to enable sending.</p>
+      </form>
+    </div>
+    <div id="thanksMsg" class="thanks">
+      <h3>Got it &mdash; thank you.</h3>
+      <p>This is on its way to me. I'll look everything over and get back to you soon &mdash; and if you mentioned questions or changes, we'll work through them together. Nothing's booked until you're completely comfortable.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div class="fname">Christina Garcia</div>
+    <div class="fcontact">Point Me to Paradise Travel &middot; <a id="emailLink" href="#">email</a> &middot; (281) 229-0862</div>
+    <p class="foot-disclosure">Individual hotels, transfers, and tours in your quote are priced at publicly available rates &mdash; and in many cases lower than what you'd find on your own. You don't have to worry about overpaying for a piece of your trip. What you're paying for is the rest: the right rooms at the right property, operators we've used for years, the trip app, and a human who answers when something doesn't go to plan.</p>
+  </div>
+</footer>
+
+<script>
+// Email assembly (Cloudflare obfuscation)
+(function(){
+  var addr = 'Christina' + '@' + 'PointMeToParadise.com';
+  var el = document.getElementById('emailLink');
+  el.href = 'mailto:' + addr;
+  el.textContent = addr;
+})();
+
+// Currency formatter
+function money(n){ return '$' + Number(n).toLocaleString('en-US'); }
+
+// Image carousels
+function initCarousels(){
+  document.querySelectorAll('.carousel').forEach(function(car){
+    var track = car.querySelector('.carousel-track');
+    var slides = car.querySelectorAll('.carousel-slide');
+    var dots = car.querySelectorAll('.carousel-dot');
+    var counter = car.querySelector('.carousel-counter');
+    var idx = 0;
+    var total = slides.length;
+    function go(n){
+      idx = (n + total) % total;
+      track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+      dots.forEach(function(d,i){ d.classList.toggle('active', i === idx); });
+      if(counter) counter.textContent = (idx + 1) + ' / ' + total;
+    }
+    var prev = car.querySelector('.carousel-btn.prev');
+    var next = car.querySelector('.carousel-btn.next');
+    if(prev) prev.addEventListener('click', function(){ go(idx - 1); });
+    if(next) next.addEventListener('click', function(){ go(idx + 1); });
+    dots.forEach(function(d,i){ d.addEventListener('click', function(){ go(i); }); });
+    // touch swipe
+    var startX = 0, dx = 0;
+    car.addEventListener('touchstart', function(e){ startX = e.touches[0].clientX; dx = 0; }, {passive:true});
+    car.addEventListener('touchmove', function(e){ dx = e.touches[0].clientX - startX; }, {passive:true});
+    car.addEventListener('touchend', function(){
+      if(Math.abs(dx) > 40){ go(idx + (dx < 0 ? 1 : -1)); }
+    });
+    go(0);
+  });
+}
+document.addEventListener('DOMContentLoaded', initCarousels);
+
+// Selection -> total bar, summary, hidden fields, submit gating
+function updateSelection(){
+  var sel = document.querySelector('input[name="selection"]:checked');
+  var tbLabel = document.getElementById('tbLabel');
+  var tbAmt = document.getElementById('tbAmt');
+  var ssNone = document.getElementById('ssNone');
+  var ssPick = document.getElementById('ssPick');
+  var btn = document.getElementById('submitBtn');
+  var hint = document.getElementById('submitHint');
+
+  if(!sel){
+    tbLabel.innerHTML = '<b>No package selected yet</b> &mdash; choose an option above';
+    tbAmt.innerHTML = '&mdash;';
+    ssNone.style.display = 'block';
+    ssPick.style.display = 'none';
+    btn.disabled = true;
+    hint.style.display = 'block';
+    return;
+  }
+
+  var name = sel.value;
+  var total = sel.getAttribute('data-total');
+  var deposit = sel.getAttribute('data-deposit');
+  var balance = sel.getAttribute('data-balance');
+  var due = sel.getAttribute('data-balancedue');
+  var payFull = sel.getAttribute('data-payfull') === '1';
+  var atprop = sel.getAttribute('data-atprop');
+
+  // Total bar
+  tbLabel.innerHTML = '<b>Selected:</b> ' + name;
+  if(payFull){
+    tbAmt.innerHTML = 'Est. ' + money(total) + '<span>Paid in full at booking</span>';
+  } else {
+    tbAmt.innerHTML = 'Est. ' + money(total) + '<span>Deposit ' + money(deposit) + ' today</span>';
+  }
+
+  // Summary block
+  ssNone.style.display = 'none';
+  ssPick.style.display = 'block';
+  document.getElementById('ssName').textContent = name;
+  document.getElementById('ssTotal').textContent = 'Est. ' + money(total);
+
+  if(payFull){
+    document.getElementById('ssDepositLabel').textContent = 'Due at booking (paid in full)';
+    document.getElementById('ssDeposit').textContent = money(total);
+    document.getElementById('ssBalanceRow').style.display = 'none';
+    document.getElementById('hidden_deposit').value = money(total) + ' (paid in full at booking)';
+    document.getElementById('hidden_balance').value = 'None — paid in full at booking';
+  } else {
+    document.getElementById('ssDepositLabel').textContent = 'Deposit today (your flights)';
+    document.getElementById('ssDeposit').textContent = money(deposit);
+    document.getElementById('ssBalanceRow').style.display = '';
+    document.getElementById('ssBalanceLabel').textContent = 'Balance due ';
+    document.getElementById('ssBalance').textContent = money(balance);
+    document.getElementById('ssDueDate').textContent = due;
+    document.getElementById('hidden_deposit').value = money(deposit) + ' (flights)';
+    document.getElementById('hidden_balance').value = money(balance) + ' due ' + due;
+  }
+
+  // Optional "paid at property" row + note
+  var apRow = document.getElementById('ssAtPropRow');
+  var apNote = document.getElementById('ssAtPropNote');
+  var hap = document.getElementById('hidden_atprop');
+  if(atprop && Number(atprop) > 0){
+    if(apRow){ apRow.style.display = ''; document.getElementById('ssAtProp').textContent = money(atprop); }
+    if(apNote) apNote.style.display = '';
+    if(hap) hap.value = money(atprop) + ' (resort fee + local tax, paid at hotel)';
+  } else {
+    if(apRow) apRow.style.display = 'none';
+    if(apNote) apNote.style.display = 'none';
+    if(hap) hap.value = 'n/a';
+  }
+
+  // Hidden fields
+  document.getElementById('hidden_selection').value = name;
+  document.getElementById('hidden_total').value = 'Est. ' + money(total);
+
+  // Enable submit
+  btn.disabled = false;
+  hint.style.display = 'none';
+}
+
+// Initialize gating on load
+document.addEventListener('DOMContentLoaded', updateSelection);
+
+// Form submit
+document.getElementById('tripForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  if(!document.querySelector('input[name="selection"]:checked')){
+    alert('Please select a package above before sending.');
+    return;
+  }
+  var form = e.target;
+  var data = new FormData(form);
+  fetch('https://api.web3forms.com/submit', { method:'POST', body:data })
+    .then(function(res){ return res.json(); })
+    .then(function(json){
+      if(json.success){
+        document.getElementById('formWrap').style.display='none';
+        document.getElementById('totalBar').style.display='none';
+        document.getElementById('thanksMsg').classList.add('show');
+      } else {
+        alert('Something went wrong. Please email Christina directly or text (281) 229-0862.');
+      }
+    })
+    .catch(function(){
+      alert('Something went wrong. Please email Christina directly or text (281) 229-0862.');
+    });
+});
+</script>
+</body>
+</html>
