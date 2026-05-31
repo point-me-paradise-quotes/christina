@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>Maui · Summer 2026 — Prepared by Point Me to Paradise Travel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --aqua-pale:#C4E4E1; --aqua-mist:#EAF3F2; --aqua:#75AFB1; --aqua-dark:#4F8A8C;
+  --sand:#ECE7DC; --sand-light:#F4F1E9; --gold-whisper:#D6C8A8;
+  --white:#FFFFFF; --paper:#FBFDFD; --ink:#2B2420; --ink-soft:#6B6359; --line:#E5E9E8;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{color-scheme:light}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;color:var(--aqua-dark);font-weight:500;line-height:1.2}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.kicker{font-family:'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:11px;font-weight:600;color:var(--aqua-dark)}
+.accent{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-soft)}
+.hairline{width:60px;height:1px;background:var(--gold-whisper);border:0;margin:18px auto}
+
+/* HERO — Variant B cover */
+.hero{position:relative;text-align:center;border-bottom:1px solid var(--line);padding:110px 24px 88px;
+  background-image:linear-gradient(180deg,rgba(255,255,255,.55) 0%,rgba(196,228,225,.72) 38%,rgba(234,243,242,.88) 75%,rgba(251,253,253,.98) 100%),url('https://www.prideofmaui.com/blog/wp-content/uploads/2025/07/00_Thumbnail_AS_SecretBeach_04-jpg.webp');
+  background-size:cover;background-position:center;background-repeat:no-repeat}
+.hero .brandmark{font-family:'DM Sans',sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:.26em;color:var(--aqua-dark);font-weight:600}
+.hero h1{font-size:clamp(40px,6vw,64px);margin:22px 0 0}
+.hero .sub{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink);font-size:clamp(19px,2.2vw,24px);max-width:640px;margin:0 auto}
+.hero .sig{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-soft);font-size:16px;margin-top:24px}
+
+/* OVERVIEW STRIP */
+.overview{background:var(--aqua-mist);border-bottom:1px solid var(--line);padding:30px 24px}
+.overview-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1040px;margin:0 auto;text-align:center}
+.ov-item{display:flex;flex-direction:column;align-items:center;gap:8px}
+.ov-item svg{color:var(--aqua-dark)}
+.ov-label{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--ink-soft);font-weight:600}
+.ov-value{font-family:'Playfair Display',serif;font-size:18px;color:var(--aqua-dark)}
+
+/* VALUE STRIP */
+.value-strip{background:var(--sand-light);padding:56px 24px}
+.value-strip h2{font-size:32px;text-align:center}
+.value-strip .vs-sub{text-align:center;font-size:18px;margin-top:6px;margin-bottom:38px}
+.vs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;max-width:980px;margin:0 auto}
+.vs-col{padding:0 30px;text-align:center;position:relative}
+.vs-col+.vs-col::before{content:"";position:absolute;left:0;top:8px;bottom:8px;width:1px;background:var(--gold-whisper)}
+.vs-col svg{color:var(--aqua-dark);margin-bottom:14px}
+.vs-col h3{font-size:21px;margin-bottom:10px}
+.vs-col p{font-size:14.5px;color:var(--ink-soft)}
+
+/* SECTIONS */
+section.body-sec{padding:56px 24px}
+.intro p{font-size:17px;max-width:760px;margin:0 auto 16px;text-align:center}
+.intro .lead{font-size:19px}
+.sec-head{text-align:center;margin-bottom:8px}
+.sec-head h2{font-size:34px}
+.sec-sub{text-align:center;font-size:18px;max-width:680px;margin:0 auto 36px}
+
+/* AREA BANNER */
+.area-banner{display:flex;align-items:center;justify-content:center;gap:16px;margin:8px 0 28px}
+.area-banner svg{color:var(--aqua-dark);opacity:.65}
+.area-banner h2{font-size:30px}
+
+/* FLIGHTS CARD */
+.flights{background:var(--white);border:1px solid var(--line);border-radius:8px;padding:30px 32px;max-width:880px;margin:0 auto}
+.flights .fl-head{display:flex;align-items:center;gap:12px;justify-content:center;margin-bottom:6px}
+.flights .fl-head svg{color:var(--aqua-dark);opacity:.65}
+.flights h3{font-size:24px;text-align:center}
+.flights .fl-note{font-size:14px;color:var(--ink-soft);text-align:center;max-width:680px;margin:10px auto 26px;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:17px}
+.leg{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:center;padding:18px 0;border-top:1px solid var(--line)}
+.leg:first-of-type{border-top:0}
+.leg .pt{text-align:center}
+.leg .time{font-family:'Playfair Display',serif;font-size:22px;color:var(--aqua-dark)}
+.leg .apt{font-size:13px;color:var(--ink-soft);font-weight:600;letter-spacing:.04em}
+.leg .mid{text-align:center;font-size:11px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.1em}
+.leg .mid svg{display:block;margin:4px auto;color:var(--aqua)}
+.leg .meta{font-size:12px;color:var(--ink-soft);margin-top:3px}
+.fl-tag{display:inline-block;background:var(--aqua-mist);color:var(--aqua-dark);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:3px;margin-bottom:18px}
+.fl-redeye{background:var(--sand-light);border-left:3px solid var(--aqua-dark);padding:16px 20px;margin-top:22px;font-size:14px;border-radius:0 4px 4px 0}
+
+/* RESORT CARDS */
+.card{background:var(--white);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:0 auto 34px;max-width:880px}
+.card-inner{padding:30px 32px}
+.card .ckicker{font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:var(--ink-soft);font-weight:600;margin-bottom:10px}
+.card h3{font-size:28px}
+.card .ctag{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-soft);font-size:19px;margin-bottom:14px}
+.card p{font-size:15px;margin-bottom:12px}
+.card p.lead-copy{color:var(--ink)}
+.img-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:18px 0 22px}
+.img-strip img{width:100%;height:180px;object-fit:cover;border-radius:4px;display:block;background:var(--aqua-mist)}
+.amenities{display:grid;grid-template-columns:1fr 1fr;gap:14px 28px;margin:8px 0 22px;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.am{display:flex;gap:11px;align-items:flex-start;font-size:14px}
+.am svg{flex-shrink:0;color:var(--aqua-dark);margin-top:2px}
+.am b{font-weight:600;display:block}
+.am span{color:var(--ink-soft);font-size:13px}
+.room-block h4{font-family:'Playfair Display',serif;font-size:18px;color:var(--aqua-dark);margin:6px 0 8px}
+.honest{background:var(--aqua-mist);border-radius:6px;padding:14px 18px;font-size:14px;margin:14px 0;border-left:3px solid var(--aqua)}
+.honest b{color:var(--aqua-dark)}
+
+/* PRICE BOX */
+.pricebox{background:var(--aqua-pale);border-radius:8px;padding:22px 26px;margin-top:22px}
+.pricebox .pk{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--aqua-dark);font-weight:600}
+.pricebox .amt{font-family:'Playfair Display',serif;font-size:34px;color:var(--ink);margin:4px 0 2px}
+.pricebox .pp{font-size:14px;color:var(--ink-soft)}
+.pricebox .inc{font-size:13px;color:var(--ink);margin-top:14px}
+.pricebox .inc b{color:var(--aqua-dark);font-size:11px;text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:6px}
+.pricebox ul{list-style:none;font-size:13px;color:var(--ink-soft)}
+.pricebox li{padding:2px 0 2px 18px;position:relative}
+.pricebox li::before{content:"";position:absolute;left:0;top:10px;width:5px;height:5px;border-radius:50%;background:var(--aqua-dark)}
+.pricebox .fine{font-size:12px;color:var(--ink-soft);margin-top:14px;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:14px}
+
+/* dual-room mini table */
+.rooms2{margin:14px 0}
+.rooms2 .rrow{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:12px 0;border-top:1px solid var(--line)}
+.rooms2 .rrow:first-child{border-top:0}
+.rooms2 .rname{font-size:14px}
+.rooms2 .rname b{display:block;color:var(--aqua-dark);font-family:'Playfair Display',serif;font-size:16px}
+.rooms2 .rname span{font-size:12px;color:var(--ink-soft)}
+.rooms2 .rprice{text-align:right;white-space:nowrap}
+.rooms2 .rprice b{font-family:'Playfair Display',serif;font-size:20px;color:var(--ink)}
+.rooms2 .rprice span{display:block;font-size:12px;color:var(--ink-soft)}
+
+/* SELECTABLE OPTIONS */
+.select-row{display:flex;align-items:center;gap:14px;background:var(--white);border:1.5px solid var(--line);border-radius:8px;padding:16px 18px;margin-top:12px;cursor:pointer;transition:border-color .15s,background .15s;min-height:48px}
+.select-row:hover{border-color:var(--aqua)}
+.select-row input[type=radio]{position:absolute;opacity:0;width:0;height:0}
+.select-row .radio-dot{flex-shrink:0;width:22px;height:22px;border:2px solid var(--aqua);border-radius:50%;position:relative;transition:border-color .15s}
+.select-row .radio-dot::after{content:"";position:absolute;inset:4px;border-radius:50%;background:var(--aqua-dark);transform:scale(0);transition:transform .15s}
+.select-row .sel-label{flex:1;font-size:14px}
+.select-row .sel-label b{display:block;font-family:'Playfair Display',serif;font-size:16px;color:var(--aqua-dark)}
+.select-row .sel-label span{font-size:12.5px;color:var(--ink-soft)}
+.select-row .sel-price{text-align:right;white-space:nowrap}
+.select-row .sel-price b{font-family:'Playfair Display',serif;font-size:19px;color:var(--ink)}
+.select-row .sel-price span{display:block;font-size:11.5px;color:var(--ink-soft)}
+.select-row:has(input:checked){border-color:var(--aqua-dark);background:var(--aqua-mist)}
+.select-row:has(input:disabled){opacity:.6;cursor:not-allowed}
+.select-row:has(input:disabled):hover{border-color:var(--line)}
+.select-row:has(input:checked) .radio-dot{border-color:var(--aqua-dark)}
+.select-row:has(input:checked) .radio-dot::after{transform:scale(1)}
+.select-hint{font-size:12px;color:var(--ink-soft);font-style:italic;font-family:'Cormorant Garamond',serif;font-size:14px;margin-top:14px;text-align:center}
+
+/* PAYMENT BREAKDOWN inside pricebox */
+.paysplit{margin-top:14px;border-top:1px solid rgba(79,138,140,.25);padding-top:12px}
+.paysplit .prow{display:flex;justify-content:space-between;font-size:13px;padding:3px 0}
+.paysplit .prow b{color:var(--aqua-dark)}
+.paysplit .prow.bal{color:var(--ink-soft)}
+
+/* PAID-AT-PROPERTY FLAG */
+.atprop{display:flex;gap:11px;align-items:flex-start;background:var(--cream-light,#F5EFDF);border:1px solid var(--gold-dark,#B89E6A);border-left:4px solid var(--gold-dark,#B89E6A);border-radius:6px;padding:13px 15px;margin-top:14px;font-size:13px;line-height:1.5}
+.atprop svg{flex-shrink:0;color:var(--gold-dark,#B89E6A);margin-top:1px}
+.atprop b{color:var(--ink)}
+.atprop .ap-amt{font-family:'Playfair Display',serif;color:var(--ink);font-weight:600}
+
+/* RUNNING TOTAL BAR (slim sticky) */
+.totalbar{position:sticky;bottom:0;z-index:40;background:var(--aqua-pale);border-top:1px solid var(--aqua);padding:11px 24px;box-shadow:0 -2px 12px rgba(43,36,32,.07)}
+.totalbar-inner{max-width:1040px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.totalbar .tb-label{font-size:13px;color:var(--ink)}
+.totalbar .tb-label b{color:var(--aqua-dark)}
+.totalbar .tb-amt{font-family:'Playfair Display',serif;font-size:20px;color:var(--ink);white-space:nowrap}
+.totalbar .tb-amt span{font-size:12px;color:var(--ink-soft);font-family:'DM Sans',sans-serif;display:block;text-align:right}
+
+/* RENTAL CARD */
+.rental{background:var(--white);border:1px solid var(--line);border-radius:8px;padding:30px 32px;max-width:880px;margin:0 auto}
+.rental .rl-head{display:flex;align-items:center;gap:12px;justify-content:center;margin-bottom:6px}
+.rental .rl-head svg{color:var(--aqua-dark);opacity:.65}
+.rental h3{font-size:24px;text-align:center}
+.rental .rl-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:var(--ink-soft);text-align:center;max-width:680px;margin:10px auto 26px}
+.rental-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rl-item{background:var(--sand-light);border:1px solid var(--line);border-radius:8px;padding:20px 22px;text-align:center}
+.rl-item svg{color:var(--aqua-dark);margin-bottom:10px}
+.rl-item .rl-name{font-family:'Playfair Display',serif;font-size:18px;color:var(--aqua-dark);margin-bottom:4px}
+.rl-item .rl-price{font-family:'Playfair Display',serif;font-size:22px;color:var(--ink);margin:6px 0 2px}
+.rl-item .rl-week{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft);font-weight:600}
+.rl-item .rl-for{font-size:13px;color:var(--ink-soft);margin-top:8px}
+.rl-foot{background:var(--aqua-mist);border-radius:6px;padding:14px 18px;font-size:13.5px;color:var(--ink);margin-top:20px;text-align:center}
+
+/* FORM */
+.formsec{background:var(--sand-light);padding:56px 24px}
+.formcard{background:var(--white);border:1px solid var(--line);border-radius:10px;max-width:620px;margin:0 auto;padding:34px 32px}
+.formcard h2{font-size:28px;text-align:center}
+.formcard .fsub{text-align:center;font-size:17px;margin-bottom:24px}
+.formcard label{display:block;font-size:13px;font-weight:600;color:var(--ink);margin:14px 0 6px;letter-spacing:.02em}
+.formcard input,.formcard textarea{width:100%;font-family:'DM Sans',sans-serif;font-size:16px;padding:12px 14px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink)}
+.formcard textarea{min-height:110px;resize:vertical}
+.formcard input:focus,.formcard textarea:focus{outline:none;border-color:var(--aqua-dark)}
+.ins-group{margin-top:6px}
+.ins-opt{display:flex;align-items:flex-start;gap:10px;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:12px 14px;margin-top:8px;cursor:pointer;font-size:14px;font-weight:400}
+.ins-opt:hover{border-color:var(--aqua)}
+.ins-opt input{width:auto;margin-top:3px;flex-shrink:0}
+.ins-opt:has(input:checked){border-color:var(--aqua-dark);background:var(--aqua-mist)}
+.sel-summary{background:var(--aqua-mist);border:1px solid var(--aqua);border-radius:8px;padding:16px 18px;margin-bottom:8px;font-size:14px}
+.sel-summary .ss-none{color:var(--ink-soft);font-style:italic;font-family:'Cormorant Garamond',serif;font-size:16px}
+.sel-summary .ss-pick b{font-family:'Playfair Display',serif;color:var(--aqua-dark);font-size:16px;display:block}
+.sel-summary .ss-pay{margin-top:8px;font-size:13px}
+.sel-summary .ss-pay div{display:flex;justify-content:space-between;padding:2px 0}
+.sel-summary .ss-pay b{color:var(--aqua-dark)}
+.sel-summary .ss-note{margin-top:10px;font-size:12px;line-height:1.55;color:var(--ink-soft);background:var(--cream-light,#F5EFDF);border-left:3px solid var(--gold-dark,#B89E6A);padding:9px 12px;border-radius:0 4px 4px 0}
+.submit-btn{width:100%;margin-top:22px;background:var(--aqua-dark);color:var(--white);border:0;border-radius:6px;padding:15px;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;letter-spacing:.04em;cursor:pointer;min-height:48px}
+.submit-btn:hover{background:#43787a}
+.submit-btn:disabled{background:var(--aqua);opacity:.6;cursor:not-allowed}
+.thanks{display:none;text-align:center;padding:30px 10px}
+.thanks.show{display:block}
+.thanks h3{font-size:26px;margin-bottom:10px}
+.thanks p{font-size:16px;color:var(--ink-soft)}
+
+/* FOOTER */
+footer{background:var(--sand-light);padding:48px 24px;border-top:1px solid var(--line)}
+.foot-inner{max-width:760px;margin:0 auto;text-align:center}
+.foot-inner .fname{font-family:'Playfair Display',serif;font-size:22px;color:var(--aqua-dark)}
+.foot-inner .fcontact{font-size:15px;margin:8px 0 22px}
+.foot-inner .fcontact a{color:var(--aqua-dark);text-decoration:none}
+.foot-disclosure{font-size:13px;color:var(--ink-soft);line-height:1.7;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:15px;max-width:680px;margin:0 auto}
+
+@media(max-width:768px){
+  .overview-grid{grid-template-columns:1fr 1fr;gap:24px}
+  .totalbar-inner{flex-direction:column;gap:4px;text-align:center}
+  .totalbar .tb-amt span{text-align:center}
+  .select-row{flex-wrap:wrap}
+  .select-row .sel-price{text-align:left;width:100%;padding-left:36px}
+  .vs-grid{grid-template-columns:1fr}
+  .vs-col{padding:24px 0}
+  .vs-col+.vs-col::before{display:none}
+  .vs-col+.vs-col{border-top:1px solid var(--gold-whisper)}
+  .img-strip{grid-template-columns:1fr}
+  .img-strip img{height:220px}
+  .amenities{grid-template-columns:1fr}
+  .rental-grid{grid-template-columns:1fr}
+  .leg{grid-template-columns:1fr;gap:6px;text-align:center}
+  .leg .mid{margin:6px 0}
+  .card-inner,.flights{padding-left:22px;padding-right:22px}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="brandmark">Point Me to Paradise Travel</div>
+  <h1>A Week on Maui</h1>
+  <hr class="hairline">
+  <p class="sub">Five ways to spend seven days on one island &mdash; two coasts, two kinds of week, one family deciding which one is yours.</p>
+  <p class="sig">Prepared for the Meadows Family &middot; by Christina Garcia</p>
+  <p class="accent" style="font-size:15px;margin-top:10px">July 15&ndash;22 are a starting point &mdash; your dates are flexible, and I'll happily shift the week to fit you.</p>
+</header>
+
+<!-- OVERVIEW STRIP -->
+<div class="overview">
+  <div class="overview-grid">
+    <div class="ov-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><path d="M2 21v-1a6 6 0 0 1 6-6h2a6 6 0 0 1 6 6v1"/><path d="M16 3.5a3 3 0 0 1 0 7"/><path d="M22 21v-1a6 6 0 0 0-4-5.6"/></svg>
+      <div class="ov-label">Travelers</div>
+      <div class="ov-value">2 adults, 2 kids</div>
+    </div>
+    <div class="ov-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13"/><path d="M3 21h18"/><path d="M9 21v-6h6v6"/></svg>
+      <div class="ov-label">Stay</div>
+      <div class="ov-value">7 nights</div>
+    </div>
+    <div class="ov-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+      <div class="ov-label">Island</div>
+      <div class="ov-value">Maui</div>
+    </div>
+    <div class="ov-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5a2.12 2.12 0 0 0-3-3L13 8 4.8 6.2a.5.5 0 0 0-.5.8l4 4-2 2-2-.5a.5.5 0 0 0-.5.8L6 17l2.7 2.7.7-2 2-2 4 4a.5.5 0 0 0 .8-.5z"/></svg>
+      <div class="ov-label">Flying from</div>
+      <div class="ov-value">Houston (IAH)</div>
+    </div>
+  </div>
+</div>
+
+<!-- VALUE STRIP -->
+<div class="value-strip">
+  <h2>Beyond the booking</h2>
+  <p class="vs-sub accent">What's included with every Point Me to Paradise trip</p>
+  <div class="vs-grid">
+    <div class="vs-col">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h11l5 5v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"/><path d="M14 4v5h5"/><path d="M8 13h8M8 17h5"/></svg>
+      <h3>The Trip Guide</h3>
+      <p>A document built for your week &mdash; restaurants we'd return to, neighborhoods worth the walk, what to skip, the places open on a Sunday. Not pulled from a database. Researched against where you're staying and what you've told us matters.</p>
+    </div>
+    <div class="vs-col">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>
+      <h3>The Trip App</h3>
+      <p>Itinerary, confirmation numbers, transfer windows, and ground contacts in one place &mdash; accessible offline, updated in real time. If a flight shifts or weather moves, the app moves with it.</p>
+    </div>
+    <div class="vs-col">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6z"/><path d="m9 12 2 2 4-4"/></svg>
+      <h3>Best-Rate Assurance</h3>
+      <p>Every hotel night, cruise rate, and tour in your quote is priced at publicly available rates. If you find the same component for less elsewhere, we'll match it &mdash; you don't have to wonder whether you're overpaying for a piece of your trip.</p>
+    </div>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="body-sec intro">
+  <div class="wrap">
+    <p class="lead">You've got the island and the week &mdash; Maui, July 15 to 22. What's left is the kind of week you want, and on Maui that mostly comes down to which coast you wake up on.</p>
+    <p>Everything below is priced for <b>two adults and two children</b> (ages 6 and 8) in one room, with the same United flights from Houston built into every option. The properties split between two coasts: <b>Kā&lsquo;anapali</b> on the west side &mdash; a livelier beach town where the resorts line a walkable shore and the pools lean toward waterpark &mdash; and <b>Wailea</b> on the sunny south shore, calmer and more polished, with the resorts spread out. Within each coast the options run from most affordable up. <b>Select the package you'd like below</b> &mdash; your running total updates as you choose, and you can send your pick straight to me at the bottom.</p>
+    <div class="fl-redeye" style="max-width:760px;margin:24px auto 0">
+      <b>Quick note:</b> we've just moved your week to <b>July 15&ndash;22</b>. Your new flights are set and shown above; I'm re-confirming each resort's rate for the new dates and will have updated package totals to you shortly. Everything else below &mdash; the resorts, the rooms, what's included &mdash; stands as is.
+    </div>
+  </div>
+</section>
+
+<!-- FLIGHTS -->
+<section class="body-sec" style="padding-top:0">
+  <div class="flights">
+    <div class="fl-head">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5a2.12 2.12 0 0 0-3-3L13 8 4.8 6.2a.5.5 0 0 0-.5.8l4 4-2 2-2-.5a.5.5 0 0 0-.5.8L6 17l2.7 2.7.7-2 2-2 4 4a.5.5 0 0 0 .8-.5z"/></svg>
+      <h3>Your flights</h3>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="transform:scaleX(-1)"><path d="M17.8 19.2 16 11l3.5-3.5a2.12 2.12 0 0 0-3-3L13 8 4.8 6.2a.5.5 0 0 0-.5.8l4 4-2 2-2-.5a.5.5 0 0 0-.5.8L6 17l2.7 2.7.7-2 2-2 4 4a.5.5 0 0 0 .8-.5z"/></svg>
+    </div>
+    <p class="fl-note">These United flights are included in every option below. I chose dates with the best air rates for your week &mdash; want different days or times? Mention it in the notes below or reach out directly, and I'll come back with options quickly.</p>
+
+    <div style="text-align:center"><span class="fl-tag">Outbound &middot; Wed, Jul 15 &middot; United Economy</span></div>
+    <div class="leg">
+      <div class="pt"><div class="time">7:20 AM</div><div class="apt">IAH &middot; Houston</div></div>
+      <div class="mid">2h 32m
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="15 7 20 12 15 17"/></svg>
+        UA 1575</div>
+      <div class="pt"><div class="time">8:52 AM</div><div class="apt">DEN &middot; Denver</div></div>
+    </div>
+    <div class="leg">
+      <div class="pt"><div class="time">12:00 PM</div><div class="apt">DEN &middot; Denver</div><div class="meta">3h 8m connection</div></div>
+      <div class="mid">7h 5m
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="15 7 20 12 15 17"/></svg>
+        UA 1736</div>
+      <div class="pt"><div class="time">3:05 PM</div><div class="apt">OGG &middot; Maui</div></div>
+    </div>
+
+    <div style="text-align:center;margin-top:26px"><span class="fl-tag">Return &middot; Wed, Jul 22 &middot; United Economy</span></div>
+    <div class="leg">
+      <div class="pt"><div class="time">8:00 PM</div><div class="apt">OGG &middot; Maui</div></div>
+      <div class="mid">overnight
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="15 7 20 12 15 17"/></svg>
+        UA 1735</div>
+      <div class="pt"><div class="time">6:21 AM<span style="font-size:11px;vertical-align:super">+1</span></div><div class="apt">DEN &middot; Denver</div></div>
+    </div>
+    <div class="leg">
+      <div class="pt"><div class="time">7:42 AM<span style="font-size:11px;vertical-align:super">+1</span></div><div class="apt">DEN &middot; Denver</div><div class="meta">1h 21m connection</div></div>
+      <div class="mid">2h 33m
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="15 7 20 12 15 17"/></svg>
+        UA 1720</div>
+      <div class="pt"><div class="time">11:15 AM<span style="font-size:11px;vertical-align:super">+1</span></div><div class="apt">IAH &middot; Houston</div></div>
+    </div>
+
+    <div class="fl-redeye">
+      <b>A note on the return:</b> like nearly every Hawaii-to-mainland trip, the flight home is an overnight &mdash; you'll leave Maui Wednesday evening and land in Houston late Thursday morning, connecting through Denver. It's the standard routing for the islands, and it gives you the full last day on Maui before heading to the airport. The outbound, on the other hand, is a daytime trip that gets you to Maui mid-afternoon. If you'd rather look at a different return, just say so and I'll see what's available.
+    </div>
+  </div>
+</section>
+
+<!-- ============ KAANAPALI SECTION ============ -->
+<section class="body-sec" style="background:var(--paper);padding-bottom:20px">
+  <div class="wrap">
+    <div class="area-banner">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12M12 12c0-4 2-7 5-8-1 4-2 7-5 8zM12 12C8 12 5 9 5 5c4 0 7 2 7 7z"/></svg>
+      <h2>Kā&lsquo;anapali &mdash; the west shore</h2>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="transform:scaleX(-1)"><path d="M12 22V12M12 12c0-4 2-7 5-8-1 4-2 7-5 8zM12 12C8 12 5 9 5 5c4 0 7 2 7 7z"/></svg>
+    </div>
+    <p class="sec-sub accent">Livelier and more walkable. About 45 minutes from the airport, with resorts lined along one long beach connected by a paved boardwalk &mdash; restaurants, shops, and Whalers Village all on foot.</p>
+  </div>
+</section>
+
+<!-- HYATT (both rooms inside) -->
+<div class="card">
+  <div class="card-inner">
+    <div class="ckicker">Option 1 &middot; Kā&lsquo;anapali &middot; 1 room &middot; 2 adults, 2 kids</div>
+    <h3>Hyatt Regency Maui Resort &amp; Spa</h3>
+    <div class="ctag">Penguins in the atrium, fantasy pools, and the lowest entry price here.</div>
+    <p class="lead-copy">The Hyatt leans into a particular kind of family magic that has nothing to do with a kids' club. The atrium is home to resident <b>penguins, flamingos, swans and koi</b>, and the complimentary daily keiki programming &mdash; a wildlife tour to meet the birds, penguin feedings, lei making, hula and cultural classes &mdash; is the kind of thing a 6- and 8-year-old remember for years. The grounds are 40 oceanfront acres of meandering "fantasy" pools, a waterslide, and one of Maui's best-known luaus on site.</p>
+    <p>It's also the most affordable way onto Kā&lsquo;anapali Beach in this set, and it comes in two room layouts depending on how you want the four of you to sleep.</p>
+    <div class="img-strip">
+      <img src="https://img.cdnpth.com/media/170641/96204694-84c0-4d7a-b2af-74000d2731fd_main.jpg" alt="Hyatt Regency Maui Resort and Spa">
+      <img src="https://img.cdnpth.com/media/170641/f0197de3-d35f-4390-9f88-9557440a6af6.jpg" alt="Hyatt Regency Maui pools and grounds">
+      <img src="https://img.cdnpth.com/media/170641/d0151676-1439-4d94-a98f-7b44fb7e3d11.jpg" alt="Hyatt Regency Maui oceanfront">
+    </div>
+    <div class="amenities">
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a4 4 0 0 0-4 4c0 3 4 14 4 14s4-11 4-14a4 4 0 0 0-4-4z"/></svg><div><b>Daily keiki wildlife program</b><span>Penguins, bird tour, koi feeding, cultural classes &mdash; complimentary</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M2 12a10 10 0 0 1 20 0M5 12v4a7 7 0 0 0 14 0v-4"/></svg><div><b>Six-pool fantasy complex</b><span>Meandering pools, waterslide, on-site luau</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18 12 4l9 14M3 18h18"/></svg><div><b>On Kā&lsquo;anapali Beach</b><span>40 oceanfront acres, on the boardwalk</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18l-1 9H4z"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><div><b>Four restaurants</b><span>Oceanfront sushi, poolside grill with kids' menu</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/><circle cx="12" cy="12" r="10"/></svg><div><b>No drop-off kids' club</b><span>Daily activities are walk-up; no staffed childcare currently</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>~45 min from OGG</b><span>Resort fee $58.17/night</span></div></div>
+    </div>
+    <div class="room-block">
+      <h4>Two room layouts &mdash; pick yours below</h4>
+      <p>Both are 42 sq m with a partial ocean view and sleep four. The only difference is how everyone sleeps: two queen beds, or a king with a sofa bed for the kids.</p>
+    </div>
+    <div class="honest"><b>Honest trade:</b> the two-queen room is $217 more over the week and gives the kids real beds instead of a pull-out &mdash; for a 6- and 8-year-old across seven nights, most families find that worth it. And note plainly: the Hyatt's old drop-off "Camp Hyatt" no longer runs, so the kids' programming here is the (excellent) walk-up wildlife and cultural activities, not childcare you can leave them at.</div>
+    <div class="pricebox">
+      <div class="pk">Choose your room &middot; air + hotel package, all in</div>
+      <label class="select-row">
+        <input type="radio" name="selection" value="Hyatt Regency Maui — Two Queen Beds, Partial Ocean View" data-total="8671" data-deposit="3074" data-balance="5190" data-balancedue="June 20" data-atprop="407" onclick="setTimeout(updateSelection,0)">
+        <span class="radio-dot"></span>
+        <span class="sel-label"><b>Two queen beds, Partial Ocean View</b><span>42 sq m &middot; sleeps 4 &middot; two real beds for the kids</span></span>
+        <span class="sel-price"><b>Est. $8,671</b><span>~$2,168 pp</span></span>
+      </label>
+      <label class="select-row">
+        <input type="radio" name="selection" value="Hyatt Regency Maui — King + Sofa Bed, Partial Ocean View" data-total="8460" data-deposit="3074" data-balance="4979" data-balancedue="June 20" data-atprop="407" onclick="setTimeout(updateSelection,0)">
+        <span class="radio-dot"></span>
+        <span class="sel-label"><b>King + sofa bed, Partial Ocean View</b><span>42 sq m &middot; sleeps 4 &middot; kids on the sofa bed</span></span>
+        <span class="sel-price"><b>Est. $8,460</b><span>~$2,115 pp</span></span>
+      </label>
+      <div class="inc" style="margin-top:16px"><b>Every Hyatt package includes</b>
+        <ul>
+          <li>Round-trip United flights, Houston&ndash;Maui, all 4 travelers</li>
+          <li>7 nights, Partial Ocean View Room (your chosen layout)</li>
+          <li>Daily breakfast + $150 resort credit per room, per stay</li>
+          <li>Daily keiki wildlife &amp; cultural programming &mdash; complimentary</li>
+        </ul>
+      </div>
+      <div class="paysplit">
+        <div class="prow"><span>Deposit today &mdash; your flights</span><b>$3,074</b></div>
+        <div class="prow bal"><span>Hotel balance due June 20</span><span>$4,979&ndash;$5,190</span></div>
+      </div>
+      <div class="atprop">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4a1 1 0 0 1 1-1h11l-2 4 2 4H5"/></svg>
+        <div><b>Paid at the hotel:</b> a resort fee of $49/night plus local tax &mdash; about <span class="ap-amt">$407</span> for the week &mdash; is collected directly at the property at checkout, not pre-paid. It's already part of the package total above; we're just flagging when you'll pay it.</div>
+      </div>
+      <div class="fine">Your flights act as the deposit; the hotel balance is due June 20. Final pricing confirmed by Christina before booking.</div>
+    </div>
+  </div>
+</div>
+
+<!-- WESTIN -->
+<div class="card">
+  <div class="card-inner">
+    <div class="ckicker">Option 2 &middot; Kā&lsquo;anapali &middot; 1 room &middot; 2 adults, 2 kids</div>
+    <h3>The Westin Maui Resort &amp; Spa, Kā&lsquo;anapali</h3>
+    <div class="ctag">A working kids' club, two real beds, and an 87,000-square-foot pool.</div>
+    <p class="lead-copy">The Westin solves the two things families weigh most. First, the <b>Westin Family Kids Club</b> is currently operating &mdash; a staffed drop-off program for ages 5 to 12 with counselor-led cultural activities and evening poolside movie screenings, so an afternoon to yourselves is genuinely on the table. Second, this room has <b>two queen beds</b> rather than a sofa bed, which over seven nights with a 6- and 8-year-old is the difference between sharing and not.</p>
+    <p>The pool complex runs to 87,000 square feet across multiple levels with a waterslide and a dedicated kids' pool. You're steps from Whalers Village for dinner and shopping, and directly on Kā&lsquo;anapali Beach with its calm swimming and the boardwalk running the length of the shore.</p>
+    <div class="img-strip">
+      <img src="https://img.cdnpth.com/media/170620/25837-9aa20f2c_z.jpg" alt="The Westin Maui Resort and Spa Kaanapali">
+      <img src="https://img.cdnpth.com/media/170620/25837-52070be5_z.jpg" alt="The Westin Maui pool complex">
+      <img src="https://img.cdnpth.com/media/170620/25837-3a2cdd94_z.jpg" alt="The Westin Maui beachfront">
+    </div>
+    <img src="https://img.cdnpth.com/media/170620/087f3a1c-34d7-48c1-b64f-bfadf80e1d5a.jpg" alt="The Westin Maui Resort and Spa grounds" style="width:100%;height:260px;object-fit:cover;border-radius:4px;display:block;margin:0 0 22px;background:var(--aqua-mist)">
+    <div class="amenities">
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><path d="M2 21v-1a6 6 0 0 1 6-6h2a6 6 0 0 1 6 6v1"/></svg><div><b>Westin Family Kids Club</b><span>Staffed drop-off, ages 5&ndash;12 (confirmed operating; surcharge)</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M2 12a10 10 0 0 1 20 0M5 12v4a7 7 0 0 0 14 0v-4"/></svg><div><b>87,000 sq ft pool complex</b><span>Multiple levels, waterslide, kids' pool, evening movies</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18 12 4l9 14M3 18h18"/></svg><div><b>On Kā&lsquo;anapali Beach</b><span>Calm swimming, boardwalk along the shore</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg><div><b>Steps to Whalers Village</b><span>Dinner, shops, groceries on foot</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg><div><b>$50/room/day resort credit</b><span>$350 over the week, toward on-site dining</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16M4 9h16M4 14h10M4 19h10"/></svg><div><b>Two queen beds</b><span>Real beds for the kids &mdash; no sofa-bed sharing</span></div></div>
+    </div>
+    <div class="room-block">
+      <h4>Two queen beds, Kukahi tower &middot; choose your view &middot; sleeps 4</h4>
+      <p>32 sq m in the Kukahi tower, available in resort view or ocean view. The two-queen layout is the practical family pick &mdash; everyone gets a real bed.</p>
+    </div>
+    <div class="honest"><b>Honest trade:</b> the room is the most compact of the five at 32 sq m &mdash; you're trading square footage for the two real beds, the working kids' club, and the resort credit. For a family that's out at the pool and beach most of the day, that's often the right trade.</div>
+    <div class="pricebox">
+      <div class="pk">Choose your room &middot; air + hotel package, all in</div>
+      <label class="select-row">
+        <input type="radio" name="selection" value="The Westin Maui — Ocean View, Two Queen Beds (Kukahi)" data-total="9446" data-deposit="3074" data-balance="5968" data-balancedue="June 20" data-atprop="405" onclick="setTimeout(updateSelection,0)">
+        <span class="radio-dot"></span>
+        <span class="sel-label"><b>Ocean View, two queen beds</b><span>32 sq m &middot; Kukahi tower &middot; sleeps 4</span></span>
+        <span class="sel-price"><b>Est. $9,446</b><span>~$2,362 pp</span></span>
+      </label>
+      <label class="select-row">
+        <input type="radio" name="selection" value="The Westin Maui — Resort View, Two Queen Beds (Kukahi)" data-total="8970" data-deposit="3074" data-balance="5492" data-balancedue="June 20" data-atprop="405" onclick="setTimeout(updateSelection,0)">
+        <span class="radio-dot"></span>
+        <span class="sel-label"><b>Resort View, two queen beds</b><span>32 sq m &middot; Kukahi tower &middot; sleeps 4</span></span>
+        <span class="sel-price"><b>Est. $8,970</b><span>~$2,243 pp</span></span>
+      </label>
+      <div class="inc" style="margin-top:16px"><b>Every Westin package includes</b>
+        <ul>
+          <li>Round-trip United flights, Houston&ndash;Maui, all 4 travelers</li>
+          <li>7 nights, two queen beds (your chosen view)</li>
+        </ul>
+      </div>
+      <div class="paysplit">
+        <div class="prow"><span>Deposit today &mdash; your flights</span><b>$3,074</b></div>
+        <div class="prow bal"><span>Hotel balance due June 20</span><span>$5,492&ndash;$5,968</span></div>
+      </div>
+      <div class="atprop">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4a1 1 0 0 1 1-1h11l-2 4 2 4H5"/></svg>
+        <div><b>Paid at the hotel:</b> a resort fee of $48.69/night plus local tax &mdash; about <span class="ap-amt">$405</span> for the week &mdash; is collected directly at the property at checkout, not pre-paid. It's already part of the package total above; we're just flagging when you'll pay it.</div>
+      </div>
+      <div class="fine">Your flights act as the deposit; the hotel balance is due June 20. Final pricing confirmed by Christina before booking.</div>
+    </div>
+  </div>
+</div>
+
+<!-- WESTIN KAANAPALI OCEAN RESORT VILLAS -->
+<div class="card">
+  <div class="card-inner">
+    <div class="ckicker">Kā&lsquo;anapali &middot; condo-resort &middot; 1 studio &middot; 2 adults, 2 kids</div>
+    <h3>The Westin Kā&lsquo;anapali Ocean Resort Villas</h3>
+    <div class="ctag">A kitchen, a lazy river, and no resort fee &mdash; right on the Kā&lsquo;anapali boardwalk.</div>
+    <p class="lead-copy">This is the villa-style Westin on Kā&lsquo;anapali &mdash; a condo-resort where your studio comes with a <b>kitchenette</b> (fridge, stovetop, dishwasher, microwave) and an in-unit washer/dryer, so you get the space and self-catering of a rental with full resort service on top. It sits directly on the Kā&lsquo;anapali boardwalk with immediate beach access and complimentary beach cabanas.</p>
+    <p>The pool scene is built for kids: a <b>lazy river and a waterslide</b> alongside two pools, a children's pool, and a hot tub. Three restaurants on site (including poolside Auntie's Kitchen with a children's menu), plus tennis and pickleball. And a real piece of value &mdash; <b>no resort fee</b>, which is rare on Maui.</p>
+    <div class="img-strip">
+      <img src="https://images.trvl-media.com/lodging/1000000/920000/917000/916906/23e71c5c.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="Westin Kaanapali Villas resort">
+      <img src="https://images.trvl-media.com/lodging/1000000/920000/917000/916906/a2fb20bc.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="Westin Kaanapali Villas pool">
+      <img src="https://images.trvl-media.com/lodging/1000000/920000/917000/916906/e2d7c19d.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="Westin Kaanapali Villas studio">
+    </div>
+    <img src="https://images.trvl-media.com/lodging/1000000/920000/917000/916906/a46c5ec1.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="Westin Kaanapali Ocean Resort Villas beachfront" style="width:100%;height:260px;object-fit:cover;border-radius:4px;display:block;margin:0 0 22px;background:var(--aqua-mist)">
+    <div class="amenities">
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M2 12a10 10 0 0 1 20 0M5 12v4a7 7 0 0 0 14 0v-4"/></svg><div><b>Lazy river + waterslide</b><span>Two pools, children's pool, hot tub</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6z"/><path d="m9 12 2 2 4-4"/></svg><div><b>No resort fee</b><span>Rare on Maui &mdash; only optional parking is paid on site</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3zM3 9h18M9 9v12"/></svg><div><b>Kitchenette + washer/dryer</b><span>Fridge, stovetop, dishwasher, microwave in-unit</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18 12 4l9 14M3 18h18"/></svg><div><b>On the Kā&lsquo;anapali boardwalk</b><span>Immediate beach access, complimentary cabanas, snorkeling</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18l-1 9H4z"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><div><b>Three restaurants on site</b><span>Poolside, beachfront, and Italian, with kids' menus</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Tennis &amp; pickleball</b><span>Children stay free; full-service spa on site</span></div></div>
+    </div>
+    <div class="room-block">
+      <h4>Studio, King + Double Sofa Bed, Ocean View &middot; sleeps 4</h4>
+      <p>43 sq m, open-plan studio with an ocean view, king bed plus a double sofa bed, kitchenette, jetted tub, and in-unit washer/dryer. An efficient layout for four &mdash; note it's a studio, not a separate-bedroom villa.</p>
+    </div>
+    <div class="honest"><b>Honest trade:</b> the no-resort-fee and the kitchenette make this strong value on Kā&lsquo;anapali, and the lazy river is a genuine kid-pleaser. It's a studio (one open room) rather than a separate-bedroom layout, so there's less separation between you and the kids &mdash; the tradeoff for the lower price and the condo-resort amenities.</div>
+    <div class="pricebox">
+      <div class="pk">Select this package &middot; air + studio, all in</div>
+      <label class="select-row">
+        <input type="radio" name="selection" value="The Westin Kāʻanapali Ocean Resort Villas — Studio, King + Sofa, Ocean View" data-total="8145" data-deposit="3074" data-balance="5071" data-balancedue="June 20" onclick="setTimeout(updateSelection,0)">
+        <span class="radio-dot"></span>
+        <span class="sel-label"><b>Studio, King + Sofa Bed, Ocean View</b><span>43 sq m &middot; kitchenette &middot; sleeps 4</span></span>
+        <span class="sel-price"><b>Est. $8,145</b><span>~$2,036 pp</span></span>
+      </label>
+      <div class="inc" style="margin-top:16px"><b>Includes</b>
+        <ul>
+          <li>Round-trip United flights, Houston&ndash;Maui, all 4 travelers</li>
+          <li>7 nights, Ocean View Studio with kitchenette &amp; washer/dryer</li>
+          <li>No resort fee</li>
+          <li>Lazy river, waterslide &amp; complimentary beach cabanas</li>
+        </ul>
+      </div>
+      <div class="paysplit">
+        <div class="prow"><span>Deposit today &mdash; your flights</span><b>$3,074</b></div>
+        <div class="prow bal"><span>Hotel balance due June 20</span><span>$5,071</span></div>
+      </div>
+      <div class="atprop">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+        <div><b>No resort fee here</b> &mdash; unusual on Maui. The only thing paid on site is optional parking (self $36.65/day or valet $41.89/day), if you bring a rental car.</div>
+      </div>
+      <div class="fine">Your flights act as the deposit; the hotel balance is due June 20. Final pricing confirmed by Christina before booking.</div>
+    </div>
+  </div>
+</div>
+
+<!-- OUTRIGGER HONUA KAI -->
+<div class="card">
+  <div class="card-inner">
+    <div class="ckicker">Kā&lsquo;anapali (Kā&lsquo;anapali North) &middot; condo-resort &middot; 1 bedroom &middot; 2 adults, 2 kids</div>
+    <h3>Outrigger Honua Kai Resort &amp; Spa</h3>
+    <div class="ctag">The biggest room here, a full kitchen, and a lazy-river pool complex on the beach.</div>
+    <p class="lead-copy">If the appeal is space plus a serious pool scene, Honua Kai delivers both. The room is a <b>65-square-metre one-bedroom</b> &mdash; the largest of the Maui options &mdash; with a <b>full kitchen</b>, furnished lanai, washer/dryer, and a king plus a double sofa bed. It's a condo-resort directly on Kahekili Beach at the quieter north end of Kā&lsquo;anapali.</p>
+    <p>The water complex is the draw for kids: <b>four pools, a children's pool, a lazy river, and a waterslide</b>, with Duke's Beach House (a family restaurant with a children's menu) right on the sand. Children stay free, and parking is complimentary &mdash; valet included, which is unusual.</p>
+    <div class="img-strip">
+      <img src="https://images.trvl-media.com/lodging/3000000/2750000/2740200/2740153/cc604c30.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="Honua Kai pool complex">
+      <img src="https://images.trvl-media.com/lodging/3000000/2750000/2740200/2740153/0d8c016f.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="Honua Kai one-bedroom interior">
+      <img src="https://images.trvl-media.com/lodging/3000000/2750000/2740200/2740153/a78360d0.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="Honua Kai lazy river">
+    </div>
+    <img src="https://images.trvl-media.com/lodging/3000000/2750000/2740200/2740153/d15cadcb.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="Outrigger Honua Kai beachfront on Kahekili Beach" style="width:100%;height:260px;object-fit:cover;border-radius:4px;display:block;margin:0 0 22px;background:var(--aqua-mist)">
+    <div class="amenities">
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M2 12a10 10 0 0 1 20 0M5 12v4a7 7 0 0 0 14 0v-4"/></svg><div><b>Four pools + lazy river + waterslide</b><span>Children's pool; pool access 8 AM&ndash;10 PM</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3zM3 9h18M9 9v12"/></svg><div><b>65 sq m, full kitchen</b><span>Largest room here; oven, stovetop, dishwasher, washer/dryer</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18 12 4l9 14M3 18h18"/></svg><div><b>On Kahekili Beach</b><span>Quieter north end of Kā&lsquo;anapali, walkway to water</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18l-1 9H4z"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><div><b>Duke's Beach House on site</b><span>Beachfront family restaurant with a children's menu</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6z"/></svg><div><b>Free valet parking</b><span>Unusual on Maui; children stay free</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>~45 min from OGG</b><span>Furnished lanai, gas grill, separate dining area</span></div></div>
+    </div>
+    <div class="room-block">
+      <h4>Room, 1 Bedroom, Partial Ocean View &middot; sleeps 4</h4>
+      <p>65 sq m with a partial ocean view, king bed plus a double sofa bed, full kitchen, furnished lanai, and washer/dryer. The most living space of any Maui option.</p>
+    </div>
+    <div class="honest"><b>Honest trade:</b> Honua Kai gives you the most space and a full kitchen plus one of the best pool complexes on the island &mdash; a strong all-rounder. It's a condo-resort (no daily housekeeping in the way a full-service hotel does it), and it's at the north end of Kā&lsquo;anapali, a little farther from the main resort strip. For a family that wants room to spread out and a great pool, it's hard to beat.</div>
+    <div class="pricebox">
+      <div class="pk">Select this package &middot; air + condo, all in</div>
+      <label class="select-row">
+        <input type="radio" name="selection" value="Outrigger Honua Kai Resort & Spa — 1 Bedroom, Partial Ocean View" data-total="9838" data-deposit="3074" data-balance="6434" data-balancedue="June 20" data-atprop="330" onclick="setTimeout(updateSelection,0)">
+        <span class="radio-dot"></span>
+        <span class="sel-label"><b>1 Bedroom, Partial Ocean View</b><span>65 sq m &middot; full kitchen &middot; sleeps 4</span></span>
+        <span class="sel-price"><b>Est. $9,838</b><span>~$2,460 pp</span></span>
+      </label>
+      <div class="inc" style="margin-top:16px"><b>Includes</b>
+        <ul>
+          <li>Round-trip United flights, Houston&ndash;Maui, all 4 travelers</li>
+          <li>7 nights, 1-Bedroom with full kitchen &amp; washer/dryer</li>
+          <li>Free valet parking; children stay free</li>
+        </ul>
+      </div>
+      <div class="paysplit">
+        <div class="prow"><span>Deposit today &mdash; your flights</span><b>$3,074</b></div>
+        <div class="prow bal"><span>Hotel balance due June 20</span><span>$6,434</span></div>
+      </div>
+      <div class="atprop">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4a1 1 0 0 1 1-1h11l-2 4 2 4H5"/></svg>
+        <div><b>Paid at the hotel:</b> a resort fee of $39.74/night plus local tax &mdash; about <span class="ap-amt">$330</span> for the week &mdash; is collected directly at the property at checkout, not pre-paid. It's already part of the package total above; we're just flagging when you'll pay it.</div>
+      </div>
+      <div class="fine">Your flights act as the deposit; the hotel balance is due June 20. Final pricing confirmed by Christina before booking.</div>
+    </div>
+  </div>
+</div>
+<section class="body-sec" style="background:var(--paper);padding-bottom:20px;padding-top:36px">
+  <div class="wrap">
+    <div class="area-banner">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12M12 12c0-4 2-7 5-8-1 4-2 7-5 8zM12 12C8 12 5 9 5 5c4 0 7 2 7 7z"/></svg>
+      <h2>Wailea &mdash; the south shore</h2>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="transform:scaleX(-1)"><path d="M12 22V12M12 12c0-4 2-7 5-8-1 4-2 7-5 8zM12 12C8 12 5 9 5 5c4 0 7 2 7 7z"/></svg>
+    </div>
+    <p class="sec-sub accent">Sunny, sheltered, and spread out. About 35 minutes from the airport, with manicured resorts set back from quiet golden beaches &mdash; the calmer, more polished side of the island.</p>
+  </div>
+</section>
+
+<!-- WAILEA BEACH MARRIOTT -->
+<div class="card">
+  <div class="card-inner">
+    <div class="ckicker">Option 3 &middot; Wailea &middot; 1 room &middot; 2 adults, 2 kids</div>
+    <h3>Wailea Beach Resort &mdash; Marriott</h3>
+    <div class="ctag">Built around a pool that an eight-year-old will not stop talking about.</div>
+    <p class="lead-copy">If the trip is partly about the kids losing their minds at the pool, this is the property. The adventure pool complex has the <b>longest waterslide on Maui</b> (there's a 48-inch height requirement, so both your kids clear it), alongside smaller slides, a zero-entry splash section for easing in, and a lifeguard on duty. Two separate adults-only pools mean you can find quiet while the kids stay loud somewhere else.</p>
+    <p>It sits in the heart of Wailea on the sunny south shore, with four restaurants and a Starbucks on site for the morning scramble. One thing to know plainly: there's no beach directly on the property &mdash; it's a short walk along the coastal path to Wailea and Ulua beaches.</p>
+    <div class="img-strip">
+      <img src="https://img.cdnpth.com/media/117233/90448b1b-4d0c-40b5-904b-4886720f275a.jpg" alt="Wailea Beach Resort Marriott Maui">
+      <img src="https://img.cdnpth.com/media/117233/fad6e877-0bcb-4ca4-8286-fa300dc20852.jpg" alt="Wailea Beach Resort Marriott pool">
+      <img src="https://img.cdnpth.com/media/117233/2d1c04e5-2e5a-45f6-ab78-72bcf89e5fb9.jpg" alt="Wailea Beach Resort Marriott grounds">
+    </div>
+    <img src="https://img.cdnpth.com/media/117233/658414f2-9f5c-4e57-877e-ef1d9219e1bb.jpg" alt="Wailea Beach Resort Marriott oceanfront" style="width:100%;height:260px;object-fit:cover;border-radius:4px;display:block;margin:0 0 22px;background:var(--aqua-mist)">
+    <div class="amenities">
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M2 12a10 10 0 0 1 20 0M5 12v4a7 7 0 0 0 14 0v-4"/></svg><div><b>Longest waterslide on Maui</b><span>Plus smaller slides, splash zone, lifeguard on duty</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12a4 4 0 0 1 8 0"/></svg><div><b>Two adults-only pools</b><span>Quiet space apart from the family pools</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18l-1 9H4z"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><div><b>Four restaurants + Starbucks</b><span>Oceanfront dining, poolside grill, on-site coffee</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18 12 4l9 14M3 18h18"/></svg><div><b>Short walk to the beach</b><span>Coastal path to Wailea &amp; Ulua beaches</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6z"/></svg><div><b>Kolohe Keiki Club on site</b><span>Confirm current operating status &amp; any fee with Christina</span></div></div>
+      <div class="am"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><div><b>GameSpace &amp; Movie House</b><span>Billiards, foosball, video games, film screenings</span></div></div>
+    </div>
+    <div class="room-block">
+      <h4>Partial Ocean View Room, Balcony &middot; sleeps 4</h4>
+      <p>41 sq m with a balcony and partial ocean view. One king bed plus a double sofa bed, for two adults and two kids in one room.</p>
+    </div>
+    <div class="honest"><b>Two honest notes:</b> this is the one property here that charges for in-room WiFi (about $15/day &mdash; the others include it free), and the kids' club facility has had periods of being closed, so I'd confirm it's running for your dates before you count on drop-off. The pool, though, is the real reason to pick this one &mdash; and that's open.</div>
+    <div class="pricebox">
+      <div class="pk">Select this package &middot; air + hotel, all in</div>
+      <label class="select-row">
+        <input type="radio" name="selection" value="Wailea Beach Resort, Marriott — Partial Ocean View, King + Sofa (Balcony)" data-total="9402" data-deposit="3074" data-balance="5838" data-balancedue="June 20" data-atprop="490" onclick="setTimeout(updateSelection,0)">
+        <span class="radio-dot"></span>
+        <span class="sel-label"><b>Partial Ocean View, king + sofa bed</b><span>41 sq m &middot; balcony &middot; sleeps 4</span></span>
+        <span class="sel-price"><b>Est. $9,402</b><span>~$2,351 pp</span></span>
+      </label>
+      <div class="inc" style="margin-top:16px"><b>Includes</b>
+        <ul>
+          <li>Round-trip United flights, Houston&ndash;Maui, all 4 travelers</li>
+          <li>7 nights, Partial Ocean View Room with balcony</li>
+        </ul>
+      </div>
+      <div class="paysplit">
+        <div class="prow"><span>Deposit today &mdash; your flights</span><b>$3,074</b></div>
+        <div class="prow bal"><span>Hotel balance due June 20</span><span>$5,838</span></div>
+      </div>
+      <div class="atprop">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4a1 1 0 0 1 1-1h11l-2 4 2 4H5"/></svg>
+        <div><b>Paid at the hotel:</b> a resort fee of $59/night plus local tax &mdash; about <span class="ap-amt">$490</span> for the week &mdash; is collected directly at the property at checkout, not pre-paid. It's already part of the package total above; we're just flagging when you'll pay it.</div>
+      </div>
+      <div class="fine">Your flights act as the deposit; the hotel balance is due June 20. Final pricing confirmed by Christina before booking.</div>
+    </div>
+  </div>
+</div>
+
+<!-- RENTAL VEHICLES -->
+<section class="body-sec" style="padding-top:0">
+  <div class="rental">
+    <div class="rl-head">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M5 17l1.5-5h11L19 17M5 17v2M19 17v2M7 12l1-4h8l1 4"/><circle cx="7.5" cy="17" r="1.5"/><circle cx="16.5" cy="17" r="1.5"/></svg>
+      <h3>Getting around the island</h3>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="transform:scaleX(-1)"><path d="M5 17h14M5 17l1.5-5h11L19 17M5 17v2M19 17v2M7 12l1-4h8l1 4"/><circle cx="7.5" cy="17" r="1.5"/><circle cx="16.5" cy="17" r="1.5"/></svg>
+    </div>
+    <p class="rl-note">A car is close to essential on Maui &mdash; every resort here sits 35 to 45 minutes from the airport, and the island rewards exploring. These are example rates for the week to give you a feel; tell me what suits your family and I'll match the right vehicle.</p>
+    <div class="rental-grid">
+      <div class="rl-item">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13h18M3 13l2-6h14l2 6M3 13v4h2M21 13v4h-2M7 17h10"/><circle cx="6.5" cy="17" r="1.5"/><circle cx="17.5" cy="17" r="1.5"/></svg>
+        <div class="rl-name">Midsize SUV (AWD)</div>
+        <div class="rl-price">Est. $989</div>
+        <div class="rl-week">for the week</div>
+        <div class="rl-for">Nissan Rogue AWD or similar &mdash; fits four plus luggage, easy to drive</div>
+      </div>
+      <div class="rl-item">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13h18M4 13l1.5-5h13L20 13M4 13v4h2M20 13v4h-2M8 17h8M7 8V6M17 8V6"/><circle cx="6.5" cy="17" r="1.5"/><circle cx="17.5" cy="17" r="1.5"/></svg>
+        <div class="rl-name">Open-Air All-Terrain</div>
+        <div class="rl-price">Est. $1,173</div>
+        <div class="rl-week">for the week</div>
+        <div class="rl-for">Jeep Wrangler Unlimited or similar &mdash; the classic open-top Maui drive</div>
+      </div>
+      <div class="rl-item">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 14h20M2 14l2-7h16l2 7M2 14v4h2M22 14v4h-2M6 18h12"/><circle cx="5.5" cy="18" r="1.5"/><circle cx="18.5" cy="18" r="1.5"/></svg>
+        <div class="rl-name">Premium SUV</div>
+        <div class="rl-price">Est. $1,313</div>
+        <div class="rl-week">for the week</div>
+        <div class="rl-for">Ford Expedition Max, Jeep Wagoneer L or similar &mdash; seats up to 8, most room</div>
+      </div>
+    </div>
+    <div class="rl-foot">Rental rates are examples, estimated, and <b>paid directly at pickup</b> &mdash; they're not included in the package totals above. Final rates confirmed when you book.</div>
+  </div>
+</section>
+<!-- RUNNING TOTAL BAR -->
+<div class="totalbar" id="totalBar">
+  <div class="totalbar-inner">
+    <div class="tb-label" id="tbLabel"><b>No package selected yet</b> &mdash; choose an option above</div>
+    <div class="tb-amt" id="tbAmt">&mdash;</div>
+  </div>
+</div>
+
+<!-- FORM -->
+<div class="formsec">
+  <div class="formcard">
+    <div id="formWrap">
+      <h2>Tell me what you're thinking</h2>
+      <p class="fsub accent">Lean toward one of these, or have questions about any of them &mdash; either way, send it over. Nothing here is locked in: if you'd like to mix and match, adjust dates, or look at something different, just say so in the notes and we'll take it from there. Once you're happy, I'll confirm every detail with you before anything is booked.</p>
+
+      <div class="sel-summary" id="selSummary">
+        <div class="ss-none" id="ssNone">No package selected yet &mdash; choose one above and it'll appear here.</div>
+        <div class="ss-pick" id="ssPick" style="display:none">
+          <b id="ssName"></b>
+          <div class="ss-pay">
+            <div><span>Estimated package</span><span id="ssTotal"></span></div>
+            <div><span>Deposit today (your flights)</span><b id="ssDeposit"></b></div>
+            <div><span>Balance due <span id="ssDueDate"></span></span><span id="ssBalance"></span></div>
+            <div id="ssAtPropRow" style="display:none"><span>Paid at hotel (resort fee + tax)</span><span id="ssAtProp"></span></div>
+          </div>
+          <p id="ssAtPropNote" class="ss-note" style="display:none">The estimated package above already includes this resort fee &amp; local tax &mdash; that portion is simply collected by the hotel at checkout rather than pre-paid, so nothing here is an extra cost on top of the total.</p>
+        </div>
+      </div>
+
+      <form id="tripForm">
+        <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+        <input type="hidden" name="subject" value="Meadows Family — Maui Summer 2026 Selection">
+        <input type="hidden" name="from_name" value="Meadows Family — PMTP Maui Trip Form">
+        <input type="hidden" name="redirect" value="false">
+
+        <input type="hidden" name="Package_Selected" id="hidden_selection">
+        <input type="hidden" name="Estimated_Total" id="hidden_total">
+        <input type="hidden" name="Deposit_Due_Now" id="hidden_deposit">
+        <input type="hidden" name="Balance_Due" id="hidden_balance">
+        <input type="hidden" name="Paid_At_Property" id="hidden_atprop">
+
+        <label for="nm">Name</label>
+        <input id="nm" type="text" name="Name" required>
+        <label for="em">Email</label>
+        <input id="em" type="email" name="Email" required>
+        <label for="ph">Phone</label>
+        <input id="ph" type="tel" name="Phone">
+
+        <label>Travel insurance</label>
+        <div class="ins-group">
+          <label class="ins-opt">
+            <input type="radio" name="Insurance_Choice" value="Yes — please send me a travel insurance quote" required>
+            <span>Yes, please send me a travel insurance quote</span>
+          </label>
+          <label class="ins-opt">
+            <input type="radio" name="Insurance_Choice" value="No — I decline travel insurance and accept the risks of traveling without coverage" required>
+            <span>No, I decline insurance and understand the risks of traveling without coverage</span>
+          </label>
+        </div>
+
+        <label for="th">Notes &amp; special requests</label>
+        <textarea id="th" name="Trip_Notes" placeholder="Different dates, a daytime flight home, a room upgrade, a rental car preference — anything you'd like me to know."></textarea>
+
+        <button type="submit" class="submit-btn" id="submitBtn">Send it to me</button>
+        <p class="select-hint" id="submitHint">Select a package above to enable sending.</p>
+      </form>
+    </div>
+    <div id="thanksMsg" class="thanks">
+      <h3>Got it &mdash; thank you.</h3>
+      <p>This is on its way to me. I'll look everything over and get back to you soon &mdash; and if you mentioned questions or changes, we'll work through them together. Nothing's booked until you're completely comfortable.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div class="fname">Christina Garcia</div>
+    <div class="fcontact">Point Me to Paradise Travel &middot; <a id="emailLink" href="#">email</a> &middot; (281) 229-0862</div>
+    <p class="foot-disclosure">Individual hotels, transfers, and tours in your quote are priced at publicly available rates &mdash; and in many cases lower than what you'd find on your own. You don't have to worry about overpaying for a piece of your trip. What you're paying for is the rest: the right rooms at the right property, operators we've used for years, the trip app, and a human who answers when something doesn't go to plan.</p>
+  </div>
+</footer>
+
+<script>
+// Email assembly (Cloudflare obfuscation)
+(function(){
+  var addr = 'Christina' + '@' + 'PointMeToParadise.com';
+  var el = document.getElementById('emailLink');
+  el.href = 'mailto:' + addr;
+  el.textContent = addr;
+})();
+
+// Currency formatter
+function money(n){ return '$' + Number(n).toLocaleString('en-US'); }
+
+// Selection -> total bar, summary, hidden fields, submit gating
+function updateSelection(){
+  var sel = document.querySelector('input[name="selection"]:checked');
+  var tbLabel = document.getElementById('tbLabel');
+  var tbAmt = document.getElementById('tbAmt');
+  var ssNone = document.getElementById('ssNone');
+  var ssPick = document.getElementById('ssPick');
+  var btn = document.getElementById('submitBtn');
+  var hint = document.getElementById('submitHint');
+
+  if(!sel){
+    tbLabel.innerHTML = '<b>No package selected yet</b> &mdash; choose an option above';
+    tbAmt.innerHTML = '&mdash;';
+    ssNone.style.display = 'block';
+    ssPick.style.display = 'none';
+    btn.disabled = true;
+    hint.style.display = 'block';
+    return;
+  }
+
+  var name = sel.value;
+  var total = sel.getAttribute('data-total');
+  var deposit = sel.getAttribute('data-deposit');
+  var balance = sel.getAttribute('data-balance');
+  var due = sel.getAttribute('data-balancedue');
+  var atprop = sel.getAttribute('data-atprop');
+
+  // Total bar
+  tbLabel.innerHTML = '<b>Selected:</b> ' + name;
+  tbAmt.innerHTML = 'Est. ' + money(total) + '<span>Deposit ' + money(deposit) + ' today</span>';
+
+  // Summary block
+  ssNone.style.display = 'none';
+  ssPick.style.display = 'block';
+  document.getElementById('ssName').textContent = name;
+  document.getElementById('ssTotal').textContent = 'Est. ' + money(total);
+  document.getElementById('ssDeposit').textContent = money(deposit);
+  document.getElementById('ssBalance').textContent = money(balance);
+  document.getElementById('ssDueDate').textContent = due;
+
+  // Optional "paid at property" line in summary
+  var apRow = document.getElementById('ssAtPropRow');
+  var apNote = document.getElementById('ssAtPropNote');
+  if(atprop && Number(atprop) > 0){
+    if(apRow){
+      apRow.style.display = '';
+      document.getElementById('ssAtProp').textContent = money(atprop);
+    }
+    if(apNote) apNote.style.display = '';
+  } else {
+    if(apRow) apRow.style.display = 'none';
+    if(apNote) apNote.style.display = 'none';
+  }
+
+  // Hidden fields
+  document.getElementById('hidden_selection').value = name;
+  document.getElementById('hidden_total').value = 'Est. ' + money(total);
+  document.getElementById('hidden_deposit').value = money(deposit) + ' (flights)';
+  document.getElementById('hidden_balance').value = money(balance) + ' due ' + due;
+  var hap = document.getElementById('hidden_atprop');
+  if(hap) hap.value = (atprop && Number(atprop) > 0) ? (money(atprop) + ' (resort fee + local tax, paid at hotel)') : 'n/a';
+
+  // Enable submit
+  btn.disabled = false;
+  hint.style.display = 'none';
+}
+
+// Initialize gating on load
+document.addEventListener('DOMContentLoaded', updateSelection);
+
+// Form submit
+document.getElementById('tripForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  if(!document.querySelector('input[name="selection"]:checked')){
+    alert('Please select a package above before sending.');
+    return;
+  }
+  var form = e.target;
+  var data = new FormData(form);
+  fetch('https://api.web3forms.com/submit', { method:'POST', body:data })
+    .then(function(res){ return res.json(); })
+    .then(function(json){
+      if(json.success){
+        document.getElementById('formWrap').style.display='none';
+        document.getElementById('totalBar').style.display='none';
+        document.getElementById('thanksMsg').classList.add('show');
+      } else {
+        alert('Something went wrong. Please email Christina directly or text (281) 229-0862.');
+      }
+    })
+    .catch(function(){
+      alert('Something went wrong. Please email Christina directly or text (281) 229-0862.');
+    });
+});
+</script>
+</body>
+</html>
