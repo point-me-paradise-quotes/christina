@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>Cancún &amp; Isla Mujeres — Prepared for Angie &amp; Thomas Ontiveros</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --aqua-pale:#C4E4E1;--aqua-mist:#EAF3F2;--aqua:#75AFB1;--aqua-dark:#4F8A8C;
+  --sand:#ECE7DC;--sand-light:#F4F1E9;--gold-whisper:#D6C8A8;
+  --white:#FFFFFF;--paper:#FBFDFD;--ink:#2B2420;--ink-soft:#6B6359;--line:#E5E9E8;
+  color-scheme:light;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;background:var(--paper);}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;}
+main{background:var(--paper);}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;color:var(--aqua-dark);font-weight:500;line-height:1.2;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+
+.promo{background:var(--aqua-dark);color:var(--white);text-align:center;font-size:13.5px;padding:11px 18px;letter-spacing:0.01em;}
+.promo strong{font-weight:600;}
+.promo .pill{display:inline-block;background:rgba(255,255,255,0.16);border:1px solid rgba(255,255,255,0.4);border-radius:20px;padding:2px 10px;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-right:8px;vertical-align:middle;}
+
+.hero{
+  position:relative;text-align:center;border-bottom:1px solid var(--line);
+  padding:104px 24px 84px;
+  background-image:linear-gradient(180deg,
+    rgba(255,255,255,0.55) 0%,
+    rgba(196,228,225,0.72) 38%,
+    rgba(234,243,242,0.88) 75%,
+    rgba(251,253,253,0.98) 100%),
+    url('https://booking.excellenceresorts.com/bookcore-media/bookcore.backhotelengine.com/uploads/habitaciones/XPM_EC_Beach_04_HR_57KDIJ5.jpg?q=pr:sharp/w:1400/h:900/rt:fill/enlarge:1/quality:80');
+  background-size:cover;background-position:center;background-repeat:no-repeat;
+}
+.brandmark{font-family:'DM Sans',sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:0.26em;color:var(--aqua-dark);font-weight:600;margin-bottom:26px;}
+.hero h1{font-size:clamp(38px,6vw,60px);margin-bottom:18px;}
+.hairline{width:60px;height:1px;background:var(--gold-whisper);margin:18px auto;border:0;}
+.hero .sub{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink);font-size:clamp(19px,2.2vw,24px);max-width:660px;margin:0 auto 14px;}
+.hero .sig{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--ink-soft);}
+
+.overview{background:var(--white);border-bottom:1px solid var(--line);padding:34px 0;}
+.ov-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center;}
+.ov-item{display:flex;flex-direction:column;align-items:center;gap:8px;}
+.ov-item svg{color:var(--aqua-dark);}
+.ov-label{font-size:11px;text-transform:uppercase;letter-spacing:0.14em;color:var(--ink-soft);font-weight:600;}
+.ov-val{font-family:'Playfair Display',serif;font-size:18px;color:var(--ink);}
+
+.value{background:var(--sand-light);padding:56px 0;}
+.value-head{text-align:center;margin-bottom:40px;}
+.value-head h2{font-size:32px;color:var(--ink);}
+.value-head .vsub{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-soft);font-size:18px;margin-top:6px;}
+.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;}
+.value-col{padding:0 30px;text-align:center;position:relative;}
+.value-col + .value-col::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:1px;background:var(--gold-whisper);}
+.value-col svg{color:var(--aqua-dark);margin-bottom:14px;}
+.value-col h3{font-size:21px;color:var(--ink);margin-bottom:10px;}
+.value-col p{font-size:14.5px;color:var(--ink-soft);line-height:1.7;}
+
+.intro{padding:60px 0 20px;}
+.intro h2{font-size:34px;text-align:center;}
+.intro .ssub{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-soft);font-size:19px;text-align:center;margin:10px auto 0;max-width:680px;}
+.intro p{font-size:16px;color:var(--ink);max-width:740px;margin:24px auto 0;}
+.intro p + p{margin-top:16px;}
+
+.context{background:var(--sand-light);border-left:3px solid var(--aqua-dark);padding:24px 28px;margin:36px auto 0;max-width:760px;font-size:15px;line-height:1.7;color:var(--ink);}
+.context strong{color:var(--aqua-dark);}
+.context h4{font-size:18px;margin-bottom:10px;}
+
+.sec-head{text-align:center;margin:64px 0 8px;}
+.sec-head h2{font-size:30px;}
+.sec-head .ssub{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-soft);font-size:18px;margin-top:8px;}
+
+.cards{padding:30px 0 10px;}
+.card{background:var(--white);border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-bottom:36px;}
+.card-top{padding:22px 28px 0;}
+.card-kicker{font-size:11px;text-transform:uppercase;letter-spacing:0.14em;color:var(--aqua-dark);font-weight:600;}
+.card-title{font-family:'Playfair Display',serif;font-size:25px;color:var(--aqua-dark);margin-top:4px;}
+.card-loc{font-family:'DM Sans',sans-serif;font-size:13px;color:var(--ink-soft);margin-top:4px;font-weight:500;}
+.card-suite{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--ink-soft);margin-top:8px;}
+.card-body{padding:16px 28px 0;}
+.card-body p{font-size:15px;color:var(--ink);margin-bottom:12px;}
+.bestfor{background:var(--aqua-mist);border-radius:5px;padding:12px 16px;margin:4px 28px 0;font-size:14px;color:var(--ink);}
+.bestfor strong{color:var(--aqua-dark);}
+
+.imgstrip{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;padding:18px 28px 0;}
+.imgstrip img{width:100%;height:190px;object-fit:cover;border-radius:4px;border:1px solid var(--line);display:block;background:var(--aqua-mist);}
+
+.amen{display:grid;grid-template-columns:1fr 1fr;gap:12px 26px;padding:22px 28px 0;}
+.amen-item{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--ink);}
+.amen-item svg{color:var(--aqua-dark);flex-shrink:0;margin-top:2px;}
+
+.pricewrap{padding:24px 28px 28px;}
+.pricebox{background:var(--aqua-pale);border-radius:6px;padding:20px 22px;}
+.pricebox .pkicker{font-size:11px;text-transform:uppercase;letter-spacing:0.14em;color:var(--aqua-dark);font-weight:600;margin-bottom:14px;}
+.opt{display:block;background:var(--white);border:1.5px solid transparent;border-radius:6px;padding:14px 16px;margin-bottom:10px;cursor:pointer;transition:border-color .15s,background .15s;}
+.opt:last-child{margin-bottom:0;}
+.opt:hover{border-color:var(--aqua);}
+.opt-row{display:flex;align-items:center;gap:12px;}
+.opt input[type=radio]{appearance:none;-webkit-appearance:none;width:20px;height:20px;border:2px solid var(--aqua);border-radius:50%;flex-shrink:0;cursor:pointer;position:relative;background:var(--white);}
+.opt input[type=radio]:checked{border-color:var(--aqua-dark);}
+.opt input[type=radio]:checked::after{content:"";position:absolute;left:3px;top:3px;width:10px;height:10px;border-radius:50%;background:var(--aqua-dark);}
+.opt:has(input:checked){border-color:var(--aqua-dark);background:#F3FAF9;}
+.opt-text{flex:1;}
+.opt-tier{font-size:14px;font-weight:600;color:var(--ink);}
+.opt-tier span{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:13px;color:var(--ink-soft);}
+.opt-amt{text-align:right;white-space:nowrap;}
+.opt-amt b{font-family:'Playfair Display',serif;font-size:19px;font-weight:500;color:var(--ink);}
+.opt-amt small{display:block;font-size:12px;color:var(--ink-soft);}
+.pricenote{font-size:12.5px;color:var(--ink-soft);margin-top:14px;line-height:1.6;font-style:italic;font-family:'Cormorant Garamond',serif;}
+.promo-chip{display:inline-block;background:var(--aqua-mist);color:var(--aqua-dark);font-size:11px;font-weight:600;letter-spacing:0.06em;padding:6px 12px;border-radius:4px;margin-bottom:14px;}
+
+.card-plain{border-style:dashed;}
+
+.totalbar{position:sticky;bottom:0;z-index:40;background:var(--aqua-pale);border-top:1px solid var(--aqua);padding:11px 0;box-shadow:0 -2px 12px rgba(43,36,32,0.07);}
+.totalbar-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.tb-label{font-size:13px;color:var(--ink);font-weight:500;}
+.tb-label span{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12.5px;color:var(--ink-soft);}
+.tb-amt{font-family:'Playfair Display',serif;font-size:22px;color:var(--ink);white-space:nowrap;}
+.tb-cta{background:var(--aqua-dark);color:var(--white);font-size:14px;font-weight:600;padding:10px 20px;border-radius:5px;text-decoration:none;white-space:nowrap;min-height:44px;display:inline-flex;align-items:center;}
+
+.formsec{background:var(--aqua-mist);padding:60px 0;margin-top:50px;border-top:1px solid var(--line);}
+.formsec h2{font-size:30px;text-align:center;}
+.formsec .ssub{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-soft);font-size:18px;text-align:center;margin:8px auto 0;}
+.promo-reminder{max-width:560px;margin:22px auto 0;background:var(--white);border:1px dashed var(--aqua-dark);border-radius:8px;padding:16px 20px;text-align:center;font-size:14px;color:var(--ink);}
+.promo-reminder strong{color:var(--aqua-dark);}
+.selsummary{background:var(--aqua-mist);border:1px solid var(--aqua);border-radius:6px;padding:14px 16px;font-size:14px;color:var(--ink);}
+.selsummary b{color:var(--aqua-dark);}
+.field{display:block;font-size:13px;font-weight:600;color:var(--ink);}
+.f-input{width:100%;font-size:16px;font-family:'DM Sans',sans-serif;padding:13px 14px;border:1px solid var(--line);border-radius:5px;background:var(--paper);color:var(--ink);}
+.f-input:focus{outline:none;border-color:var(--aqua-dark);}
+textarea.f-input{min-height:100px;resize:vertical;}
+.ins-opt{display:flex;align-items:flex-start;gap:10px;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:12px 14px;margin-bottom:8px;cursor:pointer;font-size:14px;}
+.ins-opt input{width:auto;margin-top:3px;flex-shrink:0;}
+.btn{width:100%;margin-top:24px;background:var(--aqua-dark);color:var(--white);font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;padding:16px;border:0;border-radius:5px;cursor:pointer;min-height:52px;letter-spacing:0.02em;}
+.btn:hover{background:#447779;}
+.thanks{display:none;max-width:560px;margin:22px auto 0;text-align:center;background:var(--white);padding:40px 34px;border-radius:8px;border:1px solid var(--line);}
+.thanks.show{display:block;}
+.thanks h3{font-size:26px;margin-bottom:10px;}
+.thanks p{color:var(--ink-soft);font-size:15px;}
+
+footer{background:var(--sand-light);padding:50px 0;border-top:1px solid var(--line);}
+.foot-inner{text-align:center;}
+.foot-name{font-family:'Playfair Display',serif;font-size:22px;color:var(--ink);}
+.foot-role{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-soft);font-size:16px;margin-bottom:14px;}
+.foot-contact{font-size:14px;color:var(--ink);}
+.foot-contact a{color:var(--aqua-dark);text-decoration:none;}
+.foot-disc{font-size:12.5px;color:var(--ink-soft);max-width:760px;margin:24px auto 0;line-height:1.7;font-style:italic;font-family:'Cormorant Garamond',serif;}
+
+@media(max-width:768px){
+  .ov-grid{grid-template-columns:1fr 1fr;gap:24px 18px;}
+  .value-grid{grid-template-columns:1fr;}
+  .value-col{padding:24px 10px;}
+  .value-col + .value-col::before{display:none;}
+  .value-col + .value-col{border-top:1px solid var(--gold-whisper);}
+  .imgstrip{grid-template-columns:1fr;}
+  .imgstrip img{height:220px;}
+  .amen{grid-template-columns:1fr;}
+  .totalbar-inner{flex-direction:column;align-items:stretch;gap:8px;text-align:center;}
+  .tb-cta{justify-content:center;}
+}
+</style>
+</head>
+<body>
+<main>
+
+<div class="promo">
+  <span class="pill">Limited</span><strong>$100 virtual Visa gift card</strong> on your day of travel, on stays of 6+ nights — book Excellence Playa Mujeres by <strong>June 6</strong> or Privilege Aluxes by <strong>June 8</strong>. Ask Christina to apply the promo.
+</div>
+
+<header class="hero">
+  <div class="brandmark">Point Me to Paradise Travel</div>
+  <h1>Cancún &amp; Isla Mujeres</h1>
+  <hr class="hairline">
+  <p class="sub">Two adults-only escapes on the Mexican Caribbean — one a sprawling resort on a private mainland beach, the other an intimate hotel on a quiet island. Same dates, two very different weeks.</p>
+  <p class="sig">Prepared for Angie &amp; Thomas Ontiveros · by Christina Garcia</p>
+</header>
+
+<section class="overview">
+  <div class="wrap">
+    <div class="ov-grid">
+      <div class="ov-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"></circle><circle cx="16" cy="9" r="2.5"></circle><path d="M3 20c0-3 2.7-5 6-5s6 2 6 5"></path><path d="M15.5 20c0-2.2 1.3-3.6 3.2-3.8"></path></svg>
+        <div class="ov-label">Travelers</div>
+        <div class="ov-val">2 Adults</div>
+      </div>
+      <div class="ov-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18V8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10"></path><path d="M3 14h18"></path><path d="M7 10h4"></path></svg>
+        <div class="ov-label">Stay</div>
+        <div class="ov-val">7 Nights</div>
+      </div>
+      <div class="ov-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+        <div class="ov-label">Region</div>
+        <div class="ov-val">Cancún · Isla Mujeres</div>
+      </div>
+      <div class="ov-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"></rect><path d="M4 10h16M8 3v4M16 3v4"></path></svg>
+        <div class="ov-label">Dates</div>
+        <div class="ov-val">Oct 10 – 17, 2026</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="value">
+  <div class="wrap">
+    <div class="value-head">
+      <h2>Beyond the booking</h2>
+      <p class="vsub">What's included with every Point Me to Paradise trip</p>
+    </div>
+    <div class="value-grid">
+      <div class="value-col">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"></path><path d="M14 3v5h5"></path><path d="M9 13h6M9 17h4"></path></svg>
+        <h3>The Trip Guide</h3>
+        <p>A document built for your week — restaurants we'd return to, neighborhoods worth the walk, what to skip, the places open on a Sunday. Not pulled from a database. Researched against where you're staying and what you've told us matters.</p>
+      </div>
+      <div class="value-col">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2"></rect><path d="M10 6h4"></path><circle cx="12" cy="17" r="1"></circle></svg>
+        <h3>The Trip App</h3>
+        <p>Itinerary, confirmation numbers, transfer windows, and ground contacts in one place — accessible offline, updated in real time. If a flight shifts or weather moves, the app moves with it.</p>
+      </div>
+      <div class="value-col">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 21l-4.9-2.6.9-5.5-4-3.9 5.5-.8z"></path></svg>
+        <h3>Best-Rate Assurance</h3>
+        <p>Every hotel night, cruise rate, and tour in your quote is priced at publicly available rates. If you find the same component for less elsewhere, we'll match it — you don't have to wonder whether you're overpaying for a piece of your trip.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="wrap">
+    <h2>Two islands of the same coast</h2>
+    <p class="ssub">Both adults-only, both on the Caribbean — but they ask for different kinds of weeks.</p>
+    <p>These two are genuinely different trips, and the choice comes down to the kind of week you want rather than a better-or-worse call. Excellence Playa Mujeres is the big, polished, do-everything resort — a private two-mile beach, a roster of restaurants and pools, and the full all-inclusive machine running around you. Privilege Aluxes is the opposite instinct: a smaller adults-only hotel on a quiet island, steps from one of the region's best beaches and a short walk from a real town.</p>
+    <p>I've laid out the honest trade in each card below — meals, transfers, payment timing, and how you actually get there. Read both, then choose the one that's calling and the rate that fits; the running total updates as you go.</p>
+
+    <div class="context">
+      <h4>The biggest difference: how you get there</h4>
+      <p><strong>Excellence Playa Mujeres</strong> is on the mainland, about a 30–45 minute drive north of Cancún airport — and round-trip transfers are included. No ferry, no extra legs. <strong>Privilege Aluxes</strong> is on Isla Mujeres, an island reached by a short ferry from the mainland (roughly 20 minutes by car to the port, then a 15–20 minute ferry, then a brief taxi to the hotel). It's an easy, scenic trip that thousands make daily — but it is more steps than a straight drive, and transfers/ferry for Aluxes aren't included in the rate. <strong>Ask me and I'll arrange the full door-to-door for either.</strong></p>
+    </div>
+  </div>
+</section>
+
+<div class="sec-head">
+  <h2>Choose your resort</h2>
+  <p class="ssub">One pick — property and rate together.</p>
+</div>
+
+<form id="tripForm">
+<input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+<input type="hidden" name="subject" value="Angie & Thomas Ontiveros — Cancún / Isla Mujeres Selection">
+<input type="hidden" name="from_name" value="Ontiveros — PMTP Mexico Selection">
+<input type="hidden" name="redirect" value="false">
+<input type="hidden" name="Resort_Choice" id="hidden_resort">
+<input type="hidden" name="Rate_Option" id="hidden_rate">
+<input type="hidden" name="Estimated_Total" id="hidden_total">
+<input type="hidden" name="Promo" value="$100 virtual Visa, 6+ nights, day of travel — Excellence Playa Mujeres by June 6 / Privilege Aluxes by June 8">
+
+<section class="cards">
+  <div class="wrap">
+
+    <!-- EXCELLENCE PLAYA MUJERES -->
+    <div class="card">
+      <div class="card-top">
+        <div class="card-kicker">Option 1 · Adults-only · All-Inclusive · Mainland</div>
+        <h3 class="card-title">Excellence Playa Mujeres</h3>
+        <div class="card-loc">Playa Mujeres, Cancún · private 2-mile beach · ~30–45 min from CUN airport</div>
+        <p class="card-suite">Excellence Club Two-Story Rooftop Terrace Suite Ocean Front</p>
+      </div>
+      <div class="card-body">
+        <p>The full-scale luxury resort. Excellence Playa Mujeres sits inside a gated community on a private two-mile stretch of white sand north of Cancún, with a Greg Norman golf course, the Miilé Spa, nine-plus restaurants, and a spread of pools across the grounds. It's adults-only and all-inclusive in the complete sense — every meal, drink, and most activities are built into the rate, with attentive service running quietly in the background.</p>
+        <p>Your suite is the Excellence Club Two-Story Rooftop Terrace Suite Ocean Front: two stories of living space, ocean views, an in-suite jacuzzi, and your own private rooftop plunge pool, plus the elevated Excellence Club layer — dedicated concierge, private lounge, pool, beach, and restaurant. The trade here is scale: this is a large, do-everything property, which means abundance and choice, but less of the intimate, tucked-away feel.</p>
+      </div>
+      <div class="bestfor"><strong>Best for:</strong> a week where everything's handled and on-site — meals, transfers, pools, golf, spa — without leaving the grounds or thinking about logistics.</div>
+      <div class="imgstrip">
+        <img src="https://booking.excellenceresorts.com/bookcore-media/bookcore.backhotelengine.com/uploads/habitaciones/XPM_Suite_01_LR_1_1_785Y3Xl.jpg?q=pr:sharp/w:1000/h:750/rt:fill/enlarge:1/quality:80" alt="Excellence Club Two-Story Rooftop Terrace Suite Ocean Front" loading="lazy">
+        <img src="https://booking.excellenceresorts.com/bookcore-media/bookcore.backhotelengine.com/uploads/habitaciones/XPM_Suite_02_HR_6wFtk1O.jpg?q=pr:sharp/w:1000/h:750/rt:fill/enlarge:1/quality:80" alt="Suite interior" loading="lazy">
+        <img src="https://booking.excellenceresorts.com/bookcore-media/bookcore.backhotelengine.com/uploads/habitaciones/XPM_EC_Beach_04_HR_57KDIJ5.jpg?q=pr:sharp/w:1000/h:750/rt:fill/enlarge:1/quality:80" alt="Excellence Club beach" loading="lazy">
+      </div>
+      <div class="amen">
+        <div class="amen-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20v-6h16v6"></path><path d="M4 14l8-7 8 7"></path><rect x="9" y="15" width="6" height="5"></rect></svg>Private rooftop plunge pool</div>
+        <div class="amen-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Full all-inclusive · all meals &amp; drinks</div>
+        <div class="amen-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>Round-trip airport transfer included</div>
+        <div class="amen-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21v-6a8 8 0 0 1 16 0v6"></path><path d="M2 21h20"></path><circle cx="12" cy="9" r="1"></circle></svg>In-suite jacuzzi · ocean views</div>
+        <div class="amen-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5z"></path></svg>Excellence Club: private lounge, pool, beach, restaurant</div>
+        <div class="amen-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M8 12h8M12 8v8"></path></svg>Miilé Spa · golf · 9+ restaurants</div>
+      </div>
+      <div class="pricewrap">
+        <div class="pricebox">
+          <span class="promo-chip">$100 Visa promo · book by June 6</span>
+          <div class="pkicker">7 nights · 2 adults · room only · all-inclusive · transfer included</div>
+          <label class="opt">
+            <div class="opt-row">
+              <input type="radio" name="selection" data-resort="Excellence Playa Mujeres — EC Two-Story Rooftop Terrace Suite Ocean Front" data-rate="Non-refundable" data-total="4133" onclick="setTimeout(updateTotal,0)">
+              <div class="opt-text"><div class="opt-tier">Non-refundable<span>Prepaid at booking · best rate</span></div></div>
+              <div class="opt-amt"><b>Est. $4,133</b><small>$590 / night</small></div>
+            </div>
+          </label>
+          <label class="opt">
+            <div class="opt-row">
+              <input type="radio" name="selection" data-resort="Excellence Playa Mujeres — EC Two-Story Rooftop Terrace Suite Ocean Front" data-rate="Refundable" data-total="4678" onclick="setTimeout(updateTotal,0)">
+              <div class="opt-text"><div class="opt-tier">Refundable<span>Free cancellation until Oct 9, 2026 · balance ~30 days out</span></div></div>
+              <div class="opt-amt"><b>Est. $4,678</b><small>$668 / night</small></div>
+            </div>
+          </label>
+          <p class="pricenote">Taxes included. Round-trip airport transfer included. All-inclusive. Final rate confirmed by Christina before booking.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRIVILEGE ALUXES -->
+    <div class="card">
+      <div class="card-top">
+        <div class="card-kicker">Option 2 · Adults-only · Island · Reached by ferry</div>
+        <h3 class="card-title">Privilege Aluxes</h3>
+        <div class="card-loc">Isla Mujeres · Playa Norte · short ferry from Cancún · walk to town</div>
+        <p class="card-suite">Grand Platinum Suite with a Private Rooftop Pool</p>
+      </div>
+      <div class="card-body">
+        <p>The intimate island alternative. Privilege Aluxes is a smaller adults-only hotel on the northern tip of Isla Mujeres, right at Playa Norte — consistently rated one of the best beaches in the Cancún area, with calm, shallow turquoise water. It's a short, scenic ferry from the mainland, and a few minutes' walk from downtown Hidalgo Street, its restaurants and bars. Where Excellence is a self-contained resort, Aluxes puts you on a real island with a town at your doorstep.</p>
+        <p>Your suite is the Grand Platinum Suite with a Private Rooftop Pool: a two-story suite with a private rooftop pool, a terrace with Caribbean views, a separate bedroom with a King bed, and a living room. On-site dining runs through Sabor (buffet and international), the Asian-inspired Satay, and the Playa Norte Beach Club on the sand. The honest trade: it's smaller and quieter with fewer on-site options than Excellence, and getting there involves the ferry — but that's exactly what gives it the island feel.</p>
+      </div>
+      <div class="bestfor"><strong>Best for:</strong> a quieter, more local week — one of the area's best beaches, a walkable town, and an intimate hotel over a big resort. Worth it if you don't mind the ferry.</div>
+      <div class="imgstrip">
+        <img src="https://www.privilegehotels.com/images/custom/rooms/grand-platinum-suite/grand-platinum-suite-00.webp" alt="Grand Platinum Suite with a Private Rooftop Pool" loading="lazy">
+        <img src="https://www.privilegehotels.com/images/custom/rooms/grand-platinum-suite/grand-platinum-suite-01.webp" alt="Grand Platinum Suite living area" loading="lazy">
+        <img src="https://www.privilegehotels.com/images/custom/rooms/grand-platinum-suite/grand-platinum-suite-03.webp" alt="Grand Platinum Suite rooftop pool" loading="lazy">
+        <img src="https://www.privilegehotels.com/images/custom/galeria/hotel/galeria_hotel_1_mini.webp" alt="Privilege Aluxes hotel" loading="lazy">
+      </div>
+      <div class="amen">
+        <div class="amen-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20v-6h16v6"></path><path d="M4 14l8-7 8 7"></path><rect x="9" y="15" width="6" height="5"></rect></svg>Private rooftop pool · two-story suite</div>
+        <div class="amen-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>Steps from Playa Norte · walk to town</div>
+        <div class="amen-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21v-6a8 8 0 0 1 16 0v6"></path><path d="M2 21h20"></path><circle cx="12" cy="9" r="1"></circle></svg>King bed · living room · Caribbean-view terrace</div>
+        <div class="amen-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Two meal plans (see rates below)</div>
+        <div class="amen-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8M5 9v11h14V9"></path></svg>3 restaurants: Sabor · Satay · Playa Norte Beach Club</div>
+        <div class="amen-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4M12 16h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path></svg>Transfers &amp; ferry not included — ask Christina</div>
+      </div>
+      <div class="pricewrap">
+        <div class="pricebox">
+          <span class="promo-chip">$100 Visa promo · book by June 8</span>
+          <div class="pkicker">7 nights · 2 adults · pay on arrival · choose your meal plan</div>
+          <label class="opt">
+            <div class="opt-row">
+              <input type="radio" name="selection" data-resort="Privilege Aluxes — Grand Platinum Suite with Private Rooftop Pool" data-rate="Breakfast included" data-total="4077" onclick="setTimeout(updateTotal,0)">
+              <div class="opt-text"><div class="opt-tier">Breakfast included<span>Buffet breakfast only · lunch &amp; dinner not included · free cancel until 2 days prior</span></div></div>
+              <div class="opt-amt"><b>Est. $4,077</b><small>pay on arrival</small></div>
+            </div>
+          </label>
+          <label class="opt">
+            <div class="opt-row">
+              <input type="radio" name="selection" data-resort="Privilege Aluxes — Grand Platinum Suite with Private Rooftop Pool" data-rate="All-Inclusive" data-total="4987" onclick="setTimeout(updateTotal,0)">
+              <div class="opt-text"><div class="opt-tier">All-Inclusive<span>All meals, snacks &amp; drinks · tips &amp; taxes · free cancel until Oct 8, 2026</span></div></div>
+              <div class="opt-amt"><b>Est. $4,987</b><small>pay on arrival</small></div>
+            </div>
+          </label>
+          <p class="pricenote">For a fair comparison to Excellence's all-inclusive rate, look at the Aluxes All-Inclusive plan — the Breakfast rate covers breakfast only, with lunches, dinners, and drinks paid as you go. Pay on arrival; card on file holds the booking. Transfers &amp; ferry not included. Final rate confirmed by Christina before booking.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="formsec">
+  <div class="wrap">
+    <h2>Tell me which way you're leaning</h2>
+    <p class="ssub">Choose a resort and rate above, then send your details — I'll confirm availability, transfers, and the rate.</p>
+
+    <div class="promo-reminder">
+      <strong>$100 virtual Visa gift card</strong> on your day of travel, on stays of 6+ nights — book <strong>Excellence Playa Mujeres by June 6</strong> or <strong>Privilege Aluxes by June 8</strong>. Your 7-night stay qualifies; I'll apply the promo to your booking.
+    </div>
+
+    <div style="max-width:560px;margin:18px auto 0;">
+      <div class="selsummary" id="selSummary">No resort selected yet — pick one above to see your total here.</div>
+
+      <label class="field" for="f-name" style="margin:18px 0 6px;">Name</label>
+      <input id="f-name" class="f-input" type="text" name="Name" required>
+
+      <label class="field" for="f-email" style="margin:16px 0 6px;">Email</label>
+      <input id="f-email" class="f-input" type="email" name="Email" required>
+
+      <label class="field" for="f-phone" style="margin:16px 0 6px;">Phone</label>
+      <input id="f-phone" class="f-input" type="tel" name="Phone">
+
+      <label class="field" for="f-notes" style="margin:16px 0 6px;">Notes, questions, or special requests</label>
+      <textarea id="f-notes" class="f-input" name="Trip_Notes" placeholder="e.g. leaning island vs. resort, want transfer/ferry arranged, anniversary, flight help"></textarea>
+
+      <div style="margin-top:18px;">
+        <div class="field" style="margin-bottom:10px;">Travel insurance</div>
+        <label class="ins-opt">
+          <input type="radio" name="Insurance_Choice" value="Yes — please send me a travel insurance quote" required>
+          <span>Yes, please send me a travel insurance quote.</span>
+        </label>
+        <label class="ins-opt">
+          <input type="radio" name="Insurance_Choice" value="No — I decline travel insurance and accept the risks of traveling without coverage" required>
+          <span>No, I decline insurance and understand the risks of traveling without coverage.</span>
+        </label>
+      </div>
+
+      <button type="submit" class="btn">Send my selection</button>
+    </div>
+
+    <div class="thanks" id="thanksMsg">
+      <h3>Got it — thank you.</h3>
+      <p>Your selection is on its way to Christina. I'll confirm availability, transfers, and the rate, and follow up with next steps shortly.</p>
+    </div>
+  </div>
+</section>
+</form>
+
+<div class="totalbar" id="totalBar" style="display:none;">
+  <div class="wrap totalbar-inner">
+    <div class="tb-label" id="tbLabel">Your selection<span id="tbSub"></span></div>
+    <div style="display:flex;align-items:center;gap:18px;">
+      <div class="tb-amt" id="tbAmt">—</div>
+      <a href="#f-name" class="tb-cta">Reserve</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div class="foot-name">Christina Garcia</div>
+    <div class="foot-role">Owner &amp; Travel Advisor · Point Me to Paradise Travel</div>
+    <div class="foot-contact"><a id="emailLink" href="#">email</a> · (281) 229-0862</div>
+    <p class="foot-disc">Individual hotels, transfers, and tours in your quote are priced at publicly available rates — and in many cases lower than what you'd find on your own. You don't have to worry about overpaying for a piece of your trip. What you're paying for is the rest: the right rooms at the right property, operators we've used for years, the trip app, and a human who answers when something doesn't go to plan.</p>
+  </div>
+</footer>
+
+</main>
+<script>
+(function(){
+  var addr = 'Christina' + '@' + 'PointMeToParadise.com';
+  var el = document.getElementById('emailLink');
+  el.href = 'mailto:' + addr;
+  el.textContent = addr;
+})();
+
+function fmt(n){ return '$' + n.toLocaleString('en-US'); }
+
+function updateTotal(){
+  var sel = document.querySelector('input[name="selection"]:checked');
+  var bar = document.getElementById('totalBar');
+  var summary = document.getElementById('selSummary');
+  if(!sel){
+    bar.style.display='none';
+    summary.textContent = 'No resort selected yet — pick one above to see your total here.';
+    return;
+  }
+  var resort = sel.getAttribute('data-resort');
+  var rate = sel.getAttribute('data-rate');
+  var total = parseInt(sel.getAttribute('data-total'),10);
+  var perPerson = Math.round(total/2);
+
+  document.getElementById('hidden_resort').value = resort;
+  document.getElementById('hidden_rate').value = rate;
+  document.getElementById('hidden_total').value = 'Est. ' + fmt(total) + ' (' + rate + ')';
+
+  document.getElementById('tbLabel').innerHTML = resort + '<span>' + rate + ' · Est. ' + fmt(perPerson) + ' per person</span>';
+  document.getElementById('tbAmt').textContent = 'Est. ' + fmt(total);
+  bar.style.display='block';
+
+  summary.innerHTML = '<b>Your selection:</b> ' + resort + '<br><b>' + rate + '</b> · Est. ' + fmt(total) + ' &nbsp;·&nbsp; Est. ' + fmt(perPerson) + ' per person · 2 adults, 7 nights';
+}
+
+document.getElementById('tripForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var form = e.target;
+  if(!document.querySelector('input[name="selection"]:checked')){
+    alert('Please choose a resort and rate above before sending.');
+    return;
+  }
+  var data = new FormData(form);
+  fetch('https://api.web3forms.com/submit', { method:'POST', body:data })
+    .then(function(res){ return res.json(); })
+    .then(function(json){
+      if(json.success){
+        form.style.display='none';
+        document.getElementById('thanksMsg').classList.add('show');
+        document.getElementById('totalBar').style.display='none';
+      } else {
+        alert('Something went wrong. Please email Christina directly or text (281) 229-0862.');
+      }
+    })
+    .catch(function(){
+      alert('Something went wrong. Please email Christina directly or text (281) 229-0862.');
+    });
+});
+</script>
+</body>
+</html>
