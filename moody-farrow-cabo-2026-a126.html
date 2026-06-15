@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>Cabo San Lucas — Prepared for Moody &amp; Farrow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --aqua-pale: #C4E4E1;
+  --aqua-mist: #EAF3F2;
+  --aqua: #75AFB1;
+  --aqua-dark: #4F8A8C;
+  --sand: #ECE7DC;
+  --sand-light: #F4F1E9;
+  --gold-whisper: #D6C8A8;
+  --white: #FFFFFF;
+  --paper: #FBFDFD;
+  --ink: #2B2420;
+  --ink-soft: #6B6359;
+  --line: #E5E9E8;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { color-scheme: light; scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 500; color: var(--ink); }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+.section { padding: 56px 0; }
+
+/* ---------- HERO (Variant A) ---------- */
+.hero {
+  background: linear-gradient(180deg, var(--aqua-mist) 0%, var(--paper) 100%);
+  padding: 88px 24px 64px;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+}
+.hero .kicker {
+  font-family: 'DM Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.26em;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--aqua-dark);
+  margin-bottom: 20px;
+}
+.hero h1 { font-size: clamp(38px, 6vw, 60px); line-height: 1.08; }
+.hero .hairline { width: 60px; height: 1px; background: var(--gold-whisper); margin: 22px auto; }
+.hero .tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: clamp(19px, 2.2vw, 23px);
+  color: var(--ink-soft);
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* ---------- OVERVIEW STRIP ---------- */
+.overview {
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+}
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.ov-item {
+  text-align: center;
+  padding: 30px 18px;
+  border-right: 1px solid var(--line);
+}
+.ov-item:last-child { border-right: none; }
+.ov-item svg { color: var(--aqua-dark); margin-bottom: 10px; }
+.ov-item .ov-label {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  margin-bottom: 4px;
+}
+.ov-item .ov-value { font-size: 15px; font-weight: 500; color: var(--ink); }
+
+/* ---------- VALUE STRIP ---------- */
+.value-strip { background: var(--sand-light); }
+.value-strip .vs-head { text-align: center; margin-bottom: 40px; }
+.value-strip h2 { font-size: 32px; }
+.value-strip .vs-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--ink-soft);
+  margin-top: 6px;
+}
+.vs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+.vs-col {
+  text-align: center;
+  padding: 0 28px;
+  border-right: 1px solid var(--gold-whisper);
+}
+.vs-col:last-child { border-right: none; }
+.vs-col svg { color: var(--aqua-dark); margin-bottom: 14px; }
+.vs-col h3 { font-size: 21px; margin-bottom: 10px; }
+.vs-col p { font-size: 14px; color: var(--ink-soft); line-height: 1.62; }
+
+/* ---------- INTRO ---------- */
+.intro p { font-size: 17px; max-width: 760px; }
+.intro p + p { margin-top: 16px; }
+.intro .lead-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 19px;
+  color: var(--ink-soft);
+  margin-bottom: 18px;
+}
+
+/* ---------- SECTION HEADINGS ---------- */
+.sec-head { margin-bottom: 8px; }
+.sec-head h2 { font-size: 30px; }
+.sec-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--ink-soft);
+  margin-bottom: 28px;
+}
+.head-flank {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 6px;
+}
+.head-flank svg { color: var(--aqua-dark); opacity: 0.65; }
+.head-flank h2 { font-size: 30px; text-align: center; }
+
+/* ---------- FLIGHTS CARD ---------- */
+.flights-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 28px 30px;
+  max-width: 820px;
+  margin: 0 auto;
+}
+.flight-leg { display: flex; align-items: flex-start; gap: 18px; padding: 16px 0; }
+.flight-leg + .flight-leg { border-top: 1px solid var(--line); }
+.flight-leg svg { color: var(--aqua-dark); flex-shrink: 0; margin-top: 4px; }
+.flight-leg .fl-label {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--aqua-dark);
+  margin-bottom: 4px;
+}
+.flight-leg .fl-route { font-size: 16px; font-weight: 500; }
+.flight-leg .fl-detail { font-size: 13px; color: var(--ink-soft); margin-top: 3px; }
+.flight-note {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--ink-soft);
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  line-height: 1.6;
+}
+
+/* ---------- RESORT CARDS ---------- */
+.resort-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 36px;
+}
+.rc-body { padding: 30px 32px; }
+.rc-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--aqua-dark);
+  margin-bottom: 12px;
+}
+.rc-name { font-size: 28px; line-height: 1.1; }
+.rc-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 19px;
+  color: var(--ink-soft);
+  margin: 6px 0 18px;
+}
+.rc-body p.rc-copy { font-size: 15px; margin-bottom: 12px; }
+
+/* ---------- CAROUSEL ---------- */
+.carousel {
+  position: relative;
+  margin: 22px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--aqua-mist);
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+.carousel-slide {
+  min-width: 100%;
+  height: 340px;
+  position: relative;
+}
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.carousel-slide .slide-cap {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(180deg, rgba(43,36,32,0) 0%, rgba(43,36,32,0.55) 100%);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 22px 16px 12px;
+}
+.carousel-placeholder {
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--ink-soft);
+  background: var(--aqua-mist);
+  border: 1px dashed var(--aqua);
+}
+.carousel-placeholder svg { color: var(--aqua-dark); opacity: 0.5; }
+.carousel-placeholder .ph-text { font-size: 13px; font-style: italic; font-family: 'Cormorant Garamond', serif; }
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid var(--line);
+  color: var(--aqua-dark);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.carousel-btn:hover { background: var(--white); }
+.carousel-btn.prev { left: 12px; }
+.carousel-btn.next { right: 12px; }
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  padding: 12px 0 2px;
+}
+.carousel-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--line);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.carousel-dot.active { background: var(--aqua-dark); }
+
+/* ---------- AMENITY GRID ---------- */
+.amenity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 24px;
+  background: var(--sand-light);
+  border-radius: 8px;
+  padding: 22px 26px;
+  margin: 22px 0;
+}
+.amenity {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  font-size: 14px;
+}
+.amenity svg { color: var(--aqua-dark); flex-shrink: 0; margin-top: 2px; }
+.amenity .am-text strong { font-weight: 600; display: block; font-size: 13px; }
+.amenity .am-text span { color: var(--ink-soft); font-size: 13px; }
+
+/* ---------- ROOM SECTION ---------- */
+.room-block { margin: 22px 0; }
+.room-block h4 { font-size: 18px; margin-bottom: 6px; }
+.room-block p { font-size: 14px; color: var(--ink-soft); }
+.room-tier {
+  border-left: 3px solid var(--aqua);
+  padding: 4px 0 4px 16px;
+  margin: 14px 0;
+}
+.room-tier h4 { font-size: 16px; }
+
+/* ---------- PRICING BOX ---------- */
+.price-box {
+  background: var(--aqua-pale);
+  border-radius: 8px;
+  padding: 24px 26px;
+  margin: 22px 0;
+}
+.price-box .pb-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--aqua-dark);
+  margin-bottom: 8px;
+}
+.price-box .pb-amount { font-family: 'Playfair Display', serif; font-size: 34px; font-weight: 600; color: var(--ink); }
+.price-box .pb-amount .pb-est { font-size: 18px; font-weight: 500; }
+.price-box .pb-pp { font-size: 14px; color: var(--ink); margin-top: 2px; }
+.price-box .pb-roomnote {
+  font-size: 13px;
+  color: var(--ink);
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(79,138,140,0.3);
+}
+.price-box .pb-roomnote strong { font-weight: 600; }
+.pb-includes { margin: 14px 0 0; padding-left: 0; list-style: none; }
+.pb-includes li { font-size: 13px; color: var(--ink); padding: 3px 0 3px 22px; position: relative; }
+.pb-includes li::before {
+  content: "";
+  position: absolute;
+  left: 4px; top: 11px;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--aqua-dark);
+}
+.pb-schedule { font-size: 12px; color: var(--ink-soft); margin-top: 12px; line-height: 1.55; }
+
+/* ---------- DEPOSIT / BALANCE BLOCK (clear + obvious) ---------- */
+.pay-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: var(--white);
+  border: 1.5px solid var(--aqua-dark);
+  border-radius: 8px;
+  margin: 16px 0;
+  overflow: hidden;
+}
+.pay-split .pay-cell { padding: 16px 18px; }
+.pay-split .pay-cell:first-child { border-right: 1.5px solid var(--aqua-dark); }
+.pay-split .pay-label {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--aqua-dark);
+  margin-bottom: 4px;
+}
+.pay-split .pay-amount {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.1;
+}
+.pay-split .pay-when { font-size: 12px; color: var(--ink-soft); margin-top: 3px; }
+.pay-split .pay-per { font-size: 11px; color: var(--ink-soft); }
+@media (max-width: 480px){
+  .pay-split { grid-template-columns: 1fr; }
+  .pay-split .pay-cell:first-child { border-right: none; border-bottom: 1.5px solid var(--aqua-dark); }
+}
+
+/* ---------- ADD-ONS BLOCK (VAX-style) ---------- */
+.addons-line {
+  background: var(--sand-light);
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin: 14px 0;
+  font-size: 13px;
+}
+.addons-line .ad-head {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+.addons-line .ad-row { display: flex; align-items: center; gap: 8px; }
+.addons-line .ad-row svg { color: var(--aqua-dark); flex-shrink: 0; }
+.addons-line .ad-row strong { font-weight: 600; }
+.addons-line .ad-incl { color: var(--aqua-dark); font-weight: 600; }
+
+/* ---------- BEACH & SWIMMING BLOCK ---------- */
+.beach-block {
+  background: var(--aqua-mist);
+  border-radius: 8px;
+  padding: 20px 22px;
+  margin: 22px 0;
+}
+.beach-block .bb-head {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 10px;
+}
+.beach-block .bb-head svg { color: var(--aqua-dark); flex-shrink: 0; }
+.beach-block .bb-head h4 { font-size: 17px; margin: 0; }
+.beach-block p { font-size: 14px; color: var(--ink); line-height: 1.6; margin: 0; }
+.beach-block p + p { margin-top: 9px; }
+.beach-block .bb-season {
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  font-style: italic;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--aqua);
+}
+
+
+
+/* ---------- SECOND ROOM TOGGLE ---------- */
+.room-toggle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--white);
+  border: 1px solid var(--aqua);
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin: 16px 0;
+  cursor: pointer;
+  user-select: none;
+}
+.room-toggle input { width: 20px; height: 20px; accent-color: var(--aqua-dark); cursor: pointer; flex-shrink: 0; }
+.room-toggle .rt-text { font-size: 14px; }
+.room-toggle .rt-text strong { font-weight: 600; display: block; }
+.room-toggle .rt-text span { color: var(--ink-soft); font-size: 13px; }
+
+/* ---------- AT-PROPERTY FEE CALLOUT ---------- */
+.fee-callout {
+  background: var(--white);
+  border: 1px solid var(--gold-whisper);
+  border-left: 3px solid var(--gold-whisper);
+  border-radius: 6px;
+  padding: 14px 18px;
+  margin: 18px 0;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.fee-callout svg { color: var(--gold-whisper); flex-shrink: 0; margin-top: 2px; }
+.fee-callout .fc-text { font-size: 13px; color: var(--ink); }
+.fee-callout .fc-text strong { font-weight: 600; }
+
+/* ---------- SELECTION PILL ---------- */
+.select-pill {
+  display: block;
+  text-align: center;
+  border: 1.5px solid var(--aqua-dark);
+  border-radius: 30px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--aqua-dark);
+  background: var(--white);
+  cursor: pointer;
+  transition: all 0.18s ease;
+  min-height: 48px;
+}
+.select-pill input { position: absolute; opacity: 0; pointer-events: none; }
+.resort-card:has(.select-pill input:checked) { border: 2px solid var(--aqua-dark); }
+.select-pill:has(input:checked) { background: var(--aqua-dark); color: var(--white); }
+
+/* ---------- NOTES ---------- */
+.notes-area { max-width: 820px; margin: 0 auto; }
+textarea, input[type=text], input[type=email], input[type=tel] {
+  width: 100%;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  color: var(--ink);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+textarea { min-height: 110px; resize: vertical; }
+label.field-label { font-size: 13px; font-weight: 600; display: block; margin-bottom: 6px; }
+.field { margin-bottom: 18px; }
+
+/* ---------- RUNNING TOTAL BAR ---------- */
+.total-bar {
+  position: sticky;
+  bottom: 0;
+  background: var(--aqua-pale);
+  border-top: 1px solid var(--aqua);
+  padding: 12px 24px;
+  z-index: 40;
+}
+.total-bar-inner {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.total-bar .tb-label { font-size: 14px; font-weight: 500; color: var(--ink); }
+.total-bar .tb-label span { display: block; font-size: 12px; color: var(--ink-soft); }
+.total-bar .tb-amount { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 600; color: var(--ink); text-align: right; }
+.total-bar .tb-amount span { display: block; font-size: 12px; font-weight: 400; color: var(--ink-soft); font-family: 'DM Sans', sans-serif; }
+
+/* ---------- FORM ---------- */
+.form-wrap {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 32px;
+  max-width: 620px;
+  margin: 0 auto;
+}
+.insurance-block { margin: 8px 0 20px; }
+.insurance-block .ins-q { font-size: 14px; font-weight: 600; margin-bottom: 10px; }
+.ins-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 13px 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.ins-option input { width: 18px; height: 18px; accent-color: var(--aqua-dark); flex-shrink: 0; margin-top: 1px; }
+.submit-btn {
+  width: 100%;
+  background: var(--aqua-dark);
+  color: var(--white);
+  border: none;
+  border-radius: 30px;
+  padding: 16px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 52px;
+}
+.submit-btn:hover { background: #437476; }
+.thanks-msg {
+  display: none;
+  text-align: center;
+  padding: 40px 20px;
+  background: var(--aqua-mist);
+  border-radius: 10px;
+}
+.thanks-msg.show { display: block; }
+.thanks-msg h3 { font-size: 26px; margin-bottom: 10px; }
+.thanks-msg p { color: var(--ink-soft); }
+
+/* ---------- FOOTER ---------- */
+.footer {
+  background: var(--sand-light);
+  border-top: 1px solid var(--line);
+  padding: 48px 24px;
+  text-align: center;
+}
+.footer .ft-name { font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 4px; }
+.footer .ft-role {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 17px;
+  color: var(--ink-soft);
+  margin-bottom: 14px;
+}
+.footer .ft-contact { font-size: 15px; margin-bottom: 4px; }
+.footer .ft-contact a { color: var(--aqua-dark); text-decoration: none; }
+.footer .ft-disclosure {
+  font-size: 12px;
+  color: var(--ink-soft);
+  max-width: 720px;
+  margin: 22px auto 0;
+  line-height: 1.6;
+  font-style: italic;
+}
+.footer .ft-hairline { width: 60px; height: 1px; background: var(--gold-whisper); margin: 22px auto; }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .overview-grid { grid-template-columns: repeat(2, 1fr); }
+  .ov-item:nth-child(2) { border-right: none; }
+  .ov-item:nth-child(1), .ov-item:nth-child(2) { border-bottom: 1px solid var(--line); }
+  .vs-grid { grid-template-columns: 1fr; }
+  .vs-col { border-right: none; padding: 22px 0; }
+  .vs-col + .vs-col { border-top: 1px solid var(--gold-whisper); }
+  .amenity-grid { grid-template-columns: 1fr; }
+  .carousel-slide, .carousel-placeholder { height: 240px; }
+  .total-bar-inner { flex-direction: column; gap: 4px; text-align: center; }
+  .total-bar .tb-amount { text-align: center; }
+  .rc-body { padding: 24px 20px; }
+  .hero { padding: 64px 20px 48px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero">
+  <div class="kicker">Prepared for Moody &amp; Farrow</div>
+  <h1>Cabo San Lucas</h1>
+  <div class="hairline"></div>
+  <p class="tagline">Six nights on the Baja tip — where the desert runs straight into the sea, and the only real decision is which stretch of sand is yours. August 20–26, 2026.</p>
+</header>
+
+<!-- ===================== OVERVIEW STRIP ===================== -->
+<section class="overview">
+  <div class="wrap">
+    <div class="overview-grid">
+      <div class="ov-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <div class="ov-label">Travelers</div>
+        <div class="ov-value">4 adults · 2 rooms</div>
+      </div>
+      <div class="ov-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>
+        <div class="ov-label">Nights</div>
+        <div class="ov-value">6 nights</div>
+      </div>
+      <div class="ov-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div class="ov-label">Region</div>
+        <div class="ov-value">Cabo San Lucas</div>
+      </div>
+      <div class="ov-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+        <div class="ov-label">Flying from</div>
+        <div class="ov-value">Houston (HOU)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VALUE STRIP ===================== -->
+<section class="section value-strip">
+  <div class="wrap">
+    <div class="vs-head">
+      <h2>Beyond the booking</h2>
+      <div class="vs-sub">What's included with every Point Me to Paradise trip</div>
+    </div>
+    <div class="vs-grid">
+      <div class="vs-col">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        <h3>The Trip Guide</h3>
+        <p>A document built for your week — restaurants we'd return to, neighborhoods worth the walk, what to skip, the places open on a Sunday. Not pulled from a database. Researched against where you're staying and what you've told us matters.</p>
+      </div>
+      <div class="vs-col">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
+        <h3>The Trip App</h3>
+        <p>Itinerary, confirmation numbers, transfer windows, and ground contacts in one place — accessible offline, updated in real time. If a flight shifts or weather moves, the app moves with it.</p>
+      </div>
+      <div class="vs-col">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+        <h3>Best-Rate Assurance</h3>
+        <p>Every hotel night, cruise rate, and tour in your quote is priced at publicly available rates. If you find the same component for less elsewhere, we'll match it — you don't have to wonder whether you're overpaying for a piece of your trip.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== INTRO ===================== -->
+<section class="section intro">
+  <div class="wrap">
+    <p class="lead-sub">Four all-inclusive resorts, one set of dates — built so you can see exactly what each stretch of Cabo gives you.</p>
+    <p>Here are four adults-content, all-inclusive resorts for your six nights in Cabo, August 20–26. Every option below is <strong>priced per room for 2 adults</strong>, with the same Southwest flights from Houston-Hobby and round-trip airport transfers built in. Your party is four adults across two rooms — each rate you see covers one room, and the second reservation mirrors it exactly. Use the <em>"Add second room"</em> toggle on any card to see the full two-room figure.</p>
+    <p>The properties run from the marina-side energy of Breathless to the quieter Corridor setting of Paradisus. Where the trade-offs matter — location, room category, what's covered — I've called them out plainly on each card.</p>
+  </div>
+</section>
+
+<!-- ===================== FLIGHTS ===================== -->
+<section class="section" style="background:var(--aqua-mist);">
+  <div class="wrap">
+    <div class="head-flank">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="transform:scaleX(1);"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+      <h2>Your flights</h2>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="transform:scaleX(-1);"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+    </div>
+    <p class="sec-sub" style="text-align:center;">Nonstop both ways on Southwest — under three hours, no connections.</p>
+    <div class="flights-card">
+      <div class="flight-leg">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        <div>
+          <div class="fl-label">Depart · Thursday, August 20, 2026</div>
+          <div class="fl-route">Houston-Hobby (HOU) → Los Cabos (SJD)</div>
+          <div class="fl-detail">Southwest #880 · 9:10 AM – 9:45 AM · 2h 35m nonstop</div>
+        </div>
+      </div>
+      <div class="flight-leg">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        <div>
+          <div class="fl-label">Return · Wednesday, August 26, 2026</div>
+          <div class="fl-route">Los Cabos (SJD) → Houston-Hobby (HOU)</div>
+          <div class="fl-detail">Southwest #881 · 11:40 AM – 4:05 PM · 2h 25m nonstop</div>
+        </div>
+      </div>
+      <p class="flight-note">These flights are included in every package below. I chose dates with the best air rates — want different days or times? Mention it in the notes below or reach out directly, and I'll come back with options quickly.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RESORT OPTIONS ===================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><h2>Your four resorts</h2></div>
+    <div class="sec-sub">Each priced per room for 2 adults — toggle the second room on any card to see your full party total.</div>
+
+    <form id="tripForm">
+      <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+      <input type="hidden" name="subject" value="Moody &amp; Farrow — Cabo San Lucas Package Selections">
+      <input type="hidden" name="from_name" value="Moody &amp; Farrow — PMTP Trip Form">
+      <input type="hidden" name="redirect" value="false">
+      <input type="hidden" name="Resort_Choice" id="hidden_resort">
+      <input type="hidden" name="Room_Configuration" id="hidden_rooms">
+      <input type="hidden" name="Estimated_Total" id="hidden_total">
+      <input type="hidden" name="Trip_Notes" id="hidden_notes">
+
+      <!-- ===== CARD 1: BREATHLESS ===== -->
+      <div class="resort-card" data-perroom="3750" data-name="Breathless Cabo San Lucas Resort &amp; Spa — Allure Suite King Marina View">
+        <div class="rc-body">
+          <div class="rc-kicker">Option 1 · Adults Only · All-Inclusive · 5.0</div>
+          <h3 class="rc-name">Breathless Cabo San Lucas Resort &amp; Spa</h3>
+          <div class="rc-tagline">Marina-front, adults-only, and built for people who want the night to keep going.</div>
+
+          <!-- CAROUSEL PLACEHOLDER -->
+          <div class="carousel" data-carousel>
+            <button type="button" class="carousel-btn prev" aria-label="Previous">‹</button>
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="https://i.travelapi.com/lodging/12000000/11840000/11838000/11837973/377efa52_z.jpg" alt="Breathless Cabo San Lucas Resort &amp; Spa" loading="lazy"><div class="slide-cap">Breathless Cabo San Lucas Resort &amp; Spa</div></div>
+<div class="carousel-slide"><img src="https://i.travelapi.com/lodging/12000000/11840000/11838000/11837973/13643a1e_z.jpg" alt="Marina &amp; resort" loading="lazy"><div class="slide-cap">Marina &amp; resort</div></div>
+<div class="carousel-slide"><img src="https://i.travelapi.com/lodging/12000000/11840000/11838000/11837973/a5872be4_z.jpg" alt="Pool" loading="lazy"><div class="slide-cap">Pool</div></div>
+<div class="carousel-slide"><img src="https://i.travelapi.com/lodging/12000000/11840000/11838000/11837973/2ca10b9e_z.jpg" alt="Pool deck" loading="lazy"><div class="slide-cap">Pool deck</div></div>
+<div class="carousel-slide"><img src="https://i.travelapi.com/lodging/12000000/11840000/11838000/11837973/6cc6c562_z.jpg" alt="Allure Suite" loading="lazy"><div class="slide-cap">Allure Suite</div></div>
+<div class="carousel-slide"><img src="https://i.travelapi.com/lodging/12000000/11840000/11838000/11837973/f34315fe_z.jpg" alt="Suite interior" loading="lazy"><div class="slide-cap">Suite interior</div></div>
+<div class="carousel-slide"><img src="https://i.travelapi.com/lodging/12000000/11840000/11838000/11837973/22fd630d_z.jpg" alt="Dining" loading="lazy"><div class="slide-cap">Dining</div></div>
+<div class="carousel-slide"><img src="https://i.travelapi.com/lodging/12000000/11840000/11838000/11837973/52fd717b_z.jpg" alt="Bar &amp; lounge" loading="lazy"><div class="slide-cap">Bar &amp; lounge</div></div>
+<div class="carousel-slide"><img src="https://i.travelapi.com/lodging/12000000/11840000/11838000/11837973/70142152_z.jpg" alt="Rooftop &amp; views" loading="lazy"><div class="slide-cap">Rooftop &amp; views</div></div>
+<div class="carousel-slide"><img src="https://i.travelapi.com/lodging/12000000/11840000/11838000/11837973/d122b29e_z.jpg" alt="Resort grounds" loading="lazy"><div class="slide-cap">Resort grounds</div></div>
+            </div>
+            <button type="button" class="carousel-btn next" aria-label="Next">›</button>
+          </div>
+          <div class="carousel-dots"><button type="button" class="carousel-dot active" aria-label="Image 1"></button><button type="button" class="carousel-dot" aria-label="Image 2"></button><button type="button" class="carousel-dot" aria-label="Image 3"></button><button type="button" class="carousel-dot" aria-label="Image 4"></button><button type="button" class="carousel-dot" aria-label="Image 5"></button><button type="button" class="carousel-dot" aria-label="Image 6"></button><button type="button" class="carousel-dot" aria-label="Image 7"></button><button type="button" class="carousel-dot" aria-label="Image 8"></button><button type="button" class="carousel-dot" aria-label="Image 9"></button><button type="button" class="carousel-dot" aria-label="Image 10"></button></div>
+
+          <p class="rc-copy">Breathless sits right on the Cabo San Lucas marina, steps from the bars and restaurants of the downtown strip — the most walkable, most social setting of the four. The Unlimited-Luxury™ program covers à la carte dining with no reservations, top-shelf spirits, 24-hour room service, and nightly entertainment. No wristbands, all gratuities included.</p>
+
+          <div class="beach-block">
+            <div class="bb-head"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1C7 13 7 11 9.5 11c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1C7 19 7 17 9.5 17c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg><h4>The beach &amp; swimming</h4></div>
+            <p>Breathless sits on Médano — the protected stretch inside Cabo San Lucas Bay, shielded by Land's End from the rough Pacific surf that makes most of Los Cabos unsafe to swim. Médano is the safest, most reliable swimming beach in the area, with calm Sea of Cortez water, lifeguards, and a flag system.</p>
+            <p>Honest trade worth knowing: the resort's own frontage is at the <strong>marina end</strong> of Médano, where the water right out front isn't the best for swimming. The prime, calm swim zones are a <strong>few minutes' walk down the sand</strong> — close, but not straight off your lounger. If swimming straight out front matters most, Pueblo Bonito Rose (below) has the stronger position on the same beach.</p>
+            <div class="bb-season">A late-August note: Médano and the Corridor coves stay swimmable in summer, but May–September brings slightly bigger, more variable surf and falls in hurricane season. Cabo runs a green/yellow/red/black flag system on its patrolled beaches — worth a glance each morning before you wade in.</div>
+          </div>
+
+          <div class="amenity-grid">
+            <div class="amenity"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><div class="am-text"><strong>Adults only</strong><span>18+ resort</span></div></div>
+            <div class="amenity"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div class="am-text"><strong>Marina-front</strong><span>Cabo San Lucas downtown</span></div></div>
+            <div class="amenity"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M2 12a10 10 0 0 1 20 0"/><path d="M6 12v6"/><path d="M18 12v6"/></svg><div class="am-text"><strong>Pools</strong><span>Rooftop &amp; main pools</span></div></div>
+            <div class="amenity"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3c0 1.5 3 7 3 7s3-5.5 3-7a3 3 0 0 0-3-3z"/><path d="M5 21h14"/></svg><div class="am-text"><strong>Spa</strong><span>25% discount perk included</span></div></div>
+            <div class="amenity"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18"/><path d="M12 2v9"/><path d="M5 11v10"/><path d="M19 11v10"/></svg><div class="am-text"><strong>Dining</strong><span>À la carte, no reservations</span></div></div>
+            <div class="amenity"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M5 17a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2M8 21h8"/><circle cx="7.5" cy="14.5" r="1"/></svg><div class="am-text"><strong>Transfers</strong><span>Round-trip airport included</span></div></div>
+          </div>
+
+          <div class="room-block">
+            <h4>Two Allure Suite King Marina View rooms · 2 adults per room</h4>
+            <p>Marina-facing suites with king bedding. Booking includes up to $450 in instant savings plus free perks: in-room sparkling-wine breakfast, 25% spa discount, and a complimentary bottle of wine, sparkling wine, rum, or tequila per room.</p>
+          </div>
+
+          <div class="price-box">
+            <div class="pb-kicker">Package rate · all-in · per room</div>
+            <div class="pb-amount"><span class="pb-est">Est.</span> $3,750</div>
+            <div class="pb-pp">Est. $1,875 per person · 2 adults</div>
+            <ul class="pb-includes">
+              <li>Round-trip Southwest flights (HOU ↔ SJD)</li>
+              <li>Round-trip airport transfers</li>
+              <li>6 nights, Allure Suite King Marina View</li>
+              <li>Unlimited-Luxury™ all-inclusive</li>
+              <li>Up to $450 instant savings + free perks</li>
+            </ul>
+            <div class="pb-roomnote"><strong>Priced per room, 2 adults.</strong> Your party is two rooms — the second reservation mirrors this one. Toggle below to see your full two-room total.</div>
+            <div class="pay-split">
+            <div class="pay-cell">
+              <div class="pay-label">Deposit · due at booking</div>
+              <div class="pay-amount">Est. $1,561</div>
+              <div class="pay-per">per room</div>
+            </div>
+            <div class="pay-cell">
+              <div class="pay-label">Balance · due by July 6, 2026</div>
+              <div class="pay-amount">Est. $2,189</div>
+              <div class="pay-per">per room</div>
+            </div>
+          </div>
+          </div>
+
+          <div class="addons-line">
+            <div class="ad-head">Add-ons · for 20AUG26 to 26AUG26</div>
+            <div class="ad-row">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M5 17a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2M8 21h8"/><circle cx="7.5" cy="14.5" r="1"/></svg>
+              <span><strong>Transportation to &amp; from your hotel</strong> — Thursday, August 20, 2026 · <span class="ad-incl">Included with hotel</span></span>
+            </div>
+          </div>
+
+          <label class="room-toggle">
+            <input type="checkbox" class="second-room-toggle" onclick="setTimeout(updateTotal,0)">
+            <div class="rt-text"><strong>Add second room — 2 adults</strong><span>Mirrors this reservation for your full party of four. Updates the total to Est. $7,500.</span></div>
+          </label>
+
+          <div class="fee-callout">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <div class="fc-text"><strong>At-property fees:</strong> None. No pay-in-destination charges on this option.</div>
+          </div>
+
+          <label class="select-pill">
+            <input type="radio" name="resort_select" value="Breathless Cabo San Lucas — Allure Suite King Marina View" onclick="setTimeout(updateTotal,0)">
+            Select Breathless Cabo San Lucas
+          </label>
+        </div>
+      </div>
+
+      <!-- ===== CARD 2: PUEBLO BONITO ROSE (two room tiers) ===== -->
+      <div class="resort-card" data-perroom="3866" data-perroom-upgrade="4474" data-name="Pueblo Bonito Rose Resort &amp; Spa">
+        <div class="rc-body">
+          <div class="rc-kicker">Option 2 · All-Inclusive · 4.5</div>
+          <h3 class="rc-name">Pueblo Bonito Rose Resort &amp; Spa</h3>
+          <div class="rc-tagline">Mediterranean-style and beachfront, with two room tiers to choose between.</div>
+
+          <!-- CAROUSEL PLACEHOLDER -->
+          <div class="carousel" data-carousel>
+            <button type="button" class="carousel-btn prev" aria-label="Previous">‹</button>
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/670000/663500/663422/45adf795_z.jpg" alt="Pueblo Bonito Rose — resort &amp; grounds" loading="lazy"><div class="slide-cap">Pueblo Bonito Rose — resort &amp; grounds</div></div>
+<div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/670000/663500/663422/851a2a03_z.jpg" alt="Beachfront" loading="lazy"><div class="slide-cap">Beachfront</div></div>
+<div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/670000/663500/663422/0f61a49c_z.jpg" alt="Pool" loading="lazy"><div class="slide-cap">Pool</div></div>
+<div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/670000/663500/663422/c99d4906_z.jpg" alt="Oceanfront setting" loading="lazy"><div class="slide-cap">Oceanfront setting</div></div>
+<div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/670000/663500/663422/f71254ff_z.jpg" alt="Suite" loading="lazy"><div class="slide-cap">Suite</div></div>
+<div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/670000/663500/663422/2738c507_z.jpg" alt="Room interior" loading="lazy"><div class="slide-cap">Room interior</div></div>
+<div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/670000/663500/663422/e2640c14_z.jpg" alt="Dining" loading="lazy"><div class="slide-cap">Dining</div></div>
+<div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/670000/663500/663422/12874981_z.jpg" alt="Restaurant &amp; bar" loading="lazy"><div class="slide-cap">Restaurant &amp; bar</div></div>
+<div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/670000/663500/663422/6a4db0b0_z.jpg" alt="Grounds &amp; gardens" loading="lazy"><div class="slide-cap">Grounds &amp; gardens</div></div>
+<div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/670000/663500/663422/d09da241_z.jpg" alt="Pool" loading="lazy"><div class="slide-cap">Pool</div></div>
+              <div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/670000/663500/663422/a36a011c_z.jpg" alt="Pueblo Bonito Rose" loading="lazy"><div class="slide-cap">Pueblo Bonito Rose</div></div>
+              <div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/670000/663500/663422/e1d1c716_z.jpg" alt="Pueblo Bonito Rose" loading="lazy"><div class="slide-cap">Pueblo Bonito Rose</div></div>
+              <div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/670000/663500/663422/c3a4802f_z.jpg" alt="Pueblo Bonito Rose" loading="lazy"><div class="slide-cap">Pueblo Bonito Rose</div></div>
+            </div>
+            <button type="button" class="carousel-btn next" aria-label="Next">›</button>
+          </div>
+          <div class="carousel-dots"><button type="button" class="carousel-dot active" aria-label="Image 1"></button><button type="button" class="carousel-dot" aria-label="Image 2"></button><button type="button" class="carousel-dot" aria-label="Image 3"></button><button type="button" class="carousel-dot" aria-label="Image 4"></button><button type="button" class="carousel-dot" aria-label="Image 5"></button><button type="button" class="carousel-dot" aria-label="Image 6"></button><button type="button" class="carousel-dot" aria-label="Image 7"></button><button type="button" class="carousel-dot" aria-label="Image 8"></button><button type="button" class="carousel-dot" aria-label="Image 9"></button><button type="button" class="carousel-dot" aria-label="Image 10"></button><button type="button" class="carousel-dot" aria-label="Image 11"></button><button type="button" class="carousel-dot" aria-label="Image 12"></button><button type="button" class="carousel-dot" aria-label="Image 13"></button></div>
+
+          <p class="rc-copy">Pueblo Bonito Rose sits directly on the beach on the Cabo San Lucas side, with the look of a Mediterranean village — terracotta, fountains, and gardens running down to the sand. It's an established, full-service all-inclusive that reads calmer and more classic than the marina resorts, while still being close to town.</p>
+
+          <div class="beach-block">
+            <div class="bb-head"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1C7 13 7 11 9.5 11c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1C7 19 7 17 9.5 17c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg><h4>The beach &amp; swimming</h4></div>
+            <p>This is the strongest swim position of the four. Pueblo Bonito Rose sits mid-Médano, on the protected, swimmable stretch of Cabo San Lucas Bay — repeatedly described as one of the only true swimming beaches in Cabo. Guests consistently note you can walk straight out and swim, then walk to the marina and downtown from the same spot.</p>
+            <p>Calm, gently sloping, patrolled water right off the resort's own sand — no walk down-beach needed to reach the good swimming. If swimmability is the deciding factor, this is the easiest yes.</p>
+            <div class="bb-season">A late-August note: Médano and the Corridor coves stay swimmable in summer, but May–September brings slightly bigger, more variable surf and falls in hurricane season. Cabo runs a green/yellow/red/black flag system on its patrolled beaches — worth a glance each morning before you wade in.</div>
+          </div>
+
+          <div class="amenity-grid">
+            <div class="amenity"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div class="am-text"><strong>Beachfront</strong><span>Cabo San Lucas beach</span></div></div>
+            <div class="amenity"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18"/><path d="M12 2v9"/><path d="M5 11v10"/><path d="M19 11v10"/></svg><div class="am-text"><strong>All-inclusive</strong><span>Dining &amp; drinks covered</span></div></div>
+            <div class="amenity"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M2 12a10 10 0 0 1 20 0"/><path d="M6 12v6"/><path d="M18 12v6"/></svg><div class="am-text"><strong>Pools</strong><span>Multiple oceanfront pools</span></div></div>
+            <div class="amenity"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3c0 1.5 3 7 3 7s3-5.5 3-7a3 3 0 0 0-3-3z"/><path d="M5 21h14"/></svg><div class="am-text"><strong>Spa</strong><span>Full-service on property</span></div></div>
+            <div class="amenity"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg><div class="am-text"><strong>All ages</strong><span>Not adults-only</span></div></div>
+            <div class="amenity"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M5 17a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2M8 21h8"/><circle cx="7.5" cy="14.5" r="1"/></svg><div class="am-text"><strong>Transfers</strong><span>Round-trip airport included</span></div></div>
+          </div>
+
+          <div class="room-block">
+            <h4>Two rooms · 2 adults per room — choose your tier</h4>
+            <div class="room-tier">
+              <h4>Junior Suite — Est. $3,866 / room</h4>
+              <p>The base all-inclusive suite. Comfortable square footage with resort or partial views.</p>
+            </div>
+            <div class="room-tier">
+              <h4>Luxury Suite — Est. $4,474 / room</h4>
+              <p>A step up in category and views — Est. $608 more per room than the Junior Suite. Use the room-tier control below to price your party against either.</p>
+            </div>
+          </div>
+
+          <div class="price-box">
+            <div class="pb-kicker">Package rate · all-in · per room</div>
+            <div class="pb-amount"><span class="pb-est">Est.</span> <span class="pb-figure">$3,866</span></div>
+            <div class="pb-pp"><span class="pb-pp-figure">Est. $1,933</span> per person · 2 adults</div>
+            <ul class="pb-includes">
+              <li>Round-trip Southwest flights (HOU ↔ SJD)</li>
+              <li>Round-trip airport transfers</li>
+              <li>6 nights, all-inclusive</li>
+              <li>Selected room tier (Junior or Luxury Suite)</li>
+            </ul>
+
+            <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+              <label class="tier-pick" style="flex:1; min-width:140px; text-align:center; border:1.5px solid var(--aqua-dark); border-radius:8px; padding:10px; font-size:13px; font-weight:600; color:var(--aqua-dark); cursor:pointer;">
+                <input type="radio" name="pb_tier" value="Junior Suite" checked style="position:absolute;opacity:0;" onclick="setTimeout(function(){setPBTier(false);},0)">
+                Junior Suite · $3,866
+              </label>
+              <label class="tier-pick" style="flex:1; min-width:140px; text-align:center; border:1.5px solid var(--aqua-dark); border-radius:8px; padding:10px; font-size:13px; font-weight:600; color:var(--aqua-dark); cursor:pointer;">
+                <input type="radio" name="pb_tier" value="Luxury Suite" style="position:absolute;opacity:0;" onclick="setTimeout(function(){setPBTier(true);},0)">
+                Luxury Suite · $4,474
+              </label>
+            </div>
+
+            <div class="pb-roomnote"><strong>Priced per room, 2 adults.</strong> Your party is two rooms — the second reservation mirrors this one. Toggle below to see your full two-room total.</div>
+            <div class="pay-split">
+            <div class="pay-cell">
+              <div class="pay-label">Deposit · due at booking</div>
+              <div class="pay-amount">Est. $1,561</div>
+              <div class="pay-per">per room</div>
+            </div>
+            <div class="pay-cell">
+              <div class="pay-label">Balance · due by July 6, 2026</div>
+              <div class="pay-amount">Est. $<span class="pb-balance">2,290</span></div>
+              <div class="pay-per">per room · <span class="pb-balance-tier">Junior Suite</span></div>
+            </div>
+          </div>
+          </div>
+
+          <div class="addons-line">
+            <div class="ad-head">Add-ons · for 20AUG26 to 26AUG26</div>
+            <div class="ad-row">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M5 17a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2M8 21h8"/><circle cx="7.5" cy="14.5" r="1"/></svg>
+              <span><strong>Transportation to &amp; from your hotel</strong> — Thursday, August 20, 2026 · <span class="ad-incl">Included with hotel</span></span>
+            </div>
+          </div>
+
+          <label class="room-toggle">
+            <input type="checkbox" class="second-room-toggle" onclick="setTimeout(updateTotal,0)">
+            <div class="rt-text"><strong>Add second room — 2 adults</strong><span>Mirrors this reservation for your full party of four.</span></div>
+          </label>
+
+          <div class="fee-callout">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <div class="fc-text"><strong>At-property fees:</strong> Approx. $14.06 per room, collected at the hotel (subject to exchange rate at check-in).</div>
+          </div>
+
+          <label class="select-pill">
+            <input type="radio" name="resort_select" value="Pueblo Bonito Rose Resort &amp; Spa" onclick="setTimeout(updateTotal,0)">
+            Select Pueblo Bonito Rose
+          </label>
+        </div>
+      </div>
+
+      <!-- ===== CARD 3: PARADISUS ===== -->
+      <div class="resort-card" data-perroom="4497" data-name="Paradisus Los Cabos — Junior Suite Ocean View">
+        <div class="rc-body">
+          <div class="rc-kicker">Option 3 · Adults Only · All-Inclusive · 5.0</div>
+          <h3 class="rc-name">Paradisus Los Cabos</h3>
+          <div class="rc-tagline">A quieter Corridor setting — Meliá's higher-end adults-only address, away from the marina noise.</div>
+
+          <!-- CAROUSEL PLACEHOLDER -->
+          <div class="carousel" data-carousel>
+            <button type="button" class="carousel-btn prev" aria-label="Previous">‹</button>
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/30000/24900/24807/aa37a4c1_z.jpg" alt="Paradisus Los Cabos — resort grounds" loading="lazy"><div class="slide-cap">Paradisus Los Cabos — resort grounds</div></div>
+<div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/30000/24900/24807/fb2cff3e_z.jpg" alt="Pool" loading="lazy"><div class="slide-cap">Pool</div></div>
+<div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/30000/24900/24807/4dc0db10_z.jpg" alt="Beach &amp; coastline" loading="lazy"><div class="slide-cap">Beach &amp; coastline</div></div>
+<div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/30000/24900/24807/5fef51da_z.jpg" alt="Junior Suite Ocean View" loading="lazy"><div class="slide-cap">Junior Suite Ocean View</div></div>
+<div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/30000/24900/24807/f62d1008_z.jpg" alt="Suite interior" loading="lazy"><div class="slide-cap">Suite interior</div></div>
+<div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/30000/24900/24807/7816070a_z.jpg" alt="Dining" loading="lazy"><div class="slide-cap">Dining</div></div>
+<div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/30000/24900/24807/d7823189_z.jpg" alt="Lounge &amp; bar" loading="lazy"><div class="slide-cap">Lounge &amp; bar</div></div>
+<div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/30000/24900/24807/4eb4fe5d_z.jpg" alt="Spa &amp; wellness" loading="lazy"><div class="slide-cap">Spa &amp; wellness</div></div>
+              <div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/30000/24900/24807/6955d2fe_z.jpg" alt="Paradisus Los Cabos" loading="lazy"><div class="slide-cap">Paradisus Los Cabos</div></div>
+              <div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/30000/24900/24807/11e5b5f9_z.jpg" alt="Paradisus Los Cabos" loading="lazy"><div class="slide-cap">Paradisus Los Cabos</div></div>
+              <div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/30000/24900/24807/02f29d62_z.jpg" alt="Paradisus Los Cabos" loading="lazy"><div class="slide-cap">Paradisus Los Cabos</div></div>
+              <div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/30000/24900/24807/f041412a_z.jpg" alt="Paradisus Los Cabos" loading="lazy"><div class="slide-cap">Paradisus Los Cabos</div></div>
+              <div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/30000/24900/24807/29caa358_z.jpg" alt="Paradisus Los Cabos" loading="lazy"><div class="slide-cap">Paradisus Los Cabos</div></div>
+              <div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/30000/24900/24807/48f5efb8_z.jpg" alt="Paradisus Los Cabos" loading="lazy"><div class="slide-cap">Paradisus Los Cabos</div></div>
+              <div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/30000/24900/24807/d0f9c4cb_z.jpg" alt="Paradisus Los Cabos" loading="lazy"><div class="slide-cap">Paradisus Los Cabos</div></div>
+              <div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/30000/24900/24807/92217956_z.jpg" alt="Paradisus Los Cabos" loading="lazy"><div class="slide-cap">Paradisus Los Cabos</div></div>
+              <div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/30000/24900/24807/7e2fa3b4_z.jpg" alt="Paradisus Los Cabos" loading="lazy"><div class="slide-cap">Paradisus Los Cabos</div></div>
+              <div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/30000/24900/24807/ef968e42_z.jpg" alt="Paradisus Los Cabos" loading="lazy"><div class="slide-cap">Paradisus Los Cabos</div></div>
+              <div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/30000/24900/24807/804dc048_z.jpg" alt="Paradisus Los Cabos" loading="lazy"><div class="slide-cap">Paradisus Los Cabos</div></div>
+              <div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/30000/24900/24807/e9d089dc_z.jpg" alt="Paradisus Los Cabos" loading="lazy"><div class="slide-cap">Paradisus Los Cabos</div></div>
+              <div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/30000/24900/24807/32f1c15f_z.jpg" alt="Paradisus Los Cabos" loading="lazy"><div class="slide-cap">Paradisus Los Cabos</div></div>
+              <div class="carousel-slide"><img src="https://i.travelapi.com/lodging/1000000/30000/24900/24807/c9533d1a_z.jpg" alt="Paradisus Los Cabos" loading="lazy"><div class="slide-cap">Paradisus Los Cabos</div></div>
+            </div>
+            <button type="button" class="carousel-btn next" aria-label="Next">›</button>
+          </div>
+          <div class="carousel-dots"><button type="button" class="carousel-dot active" aria-label="Image 1"></button><button type="button" class="carousel-dot" aria-label="Image 2"></button><button type="button" class="carousel-dot" aria-label="Image 3"></button><button type="button" class="carousel-dot" aria-label="Image 4"></button><button type="button" class="carousel-dot" aria-label="Image 5"></button><button type="button" class="carousel-dot" aria-label="Image 6"></button><button type="button" class="carousel-dot" aria-label="Image 7"></button><button type="button" class="carousel-dot" aria-label="Image 8"></button><button type="button" class="carousel-dot" aria-label="Image 9"></button><button type="button" class="carousel-dot" aria-label="Image 10"></button><button type="button" class="carousel-dot" aria-label="Image 11"></button><button type="button" class="carousel-dot" aria-label="Image 12"></button><button type="button" class="carousel-dot" aria-label="Image 13"></button><button type="button" class="carousel-dot" aria-label="Image 14"></button><button type="button" class="carousel-dot" aria-label="Image 15"></button><button type="button" class="carousel-dot" aria-label="Image 16"></button><button type="button" class="carousel-dot" aria-label="Image 17"></button><button type="button" class="carousel-dot" aria-label="Image 18"></button><button type="button" class="carousel-dot" aria-label="Image 19"></button><button type="button" class="carousel-dot" aria-label="Image 20"></button><button type="button" class="carousel-dot" aria-label="Image 21"></button><button type="button" class="carousel-dot" aria-label="Image 22"></button></div>
+
+          <p class="rc-copy">Paradisus Los Cabos sits on the Tourist Corridor — the stretch of coast between Cabo San Lucas and San José del Cabo — which trades walkable nightlife for calm, space, and a more resort-contained feel. It's Meliá's higher-tier adults-only brand: ocean-view suites, an emphasis on dining and spa, and a $200 resort credit plus luxury extras included on this rate.</p>
+
+          <div class="beach-block">
+            <div class="bb-head"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1C7 13 7 11 9.5 11c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1C7 19 7 17 9.5 17c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg><h4>The beach &amp; swimming</h4></div>
+            <p>Here's the surprise: Paradisus is on the Corridor near San José, where the open-ocean water is normally rough and unsafe to swim — but it sits on one of the rare protected exceptions. The resort has a genuinely swimmable beach with a <strong>designated swim zone and beach concierge</strong>, which is unusual for this side of the coast.</p>
+            <p>The trade vs. Médano: this is quieter, calmer, far less crowded swimming, away from the beach-club energy and vendors of Cabo San Lucas Bay — but you're a drive (not a walk) from downtown nightlife. For two travelers who want to swim in calm water without the Médano crowds, this is the standout.</p>
+            <div class="bb-season">A late-August note: Médano and the Corridor coves stay swimmable in summer, but May–September brings slightly bigger, more variable surf and falls in hurricane season. Cabo runs a green/yellow/red/black flag system on its patrolled beaches — worth a glance each morning before you wade in.</div>
+          </div>
+
+          <div class="amenity-grid">
+            <div class="amenity"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><div class="am-text"><strong>Adults only</strong><span>18+ resort</span></div></div>
+            <div class="amenity"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div class="am-text"><strong>Corridor-beach</strong><span>Between Cabo &amp; San José</span></div></div>
+            <div class="amenity"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18"/><path d="M12 2v9"/><path d="M5 11v10"/><path d="M19 11v10"/></svg><div class="am-text"><strong>Dining &amp; spa</strong><span>YHI Spa, à la carte dining</span></div></div>
+            <div class="amenity"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><div class="am-text"><strong>$200 resort credit</strong><span>Spa, F&amp;B, room upgrade</span></div></div>
+            <div class="amenity"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M2 12a10 10 0 0 1 20 0"/><path d="M6 12v6"/><path d="M18 12v6"/></svg><div class="am-text"><strong>Ocean-view suite</strong><span>Junior Suite, ocean view</span></div></div>
+            <div class="amenity"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M5 17a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2M8 21h8"/><circle cx="7.5" cy="14.5" r="1"/></svg><div class="am-text"><strong>Transfers</strong><span>Round-trip airport included</span></div></div>
+          </div>
+
+          <div class="room-block">
+            <h4>Two Junior Suite Ocean View rooms · 2 adults per room</h4>
+            <p>Ocean-view junior suites. Rate includes a $200 resort credit (spa, premium F&amp;B, room upgrade), a $50 spa credit per room, welcome amenity, and 25% spa discount.</p>
+          </div>
+
+          <div class="price-box">
+            <div class="pb-kicker">Package rate · all-in · per room</div>
+            <div class="pb-amount"><span class="pb-est">Est.</span> $4,497</div>
+            <div class="pb-pp">Est. $2,248 per person · 2 adults</div>
+            <ul class="pb-includes">
+              <li>Round-trip Southwest flights (HOU ↔ SJD)</li>
+              <li>Round-trip airport transfers</li>
+              <li>6 nights, Junior Suite Ocean View</li>
+              <li>All-inclusive + $200 resort credit</li>
+              <li>$50 spa credit + welcome amenity</li>
+            </ul>
+            <div class="pb-roomnote"><strong>Priced per room, 2 adults.</strong> Your party is two rooms — the second reservation mirrors this one. Toggle below to see your full two-room total.</div>
+            <div class="pay-split">
+            <div class="pay-cell">
+              <div class="pay-label">Deposit · due at booking</div>
+              <div class="pay-amount">Est. $1,561</div>
+              <div class="pay-per">per room</div>
+            </div>
+            <div class="pay-cell">
+              <div class="pay-label">Balance · due by July 6, 2026</div>
+              <div class="pay-amount">Est. $2,906</div>
+              <div class="pay-per">per room</div>
+            </div>
+          </div>
+          </div>
+
+          <div class="addons-line">
+            <div class="ad-head">Add-ons · for 20AUG26 to 26AUG26</div>
+            <div class="ad-row">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M5 17a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2M8 21h8"/><circle cx="7.5" cy="14.5" r="1"/></svg>
+              <span><strong>Transportation to &amp; from your hotel</strong> — Thursday, August 20, 2026 · <span class="ad-incl">Included with hotel</span></span>
+            </div>
+          </div>
+
+          <label class="room-toggle">
+            <input type="checkbox" class="second-room-toggle" onclick="setTimeout(updateTotal,0)">
+            <div class="rt-text"><strong>Add second room — 2 adults</strong><span>Mirrors this reservation for your full party of four. Updates the total to Est. $8,994.</span></div>
+          </label>
+
+          <div class="fee-callout">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <div class="fc-text"><strong>At-property fees:</strong> Approx. $30.40 per room pay-in-destination, plus an Environmental Sanitation Tax of approx. $4.60 USD per room per night (about $27.60 for 6 nights), collected at the hotel. Both subject to exchange rate at check-in.</div>
+          </div>
+
+          <label class="select-pill">
+            <input type="radio" name="resort_select" value="Paradisus Los Cabos — Junior Suite Ocean View" onclick="setTimeout(updateTotal,0)">
+            Select Paradisus Los Cabos
+          </label>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</section>
+
+<!-- ===================== NOTES ===================== -->
+<section class="section" style="background:var(--aqua-mist);">
+  <div class="wrap notes-area">
+    <div class="sec-head"><h2>Notes &amp; requests</h2></div>
+    <div class="sec-sub">Anything you'd like me to know — bedding, dietary needs, a celebration, different flight times.</div>
+    <textarea id="notes_input" placeholder="Tell me what matters for this trip..."></textarea>
+  </div>
+</section>
+
+<!-- ===================== FORM ===================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head" style="text-align:center;"><h2>Send me your pick</h2></div>
+    <div class="sec-sub" style="text-align:center;">Select a resort above, then leave your details and I'll lock in next steps.</div>
+
+    <div class="form-wrap">
+      <div id="formInner">
+        <div class="field">
+          <label class="field-label">Name</label>
+          <input type="text" name="Name" form="tripForm" required autocomplete="name" autocapitalize="words">
+        </div>
+        <div class="field">
+          <label class="field-label">Email</label>
+          <input type="email" name="Email" form="tripForm" required autocomplete="email" inputmode="email" autocapitalize="off" autocorrect="off">
+        </div>
+        <div class="field">
+          <label class="field-label">Phone</label>
+          <input type="tel" name="Phone" form="tripForm" autocomplete="tel" inputmode="tel">
+        </div>
+
+        <div class="insurance-block">
+          <div class="ins-q">Travel insurance</div>
+          <label class="ins-option">
+            <input type="radio" name="Insurance_Choice" form="tripForm" value="Yes — please send me a travel insurance quote" required>
+            Yes, please send me a travel insurance quote
+          </label>
+          <label class="ins-option">
+            <input type="radio" name="Insurance_Choice" form="tripForm" value="No — I decline travel insurance and accept the risks of traveling without coverage" required>
+            No, I decline insurance and understand the risks
+          </label>
+        </div>
+
+        <button type="submit" form="tripForm" class="submit-btn">Send my selections</button>
+      </div>
+
+      <div class="thanks-msg" id="thanksMsg">
+        <h3>Got it — thank you.</h3>
+        <p>Your selections are on their way to Christina. I'll be in touch shortly to confirm pricing and next steps.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RUNNING TOTAL BAR ===================== -->
+<div class="total-bar">
+  <div class="total-bar-inner">
+    <div class="tb-label">Your running estimate<span id="tb_config">No resort selected yet</span></div>
+    <div class="tb-amount" id="tb_amount">Est. $0<span id="tb_pp">Select an option above</span></div>
+  </div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="ft-name">Christina Garcia</div>
+  <div class="ft-role">Owner &amp; Travel Advisor · Point Me to Paradise Travel</div>
+  <div class="ft-contact"><a id="emailLink" href="#">email</a></div>
+  <div class="ft-contact">(281) 229-0862</div>
+  <div class="ft-hairline"></div>
+  <p class="ft-disclosure">Individual hotels, transfers, and tours in your quote are priced at publicly available rates — and in many cases lower than what you'd find on your own. You don't have to worry about overpaying for a piece of your trip. What you're paying for is the rest: the right rooms at the right property, operators we've used for years, the trip app, and a human who answers when something doesn't go to plan.</p>
+</footer>
+
+<script>
+// ----- Email assembly (Cloudflare) -----
+(function(){
+  var addr = 'Christina' + '@' + 'PointMeToParadise.com';
+  var el = document.getElementById('emailLink');
+  el.href = 'mailto:' + addr;
+  el.textContent = addr;
+})();
+
+// ----- Pueblo Bonito tier switch -----
+function setPBTier(isLuxury){
+  var card = document.querySelector('.resort-card[data-perroom-upgrade]');
+  if(!card) return;
+  var base = parseInt(card.getAttribute('data-perroom'),10);
+  var up = parseInt(card.getAttribute('data-perroom-upgrade'),10);
+  var active = isLuxury ? up : base;
+  card.setAttribute('data-active', active);
+  var fig = card.querySelector('.pb-figure');
+  var ppfig = card.querySelector('.pb-pp-figure');
+  if(fig) fig.textContent = '$' + active.toLocaleString();
+  if(ppfig) ppfig.textContent = 'Est. $' + Math.round(active/2).toLocaleString();
+  // tier-responsive balance (full payment minus $1,561 deposit)
+  var bal = isLuxury ? '2,899' : '2,290';
+  var balEl = card.querySelector('.pb-balance');
+  var balTierEl = card.querySelector('.pb-balance-tier');
+  if(balEl) balEl.textContent = bal;
+  if(balTierEl) balTierEl.textContent = isLuxury ? 'Luxury Suite' : 'Junior Suite';
+  updateTotal();
+}
+
+// ----- Running total -----
+function updateTotal(){
+  var selected = document.querySelector('input[name="resort_select"]:checked');
+  var amountEl = document.getElementById('tb_amount');
+  var ppEl = document.getElementById('tb_pp');
+  var cfgEl = document.getElementById('tb_config');
+
+  if(!selected){
+    amountEl.childNodes[0].nodeValue = 'Est. $0';
+    ppEl.textContent = 'Select an option above';
+    cfgEl.textContent = 'No resort selected yet';
+    document.getElementById('hidden_resort').value = '';
+    document.getElementById('hidden_total').value = '';
+    document.getElementById('hidden_rooms').value = '';
+    return;
+  }
+
+  var card = selected.closest('.resort-card');
+  var perRoom;
+  if(card.hasAttribute('data-perroom-upgrade')){
+    perRoom = parseInt(card.getAttribute('data-active') || card.getAttribute('data-perroom'),10);
+  } else {
+    perRoom = parseInt(card.getAttribute('data-perroom'),10);
+  }
+
+  var secondRoom = card.querySelector('.second-room-toggle');
+  var rooms = (secondRoom && secondRoom.checked) ? 2 : 1;
+  var total = perRoom * rooms;
+
+  amountEl.childNodes[0].nodeValue = 'Est. $' + total.toLocaleString();
+  ppEl.textContent = 'Est. $' + Math.round(total/(rooms*2)).toLocaleString() + ' per person · ' + (rooms*2) + ' adults';
+  cfgEl.textContent = selected.value + ' · ' + rooms + ' room' + (rooms>1?'s':'');
+
+  // tier label for PB
+  var tierLabel = '';
+  if(card.hasAttribute('data-perroom-upgrade')){
+    var tier = card.querySelector('input[name="pb_tier"]:checked');
+    if(tier) tierLabel = ' · ' + tier.value;
+  }
+
+  document.getElementById('hidden_resort').value = selected.value + tierLabel;
+  document.getElementById('hidden_total').value = 'Est. $' + total.toLocaleString() + ' (' + rooms + ' room' + (rooms>1?'s':'') + ')';
+  document.getElementById('hidden_rooms').value = rooms + ' room' + (rooms>1?'s':'') + ', ' + (rooms*2) + ' adults';
+}
+
+// ----- Only one second-room toggle / tier interaction visually active per selection -----
+document.querySelectorAll('input[name="resort_select"]').forEach(function(r){
+  r.addEventListener('change', updateTotal);
+});
+
+// ----- Carousel engine -----
+function initCarousel(root){
+  var track = root.querySelector('.carousel-track');
+  if(!track) return; // placeholder only, no images yet
+  var slides = track.querySelectorAll('.carousel-slide');
+  if(slides.length <= 1){
+    var pb = root.querySelector('.prev'), nb = root.querySelector('.next');
+    if(pb) pb.style.display='none';
+    if(nb) nb.style.display='none';
+  }
+  var idx = 0;
+  var dotsWrap = root.parentNode.querySelector('.carousel-dots');
+  function go(i){
+    idx = (i + slides.length) % slides.length;
+    track.style.transform = 'translateX(-' + (idx*100) + '%)';
+    if(dotsWrap){
+      dotsWrap.querySelectorAll('.carousel-dot').forEach(function(d,di){
+        d.classList.toggle('active', di===idx);
+      });
+    }
+  }
+  var prev = root.querySelector('.prev'), next = root.querySelector('.next');
+  if(prev) prev.addEventListener('click', function(){ go(idx-1); });
+  if(next) next.addEventListener('click', function(){ go(idx+1); });
+  if(dotsWrap){
+    dotsWrap.querySelectorAll('.carousel-dot').forEach(function(d,di){
+      d.addEventListener('click', function(){ go(di); });
+    });
+  }
+  go(0);
+}
+document.querySelectorAll('[data-carousel]').forEach(initCarousel);
+
+// ----- Form submit (Web3Forms) -----
+document.getElementById('tripForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  document.getElementById('hidden_notes').value = document.getElementById('notes_input').value;
+  updateTotal();
+
+  var form = e.target;
+  var data = new FormData(form);
+
+  fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    body: data
+  })
+  .then(function(res){ return res.json(); })
+  .then(function(json){
+    if(json.success){
+      document.getElementById('formInner').style.display = 'none';
+      document.getElementById('thanksMsg').classList.add('show');
+      document.getElementById('thanksMsg').scrollIntoView({behavior:'smooth', block:'center'});
+    } else {
+      alert('Something went wrong. Please email Christina directly or text (281) 229-0862.');
+    }
+  })
+  .catch(function(){
+    alert('Something went wrong. Please email Christina directly or text (281) 229-0862.');
+  });
+});
+
+// init
+updateTotal();
+</script>
+</body>
+</html>
