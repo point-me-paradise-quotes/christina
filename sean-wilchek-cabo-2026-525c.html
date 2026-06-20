@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>Cabo San Lucas · Prepared for the Wilcheks · Point Me to Paradise Travel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --aqua-pale: #C4E4E1;
+  --aqua-mist: #EAF3F2;
+  --aqua: #75AFB1;
+  --aqua-dark: #4F8A8C;
+  --sand: #ECE7DC;
+  --sand-light: #F4F1E9;
+  --gold-whisper: #D6C8A8;
+  --white: #FFFFFF;
+  --paper: #FBFDFD;
+  --ink: #2B2420;
+  --ink-soft: #6B6359;
+  --line: #E5E9E8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 500; line-height: 1.2; color: var(--ink); }
+
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+.kicker {
+  font-family: 'DM Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--aqua-dark);
+}
+
+.italic-accent { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--ink-soft); }
+
+.hairline { width: 60px; height: 1px; background: var(--gold-whisper); border: none; margin: 22px auto; }
+
+/* ---------- HERO (Variant B cover-page, photo drop-in later) ---------- */
+.hero {
+  position: relative;
+  /* Header photo approved by Christina as a per-project override (cdn.sanity.io).
+     Aqua-haze gradient stack kept intact so the hero fades into --paper. */
+  background:
+    linear-gradient(180deg,
+      rgba(255,255,255,0.55) 0%,
+      rgba(196,228,225,0.72) 38%,
+      rgba(234,243,242,0.88) 75%,
+      rgba(251,253,253,0.98) 100%),
+    url('https://cdn.sanity.io/images/esqfj3od/production/55072b334d19a553bb695bf2d104447de474144c-1080x720.webp?w=3840&q=65&fit=clip&auto=format');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 96px 24px 80px;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+}
+.hero .brandmark {
+  font-family: 'DM Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.26em;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--aqua-dark);
+}
+.hero h1 { font-size: clamp(40px, 6vw, 64px); margin-top: 18px; }
+.hero .subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--ink);
+  font-size: clamp(19px, 2.2vw, 24px);
+  max-width: 620px;
+  margin: 0 auto;
+}
+.hero .signature {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--ink-soft);
+  margin-top: 28px;
+}
+
+/* ---------- OVERVIEW STRIP ---------- */
+.overview {
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+  padding: 36px 24px;
+}
+.overview-grid {
+  max-width: 1080px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+}
+.ov-item { text-align: center; }
+.ov-item svg { color: var(--aqua-dark); margin-bottom: 8px; }
+.ov-label { text-transform: uppercase; letter-spacing: 0.14em; font-size: 11px; color: var(--ink-soft); font-weight: 600; }
+.ov-value { font-family: 'Playfair Display', serif; font-size: 18px; margin-top: 2px; }
+
+/* ---------- VALUE STRIP ---------- */
+.value-strip { background: var(--sand-light); padding: 56px 24px; }
+.value-head { text-align: center; margin-bottom: 40px; }
+.value-head h2 { font-size: 32px; }
+.value-head .sub { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--ink-soft); font-size: 18px; margin-top: 6px; }
+.value-grid {
+  max-width: 1000px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+}
+.value-col { padding: 0 28px; text-align: center; position: relative; }
+.value-col + .value-col::before {
+  content: ""; position: absolute; left: 0; top: 8px; bottom: 8px; width: 1px; background: var(--gold-whisper);
+}
+.value-col svg { color: var(--aqua-dark); margin-bottom: 14px; }
+.value-col h3 { font-size: 21px; margin-bottom: 10px; }
+.value-col p { font-size: 14px; color: var(--ink-soft); line-height: 1.65; }
+
+/* ---------- SECTIONS ---------- */
+.section { padding: 56px 24px; }
+.section.alt { background: var(--aqua-mist); }
+.section-head { max-width: 1080px; margin: 0 auto 8px; }
+.section-head h2 { font-size: 30px; }
+.section-head .subhead {
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  color: var(--ink-soft); font-size: 18px; margin-top: 4px;
+}
+.intro-copy { max-width: 720px; margin: 0 auto; font-size: 16px; }
+.intro-copy p { margin-bottom: 14px; }
+
+/* decorative heading flanks */
+.flanked { display: flex; align-items: center; justify-content: center; gap: 16px; }
+.flanked svg { color: var(--aqua-dark); opacity: 0.65; flex-shrink: 0; }
+
+/* ---------- FLIGHTS ---------- */
+.flights-wrap { max-width: 880px; margin: 28px auto 0; }
+.flight-note {
+  background: var(--sand-light); border-left: 3px solid var(--aqua-dark);
+  padding: 16px 20px; font-size: 14px; color: var(--ink-soft);
+  margin-bottom: 28px; line-height: 1.7;
+}
+.flight-card {
+  background: var(--white); border: 1px solid var(--line);
+  border-radius: 6px; padding: 26px; margin-bottom: 18px;
+}
+.flight-card.lead { border: 2px solid var(--aqua-dark); }
+.flight-card-head {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  flex-wrap: wrap; gap: 12px; margin-bottom: 18px;
+}
+.flight-airline { display: flex; align-items: center; gap: 10px; }
+.flight-airline svg { color: var(--aqua-dark); }
+.flight-airline .name { font-family: 'Playfair Display', serif; font-size: 20px; }
+.flight-tag {
+  background: var(--aqua-dark); color: var(--white);
+  padding: 4px 10px; border-radius: 3px; letter-spacing: 0.14em;
+  font-size: 10px; font-weight: 600; text-transform: uppercase;
+  align-self: center;
+}
+.flight-tag.alt { background: var(--white); color: var(--aqua-dark); border: 1px solid var(--aqua-dark); }
+.leg { display: flex; align-items: center; gap: 16px; padding: 12px 0; border-top: 1px solid var(--line); }
+.leg:first-of-type { border-top: none; }
+.leg-icon svg { color: var(--aqua-dark); }
+.leg-times { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.leg-time { font-family: 'Playfair Display', serif; font-size: 17px; }
+.leg-arrow { color: var(--aqua); }
+.leg-meta { font-size: 13px; color: var(--ink-soft); }
+.leg-date { font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-soft); font-weight: 600; min-width: 70px; }
+.flight-price-row {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--line); flex-wrap: wrap; gap: 8px;
+}
+.flight-price { font-family: 'Playfair Display', serif; font-size: 20px; }
+.flight-price small { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--ink-soft); font-weight: 400; }
+.flight-fare { font-size: 13px; color: var(--ink-soft); }
+.flight-switch { font-size: 13px; color: var(--aqua-dark); font-weight: 500; }
+
+/* ---------- RESORT CARDS ---------- */
+.resort-card {
+  background: var(--white); border: 1px solid var(--line);
+  border-radius: 8px; overflow: hidden; margin-bottom: 36px; max-width: 1080px; margin-left: auto; margin-right: auto;
+}
+.resort-card.card-feature { border: 2px solid var(--aqua-dark); }
+.card-body { padding: 30px; }
+.card-kicker { font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--ink-soft); font-weight: 600; margin-bottom: 6px; }
+.card-tag {
+  display: inline-block; background: var(--aqua-dark); color: var(--white);
+  padding: 4px 10px; border-radius: 3px; letter-spacing: 0.14em;
+  font-size: 10px; font-weight: 600; margin-bottom: 12px;
+}
+.card-title { font-size: 28px; }
+.card-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--ink-soft); font-size: 18px; margin-bottom: 18px; }
+.card-copy p { font-size: 15px; margin-bottom: 12px; }
+
+/* ---------- CAROUSEL ---------- */
+.carousel { position: relative; width: 100%; background: var(--aqua-mist); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); overflow: hidden; }
+.carousel-track { display: flex; transition: transform 0.4s ease; }
+.carousel-slide {
+  min-width: 100%; height: 340px;
+  background-size: cover; background-position: center; background-repeat: no-repeat;
+  display: flex; align-items: flex-end; justify-content: center;
+}
+/* placeholder visual until real images dropped in */
+.carousel-slide.placeholder {
+  background: repeating-linear-gradient(45deg, var(--aqua-mist), var(--aqua-mist) 14px, var(--white) 14px, var(--white) 28px);
+}
+.carousel-slide .ph-label {
+  font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--ink-soft);
+  background: rgba(255,255,255,0.82); padding: 6px 14px; border-radius: 4px; margin-bottom: 16px; font-size: 14px;
+}
+.carousel-btn {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(255,255,255,0.9); border: 1px solid var(--line);
+  width: 40px; height: 40px; border-radius: 50%; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; color: var(--aqua-dark);
+  z-index: 2;
+}
+.carousel-btn:hover { background: var(--white); }
+.carousel-btn.prev { left: 14px; }
+.carousel-btn.next { right: 14px; }
+.carousel-dots { position: absolute; bottom: 14px; left: 0; right: 0; display: flex; justify-content: center; gap: 8px; z-index: 2; }
+.carousel-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.6); border: 1px solid var(--aqua-dark); cursor: pointer; padding: 0; }
+.carousel-dot.active { background: var(--aqua-dark); }
+
+/* ---------- AMENITY GRID ---------- */
+.amenity-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 28px; margin: 22px 0; }
+.amenity-item { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; }
+.amenity-item svg { color: var(--aqua-dark); flex-shrink: 0; margin-top: 2px; }
+
+/* ---------- ROOM TIERS ---------- */
+.rooms-head { font-family: 'Playfair Display', serif; font-size: 20px; margin: 24px 0 4px; }
+.rooms-sub { font-size: 13px; color: var(--ink-soft); margin-bottom: 16px; }
+.room-row {
+  display: flex; align-items: center; gap: 14px;
+  border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; margin-bottom: 10px;
+  cursor: pointer; transition: border-color 0.15s, background 0.15s; background: var(--white);
+}
+.room-row:has(input:checked) { border-color: var(--aqua-dark); background: var(--aqua-mist); }
+.room-radio {
+  width: 20px; height: 20px; border: 1.6px solid var(--aqua-dark); border-radius: 50%;
+  flex-shrink: 0; position: relative; appearance: none; -webkit-appearance: none; cursor: pointer; margin: 0;
+}
+.room-radio:checked { background: var(--aqua-dark); box-shadow: inset 0 0 0 3px var(--white); }
+.room-info { flex: 1; min-width: 0; }
+.room-name { font-weight: 600; font-size: 15px; }
+.room-detail { font-size: 12.5px; color: var(--ink-soft); line-height: 1.5; }
+.room-price { text-align: right; flex-shrink: 0; }
+.room-price .amt { font-family: 'Playfair Display', serif; font-size: 17px; }
+.room-price .delta { font-size: 12px; color: var(--aqua-dark); font-weight: 500; }
+.room-price .pp { font-size: 11px; color: var(--ink-soft); }
+
+/* ---------- PACKAGE BOX ---------- */
+.package-box { background: var(--aqua-pale); border-radius: 8px; padding: 24px; margin-top: 22px; }
+.package-box .pk-kicker { text-transform: uppercase; letter-spacing: 0.14em; font-size: 11px; color: var(--aqua-dark); font-weight: 600; }
+.package-box .pk-amount { font-family: 'Playfair Display', serif; font-size: 32px; margin: 4px 0 2px; }
+.package-box .pk-pp { font-size: 14px; color: var(--ink-soft); }
+.package-box .pk-includes { margin-top: 16px; }
+.package-box .pk-includes li { list-style: none; display: flex; align-items: flex-start; gap: 8px; font-size: 13.5px; margin-bottom: 7px; }
+.package-box .pk-includes svg { color: var(--aqua-dark); flex-shrink: 0; margin-top: 2px; }
+.package-box .pk-fine { font-size: 12px; color: var(--ink-soft); margin-top: 14px; line-height: 1.6; }
+.package-box .pk-schedule {
+  margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(79,138,140,0.25);
+  display: flex; flex-wrap: wrap; gap: 4px 20px; font-size: 13px;
+}
+.package-box .pk-schedule .sch-item { color: var(--ink); }
+.package-box .pk-schedule .sch-item strong { font-family: 'Playfair Display', serif; font-weight: 500; }
+.package-box .pk-schedule .sch-label { color: var(--ink-soft); }
+.provisional-flag { font-size: 11.5px; color: var(--aqua-dark); font-weight: 500; margin-top: 8px; font-style: italic; }
+
+/* select-card radio */
+.card-select { margin-top: 22px; }
+.card-select label {
+  display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+  border: 1.6px solid var(--aqua-dark); border-radius: 30px; padding: 11px 24px;
+  font-weight: 500; font-size: 15px; color: var(--aqua-dark); min-height: 48px; transition: all 0.15s;
+}
+.card-select input { display: none; }
+.card-select label:has(input:checked) { background: var(--aqua-dark); color: var(--white); }
+.card-select .check-icon { display: none; }
+.card-select label:has(input:checked) .check-icon { display: inline-flex; }
+
+/* ---------- NOTES ---------- */
+.notes-wrap { max-width: 720px; margin: 0 auto; }
+textarea, input[type="text"], input[type="email"], input[type="tel"] {
+  width: 100%; font-family: 'DM Sans', sans-serif; font-size: 16px;
+  padding: 13px 15px; border: 1px solid var(--line); border-radius: 6px;
+  background: var(--white); color: var(--ink); margin-top: 6px;
+}
+textarea { min-height: 110px; resize: vertical; }
+label.field-label { font-size: 14px; font-weight: 500; display: block; margin-top: 16px; }
+
+/* ---------- RUNNING TOTAL BAR ---------- */
+.total-bar {
+  position: sticky; bottom: 0; z-index: 30;
+  background: var(--aqua-pale); border-top: 1px solid var(--aqua);
+  padding: 12px 24px;
+}
+.total-bar-inner {
+  max-width: 1080px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+}
+.total-bar .tb-label { font-size: 13px; color: var(--ink); font-weight: 500; }
+.total-bar .tb-label span { color: var(--aqua-dark); }
+.total-bar .tb-amount { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--ink); }
+.total-bar .tb-pp { font-size: 12px; color: var(--ink-soft); }
+
+/* ---------- FORM ---------- */
+.form-section { background: var(--aqua-mist); padding: 56px 24px; }
+.form-card { max-width: 640px; margin: 0 auto; background: var(--white); border: 1px solid var(--line); border-radius: 8px; padding: 34px; }
+.insurance-group { margin-top: 20px; }
+.form-summary { background: var(--aqua-mist); border-radius: 8px; padding: 18px 20px; margin-top: 22px; }
+.form-summary .fs-label { text-transform: uppercase; letter-spacing: 0.14em; font-size: 10px; color: var(--aqua-dark); font-weight: 600; }
+.form-summary .fs-line { font-size: 14px; margin-top: 4px; }
+.form-summary .fs-total { font-family: 'Playfair Display', serif; font-size: 24px; margin-top: 8px; }
+.form-summary .fs-pp { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--ink-soft); }
+.form-summary .fs-sched { font-size: 13px; color: var(--ink); margin-top: 4px; }
+.form-summary .fs-note { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 14px; color: var(--ink-soft); margin-top: 6px; }
+.insurance-group .ig-title { font-size: 14px; font-weight: 600; margin-bottom: 10px; }
+.insurance-opt { display: flex; align-items: flex-start; gap: 10px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 6px; margin-bottom: 10px; cursor: pointer; font-size: 14px; min-height: 48px; }
+.insurance-opt:has(input:checked) { border-color: var(--aqua-dark); background: var(--aqua-mist); }
+.insurance-opt input { margin-top: 3px; width: 18px; height: 18px; accent-color: var(--aqua-dark); flex-shrink: 0; }
+.submit-btn {
+  width: 100%; margin-top: 24px; background: var(--aqua-dark); color: var(--white);
+  border: none; border-radius: 30px; padding: 16px; font-family: 'DM Sans', sans-serif;
+  font-size: 16px; font-weight: 600; cursor: pointer; min-height: 52px;
+}
+.submit-btn:hover { background: #437476; }
+.thanks-msg { display: none; text-align: center; padding: 20px; }
+.thanks-msg.show { display: block; }
+.thanks-msg h3 { font-size: 24px; margin-bottom: 8px; }
+.thanks-msg p { color: var(--ink-soft); }
+
+/* ---------- FOOTER ---------- */
+.footer { background: var(--sand-light); padding: 48px 24px; border-top: 1px solid var(--line); }
+.footer-inner { max-width: 720px; margin: 0 auto; text-align: center; }
+.footer .f-name { font-family: 'Playfair Display', serif; font-size: 22px; }
+.footer .f-contact { font-size: 15px; margin-top: 8px; }
+.footer .f-contact a { color: var(--aqua-dark); text-decoration: none; }
+.footer .f-disclosure { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 15px; color: var(--ink-soft); margin-top: 24px; line-height: 1.7; }
+.footer .f-rate { font-size: 13px; color: var(--ink-soft); margin-top: 18px; line-height: 1.7; }
+
+/* ---------- AIR SELECTOR ---------- */
+.air-select-wrap { max-width: 880px; margin: 0 auto; }
+.air-select-intro { text-align: center; font-size: 15px; color: var(--ink); margin-bottom: 4px; }
+.air-deposit-note {
+  text-align: center; font-family: 'Cormorant Garamond', serif; font-style: italic;
+  color: var(--ink-soft); font-size: 16px; margin-bottom: 22px;
+}
+.air-toggle { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 8px; }
+.air-option {
+  position: relative; background: var(--white); border: 1.6px solid var(--line);
+  border-radius: 10px; padding: 22px; cursor: pointer; transition: border-color 0.15s, background 0.15s;
+}
+.air-option:has(input:checked) { border-color: var(--aqua-dark); background: var(--aqua-mist); }
+.air-option input { position: absolute; opacity: 0; pointer-events: none; }
+.air-option-head { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+.air-option-head svg { color: var(--aqua-dark); }
+.air-option-name { font-family: 'Playfair Display', serif; font-size: 19px; }
+.air-option-airport { font-size: 13px; color: var(--ink-soft); }
+.air-option-deposit { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 13px; }
+.air-option-deposit strong { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--ink); font-weight: 500; }
+.air-check {
+  position: absolute; top: 18px; right: 18px; width: 22px; height: 22px; border-radius: 50%;
+  border: 1.6px solid var(--aqua-dark); display: flex; align-items: center; justify-content: center; color: var(--white);
+}
+.air-option:has(input:checked) .air-check { background: var(--aqua-dark); }
+.air-check svg { display: none; }
+.air-option:has(input:checked) .air-check svg { display: block; }
+
+/* ---------- HOW TO CHOOSE BLOCK ---------- */
+.choose-block { max-width: 1080px; margin: 32px auto 8px; }
+.choose-intro { max-width: 860px; margin: 0 auto 28px; }
+.choose-intro p { font-size: 16px; color: var(--ink); }
+.choose-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-bottom: 28px; }
+.choose-card { background: var(--white); border: 1px solid var(--line); border-radius: 8px; padding: 22px; }
+.choose-card.feature { border: 2px solid var(--aqua-dark); }
+.choose-name { font-family: 'Playfair Display', serif; font-size: 20px; }
+.choose-tag { font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--aqua-dark); font-weight: 600; margin: 4px 0 12px; }
+.choose-pro, .choose-con { font-size: 14px; margin-bottom: 8px; line-height: 1.6; }
+.choose-pro strong, .choose-con strong { color: var(--ink); }
+.choose-con { color: var(--ink-soft); }
+.choose-verdict { background: var(--aqua-mist); border-radius: 8px; padding: 24px 26px; margin-bottom: 18px; }
+.choose-verdict-label { text-transform: uppercase; letter-spacing: 0.14em; font-size: 11px; color: var(--aqua-dark); font-weight: 600; margin-bottom: 8px; }
+.choose-verdict p { font-size: 15px; line-height: 1.7; }
+.choose-footnote { text-align: center; font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--ink-soft); font-size: 16px; margin-bottom: 8px; }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .overview-grid { grid-template-columns: repeat(2, 1fr); gap: 24px 16px; }
+  .choose-grid { grid-template-columns: 1fr; }
+  .air-toggle { grid-template-columns: 1fr; }
+  .value-grid { grid-template-columns: 1fr; gap: 0; }
+  .value-col { padding: 24px 16px; }
+  .value-col + .value-col::before { display: none; }
+  .value-col + .value-col { border-top: 1px solid var(--gold-whisper); }
+  .amenity-grid { grid-template-columns: 1fr; }
+  .carousel-slide { height: 240px; }
+  .card-body { padding: 22px; }
+  .room-row { flex-wrap: wrap; }
+  .room-price { text-align: left; width: 100%; padding-left: 34px; }
+  .total-bar-inner { flex-direction: column; align-items: flex-start; gap: 2px; }
+  .leg { flex-wrap: wrap; }
+  .leg-date { min-width: auto; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HERO (Variant B, photo drop-in later) ============ -->
+<header class="hero">
+  <div class="brandmark">Point Me to Paradise Travel</div>
+  <h1>Cabo San Lucas</h1>
+  <hr class="hairline">
+  <p class="subtitle">A week on Médano Beach for the Black &amp; Blue — four all-inclusives walkable to the marina, two ways to fly down.</p>
+  <p class="signature">Prepared by Christina Garcia</p>
+</header>
+
+<!-- ============ OVERVIEW STRIP ============ -->
+<section class="overview">
+  <div class="overview-grid">
+    <div class="ov-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><path d="M2 21v-2a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v2"/><circle cx="17" cy="7" r="2.2"/><path d="M22 21v-1.5a4 4 0 0 0-3-3.8"/></svg>
+      <div class="ov-label">Travelers</div>
+      <div class="ov-value">2 adults</div>
+    </div>
+    <div class="ov-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13"/><path d="M3 21h18"/><rect x="9" y="13" width="6" height="8"/></svg>
+      <div class="ov-label">Rooms</div>
+      <div class="ov-value">1 room</div>
+    </div>
+    <div class="ov-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+      <div class="ov-label">Region</div>
+      <div class="ov-value">Cabo San Lucas</div>
+    </div>
+    <div class="ov-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5a2.1 2.1 0 0 0-3-3L13 8 4.8 6.2a.5.5 0 0 0-.5.8L8 11l-2 2-2-.5a.5.5 0 0 0-.5.8L6 16l2.7 2.5a.5.5 0 0 0 .8-.5L9 16l2-2 3.2 3.7a.5.5 0 0 0 .8-.5z"/></svg>
+      <div class="ov-label">Flying from</div>
+      <div class="ov-value">Houston</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VALUE STRIP ============ -->
+<section class="value-strip">
+  <div class="value-head">
+    <h2>Beyond the booking</h2>
+    <p class="sub">What's included with every Point Me to Paradise trip</p>
+  </div>
+  <div class="value-grid">
+    <div class="value-col">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v16a1 1 0 0 0 1 1h15"/><path d="M8 4v13"/><path d="M12 8h5M12 12h5"/><path d="M8 4a3 3 0 0 1 3 3v10"/></svg>
+      <h3>The Trip Guide</h3>
+      <p>A document built for your week — restaurants we'd return to, neighborhoods worth the walk, what to skip, the places open on a Sunday. Not pulled from a database. Researched against where you're staying and what you've told us matters.</p>
+    </div>
+    <div class="value-col">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>
+      <h3>The Trip App</h3>
+      <p>Itinerary, confirmation numbers, transfer windows, and ground contacts in one place — accessible offline, updated in real time. If a flight shifts or weather moves, the app moves with it.</p>
+    </div>
+    <div class="value-col">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6z"/><path d="m9 12 2 2 4-4"/></svg>
+      <h3>Best-Rate Assurance</h3>
+      <p>Every hotel night, cruise rate, and tour in your quote is priced at publicly available rates. If you find the same component for less elsewhere, we'll match it — you don't have to wonder whether you're overpaying for a piece of your trip.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTRO ============ -->
+<section class="section">
+  <div class="section-head" style="text-align:center;">
+    <h2>The week at a glance</h2>
+    <p class="subhead">Sunday to Sunday, timed to the Bisbee Black &amp; Blue — a base near the marina and the boats.</p>
+  </div>
+  <div class="intro-copy" style="margin-top:24px;">
+    <p>Seven nights in Cabo San Lucas, October 18–25 — the heart of the Black &amp; Blue tournament week. All four resorts below sit in Cabo San Lucas, a short cab or bus ride from the marina, so you're close to the weigh-ins and the night scene without a long corridor drive each morning.</p>
+    <p>Pricing here is built for <strong>two adults in one room</strong>, as complete packages — flights, airport transfers, and 7 nights all-inclusive in one number. If you'd like to bring the second couple, I can quote a matching second room — just note it in the form below or text me, and I'll fold it in.</p>
+  </div>
+</section>
+
+<!-- ============ FLIGHTS / AIR SELECTOR ============ -->
+<section class="section alt">
+  <div class="section-head" style="text-align:center;">
+    <div class="flanked">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="transform:scaleX(-1)"><path d="M17.8 19.2 16 11l3.5-3.5a2.1 2.1 0 0 0-3-3L13 8 4.8 6.2a.5.5 0 0 0-.5.8L8 11l-2 2-2-.5a.5.5 0 0 0-.5.8L6 16l2.7 2.5a.5.5 0 0 0 .8-.5L9 16l2-2 3.2 3.7a.5.5 0 0 0 .8-.5z"/></svg>
+      <h2>Start with your airline</h2>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5a2.1 2.1 0 0 0-3-3L13 8 4.8 6.2a.5.5 0 0 0-.5.8L8 11l-2 2-2-.5a.5.5 0 0 0-.5.8L6 16l2.7 2.5a.5.5 0 0 0 .8-.5L9 16l2-2 3.2 3.7a.5.5 0 0 0 .8-.5z"/></svg>
+    </div>
+    <p class="subhead">Round-trip nonstop air is built into every package — pick your airline, and the resort prices below reprice to match.</p>
+  </div>
+
+  <div class="air-select-wrap">
+    <p class="air-select-intro">Both fly nonstop, Sunday out and Sunday back. Flip between them anytime — every package total and deposit updates to your choice.</p>
+    <p class="air-deposit-note" id="airDepositNote">Southwest packages: $1,843.46 deposit · United packages: $500 deposit — both with the balance due September 1.</p>
+
+    <div class="air-toggle">
+      <!-- Southwest -->
+      <label class="air-option">
+        <input type="radio" name="air_track" value="Southwest" checked>
+        <span class="air-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span>
+        <div class="air-option-head">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5a2.1 2.1 0 0 0-3-3L13 8 4.8 6.2a.5.5 0 0 0-.5.8L8 11l-2 2-2-.5a.5.5 0 0 0-.5.8L6 16l2.7 2.5a.5.5 0 0 0 .8-.5L9 16l2-2 3.2 3.7a.5.5 0 0 0 .8-.5z"/></svg>
+          <span class="air-option-name">Southwest</span>
+        </div>
+        <div class="air-option-airport">Houston Hobby (HOU) ⇄ Los Cabos (SJD) · nonstop</div>
+        <div class="leg" style="border:none;padding:8px 0 2px;">
+          <span class="leg-date">Sun Oct 18</span>
+          <div class="leg-times"><span class="leg-time">12:30 PM</span><span class="leg-arrow">→</span><span class="leg-time">1:15 PM</span><span class="leg-meta">· WN 3006</span></div>
+        </div>
+        <div class="leg" style="border:none;padding:2px 0;">
+          <span class="leg-date">Sun Oct 25</span>
+          <div class="leg-times"><span class="leg-time">2:10 PM</span><span class="leg-arrow">→</span><span class="leg-time">6:35 PM</span><span class="leg-meta">· WN 3007</span></div>
+        </div>
+        <div class="air-option-deposit">Deposit <strong>$1,843.46</strong> · balance due Sept 1</div>
+      </label>
+
+      <!-- United -->
+      <label class="air-option">
+        <input type="radio" name="air_track" value="United">
+        <span class="air-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span>
+        <div class="air-option-head">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5a2.1 2.1 0 0 0-3-3L13 8 4.8 6.2a.5.5 0 0 0-.5.8L8 11l-2 2-2-.5a.5.5 0 0 0-.5.8L6 16l2.7 2.5a.5.5 0 0 0 .8-.5L9 16l2-2 3.2 3.7a.5.5 0 0 0 .8-.5z"/></svg>
+          <span class="air-option-name">United</span>
+        </div>
+        <div class="air-option-airport">Houston Bush (IAH) ⇄ Los Cabos (SJD) · nonstop</div>
+        <div class="leg" style="border:none;padding:8px 0 2px;">
+          <span class="leg-date">Sun Oct 18</span>
+          <div class="leg-times"><span class="leg-time">12:01 PM</span><span class="leg-arrow">→</span><span class="leg-time">12:48 PM</span><span class="leg-meta">· UA 1438</span></div>
+        </div>
+        <div class="leg" style="border:none;padding:2px 0;">
+          <span class="leg-date">Sun Oct 25</span>
+          <div class="leg-times"><span class="leg-time">1:11 PM</span><span class="leg-arrow">→</span><span class="leg-time">5:45 PM</span><span class="leg-meta">· UA 579</span></div>
+        </div>
+        <div class="air-option-deposit">Deposit <strong>$500</strong> · balance due Sept 1 · lower package price</div>
+      </label>
+    </div>
+
+    <div class="flight-note" style="margin-top:18px;">
+      Want different days or times? Mention it in the notes below or reach out directly, and I'll come back with options quickly. Final pricing is confirmed before booking.
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESORTS ============ -->
+<section class="section">
+  <div class="section-head" style="text-align:center;">
+    <h2>Where you'll stay</h2>
+    <p class="subhead">Five all-inclusives in Cabo San Lucas, sorted from most affordable to most premium — here's how they differ, with honest trade-offs for each.</p>
+  </div>
+
+  <div class="choose-block">
+    <div class="choose-intro">
+      <p>All five are all-inclusive and all in Cabo San Lucas, but they're not interchangeable. The real decision comes down to three things: <strong>all-ages vs. adults-only</strong>, <strong>how lively you want the resort itself</strong>, and <strong>how close you want to be to the marina</strong>, where the Bisbee weigh-ins, registration, and ceremonies all happen at Puerto Paraíso. Marina Fiesta sits right on the marina; the others are a 5-minute cab or a cheap public bus from it. Here's the honest read on each:</p>
+    </div>
+
+    <div class="choose-grid">
+      <div class="choose-card">
+        <div class="choose-name">Riu Santa Fe</div>
+        <div class="choose-tag">The value play · all ages</div>
+        <p class="choose-pro"><strong>For:</strong> the lowest price by a wide margin, a big lively resort with a water park and nightclub, and the room categories Sean already knows. The Riu Party room ties into the on-site pool-party scene.</p>
+        <p class="choose-con"><strong>Against:</strong> it's large and busy rather than intimate, family-and-kids energy is part of the mix, and dinner restaurants require formal attire.</p>
+      </div>
+
+      <div class="choose-card">
+        <div class="choose-name">Riu Palace Cabo San Lucas</div>
+        <div class="choose-tag">The step-up · all ages</div>
+        <p class="choose-pro"><strong>For:</strong> the same beach and neighborhood as the Santa Fe with a noticeably more polished, all-suite product — junior suites with sitting areas, up to swim-up and jacuzzi categories. The natural upgrade without a budget leap.</p>
+        <p class="choose-con"><strong>Against:</strong> still a sizable resort, not a boutique, and several ocean-view categories are "subject to availability" until confirmed.</p>
+      </div>
+
+      <div class="choose-card">
+        <div class="choose-name">Riu Palace Baja California</div>
+        <div class="choose-tag">All-suite · adults only</div>
+        <p class="choose-pro"><strong>For:</strong> 18-and-over throughout, every room a junior suite or larger, with free access to the Santa Fe's water park, parties, and Pacha nightclub when you want the energy — and a calmer home base when you don't.</p>
+        <p class="choose-con"><strong>Against:</strong> the two Elite Club tiers jump sharply in price, and it's the same short-ride-not-a-walk distance to the marina.</p>
+      </div>
+
+      <div class="choose-card">
+        <div class="choose-name">Marina Fiesta</div>
+        <div class="choose-tag">On the marina · all ages</div>
+        <p class="choose-pro"><strong>For:</strong> the only one sitting right on the Cabo San Lucas marina, steps from Puerto Paraíso and the weigh-ins — walk out the door into the tournament action. All-ages, suite-style rooms, family-friendly with kids staying free.</p>
+        <p class="choose-con"><strong>Against:</strong> marina-facing, not beachfront ("off beach"), so there's no sand out front — you'd head to Médano for beach time.</p>
+      </div>
+
+      <div class="choose-card">
+        <div class="choose-name">Breathless Cabo San Lucas</div>
+        <div class="choose-tag">Newest &amp; most social · adults only</div>
+        <p class="choose-pro"><strong>For:</strong> opposite El Médano and a short walk to the marina, the newest and most modern-feeling of the group — the most social, party-leaning resort, with a full spa and nightly shows.</p>
+        <p class="choose-con"><strong>Against:</strong> the priciest of the beach resorts, and the high-energy vibe is a poor fit if anyone wants quiet.</p>
+      </div>
+    </div>
+
+    <div class="choose-verdict">
+      <div class="choose-verdict-label">A note on Bisbee week</div>
+      <p>The tournament lives at the marina — registration, the captains meeting, opening ceremonies, and the 2:00–9:00 PM weigh-ins all happen at or in front of Puerto Paraíso, and the 2026 Black &amp; Blue runs October 19–24, right inside your week. Marina Fiesta is the only one of the five sitting directly on the marina; the rest are a 5-minute cab or a cheap public bus from it. Weigh how much the resort's own setting matters — beach out front, adults-only calm, on-site energy — against how often you'll be heading to the docks. All five make the marina easy.</p>
+    </div>
+
+    <p class="choose-footnote">Pick a room in any option below and your estimated total updates at the bottom of the page.</p>
+  </div>
+
+  <div style="max-width:1080px;margin:32px auto 0;">
+
+    <!-- ========== CARD 1: RIU SANTA FE (COMPLETE) ========== -->
+    <div class="resort-card">
+      <div class="card-body" style="padding-bottom:0;">
+        <div class="card-kicker">Option 1 · All ages · 1 room · 2 adults</div>
+        <h3 class="card-title">Riu Santa Fe — All Inclusive</h3>
+        <p class="card-tagline">A big, busy beach resort a short walk from the marina action.</p>
+        <div class="card-copy">
+          <p>Riu Santa Fe sits about a 12-minute walk from El Médano Beach, on the strip of Riu resorts just outside the heart of Cabo San Lucas. The marina and Puerto Paraíso — where the Bisbee weigh-ins, registration, and ceremonies all take place — are roughly 1.5 miles away: a 5-minute cab, a $1–2 public bus from just outside the Riu gate every 15–30 minutes, or a 30–40 minute beach walk (doable but slow on coarse, sloped sand). This is the high-energy end of the all-inclusive spectrum: a five-star, all-ages property with a water park and slide, an infinity pool, the Pacha nightclub running six days a week, and 18-plus RIU Pool Parties when you want them.</p>
+          <p>Food runs across eight restaurants — La Baja California, Kulinarium, Sakura, Carusso, La Misión, Torote, Pepe's Food, and the Tiki Taco snack spots — plus buffet breakfast, lunch, and dinner, with themed dinners twice a week. The all-inclusive covers daytime entertainment, live shows, a kids' club for ages 4–12, land sports like tennis and volleyball, and steam-room access.</p>
+          <p><em>Honest trade:</em> this is a large, lively resort — efficient rather than intimate, and at its liveliest around the pool and nightclub. Dinner restaurants require formal attire, and spa treatments, golf, snorkel, massage, and horseback riding carry extra charges. The fitness center and steam room are adults-only.</p>
+        </div>
+      </div>
+
+      <!-- CAROUSEL -->
+      <div class="carousel" data-carousel>
+        <div class="carousel-track">
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100837/ece00437-f840-417a-b2bb-a65865c9b664_main.jpg')" role="img" aria-label="Riu Santa Fe photo 1"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100837/34d6c072-436b-408e-bfb5-c6a8f5734452.png')" role="img" aria-label="Riu Santa Fe photo 2"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100837/f7e3b809-54db-4427-ba58-175f67e08a9e.jpg')" role="img" aria-label="Riu Santa Fe photo 3"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100837/e8041f10-cd15-4252-a8e7-20b0ea865260.jpg')" role="img" aria-label="Riu Santa Fe photo 4"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100837/b2c6e42b-b0c3-44c2-9c65-3544a2050972.jpg')" role="img" aria-label="Riu Santa Fe photo 5"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100837/c475cd8e-89c4-4d07-a326-74b37a48defb.jpg')" role="img" aria-label="Riu Santa Fe photo 6"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100837/88d1c536-4d7b-4814-b40d-7bef19ca9de7.jpg')" role="img" aria-label="Riu Santa Fe photo 7"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100837/493269b7-fe13-467b-ad5f-844a0ac9524e.jpg')" role="img" aria-label="Riu Santa Fe photo 8"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100837/69b35be8-df16-49fe-8709-96ed2c66ba30.jpg')" role="img" aria-label="Riu Santa Fe photo 9"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100837/ce1b1d67-1efb-42e3-b74c-02c1bab04cfc.jpg')" role="img" aria-label="Riu Santa Fe photo 10"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100837/2d644126-1577-497b-8018-32bcd43d84be.jpg')" role="img" aria-label="Riu Santa Fe photo 11"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100837/aa2b0bf5-7edb-4e13-916d-814c90f34a1b.jpg')" role="img" aria-label="Riu Santa Fe photo 12"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100837/88302457-42d5-4034-b6f6-22026ddda164.jpg')" role="img" aria-label="Riu Santa Fe photo 13"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100837/7ae81c93-5c18-48c1-bc12-2f9342df96a6.jpg')" role="img" aria-label="Riu Santa Fe photo 14"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100837/9dc1e810-ac37-4928-bd39-91b3e198a46f.jpg')" role="img" aria-label="Riu Santa Fe photo 15"></div>
+        </div>
+        <button class="carousel-btn prev" aria-label="Previous image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="carousel-btn next" aria-label="Next image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+        <div class="carousel-dots"></div>
+      </div>
+
+      <div class="card-body" style="padding-top:26px;">
+        <!-- AMENITIES -->
+        <div class="amenity-grid">
+          <div class="amenity-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18"/></svg><span>All ages · 12-min walk to El Médano Beach</span></div>
+          <div class="amenity-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16s2-2 5-2 5 2 5 2 2-2 5-2 5 2 5 2"/><path d="M2 11s2-2 5-2 5 2 5 2 2-2 5-2 5 2 5 2"/><path d="M12 3v6"/></svg><span>Infinity pool, water park &amp; water slide</span></div>
+          <div class="amenity-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 8c0 4 3 6 7 6M19 8c0 4-3 6-7 6"/></svg><span>Spa, steam bath &amp; salon (adults)</span></div>
+          <div class="amenity-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18M5 11V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4M5 11v6M19 11v6M3 17h18"/></svg><span>8 restaurants · themed dinners 2×/week</span></div>
+          <div class="amenity-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><span>Pacha nightclub &amp; RIU Pool Parties (18+)</span></div>
+          <div class="amenity-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M6 17l-1-9h14l-1 9M9 8V5h6v3"/><circle cx="12" cy="12" r="1.5"/></svg><span>Airport transfers included</span></div>
+        </div>
+
+        <!-- ROOM TIERS -->
+        <h4 class="rooms-head">Choose your room</h4>
+        <p class="rooms-sub">Five room categories, sorted by price. Rates are for two adults, 7 nights, taxes included.</p>
+
+        <label class="room-row">
+          <input type="radio" class="room-radio" name="room_riusantafe" data-resort="Riu Santa Fe — All Inclusive" data-room="Double Room Garden View" data-swa="3117.61" data-ua="2872.96" checked>
+          <div class="room-info">
+            <div class="room-name">Double Room Garden View</div>
+            <div class="room-detail">Garden view · 2 doubles or 1 king · balcony/terrace, minibar, in-room safe, coffeemaker, A/C, WiFi</div>
+          </div>
+          <div class="room-price"><div class="amt">—</div><div class="delta"></div><div class="pp"></div></div>
+        </label>
+
+        <label class="room-row">
+          <input type="radio" class="room-radio" name="room_riusantafe" data-resort="Riu Santa Fe — All Inclusive" data-room="Double Room Riu Party" data-swa="3237.88" data-ua="3012.14">
+          <div class="room-info">
+            <div class="room-name">Double Room Riu Party</div>
+            <div class="room-detail">1 king or 2 doubles · Riu Pool Party bar access &amp; 15% off VIP area, Cabo Madness disco discount, Riu Party kit · balcony/terrace, minibar, safe</div>
+          </div>
+          <div class="room-price"><div class="amt">—</div><div class="delta"></div><div class="pp"></div></div>
+        </label>
+
+        <label class="room-row">
+          <input type="radio" class="room-radio" name="room_riusantafe" data-resort="Riu Santa Fe — All Inclusive" data-room="Double Room Partial Ocean View" data-swa="3330.72" data-ua="3104.98">
+          <div class="room-info">
+            <div class="room-name">Double Room Partial Ocean View</div>
+            <div class="room-detail">Partial ocean view · 1 king or 2 doubles · balcony/terrace, minibar, in-room safe, coffeemaker, WiFi</div>
+          </div>
+          <div class="room-price"><div class="amt">—</div><div class="delta"></div><div class="pp"></div></div>
+        </label>
+
+        <label class="room-row">
+          <input type="radio" class="room-radio" name="room_riusantafe" data-resort="Riu Santa Fe — All Inclusive" data-room="Double Room Ocean View" data-swa="3524.18" data-ua="3298.44">
+          <div class="room-info">
+            <div class="room-name">Double Room Ocean View</div>
+            <div class="room-detail">Ocean view · 2 doubles or 1 king · balcony/terrace, ceiling fan, minibar, safe, coffeemaker, WiFi</div>
+          </div>
+          <div class="room-price"><div class="amt">—</div><div class="delta"></div><div class="pp"></div></div>
+        </label>
+
+        <label class="room-row">
+          <input type="radio" class="room-radio" name="room_riusantafe" data-resort="Riu Santa Fe — All Inclusive" data-room="Suite Ocean View" data-swa="3717.66" data-ua="3491.92">
+          <div class="room-info">
+            <div class="room-name">Suite Ocean View</div>
+            <div class="room-detail">Ocean view · 1 king · balcony/terrace, bidet, ceiling fan, coffeemaker, A/C, WiFi</div>
+          </div>
+          <div class="room-price"><div class="amt">—</div><div class="delta"></div><div class="pp"></div></div>
+        </label>
+
+        <!-- PACKAGE BOX -->
+        <div class="package-box" data-pkg="room_riusantafe">
+          <div class="pk-kicker" data-pk-kicker>Package rate · all-in · <span class="pk-air">Southwest</span></div>
+          <div class="pk-amount" data-pk-amount>—</div>
+          <div class="pk-pp" data-pk-pp></div>
+          <ul class="pk-includes">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>7 nights all-inclusive at Riu Santa Fe (taxes &amp; gratuities included)</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Round-trip nonstop air, Houston ⇄ Los Cabos</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Round-trip airport transfers</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Up to $890 in resort credits (varies by room/date)</li>
+          </ul>
+          <div class="pk-schedule">
+            <span class="sch-item"><span class="sch-label">Deposit</span> <strong data-pk-deposit>—</strong></span>
+            <span class="sch-item"><span class="sch-label">Balance by Sept 1</span> <strong data-pk-balance>—</strong></span>
+          </div>
+          <p class="pk-fine">Shown for the room and airline selected above. Switching airline or room updates the total. Final pricing is confirmed by Christina before booking.</p>
+          <p class="provisional-flag">Estimated package; final supplier rate confirmed before booking.</p>
+        </div>
+        <div class="card-select">
+          <label>
+            <input type="radio" name="resort_choice" data-group="room_riusantafe" value="Riu Santa Fe — All Inclusive" data-base="1603" checked>
+            <span class="check-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span>
+            <span class="select-text">Select Riu Santa Fe</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== CARD 2: RIU PALACE CABO SAN LUCAS (FEATURED — room tiers to add) ========== -->
+    <div class="resort-card">
+      <div class="card-body" style="padding-bottom:0;">
+        <div class="card-kicker">Option 2 · All ages · 1 room · 2 adults</div>
+        <h3 class="card-title">Riu Palace Cabo San Lucas — All Inclusive</h3>
+        <p class="card-tagline">The same stretch of beach as the Santa Fe, stepped up a tier.</p>
+        <div class="card-copy">
+          <p>Riu's upscale Palace tier on the same Cabo San Lucas beachfront — the natural step up from the Santa Fe if you want a more polished room and a calmer feel without leaving the neighborhood or the marina access. Guests also get free access to the other Riu hotels in the destination (restrictions apply, details at check-in).</p>
+          <p>The rooms here lead with junior suites — most with a sitting area, balcony or terrace, and a step up in finish from the Santa Fe's standard doubles. The category ladder runs from the base Junior Suite through ocean-view suites to a swim-up suite and a jacuzzi suite, so there's room to trade up if the view or the layout matters to you.</p>
+          <p><em>Honest trade:</em> this is the most affordable way into Riu's Palace product on this beach, but it's still a sizable resort rather than a boutique — and several room categories list view as "subject to availability," so a specific ocean view isn't locked until confirmed.</p>
+        </div>
+      </div>
+
+      <!-- CAROUSEL -->
+      <div class="carousel" data-carousel>
+        <div class="carousel-track">
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100514/fda28495-2a1b-4b36-a391-88202db40343_main.jpg')" role="img" aria-label="Riu Palace Cabo San Lucas photo 1"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100514/404e9be6-6b72-4f80-a569-eace4ddc9369.jpg')" role="img" aria-label="Riu Palace Cabo San Lucas photo 2"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100514/a998957d-938c-4fa9-9018-503e9a43b61c.jpg')" role="img" aria-label="Riu Palace Cabo San Lucas photo 3"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100514/b873a228-681d-4d55-bbe3-d822da2ac171.jpg')" role="img" aria-label="Riu Palace Cabo San Lucas photo 4"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100514/ddaffe46-a66c-4e5e-af4b-3fa04824bb50.jpg')" role="img" aria-label="Riu Palace Cabo San Lucas photo 5"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100514/7c0b1b02-10fe-4d5a-b6b1-a8a60168dae2.jpg')" role="img" aria-label="Riu Palace Cabo San Lucas photo 6"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100514/846e59e4-6e4e-4b83-acb7-700bd0876ef7.jpg')" role="img" aria-label="Riu Palace Cabo San Lucas photo 7"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100514/6994ff63-947a-43e4-a7fe-b497f6f1c7b9.jpg')" role="img" aria-label="Riu Palace Cabo San Lucas photo 8"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100514/cca9a02c-2b13-4052-a1ea-8f596385401a.jpg')" role="img" aria-label="Riu Palace Cabo San Lucas photo 9"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100514/e5138017-d065-4430-bf09-ef1819a6f55d.jpg')" role="img" aria-label="Riu Palace Cabo San Lucas photo 10"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100514/d91d3983-3f2d-41c3-8c48-e708a28e34a2.jpg')" role="img" aria-label="Riu Palace Cabo San Lucas photo 11"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100514/cc417625-93fc-40cd-829f-c78d97d3ebbc.jpg')" role="img" aria-label="Riu Palace Cabo San Lucas photo 12"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100514/057393ed-0e71-472e-8b65-ef94cdec744d.jpg')" role="img" aria-label="Riu Palace Cabo San Lucas photo 13"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100514/07d25974-2d18-4ce0-85aa-cd3c544d2a17.jpg')" role="img" aria-label="Riu Palace Cabo San Lucas photo 14"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100514/9b016563-aea2-47c8-9ccb-a18e1bf1bf13.jpg')" role="img" aria-label="Riu Palace Cabo San Lucas photo 15"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100514/0ce0ba72-5092-4ad5-9e32-231729bc26e5.jpg')" role="img" aria-label="Riu Palace Cabo San Lucas photo 16"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100514/547659e3-167f-4318-b7d8-7ecafa8d0929.jpg')" role="img" aria-label="Riu Palace Cabo San Lucas photo 17"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100514/0e017195-3b7e-4b9f-8115-6cc3cae40247.jpg')" role="img" aria-label="Riu Palace Cabo San Lucas photo 18"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100514/977809e7-3cb4-4fa8-aef5-354671443a87.jpg')" role="img" aria-label="Riu Palace Cabo San Lucas photo 19"></div>
+        </div>
+        <button class="carousel-btn prev" aria-label="Previous image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="carousel-btn next" aria-label="Next image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+        <div class="carousel-dots"></div>
+      </div>
+
+      <div class="card-body" style="padding-top:26px;">
+        <div class="amenity-grid">
+          <div class="amenity-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18"/></svg><span>All ages · Cabo San Lucas beachfront</span></div>
+          <div class="amenity-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M6 17l-1-9h14l-1 9M9 8V5h6v3"/><circle cx="12" cy="12" r="1.5"/></svg><span>Airport transfers included</span></div>
+          <div class="amenity-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 8c0 4 3 6 7 6M19 8c0 4-3 6-7 6"/></svg><span>Free access to sister Riu hotels</span></div>
+          <div class="amenity-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M6 7l1 13h10l1-13M9 7V4h6v3"/></svg><span>Junior-suite categories with sitting areas</span></div>
+          <div class="amenity-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16s2-2 5-2 5 2 5 2 2-2 5-2 5 2 5 2"/><path d="M2 11s2-2 5-2 5 2 5 2 2-2 5-2 5 2 5 2"/></svg><span>Swim-up &amp; jacuzzi suite categories available</span></div>
+          <div class="amenity-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 8c0 4 3 6 7 6M19 8c0 4-3 6-7 6"/></svg><span>Minibar, liquor dispenser, safe &amp; coffee in-room</span></div>
+        </div>
+
+        <h4 class="rooms-head">Choose your room</h4>
+        <p class="rooms-sub">Six room categories, sorted by price. Rates are for two adults, 7 nights, taxes included.</p>
+
+        <label class="room-row">
+          <input type="radio" class="room-radio" name="room_riupalacecsl" data-resort="Riu Palace Cabo San Lucas — All Inclusive" data-room="Junior Suite" data-swa="3500.61" data-ua="3274.87" checked>
+          <div class="room-info">
+            <div class="room-name">Junior Suite</div>
+            <div class="room-detail">1 king or 2 doubles · sitting area, balcony/terrace, flat-screen TV, minibar, safe, coffeemaker, WiFi</div>
+          </div>
+          <div class="room-price"><div class="amt">—</div><div class="delta"></div><div class="pp"></div></div>
+        </label>
+
+        <label class="room-row">
+          <input type="radio" class="room-radio" name="room_riupalacecsl" data-resort="Riu Palace Cabo San Lucas — All Inclusive" data-room="Double Room Ocean View" data-swa="3556.02" data-ua="3330.28">
+          <div class="room-info">
+            <div class="room-name">Double Room Ocean View</div>
+            <div class="room-detail">1 king · sitting area, balcony/terrace, minibar, in-room safe, coffeemaker, WiFi</div>
+          </div>
+          <div class="room-price"><div class="amt">—</div><div class="delta"></div><div class="pp"></div></div>
+        </label>
+
+        <label class="room-row">
+          <input type="radio" class="room-radio" name="room_riupalacecsl" data-resort="Riu Palace Cabo San Lucas — All Inclusive" data-room="Junior Suite Partial Ocean View" data-swa="3654.52" data-ua="3428.78">
+          <div class="room-info">
+            <div class="room-name">Junior Suite Partial Ocean View</div>
+            <div class="room-detail">Partial ocean view · 1 king or 2 doubles · sitting area, balcony/terrace, flat-screen TV, minibar, safe, WiFi</div>
+          </div>
+          <div class="room-price"><div class="amt">—</div><div class="delta"></div><div class="pp"></div></div>
+        </label>
+
+        <label class="room-row">
+          <input type="radio" class="room-radio" name="room_riupalacecsl" data-resort="Riu Palace Cabo San Lucas — All Inclusive" data-room="Junior Suite Ocean View" data-swa="3753.02" data-ua="3527.28">
+          <div class="room-info">
+            <div class="room-name">Junior Suite Ocean View</div>
+            <div class="room-detail">Ocean view · 1 king or 2 doubles · sitting area, balcony/terrace, flat-screen TV, minibar, safe, WiFi</div>
+          </div>
+          <div class="room-price"><div class="amt">—</div><div class="delta"></div><div class="pp"></div></div>
+        </label>
+
+        <label class="room-row">
+          <input type="radio" class="room-radio" name="room_riupalacecsl" data-resort="Riu Palace Cabo San Lucas — All Inclusive" data-room="Swim-up Junior Suite (18+)" data-swa="3989.68" data-ua="3763.94">
+          <div class="room-info">
+            <div class="room-name">Swim-up Junior Suite · 18+</div>
+            <div class="room-detail">2 doubles · private pool terrace, sitting area, flat-screen TV, minibar, safe, WiFi · adults 18+</div>
+          </div>
+          <div class="room-price"><div class="amt">—</div><div class="delta"></div><div class="pp"></div></div>
+        </label>
+
+        <label class="room-row">
+          <input type="radio" class="room-radio" name="room_riupalacecsl" data-resort="Riu Palace Cabo San Lucas — All Inclusive" data-room="Suite Jacuzzi Ocean View" data-swa="4043.73" data-ua="3817.99">
+          <div class="room-info">
+            <div class="room-name">Suite Jacuzzi Ocean View</div>
+            <div class="room-detail">1 king · indoor jacuzzi, walk-in closet, sitting area, balcony/terrace, flat-screen TV, minibar, WiFi</div>
+          </div>
+          <div class="room-price"><div class="amt">—</div><div class="delta"></div><div class="pp"></div></div>
+        </label>
+
+        <div class="package-box" data-pkg="room_riupalacecsl">
+          <div class="pk-kicker" data-pk-kicker>Package rate · all-in · <span class="pk-air">Southwest</span></div>
+          <div class="pk-amount" data-pk-amount>—</div>
+          <div class="pk-pp" data-pk-pp></div>
+          <ul class="pk-includes">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>7 nights all-inclusive at Riu Palace Cabo San Lucas (taxes &amp; gratuities included)</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Round-trip nonstop air, Houston ⇄ Los Cabos</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Round-trip airport transfers</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Up to $890 in resort credits (varies by room/date)</li>
+          </ul>
+          <div class="pk-schedule">
+            <span class="sch-item"><span class="sch-label">Deposit</span> <strong data-pk-deposit>—</strong></span>
+            <span class="sch-item"><span class="sch-label">Balance by Sept 1</span> <strong data-pk-balance>—</strong></span>
+          </div>
+          <p class="pk-fine">Shown for the room and airline selected above. Switching airline or room updates the total. Final pricing is confirmed by Christina before booking.</p>
+          <p class="provisional-flag">Estimated package; final supplier rate confirmed before booking.</p>
+        </div>
+        <div class="card-select">
+          <label>
+            <input type="radio" name="resort_choice" data-group="room_riupalacecsl" value="Riu Palace Cabo San Lucas — All Inclusive" data-base="2310">
+            <span class="check-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span>
+            <span class="select-text">Select Riu Palace Cabo San Lucas</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== CARD 3: RIU PALACE BAJA CALIFORNIA (room tiers to add) ========== -->
+    <div class="resort-card">
+      <div class="card-body" style="padding-bottom:0;">
+        <div class="card-kicker">Option 3 · Adults only (18+) · 1 room · 2 adults</div>
+        <h3 class="card-title">Riu Palace Baja California — Adults Only</h3>
+        <p class="card-tagline">An adults-only Palace for couples who want the resort calmer.</p>
+        <div class="card-copy">
+          <p>The adults-only Palace in Cabo San Lucas — a five-star beachfront resort, 18-and-over throughout, with free access to sister Riu hotels in the destination. That access is worth noting: it includes the water park, adults-only theme parties, and Pacha nightclub over at the Riu Santa Fe, plus tennis courts at the Riu Palace Cabo San Lucas. Playa El Médano is about 2.2 km away; the marina and Puerto Paraíso (the Bisbee hub) are a short cab or bus ride, same as the other Rius. A good fit if the group would rather skip the family-and-water-park energy on-site and keep their own resort grown-up.</p>
+          <p>Five restaurants (Promenade, Yu Hi, Krystal, Guacamole, and Sofia), nightly shows, a nightclub, a pool bar, and a spa with steam room and Jacuzzi. The all-inclusive covers all meals and drinks, a daily-restocked minibar and liquor dispenser, snorkeling, nightly entertainment, and a daily activities program. Every category is a junior suite or larger, each with a sitting area, bathrobes, and a private bath with shower and tub.</p>
+          <p><em>Honest trade:</em> all-suite and adults-only is the draw, but several views list as "subject to availability," and the jump to the two Elite Club tiers is a real step up in price. Like the other Rius, it's a short ride rather than a walk to the marina and the tournament action.</p>
+        </div>
+      </div>
+
+      <div class="carousel" data-carousel>
+        <div class="carousel-track">
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/318928/d548d2b2-52ae-4aef-819e-990ec8118729_main.jpg')" role="img" aria-label="Riu Palace Baja California photo 1"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/318928/fabcb8a1-9043-4cc7-8ea3-9fd8b12bcd79.jpg')" role="img" aria-label="Riu Palace Baja California photo 2"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/318928/00895a82-d058-43f7-b5bc-e39615a296d0.jpg')" role="img" aria-label="Riu Palace Baja California photo 3"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/318928/066108ba-5c51-4f83-bc28-3e15947376a1.jpg')" role="img" aria-label="Riu Palace Baja California photo 4"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/318928/0cf21d6c-16ff-44c1-a0b1-ea646a8686f9.jpg')" role="img" aria-label="Riu Palace Baja California photo 5"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/318928/0fc5d541-fdbb-46e0-b7b7-9935307dcf8f.jpg')" role="img" aria-label="Riu Palace Baja California photo 6"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/318928/13deea7d-cfc8-4d32-94f5-167401fb4e4e.jpg')" role="img" aria-label="Riu Palace Baja California photo 7"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/318928/1a363c13-f571-4c57-87ea-5ecc2003c798.jpg')" role="img" aria-label="Riu Palace Baja California photo 8"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/318928/1b73c552-49ad-41a3-9ec0-e3705bc1d3bb.jpg')" role="img" aria-label="Riu Palace Baja California photo 9"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/318928/280c615d-f335-4f58-99ac-61b53d4b593b.jpg')" role="img" aria-label="Riu Palace Baja California photo 10"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/318928/2c24cabd-6107-4fbb-8ead-f73483c9f135.jpg')" role="img" aria-label="Riu Palace Baja California photo 11"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/318928/32932efc-8ed8-4a9a-9e24-06fb3bc6bee0.jpg')" role="img" aria-label="Riu Palace Baja California photo 12"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/318928/339c315e-c9c4-4ebf-a35d-a74c8fe3b97d.jpg')" role="img" aria-label="Riu Palace Baja California photo 13"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/318928/33d6dcfe-85a6-453b-8927-a79c06eaad1d.jpg')" role="img" aria-label="Riu Palace Baja California photo 14"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/318928/38d49370-e9c9-4adc-b9f4-2aaa9d075616.jpg')" role="img" aria-label="Riu Palace Baja California photo 15"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/318928/3a371967-d6eb-4409-bbf8-110f973dc9ff.jpg')" role="img" aria-label="Riu Palace Baja California photo 16"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/318928/3e54fdbe-b548-465f-aa9b-962e4aa93fe6.jpg')" role="img" aria-label="Riu Palace Baja California photo 17"></div>
+        </div>
+        <button class="carousel-btn prev" aria-label="Previous image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="carousel-btn next" aria-label="Next image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+        <div class="carousel-dots"></div>
+      </div>
+
+      <div class="card-body" style="padding-top:26px;">
+        <div class="amenity-grid">
+          <div class="amenity-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><path d="M2 21v-2a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v2"/></svg><span>Adults only (18+) · Cabo San Lucas</span></div>
+          <div class="amenity-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M6 17l-1-9h14l-1 9M9 8V5h6v3"/><circle cx="12" cy="12" r="1.5"/></svg><span>Airport transfers included</span></div>
+          <div class="amenity-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 8c0 4 3 6 7 6M19 8c0 4-3 6-7 6"/></svg><span>Sister-hotel access: water park, parties, Pacha club</span></div>
+          <div class="amenity-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M6 7l1 13h10l1-13M9 7V4h6v3"/></svg><span>All junior suites · sitting area, robes, shower &amp; tub</span></div>
+          <div class="amenity-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><span>Elite Club concierge tiers available</span></div>
+          <div class="amenity-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18M5 11V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4M5 17h14"/></svg><span>5 restaurants · spa with steam room &amp; Jacuzzi</span></div>
+        </div>
+
+        <h4 class="rooms-head">Choose your room</h4>
+        <p class="rooms-sub">Five room categories, sorted by price. Rates are for two adults, 7 nights, taxes included.</p>
+
+        <label class="room-row">
+          <input type="radio" class="room-radio" name="room_riupalacebaja" data-resort="Riu Palace Baja California — Adults Only" data-room="Junior Suite" data-swa="3934.2" data-ua="3708.46" checked>
+          <div class="room-info">
+            <div class="room-name">Junior Suite</div>
+            <div class="room-detail">2 doubles or 1 king · sitting area, bathrobes, private bath with shower &amp; tub, minibar, safe, coffeemaker, WiFi</div>
+          </div>
+          <div class="room-price"><div class="amt">—</div><div class="delta"></div><div class="pp"></div></div>
+        </label>
+
+        <label class="room-row">
+          <input type="radio" class="room-radio" name="room_riupalacebaja" data-resort="Riu Palace Baja California — Adults Only" data-room="Junior Suite Courtyard View" data-swa="4044.27" data-ua="3818.53">
+          <div class="room-info">
+            <div class="room-name">Junior Suite Courtyard View</div>
+            <div class="room-detail">Patio view · 2 doubles or 1 king · sitting area, bathrobes, private bath with shower &amp; tub, minibar, safe, WiFi</div>
+          </div>
+          <div class="room-price"><div class="amt">—</div><div class="delta"></div><div class="pp"></div></div>
+        </label>
+
+        <label class="room-row">
+          <input type="radio" class="room-radio" name="room_riupalacebaja" data-resort="Riu Palace Baja California — Adults Only" data-room="Junior Suite Partial Ocean View" data-swa="4185.63" data-ua="3959.89">
+          <div class="room-info">
+            <div class="room-name">Junior Suite Partial Ocean View</div>
+            <div class="room-detail">Partial ocean view · 2 doubles or 1 king · sitting area, bathrobes, private bath with shower &amp; tub, minibar, safe, WiFi</div>
+          </div>
+          <div class="room-price"><div class="amt">—</div><div class="delta"></div><div class="pp"></div></div>
+        </label>
+
+        <label class="room-row">
+          <input type="radio" class="room-radio" name="room_riupalacebaja" data-resort="Riu Palace Baja California — Adults Only" data-room="Junior Suite Ocean Front · Elite Club" data-swa="4898.77" data-ua="4673.03">
+          <div class="room-info">
+            <div class="room-name">Junior Suite Ocean Front · Elite Club</div>
+            <div class="room-detail">Ocean front · 1 king or 2 doubles · Elite Club: priority check-in, premium drinks dispenser, welcome gift, late checkout, sofa sitting area, WiFi</div>
+          </div>
+          <div class="room-price"><div class="amt">—</div><div class="delta"></div><div class="pp"></div></div>
+        </label>
+
+        <label class="room-row">
+          <input type="radio" class="room-radio" name="room_riupalacebaja" data-resort="Riu Palace Baja California — Adults Only" data-room="Suite Ocean Front · Elite Club" data-swa="5368.52" data-ua="5142.78">
+          <div class="room-info">
+            <div class="room-name">Suite Ocean Front · Elite Club</div>
+            <div class="room-detail">Ocean front · 1 king or 2 doubles · Elite Club: priority check-in, premium drinks dispenser, welcome gift, late checkout, sofa sitting area, WiFi</div>
+          </div>
+          <div class="room-price"><div class="amt">—</div><div class="delta"></div><div class="pp"></div></div>
+        </label>
+
+        <div class="package-box" data-pkg="room_riupalacebaja">
+          <div class="pk-kicker" data-pk-kicker>Package rate · all-in · <span class="pk-air">Southwest</span></div>
+          <div class="pk-amount" data-pk-amount>—</div>
+          <div class="pk-pp" data-pk-pp></div>
+          <ul class="pk-includes">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>7 nights all-inclusive at Riu Palace Baja California (taxes &amp; gratuities included)</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Round-trip nonstop air, Houston ⇄ Los Cabos</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Round-trip airport transfers</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Up to $890 in resort credits (varies by room/date)</li>
+          </ul>
+          <div class="pk-schedule">
+            <span class="sch-item"><span class="sch-label">Deposit</span> <strong data-pk-deposit>—</strong></span>
+            <span class="sch-item"><span class="sch-label">Balance by Sept 1</span> <strong data-pk-balance>—</strong></span>
+          </div>
+          <p class="pk-fine">Shown for the room and airline selected above. Switching airline or room updates the total. Final pricing is confirmed by Christina before booking.</p>
+          <p class="provisional-flag">Estimated package; final supplier rate confirmed before booking.</p>
+        </div>
+        <div class="card-select">
+          <label>
+            <input type="radio" name="resort_choice" data-group="room_riupalacebaja" value="Riu Palace Baja California — Adults Only" data-base="2553">
+            <span class="check-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span>
+            <span class="select-text">Select Riu Palace Baja California</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+<!-- ========== CARD 5: MARINA FIESTA RESORT & SPA ========== -->
+    <div class="resort-card">
+      <div class="card-body" style="padding-bottom:0;">
+        <div class="card-kicker">Option 4 · All ages · 1 room · 2 adults</div>
+        <h3 class="card-title">Marina Fiesta Resort &amp; Spa — All Inclusive</h3>
+        <p class="card-tagline">On the marina itself — steps from Puerto Paraíso and the boats.</p>
+        <div class="card-copy">
+          <p>Marina Fiesta sits right on the Cabo San Lucas marina, at the edge of the Puerto Paraíso shopping and entertainment plaza — the spot where the Bisbee registration, ceremonies, and weigh-ins all take place. Of the options here, it's the one you can roll out of and be in the middle of the tournament action on foot. It's an all-ages, family-friendly all-inclusive built around suite-style rooms.</p>
+          <p>The room categories run from the Nautical Junior Suite up through one- and two-bedroom suites, so there's room to spread out for a couple or stretch to fit more. The all-inclusive covers meals and drinks; specific dining and amenity details are confirmed at booking.</p>
+          <p><em>Honest trade:</em> this is a marina-facing resort, not a beach resort — the listing notes it as "off beach," so you're trading sand-out-front for being right on the water and the marina nightlife. For a group whose week revolves around the boats and the weigh-ins, that's arguably the point; if you want to wake up on Médano, one of the beach resorts fits better.</p>
+        </div>
+      </div>
+
+      <div class="carousel" data-carousel>
+        <div class="carousel-track">
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100370/04ed2a6c-ea0a-4dea-a809-407d7774bc32.jpg')" role="img" aria-label="Marina Fiesta photo 1"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100370/f13f24ed-2e0a-4aa9-994a-a99959412bb5.jpg')" role="img" aria-label="Marina Fiesta photo 2"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100370/e20761ba-dc10-43ed-8bef-6d4b7a68bd3b.jpg')" role="img" aria-label="Marina Fiesta photo 3"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100370/6c055195-ff02-4f33-93ad-c266a7f2ea9e.jpg')" role="img" aria-label="Marina Fiesta photo 4"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100370/0a3d63a0-bf15-475d-a18a-f152f9f4c2da.jpg')" role="img" aria-label="Marina Fiesta photo 5"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100370/7d8301f2-53c3-411f-b828-1a07dfc9c623.jpg')" role="img" aria-label="Marina Fiesta photo 6"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100370/d7e2144a-ab52-4d7b-b9fb-85e277026440.jpg')" role="img" aria-label="Marina Fiesta photo 7"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100370/e850b872-afc0-49cc-a87b-5aa5ef8f6fb9.jpg')" role="img" aria-label="Marina Fiesta photo 8"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100370/ff7823fc-2e95-45a8-bac7-5b6e81defb09.jpg')" role="img" aria-label="Marina Fiesta photo 9"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100370/d20c013f-7b6c-46ee-b2f3-205ea321d80c.jpg')" role="img" aria-label="Marina Fiesta photo 10"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100370/44b595c7-62c0-4a4a-b980-735e78a263bf.jpg')" role="img" aria-label="Marina Fiesta photo 11"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100370/e9eae1aa-0823-4ef5-a36a-7c34dd1690b2.jpg')" role="img" aria-label="Marina Fiesta photo 12"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100370/820ce91a-fc45-4ee9-a655-4c5e40b89d37.jpg')" role="img" aria-label="Marina Fiesta photo 13"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100370/024d4270-03b7-49d9-b7a0-aad5f9aff029.jpg')" role="img" aria-label="Marina Fiesta photo 14"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100370/ce3a9dae-b0ea-4670-ac0a-929bd30cb6f5.jpg')" role="img" aria-label="Marina Fiesta photo 15"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/100370/288ae705-8322-4510-874b-8179bc92b60c.jpg')" role="img" aria-label="Marina Fiesta photo 16"></div>
+        </div>
+        <button class="carousel-btn prev" aria-label="Previous image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="carousel-btn next" aria-label="Next image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+        <div class="carousel-dots"></div>
+      </div>
+
+      <div class="card-body" style="padding-top:26px;">
+        <div class="amenity-grid">
+          <div class="amenity-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18"/></svg><span>All ages · directly on the Cabo San Lucas marina</span></div>
+          <div class="amenity-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M6 17l-1-9h14l-1 9M9 8V5h6v3"/><circle cx="12" cy="12" r="1.5"/></svg><span>Airport transfers included</span></div>
+          <div class="amenity-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m3 7 9-4 9 4M5 7v13h14V7"/><path d="M9 20v-6h6v6"/></svg><span>Walk to Puerto Paraíso &amp; the weigh-ins</span></div>
+          <div class="amenity-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M6 7l1 13h10l1-13M9 7V4h6v3"/></svg><span>Suite-style rooms · one- &amp; two-bedroom options</span></div>
+          <div class="amenity-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><path d="M2 21v-2a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v2"/><circle cx="17" cy="9" r="2"/><path d="M21 21v-1a3 3 0 0 0-2.5-3"/></svg><span>Family-friendly · 2 kids stay free</span></div>
+          <div class="amenity-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16s2-2 5-2 5 2 5 2 2-2 5-2 5 2 5 2"/><path d="M2 11s2-2 5-2 5 2 5 2 2-2 5-2 5 2 5 2"/></svg><span>Marina-facing · not beachfront ("off beach")</span></div>
+        </div>
+
+        <h4 class="rooms-head">Choose your room</h4>
+        <p class="rooms-sub">Four room categories, sorted by price. Rates are for two adults, 7 nights, taxes included.</p>
+
+        <label class="room-row">
+          <input type="radio" class="room-radio" name="room_marinafiesta" data-resort="Marina Fiesta Resort & Spa — All Inclusive" data-room="Nautical Junior Suite" data-swa="3965.39" data-ua="3739.65" checked>
+          <div class="room-info">
+            <div class="room-name">Nautical Junior Suite</div>
+            <div class="room-detail">Marina view · junior suite layout · all-inclusive · 2 kids stay free</div>
+          </div>
+          <div class="room-price"><div class="amt">—</div><div class="delta"></div><div class="pp"></div></div>
+        </label>
+
+        <label class="room-row">
+          <input type="radio" class="room-radio" name="room_marinafiesta" data-resort="Marina Fiesta Resort & Spa — All Inclusive" data-room="Grand Luxe Suite" data-swa="4133.46" data-ua="3907.72">
+          <div class="room-info">
+            <div class="room-name">Grand Luxe Suite</div>
+            <div class="room-detail">Upgraded suite category · all-inclusive · 2 kids stay free</div>
+          </div>
+          <div class="room-price"><div class="amt">—</div><div class="delta"></div><div class="pp"></div></div>
+        </label>
+
+        <label class="room-row">
+          <input type="radio" class="room-radio" name="room_marinafiesta" data-resort="Marina Fiesta Resort & Spa — All Inclusive" data-room="Nautical One Bedroom" data-swa="4469.6" data-ua="4243.86">
+          <div class="room-info">
+            <div class="room-name">Nautical One Bedroom</div>
+            <div class="room-detail">One-bedroom suite · separate living area · all-inclusive · 2 kids stay free</div>
+          </div>
+          <div class="room-price"><div class="amt">—</div><div class="delta"></div><div class="pp"></div></div>
+        </label>
+
+        <label class="room-row">
+          <input type="radio" class="room-radio" name="room_marinafiesta" data-resort="Marina Fiesta Resort & Spa — All Inclusive" data-room="Nautical 2 Bedroom" data-swa="5141.88" data-ua="4916.14">
+          <div class="room-info">
+            <div class="room-name">Nautical 2 Bedroom</div>
+            <div class="room-detail">Two-bedroom suite · room for a larger group · all-inclusive · 2 kids stay free</div>
+          </div>
+          <div class="room-price"><div class="amt">—</div><div class="delta"></div><div class="pp"></div></div>
+        </label>
+
+        <div class="package-box" data-pkg="room_marinafiesta">
+          <div class="pk-kicker" data-pk-kicker>Package rate · all-in · <span class="pk-air">Southwest</span></div>
+          <div class="pk-amount" data-pk-amount>—</div>
+          <div class="pk-pp" data-pk-pp></div>
+          <ul class="pk-includes">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>7 nights all-inclusive at Marina Fiesta (taxes &amp; gratuities included)</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Round-trip nonstop air, Houston ⇄ Los Cabos</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Round-trip airport transfers</li>
+          </ul>
+          <div class="pk-schedule">
+            <span class="sch-item"><span class="sch-label">Deposit</span> <strong data-pk-deposit>—</strong></span>
+            <span class="sch-item"><span class="sch-label">Balance by Sept 1</span> <strong data-pk-balance>—</strong></span>
+          </div>
+          <p class="pk-fine">Shown for the room and airline selected above. Switching airline or room updates the total. Final pricing is confirmed by Christina before booking.</p>
+          <p class="provisional-flag">Estimated package; final supplier rate confirmed before booking.</p>
+        </div>
+
+        <div class="card-select">
+          <label>
+            <input type="radio" name="resort_choice" data-group="room_marinafiesta" value="Marina Fiesta Resort & Spa — All Inclusive" data-base="3965">
+            <span class="check-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span>
+            <span class="select-text">Select Marina Fiesta</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== CARD 4: BREATHLESS CABO SAN LUCAS (room tiers to add) ========== -->
+    <div class="resort-card">
+      <div class="card-body" style="padding-bottom:0;">
+        <div class="card-kicker">Option 5 · Adults only (18+) · 1 room · 2 adults</div>
+        <h3 class="card-title">Breathless Cabo San Lucas Resort &amp; Spa</h3>
+        <p class="card-tagline">Adults-only and social, opposite El Médano and next to the marina.</p>
+        <div class="card-copy">
+          <p>The most upscale of the four and the most adults-only in feel — Breathless sits opposite El Médano beach, next to the Los Cabos marina, within walking distance of the city center, the nightlife strip, and the dining and shopping areas. It's the AMR Collection's social, energetic brand, so expect nightly shows, a nightclub, theme events, and a lively pool scene rather than a quiet retreat.</p>
+          <p>The all-inclusive is broad: all meals and snacks, unlimited national and international drinks, 24-hour room service, and waiter service at the pool and beach. Beyond the food there's a full spa (sauna, steam, hydromassage, body and facial treatments), a fitness center with a personal trainer, yoga, cooking classes, a bar route, and six restaurants — Bites, Fish Nets, Kibbeh, Spumante, Spoon, and the Barefoot Grill. Two room categories are offered: the base Allure marina-view room and the upgraded Xhale Club concierge level.</p>
+          <p><em>Honest trade:</em> this is the priciest option and the social, party-leaning one — a plus for two couples who want energy, less so if anyone's after calm. It's a touch farther from the airport (about 50 km) than the Rius, and fishing, snorkel, and some services carry extra charges.</p>
+        </div>
+      </div>
+
+      <div class="carousel" data-carousel>
+        <div class="carousel-track">
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/237972/e341d258a3c93c3aab8d953bd342800e791c53653f3fd385d95f98fde6fb3e2f.png')" role="img" aria-label="Breathless Cabo San Lucas photo 1"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/237972/8a74f07e2c098f7817deb43d134b6def38d416a67c73e16fac5b681bfc6864cf.png')" role="img" aria-label="Breathless Cabo San Lucas photo 2"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/237972/2ef6c70f3db0e4dc8c6c1ade7af8d0e02282ab279cb510e155ebbaca2df558d2.png')" role="img" aria-label="Breathless Cabo San Lucas photo 3"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/237972/d5460d77bfe2f9f10ac91c6fd89d60b6a083a7aedc0682344f229025d324bfd3.png')" role="img" aria-label="Breathless Cabo San Lucas photo 4"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/237972/0683e3f30fca9444cd36e8627018140bcffbe358ef23f29833814f4ed5c6cba3.png')" role="img" aria-label="Breathless Cabo San Lucas photo 5"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/237972/cf6d93b1affd6e90138e4efdd3845eb54ec0ecacc12471ee5ba793b7e703d8c8.png')" role="img" aria-label="Breathless Cabo San Lucas photo 6"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/237972/3fa6223d9322742782d9e6f2703b54cec0f8648c8751bcd168b9e23b79ac07cf.png')" role="img" aria-label="Breathless Cabo San Lucas photo 7"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/237972/07a1709f29dc234cdf8df05892e1fdfe9e3534052a15e2e92392ca461972b0e5.png')" role="img" aria-label="Breathless Cabo San Lucas photo 8"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/237972/cbfaf002dd2fb60c8f2321d027a6b754cd1ab20cabb4877f46d5bd19cf347519.png')" role="img" aria-label="Breathless Cabo San Lucas photo 9"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/237972/4f65b6387fa9138d5cb49229b181cc11c8804a77e51439786df2c2fdeee5215a.png')" role="img" aria-label="Breathless Cabo San Lucas photo 10"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/237972/4e67533a446159b77ce4cd3d091e417b9dcb079341a893858915f00c51133340.png')" role="img" aria-label="Breathless Cabo San Lucas photo 11"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/237972/447b67058cdcdce6626fc010278a27d6f4567c8371cd886deca03d6e7c9924a8.png')" role="img" aria-label="Breathless Cabo San Lucas photo 12"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/237972/bc61de5d769b072020c23227b5942ad479e7dbd43b74de8032e417005ad81b7a.png')" role="img" aria-label="Breathless Cabo San Lucas photo 13"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/237972/2ebfb425e518ceb4bbba8c40285d0d6105775f029abad5ad5e77d14012d2f7b9.png')" role="img" aria-label="Breathless Cabo San Lucas photo 14"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/237972/1194ab8180d09b113ac6917a69bfbc1c6fd8269acadd94dfd2bc9ab7a1cf32a6.png')" role="img" aria-label="Breathless Cabo San Lucas photo 15"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/237972/3f4214861773f5b97a3fdc699f6ed9833edf8cd4b6e6784b50cbfca06314114f.png')" role="img" aria-label="Breathless Cabo San Lucas photo 16"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/237972/7b945a828a6597899191339ec11f7d1e6ef4cb330d944d96f6671d65c61e3925.png')" role="img" aria-label="Breathless Cabo San Lucas photo 17"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/237972/75507ee19e7cee1dc6c36f0727d7556e5cfda87244e60e3b5926bedd1f476b66.png')" role="img" aria-label="Breathless Cabo San Lucas photo 18"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/237972/079dbce7f280a3bcf7921702896ef48d6f2facd9598f6e8783719e537ca14ec2.png')" role="img" aria-label="Breathless Cabo San Lucas photo 19"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/237972/d94d56ab9ce9465e0551cbce0592d72d696ffbf9944fc544d0f0bfe8ed138d03.png')" role="img" aria-label="Breathless Cabo San Lucas photo 20"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/237972/d4165b29becd5b0dd71645dd4af9e33f4d29ca2d9352e6fa83db28e3d994aa6e.png')" role="img" aria-label="Breathless Cabo San Lucas photo 21"></div>
+          <div class="carousel-slide" style="background-image:url('https://img.cdnpth.com/media/237972/b6fbd9cf9e823652f6c4f7ca3915150e1981a9bfde4f26553bd74ae8c692cfe9.png')" role="img" aria-label="Breathless Cabo San Lucas photo 22"></div>
+        </div>
+        <button class="carousel-btn prev" aria-label="Previous image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="carousel-btn next" aria-label="Next image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+        <div class="carousel-dots"></div>
+      </div>
+
+      <div class="card-body" style="padding-top:26px;">
+        <div class="amenity-grid">
+          <div class="amenity-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><path d="M2 21v-2a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v2"/></svg><span>Adults only (18+) · Cabo San Lucas</span></div>
+          <div class="amenity-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M6 17l-1-9h14l-1 9M9 8V5h6v3"/><circle cx="12" cy="12" r="1.5"/></svg><span>Airport transfers included</span></div>
+          <div class="amenity-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16s2-2 5-2 5 2 5 2 2-2 5-2 5 2 5 2"/><path d="M2 11s2-2 5-2 5 2 5 2 2-2 5-2 5 2 5 2"/></svg><span>Opposite El Médano · next to the marina</span></div>
+          <div class="amenity-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 8c0 4 3 6 7 6M19 8c0 4-3 6-7 6"/></svg><span>Full spa: sauna, steam, hydromassage, treatments</span></div>
+          <div class="amenity-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18M5 11V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4M5 17h14"/></svg><span>6 restaurants · 24-hr room service · pool &amp; beach waiter service</span></div>
+          <div class="amenity-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><span>Nightclub, nightly shows &amp; theme events</span></div>
+        </div>
+
+        <h4 class="rooms-head">Choose your room</h4>
+        <p class="rooms-sub">Two room categories. Rates are for two adults, 7 nights, taxes included.</p>
+
+        <label class="room-row">
+          <input type="radio" class="room-radio" name="room_breathless" data-resort="Breathless Cabo San Lucas Resort & Spa" data-room="Allure King Marina View" data-swa="4682.13" data-ua="4456.39" checked>
+          <div class="room-info">
+            <div class="room-name">Allure King Marina View</div>
+            <div class="room-detail">Marina view · balcony · living room, pillow menu, minibar (replenished daily), safe, bathtub, coffee/tea facilities, WiFi</div>
+          </div>
+          <div class="room-price"><div class="amt">—</div><div class="delta"></div><div class="pp"></div></div>
+        </label>
+
+        <label class="room-row">
+          <input type="radio" class="room-radio" name="room_breathless" data-resort="Breathless Cabo San Lucas Resort & Spa" data-room="Xhale Club King Marina View" data-swa="5314.77" data-ua="5089.03">
+          <div class="room-info">
+            <div class="room-name">Xhale Club King Marina View</div>
+            <div class="room-detail">Deluxe marina view · Xhale Club concierge level · balcony, living room, pillow menu, minibar, safe, bathtub, WiFi</div>
+          </div>
+          <div class="room-price"><div class="amt">—</div><div class="delta"></div><div class="pp"></div></div>
+        </label>
+
+        <div class="package-box" data-pkg="room_breathless">
+          <div class="pk-kicker" data-pk-kicker>Package rate · all-in · <span class="pk-air">Southwest</span></div>
+          <div class="pk-amount" data-pk-amount>—</div>
+          <div class="pk-pp" data-pk-pp></div>
+          <ul class="pk-includes">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>7 nights all-inclusive at Breathless Cabo San Lucas (taxes &amp; gratuities included)</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Round-trip nonstop air, Houston ⇄ Los Cabos</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Round-trip airport transfers</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>In-room sparkling wine breakfast, 25% spa discount &amp; a complimentary bottle</li>
+          </ul>
+          <div class="pk-schedule">
+            <span class="sch-item"><span class="sch-label">Deposit</span> <strong data-pk-deposit>—</strong></span>
+            <span class="sch-item"><span class="sch-label">Balance by Sept 1</span> <strong data-pk-balance>—</strong></span>
+          </div>
+          <p class="pk-fine">Shown for the room and airline selected above. Switching airline or room updates the total. Final pricing is confirmed by Christina before booking.</p>
+          <p class="provisional-flag">Estimated package; final supplier rate confirmed before booking.</p>
+        </div>
+        <div class="card-select">
+          <label>
+            <input type="radio" name="resort_choice" data-group="room_breathless" value="Breathless Cabo San Lucas Resort & Spa" data-base="3786">
+            <span class="check-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></span>
+            <span class="select-text">Select Breathless Cabo San Lucas</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+      </div>
+</section>
+
+<!-- ============ NOTES ============ -->
+<section class="section alt">
+  <div class="section-head" style="text-align:center;">
+    <h2>Anything you'd like me to know</h2>
+    <p class="subhead">Date flexibility, a second room for the other couple, fishing-charter timing — put it here.</p>
+  </div>
+  <div class="notes-wrap" style="margin-top:24px;">
+    <textarea id="tripNotes" placeholder="e.g. We'd like a second room quoted for the other couple, or we're flexible on dates by a day or two..."></textarea>
+  </div>
+</section>
+
+<!-- ============ FORM ============ -->
+<section class="form-section">
+  <div class="form-card">
+    <div class="section-head" style="text-align:center;margin-bottom:8px;">
+      <h2>Send me your pick</h2>
+      <p class="subhead">I'll run a full supplier sweep on your choice and come back with confirmed pricing.</p>
+    </div>
+
+    <form id="tripForm">
+      <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+      <input type="hidden" name="subject" value="Wilchek — Cabo San Lucas All-Inclusive Selections">
+      <input type="hidden" name="from_name" value="Wilchek — PMTP Trip Form">
+      <input type="hidden" name="redirect" value="false">
+
+      <input type="hidden" name="Resort_Choice" id="hidden_resort">
+      <input type="hidden" name="Room_Choice" id="hidden_room">
+      <input type="hidden" name="Airline_Choice" id="hidden_flight">
+      <input type="hidden" name="Estimated_Total" id="hidden_total">
+      <input type="hidden" name="Deposit" id="hidden_deposit">
+      <input type="hidden" name="Balance_Due_Sept1" id="hidden_balance">
+      <input type="hidden" name="Trip_Notes" id="hidden_notes">
+
+      <label class="field-label">Name
+        <input type="text" name="Name" required>
+      </label>
+      <label class="field-label">Email
+        <input type="email" name="Email" required>
+      </label>
+      <label class="field-label">Phone
+        <input type="tel" name="Phone">
+      </label>
+
+      <div class="form-summary" id="formSummary">
+        <div class="fs-label">Your current selection</div>
+        <div class="fs-line"><span id="fs-resort">Riu Santa Fe</span> · <span id="fs-room">—</span> · <span id="fs-air">Southwest</span></div>
+        <div class="fs-total"><span id="fs-total">—</span> <span class="fs-pp" id="fs-pp"></span></div>
+        <div class="fs-sched"><span id="fs-deposit">—</span> deposit · balance <span id="fs-balance">—</span> by Sept 1</div>
+        <div class="fs-note">Change your airline, resort, or room above and this updates.</div>
+      </div>
+
+      <div class="insurance-group">
+        <div class="ig-title">Travel insurance</div>
+        <label class="insurance-opt">
+          <input type="radio" name="Insurance_Choice" value="Yes — please send me a travel insurance quote" required>
+          Yes, please send me a travel insurance quote
+        </label>
+        <label class="insurance-opt">
+          <input type="radio" name="Insurance_Choice" value="No — I decline travel insurance and accept the risks of traveling without coverage" required>
+          No, I decline insurance and understand the risks
+        </label>
+      </div>
+
+      <button type="submit" class="submit-btn">Send my selections</button>
+    </form>
+
+    <div class="thanks-msg" id="thanksMsg">
+      <h3>Got it — thank you.</h3>
+      <p>Your selections are on the way to Christina. I'll run a full supplier sweep and come back with confirmed pricing shortly.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RUNNING TOTAL BAR ============ -->
+<div class="total-bar">
+  <div class="total-bar-inner">
+    <div class="tb-label"><span id="tb-resort">Riu Santa Fe</span> · <span id="tb-flight">Southwest</span> · <span id="tb-deposit">—</span> deposit</div>
+    <div>
+      <span class="tb-amount" id="tb-amount">—</span>
+      <span class="tb-pp" id="tb-pp"></span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="f-name">Christina Garcia</div>
+    <div class="f-contact">
+      Point Me to Paradise Travel · <a id="emailLink" href="#">email</a> · (281) 229-0862
+    </div>
+    <p class="f-disclosure">Individual hotels, transfers, and tours in your quote are priced at publicly available rates — and in many cases lower than what you'd find on your own. You don't have to worry about overpaying for a piece of your trip. What you're paying for is the rest: the right rooms at the right property, operators we've used for years, the trip app, and a human who answers when something doesn't go to plan.</p>
+    <p class="f-rate">All rates carry an "Est." prefix and are confirmed before booking. Best-Rate Assurance applies to individual components — every hotel night, cruise rate, and tour is priced at publicly available rates, and if you find the same component for less elsewhere, we'll match it.</p>
+  </div>
+</footer>
+
+<script>
+/* ---------- Email assembly (Cloudflare-safe) ---------- */
+(function () {
+  var addr = 'Christina' + '@' + 'PointMeToParadise.com';
+  var el = document.getElementById('emailLink');
+  el.href = 'mailto:' + addr;
+  el.textContent = addr;
+})();
+
+/* ---------- Carousels ---------- */
+document.querySelectorAll('[data-carousel]').forEach(function (car) {
+  var track = car.querySelector('.carousel-track');
+  var slides = car.querySelectorAll('.carousel-slide');
+  var dotsWrap = car.querySelector('.carousel-dots');
+  var idx = 0;
+
+  slides.forEach(function (_, i) {
+    var dot = document.createElement('button');
+    dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Go to image ' + (i + 1));
+    dot.addEventListener('click', function () { go(i); });
+    dotsWrap.appendChild(dot);
+  });
+  var dots = dotsWrap.querySelectorAll('.carousel-dot');
+
+  function go(n) {
+    idx = (n + slides.length) % slides.length;
+    track.style.transform = 'translateX(' + (-idx * 100) + '%)';
+    dots.forEach(function (d, i) { d.classList.toggle('active', i === idx); });
+  }
+  car.querySelector('.prev').addEventListener('click', function () { go(idx - 1); });
+  car.querySelector('.next').addEventListener('click', function () { go(idx + 1); });
+
+  // swipe
+  var startX = 0;
+  car.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
+  car.addEventListener('touchend', function (e) {
+    var dx = e.changedTouches[0].clientX - startX;
+    if (dx > 40) go(idx - 1);
+    else if (dx < -40) go(idx + 1);
+  }, { passive: true });
+});
+
+/* ---------- Two-track package pricing engine ---------- */
+var DEPOSITS = { Southwest: 1843.46, United: 500 };
+
+function fmt(n) {
+  return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+}
+function fmtCents(n) {
+  return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+function currentAir() {
+  var a = document.querySelector('input[name="air_track"]:checked');
+  return a ? a.value : 'Southwest';
+}
+function priceFor(roomEl, air) {
+  return parseFloat(air === 'United' ? roomEl.dataset.ua : roomEl.dataset.swa);
+}
+
+// Update every room row's displayed price for the selected air track
+function refreshRoomPrices(air) {
+  // group rooms by resort radio name to compute cheapest-in-group for delta anchoring
+  var groups = {};
+  document.querySelectorAll('.room-radio').forEach(function (rm) {
+    (groups[rm.name] = groups[rm.name] || []).push(rm);
+  });
+  Object.keys(groups).forEach(function (name) {
+    var rooms = groups[name];
+    var base = Math.min.apply(null, rooms.map(function (r) { return priceFor(r, air); }));
+    rooms.forEach(function (rm) {
+      var price = priceFor(rm, air);
+      var pp = Math.round(price / 2);
+      var row = rm.closest('.room-row');
+      var amtEl = row.querySelector('.amt');
+      var deltaEl = row.querySelector('.delta');
+      var ppEl = row.querySelector('.pp');
+      amtEl.textContent = 'Est. ' + fmt(price);
+      ppEl.textContent = 'Est. ' + fmt(pp) + ' / person';
+      var d = Math.round(price - base);
+      deltaEl.textContent = d > 0 ? ('Adds Est. ' + fmt(d)) : '';
+    });
+  });
+}
+
+// Update each resort's package box for the selected air track + that resort's selected room
+function refreshPackageBoxes(air) {
+  document.querySelectorAll('.package-box[data-pkg]').forEach(function (box) {
+    var name = box.dataset.pkg;
+    var checked = document.querySelector('.room-radio[name="' + name + '"]:checked');
+    if (!checked) return;
+    var price = priceFor(checked, air);
+    var pp = Math.round(price / 2);
+    var deposit = DEPOSITS[air];
+    var balance = price - deposit;
+    box.querySelector('.pk-air').textContent = air;
+    box.querySelector('[data-pk-amount]').textContent = 'Est. ' + fmt(price);
+    box.querySelector('[data-pk-pp]').textContent = 'Est. ' + fmt(pp) + ' per person · 2 adults';
+    box.querySelector('[data-pk-deposit]').textContent = fmtCents(deposit);
+    box.querySelector('[data-pk-balance]').textContent = 'Est. ' + fmtCents(balance);
+  });
+}
+
+// Update the running total bar + form summary for active resort/room/air
+function refreshActive() {
+  var air = currentAir();
+  var resortInput = document.querySelector('input[name="resort_choice"]:checked');
+  if (!resortInput) return;
+  var resortValue = resortInput.value;
+  var shortResort = resortValue.split(' — ')[0];
+
+  // find the resort's room radio group via the selected card's matching room name prefix
+  // map resort value to room group name
+  var groupName = resortInput.dataset.group;
+  var checked = document.querySelector('.room-radio[name="' + groupName + '"]:checked');
+  if (!checked) return;
+
+  var price = priceFor(checked, air);
+  var pp = Math.round(price / 2);
+  var deposit = DEPOSITS[air];
+  var balance = price - deposit;
+  var roomName = checked.dataset.room;
+
+  // total bar
+  document.getElementById('tb-resort').textContent = shortResort;
+  document.getElementById('tb-flight').textContent = air;
+  document.getElementById('tb-deposit').textContent = fmtCents(deposit);
+  document.getElementById('tb-amount').textContent = 'Est. ' + fmt(price);
+  document.getElementById('tb-pp').textContent = '· Est. ' + fmt(pp) + ' / person';
+
+  // form summary
+  document.getElementById('fs-resort').textContent = shortResort;
+  document.getElementById('fs-room').textContent = roomName;
+  document.getElementById('fs-air').textContent = air;
+  document.getElementById('fs-total').textContent = 'Est. ' + fmt(price);
+  document.getElementById('fs-pp').textContent = '· Est. ' + fmt(pp) + ' / person · 2 adults';
+  document.getElementById('fs-deposit').textContent = fmtCents(deposit);
+  document.getElementById('fs-balance').textContent = 'Est. ' + fmtCents(balance);
+
+  // hidden fields
+  document.getElementById('hidden_resort').value = resortValue;
+  document.getElementById('hidden_room').value = roomName;
+  document.getElementById('hidden_flight').value = air;
+  document.getElementById('hidden_total').value = 'Est. ' + fmtCents(price) + ' (Est. ' + fmt(pp) + '/person)';
+  document.getElementById('hidden_deposit').value = fmtCents(deposit);
+  document.getElementById('hidden_balance').value = 'Est. ' + fmtCents(balance);
+}
+
+function refreshAll() {
+  var air = currentAir();
+  refreshRoomPrices(air);
+  refreshPackageBoxes(air);
+  refreshActive();
+}
+
+// Wire up air toggle
+document.querySelectorAll('input[name="air_track"]').forEach(function (a) {
+  a.addEventListener('change', refreshAll);
+});
+// Resort select radios
+document.querySelectorAll('input[name="resort_choice"]').forEach(function (r) {
+  r.addEventListener('change', refreshActive);
+});
+// Room radios: selecting a room makes its resort the active one
+document.querySelectorAll('.room-radio').forEach(function (rm) {
+  rm.addEventListener('change', function () {
+    var resortRadio = document.querySelector('input[name="resort_choice"][data-group="' + rm.name + '"]');
+    if (resortRadio) resortRadio.checked = true;
+    refreshAll();
+  });
+});
+
+refreshAll();
+
+/* ---------- Form submit ---------- */
+document.getElementById('tripForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  refreshActive();
+  document.getElementById('hidden_notes').value = document.getElementById('tripNotes').value;
+
+  var form = e.target;
+  var data = new FormData(form);
+
+  fetch('https://api.web3forms.com/submit', { method: 'POST', body: data })
+    .then(function (res) { return res.json(); })
+    .then(function (json) {
+      if (json.success) {
+        form.style.display = 'none';
+        document.getElementById('thanksMsg').classList.add('show');
+      } else {
+        alert('Something went wrong. Please email Christina directly or text (281) 229-0862.');
+      }
+    })
+    .catch(function () {
+      alert('Something went wrong. Please email Christina directly or text (281) 229-0862.');
+    });
+});
+</script>
+
+</body>
+</html>
