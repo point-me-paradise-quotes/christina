@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taylor & Megan Shaw — Ireland & Scotland | Point Me to Paradise Travel</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --aqua-pale: #C4E4E1;
+    --aqua-mist: #EAF3F2;
+    --aqua: #75AFB1;
+    --aqua-dark: #4F8A8C;
+    --sand: #ECE7DC;
+    --sand-light: #F4F1E9;
+    --gold-whisper: #D6C8A8;
+    --white: #FFFFFF;
+    --paper: #FBFDFD;
+    --ink: #2B2420;
+    --ink-soft: #6B6359;
+    --line: #E5E9E8;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    background-image: url('https://cdn.kimkim.com/files/a/content_articles/featured_photos/030d0c0c02cdf504db0285d6fa2053e060243273/big-a1bcddf5a3edec8210358388197d7ef5.jpg');
+    background-size: cover;
+    background-position: center 40%;
+    padding: 90px 32px 70px;
+    text-align: center;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(160deg, rgba(79,138,140,0.72) 0%, rgba(43,36,32,0.60) 100%);
+  }
+  .hero-inner { position: relative; z-index: 1; }
+  .pmtp-wordmark {
+    font-family: 'Playfair Display', serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--aqua-pale);
+    margin-bottom: 20px;
+    display: block;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.15;
+    margin-bottom: 14px;
+  }
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--aqua-pale);
+    margin-bottom: 26px;
+  }
+  .hero-desc {
+    font-size: 0.97rem;
+    color: rgba(255,255,255,0.88);
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* ── INTRO ── */
+  .intro-band {
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+    padding: 38px 32px;
+    text-align: center;
+  }
+  .intro-band p {
+    max-width: 720px;
+    margin: 0 auto;
+    font-size: 1.02rem;
+    color: var(--ink-soft);
+    line-height: 1.75;
+  }
+  .commitment-strip {
+    background: var(--aqua-pale);
+    border-left: 3px solid var(--aqua-dark);
+    padding: 16px 24px;
+    margin: 24px auto 0;
+    max-width: 680px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: var(--ink);
+    text-align: left;
+    line-height: 1.65;
+  }
+
+  /* ── HOW-TO ── */
+  .how-section {
+    background: var(--aqua-mist);
+    padding: 40px 32px;
+    text-align: center;
+  }
+  .how-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.55rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+  .how-section .sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 1.05rem;
+    margin-bottom: 22px;
+  }
+  .how-steps {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .step-chip {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 14px 20px;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    flex: 1;
+    min-width: 180px;
+    max-width: 220px;
+    line-height: 1.5;
+  }
+  .step-chip strong {
+    display: block;
+    color: var(--aqua-dark);
+    font-size: 0.78rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* ── COUNTRY SECTIONS ── */
+  .country-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 24px 32px;
+  }
+  .country-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 30px;
+    padding-bottom: 18px;
+    border-bottom: 2px solid var(--aqua-pale);
+  }
+  .country-flag {
+    font-size: 2.2rem;
+  }
+  .country-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .country-header .region-note {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 1rem;
+    margin-top: 2px;
+  }
+
+  /* ── REGION GROUPS ── */
+  .region-group {
+    margin-bottom: 36px;
+  }
+  .region-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--aqua-dark);
+    margin-bottom: 14px;
+    padding-left: 2px;
+  }
+
+  /* ── ATTRACTION CARDS ── */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+  }
+
+  .attraction-card {
+    background: var(--white);
+    border: 1.5px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.2s, border-color 0.2s, transform 0.15s;
+    cursor: pointer;
+    position: relative;
+  }
+  .attraction-card:hover {
+    box-shadow: 0 6px 24px rgba(79,138,140,0.14);
+    border-color: var(--aqua);
+    transform: translateY(-2px);
+  }
+  .attraction-card.selected {
+    border-color: var(--aqua-dark);
+    box-shadow: 0 0 0 3px var(--aqua-pale);
+  }
+
+  .card-rank-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 30px;
+    height: 30px;
+    background: var(--aqua-dark);
+    color: var(--white);
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    z-index: 2;
+  }
+  .attraction-card.selected .card-rank-badge { display: flex; }
+
+  .card-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    background: var(--aqua-mist);
+  }
+
+  .card-body {
+    padding: 16px 18px 18px;
+  }
+  .card-category {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--aqua);
+    margin-bottom: 5px;
+  }
+  .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.12rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 8px;
+    line-height: 1.25;
+  }
+  .card-region-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    background: var(--sand-light);
+    color: var(--ink-soft);
+    border-radius: 20px;
+    padding: 2px 10px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .card-desc {
+    font-size: 0.86rem;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+  .card-detail {
+    margin-top: 10px;
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    line-height: 1.55;
+    display: none;
+    border-top: 1px solid var(--line);
+    padding-top: 10px;
+  }
+  .attraction-card.expanded .card-detail { display: block; }
+
+  .card-toggle {
+    background: none;
+    border: none;
+    color: var(--aqua-dark);
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 8px 0 0;
+    display: block;
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 0.04em;
+  }
+  .card-toggle:hover { text-decoration: underline; }
+
+  .card-select-btn {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    padding: 9px 0;
+    background: var(--aqua-mist);
+    border: 1.5px solid var(--aqua);
+    border-radius: 6px;
+    color: var(--aqua-dark);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .card-select-btn:hover { background: var(--aqua-pale); }
+  .attraction-card.selected .card-select-btn {
+    background: var(--aqua-dark);
+    color: var(--white);
+    border-color: var(--aqua-dark);
+  }
+
+  /* ── RANKING SIDEBAR ── */
+  .ranking-panel {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 210px;
+    background: var(--white);
+    border: 1.5px solid var(--line);
+    border-radius: 12px;
+    padding: 20px 16px;
+    box-shadow: 0 8px 32px rgba(43,36,32,0.10);
+    z-index: 100;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+  .ranking-panel h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .ranking-panel .rp-sub {
+    font-size: 0.73rem;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+    line-height: 1.4;
+  }
+  .rank-list { list-style: none; }
+  .rank-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.78rem;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+  .rank-list li:last-child { border-bottom: none; }
+  .rank-num {
+    font-weight: 700;
+    color: var(--aqua-dark);
+    font-size: 0.8rem;
+    min-width: 18px;
+  }
+  .rank-name { flex: 1; }
+  .rank-remove {
+    background: none;
+    border: none;
+    color: var(--ink-soft);
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0;
+    line-height: 1;
+  }
+  .rank-remove:hover { color: #b91c1c; }
+  .rank-empty {
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    font-style: italic;
+    text-align: center;
+    padding: 10px 0;
+  }
+  .rp-divider {
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--aqua-dark);
+    margin: 10px 0 6px;
+    font-weight: 600;
+  }
+
+  /* ── DIVIDER BAND ── */
+  .divider-band {
+    background: var(--aqua-mist);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    height: 6px;
+  }
+
+  /* ── FORM SECTION ── */
+  .form-section {
+    background: var(--white);
+    padding: 56px 24px 64px;
+    text-align: center;
+  }
+  .form-inner {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .form-commitment {
+    background: var(--aqua-pale);
+    border-radius: 8px;
+    padding: 20px 24px;
+    font-size: 0.92rem;
+    color: var(--ink);
+    line-height: 1.7;
+    margin-bottom: 32px;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+  }
+  .form-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .form-section .form-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 1.05rem;
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  .form-group { margin-bottom: 18px; }
+  .form-group label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    border: 1.5px solid var(--line);
+    border-radius: 7px;
+    padding: 11px 14px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    color: var(--ink);
+    background: var(--paper);
+    transition: border-color 0.15s;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--aqua);
+  }
+  .form-group textarea { resize: vertical; min-height: 110px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  #form-error {
+    display: none;
+    background: #fff1f1;
+    border: 1px solid #f5c6c6;
+    border-radius: 6px;
+    padding: 14px 18px;
+    font-size: 0.875rem;
+    color: #b91c1c;
+    margin-bottom: 16px;
+  }
+  .submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: var(--aqua-dark);
+    color: var(--white);
+    border: none;
+    border-radius: 7px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+    margin-top: 6px;
+  }
+  .submit-btn:hover:not(:disabled) { background: var(--aqua); }
+  .submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+  #thank-you {
+    display: none;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  #thank-you h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+  #thank-you p {
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--sand-light);
+    border-top: 1px solid var(--line);
+    padding: 36px 32px;
+    text-align: center;
+  }
+  .footer-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+  .footer-title {
+    font-size: 0.83rem;
+    color: var(--ink-soft);
+    margin-bottom: 6px;
+  }
+  .footer-agency {
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--aqua-dark);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .footer-contact {
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    line-height: 1.8;
+  }
+  .footer-contact a { color: var(--aqua-dark); text-decoration: none; }
+  .footer-contact a:hover { text-decoration: underline; }
+  .disclaimer {
+    max-width: 660px;
+    margin: 22px auto 0;
+    font-size: 0.75rem;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    border-top: 1px solid var(--line);
+    padding-top: 18px;
+  }
+
+  /* ── OPTIONAL BADGE ── */
+  .optional-badge {
+    display: inline-block;
+    font-size: 0.65rem;
+    background: var(--gold-whisper);
+    color: var(--ink);
+    border-radius: 12px;
+    padding: 2px 9px;
+    margin-left: 6px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+
+  /* ── SECTION TITLE ── */
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--ink);
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .section-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 900px) {
+    .ranking-panel { display: none; }
+  }
+  @media (max-width: 600px) {
+    .form-row { grid-template-columns: 1fr; }
+    .how-steps { flex-direction: column; align-items: center; }
+    .step-chip { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-inner">
+    <span class="pmtp-wordmark">Point Me to Paradise Travel</span>
+    <h1>Ireland & Scotland<br>Your Way</h1>
+    <p class="hero-sub">A curated look at possibilities that await</p>
+    <p class="hero-desc">My Ireland specialist and I gathered every destination we think belongs on your radar — castles on clifftops, volcanic landscapes, medieval underground streets, and the quieter corners most itineraries miss. Your only job right now: tell me what excites you most, what you can do without.</p>
+  </div>
+</section>
+
+<!-- ── COMMITMENT 1 ── -->
+<div class="intro-band">
+  <p>We don't book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. The work you'd hate doing — already done.</p>
+  <div class="commitment-strip">
+    <strong>How this works:</strong> Read through the destinations below — each one is researched and described so you get a real sense of what you'd experience on the ground. Select the places that genuinely interest you, then rank them from most to least wanted, separately for Ireland and Scotland. I will take your priorities straight to my favorite Ireland/Scotland contact and together we will start building your itinerary.
+  </div>
+</div>
+
+<!-- ── HOW TO RANK ── -->
+<div class="how-section">
+  <h2>How to Use This Page</h2>
+  <p class="sub">Three steps — takes about 10 minutes</p>
+  <div class="how-steps">
+    <div class="step-chip">
+      <strong>Step 1 — Read</strong>
+      Click "Learn More" on any card to expand its full description. Take your time — these are real places worth knowing.
+    </div>
+    <div class="step-chip">
+      <strong>Step 2 — Select</strong>
+      Click "Add to My List" on every destination that interests you. Your picks appear in the sidebar (or scroll to the bottom on mobile).
+    </div>
+    <div class="step-chip">
+      <strong>Step 3 — Submit</strong>
+      Paste your ordered lists into the message field below and send them to Christina. She'll get to work.
+    </div>
+  </div>
+</div>
+
+<!-- ── RANKING PANEL (desktop) ── -->
+<div class="ranking-panel" id="rankingPanel">
+  <h3>Your Picks</h3>
+  <p class="rp-sub">Select attractions below. Remove them here to adjust.</p>
+
+  <div class="rp-divider">🇮🇪 Ireland</div>
+  <ul class="rank-list" id="irelandRankList">
+    <li class="rank-empty" id="irelandEmpty">None selected yet</li>
+  </ul>
+
+  <div class="rp-divider">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</div>
+  <ul class="rank-list" id="scotlandRankList">
+    <li class="rank-empty" id="scotlandEmpty">None selected yet</li>
+  </ul>
+</div>
+
+<!-- ══════════════════════════════
+     IRELAND
+══════════════════════════════ -->
+<div style="background: var(--paper);">
+  <div class="country-section">
+    <div class="country-header">
+      <span class="country-flag">🇮🇪</span>
+      <div>
+        <h2>Ireland</h2>
+        <p class="region-note">County Clare · County Kerry · County Tipperary · Connemara · Northern Ireland</p>
+      </div>
+    </div>
+
+    <p class="section-tagline">From lunar limestone pavements to tower castles on lake shores — here's what Ireland has to offer</p>
+
+    <!-- COUNTY CLARE -->
+    <div class="region-group">
+      <div class="region-label">County Clare — The Wild Atlantic Edge</div>
+      <div class="cards-grid">
+
+        <div class="attraction-card" id="card-burren" data-country="ireland" data-name="The Burren">
+          <div class="card-rank-badge">–</div>
+          <img class="card-img" src="https://i.natgeofe.com/n/017d1ed6-f1a9-42a2-8cbc-f9e5ea6f9264/Irelandmonument.jpg" alt="The Burren limestone plateau" loading="lazy">
+          <div class="card-body">
+            <div class="card-category">Landscape · UNESCO Geopark</div>
+            <h3 class="card-title">The Burren</h3>
+            <span class="card-region-tag">County Clare</span>
+            <p class="card-desc">Ireland stripped bare. 140 square miles of exposed limestone pavement — cracked, fissured, and silver-grey — that looks nothing like the rest of the country and feels nothing like any place most people have been.</p>
+            <div class="card-detail">
+              <p>The story starts 325 million years ago when Ireland lay near the equator, its seabed slowly hardening into limestone beneath a shallow tropical sea. Glaciers scraped it clean. Then Neolithic farmers felled the trees, the thin soil blew away, and what you see today emerged. Oliver Cromwell's general reportedly dismissed it as a place with "not enough water to drown a man, wood enough to hang one, nor earth enough to bury him." He missed the point.</p>
+              <br>
+              <p>Between the limestone cracks grow 700+ species of flowering plants — Arctic, Alpine, and Mediterranean species sharing the same fissures because the rock stores summer heat and releases it through the cold months. Over 70% of Ireland's native wildflowers are here. You'll also find 23 of Ireland's 27 native orchid species, 30 of 35 butterfly species, and one of Europe's largest populations of feral goats.</p>
+              <br>
+              <p>This is the landscape that inspired artists, geologists, and quiet afternoon drives alike. It pairs naturally with the Cliffs of Moher and Poulnabrone Dolmen — all within the same UNESCO Global Geopark.</p>
+            </div>
+            <button class="card-toggle" onclick="toggleCard('card-burren')">Learn More ↓</button>
+            <button class="card-select-btn" onclick="toggleSelect('card-burren', 'ireland', 'The Burren')">Add to My List</button>
+          </div>
+        </div>
+
+        <div class="attraction-card" id="card-cliffs" data-country="ireland" data-name="Cliffs of Moher">
+          <div class="card-rank-badge">–</div>
+          <img class="card-img" src="https://wildrovertours.com/wp-content/uploads/2024/12/AdobeStock_535268360.jpg" alt="Cliffs of Moher" loading="lazy">
+          <div class="card-body">
+            <div class="card-category">Natural Wonder · Wild Atlantic Way</div>
+            <h3 class="card-title">Cliffs of Moher</h3>
+            <span class="card-region-tag">County Clare</span>
+            <p class="card-desc">Fourteen kilometres of sheer Atlantic cliff face rising 214 metres above the ocean. They have been called Ireland's most important view, and they earn the description — not because everyone goes, but because the scale of standing at the edge earns it.</p>
+            <div class="card-detail">
+              <p>The cliffs were formed over 320 million years ago and sit atop the Burren as its most dramatic western edge, where the limestone meets the darker siltstones and shales that make up the cliff faces themselves. On clear days, you can see the Aran Islands, Galway Bay, the Maamturk Mountains, and as far as County Kerry. O'Brien's Tower — a Victorian-era observation post built in 1835 — marks the highest viewpoint.</p>
+              <br>
+              <p>The visitor experience centers on 800 metres of paved pathways along the cliff edge with designated viewing platforms. Come early (before 10 a.m.) or late (after 4 p.m.) for smaller crowds and better light. For a completely different perspective, Doolin Ferry offers boat tours beneath the cliff face — the view from the water shows the scale no path can convey, and puffin colonies nest in the rock face each spring and summer.</p>
+              <br>
+              <p>The eco-friendly visitor centre is built into the hillside — think The Shire — and houses an immersive geological exhibition, the 4D Ledge Experience, a café with cliff views, and a craft hall featuring local artisans. Allow at least two hours.</p>
+            </div>
+            <button class="card-toggle" onclick="toggleCard('card-cliffs')">Learn More ↓</button>
+            <button class="card-select-btn" onclick="toggleSelect('card-cliffs', 'ireland', 'Cliffs of Moher')">Add to My List</button>
+          </div>
+        </div>
+
+        <div class="attraction-card" id="card-poulnabrone" data-country="ireland" data-name="Poulnabrone Dolmen & Iron Age Forts">
+          <div class="card-rank-badge">–</div>
+          <img class="card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSat-8enwV9dg7Bmq8CqnESzlNAnXGqD8Yvqw&s" alt="Poulnabrone Dolmen" loading="lazy">
+          <div class="card-body">
+            <div class="card-category">Ancient History · Neolithic</div>
+            <h3 class="card-title">Poulnabrone Dolmen & Iron Age Stone Forts</h3>
+            <span class="card-region-tag">County Clare / The Burren</span>
+            <p class="card-desc">A 5,500-year-old portal tomb that held the remains of 21 people — not a ruin, exactly. More of an argument for permanence. Set in the middle of the Burren's limestone, it's one of the oldest intact structures in Ireland.</p>
+            <div class="card-detail">
+              <p>Poulnabrone — "hole of sorrows" in Irish — dates to between 4200 and 2900 BC. When excavated, it was found to contain the skeletal remains of up to 21 individuals along with a polished stone pendant and ceramic fragments. It is thought to have served as a territorial marker for an ancient tribal boundary within the Burren.</p>
+              <br>
+              <p>The Iron Age stone forts of the Burren are equally compelling. Caherconnell, one of the best-preserved examples in the region, has its own visitor centre and offers sheepdog demonstrations that show how the landscape has been farmed — against all appearances — for thousands of continuous years. The forts are dry-stone circular enclosures, some with walls up to four metres high, built without mortar and still standing after 2,000 years.</p>
+              <br>
+              <p>Together, these sites make the Burren something more than a landscape — they make it a record of human occupation stretching from the Stone Age to the present day.</p>
+            </div>
+            <button class="card-toggle" onclick="toggleCard('card-poulnabrone')">Learn More ↓</button>
+            <button class="card-select-btn" onclick="toggleSelect('card-poulnabrone', 'ireland', 'Poulnabrone Dolmen & Iron Age Forts')">Add to My List</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- COUNTY KERRY -->
+    <div class="region-group">
+      <div class="region-label">County Kerry — Lakes, Castles & Mountain Roads</div>
+      <div class="cards-grid">
+
+        <div class="attraction-card" id="card-killarney" data-country="ireland" data-name="Killarney National Park">
+          <div class="card-rank-badge">–</div>
+          <img class="card-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/ff/20/1d/the-little-lake-on-gap.jpg?w=900&h=500&s=1" alt="Killarney National Park" loading="lazy">
+          <div class="card-body">
+            <div class="card-category">National Park · Lakes & Mountains</div>
+            <h3 class="card-title">Killarney National Park</h3>
+            <span class="card-region-tag">County Kerry</span>
+            <p class="card-desc">Ireland's first national park — 25,000 acres of lakeland, native oak forest, mountain passes, and the only wild herd of red deer in the country. The whole thing was gifted to the Irish state in 1932 by an American family who fell in love with it.</p>
+            <div class="card-detail">
+              <p>Three lakes — Lough Leane, Muckross Lake, and Upper Lake — sit at the foot of the MacGillycuddy Reeks, Ireland's highest mountain range. The landscape was carved by glaciers over the last ice age, and the result is a series of valley views, hidden waterfalls, and lake islands (Innisfallen Island holds the ruins of a 7th-century monastery) that reward slow, unhurried travel.</p>
+              <br>
+              <p>Cars are not permitted inside much of the park. The traditional way to travel is by jaunting cart — a horse-drawn open carriage driven by a local jarvey who doubles as historian, raconteur, and traffic enforcer. You can also hire bikes in town and follow the park roads on your own. The more determined can hike; the more relaxed can take a lake cruise.</p>
+              <br>
+              <p>Within the park: Ross Castle, Muckross House, Muckross Abbey, Torc Waterfall, Ladies View, Dinis Cottage, and the Gap of Dunloe — a narrow mountain pass that can be walked, cycled, or traversed by jaunting cart with a boat return through the lakes. Most visitors spend at least a full day here and still leave things undone.</p>
+            </div>
+            <button class="card-toggle" onclick="toggleCard('card-killarney')">Learn More ↓</button>
+            <button class="card-select-btn" onclick="toggleSelect('card-killarney', 'ireland', 'Killarney National Park')">Add to My List</button>
+          </div>
+        </div>
+
+        <div class="attraction-card" id="card-rosscastle" data-country="ireland" data-name="Ross Castle">
+          <div class="card-rank-badge">–</div>
+          <img class="card-img" src="https://t3.ftcdn.net/jpg/01/85/67/76/360_F_185677680_t7WJvGNdCX18ChK9hwiYpneNusUtvqSf.jpg" alt="Ross Castle Killarney" loading="lazy">
+          <div class="card-body">
+            <div class="card-category">Medieval Castle · Lakeside</div>
+            <h3 class="card-title">Ross Castle</h3>
+            <span class="card-region-tag">Killarney National Park</span>
+            <p class="card-desc">A 15th-century tower house rising from the shore of Lough Leane. Built by the O'Donoghue Mór clan and one of the last strongholds in Munster to fall to Cromwell's forces — only surrendered, according to legend, when a warship arrived on the lake, since an old prophecy said it could never be taken by land.</p>
+            <div class="card-detail">
+              <p>The castle stands four storeys high with thick defensive walls, narrow arrow-slit windows, and two flanking towers that survive from its medieval construction. Guided tours run through the interior and cover both the castle's history and the broader saga of Gaelic Ireland's slow submission to English rule through the 16th and 17th centuries.</p>
+              <br>
+              <p>The grounds offer one of the better short walks in the park — the 5km Library Point Trail circles the castle's peninsula. Traditional rowing boats depart from the jetty beside the castle for lake tours, continuing a tradition that dates to 1896. The combination of the castle's reflection in the lake, the surrounding oak forest, and the MacGillycuddy Reeks in the distance makes for the kind of scene that earns a full afternoon rather than a quick stop.</p>
+            </div>
+            <button class="card-toggle" onclick="toggleCard('card-rosscastle')">Learn More ↓</button>
+            <button class="card-select-btn" onclick="toggleSelect('card-rosscastle', 'ireland', 'Ross Castle')">Add to My List</button>
+          </div>
+        </div>
+
+        <div class="attraction-card" id="card-muckross" data-country="ireland" data-name="Muckross House & Gardens">
+          <div class="card-rank-badge">–</div>
+          <img class="card-img" src="https://whitetravelsinternational.com/images/FP-Images/muckross-house.jpg" alt="Muckross House Killarney" loading="lazy">
+          <div class="card-body">
+            <div class="card-category">Victorian Estate · Formal Gardens</div>
+            <h3 class="card-title">Muckross House & Gardens</h3>
+            <span class="card-region-tag">Killarney National Park</span>
+            <p class="card-desc">A 65-room Tudor-style Victorian mansion built in 1843, set against Muckross Lake at the heart of the national park. Queen Victoria stayed here in 1861 — prompting her hosts to spend an extraordinary sum on preparations, ultimately bankrupting the family.</p>
+            <div class="card-detail">
+              <p>The house is impeccably preserved with its original period furnishings, artwork, and architectural details intact. Guided tours walk you through the progression of Victorian aristocratic life, from the formal drawing rooms to the servants' quarters below stairs. The 800-year-old yew tree growing in the cloisters of adjacent Muckross Abbey — a five-minute walk — is arguably the most quietly remarkable thing in the whole national park.</p>
+              <br>
+              <p>The formal gardens include a Rock Garden built from natural Burren limestone, an extensive Water Garden, a Sunken Garden, and a Walled Garden with an arboretum of southern hemisphere species. The Traditional Farms section recreates rural Kerry life from the 1930s and 1940s with costumed staff, working machinery, and livestock — a genuinely engrossing hour for anyone curious about how Ireland actually functioned before mechanisation.</p>
+            </div>
+            <button class="card-toggle" onclick="toggleCard('card-muckross')">Learn More ↓</button>
+            <button class="card-select-btn" onclick="toggleSelect('card-muckross', 'ireland', 'Muckross House & Gardens')">Add to My List</button>
+          </div>
+        </div>
+
+        <div class="attraction-card" id="card-ladiesview" data-country="ireland" data-name="Ladies View">
+          <div class="card-rank-badge">–</div>
+          <img class="card-img" src="https://media.istockphoto.com/id/1436677442/photo/ladies-view-in-county-kerry-ireland.jpg?s=612x612&w=0&k=20&c=uCBHJ6E4OqkNeox8uo2hCwowBOP9dBW_BZD_tJmZtdQ=" alt="Ladies View Ring of Kerry" loading="lazy">
+          <div class="card-body">
+            <div class="card-category">Scenic Viewpoint · Ring of Kerry</div>
+            <h3 class="card-title">Ladies View</h3>
+            <span class="card-region-tag">Ring of Kerry (near Sheen Falls)</span>
+            <p class="card-desc">One of Ireland's most photographed viewpoints, and one of its most honestly earned. You pull over on the N71 and the lakes of Killarney open up below — three of them, framed by mountain ridges and native forest that stretches for miles without a building in sight.</p>
+            <div class="card-detail">
+              <p>The name comes from Queen Victoria's 1861 visit. Her ladies-in-waiting reportedly stopped here and found the view so striking that it became the point of reference for all subsequent viewpoints in the park. The estate café on-site has operated since 1937 — a reasonable excuse to slow down and take it in rather than just photographing from the car window.</p>
+              <br>
+              <p>Ladies View sits about 16 minutes from Muckross House and 30 minutes from Sheen Falls Lodge, making it a natural pause on the route between Killarney and Kenmare. Upper Lake and the edge of Muckross Lake are visible from the roadside viewpoint, with the MacGillycuddy Reeks behind. Early morning, before the coaches arrive, this is one of the most quietly extraordinary stops in Kerry.</p>
+            </div>
+            <button class="card-toggle" onclick="toggleCard('card-ladiesview')">Learn More ↓</button>
+            <button class="card-select-btn" onclick="toggleSelect('card-ladiesview', 'ireland', 'Ladies View')">Add to My List</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CASHEL -->
+    <div class="region-group">
+      <div class="region-label">County Tipperary — En Route to Dublin</div>
+      <div class="cards-grid">
+
+        <div class="attraction-card" id="card-cashel" data-country="ireland" data-name="Rock of Cashel">
+          <div class="card-rank-badge">–</div>
+          <img class="card-img" src="https://whitetravelsinternational.com/images/attractions/12-rock-cashel.jpg" alt="Rock of Cashel Tipperary" loading="lazy">
+          <div class="card-body">
+            <div class="card-category">Medieval Ecclesiastical Site</div>
+            <h3 class="card-title">Rock of Cashel</h3>
+            <span class="card-region-tag">County Tipperary — En Route</span>
+            <p class="card-desc">A limestone outcrop rising above the Golden Vale with over 1,000 years of Irish history built onto it. From a distance it looks like a place someone invented. Up close, it is denser and stranger than any photograph suggests.</p>
+            <div class="card-detail">
+              <p>The rock was the seat of the kings of Munster from the 4th century. St Patrick baptised King Aengus here in the 5th century (reportedly piercing the king's foot with his crozier in the process — the king said nothing, assuming it was part of the ceremony). Brian Boru, the only High King to unite all of Ireland, was crowned here in 978 AD.</p>
+              <br>
+              <p>The complex on the summit is extraordinary: a 12th-century round tower, Cormac's Chapel (one of the finest Romanesque churches in Ireland, containing the country's only surviving Romanesque frescoes), a 13th-century Gothic cathedral, a 15th-century castle, the Hall of the Vicars Choral housing the original St Patrick's Cross, and a graveyard with Celtic crosses dating back centuries. Allow two hours and book Cormac's Chapel separately — access is guided and limited.</p>
+              <br>
+              <p>From the summit, 360-degree views sweep across the rolling farmland of the Tipperary plain. The wind is almost always present. The feeling of standing on a rock that has been continuously inhabited and contested for 1,600 years is difficult to describe and worth experiencing.</p>
+            </div>
+            <button class="card-toggle" onclick="toggleCard('card-cashel')">Learn More ↓</button>
+            <button class="card-select-btn" onclick="toggleSelect('card-cashel', 'ireland', 'Rock of Cashel')">Add to My List</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CONNEMARA OPTIONAL -->
+    <div class="region-group">
+      <div class="region-label">Connemara, Galway <span class="optional-badge">Optional Route via West</span></div>
+      <div class="cards-grid">
+
+        <div class="attraction-card" id="card-kylemore" data-country="ireland" data-name="Kylemore Abbey">
+          <div class="card-rank-badge">–</div>
+          <img class="card-img" src="https://static.arocdn.com/Sites/50/kylemoreabbey/uploads/images/FullLengthImages/Large/KA_opening_091_1.jpg" alt="Kylemore Abbey Connemara" loading="lazy">
+          <div class="card-body">
+            <div class="card-category">Victorian Abbey · Benedictine</div>
+            <h3 class="card-title">Kylemore Abbey</h3>
+            <span class="card-region-tag">Connemara, County Galway</span>
+            <p class="card-desc">Built in 1868 as a love letter from a wealthy Victorian industrialist to his wife. She died six years later in Cairo, was carried back to Connemara, and is buried in a mausoleum on the estate grounds. The castle he built for her became an abbey and has been home to a community of Benedictine nuns for over a century.</p>
+            <div class="card-detail">
+              <p>Kylemore sits at the foot of the Twelve Bens mountain range beside a glassy lake — the reflection of the neo-Gothic building in calm water is one of the most-reproduced images in Irish tourism, and it earns it. The estate covers nearly 5,000 acres, incorporating mountains, lakeshore, and woodland that now forms part of Connemara National Park.</p>
+              <br>
+              <p>Visitors can explore the restored Victorian rooms of the abbey, the neo-Gothic church built by Mitchell Henry in his wife's memory, and the walled Victorian kitchen garden (a 10-minute shuttle away) — a six-acre garden with 21 individual enclosures, originally designed to supply the household and now restored to its full Victorian plan.</p>
+              <br>
+              <p>The Kylemore Kitchen café serves hearty meals in a converted outbuilding. The on-site shop carries chocolates, beauty products, and pottery made by the nuns themselves. The combination of romance, tragedy, history, and landscape makes Kylemore one of the most complete visitor experiences in western Ireland.</p>
+            </div>
+            <button class="card-toggle" onclick="toggleCard('card-kylemore')">Learn More ↓</button>
+            <button class="card-select-btn" onclick="toggleSelect('card-kylemore', 'ireland', 'Kylemore Abbey')">Add to My List</button>
+          </div>
+        </div>
+
+        <div class="attraction-card" id="card-connemara" data-country="ireland" data-name="Connemara National Park">
+          <div class="card-rank-badge">–</div>
+          <img class="card-img" src="https://peakvisor.com/img/news/Ireland-Connemara-National-Park.jpg" alt="Connemara National Park" loading="lazy">
+          <div class="card-body">
+            <div class="card-category">National Park · Wild Landscape</div>
+            <h3 class="card-title">Connemara National Park</h3>
+            <span class="card-region-tag">County Galway</span>
+            <p class="card-desc">Bog, mountain, heathland, and a silence that has its own weight. The Twelve Bens range defines the skyline, Killary Fjord — Ireland's only true fjord — forms the natural northern boundary, and Connemara ponies still roam the uplands in small herds.</p>
+            <div class="card-detail">
+              <p>The park centres on Diamond Hill (442m), a rewarding two-to-three-hour return hike with views across Connemara, the Atlantic, and on clear days, the Aran Islands. The trails are well-maintained and the visitor centre at Letterfrack offers good context on the ecology and history of the region before you head out.</p>
+              <br>
+              <p>The landscape is not conventionally beautiful in the way Kerry is. It is more austere — purple heather, dark bog pools, dry stone walls that disappear into the distance, and the sense of an Ireland that was always too remote and too difficult for the comfortable version of history. The area is also deeply Irish-speaking, and the road signs in this part of Galway are in Irish first.</p>
+              <br>
+              <p>Killary Fjord offers boat tours. Leenane village on the fjord's southern bank hosts the Sheep and Wool Museum and pubs that have seen very little change. The film The Field (1990) was shot here. The Quiet Man (1952) was filmed nearby in Cong — a village worth 30 minutes of any afternoon.</p>
+            </div>
+            <button class="card-toggle" onclick="toggleCard('card-connemara')">Learn More ↓</button>
+            <button class="card-select-btn" onclick="toggleSelect('card-connemara', 'ireland', 'Connemara National Park')">Add to My List</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- NORTHERN IRELAND OPTIONAL -->
+    <div class="region-group">
+      <div class="region-label">Northern Ireland <span class="optional-badge">Optional Extension</span></div>
+      <div class="cards-grid">
+
+        <div class="attraction-card" id="card-titanic" data-country="ireland" data-name="Belfast & Titanic Experience">
+          <div class="card-rank-badge">–</div>
+          <img class="card-img" src="https://images.ireland.com/media/Images/things-to-do/attractions/titanic-belfast-new/dfb81ccfe0e74d2eba542ec9f9e9073a.jpg" alt="Belfast Titanic Experience" loading="lazy">
+          <div class="card-body">
+            <div class="card-category">Maritime History · Belfast</div>
+            <h3 class="card-title">Belfast & Titanic Experience</h3>
+            <span class="card-region-tag">Northern Ireland</span>
+            <p class="card-desc">The Titanic was designed, built, and launched in Belfast. The museum sits exactly where it happened — in the old Harland & Wolff shipyard, now one of the most thoughtfully constructed maritime attractions in Europe.</p>
+            <div class="card-detail">
+              <p>Nine interactive galleries take the visitor from the ship's conception through its construction (including a "dark ride" through a re-creation of the working shipyard at speed), the maiden voyage, the sinking, the discovery of the wreck, and the ongoing undersea exploration. It sounds like it could be grim — it is actually engrossing, and the building itself, designed to echo the prow of a ship, is worth a look from the outside before you go in. Allow at least two hours.</p>
+              <br>
+              <p>Beyond the Titanic: Belfast is a genuinely interesting city — compact, walkable, and carrying a complex modern history it doesn't shy away from. The Black Taxi Political Tour through the murals of the Falls Road and Shankill Road offers one of the most honest and moving accounts of the Troubles available to visitors. Combine with the Cathedral Quarter for lunch and the city's current restaurant scene, which has outpaced its former reputation considerably.</p>
+            </div>
+            <button class="card-toggle" onclick="toggleCard('card-titanic')">Learn More ↓</button>
+            <button class="card-select-btn" onclick="toggleSelect('card-titanic', 'ireland', 'Belfast & Titanic Experience')">Add to My List</button>
+          </div>
+        </div>
+
+        <div class="attraction-card" id="card-giantscauseway" data-country="ireland" data-name="Giant's Causeway & Antrim Coast">
+          <div class="card-rank-badge">–</div>
+          <img class="card-img" src="https://images.squarespace-cdn.com/content/v1/5e94654599068c4aa38f89ee/1650974912933-MGD4QW4WCFXKDJW3E3JP/Giants-Causeway1.jpg" alt="Giant's Causeway Northern Ireland" loading="lazy">
+          <div class="card-body">
+            <div class="card-category">UNESCO Heritage · Volcanic Geology</div>
+            <h3 class="card-title">Giant's Causeway & Antrim Coast</h3>
+            <span class="card-region-tag">County Antrim, Northern Ireland</span>
+            <p class="card-desc">40,000 interlocking hexagonal basalt columns, formed by volcanic activity 60 million years ago, stepping into the sea. The legend says Irish giant Finn McCool built them to walk to Scotland for a fight. The geology says otherwise. The columns make for one of the strangest, most compelling coastal walks in the British Isles.</p>
+            <div class="card-detail">
+              <p>The Giant's Causeway is Northern Ireland's only UNESCO World Heritage Site, and the columns themselves — ranging in height from a few centimetres to nearly 12 metres — are more tactile and more surreal in person than photographs suggest. Named formations like the Giant's Boot, the Wishing Chair, and the Organ pipes give orientation to what is otherwise a very large, very angular beach.</p>
+              <br>
+              <p>The Antrim Coast Road connecting Belfast to the causeway is widely rated as one of the finest coastal drives in the world — hugging cliffs, passing quiet coves and white beaches, and winding through villages like Cushendall and Cushendun. Along the route: Dunluce Castle (a 13th-century clifftop ruin featured in Game of Thrones as the seat of House Greyjoy), the Dark Hedges (an atmospheric tunnel of 300-year-old beech trees, also used in Game of Thrones), and Carrick-a-Rede rope bridge — a 20-metre suspension bridge over a 30-metre chasm linking the mainland to a salmon fisherman's island.</p>
+            </div>
+            <button class="card-toggle" onclick="toggleCard('card-giantscauseway')">Learn More ↓</button>
+            <button class="card-select-btn" onclick="toggleSelect('card-giantscauseway', 'ireland', "Giant's Causeway & Antrim Coast")">Add to My List</button>
+          </div>
+        </div>
+
+        <div class="attraction-card" id="card-dunluce" data-country="ireland" data-name="Dunluce Castle & Dark Hedges">
+          <div class="card-rank-badge">–</div>
+          <img class="card-img" src="https://northernirelandholidays.co.uk/wp-content/uploads/2023/09/Dunluce-Castle-from-the-sea-cave-AdobeStock_549431931-1200px.jpg" alt="Dunluce Castle Antrim" loading="lazy">
+          <div class="card-body">
+            <div class="card-category">Medieval Castle · Film Location</div>
+            <h3 class="card-title">Dunluce Castle, Dark Hedges & Carrick-a-Rede</h3>
+            <span class="card-region-tag">Antrim Coast, Northern Ireland</span>
+            <p class="card-desc">A ruined medieval fortress perched on a basalt sea stack, connected to the mainland by a narrow bridge. The MacDonnell clan's seat for centuries, featured in Led Zeppelin's Houses of the Holy, and used as House Greyjoy's castle in Game of Thrones. One of the most dramatically sited ruins in Western Europe.</p>
+            <div class="card-detail">
+              <p>Dunluce dates from the 13th century and was the stronghold of the MacQuillan family before passing to the MacDonnells of Scotland. In 1639, during a storm, the castle kitchen — with its cooks still inside — collapsed into the sea. The ruined structure that remains is open to explore, and the cliffside setting drops straight into the Atlantic below.</p>
+              <br>
+              <p>The Dark Hedges — a lane of 300-year-old beech trees whose branches have grown together overhead into a natural tunnel — is a 20-minute drive away. Visit before 10 a.m. to avoid the crowds. Carrick-a-Rede rope bridge (£12 per person to cross, book ahead in summer) spans a 30-metre chasm to a tiny island that salmon fishermen once accessed to set their nets. The crossing is exhilarating; the coastal path to reach it is beautiful regardless.</p>
+            </div>
+            <button class="card-toggle" onclick="toggleCard('card-dunluce')">Learn More ↓</button>
+            <button class="card-select-btn" onclick="toggleSelect('card-dunluce', 'ireland', 'Dunluce Castle, Dark Hedges & Carrick-a-Rede')">Add to My List</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div><!-- /country-section -->
+</div>
+
+<div class="divider-band"></div>
+
+<!-- ══════════════════════════════
+     SCOTLAND
+══════════════════════════════ -->
+<div style="background: var(--white);">
+  <div class="country-section">
+    <div class="country-header">
+      <span class="country-flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>
+      <div>
+        <h2>Scotland</h2>
+        <p class="region-note">Edinburgh · Perthshire · Inverness & Highlands · Isle of Skye · Fort William · Stirling</p>
+      </div>
+    </div>
+
+    <p class="section-tagline">From the medieval closes of Edinburgh to the basalt pinnacles of Skye — Scotland runs from compact history to open wilderness</p>
+
+    <!-- EDINBURGH -->
+    <div class="region-group">
+      <div class="region-label">Edinburgh — Scotland's Capital</div>
+      <div class="cards-grid">
+
+        <div class="attraction-card" id="card-edincastle" data-country="scotland" data-name="Edinburgh Castle & Royal Mile">
+          <div class="card-rank-badge">–</div>
+          <img class="card-img" src="https://www.wendywutours.com/resource/upload/2638/edinburgh-royal-mile-banner.jpg" alt="Edinburgh Castle" loading="lazy">
+          <div class="card-body">
+            <div class="card-category">Royal Fortress · City Icon</div>
+            <h3 class="card-title">Edinburgh Castle & The Royal Mile</h3>
+            <span class="card-region-tag">Edinburgh Old Town</span>
+            <p class="card-desc">The castle has watched over Edinburgh since the 12th century — it has changed hands repeatedly, absorbed parliamentary sessions, held prisoners of war, and now holds Scotland's Crown Jewels and the Stone of Destiny. It is not a ruin. It is a functioning institution with a working garrison, and the One O'Clock Gun has fired daily since 1861.</p>
+            <div class="card-detail">
+              <p>Inside: St Margaret's Chapel (Edinburgh's oldest building, dating to 1130), the Great Hall, the National War Museum, the Scottish Crown Jewels (the oldest crown jewels in Britain), and Mons Meg — a 15th-century siege cannon capable of firing a 150kg cannonball two miles. The view from the esplanade across Edinburgh's rooftops and out to the Firth of Forth on a clear day justifies the admission on its own.</p>
+              <br>
+              <p>The Royal Mile runs one Scots mile (approximately 1.8km) from the castle down to the Palace of Holyroodhouse — the King's official Scottish residence. The street is flanked by stone tenements that once housed Edinburgh's entire population in vertical layers of social class. It is impossibly walkable, with closes (narrow alleyways) branching off on both sides into quieter courtyards. Allow half a day to do the Royal Mile properly.</p>
+              <br>
+              <p>Book castle tickets online at least a week ahead in summer. Guided tours add significantly to the experience — buy them with your ticket at the time of booking.</p>
+            </div>
+            <button class="card-toggle" onclick="toggleCard('card-edincastle')">Learn More ↓</button>
+            <button class="card-select-btn" onclick="toggleSelect('card-edincastle', 'scotland', 'Edinburgh Castle & Royal Mile')">Add to My List</button>
+          </div>
+        </div>
+
+        <div class="attraction-card" id="card-maryking" data-country="scotland" data-name="Real Mary King's Close">
+          <div class="card-rank-badge">–</div>
+          <img class="card-img" src="https://dynamic-media.tacdn.com/media/photo-o/2f/b9/22/c5/caption.jpg?w=2400&h=-1&s=1" alt="Edinburgh Old Town closes" loading="lazy">
+          <div class="card-body">
+            <div class="card-category">Underground History · Character Tour</div>
+            <h3 class="card-title">The Real Mary King's Close</h3>
+            <span class="card-region-tag">Beneath the Royal Mile, Edinburgh</span>
+            <p class="card-desc">Buried beneath the Royal Mile lies a 17th-century street sealed under a building for 300 years. The Real Mary King's Close is one of the most unusual visitor experiences in Scotland — and one of the most honestly affecting.</p>
+            <div class="card-detail">
+              <p>In the 1600s, Edinburgh's population was squeezed into an impossibly small footprint by defensive walls. Buildings grew upward — some to 14 floors, making them among the world's first true high-rises — and the alleys (closes) between them were narrow, dark, and densely inhabited. When the Council House was built above the close in the 1750s, the lower levels were sealed off and simply built over.</p>
+              <br>
+              <p>The character-guided tour runs approximately 60 minutes and takes you through the preserved street levels, rooms, and passageways. Your guide is in costume — a maid, a plague doctor, a clenger (someone who cleared plague-infected homes) — and tells the stories of the people who lived here, including the 1645 plague epidemic that swept through the close and the stories of quarantine and loss that followed.</p>
+              <br>
+              <p>Voted Scotland's Best Heritage Tourism Experience. It is not a ghost tour — though it covers death and disease — it is a social history tour of a level of Edinburgh society that rarely gets its own exhibition. Book well ahead; last entry slots sell out weeks in advance in summer.</p>
+            </div>
+            <button class="card-toggle" onclick="toggleCard('card-maryking')">Learn More ↓</button>
+            <button class="card-select-btn" onclick="toggleSelect('card-maryking', 'scotland', "Real Mary King's Close")">Add to My List</button>
+          </div>
+        </div>
+
+        <div class="attraction-card" id="card-deans" data-country="scotland" data-name="Dean's Village & Arthur's Seat">
+          <div class="card-rank-badge">–</div>
+          <img class="card-img" src="https://mytours.city/tours-data/86/IMG/86-14.jpg" alt="Arthur's Seat Edinburgh" loading="lazy">
+          <div class="card-body">
+            <div class="card-category">Hidden Village · Urban Hike</div>
+            <h3 class="card-title">Dean's Village & Arthur's Seat</h3>
+            <span class="card-region-tag">Edinburgh</span>
+            <p class="card-desc">Two of Edinburgh's most rewarding experiences that require nothing but a pair of walking shoes. Dean's Village is a pocket of 19th-century mill houses beside the Water of Leith — 20 minutes' walk from the city centre, and entirely calm. Arthur's Seat is a 251-metre extinct volcano rising from Holyrood Park, with a 45-minute climb and 360-degree views of the whole city and coast.</p>
+            <div class="card-detail">
+              <p>Dean's Village was Edinburgh's milling district for 800 years — grain was processed here and transported into the city above. Today it is a quiet, beautifully preserved cluster of stone buildings beside a fast-running urban river, accessible via a 10-minute walk from Princes Street along the Water of Leith Walkway. The Stockbridge neighbourhood nearby has Edinburgh's best independent café scene.</p>
+              <br>
+              <p>Arthur's Seat is the central peak of Holyrood Park — an 8km² area of volcanic landscape in the heart of the capital. The main path from Holyrood Palace takes 45–60 minutes to the summit; a gentler alternative follows the Salisbury Crags ridge at mid-height for spectacular views with less exertion. From the top on a clear day: the Firth of Forth, the Bass Rock seabird colony, the full Edinburgh skyline, and, on exceptional days, the southern Highlands. No charge to enter the park or hike to the summit.</p>
+            </div>
+            <button class="card-toggle" onclick="toggleCard('card-deans')">Learn More ↓</button>
+            <button class="card-select-btn" onclick="toggleSelect('card-deans', 'scotland', "Dean's Village & Arthur's Seat")">Add to My List</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PERTHSHIRE -->
+    <div class="region-group">
+      <div class="region-label">Perthshire — Big Tree Country</div>
+      <div class="cards-grid">
+
+        <div class="attraction-card" id="card-blaircastle" data-country="scotland" data-name="Blair Castle & Blair Atholl Distillery">
+          <div class="card-rank-badge">–</div>
+          <img class="card-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/c1/9b/3f/caption.jpg?w=900&h=500&s=1" alt="Blair Castle Pitlochry" loading="lazy">
+          <div class="card-body">
+            <div class="card-category">Castle · Whisky Distillery</div>
+            <h3 class="card-title">Blair Castle & Blair Atholl Distillery</h3>
+            <span class="card-region-tag">Pitlochry, Perthshire</span>
+            <p class="card-desc">Blair Castle is one of the most complete Scottish castles open to the public — 30 rooms furnished over four centuries of Atholl family history, set in 2,500 acres of Highland estate. Blair Atholl Distillery next door has been making single malt since 1798, making it one of the oldest continuously operating distilleries in Scotland.</p>
+            <div class="card-detail">
+              <p>Blair Castle has served as a military headquarters, a prison for Jacobite supporters, and a family home without interruption since the 13th century. The interiors run from the Georgian formality of the ballroom to the unexpectedly intimate private rooms of later centuries. The castle's grounds include formal walled gardens, river walks, and access to the surrounding Highland estate.</p>
+              <br>
+              <p>Blair Atholl Distillery — not to be confused with the larger blended whisky operations of the same area — produces a rich, malt-forward single malt suited to the cold climate of Perthshire. The distillery tour takes visitors through the full production process from malting to maturation, and the tasting room offers a range of expressions including limited releases available only on-site.</p>
+              <br>
+              <p>Pitlochry itself is a well-provisioned Victorian resort town — good restaurants, a theatre-in-the-round with a summer season, and a salmon ladder on the River Tummel that visitors can watch from a viewing window during the autumn run.</p>
+            </div>
+            <button class="card-toggle" onclick="toggleCard('card-blaircastle')">Learn More ↓</button>
+            <button class="card-select-btn" onclick="toggleSelect('card-blaircastle', 'scotland', 'Blair Castle & Blair Atholl Distillery')">Add to My List</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- INVERNESS & HIGHLANDS -->
+    <div class="region-group">
+      <div class="region-label">Inverness & The Highlands — History on Open Ground</div>
+      <div class="cards-grid">
+
+        <div class="attraction-card" id="card-culloden" data-country="scotland" data-name="Culloden Battlefield">
+          <div class="card-rank-badge">–</div>
+          <img class="card-img" src="https://c.files.bbci.co.uk/A7F4/production/_109569924_culloden.jpg" alt="Culloden Battlefield Inverness" loading="lazy">
+          <div class="card-body">
+            <div class="card-category">Historic Battlefield · Jacobite History</div>
+            <h3 class="card-title">Culloden Battlefield</h3>
+            <span class="card-region-tag">Near Inverness</span>
+            <p class="card-desc">The last pitched battle on British soil, fought on April 16, 1746. In under an hour, the Jacobite rising was ended, the Highland clan system was dismantled, and the course of Scottish history was permanently altered. Walking Culloden Moor is still, nearly 280 years later, a somber and powerful experience.</p>
+            <div class="card-detail">
+              <p>The Battle of Culloden lasted 68 minutes. Bonnie Prince Charlie's Jacobite army — cold, hungry, and outnumbered — faced a British government force under the Duke of Cumberland that had been specifically trained and equipped to deal with Highland tactics. The Jacobite dead numbered over 1,500; the government forces lost fewer than 50. In the weeks following, Cumberland's forces systematically destroyed the Highland way of life across Scotland.</p>
+              <br>
+              <p>The battlefield is maintained by the National Trust for Scotland and is almost entirely unchanged from how it appeared in 1746 — open moorland, mass graves marked by clan stones, and a silence appropriate to the weight of what happened here. The Visitor Centre is immersive and exceptionally well-curated, using first-person accounts from both sides of the battle to reconstruct the day and the months that followed. Outlander fans will recognise this landscape from the show; the history itself is considerably darker.</p>
+            </div>
+            <button class="card-toggle" onclick="toggleCard('card-culloden')">Learn More ↓</button>
+            <button class="card-select-btn" onclick="toggleSelect('card-culloden', 'scotland', 'Culloden Battlefield')">Add to My List</button>
+          </div>
+        </div>
+
+        <div class="attraction-card" id="card-lochness" data-country="scotland" data-name="Loch Ness & Urquhart Castle">
+          <div class="card-rank-badge">–</div>
+          <img class="card-img" src="https://www.princess.com/content/dam/princess-headless/shorex/ports/inverness-scotland-cawdor-castle.jpg" alt="Loch Ness Urquhart Castle" loading="lazy">
+          <div class="card-body">
+            <div class="card-category">Loch · Medieval Ruin</div>
+            <h3 class="card-title">Loch Ness & Urquhart Castle</h3>
+            <span class="card-region-tag">Scottish Highlands</span>
+            <p class="card-desc">Loch Ness is 37km long, 230 metres deep at its deepest point, and holds more fresh water than all the lakes of England and Wales combined. It is dark, cold, and impenetrably opaque — which is why the monster legend has been so stubborn. Urquhart Castle, on the western bank, commands one of the great Highland loch views.</p>
+            <div class="card-detail">
+              <p>Urquhart was one of the largest castles in medieval Scotland — a sprawling fortress that controlled access to the Great Glen and changed hands repeatedly between English and Scottish forces. The ruins are extensive and very walkable, with the Grant Tower offering the most complete surviving structure and the most photogenic view across the water. Loch Ness boat tours depart from the adjacent pier.</p>
+              <br>
+              <p>The loch itself is best understood from the water — a boat cruise reveals the scale that the roadside never quite conveys. Loch Ness runs through the Great Glen, a massive geological fault line that divides Scotland diagonally from Fort William to Inverness. The Caledonian Canal follows the same route, and the locks at Fort Augustus (where the canal descends into the loch) are one of the most reliably watchable pieces of working Victorian engineering in Scotland.</p>
+              <br>
+              <p>The Loch Ness Centre in Drumnadrochit offers a scientific and historical account of the monster legend — 90 years of sonar searches, eye-witness accounts, famous hoaxes, and genuine unexplained sonar returns. Worth an hour even if you are entirely sceptical.</p>
+            </div>
+            <button class="card-toggle" onclick="toggleCard('card-lochness')">Learn More ↓</button>
+            <button class="card-select-btn" onclick="toggleSelect('card-lochness', 'scotland', 'Loch Ness & Urquhart Castle')">Add to My List</button>
+          </div>
+        </div>
+
+        <div class="attraction-card" id="card-cairngorms" data-country="scotland" data-name="Cairngorms National Park">
+          <div class="card-rank-badge">–</div>
+          <img class="card-img" src="https://national-parks.org/wp-content/uploads/2025/10/Cairngorms-National-Park-purple-heather.jpg" alt="Cairngorms National Park Scotland" loading="lazy">
+          <div class="card-body">
+            <div class="card-category">National Park · Sub-Arctic Plateau</div>
+            <h3 class="card-title">Cairngorms National Park</h3>
+            <span class="card-region-tag">En Route, Highland Scotland</span>
+            <p class="card-desc">The largest national park in the UK — twice the size of the Lake District — covering a sub-arctic plateau that holds Britain's five highest peaks. Red squirrels, osprey, red kite, and the only free-ranging reindeer herd in Britain live here. This is Scotland above the treeline.</p>
+            <div class="card-detail">
+              <p>The Cairngorms plateau sits at an average elevation of over 1,000 metres — high enough for snow to persist on north-facing slopes into June in most years. The landscape is ancient and sparse: wide open moorland, deep carved glens, lochs that reflect the sky with unusual clarity, and Caledonian pine forest remnants that are among the oldest native woodlands in Scotland.</p>
+              <br>
+              <p>As an en-route stop between Inverness and Pitlochry (or Edinburgh), the A9 corridor passes through the heart of the park — the Pass of Drumochter (459m) is the highest point on any A-road in Britain. Villages like Aviemore (with good food options and a short drive to Loch Morlich) or Kingussie are worth stopping in. The Highland Folk Museum at Newtonmore is an outdoor living history site that reconstructs Highland township life from the 1700s to the 1900s.</p>
+            </div>
+            <button class="card-toggle" onclick="toggleCard('card-cairngorms')">Learn More ↓</button>
+            <button class="card-select-btn" onclick="toggleSelect('card-cairngorms', 'scotland', 'Cairngorms National Park')">Add to My List</button>
+          </div>
+        </div>
+
+        <div class="attraction-card" id="card-blackisle" data-country="scotland" data-name="The Black Isle">
+          <div class="card-rank-badge">–</div>
+          <img class="card-img" src="https://xyuandbeyond.com/wp-content/uploads/2018/07/Moray-Firth.jpg" alt="Black Isle Scotland dolphins" loading="lazy">
+          <div class="card-body">
+            <div class="card-category">Peninsula · Wildlife</div>
+            <h3 class="card-title">The Black Isle</h3>
+            <span class="card-region-tag">Near Inverness</span>
+            <p class="card-desc">Not actually an island, but a peninsula north of Inverness where the Moray Firth meets the Cromarty Firth. The Black Isle is best known for one thing you can't plan around and can't stop watching once you find it: bottlenose dolphins, feeding at Chanonry Point on a strong incoming tide.</p>
+            <div class="card-detail">
+              <p>The Moray Firth holds one of the world's most northerly populations of bottlenose dolphins — around 200 animals in a resident pod. Chanonry Point, a narrow spit of land on the Black Isle that juts into the Firth, is the best land-based dolphin-watching site in the UK. During a flooding tide (check tide tables before going), the dolphins follow the salmon runs close to shore — sometimes within 10 metres of the beach.</p>
+              <br>
+              <p>The Black Isle also holds Cromarty village — a beautifully preserved 18th-century fishing town on the north shore of the Firth, with good seafood and a ferry crossing to the opposite shore that has operated since the 13th century. Fortrose Cathedral (a ruined medieval cathedral overlooking Chanonry Point) is five minutes from the dolphin-watching beach and worth a wander.</p>
+            </div>
+            <button class="card-toggle" onclick="toggleCard('card-blackisle')">Learn More ↓</button>
+            <button class="card-select-btn" onclick="toggleSelect('card-blackisle', 'scotland', 'The Black Isle')">Add to My List</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ISLE OF SKYE -->
+    <div class="region-group">
+      <div class="region-label">Isle of Skye — Scotland's Most Dramatic Island</div>
+      <div class="cards-grid">
+
+        <div class="attraction-card" id="card-eileandoanan" data-country="scotland" data-name="Eilean Donan Castle">
+          <div class="card-rank-badge">–</div>
+          <img class="card-img" src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0f/80/71/9a.jpg" alt="Eilean Donan Castle Scotland" loading="lazy">
+          <div class="card-body">
+            <div class="card-category">Castle · En Route to Skye</div>
+            <h3 class="card-title">Eilean Donan Castle</h3>
+            <span class="card-region-tag">Dornie — En Route to Isle of Skye</span>
+            <p class="card-desc">The most reproduced image of Scotland after Edinburgh Castle — and it earns it. Eilean Donan sits on a tidal island at the confluence of three sea lochs, connected to the mainland by a narrow stone bridge. The reflection in still water at the right light is the Scotland of photographs made real.</p>
+            <div class="card-detail">
+              <p>The first castle was built here in the 13th century to defend the region against Norse raids. It was held by the MacKenzie and MacRae clans for centuries, partially destroyed by English warships during the Jacobite rising of 1719, and rebuilt between 1913 and 1932 by Lieutenant Colonel John MacRae-Gilstrap, who acquired the island specifically to restore his ancestral seat. The MacRae family still serves as Constables of the castle today.</p>
+              <br>
+              <p>Nearly every room is open to visitors — the Billeting Room, the Banqueting Hall, the bedrooms, and the exhibition spaces covering the castle's long history including a sword used at Culloden and artefacts from the 1719 Jacobite episode. The surrounding scenery — the mountains of Kintail behind, the three lochs meeting below — is as much of the experience as the building itself.</p>
+              <br>
+              <p>Eilean Donan sits 15 minutes from the Skye Bridge and is most effectively visited en route to or from the island. Allow 90 minutes. Book online in advance in peak season — summer queues for timed-entry slots can be significant.</p>
+            </div>
+            <button class="card-toggle" onclick="toggleCard('card-eileandoanan')">Learn More ↓</button>
+            <button class="card-select-btn" onclick="toggleSelect('card-eileandoanan', 'scotland', 'Eilean Donan Castle')">Add to My List</button>
+          </div>
+        </div>
+
+        <div class="attraction-card" id="card-portree" data-country="scotland" data-name="Portree & Isle of Skye">
+          <div class="card-rank-badge">–</div>
+          <img class="card-img" src="https://i.natgeofe.com/n/ebc091eb-094c-4c3c-ba6a-49b6c02cf357/weekender_syke_GettyImages-1369817195_ukHR_16x9.jpg?w=1200" alt="Portree Isle of Skye" loading="lazy">
+          <div class="card-body">
+            <div class="card-category">Island Town · Coloured Harbour</div>
+            <h3 class="card-title">Portree — Isle of Skye</h3>
+            <span class="card-region-tag">Isle of Skye, Inner Hebrides</span>
+            <p class="card-desc">Portree is the main town on Skye — a harbour of coloured houses, good seafood restaurants, and enough accommodation to serve as a base for the island's dramatic interior. The name means "Port of the King" after James V visited in 1540. Bonnie Prince Charlie said goodbye to Flora MacDonald here in 1746, the last Jacobite hoping for a comeback that never came.</p>
+            <div class="card-detail">
+              <p>Portree's harbour is photogenic in the way that only working harbours with coloured Georgian frontages can be — not performatively picturesque, just genuinely well-composed by whoever decided which colours to paint which buildings. Boat tours depart from the harbour for sea eagle sightings, seal colonies, and (less reliably) porpoise and dolphin.</p>
+              <br>
+              <p>From Portree, the island's main attractions radiate north along the Trotternish Peninsula: the Old Man of Storr (14 minutes), the Quiraing (35 minutes), Kilt Rock and Mealt Falls (20 minutes), and the Fairy Glen near Uig (40 minutes). South from Portree: the Fairy Pools (45 minutes) at the foot of the Cuillin mountains, Talisker Distillery, and Dunvegan Castle — seat of Clan MacLeod and the oldest continuously inhabited castle in Scotland.</p>
+            </div>
+            <button class="card-toggle" onclick="toggleCard('card-portree')">Learn More ↓</button>
+            <button class="card-select-btn" onclick="toggleSelect('card-portree', 'scotland', 'Portree & Isle of Skye')">Add to My List</button>
+          </div>
+        </div>
+
+        <div class="attraction-card" id="card-oldman" data-country="scotland" data-name="Old Man of Storr & The Quiraing">
+          <div class="card-rank-badge">–</div>
+          <img class="card-img" src="https://www.wildernessscotland.com/wp-content/uploads/quiraing-blog.jpg" alt="Old Man of Storr Isle of Skye" loading="lazy">
+          <div class="card-body">
+            <div class="card-category">Volcanic Landscape · Iconic Hike</div>
+            <h3 class="card-title">Old Man of Storr & The Quiraing</h3>
+            <span class="card-region-tag">Trotternish Peninsula, Isle of Skye</span>
+            <p class="card-desc">A 55-metre basalt pinnacle standing apart from the cliffface above it, the result of a landslip that happened 60 million years ago. The Old Man of Storr is the most recognisable rock formation in Scotland — jagged, isolated, and looking exactly like something that belongs in a landscape that predates human comprehension. The Quiraing, 20 minutes north, is stranger still.</p>
+            <div class="card-detail">
+              <p>The Old Man of Storr hike takes 1.5–2 hours return from the car park on the A855 — a steady climb through clear-felled forest onto open hillside, with the pinnacle and surrounding rock formations coming into view at the top. On clear days: the Sound of Raasay below, the Cuillin ridge to the south, the Scottish mainland across the water. On misty days — which is most days in Skye — the formations materialize from cloud in a way that no clear-sky photograph can replicate. Go early (before 9 a.m.) or late (after 5 p.m.) to beat the summer crowds.</p>
+              <br>
+              <p>The Quiraing, further north, is a continuing landslip on an active geological scale — sections of the road are resurfaced regularly as the ground shifts. The landscape is more enclosed and more unusual than the Storr: a series of rock needles, plateaus, and hidden bowls of grassland that have served as a landscape in films and television (including Starz's Outlander). The Quiraing loop walk is 6.5km and takes 2–3 hours.</p>
+              <br>
+              <p>Between the two: Kilt Rock, a sea cliff of columnar basalt with vertical strata that genuinely does resemble the pleats of a kilt, with Mealt Falls plunging 55 metres over the edge directly into the sea below. A five-minute stop but a remarkable one.</p>
+            </div>
+            <button class="card-toggle" onclick="toggleCard('card-oldman')">Learn More ↓</button>
+            <button class="card-select-btn" onclick="toggleSelect('card-oldman', 'scotland', 'Old Man of Storr & The Quiraing')">Add to My List</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- FORT WILLIAM & WEST HIGHLANDS -->
+    <div class="region-group">
+      <div class="region-label">Fort William & The Western Highlands</div>
+      <div class="cards-grid">
+
+        <div class="attraction-card" id="card-glenfinnan" data-country="scotland" data-name="Glenfinnan Viaduct & Monument">
+          <div class="card-rank-badge">–</div>
+          <img class="card-img" src="https://d1km7u9ubck4j.cloudfront.net/production-upgrade-2024/2f834c6dc78805618e628fa9f02a39e4/conversions/610682288b022-HD.jpg" alt="Glenfinnan Viaduct Scotland" loading="lazy">
+          <div class="card-body">
+            <div class="card-category">Engineering · Jacobite History</div>
+            <h3 class="card-title">Glenfinnan Viaduct & Monument</h3>
+            <span class="card-region-tag">West Highlands, near Fort William</span>
+            <p class="card-desc">A 21-arch concrete viaduct built in 1901, curving over a Highland valley above Loch Shiel — one of the most filmed pieces of infrastructure in Britain and the most reliably surprising in person. The Jacobite Steam Train crosses it twice daily between May and October. You will know it from Harry Potter.</p>
+            <div class="card-detail">
+              <p>The Glenfinnan Viaduct is 380 metres long and 30 metres above the valley floor, built from mass concrete by engineer Robert McAlpine — known as "Concrete Bob" for his willingness to trust the then-controversial material. When a horse and cart fell into the concrete during construction, the story goes that McAlpine ordered it left in place rather than slow the job. Whether true or not, the viaduct has stood for 125 years.</p>
+              <br>
+              <p>The viewpoint above the car park is a 10-minute walk uphill — well-signed, steep, worth every step. When the Jacobite Steam Train crosses (usually around 10:30 a.m. and 2:50 p.m. westbound), the sight of a steam locomotive pulling white smoke across 21 arches above a Highland valley with Loch Shiel below is one of those experiences that earns the word "remarkable." In the films, the route from King's Cross to Hogwarts crosses this bridge.</p>
+              <br>
+              <p>The Glenfinnan Monument stands at the head of Loch Shiel, 600 metres from the viaduct — a lone Highlander on top of a round tower, marking the spot where Bonnie Prince Charlie raised the royal standard on August 19, 1745 and began the last Jacobite rising. 1,200 Highlanders gathered here. Eight months later, Culloden ended it. The National Trust Scotland visitor centre beside the monument tells the story well.</p>
+            </div>
+            <button class="card-toggle" onclick="toggleCard('card-glenfinnan')">Learn More ↓</button>
+            <button class="card-select-btn" onclick="toggleSelect('card-glenfinnan', 'scotland', 'Glenfinnan Viaduct & Monument')">Add to My List</button>
+          </div>
+        </div>
+
+        <div class="attraction-card" id="card-bennevis" data-country="scotland" data-name="Ben Nevis & Fort William">
+          <div class="card-rank-badge">–</div>
+          <img class="card-img" src="https://scotland-landscapes.com/wp-content/uploads/2023/01/20210531-DSC03426_1920px-1400x934.jpg" alt="Ben Nevis Fort William" loading="lazy">
+          <div class="card-body">
+            <div class="card-category">Highest Point in Britain · Gateway Town</div>
+            <h3 class="card-title">Ben Nevis & Fort William</h3>
+            <span class="card-region-tag">Fort William, West Highlands</span>
+            <p class="card-desc">Ben Nevis (1,345m) is the highest mountain in Britain. You don't have to climb it to appreciate it — the view from the shores of Loch Linnhe or from the Nevis Range gondola makes the scale clear enough. Fort William is the gateway town to the Great Glen and the western Highlands.</p>
+            <div class="card-detail">
+              <p>The full Ben Nevis summit hike takes 7–9 hours return and requires appropriate equipment and a weather window — it's no more technically demanding than a long, steep walk, but the summit is above the cloud level on more days than not, and conditions above 1,000 metres can change in under an hour. The Nevis Range gondola (operating independently from the summit trail) lifts visitors to 650 metres on the adjacent Aonach Mòr for views across the Great Glen and Loch Linnhe without the full exertion.</p>
+              <br>
+              <p>Steall Falls — accessible via the Nevis Gorge walk from Polldubh (a 45-minute walk along a dramatic gorge) — is the second-highest waterfall in Britain (120m). The gorge itself is one of the more spectacular short walks in the Highlands, passing through native woodland with the river below and cliffs above. A wire rope bridge crosses to the base of the falls — worth attempting.</p>
+              <br>
+              <p>Fort William serves as an excellent overnight base for Glenfinnan (26km west), Glen Coe (16km south), and the start/end of the West Highland Way long-distance path. The town has solid food options, good outdoor gear shops, and a railway connection on one of Britain's most scenic rail routes.</p>
+            </div>
+            <button class="card-toggle" onclick="toggleCard('card-bennevis')">Learn More ↓</button>
+            <button class="card-select-btn" onclick="toggleSelect('card-bennevis', 'scotland', 'Ben Nevis & Fort William')">Add to My List</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- STIRLING & CENTRAL -->
+    <div class="region-group">
+      <div class="region-label">Stirling & Central Scotland</div>
+      <div class="cards-grid">
+
+        <div class="attraction-card" id="card-stirling" data-country="scotland" data-name="Stirling Castle & The Kelpies">
+          <div class="card-rank-badge">–</div>
+          <img class="card-img" src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0f/6c/a3/3d.jpg" alt="Stirling Castle Scotland" loading="lazy">
+          <div class="card-body">
+            <div class="card-category">Royal Castle · Public Art</div>
+            <h3 class="card-title">Stirling Castle & The Kelpies</h3>
+            <span class="card-region-tag">Stirling, Central Scotland</span>
+            <p class="card-desc">Stirling was the strategic key to Scotland — whoever held the castle controlled the crossing of the River Forth and, with it, the Highlands and Lowlands. It was where Mary Queen of Scots was crowned as an infant. It rivals Edinburgh Castle in historical importance and surpasses it in the quality of its Renaissance interiors. The Kelpies — two 30-metre steel horse-head sculptures nearby — are something else entirely.</p>
+            <div class="card-detail">
+              <p>Stirling Castle contains the finest Renaissance architecture in Scotland: the Great Hall, built in 1503, was the largest secular building in Scotland at the time; the Royal Palace, built in the 1540s for James V and his French queen Mary of Guise, features extraordinary stone carvings and recently restored tempera ceiling medallions. The Battle of Stirling Bridge (1297) and the Battle of Bannockburn (1314 — Robert the Bruce's victory over the English) both took place within sight of the castle.</p>
+              <br>
+              <p>The Kelpies are two 30-metre horse-head sculptures beside the Forth and Clyde Canal near Falkirk — completed in 2013 by sculptor Andy Scott and named for the shape-shifting water spirits of Scottish folklore. They are entirely unexpected in scale and, standing beside them, difficult to photograph in a way that conveys how large they actually are. The Falkirk Wheel (a rotating boat lift connecting two canal systems at different levels) is nearby and one of the more extraordinary pieces of contemporary engineering open to the public in Britain.</p>
+            </div>
+            <button class="card-toggle" onclick="toggleCard('card-stirling')">Learn More ↓</button>
+            <button class="card-select-btn" onclick="toggleSelect('card-stirling', 'scotland', 'Stirling Castle & The Kelpies')">Add to My List</button>
+          </div>
+        </div>
+
+        <div class="attraction-card" id="card-lochlomond" data-country="scotland" data-name="Loch Lomond">
+          <div class="card-rank-badge">–</div>
+          <img class="card-img" src="https://cmscdn.boutique-retreats.co.uk/scotland/places-to-visit/landmarks/loch-lomond/loch-lomond-scotland.jpg" alt="Loch Lomond Scotland" loading="lazy">
+          <div class="card-body">
+            <div class="card-category">National Park · Scotland's Largest Loch</div>
+            <h3 class="card-title">Loch Lomond</h3>
+            <span class="card-region-tag">En Route — Fort William to Stirling</span>
+            <p class="card-desc">The largest body of fresh water in Britain by surface area — 71 square kilometres, with 38 islands, Ben Lomond rising on its eastern shore, and the Highland Boundary Fault running directly through it. North Loch Lomond is narrow and Highland in character; South Loch Lomond widens into something closer to a lowland lake.</p>
+            <div class="card-detail">
+              <p>The loch sits at the southern boundary of the Highlands — you can see the transition in the landscape on either shore. Balloch, at the southern end, has boat hire, cruises, and visitor facilities. The western shore road (A82) running north through Tarbet and Arrochar to Crianlarich is one of the more scenic drives in the central belt — narrow, twisting, and consistently dramatic.</p>
+              <br>
+              <p>Ben Lomond (974m) is the most southerly Munro (Scottish mountain over 3,000 feet) and one of the most popular hillwalks in Scotland — a 3–4 hour return from Rowardennan on the eastern shore. The West Highland Way long-distance path follows the eastern shore northward. Boat tours run from Balloch and Luss (a famously picturesque loch-side village with a 13th-century church and a population of around 200). As an en-route stop between Fort William and Stirling, allow at least an hour at the lochside.</p>
+            </div>
+            <button class="card-toggle" onclick="toggleCard('card-lochlomond')">Learn More ↓</button>
+            <button class="card-select-btn" onclick="toggleSelect('card-lochlomond', 'scotland', 'Loch Lomond')">Add to My List</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- /country-section -->
+</div>
+
+<div class="divider-band"></div>
+
+<!-- ── COMMITMENT 4 + FORM ── -->
+<div class="form-section">
+  <div class="form-inner">
+    <div class="form-commitment">
+      What's coming after this: a destination guide built for your trip — PDF or interactive in-app, with Google Maps links to every place we send you — a trip app where everything lives, and us when something goes sideways at midnight. You travel; we handle the rest.
+    </div>
+
+    <h2>Send Christina Your Rankings</h2>
+    <p class="form-sub">Tell us what you'd most like to see — and anything else on your mind</p>
+
+    <div id="form-container">
+      <div id="form-error">
+        We weren't able to send your message. Please contact Christina directly at the address below.
+      </div>
+
+      <form id="pmtp-form">
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY_HERE">
+        <input type="hidden" name="subject" value="Quote Response — Taylor & Megan Shaw | Ireland & Scotland">
+        <input type="hidden" name="from_name" value="Taylor & Megan Shaw Quote — Point Me to Paradise">
+        <input type="hidden" name="redirect" value="false">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required placeholder="Taylor or Megan Shaw">
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="your@email.com">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number <span style="font-weight:400; text-transform:none;">(optional)</span></label>
+          <input type="tel" id="phone" name="phone" placeholder="+1 (000) 000-0000">
+        </div>
+
+        <div class="form-group">
+          <label for="travel_insurance">Travel Insurance</label>
+          <select id="travel_insurance" name="travel_insurance">
+            <option value="">Select an option</option>
+            <option value="Yes — I'd like a quote">Yes — I'd like a quote</option>
+            <option value="No — not interested">No — not interested</option>
+            <option value="Already have coverage">Already have coverage</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Your Ireland Rankings, Scotland Rankings & Questions</label>
+          <textarea id="message" name="message" placeholder="Example:&#10;&#10;IRELAND (most to least interested):&#10;1. Cliffs of Moher&#10;2. Killarney National Park&#10;3. Rock of Cashel&#10;...&#10;&#10;SCOTLAND (most to least interested):&#10;1. Isle of Skye — Old Man of Storr&#10;2. Eilean Donan Castle&#10;...&#10;&#10;Any questions for Christina:"></textarea>
+        </div>
+
+        <p style="font-size:0.8rem; color:var(--ink-soft); margin-bottom:16px; line-height:1.6;">We check every component against public rates and meet or beat them. You're not paying a premium for our convenience — you're paying for the rest of what we do.</p>
+
+        <button type="submit" class="submit-btn" id="submit-btn">Send to Christina</button>
+      </form>
+    </div>
+
+    <div id="thank-you">
+      <h3>Thank you, Taylor & Megan.</h3>
+      <p>Christina has your rankings and will be in touch shortly to begin building the itinerary. The work that would have taken you weeks starts now.</p>
+    </div>
+
+    <p style="font-size:0.75rem; color:var(--ink-soft); margin-top:18px; text-align:center;">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor.</p>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p class="footer-name">Christina Garcia</p>
+  <p class="footer-title">Travel Advisor</p>
+  <p class="footer-agency">Point Me to Paradise Travel</p>
+  <div class="footer-contact">
+    <span id="footer-email-display"></span><br>
+    <a href="https://pointmetoparadise.com">pointmetoparadise.com</a>
+  </div>
+  <p class="disclaimer">
+    This proposal is prepared exclusively for Taylor & Megan Shaw by Point Me to Paradise Travel. Destination descriptions are based on current research and represent general visitor experiences; conditions, hours, and accessibility may vary. This document is for planning purposes only and does not constitute a booking confirmation.
+  </p>
+</footer>
+
+<script>
+  // Email obfuscation
+  (function() {
+    var u = 'christina';
+    var d = 'pointmetoparadise.com';
+    var e = u + '\u0040' + d;
+    var el = document.getElementById('footer-email-display');
+    if (el) {
+      var a = document.createElement('a');
+      a.href = 'mailto:' + e;
+      a.textContent = e;
+      a.style.color = 'var(--aqua-dark)';
+      a.style.textDecoration = 'none';
+      el.appendChild(a);
+    }
+  })();
+
+  // Card expand/collapse
+  function toggleCard(id) {
+    var card = document.getElementById(id);
+    var isExpanded = card.classList.contains('expanded');
+    card.classList.toggle('expanded');
+    var btn = card.querySelector('.card-toggle');
+    btn.textContent = isExpanded ? 'Learn More ↓' : 'Show Less ↑';
+  }
+
+  // Ranking state
+  var irelandPicks = [];
+  var scotlandPicks = [];
+
+  function toggleSelect(cardId, country, name) {
+    var card = document.getElementById(cardId);
+    var picks = country === 'ireland' ? irelandPicks : scotlandPicks;
+    var listId = country === 'ireland' ? 'irelandRankList' : 'scotlandRankList';
+    var emptyId = country === 'ireland' ? 'irelandEmpty' : 'scotlandEmpty';
+
+    var idx = picks.findIndex(function(p) { return p.id === cardId; });
+    if (idx > -1) {
+      // remove
+      picks.splice(idx, 1);
+      card.classList.remove('selected');
+      card.querySelector('.card-select-btn').textContent = 'Add to My List';
+      card.querySelector('.card-rank-badge').textContent = '–';
+    } else {
+      // add
+      picks.push({ id: cardId, name: name });
+      card.classList.add('selected');
+      card.querySelector('.card-select-btn').textContent = '✓ On My List';
+    }
+
+    // re-number badges
+    picks.forEach(function(p, i) {
+      var c = document.getElementById(p.id);
+      c.querySelector('.card-rank-badge').textContent = (i + 1);
+    });
+
+    renderRankList(listId, emptyId, picks, country);
+    updateMessagePlaceholder();
+  }
+
+  function renderRankList(listId, emptyId, picks, country) {
+    var list = document.getElementById(listId);
+    // Clear all but re-create
+    list.innerHTML = '';
+
+    if (picks.length === 0) {
+      var empty = document.createElement('li');
+      empty.className = 'rank-empty';
+      empty.id = emptyId;
+      empty.textContent = 'None selected yet';
+      list.appendChild(empty);
+      return;
+    }
+
+    picks.forEach(function(p, i) {
+      var li = document.createElement('li');
+      var numSpan = document.createElement('span');
+      numSpan.className = 'rank-num';
+      numSpan.textContent = (i + 1) + '.';
+      var nameSpan = document.createElement('span');
+      nameSpan.className = 'rank-name';
+      nameSpan.textContent = p.name;
+      var removeBtn = document.createElement('button');
+      removeBtn.className = 'rank-remove';
+      removeBtn.textContent = '×';
+      removeBtn.title = 'Remove';
+      (function(cardId, cnt) {
+        removeBtn.onclick = function() {
+          // find name from picks
+          var pArr = cnt === 'ireland' ? irelandPicks : scotlandPicks;
+          var item = pArr.find(function(x) { return x.id === cardId; });
+          if (item) toggleSelect(cardId, cnt, item.name);
+        };
+      })(p.id, country);
+      li.appendChild(numSpan);
+      li.appendChild(nameSpan);
+      li.appendChild(removeBtn);
+      list.appendChild(li);
+    });
+  }
+
+  function updateMessagePlaceholder() {
+    var ta = document.getElementById('message');
+    if (!ta || ta.value.length > 5) return;
+    var irStr = irelandPicks.length > 0
+      ? irelandPicks.map(function(p, i) { return (i+1) + '. ' + p.name; }).join('\n')
+      : '(none selected)';
+    var scStr = scotlandPicks.length > 0
+      ? scotlandPicks.map(function(p, i) { return (i+1) + '. ' + p.name; }).join('\n')
+      : '(none selected)';
+    ta.placeholder = 'IRELAND (most to least interested):\n' + irStr + '\n\nSCOTLAND (most to least interested):\n' + scStr + '\n\nAny questions for Christina:';
+  }
+
+  // Form submission
+  document.getElementById('pmtp-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = document.getElementById('submit-btn');
+    var err = document.getElementById('form-error');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    err.style.display = 'none';
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: new FormData(e.target)
+    })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      if (data.success) {
+        document.getElementById('form-container').style.display = 'none';
+        document.getElementById('thank-you').style.display = 'block';
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'Send to Christina';
+        err.style.display = 'block';
+        err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    })
+    .catch(function() {
+      btn.disabled = false;
+      btn.textContent = 'Send to Christina';
+      err.style.display = 'block';
+      err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  });
+</script>
+</body>
+</html>
