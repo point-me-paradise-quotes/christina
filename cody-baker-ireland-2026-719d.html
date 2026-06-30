@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>Cody Baker Family — Ireland 2026 | Point Me to Paradise Travel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --aqua-pale: #C4E4E1;
+    --aqua-mist: #EAF3F2;
+    --aqua: #75AFB1;
+    --aqua-dark: #4F8A8C;
+    --sand: #ECE7DC;
+    --sand-light: #F4F1E9;
+    --gold-whisper: #D6C8A8;
+    --white: #FFFFFF;
+    --paper: #FBFDFD;
+    --ink: #2B2420;
+    --ink-soft: #6B6359;
+    --line: #E5E9E8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 500; color: var(--ink); }
+  .accent { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--ink-soft); }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+  a { color: var(--aqua-dark); }
+
+  /* HERO — Variant B */
+  .hero {
+    position: relative;
+    background-color: var(--aqua-mist);
+    background-image:
+      linear-gradient(180deg,
+        rgba(255, 255, 255, 0.55) 0%,
+        rgba(196, 228, 225, 0.72) 38%,
+        rgba(234, 243, 242, 0.88) 75%,
+        rgba(251, 253, 253, 0.98) 100%),
+      url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnWLeDp-aIfUX-36uzT_hnupQMXiirzCLi7v-LLqolnRhrTaN1K56ciLgT&s=10');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 24px 72px;
+    text-align: center;
+    border-bottom: 1px solid var(--line);
+  }
+  .hero .brandmark {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.26em;
+    color: var(--aqua-dark);
+    font-weight: 600;
+    margin-bottom: 22px;
+  }
+  .hero .signature {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--ink-soft);
+    margin-top: 18px;
+  }
+  .hero .kicker {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--aqua-dark);
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
+  .hero h1 { font-size: clamp(40px, 6vw, 64px); margin-bottom: 18px; }
+  .hairline { width: 60px; height: 1px; background: var(--gold-whisper); margin: 0 auto 18px; }
+  .hero .tagline { font-size: clamp(19px, 2.2vw, 24px); color: var(--ink); max-width: 560px; margin: 0 auto; }
+
+  /* OVERVIEW STRIP */
+  .overview {
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+    padding: 32px 0;
+  }
+  .overview-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+  }
+  .overview-item svg { width: 22px; height: 22px; color: var(--aqua-dark); margin-bottom: 8px; }
+  .overview-item .label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-soft); margin-bottom: 4px; }
+  .overview-item .value { font-size: 14px; font-weight: 600; }
+
+  /* VALUE STRIP */
+  .value-strip { background: var(--sand-light); padding: 56px 0; }
+  .value-strip h2 { text-align: center; font-size: 30px; margin-bottom: 8px; }
+  .value-strip .accent { text-align: center; display: block; font-size: 17px; margin-bottom: 36px; }
+  .value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
+  .value-item { padding: 0 24px; text-align: center; border-left: 1px solid var(--gold-whisper); }
+  .value-item:first-child { border-left: none; }
+  .value-item svg { width: 28px; height: 28px; color: var(--aqua-dark); margin-bottom: 12px; }
+  .value-item h3 { font-size: 20px; margin-bottom: 10px; }
+  .value-item p { font-size: 14px; color: var(--ink-soft); }
+
+  /* SECTIONS */
+  section.block { padding: 48px 0; }
+  section.block.tinted { background: var(--aqua-mist); }
+  .intro p { font-size: 16px; max-width: 680px; }
+  .section-head { text-align: center; margin-bottom: 32px; display: flex; align-items: center; justify-content: center; gap: 14px; }
+  .section-head svg { width: 22px; height: 22px; color: var(--aqua-dark); opacity: 0.65; }
+  .section-head h2 { font-size: 28px; }
+  .section-sub { text-align: center; font-size: 17px; margin-bottom: 36px; }
+
+  /* CARDS */
+  .card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 28px;
+    margin-bottom: 22px;
+  }
+  .card-kicker { font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--aqua-dark); font-weight: 600; margin-bottom: 8px; }
+  .card h3 { font-size: 23px; margin-bottom: 4px; }
+  .card .tagline { font-size: 15px; margin-bottom: 14px; display: block; }
+  .card p.body { font-size: 14.5px; margin-bottom: 10px; }
+  .card-meta { display: flex; flex-wrap: wrap; gap: 18px; font-size: 13px; color: var(--ink-soft); margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+  .card-meta strong { color: var(--ink); }
+
+  /* CAROUSEL */
+  .carousel { position: relative; margin: 16px 0 18px; border-radius: 6px; overflow: hidden; background: var(--sand-light); }
+  .carousel-track { display: flex; transition: transform 0.35s ease; }
+  .carousel-track img { width: 100%; flex: 0 0 100%; height: 260px; object-fit: cover; display: block; }
+  .carousel-arrow {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    background: rgba(251,253,253,0.9); border: 1px solid var(--line); color: var(--aqua-dark);
+    width: 36px; height: 36px; border-radius: 50%; cursor: pointer;
+    display: flex; align-items: center; justify-content: center; font-size: 16px;
+  }
+  .carousel-arrow.prev { left: 10px; }
+  .carousel-arrow.next { right: 10px; }
+  .carousel-dots { position: absolute; bottom: 10px; left: 0; right: 0; display: flex; justify-content: center; gap: 6px; }
+  .carousel-dots button { width: 7px; height: 7px; border-radius: 50%; border: none; background: rgba(251,253,253,0.6); cursor: pointer; padding: 0; }
+  .carousel-dots button.active { background: var(--white); }
+  .card-photo { width: 100%; height: 200px; object-fit: cover; border-radius: 6px; margin-bottom: 16px; display: block; }
+  @media (max-width: 768px) { .card-photo { height: 160px; } }
+
+  .amenity-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 18px; margin: 16px 0; }
+  .amenity { display: flex; align-items: flex-start; gap: 8px; font-size: 13.5px; }
+  .amenity svg { width: 16px; height: 16px; color: var(--aqua-dark); flex-shrink: 0; margin-top: 2px; }
+
+  .price-box {
+    background: var(--aqua-pale);
+    border-radius: 6px;
+    padding: 18px 22px;
+    margin-top: 14px;
+  }
+  .price-box .kicker { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--aqua-dark); font-weight: 600; margin-bottom: 6px; }
+  .price-box .amount { font-size: 24px; font-weight: 700; font-family: 'Playfair Display', serif; }
+  .price-box .per-person { font-size: 13px; color: var(--ink-soft); margin-top: 2px; }
+  .price-box .fine { font-size: 12.5px; color: var(--ink-soft); margin-top: 10px; }
+
+  .flag {
+    background: var(--sand-light);
+    border-left: 3px solid var(--aqua-dark);
+    padding: 14px 18px;
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    margin-top: 14px;
+    border-radius: 0 4px 4px 0;
+  }
+
+  .callout-important {
+    background: var(--aqua-pale);
+    border: 2px solid var(--aqua-dark);
+    border-radius: 8px;
+    padding: 20px 24px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .callout-important svg { width: 26px; height: 26px; color: var(--aqua-dark); flex-shrink: 0; margin-top: 2px; }
+  .callout-important .callout-label {
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+    color: var(--aqua-dark);
+    margin-bottom: 6px;
+  }
+  .callout-important p { font-size: 15px; color: var(--ink); line-height: 1.6; }
+
+  .ship-context {
+    background: var(--sand-light);
+    border-left: 3px solid var(--aqua-dark);
+    padding: 22px 26px;
+    margin-bottom: 28px;
+    font-size: 14.5px;
+    line-height: 1.7;
+    border-radius: 0 4px 4px 0;
+  }
+
+  /* FLIGHT CARD */
+  .flight-card { background: var(--white); border: 1px solid var(--line); border-radius: 8px; padding: 26px; }
+  .flight-leg { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 14.5px; }
+  .flight-leg:last-of-type { border-bottom: none; }
+  .flight-leg .route { font-weight: 600; }
+  .flight-leg .detail { color: var(--ink-soft); font-size: 13px; }
+  .fare-table { width: 100%; border-collapse: collapse; margin-top: 18px; font-size: 14px; }
+  .fare-table th, .fare-table td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line); }
+  .fare-table th { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft); }
+
+  /* TWO COLUMN PHASE 2 */
+  .phase2-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+
+  /* THINGS TO DO LIST */
+  .todo-list { display: grid; gap: 14px; }
+  .todo-item { display: flex; gap: 14px; background: var(--white); border: 1px solid var(--line); border-radius: 6px; padding: 16px 18px; }
+  .todo-thumb { width: 64px; height: 64px; border-radius: 6px; overflow: hidden; flex-shrink: 0; background: var(--sand-light); display: flex; align-items: center; justify-content: center; }
+  .todo-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .todo-thumb svg { width: 22px; height: 22px; color: var(--aqua-dark); stroke-width: 1.4; }
+  .todo-item h4 { font-size: 15.5px; margin-bottom: 3px; }
+  .todo-item .drive { font-size: 12.5px; color: var(--aqua-dark); font-weight: 600; }
+  .todo-item p { font-size: 13.5px; color: var(--ink-soft); margin-top: 4px; }
+
+  /* RENTAL CAR */
+  .car-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; }
+  .car-grid .col p.body { font-size: 14px; margin-bottom: 8px; }
+
+  /* NOTES + FORM */
+  .form-section { background: var(--white); padding: 48px 0; }
+  textarea, input[type="text"], input[type="email"], input[type="tel"] {
+    width: 100%;
+    font-size: 16px;
+    font-family: 'DM Sans', sans-serif;
+    padding: 13px 14px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    color: var(--ink);
+    background: var(--paper);
+    margin-bottom: 16px;
+  }
+  textarea { min-height: 100px; resize: vertical; }
+  label.field-label { font-size: 13px; font-weight: 600; color: var(--ink-soft); display: block; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em; }
+  button[type="submit"] {
+    background: var(--aqua-dark);
+    color: var(--white);
+    border: none;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 15px 32px;
+    border-radius: 6px;
+    cursor: pointer;
+    min-height: 48px;
+  }
+  button[type="submit"]:hover { background: #437576; }
+  #thanksMsg { display: none; text-align: center; padding: 40px 0; }
+  #thanksMsg.show { display: block; }
+  #thanksMsg h3 { margin-bottom: 8px; }
+
+  /* FOOTER */
+  footer { background: var(--sand-light); color: var(--ink); padding: 44px 0; }
+  footer .footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 24px; margin-bottom: 24px; }
+  footer h4 { font-size: 16px; margin-bottom: 8px; }
+  footer p, footer a { font-size: 13.5px; color: var(--ink-soft); }
+  footer a { display: block; margin-bottom: 4px; }
+  .disclosure { font-size: 12.5px; color: var(--ink-soft); border-top: 1px solid var(--gold-whisper); padding-top: 20px; font-style: italic; font-family: 'Cormorant Garamond', serif; line-height: 1.7; }
+
+  @media (max-width: 768px) {
+    .overview-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .value-grid { grid-template-columns: 1fr; gap: 24px; }
+    .value-item { border-left: none; border-top: 1px solid var(--gold-whisper); padding-top: 24px; }
+    .value-item:first-child { border-top: none; padding-top: 0; }
+    .amenity-grid { grid-template-columns: 1fr; }
+    .phase2-grid { grid-template-columns: 1fr; }
+    .car-grid { grid-template-columns: 1fr; }
+    .flight-leg { flex-direction: column; align-items: flex-start; gap: 4px; }
+    footer .footer-grid { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="brandmark">Point Me to Paradise Travel</div>
+  <h1>Ireland — October 2026</h1>
+  <div class="hairline"></div>
+  <p class="tagline">A wedding at Kilkea Castle, then a second half of the trip that's still wide open — here's where things stand.</p>
+  <p class="signature">Prepared by Christina Garcia, for the Baker Family</p>
+</div>
+
+<!-- OVERVIEW STRIP -->
+<div class="overview">
+  <div class="wrap overview-grid">
+    <div class="overview-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M21 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <div class="label">Travelers</div>
+      <div class="value">2 adults · 1 infant</div>
+    </div>
+    <div class="overview-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="8" rx="1"/><path d="M3 11V8a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v3"/><path d="M15 11V8a2 2 0 0 1 2-2h0a2 2 0 0 1 2 2v3"/></svg>
+      <div class="label">Trip length</div>
+      <div class="value">7 nights</div>
+    </div>
+    <div class="overview-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <div class="label">Region</div>
+      <div class="value">County Kildare/Carlow + TBD</div>
+    </div>
+    <div class="overview-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 19.5 21 13l-7-2-3-7-1.5 7-7 1.5z"/></svg>
+      <div class="label">Flying from</div>
+      <div class="value">Houston (United)</div>
+    </div>
+  </div>
+</div>
+
+<!-- VALUE STRIP -->
+<div class="value-strip">
+  <div class="wrap">
+    <h2>Beyond the booking</h2>
+    <span class="accent">What's included with every Point Me to Paradise trip</span>
+    <div class="value-grid">
+      <div class="value-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        <h3>The Trip Guide</h3>
+        <p>A document built for your week — restaurants we'd return to, neighborhoods worth the walk, what to skip, the places open on a Sunday. Not pulled from a database. Researched against where you're staying and what you've told us matters.</p>
+      </div>
+      <div class="value-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M11 18h2"/></svg>
+        <h3>The Trip App</h3>
+        <p>Itinerary, confirmation numbers, transfer windows, and ground contacts in one place — accessible offline, updated in real time. If a flight shifts or weather moves, the app moves with it.</p>
+      </div>
+      <div class="value-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <h3>Best-Rate Assurance</h3>
+        <p>Every hotel night, cruise rate, and tour in your quote is priced at publicly available rates. If you find the same component for less elsewhere, we'll match it.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="block intro">
+  <div class="wrap">
+    <p>This is a preliminary look — not a final itinerary. You're two adults and a one-year-old, in Ireland for a wedding at Kilkea Castle, flying out of Dublin on United from Houston. The first half of the trip (Oct 15–18) is anchored to the wedding; the second half (Oct 18–22) is wide open, and that's the part I want your read on. Below: flight options, five hotels within a short drive of Kilkea Castle, a rental car quote, things to do nearby, and two directions for the back half of the week — one easy, one classic.</p>
+  </div>
+</section>
+
+<!-- FLIGHTS -->
+<section class="block tinted">
+  <div class="wrap">
+    <div class="section-head">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 19.5 21 13l-7-2-3-7-1.5 7-7 1.5z"/></svg>
+      <h2>Your flights</h2>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 19.5 21 13l-7-2-3-7-1.5 7-7 1.5z"/></svg>
+    </div>
+    <p class="section-sub accent">Houston to Dublin on United, with one stop each way.</p>
+
+    <div class="flight-card">
+      <div class="card-kicker">Outbound · October 14</div>
+      <div class="flight-leg">
+        <span class="route">Houston (IAH) → Dublin (DUB)</span>
+        <span class="detail">12:15 PM – 7:20 AM next day · 1 stop, Washington D.C. · 13h 5m total</span>
+      </div>
+      <div class="card-kicker" style="margin-top:18px;">Return · October 22</div>
+      <div class="flight-leg">
+        <span class="route">Dublin (DUB) → Houston (IAH)</span>
+        <span class="detail">1:35 PM – 8:53 PM · 1 stop, Newark · 13h 18m total</span>
+      </div>
+
+      <div class="flag">Departing the 14th instead of the 15th means landing in Dublin the morning of the 15th — an easier arrival day before wedding activities start, rather than a same-day scramble.</div>
+
+      <table class="fare-table">
+        <thead>
+          <tr><th>Option</th><th>Baby's seat</th><th>Total</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Regular Economy</td><td>Lap infant</td><td><strong>$1,960</strong></td></tr>
+          <tr><td>Regular Economy</td><td>Own seat</td><td><strong>$2,939</strong></td></tr>
+          <tr><td>Fully Refundable Economy</td><td>Lap infant</td><td>$2,420</td></tr>
+          <tr><td>Fully Refundable Economy</td><td>Own seat</td><td>$3,629</td></tr>
+        </tbody>
+      </table>
+      <p class="body" style="margin-top:14px; font-size:13.5px; color:var(--ink-soft);">Regular Economy includes free seat selection, free changes (fare difference may apply), upgrade eligibility, one carry-on, and one checked bag per passenger — non-refundable. On a 13-hour overnight flight with a one-year-old, a paid seat for the baby buys real room, but the lap-infant fare is the lower-cost way to go if you're comfortable with it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- KILKEA HOTELS -->
+<section class="block">
+  <div class="wrap">
+    <div class="section-head">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/></svg>
+      <h2>Where to stay · Oct 15–22</h2>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/></svg>
+    </div>
+    <p class="section-sub accent">Five options within a 15–35 minute drive of Kilkea Castle, each priced for two adults and a young child.</p>
+    <div class="callout-important" style="margin-bottom:24px;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+      <div>
+        <div class="callout-label">Please read before choosing a hotel</div>
+        <p><strong>These five are priced as your full 7-night stay (Oct 15–22) at one property.</strong> That's the default below. But we can just as easily book 3 nights here for the wedding (Oct 15–18) and move to a new base for the back half — see "Where to next," further down. Just tell me to shorten any of these to a 3-night stay and I'll re-quote it that way.</p>
+      </div>
+    </div>
+
+
+    <!-- Hotel 1 -->
+    <div class="card">
+      <div class="card-kicker">Option 1 · Family-friendly · 1 room · 2 adults + 1 child</div>
+      <h3>Talbot Hotel Carlow</h3>
+      <span class="tagline accent">Closest to the castle, with the most going on around it.</span>
+
+      <div class="carousel" id="talbotCarousel">
+        <div class="carousel-track" id="talbotTrack">
+          <img src="https://i.travelapi.com/lodging/3000000/2120000/2113500/2113404/28b0c855_z.jpg" alt="Talbot Hotel Carlow" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/3000000/2120000/2113500/2113404/fea119b5_z.jpg" alt="Talbot Hotel Carlow" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/3000000/2120000/2113500/2113404/8986af19_z.jpg" alt="Talbot Hotel Carlow" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/3000000/2120000/2113500/2113404/cc1df9e6_z.jpg" alt="Talbot Hotel Carlow" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/3000000/2120000/2113500/2113404/a909ca44_z.jpg" alt="Talbot Hotel Carlow" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/3000000/2120000/2113500/2113404/534a3dce_z.jpg" alt="Talbot Hotel Carlow" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/3000000/2120000/2113500/2113404/a8c4d5f1_z.jpg" alt="Talbot Hotel Carlow" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/3000000/2120000/2113500/2113404/9010f777_z.jpg" alt="Talbot Hotel Carlow" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+        </div>
+        <button type="button" class="carousel-arrow prev" aria-label="Previous photo" onclick="moveCarousel('talbot', -1)">‹</button>
+        <button type="button" class="carousel-arrow next" aria-label="Next photo" onclick="moveCarousel('talbot', 1)">›</button>
+        <div class="carousel-dots" id="talbotDots"></div>
+      </div>
+
+      <div class="card-meta">
+        <span><strong>$153.52</strong>/night avg</span>
+        <span>~15 min to Kilkea Castle (7–8 miles)</span>
+        <span>Superior Triple Room</span>
+        <span>Fully refundable</span>
+      </div>
+      <p class="body">Of the five, this is the shortest drive to the castle and puts you in Carlow town itself, with more restaurants and shopping within walking distance than the countryside properties offer. The Superior Triple Room is sized for two adults and a young child.</p>
+      <div class="amenity-grid">
+        <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Full daily breakfast included</div>
+        <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M2 6h20M2 18h20"/></svg> Indoor swimming pool</div>
+        <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 2v4M16 2v4"/></svg> Two on-site restaurants</div>
+        <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M2 11h20"/></svg> Free parking</div>
+        <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9c.13.32.4.58.74.7H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg> Fitness center</div>
+        <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg> Complimentary Wi-Fi</div>
+      </div>
+      <div class="price-box">
+        <div class="kicker">7 nights · Oct 15–22 · all-in</div>
+        <div class="amount">Est. $1,219.49</div>
+        <div class="per-person">$174.21 per person, per night equivalent · taxes & fees included</div>
+        <div class="fine">Pricing subject to change until confirmed by Christina before booking.</div>
+      </div>
+    </div>
+
+    <!-- Hotel 2 -->
+    <div class="card">
+      <div class="card-kicker">Option 2 · Family-friendly · 1 room · 2 adults + 1 child</div>
+      <h3>Woodford Dolmen Hotel</h3>
+      <span class="tagline accent">More room to spread out, on landscaped grounds outside Carlow.</span>
+
+      <div class="carousel" id="woodfordCarousel">
+        <div class="carousel-track" id="woodfordTrack">
+          <img src="https://i.travelapi.com/lodging/5000000/4010000/4002000/4001903/191fb94c_z.jpg" alt="Woodford Dolmen Hotel" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/5000000/4010000/4002000/4001903/4275492b_z.jpg" alt="Woodford Dolmen Hotel" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/5000000/4010000/4002000/4001903/c010d60b_z.jpg" alt="Woodford Dolmen Hotel" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/5000000/4010000/4002000/4001903/e165a670_z.jpg" alt="Woodford Dolmen Hotel" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/5000000/4010000/4002000/4001903/088922ce_z.jpg" alt="Woodford Dolmen Hotel" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/5000000/4010000/4002000/4001903/faf9e1f8_z.jpg" alt="Woodford Dolmen Hotel" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/5000000/4010000/4002000/4001903/3afeff12_z.jpg" alt="Woodford Dolmen Hotel" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/5000000/4010000/4002000/4001903/f54496a3_z.jpg" alt="Woodford Dolmen Hotel" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/5000000/4010000/4002000/4001903/8c5c718d_z.jpg" alt="Woodford Dolmen Hotel" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/5000000/4010000/4002000/4001903/0f5984ec_z.jpg" alt="Woodford Dolmen Hotel" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/5000000/4010000/4002000/4001903/aa6ffc9a_z.jpg" alt="Woodford Dolmen Hotel" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/5000000/4010000/4002000/4001903/eac5c675_z.jpg" alt="Woodford Dolmen Hotel" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/5000000/4010000/4002000/4001903/80e5ae03_z.jpg" alt="Woodford Dolmen Hotel" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+        </div>
+        <button type="button" class="carousel-arrow prev" aria-label="Previous photo" onclick="moveCarousel('woodford', -1)">‹</button>
+        <button type="button" class="carousel-arrow next" aria-label="Next photo" onclick="moveCarousel('woodford', 1)">›</button>
+        <div class="carousel-dots" id="woodfordDots"></div>
+      </div>
+
+      <div class="card-meta">
+        <span><strong>$190.12</strong>/night avg</span>
+        <span>~20 min to Kilkea Castle (12–15 miles)</span>
+        <span>Classic Family Room — double & 2 singles</span>
+        <span>Fully refundable</span>
+      </div>
+      <p class="body">The Classic Family Room gives you one double bed plus two singles — meaningfully more floor space than a standard triple, with a travel cot easy to fit in alongside. The grounds are quieter than being in town, while still a short drive to Carlow's restaurants and shops.</p>
+      <div class="amenity-grid">
+        <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Full daily breakfast included</div>
+        <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 2v4M16 2v4"/></svg> On-site restaurant & bar</div>
+        <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c-4 5-6 8-6 11a6 6 0 0 0 12 0c0-3-2-6-6-11z"/></svg> Landscaped grounds</div>
+        <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M2 11h20"/></svg> Free parking</div>
+        <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg> Complimentary Wi-Fi</div>
+        <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/></svg> Family-friendly atmosphere</div>
+      </div>
+      <div class="price-box">
+        <div class="kicker">7 nights · Oct 15–22 · all-in</div>
+        <div class="amount">Est. $1,508.72</div>
+        <div class="per-person">$215.53 per person, per night equivalent · taxes & fees included</div>
+        <div class="fine">Pricing subject to change until confirmed by Christina before booking.</div>
+      </div>
+    </div>
+
+    <!-- Hotel 3 -->
+    <div class="card">
+      <div class="card-kicker">Option 3 · Resort experience · 1 room · 2 adults + 1 child</div>
+      <h3>Mount Wolseley Hotel, Golf &amp; Spa Resort</h3>
+      <span class="tagline accent">More to do on property, if you want downtime between wedding events.</span>
+
+      <div class="carousel" id="wolseleyCarousel">
+        <div class="carousel-track" id="wolseleyTrack">
+          <img src="https://i.travelapi.com/lodging/2000000/1230000/1221500/1221412/e8275488_z.jpg" alt="Mount Wolseley Hotel, Golf & Spa Resort" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/2000000/1230000/1221500/1221412/6685a568_z.jpg" alt="Mount Wolseley Hotel, Golf & Spa Resort" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/2000000/1230000/1221500/1221412/eb8108b1_z.jpg" alt="Mount Wolseley Hotel, Golf & Spa Resort" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/2000000/1230000/1221500/1221412/31ca0f0d_z.jpg" alt="Mount Wolseley Hotel, Golf & Spa Resort" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/2000000/1230000/1221500/1221412/w3837h2511x3y3-2000144a_z.jpg" alt="Mount Wolseley Hotel, Golf & Spa Resort" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/2000000/1230000/1221500/1221412/3f82cc39_z.jpg" alt="Mount Wolseley Hotel, Golf & Spa Resort" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/2000000/1230000/1221500/1221412/w3836h2157x4y3-d62aaf75_z.jpg" alt="Mount Wolseley Hotel, Golf & Spa Resort" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/2000000/1230000/1221500/1221412/7e7b6899_z.jpg" alt="Mount Wolseley Hotel, Golf & Spa Resort" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/2000000/1230000/1221500/1221412/w3837h2156x3y3-15972bc8_z.jpg" alt="Mount Wolseley Hotel, Golf & Spa Resort" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/2000000/1230000/1221500/1221412/w3836h2158x4y3-791bb636_z.jpg" alt="Mount Wolseley Hotel, Golf & Spa Resort" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/2000000/1230000/1221500/1221412/w3840h2158x0y3-33b8ef74_z.jpg" alt="Mount Wolseley Hotel, Golf & Spa Resort" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/2000000/1230000/1221500/1221412/2f229c0d_z.jpg" alt="Mount Wolseley Hotel, Golf & Spa Resort" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/2000000/1230000/1221500/1221412/d3bca2bd_z.jpg" alt="Mount Wolseley Hotel, Golf & Spa Resort" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/2000000/1230000/1221500/1221412/3b3e55e8_z.jpg" alt="Mount Wolseley Hotel, Golf & Spa Resort" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/2000000/1230000/1221500/1221412/88400295_z.jpg" alt="Mount Wolseley Hotel, Golf & Spa Resort" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+        </div>
+        <button type="button" class="carousel-arrow prev" aria-label="Previous photo" onclick="moveCarousel('wolseley', -1)">‹</button>
+        <button type="button" class="carousel-arrow next" aria-label="Next photo" onclick="moveCarousel('wolseley', 1)">›</button>
+        <div class="carousel-dots" id="wolseleyDots"></div>
+      </div>
+
+      <div class="card-meta">
+        <span><strong>$177.39</strong>/night avg</span>
+        <span>~25 min to Kilkea Castle (~15 miles)</span>
+        <span>Deluxe Double Room</span>
+      </div>
+      <p class="body">This is the resort option of the group — a working golf and spa property set in the countryside. The indoor pool and children's pool are useful with a one-year-old, and there's enough on-site to fill an afternoon without getting back in the car.</p>
+      <div class="amenity-grid">
+        <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M2 6h20M2 18h20"/></svg> Indoor pool + children's pool</div>
+        <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82"/></svg> Full-service spa</div>
+        <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c-4 5-6 8-6 11a6 6 0 0 0 12 0c0-3-2-6-6-11z"/></svg> Championship golf course</div>
+        <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 2v4M16 2v4"/></svg> On-site restaurants & bar</div>
+        <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M2 11h20"/></svg> Free parking</div>
+        <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg> Complimentary Wi-Fi</div>
+      </div>
+      <div class="price-box">
+        <div class="kicker">7 nights · Oct 15–22 · all-in</div>
+        <div class="amount">Est. $1,413.46</div>
+        <div class="per-person">$201.92 per person, per night equivalent · taxes & fees included</div>
+        <div class="fine">Pricing subject to change until confirmed by Christina before booking. Availability is limited.</div>
+      </div>
+    </div>
+
+    <!-- Hotel 4 -->
+    <div class="card">
+      <div class="card-kicker">Option 4 · Boutique B&B · 1 room · 2 adults + 1 child</div>
+      <h3>Avlon House Bed &amp; Breakfast</h3>
+      <span class="tagline accent">A quieter, more personal stay — best as a strong backup.</span>
+
+      <div class="carousel" id="avlonCarousel">
+        <div class="carousel-track" id="avlonTrack">
+          <img src="https://i.travelapi.com/lodging/3000000/2660000/2655900/2655847/4292436b_z.jpg" alt="Avlon House Bed & Breakfast" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/3000000/2660000/2655900/2655847/eb9dd37a_z.jpg" alt="Avlon House Bed & Breakfast" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/3000000/2660000/2655900/2655847/bb4f629f_z.jpg" alt="Avlon House Bed & Breakfast" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/3000000/2660000/2655900/2655847/dcbef8b5_z.jpg" alt="Avlon House Bed & Breakfast" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/3000000/2660000/2655900/2655847/cfd6eea6_z.jpg" alt="Avlon House Bed & Breakfast" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/3000000/2660000/2655900/2655847/1df5910e_z.jpg" alt="Avlon House Bed & Breakfast" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/3000000/2660000/2655900/2655847/34d92c66_z.jpg" alt="Avlon House Bed & Breakfast" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/3000000/2660000/2655900/2655847/4128702f_z.jpg" alt="Avlon House Bed & Breakfast" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/3000000/2660000/2655900/2655847/8dcb9749_z.jpg" alt="Avlon House Bed & Breakfast" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/3000000/2660000/2655900/2655847/1506c7d8_z.jpg" alt="Avlon House Bed & Breakfast" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/3000000/2660000/2655900/2655847/a9a907d1_z.jpg" alt="Avlon House Bed & Breakfast" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/3000000/2660000/2655900/2655847/3c3024c9_z.jpg" alt="Avlon House Bed & Breakfast" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/3000000/2660000/2655900/2655847/1f0ac7c3_z.jpg" alt="Avlon House Bed & Breakfast" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/3000000/2660000/2655900/2655847/40918f25_z.jpg" alt="Avlon House Bed & Breakfast" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/3000000/2660000/2655900/2655847/79c0cd26_z.jpg" alt="Avlon House Bed & Breakfast" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/3000000/2660000/2655900/2655847/b0badce9_z.jpg" alt="Avlon House Bed & Breakfast" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+        </div>
+        <button type="button" class="carousel-arrow prev" aria-label="Previous photo" onclick="moveCarousel('avlon', -1)">‹</button>
+        <button type="button" class="carousel-arrow next" aria-label="Next photo" onclick="moveCarousel('avlon', 1)">›</button>
+        <div class="carousel-dots" id="avlonDots"></div>
+      </div>
+
+      <div class="card-meta">
+        <span><strong>$193.61</strong>/night avg</span>
+        <span>~20 min to Kilkea Castle</span>
+        <span>Triple Room — double & single</span>
+      </div>
+      <p class="body">Avlon House is well-reviewed and smaller in scale than the hotels above — a good fallback if the larger properties near Kilkea Castle sell out. It suits clients comfortable with a B&B-style stay rather than full hotel service.</p>
+      <div class="amenity-grid">
+        <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Breakfast included</div>
+        <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M2 11h20"/></svg> Free parking</div>
+        <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg> Complimentary Wi-Fi</div>
+        <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/></svg> Quieter, personal-feel property</div>
+      </div>
+      <div class="flag">Crib/cot availability isn't confirmed for this property yet — I'd verify before booking if this is a contender.</div>
+      <div class="price-box">
+        <div class="kicker">7 nights · Oct 15–22 · all-in</div>
+        <div class="amount">Est. $1,541.95</div>
+        <div class="per-person">$220.28 per person, per night equivalent · taxes & fees included</div>
+        <div class="fine">Pricing subject to change until confirmed by Christina before booking.</div>
+      </div>
+    </div>
+
+    <!-- Hotel 5 -->
+    <div class="card">
+      <div class="card-kicker">Option 5 · Boutique town stay · 1 room · 2 adults + 1 child</div>
+      <h3>The Rooms at Firecastle</h3>
+      <span class="tagline accent">A stylish stay in the center of Kildare Town, a bit further from the castle.</span>
+
+      <div class="carousel" id="firecastleCarousel">
+        <div class="carousel-track" id="firecastleTrack">
+          <img src="https://i.travelapi.com/lodging/100000000/99960000/99952400/99952342/bf8c4269_z.jpg" alt="The Rooms at Firecastle" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/100000000/99960000/99952400/99952342/3cc4d147_z.jpg" alt="The Rooms at Firecastle" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/100000000/99960000/99952400/99952342/b8814ee6_z.jpg" alt="The Rooms at Firecastle" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/100000000/99960000/99952400/99952342/cd232b2a_z.jpg" alt="The Rooms at Firecastle" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/100000000/99960000/99952400/99952342/328c0bab_z.jpg" alt="The Rooms at Firecastle" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/100000000/99960000/99952400/99952342/df53125f_z.jpg" alt="The Rooms at Firecastle" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/100000000/99960000/99952400/99952342/24c160f6_z.jpg" alt="The Rooms at Firecastle" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/100000000/99960000/99952400/99952342/19583eec_z.jpg" alt="The Rooms at Firecastle" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/100000000/99960000/99952400/99952342/9f8b8557_z.jpg" alt="The Rooms at Firecastle" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/100000000/99960000/99952400/99952342/7b6690ae_z.jpg" alt="The Rooms at Firecastle" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/100000000/99960000/99952400/99952342/89931312_z.jpg" alt="The Rooms at Firecastle" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/100000000/99960000/99952400/99952342/6b0d1db5_z.jpg" alt="The Rooms at Firecastle" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/100000000/99960000/99952400/99952342/971112f6_z.jpg" alt="The Rooms at Firecastle" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/100000000/99960000/99952400/99952342/3d7c58f0_z.jpg" alt="The Rooms at Firecastle" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/100000000/99960000/99952400/99952342/815781e9_z.jpg" alt="The Rooms at Firecastle" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+          <img src="https://i.travelapi.com/lodging/100000000/99960000/99952400/99952342/5f29ced6_z.jpg" alt="The Rooms at Firecastle" loading="lazy" onerror="this.closest('.carousel-track').removeChild(this)">
+        </div>
+        <button type="button" class="carousel-arrow prev" aria-label="Previous photo" onclick="moveCarousel('firecastle', -1)">‹</button>
+        <button type="button" class="carousel-arrow next" aria-label="Next photo" onclick="moveCarousel('firecastle', 1)">›</button>
+        <div class="carousel-dots" id="firecastleDots"></div>
+      </div>
+
+      <div class="card-meta">
+        <span><strong>$194.15</strong>/night avg</span>
+        <span>~30–35 min to Kilkea Castle</span>
+        <span>Deluxe Double and Twin Room</span>
+      </div>
+      <p class="body">The longest drive to Kilkea Castle of the five, but the most character — a boutique property in the heart of Kildare Town with a café, bakery, and gourmet food market on-site, and shops and restaurants in walking distance. Also puts you closest to Kildare Village for a low-key outing.</p>
+      <div class="amenity-grid">
+        <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 2v4M16 2v4"/></svg> On-site café, bakery & food market</div>
+        <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Walking distance to shops & restaurants</div>
+        <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg> Complimentary Wi-Fi</div>
+        <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/></svg> Boutique, central Kildare Town location</div>
+      </div>
+      <div class="flag">No dedicated parking lot — nearby public parking only. Crib/cot availability also unconfirmed.</div>
+      <div class="price-box">
+        <div class="kicker">7 nights · Oct 15–22 · all-in</div>
+        <div class="amount">Est. $1,554.39</div>
+        <div class="per-person">$222.06 per person, per night equivalent · taxes & fees included</div>
+        <div class="fine">Pricing subject to change until confirmed by Christina before booking.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THINGS TO DO NEAR KILKEA -->
+<section class="block tinted">
+  <div class="wrap">
+    <div class="section-head">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <h2>Around Kilkea, Carlow &amp; Kildare</h2>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    </div>
+    <p class="section-sub accent">Easy outings to fill the time around the wedding — none more than an hour's drive.</p>
+
+    <div class="todo-list">
+      <div class="todo-item">
+        <div class="todo-thumb">
+          <img src="https://www.irishtourism.com/contentFiles/page/thumbnailImages/National-Stud--Japanese-Gardens-1-Portrait.jpg" alt="Irish National Stud & Japanese Gardens" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <svg style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c-4 5-6 8-6 11a6 6 0 0 0 12 0c0-3-2-6-6-11z"/></svg>
+        </div>
+        <div><h4>Irish National Stud &amp; Japanese Gardens</h4><span class="drive">~25–30 min</span><p>The top pick of the group — easy to walk with a stroller, with the stud farm, Japanese Gardens, and St. Fiachra's Garden good for about 2–3 hours.</p></div>
+      </div>
+      <div class="todo-item">
+        <div class="todo-thumb">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3vnG3Qc9o5NcFMuPf0biQ0twHDHbyH7Co2nmQH581hoqIK4KmrfcZK48&s=10" alt="Kildare Village" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <svg style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/></svg>
+        </div>
+        <div><h4>Kildare Village</h4><span class="drive">~25–30 min</span><p>Outlet shopping, coffee, and casual dining — pairs naturally with the Irish National Stud since both are in the Kildare area.</p></div>
+      </div>
+      <div class="todo-item">
+        <div class="todo-thumb">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGStJ8grOVqRCK2-S8M_SGdRBvm-0oRnAQcfD24el6lsmPgED4Iv8-AkMc&s=10" alt="Athy Town & River Barrow Walk" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <svg style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M12 2v20"/></svg>
+        </div>
+        <div><h4>Athy Town &amp; River Barrow Walk</h4><span class="drive">~10–15 min</span><p>A simple, low-key outing between wedding events — riverside walking path, small-town feel, and the historic White Castle area.</p></div>
+      </div>
+      <div class="todo-item">
+        <div class="todo-thumb">
+          <img src="https://3rd-eye.ie/wp-content/uploads/2021/12/shackleton-museum-athy..jpg" alt="Shackleton Museum, Athy" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <svg style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+        </div>
+        <div><h4>Shackleton Museum, Athy</h4><span class="drive">~10–15 min</span><p>A quick stop for history — Antarctic explorer Ernest Shackleton was born near Kilkea, giving it a direct local tie.</p></div>
+      </div>
+      <div class="todo-item">
+        <div class="todo-thumb">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYgCMc52i-6g4vAluCTnHeR_NAfkmHYCRQRAbfUyo3GYooChk00oErIqk&s=10" alt="Brownshill Dolmen, Carlow" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <svg style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/></svg>
+        </div>
+        <div><h4>Brownshill Dolmen, Carlow</h4><span class="drive">~20 min</span><p>One of Ireland's most striking prehistoric monuments — a capstone believed to weigh over 100 tons. Quick visit, easy to pair with time in Carlow town.</p></div>
+      </div>
+      <div class="todo-item">
+        <div class="todo-thumb">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7NRDGCBIJZj1BRu3DBhpO0a6PDee6ZSNo3nEII8rUPg&s=10" alt="Duckett's Grove, Carlow" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <svg style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/></svg>
+        </div>
+        <div><h4>Duckett's Grove, Carlow</h4><span class="drive">~25–30 min</span><p>A dramatic ruined Gothic mansion with gardens and good photo spots — no full-day commitment needed.</p></div>
+      </div>
+      <div class="todo-item">
+        <div class="todo-thumb">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwtf1GfVhh2XVula28QQ1x4CvKY8t3ML13gF5bPriIrTTlvx4xdMMxmWM&s=10" alt="Altamont Gardens, County Carlow" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <svg style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c-4 5-6 8-6 11a6 6 0 0 0 12 0c0-3-2-6-6-11z"/></svg>
+        </div>
+        <div><h4>Altamont Gardens, County Carlow</h4><span class="drive">~35–40 min</span><p>A garden estate with walking paths and room to wander — good if the weather's cooperating and you want something relaxed with the baby.</p></div>
+      </div>
+      <div class="todo-item">
+        <div class="todo-thumb">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRh3WXtoVhPMWiewswqQzzcORQNkVuZRHFbr1uunJzg8OtTIqBT11A_VBq&s=10" alt="Kilkenny & Kilkenny Castle" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <svg style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/></svg>
+        </div>
+        <div><h4>Kilkenny &amp; Kilkenny Castle</h4><span class="drive">~45–55 min</span><p>The best full-day outing from the area — walkable, historic, good restaurants. Kilkenny Castle is a classic Irish-castle stop, and children under 12 get in free.</p></div>
+      </div>
+      <div class="todo-item">
+        <div class="todo-thumb">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM7SINYZP9ozmSh8p4Md2YxRqbxu17qQzyfdrTwYK_N1SPegF8YVpvkjw&s=10" alt="On-site at Kilkea Castle" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <svg style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <div><h4>On-site at Kilkea Castle</h4><span class="drive">On property</span><p>If open to non-overnight wedding guests: falconry, archery, fishing, and estate walks — easy to fit around the wedding schedule if timing allows.</p></div>
+      </div>
+    </div>
+
+    <div class="flag" style="margin-top:24px;">If you only have time for a few: the Irish National Stud &amp; Japanese Gardens, Kildare Village, Duckett's Grove, and a day trip to Kilkenny give a good mix of gardens, shopping, history, and classic Ireland scenery without overloading a trip with a one-year-old.</div>
+  </div>
+</section>
+
+<!-- PHASE 2 -->
+<section class="block">
+  <div class="wrap">
+    <div class="section-head">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      <h2>Where to next · Oct 18–22</h2>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+    </div>
+    <p class="section-sub accent">Two honest options for the back half of the trip — one keeps the driving light, the other goes further for more of Ireland.</p>
+
+    <div class="flag" style="margin-bottom:28px; font-size:14.5px;"><strong>You don't have to stay put.</strong> The hotel quotes above assume one Kilkea-area property for all 7 nights, but you have a rental car the whole trip and nothing locks you in. Plenty of families in your spot stay near the castle through the wedding, then drive to a new base on the 18th for the back half. Both directions below are genuinely on the table — just say the word and I'll start pulling hotel rates for whichever one you're leaning toward.</div>
+
+    <div class="phase2-grid">
+      <div class="card">
+        <div class="card-kicker">Option A · The easy half</div>
+        <img class="card-photo" src="https://withlocals-com-res.cloudinary.com/image/upload/w_480,h_270,c_fill,g_auto,q_auto,dpr_3.0,f_auto/destinations/ireland/dublin/Wicklow%20Mountains%2C%20Glendalough%2C%20Kilkenny%20day%20trip/AdobeStock_271862579" alt="Wicklow Mountains & Glendalough" loading="lazy" onerror="this.style.display='none';">
+        <h3>Wicklow Mountains &amp; Glendalough</h3>
+        <span class="tagline accent">A short hop from Kilkea, and close to the airport on departure day.</span>
+        <div class="card-meta">
+          <span>~51 min from Kilkea Castle</span>
+          <span>~1.5–2 hrs to Dublin Airport</span>
+        </div>
+        <p class="body">This is the lower-stress direction with a one-year-old. The drive from Kilkea is under an hour, and on the 22nd you're not racing a long return drive against a 1:35 PM flight. The Wicklow Mountains are scenic without requiring long days in the car — Glendalough's monastic site and twin lakes, Powerscourt's gardens and waterfall, and Brittas Bay's beach are all manageable half-day outings.</p>
+        <div class="amenity-grid">
+          <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Glendalough monastic site &amp; lakes</div>
+          <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c-4 5-6 8-6 11a6 6 0 0 0 12 0c0-3-2-6-6-11z"/></svg> Powerscourt Estate &amp; waterfall</div>
+          <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/></svg> Brittas Bay beach</div>
+          <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 19.5 21 13l-7-2-3-7-1.5 7-7 1.5z"/></svg> Short drive back to the airport</div>
+        </div>
+        <div class="flag">Hotel rates for this area haven't been pulled yet — happy to source once this is the direction you want to look at seriously.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-kicker">Option B · The full Ireland swing</div>
+        <img class="card-photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzcxACW4U_UBWqmJ8qnIM55tMT3KAC0Kz7DbRAYJ1OV0YXys8Ug4BBPSNB&s=10" alt="Killarney & County Kerry" loading="lazy" onerror="this.style.display='none';">
+        <h3>Killarney &amp; County Kerry</h3>
+        <span class="tagline accent">Further out, but it's one of Ireland's most scenic regions.</span>
+        <div class="card-meta">
+          <span>~2h45–3h from Kilkea Castle</span>
+          <span>~3.5 hrs to Dublin Airport</span>
+        </div>
+        <p class="body">For a first trip to Ireland, Killarney is genuinely worth the extra driving — it's a different kind of scenery from Kildare/Carlow, with the National Park, Ring of Kerry, and Dingle Peninsula all reachable from a single base. The trade-off is real: a ~3-hour drive in, and roughly 3.5 hours back to Dublin Airport on departure day, which is tight against a 1:35 PM flight with a one-year-old. An early-morning departure on the 22nd, with stops built in, makes it workable.</p>
+        <div class="amenity-grid">
+          <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c-4 5-6 8-6 11a6 6 0 0 0 12 0c0-3-2-6-6-11z"/></svg> Killarney National Park</div>
+          <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/></svg> Ross Castle &amp; Muckross House</div>
+          <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M12 2v20"/></svg> Ring of Kerry &amp; Gap of Dunloe</div>
+          <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Dingle Peninsula day trip</div>
+        </div>
+        <div class="flag">Same as Option A — hotel rates aren't pulled yet. Worth noting: Torc Waterfall is an easy, short walk from the car if you want one stop guaranteed to work with a stroller.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RENTAL CAR -->
+<section class="block tinted">
+  <div class="wrap">
+    <div class="section-head">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M5 17a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM19 17a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM5 17l1.5-6h11L19 17M6.5 11l1-3h9l1 3"/></svg>
+      <h2>Your rental car</h2>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M5 17a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM19 17a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM5 17l1.5-6h11L19 17M6.5 11l1-3h9l1 3"/></svg>
+    </div>
+    <div class="card car-grid">
+      <div class="col">
+        <h3>Midsize SUV — Kia Sportage or similar</h3>
+        <span class="tagline accent">Alamo Rent A Car · Dublin Airport pickup &amp; return</span>
+        <p class="body">A midsize SUV gives room for two adults, a young child, luggage, and a stroller without feeling cramped on the longer drives — particularly relevant if Killarney ends up being the direction for the back half of the trip.</p>
+        <p class="body" style="color:var(--ink-soft); font-size:13px;">Seats 5 · automatic · A/C · unlimited mileage · full-to-full fuel policy · reserve now, pay at pickup · free cancellation before pickup</p>
+      </div>
+      <div class="col">
+        <div class="price-box">
+          <div class="kicker">Pickup Oct 15, 8:30 AM — Return Oct 22, 12:30 PM</div>
+          <div class="amount">Est. $222</div>
+          <div class="per-person">Taxes & fees included</div>
+          <div class="fine">Optional add-ons at pickup: infant car seat $12/day, toddler car seat $12/day, GPS $18/day. A valid license and major credit card required at pickup.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NOTES + FORM -->
+<div class="form-section">
+  <div class="wrap">
+    <h2 style="text-align:center; margin-bottom:8px;">Tell me where your head's at</h2>
+    <p class="accent" style="text-align:center; margin-bottom:32px;">No selections to make yet — just let me know which direction is calling, and I'll build it out properly.</p>
+
+    <form id="tripForm">
+      <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+      <input type="hidden" name="subject" value="Cody Baker Family — Ireland 2026 Response">
+      <input type="hidden" name="from_name" value="Cody Baker Family — PMTP Ideas Form">
+      <input type="hidden" name="redirect" value="false">
+
+      <label class="field-label" for="name">Name</label>
+      <input type="text" id="name" name="Name" required>
+
+      <label class="field-label" for="email">Email</label>
+      <input type="email" id="email" name="Email" required>
+
+      <label class="field-label" for="phone">Phone</label>
+      <input type="tel" id="phone" name="Phone">
+
+      <label class="field-label" for="thoughts">Which hotel near Kilkea Castle, and which direction for Oct 18–22 — Wicklow or Killarney?</label>
+      <textarea id="thoughts" name="Thoughts" placeholder="Share your thinking — even rough leanings help me narrow down the next round of research."></textarea>
+
+      <button type="submit">Send my thoughts</button>
+    </form>
+
+    <div id="thanksMsg">
+      <h3>Got it — thank you.</h3>
+      <p class="accent">I'll follow up with next steps shortly.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Point Me to Paradise Travel</h4>
+        <p>Prepared by Christina Garcia</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a id="emailLink" href="#">Christina@PointMeToParadise.com</a>
+        <a href="tel:2812290862">(281) 229-0862</a>
+      </div>
+    </div>
+    <p class="disclosure">Individual hotels, transfers, and tours in your quote are priced at publicly available rates — and in many cases lower than what you'd find on your own. You don't have to worry about overpaying for a piece of your trip. What you're paying for is the rest: the right rooms at the right property, operators we've used for years, the trip app, and a human who answers when something doesn't go to plan.</p>
+  </div>
+</footer>
+
+<script>
+  var addr = 'Christina' + '@' + 'PointMeToParadise.com';
+  document.getElementById('emailLink').href = 'mailto:' + addr;
+  document.getElementById('emailLink').textContent = addr;
+
+  // Carousel logic
+  var carouselState = {};
+  function initCarousel(name) {
+    var track = document.getElementById(name + 'Track');
+    var dotsWrap = document.getElementById(name + 'Dots');
+    if (!track || !dotsWrap) return;
+    var imgs = track.querySelectorAll('img');
+    carouselState[name] = { index: 0, count: imgs.length };
+    dotsWrap.innerHTML = '';
+    for (var i = 0; i < imgs.length; i++) {
+      var dot = document.createElement('button');
+      dot.type = 'button';
+      dot.setAttribute('aria-label', 'Go to photo ' + (i + 1));
+      if (i === 0) dot.className = 'active';
+      (function(idx) {
+        dot.addEventListener('click', function() { setCarousel(name, idx); });
+      })(i);
+      dotsWrap.appendChild(dot);
+    }
+  }
+  function setCarousel(name, idx) {
+    var state = carouselState[name];
+    if (!state || state.count === 0) return;
+    state.index = (idx + state.count) % state.count;
+    var track = document.getElementById(name + 'Track');
+    track.style.transform = 'translateX(-' + (state.index * 100) + '%)';
+    var dots = document.getElementById(name + 'Dots').children;
+    for (var i = 0; i < dots.length; i++) {
+      dots[i].className = (i === state.index) ? 'active' : '';
+    }
+  }
+  function moveCarousel(name, dir) {
+    var state = carouselState[name];
+    if (!state) return;
+    setCarousel(name, state.index + dir);
+  }
+  initCarousel('talbot');
+  initCarousel('woodford');
+  initCarousel('wolseley');
+  initCarousel('avlon');
+  initCarousel('firecastle');
+
+
+  document.getElementById('tripForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var form = e.target;
+    var data = new FormData(form);
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: data
+    })
+    .then(function(res) { return res.json(); })
+    .then(function(json) {
+      if (json.success) {
+        form.style.display = 'none';
+        document.getElementById('thanksMsg').classList.add('show');
+      } else {
+        alert('Something went wrong. Please email Christina directly or text (281) 229-0862.');
+      }
+    })
+    .catch(function() {
+      alert('Something went wrong. Please email Christina directly or text (281) 229-0862.');
+    });
+  });
+</script>
+
+</body>
+</html>
