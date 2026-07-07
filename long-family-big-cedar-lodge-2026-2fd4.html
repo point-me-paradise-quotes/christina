@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Big Cedar Lodge — Long Family | Dec 3–6, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --aqua-pale:    #C4E4E1;
+  --aqua-mist:    #EAF3F2;
+  --aqua:         #75AFB1;
+  --aqua-dark:    #4F8A8C;
+  --sand:         #ECE7DC;
+  --sand-light:   #F4F1E9;
+  --gold-whisper: #D6C8A8;
+  --white:        #FFFFFF;
+  --paper:        #FBFDFD;
+  --ink:          #2B2420;
+  --ink-soft:     #6B6359;
+  --line:         #E5E9E8;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;font-size:16px;}
+
+/* ── HERO ── */
+.pmtp-hero{position:relative;background-image:linear-gradient(to bottom,rgba(18,34,30,0.55) 0%,rgba(10,24,20,0.74) 100%),url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80');background-size:cover;background-position:center 40%;padding:78px 32px 60px;text-align:center;}
+.pmtp-wordmark{font-family:'Playfair Display',serif;font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--aqua-pale);margin-bottom:32px;opacity:.82;}
+.hero-eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--aqua-pale);margin-bottom:12px;opacity:.9;}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(2.3rem,6.5vw,3.8rem);font-weight:600;color:var(--white);line-height:1.12;margin-bottom:14px;}
+.hero-subtitle{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:var(--aqua-pale);margin-bottom:28px;}
+.hero-chips{display:inline-flex;flex-wrap:wrap;gap:10px;justify-content:center;}
+.hero-chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:20px;padding:5px 16px;font-size:.78rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--white);}
+
+/* ── LAYOUT ── */
+.outer{max-width:880px;margin:0 auto;padding:0 24px;}
+.section{padding:54px 0;}
+.band{background:var(--aqua-mist);}
+.section-divider{height:1px;background:var(--line);}
+
+/* ── TYPE ── */
+.eyebrow{font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--aqua-dark);margin-bottom:10px;}
+h2{font-family:'Playfair Display',serif;font-size:clamp(1.45rem,4vw,2.1rem);font-weight:600;color:var(--ink);margin-bottom:18px;line-height:1.22;}
+h3{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;color:var(--ink);margin-bottom:8px;}
+p{color:var(--ink-soft);margin-bottom:14px;}
+p:last-child{margin-bottom:0;}
+
+/* ── COMMITMENT ── */
+.commitment{background:var(--aqua-pale);border-left:3px solid var(--aqua-dark);border-radius:0 8px 8px 0;padding:16px 20px;margin:26px 0 0;}
+.commitment p{font-size:.92rem;color:var(--ink);margin:0;line-height:1.6;}
+
+/* ── OPTION TABS ── */
+.option-tabs{display:flex;gap:10px;margin-bottom:28px;flex-wrap:wrap;}
+.option-tab{flex:1;min-width:160px;padding:14px 18px;border:2px solid var(--line);border-radius:10px;background:var(--white);cursor:pointer;text-align:left;transition:border-color .17s,background .17s;font-family:'DM Sans',sans-serif;}
+.option-tab:hover{border-color:var(--aqua);}
+.option-tab.active{border-color:var(--aqua-dark);background:var(--aqua-mist);}
+.tab-label{display:block;font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--aqua-dark);margin-bottom:4px;}
+.tab-title{display:block;font-family:'Playfair Display',serif;font-size:.92rem;font-weight:600;color:var(--ink);line-height:1.3;}
+.tab-price{display:block;font-size:.8rem;color:var(--ink-soft);margin-top:3px;}
+
+/* ── CABIN CARD ── */
+.cabin-card{display:none;background:var(--white);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 2px 14px rgba(43,36,32,.06);}
+.cabin-card.visible{display:block;}
+
+/* Photo gallery — main + 2 thumbs grid */
+.cabin-photos{display:grid;gap:3px;}
+.cabin-photos.one-thumb{grid-template-columns:2fr 1fr;height:260px;}
+.cabin-photos.multi-thumb{grid-template-columns:3fr 1fr;height:280px;}
+.cabin-photo-col{display:flex;flex-direction:column;gap:3px;}
+.cabin-photo-main{background-size:cover;background-position:center;height:100%;}
+.cabin-photo-thumb{background-size:cover;background-position:center;flex:1;}
+
+/* Scrollable filmstrip for Option 3 */
+.photo-filmstrip{display:flex;gap:6px;overflow-x:auto;padding:10px 16px;background:var(--aqua-mist);scrollbar-width:thin;scrollbar-color:var(--aqua-pale) transparent;}
+.photo-filmstrip::-webkit-scrollbar{height:4px;}
+.photo-filmstrip::-webkit-scrollbar-thumb{background:var(--aqua-pale);border-radius:2px;}
+.filmstrip-thumb{width:120px;height:80px;flex-shrink:0;background-size:cover;background-position:center;border-radius:6px;cursor:pointer;border:2px solid transparent;transition:border-color .15s;}
+.filmstrip-thumb.active-thumb{border-color:var(--aqua-dark);}
+.filmstrip-main-wrap{height:300px;background:var(--ink);}
+.filmstrip-main{width:100%;height:100%;background-size:cover;background-position:center;transition:background-image .25s;}
+
+.cabin-header{padding:22px 26px 16px;border-bottom:1px solid var(--line);}
+.cabin-tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:var(--ink-soft);margin-top:2px;}
+.cabin-body{padding:22px 26px 26px;}
+.cabin-desc{font-size:.95rem;margin-bottom:20px;}
+
+/* Features */
+.features-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px 20px;margin-bottom:22px;}
+.feat{display:flex;align-items:flex-start;gap:9px;font-size:.875rem;color:var(--ink-soft);line-height:1.4;}
+.feat-dot{width:6px;height:6px;border-radius:50%;background:var(--aqua);flex-shrink:0;margin-top:5px;}
+
+/* Amenities */
+.amenities-row{padding-top:18px;border-top:1px solid var(--line);}
+.amenities-eyebrow{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--aqua-dark);margin-bottom:10px;}
+.amenity-tags{display:flex;flex-wrap:wrap;gap:7px;}
+.amenity-tag{background:var(--aqua-mist);border:1px solid var(--aqua-pale);border-radius:20px;padding:4px 12px;font-size:.79rem;color:var(--ink-soft);}
+
+/* Tour link */
+.tour-link{display:inline-flex;align-items:center;gap:7px;font-size:.85rem;font-weight:500;color:var(--aqua-dark);text-decoration:none;border:1px solid var(--aqua);border-radius:6px;padding:8px 15px;margin-top:18px;transition:background .16s;}
+.tour-link:hover{background:var(--aqua-mist);}
+
+/* ── PRICING ── */
+.pricing-panel{display:none;}
+.pricing-panel.visible{display:block;}
+.pricing-card{background:var(--white);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 2px 14px rgba(43,36,32,.06);}
+.pricing-header{background:var(--ink);color:var(--white);padding:20px 26px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;}
+.pricing-header-left{flex:1;}
+.pricing-label-sm{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--aqua-pale);opacity:.7;margin-bottom:4px;}
+.pricing-cabin-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:500;color:var(--white);}
+.pricing-grand-total{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:600;color:var(--aqua-pale);white-space:nowrap;}
+.pricing-rows{padding:0 26px;}
+.pricing-row{display:flex;justify-content:space-between;align-items:center;padding:13px 0;border-bottom:1px solid var(--line);font-size:.88rem;color:var(--ink-soft);}
+.pricing-row:last-child{border-bottom:none;}
+.pricing-row-val{font-weight:500;color:var(--ink);}
+.pricing-row.total-row{font-weight:600;font-size:.95rem;}
+.pricing-row.total-row .pricing-row-val{font-size:1rem;color:var(--ink);}
+.deposit-box{background:var(--aqua-mist);border:1px solid var(--aqua-pale);border-radius:10px;padding:18px 22px;margin-top:22px;}
+.deposit-box h3{font-size:.92rem;margin-bottom:8px;}
+.deposit-amount{font-family:'Playfair Display',serif;font-size:1.55rem;font-weight:600;color:var(--aqua-dark);margin-bottom:7px;}
+.deposit-box p{font-size:.84rem;color:var(--ink-soft);margin-bottom:5px;}
+.policy-box{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:18px 22px;margin-top:16px;}
+.policy-box h3{font-size:.92rem;margin-bottom:8px;}
+.policy-box p{font-size:.84rem;color:var(--ink-soft);margin-bottom:5px;}
+.pricing-note{font-size:.87rem;font-style:italic;color:var(--ink-soft);border-left:2px solid var(--aqua);padding:10px 16px;margin-top:20px;line-height:1.6;}
+.disclaimer{font-size:.8rem;color:var(--ink-soft);font-style:italic;margin-top:12px;line-height:1.5;}
+
+/* ── FORM ── */
+.form-band{background:var(--sand-light);}
+.form-group{margin-bottom:18px;}
+.form-group label{display:block;font-size:.84rem;font-weight:500;color:var(--ink);margin-bottom:6px;}
+.form-group input,.form-group select,.form-group textarea{width:100%;font-family:'DM Sans',sans-serif;font-size:16px;padding:11px 14px;border:1px solid var(--line);border-radius:8px;background:var(--white);color:var(--ink);outline:none;transition:border-color .17s,box-shadow .17s;-webkit-appearance:none;appearance:none;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--aqua);box-shadow:0 0 0 3px rgba(117,175,177,.15);}
+.form-group textarea{resize:vertical;min-height:110px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.submit-btn{width:100%;padding:14px 24px;background:var(--aqua-dark);color:var(--white);font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;letter-spacing:.04em;border:none;border-radius:8px;cursor:pointer;transition:background .17s,transform .1s;margin-top:6px;}
+.submit-btn:hover{background:#3d6e70;}
+.submit-btn:active{transform:scale(.99);}
+.submit-btn:disabled{opacity:.65;cursor:not-allowed;}
+#thank-you{display:none;text-align:center;padding:40px 24px;background:var(--aqua-mist);border-radius:12px;border:1px solid var(--aqua-pale);}
+#thank-you h3{color:var(--aqua-dark);margin-bottom:10px;}
+#thank-you p{font-size:.95rem;}
+
+/* ── FOOTER ── */
+.pmtp-footer{background:var(--sand-light);border-top:1px solid var(--line);padding:44px 24px;text-align:center;}
+.footer-wordmark{font-family:'Playfair Display',serif;font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--aqua-dark);margin-bottom:16px;}
+.footer-name{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:var(--ink);margin-bottom:2px;}
+.footer-title{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.98rem;color:var(--ink-soft);margin-bottom:12px;}
+.footer-contact{font-size:.875rem;color:var(--ink-soft);line-height:1.85;}
+.footer-contact a{color:var(--aqua-dark);text-decoration:none;}
+.footer-legal{margin-top:22px;font-size:.77rem;color:var(--ink-soft);opacity:.6;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:640px){
+  .pmtp-hero{padding:60px 20px 46px;}
+  .cabin-photos.one-thumb,.cabin-photos.multi-thumb{grid-template-columns:1fr;height:auto;}
+  .cabin-photo-main{height:220px;}
+  .cabin-photo-col{display:none;}
+  .features-grid{grid-template-columns:1fr;}
+  .form-row{grid-template-columns:1fr;}
+  .option-tabs{flex-direction:column;}
+  .option-tab{min-width:unset;}
+  .pricing-header{flex-direction:column;align-items:flex-start;}
+  .cabin-body,.cabin-header{padding:18px;}
+  .filmstrip-main-wrap{height:220px;}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;}}
+</style>
+</head>
+<body>
+
+<!-- ══ HERO ══ -->
+<header class="pmtp-hero">
+  <div class="pmtp-wordmark">Point Me to Paradise Travel</div>
+  <p class="hero-eyebrow">A getaway crafted for the Long family</p>
+  <h1 class="hero-title">Big Cedar Lodge</h1>
+  <p class="hero-subtitle">Ridgedale, Missouri · Table Rock Lake</p>
+  <div class="hero-chips">
+    <span class="hero-chip">Dec 3–6, 2026</span>
+    <span class="hero-chip">3 Nights</span>
+    <span class="hero-chip">4 Adults · 2 Children</span>
+    <span class="hero-chip">3 Options Inside</span>
+  </div>
+</header>
+
+<!-- ══ TRIP OVERVIEW ══ -->
+<div class="band">
+  <div class="outer">
+    <div class="section">
+      <div class="eyebrow">Your Trip</div>
+      <h2>December on the Ozarks lake — the right call</h2>
+      <p>Big Cedar Lodge sits on 4,600 acres above Table Rock Lake in the Missouri Ozarks. Summer crowds are long gone by December, holiday lighting runs property-wide, and the lake sits quiet in a way peak season never allows. Bass Pro's collection of restaurants — Top of the Rock among them — means real dining options beyond the lodge's own kitchen, and the property's trails, pools, and beach give six people plenty of room to move.</p>
+      <p>Three cabin options are outlined below, ranging from a cozy Camp Long Creek family base to a lakeside cottage with an infinity pool a short walk away. All three sleep your group; the differences are location, layout, bedroom configuration, and finish level. Review each, walk the virtual tours, and let Christina know which direction works for you.</p>
+      <div class="commitment">
+        <p>We don't book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. The work you'd hate doing — already done.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ══ CABIN OPTIONS ══ -->
+<div class="outer">
+  <div class="section">
+    <div class="eyebrow">Your Options</div>
+    <h2>Three cabins, all available Dec 3–6</h2>
+
+    <!-- TABS -->
+    <div class="option-tabs">
+      <button class="option-tab active" onclick="selectOption(1)" id="tab-1">
+        <span class="tab-label">Option 1</span>
+        <span class="tab-title">Camp Long Creek Two-Bedroom Camp Cabin</span>
+        <span class="tab-price">Est. $2,240.76 total</span>
+      </button>
+      <button class="option-tab" onclick="selectOption(2)" id="tab-2">
+        <span class="tab-label">Option 2</span>
+        <span class="tab-title">Two-Bedroom Cabin</span>
+        <span class="tab-price">Est. $3,738.06 total</span>
+      </button>
+      <button class="option-tab" onclick="selectOption(3)" id="tab-3">
+        <span class="tab-label">Option 3</span>
+        <span class="tab-title">Bass Pro Lakeside Two-Bedroom Family Cottage</span>
+        <span class="tab-price">Est. $3,900.57 total</span>
+      </button>
+    </div>
+
+    <!-- ─ OPTION 1 CARD ─ -->
+    <div class="cabin-card visible" id="card-1">
+      <div class="cabin-photos one-thumb">
+        <div class="cabin-photo-main" style="background-image:url('https://agyswbeprodwestus.blob.core.windows.net/wbe/1598/Big-Cedar/images/rooms/BLCC2/c14d63f3-ae0b-41bf-a6f7-45c3a0c9be0a.webp?ss=b&sig=9pjBdMa5rKiADTm4%2BWiIchf9eeJTq6pxPxa57sncD%2FY%3D&se=2026-07-07T20%3A22%3A29Z&sv=2019-02-02&srt=o&sp=r&sr=o');"></div>
+        <div class="cabin-photo-col">
+          <div class="cabin-photo-thumb" style="background-image:url('https://agyswbeprodwestus.blob.core.windows.net/wbe/1598/Big-Cedar/images/rooms/BLCC2/76c0fe7d-f10d-4bfc-93cc-13df0d5f90dd.webp?ss=b&sig=9pjBdMa5rKiADTm4%2BWiIchf9eeJTq6pxPxa57sncD%2FY%3D&se=2026-07-07T20%3A22%3A29Z&sv=2019-02-02&srt=o&sp=r&sr=o');"></div>
+        </div>
+      </div>
+      <div class="cabin-header">
+        <h3>Camp Long Creek Two-Bedroom Camp Cabin</h3>
+        <div class="cabin-tagline">Located within Camp Long Creek — Big Cedar's most family-centered village</div>
+      </div>
+      <div class="cabin-body">
+        <p class="cabin-desc">Camp Long Creek was designed with families in mind from the start — two king bedrooms on either end of the cabin, a queen sleeper sofa in the living area, and a screened-in porch that works well even in early December. A full kitchen means you're not locked into restaurant meals every morning. The private beach, kiddie pool, and lazy river are steps away, and the cabin is dog-friendly.</p>
+        <div class="features-grid">
+          <div class="feat"><div class="feat-dot"></div><span>Two private bedrooms, each with a king-size bed</span></div>
+          <div class="feat"><div class="feat-dot"></div><span>Living area with queen sleeper sofa</span></div>
+          <div class="feat"><div class="feat-dot"></div><span>Bathroom with shower and tub</span></div>
+          <div class="feat"><div class="feat-dot"></div><span>Full kitchen — refrigerator, microwave, electric cooktop</span></div>
+          <div class="feat"><div class="feat-dot"></div><span>Screened-in porch</span></div>
+          <div class="feat"><div class="feat-dot"></div><span>Dog-friendly</span></div>
+        </div>
+        <a href="https://my.matterport.com/show/?m=cSXvdVxwbas" target="_blank" rel="noopener" class="tour-link">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M10 14 21 3M9 21H3v-6M3 21l7-7"/></svg>
+          Virtual Tour
+        </a>
+        <div class="amenities-row">
+          <div class="amenities-eyebrow">Included with Resort Fee</div>
+          <div class="amenity-tags">
+            <span class="amenity-tag">Top of the Rock entry</span>
+            <span class="amenity-tag">Big Cedar shuttle</span>
+            <span class="amenity-tag">Priority golf booking</span>
+            <span class="amenity-tag">Wi-Fi</span>
+            <span class="amenity-tag">Board games</span>
+            <span class="amenity-tag">Paved trails</span>
+            <span class="amenity-tag">Bonfires</span>
+            <span class="amenity-tag">Playground</span>
+            <span class="amenity-tag">DVD checkout</span>
+            <span class="amenity-tag">Camp Long Creek beach</span>
+            <span class="amenity-tag">Kiddie pools</span>
+            <span class="amenity-tag">Lazy river</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─ OPTION 2 CARD ─ -->
+    <div class="cabin-card" id="card-2">
+      <div class="cabin-photos one-thumb">
+        <div class="cabin-photo-main" style="background-image:url('https://agyswbeprodwestus.blob.core.windows.net/wbe/1598/Big-Cedar/images/rooms/BPC2C/7695b8d3-423e-4750-a118-95cbfaf48263.webp?ss=b&sig=9pjBdMa5rKiADTm4%2BWiIchf9eeJTq6pxPxa57sncD%2FY%3D&se=2026-07-07T20%3A22%3A29Z&sv=2019-02-02&srt=o&sp=r&sr=o');"></div>
+        <div class="cabin-photo-col">
+          <div class="cabin-photo-thumb" style="background-image:url('https://agyswbeprodwestus.blob.core.windows.net/wbe/1598/Big-Cedar/images/rooms/BPC2C/8de8a6bd-2505-46c0-bd65-ebceca2868c7.webp?ss=b&sig=9pjBdMa5rKiADTm4%2BWiIchf9eeJTq6pxPxa57sncD%2FY%3D&se=2026-07-07T20%3A22%3A29Z&sv=2019-02-02&srt=o&sp=r&sr=o');"></div>
+        </div>
+      </div>
+      <div class="cabin-header">
+        <h3>Two-Bedroom Cabin</h3>
+        <div class="cabin-tagline">Elevated finish, private deck — the step-up option for the group</div>
+      </div>
+      <div class="cabin-body">
+        <p class="cabin-desc">This cabin is the choice when you want a higher finish level and a bit more separation from the activity zones. Two king bedrooms anchor the layout. The primary bathroom has a luxury tub and a separate shower; a second full bathroom means no morning logjam with six people. The private deck with a gas grill makes evenings feel like your own, not the resort's.</p>
+        <div class="features-grid">
+          <div class="feat"><div class="feat-dot"></div><span>Two private bedrooms with king-size beds</span></div>
+          <div class="feat"><div class="feat-dot"></div><span>Queen-size sleeper sofa</span></div>
+          <div class="feat"><div class="feat-dot"></div><span>Primary bath — luxury tub and separate shower</span></div>
+          <div class="feat"><div class="feat-dot"></div><span>Second full bathroom</span></div>
+          <div class="feat"><div class="feat-dot"></div><span>Full kitchen</span></div>
+          <div class="feat"><div class="feat-dot"></div><span>Private deck with gas grill</span></div>
+        </div>
+        <a href="https://my.matterport.com/show/?m=2HUoN11NAoY" target="_blank" rel="noopener" class="tour-link">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M10 14 21 3M9 21H3v-6M3 21l7-7"/></svg>
+          Virtual Tour
+        </a>
+        <div class="amenities-row">
+          <div class="amenities-eyebrow">Included with Resort Fee</div>
+          <div class="amenity-tags">
+            <span class="amenity-tag">Top of the Rock entry</span>
+            <span class="amenity-tag">Big Cedar shuttle</span>
+            <span class="amenity-tag">Priority golf booking</span>
+            <span class="amenity-tag">Wi-Fi</span>
+            <span class="amenity-tag">Board games</span>
+            <span class="amenity-tag">Paved trails</span>
+            <span class="amenity-tag">Bonfires</span>
+            <span class="amenity-tag">Playground</span>
+            <span class="amenity-tag">DVD checkout</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─ OPTION 3 CARD ─ -->
+    <div class="cabin-card" id="card-3">
+      <!-- Scrollable filmstrip gallery for 8 photos -->
+      <div class="filmstrip-main-wrap">
+        <div class="filmstrip-main" id="filmstrip-main" style="background-image:url('https://agyswbeprodwestus.blob.core.windows.net/wbe/1598/Big-Cedar/images/rooms/BBC2P/b08e92a8-c91f-4b46-ab53-2bae7105ecb5.webp?ss=b&sig=9pjBdMa5rKiADTm4%2BWiIchf9eeJTq6pxPxa57sncD%2FY%3D&se=2026-07-07T20%3A22%3A29Z&sv=2019-02-02&srt=o&sp=r&sr=o');"></div>
+      </div>
+      <div class="photo-filmstrip" id="filmstrip-strip">
+        <div class="filmstrip-thumb active-thumb" data-src="https://agyswbeprodwestus.blob.core.windows.net/wbe/1598/Big-Cedar/images/rooms/BBC2P/b08e92a8-c91f-4b46-ab53-2bae7105ecb5.webp?ss=b&sig=9pjBdMa5rKiADTm4%2BWiIchf9eeJTq6pxPxa57sncD%2FY%3D&se=2026-07-07T20%3A22%3A29Z&sv=2019-02-02&srt=o&sp=r&sr=o" style="background-image:url('https://agyswbeprodwestus.blob.core.windows.net/wbe/1598/Big-Cedar/images/rooms/BBC2P/b08e92a8-c91f-4b46-ab53-2bae7105ecb5.webp?ss=b&sig=9pjBdMa5rKiADTm4%2BWiIchf9eeJTq6pxPxa57sncD%2FY%3D&se=2026-07-07T20%3A22%3A29Z&sv=2019-02-02&srt=o&sp=r&sr=o');"></div>
+        <div class="filmstrip-thumb" data-src="https://agyswbeprodwestus.blob.core.windows.net/wbe/1598/Big-Cedar/images/rooms/BBC2P/255505d2-8937-4829-bb5d-1f016cdd87e0.webp?ss=b&sig=9pjBdMa5rKiADTm4%2BWiIchf9eeJTq6pxPxa57sncD%2FY%3D&se=2026-07-07T20%3A22%3A29Z&sv=2019-02-02&srt=o&sp=r&sr=o" style="background-image:url('https://agyswbeprodwestus.blob.core.windows.net/wbe/1598/Big-Cedar/images/rooms/BBC2P/255505d2-8937-4829-bb5d-1f016cdd87e0.webp?ss=b&sig=9pjBdMa5rKiADTm4%2BWiIchf9eeJTq6pxPxa57sncD%2FY%3D&se=2026-07-07T20%3A22%3A29Z&sv=2019-02-02&srt=o&sp=r&sr=o');"></div>
+        <div class="filmstrip-thumb" data-src="https://agyswbeprodwestus.blob.core.windows.net/wbe/1598/Big-Cedar/images/rooms/BBC2P/2195f1af-db96-4f96-8814-2a8685daf44f.webp?ss=b&sig=9pjBdMa5rKiADTm4%2BWiIchf9eeJTq6pxPxa57sncD%2FY%3D&se=2026-07-07T20%3A22%3A29Z&sv=2019-02-02&srt=o&sp=r&sr=o" style="background-image:url('https://agyswbeprodwestus.blob.core.windows.net/wbe/1598/Big-Cedar/images/rooms/BBC2P/2195f1af-db96-4f96-8814-2a8685daf44f.webp?ss=b&sig=9pjBdMa5rKiADTm4%2BWiIchf9eeJTq6pxPxa57sncD%2FY%3D&se=2026-07-07T20%3A22%3A29Z&sv=2019-02-02&srt=o&sp=r&sr=o');"></div>
+        <div class="filmstrip-thumb" data-src="https://agyswbeprodwestus.blob.core.windows.net/wbe/1598/Big-Cedar/images/rooms/BBC2P/f623e24f-3269-420c-b64c-d5226acff3ac.webp?ss=b&sig=9pjBdMa5rKiADTm4%2BWiIchf9eeJTq6pxPxa57sncD%2FY%3D&se=2026-07-07T20%3A22%3A29Z&sv=2019-02-02&srt=o&sp=r&sr=o" style="background-image:url('https://agyswbeprodwestus.blob.core.windows.net/wbe/1598/Big-Cedar/images/rooms/BBC2P/f623e24f-3269-420c-b64c-d5226acff3ac.webp?ss=b&sig=9pjBdMa5rKiADTm4%2BWiIchf9eeJTq6pxPxa57sncD%2FY%3D&se=2026-07-07T20%3A22%3A29Z&sv=2019-02-02&srt=o&sp=r&sr=o');"></div>
+        <div class="filmstrip-thumb" data-src="https://agyswbeprodwestus.blob.core.windows.net/wbe/1598/Big-Cedar/images/rooms/BBC2P/c6a54b3b-be53-460a-8d61-7952a851cb19.webp?ss=b&sig=9pjBdMa5rKiADTm4%2BWiIchf9eeJTq6pxPxa57sncD%2FY%3D&se=2026-07-07T20%3A22%3A29Z&sv=2019-02-02&srt=o&sp=r&sr=o" style="background-image:url('https://agyswbeprodwestus.blob.core.windows.net/wbe/1598/Big-Cedar/images/rooms/BBC2P/c6a54b3b-be53-460a-8d61-7952a851cb19.webp?ss=b&sig=9pjBdMa5rKiADTm4%2BWiIchf9eeJTq6pxPxa57sncD%2FY%3D&se=2026-07-07T20%3A22%3A29Z&sv=2019-02-02&srt=o&sp=r&sr=o');"></div>
+        <div class="filmstrip-thumb" data-src="https://agyswbeprodwestus.blob.core.windows.net/wbe/1598/Big-Cedar/images/rooms/BBC2P/68dd57cf-88a1-4527-a8f2-50609a44fb43.webp?ss=b&sig=9pjBdMa5rKiADTm4%2BWiIchf9eeJTq6pxPxa57sncD%2FY%3D&se=2026-07-07T20%3A22%3A29Z&sv=2019-02-02&srt=o&sp=r&sr=o" style="background-image:url('https://agyswbeprodwestus.blob.core.windows.net/wbe/1598/Big-Cedar/images/rooms/BBC2P/68dd57cf-88a1-4527-a8f2-50609a44fb43.webp?ss=b&sig=9pjBdMa5rKiADTm4%2BWiIchf9eeJTq6pxPxa57sncD%2FY%3D&se=2026-07-07T20%3A22%3A29Z&sv=2019-02-02&srt=o&sp=r&sr=o');"></div>
+        <div class="filmstrip-thumb" data-src="https://agyswbeprodwestus.blob.core.windows.net/wbe/1598/Big-Cedar/images/rooms/BBC2P/d0a838a7-fd35-4e88-a3fb-6a0d1a615629.webp?ss=b&sig=9pjBdMa5rKiADTm4%2BWiIchf9eeJTq6pxPxa57sncD%2FY%3D&se=2026-07-07T20%3A22%3A29Z&sv=2019-02-02&srt=o&sp=r&sr=o" style="background-image:url('https://agyswbeprodwestus.blob.core.windows.net/wbe/1598/Big-Cedar/images/rooms/BBC2P/d0a838a7-fd35-4e88-a3fb-6a0d1a615629.webp?ss=b&sig=9pjBdMa5rKiADTm4%2BWiIchf9eeJTq6pxPxa57sncD%2FY%3D&se=2026-07-07T20%3A22%3A29Z&sv=2019-02-02&srt=o&sp=r&sr=o');"></div>
+        <div class="filmstrip-thumb" data-src="https://agyswbeprodwestus.blob.core.windows.net/wbe/1598/Big-Cedar/images/rooms/BBC2P/a671c606-b13a-4a28-9a2e-20c15653b6ff.webp?ss=b&sig=9pjBdMa5rKiADTm4%2BWiIchf9eeJTq6pxPxa57sncD%2FY%3D&se=2026-07-07T20%3A22%3A29Z&sv=2019-02-02&srt=o&sp=r&sr=o" style="background-image:url('https://agyswbeprodwestus.blob.core.windows.net/wbe/1598/Big-Cedar/images/rooms/BBC2P/a671c606-b13a-4a28-9a2e-20c15653b6ff.webp?ss=b&sig=9pjBdMa5rKiADTm4%2BWiIchf9eeJTq6pxPxa57sncD%2FY%3D&se=2026-07-07T20%3A22%3A29Z&sv=2019-02-02&srt=o&sp=r&sr=o');"></div>
+      </div>
+      <div class="cabin-header">
+        <h3>Bass Pro Shops Lakeside Two-Bedroom Family Cottage</h3>
+        <div class="cabin-tagline">Steps from the water's edge and an infinity pool — the most lake-focused option</div>
+      </div>
+      <div class="cabin-body">
+        <p class="cabin-desc">This cottage sits in close walking distance to both the water and an infinity pool — the most lake-adjacent of the three options. Inside, the bedroom configuration is different from the others: one king room with a private bath and a second bedroom with two queen beds and its own bath, which makes it a better fit for the kids than a sleeper sofa. The wood-burning fireplace in the living area earns its keep in December. The covered porch and gas grill round out a setup that works for three nights without feeling cramped.</p>
+        <div class="features-grid">
+          <div class="feat"><div class="feat-dot"></div><span>King bedroom with private bath — luxury tub</span></div>
+          <div class="feat"><div class="feat-dot"></div><span>Second bedroom with two queen beds and private bath — luxury tub</span></div>
+          <div class="feat"><div class="feat-dot"></div><span>Open-concept living area with full kitchen</span></div>
+          <div class="feat"><div class="feat-dot"></div><span>Wood-burning fireplace</span></div>
+          <div class="feat"><div class="feat-dot"></div><span>Covered porch with gas grill</span></div>
+          <div class="feat"><div class="feat-dot"></div><span>Short walk to infinity pool and lake's edge</span></div>
+        </div>
+        <a href="https://my.matterport.com/show/?m=4w2MsiP8e96&mls=0&st=6000&ts=1&wts=3" target="_blank" rel="noopener" class="tour-link">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M10 14 21 3M9 21H3v-6M3 21l7-7"/></svg>
+          Virtual Tour
+        </a>
+        <div class="amenities-row">
+          <div class="amenities-eyebrow">Included with Resort Fee</div>
+          <div class="amenity-tags">
+            <span class="amenity-tag">Top of the Rock entry</span>
+            <span class="amenity-tag">Big Cedar shuttle</span>
+            <span class="amenity-tag">Priority golf booking</span>
+            <span class="amenity-tag">Wi-Fi</span>
+            <span class="amenity-tag">Board games</span>
+            <span class="amenity-tag">Paved trails</span>
+            <span class="amenity-tag">Bonfires</span>
+            <span class="amenity-tag">Playground</span>
+            <span class="amenity-tag">DVD checkout</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ══ PRICING ══ -->
+<div class="band">
+  <div class="outer">
+    <div class="section">
+      <div class="eyebrow">Investment</div>
+      <h2>Pricing — updates as you toggle options above</h2>
+
+      <!-- PANEL 1 -->
+      <div class="pricing-panel visible" id="pricing-1">
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <div class="pricing-header-left">
+              <div class="pricing-label-sm">Option 1 · 3 Nights</div>
+              <div class="pricing-cabin-name">Camp Long Creek Two-Bedroom Camp Cabin</div>
+            </div>
+            <div class="pricing-grand-total">Est. $2,240.76</div>
+          </div>
+          <div class="pricing-rows">
+            <div class="pricing-row"><span>Room total (3 nights)</span><span class="pricing-row-val">$2,000.00</span></div>
+            <div class="pricing-row"><span>Room tax</span><span class="pricing-row-val">$127.00</span></div>
+            <div class="pricing-row"><span>Resort fee</span><span class="pricing-row-val">$105.00</span></div>
+            <div class="pricing-row"><span>Resort fee tax</span><span class="pricing-row-val">$8.76</span></div>
+            <div class="pricing-row total-row"><span>Grand Total</span><span class="pricing-row-val">$2,240.76</span></div>
+          </div>
+        </div>
+        <div class="deposit-box">
+          <h3>Deposit &amp; Timing</h3>
+          <div class="deposit-amount">$1,458.39 due at booking</div>
+          <p>Deposit equals two nights, collected at time of reservation.</p>
+          <p><strong>Remaining balance:</strong> $782.37 &nbsp;·&nbsp; Due before arrival</p>
+        </div>
+        <div class="policy-box">
+          <h3>Cancellation Policy</h3>
+          <p>Cancellations must be made <strong>21 days prior to arrival</strong> — by <strong>November 12, 2026</strong>.</p>
+          <p>A <strong>$100 cancellation or change fee</strong> applies through that date.</p>
+        </div>
+      </div>
+
+      <!-- PANEL 2 -->
+      <div class="pricing-panel" id="pricing-2">
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <div class="pricing-header-left">
+              <div class="pricing-label-sm">Option 2 · 3 Nights</div>
+              <div class="pricing-cabin-name">Two-Bedroom Cabin</div>
+            </div>
+            <div class="pricing-grand-total">Est. $3,738.06</div>
+          </div>
+          <div class="pricing-rows">
+            <div class="pricing-row"><span>Room total (3 nights)</span><span class="pricing-row-val">$3,300.00</span></div>
+            <div class="pricing-row"><span>Room tax</span><span class="pricing-row-val">$275.55</span></div>
+            <div class="pricing-row"><span>Resort fee</span><span class="pricing-row-val">$150.00</span></div>
+            <div class="pricing-row"><span>Resort fee tax</span><span class="pricing-row-val">$12.51</span></div>
+            <div class="pricing-row total-row"><span>Grand Total</span><span class="pricing-row-val">$3,738.06</span></div>
+          </div>
+        </div>
+        <div class="deposit-box">
+          <h3>Deposit &amp; Timing</h3>
+          <div class="deposit-amount">$2,383.69 due at booking</div>
+          <p>Deposit equals two nights, collected at time of reservation.</p>
+          <p><strong>Remaining balance:</strong> $1,354.37 &nbsp;·&nbsp; Due before arrival</p>
+        </div>
+        <div class="policy-box">
+          <h3>Cancellation Policy</h3>
+          <p>Cancellations must be made <strong>21 days prior to arrival</strong> — by <strong>November 12, 2026</strong>.</p>
+          <p>A <strong>$100 cancellation or change fee</strong> applies through that date.</p>
+        </div>
+      </div>
+
+      <!-- PANEL 3 -->
+      <div class="pricing-panel" id="pricing-3">
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <div class="pricing-header-left">
+              <div class="pricing-label-sm">Option 3 · 3 Nights</div>
+              <div class="pricing-cabin-name">Bass Pro Shops Lakeside Two-Bedroom Family Cottage</div>
+            </div>
+            <div class="pricing-grand-total">Est. $3,900.57</div>
+          </div>
+          <div class="pricing-rows">
+            <div class="pricing-row"><span>Room total (3 nights)</span><span class="pricing-row-val">$3,450.00</span></div>
+            <div class="pricing-row"><span>Room tax</span><span class="pricing-row-val">$288.06</span></div>
+            <div class="pricing-row"><span>Resort fee</span><span class="pricing-row-val">$150.00</span></div>
+            <div class="pricing-row"><span>Resort fee tax</span><span class="pricing-row-val">$12.51</span></div>
+            <div class="pricing-row total-row"><span>Grand Total</span><span class="pricing-row-val">$3,900.57</span></div>
+          </div>
+        </div>
+        <div class="deposit-box">
+          <h3>Deposit &amp; Timing</h3>
+          <div class="deposit-amount">$2,492.03 due at booking</div>
+          <p>Deposit equals two nights, collected at time of reservation.</p>
+          <p><strong>Remaining balance:</strong> $1,408.54 &nbsp;·&nbsp; Due before arrival</p>
+        </div>
+        <div class="policy-box">
+          <h3>Cancellation Policy</h3>
+          <p>Cancellations must be made <strong>21 days prior to arrival</strong> — by <strong>November 12, 2026</strong>.</p>
+          <p>A <strong>$100 cancellation or change fee</strong> applies through that date.</p>
+        </div>
+      </div>
+
+      <div class="pricing-note">We check every component against public rates and meet or beat them. You're not paying a premium for our convenience — you're paying for the rest of what we do.</div>
+      <p class="disclaimer">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor.</p>
+
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ══ PRE-FORM COMMITMENT ══ -->
+<div class="outer">
+  <div style="padding: 48px 0 0;">
+    <div class="commitment">
+      <p>What's coming after this quote: a destination guide built for your trip — PDF or interactive in-app, with Google Maps links to every place we send you — a trip app where everything lives, and us when something goes sideways at midnight. You travel; we handle the rest.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider" style="margin-top:48px;"></div>
+
+<!-- ══ FORM ══ -->
+<div class="form-band">
+  <div class="outer">
+    <div class="section">
+      <div class="eyebrow">Next Steps</div>
+      <h2>Ready to hold a cabin?</h2>
+      <p>Let Christina know which option appeals to you — or send any questions — and she'll follow up within one business day to confirm availability and walk through next steps.</p>
+
+      <div id="form-container">
+        <div id="form-error" style="display:none;background:#fff1f1;border:1px solid #f5c6c6;border-radius:6px;padding:14px 18px;font-size:0.875rem;color:#b91c1c;margin-bottom:16px;">
+          We weren't able to send your message. Please contact Christina directly at the address below.
+        </div>
+
+        <form id="pmtp-form" novalidate>
+          <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+          <input type="hidden" name="subject" value="Quote Response — Long Family | Big Cedar Lodge">
+          <input type="hidden" name="from_name" value="Long Family Quote — Point Me to Paradise">
+          <input type="hidden" name="redirect" value="false">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-name">Your Name <span style="color:#b91c1c">*</span></label>
+              <input type="text" id="f-name" name="name" required placeholder="John Long">
+            </div>
+            <div class="form-group">
+              <label for="f-email">Email Address <span style="color:#b91c1c">*</span></label>
+              <input type="email" id="f-email" name="email" required placeholder="john@email.com">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="f-phone">Phone <span style="color:var(--ink-soft);font-weight:400;">(optional)</span></label>
+            <input type="tel" id="f-phone" name="phone" placeholder="(555) 555-5555">
+          </div>
+
+          <div class="form-group">
+            <label for="f-option">Which option are you leaning toward?</label>
+            <select id="f-option" name="option_interest">
+              <option value="">— Not sure yet</option>
+              <option value="Option 1 — Camp Long Creek Two-Bedroom Camp Cabin ($2,240.76)">Option 1 — Camp Long Creek Two-Bedroom Camp Cabin ($2,240.76)</option>
+              <option value="Option 2 — Two-Bedroom Cabin ($3,738.06)">Option 2 — Two-Bedroom Cabin ($3,738.06)</option>
+              <option value="Option 3 — Bass Pro Shops Lakeside Two-Bedroom Family Cottage ($3,900.57)">Option 3 — Bass Pro Shops Lakeside Two-Bedroom Family Cottage ($3,900.57)</option>
+              <option value="Still deciding — have questions">Still deciding — have questions</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="f-insurance">Travel Insurance</label>
+            <select id="f-insurance" name="travel_insurance">
+              <option value="Yes — I'd like a quote">Yes — I'd like a quote</option>
+              <option value="No — not interested">No — not interested</option>
+              <option value="Already have coverage">Already have coverage</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="f-message">Questions or notes <span style="color:var(--ink-soft);font-weight:400;">(optional)</span></label>
+            <textarea id="f-message" name="message" placeholder="Anything you'd like Christina to know — questions about the cabins, timing, the deposit, or anything else…"></textarea>
+          </div>
+
+          <button type="submit" id="submit-btn" class="submit-btn">Send to Christina</button>
+        </form>
+      </div>
+
+      <div id="thank-you">
+        <h3>Message received.</h3>
+        <p>Christina will be in touch within one business day to confirm availability and next steps for your December trip.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer class="pmtp-footer">
+  <div class="footer-wordmark">Point Me to Paradise Travel</div>
+  <div class="footer-name">Christina Garcia</div>
+  <div class="footer-title">Travel Advisor</div>
+  <div class="footer-contact">
+    <span id="advisor-email"></span><br>
+    Point Me to Paradise Travel
+  </div>
+  <div class="footer-legal">
+    This quote is prepared exclusively for the Long Family. Pricing and availability subject to change until deposit received and booking confirmed.
+  </div>
+</footer>
+
+<script>
+// Email obfuscation
+(function(){
+  var el=document.getElementById('advisor-email');
+  var addr='christina'+'\u0040'+'pointmetoparadise.com';
+  el.innerHTML='<a href="mailto:'+addr+'">'+addr+'</a>';
+})();
+
+// Option switching — cards + pricing panels in sync
+function selectOption(n){
+  [1,2,3].forEach(function(i){
+    document.getElementById('card-'+i).classList.toggle('visible',i===n);
+    document.getElementById('pricing-'+i).classList.toggle('visible',i===n);
+    document.getElementById('tab-'+i).classList.toggle('active',i===n);
+  });
+}
+
+// Filmstrip gallery for Option 3
+(function(){
+  var main=document.getElementById('filmstrip-main');
+  var thumbs=document.querySelectorAll('.filmstrip-thumb');
+  thumbs.forEach(function(t){
+    t.addEventListener('click',function(){
+      main.style.backgroundImage="url('"+t.getAttribute('data-src')+"')";
+      thumbs.forEach(function(x){x.classList.remove('active-thumb');});
+      t.classList.add('active-thumb');
+    });
+  });
+})();
+
+// Form submission
+document.getElementById('pmtp-form').addEventListener('submit',function(e){
+  e.preventDefault();
+  var btn=document.getElementById('submit-btn');
+  var err=document.getElementById('form-error');
+  btn.disabled=true;btn.textContent='Sending\u2026';err.style.display='none';
+  fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(e.target)})
+    .then(function(r){return r.json();})
+    .then(function(data){
+      if(data.success){
+        document.getElementById('form-container').style.display='none';
+        document.getElementById('thank-you').style.display='block';
+      }else{
+        btn.disabled=false;btn.textContent='Send to Christina';err.style.display='block';
+        err.scrollIntoView({behavior:'smooth',block:'nearest'});
+      }
+    })
+    .catch(function(){
+      btn.disabled=false;btn.textContent='Send to Christina';err.style.display='block';
+      err.scrollIntoView({behavior:'smooth',block:'nearest'});
+    });
+});
+</script>
+
+</body>
+</html>
