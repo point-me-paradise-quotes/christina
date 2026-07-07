@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MSC Seascape — David Wilson | Point Me to Paradise Travel</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --aqua-pale:    #C4E4E1;
+    --aqua-mist:    #EAF3F2;
+    --aqua:         #75AFB1;
+    --aqua-dark:    #4F8A8C;
+    --sand:         #ECE7DC;
+    --sand-light:   #F4F1E9;
+    --gold-whisper: #D6C8A8;
+    --white:        #FFFFFF;
+    --paper:        #FBFDFD;
+    --ink:          #2B2420;
+    --ink-soft:     #6B6359;
+    --line:         #E5E9E8;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--paper); color: var(--ink); font-size: 16px; line-height: 1.65; }
+
+  /* HERO */
+  .pmtp-hero {
+    position: relative;
+    background-image: url('https://runway-media-production.global.ssl.fastly.net/us/originals/2024/10/20241025_MSC-Seascape_KTolley_197.jpg?width=2000&crop=16%3A9%2Coffset-x50%2Coffset-y50');
+    background-size: cover;
+    background-position: center;
+    padding: 78px 32px 60px;
+    text-align: center;
+  }
+  .pmtp-hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(155deg, rgba(79,138,140,0.68) 0%, rgba(43,36,32,0.52) 100%);
+  }
+  .hero-inner { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; }
+  .pmtp-wordmark {
+    font-family: 'Playfair Display', serif;
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--aqua-pale); margin-bottom: 28px;
+  }
+  .hero-h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 600; color: var(--white);
+    line-height: 1.2; margin-bottom: 12px;
+  }
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 1.35rem;
+    color: var(--aqua-pale); margin-bottom: 22px;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.14);
+    border: 1px solid rgba(255,255,255,0.32);
+    border-radius: 32px; padding: 7px 22px;
+    font-size: 0.8rem; font-weight: 500;
+    letter-spacing: 0.06em; color: var(--white);
+    text-transform: uppercase;
+  }
+
+  /* LAYOUT */
+  .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .section-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--aqua-dark); margin-bottom: 10px;
+  }
+  .section-divider { height: 1px; background: var(--line); }
+
+  /* OVERVIEW */
+  .overview-band { background: var(--white); padding: 52px 0 44px; }
+  .overview-band h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem; font-weight: 600;
+    color: var(--ink); margin-bottom: 18px; line-height: 1.25;
+  }
+  .overview-band p { color: var(--ink-soft); margin-bottom: 14px; font-size: 0.97rem; }
+  .commitment-top {
+    background: var(--aqua-pale);
+    border-left: 3px solid var(--aqua-dark);
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px; margin-top: 28px;
+    font-size: 0.9rem; color: var(--ink); line-height: 1.55;
+  }
+
+  /* ITINERARY */
+  .itin-band { background: var(--aqua-mist); padding: 52px 0; }
+  .itin-band h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.45rem; font-weight: 600;
+    color: var(--ink); margin-bottom: 24px;
+  }
+  .itin-table { width: 100%; border-collapse: collapse; background: var(--white); border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(79,138,140,0.07); }
+  .itin-table thead th {
+    background: var(--aqua-dark); color: var(--white);
+    font-size: 0.74rem; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 11px 14px; text-align: left;
+  }
+  .itin-table tbody tr { border-bottom: 1px solid var(--line); }
+  .itin-table tbody tr:last-child { border-bottom: none; }
+  .itin-table tbody tr.sea-row { background: var(--aqua-mist); }
+  .itin-table tbody td { padding: 11px 14px; font-size: 0.875rem; }
+  .itin-table tbody td:first-child { font-weight: 500; }
+  .sea-text { color: var(--aqua-dark); font-style: italic; }
+  .port-tag {
+    display: inline-block;
+    background: var(--aqua-pale); color: var(--aqua-dark);
+    font-size: 0.68rem; font-weight: 600;
+    padding: 2px 8px; border-radius: 20px;
+    letter-spacing: 0.04em; margin-left: 6px;
+  }
+
+  /* OPTIONS */
+  .options-band { background: var(--white); padding: 56px 0 60px; }
+  .options-band h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem; font-weight: 600;
+    color: var(--ink); margin-bottom: 8px;
+  }
+  .options-intro { color: var(--ink-soft); font-size: 0.95rem; margin-bottom: 32px; }
+
+  .cabin-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 600px) { .cabin-grid { grid-template-columns: 1fr; } }
+
+  .cabin-card {
+    border: 1.5px solid var(--line);
+    border-radius: 12px; overflow: hidden;
+    background: var(--white); cursor: pointer;
+    transition: box-shadow 0.2s, border-color 0.2s;
+  }
+  .cabin-card.selected { border-color: var(--aqua-dark); box-shadow: 0 0 0 3px rgba(79,138,140,0.15); }
+  .cabin-card:hover { box-shadow: 0 4px 18px rgba(79,138,140,0.12); }
+
+  .card-header { padding: 20px 20px 14px; border-bottom: 1px solid var(--line); }
+  .cabin-tier {
+    font-size: 0.69rem; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--aqua-dark); margin-bottom: 5px;
+  }
+  .cabin-badge {
+    display: inline-block;
+    background: var(--aqua-dark); color: var(--white);
+    font-size: 0.66rem; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 3px 10px; border-radius: 20px; margin-bottom: 8px;
+  }
+  .cabin-badge.value { background: var(--aqua); }
+  .cabin-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem; font-weight: 600;
+    color: var(--ink); margin-bottom: 4px;
+  }
+  .cabin-code { font-size: 0.78rem; color: var(--ink-soft); margin-bottom: 10px; }
+  .price-display { display: flex; align-items: baseline; gap: 6px; margin-bottom: 4px; }
+  .price-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.55rem; font-weight: 600; color: var(--aqua-dark);
+  }
+  .price-basis { font-size: 0.78rem; color: var(--ink-soft); }
+  .price-includes { font-size: 0.78rem; color: var(--aqua-dark); font-weight: 500; }
+
+  .card-body { padding: 16px 20px; }
+  .cabin-spec { font-size: 0.82rem; color: var(--ink-soft); margin-bottom: 8px; }
+  .cabin-spec strong { color: var(--ink); font-weight: 500; }
+  .perk-list { list-style: none; margin-top: 10px; }
+  .perk-list li { font-size: 0.8rem; color: var(--ink-soft); padding: 3px 0; display: flex; gap: 8px; }
+  .perk-list li::before { content: '—'; color: var(--aqua); flex-shrink: 0; }
+
+  .radio-row {
+    display: flex; align-items: center; gap: 8px;
+    padding: 12px 20px; border-top: 1px solid var(--line);
+    background: var(--aqua-mist);
+  }
+  .radio-row input[type="radio"] { accent-color: var(--aqua-dark); width: 16px; height: 16px; cursor: pointer; }
+  .radio-row label { font-size: 0.85rem; font-weight: 500; color: var(--ink); cursor: pointer; }
+
+  /* PRICE BAR */
+  .price-bar {
+    background: var(--aqua-dark); border-radius: 10px;
+    padding: 22px 28px; margin-top: 32px;
+    display: flex; align-items: center;
+    justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  }
+  .price-bar-left {}
+  .price-bar-label { font-size: 0.82rem; color: rgba(255,255,255,0.75); font-weight: 500; }
+  .price-bar-note { font-size: 0.75rem; color: rgba(255,255,255,0.6); margin-top: 2px; }
+  .price-bar-right { text-align: right; }
+  .price-bar-total-label { font-size: 0.75rem; color: rgba(255,255,255,0.65); margin-bottom: 2px; }
+  .price-bar-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem; font-weight: 600; color: var(--white);
+  }
+
+  .commitment-pricing {
+    background: var(--aqua-mist);
+    border: 1px solid var(--aqua-pale);
+    border-radius: 8px; padding: 14px 18px;
+    margin-top: 14px; font-size: 0.85rem; color: var(--ink);
+  }
+  .price-disclaimer {
+    font-size: 0.78rem; color: var(--ink-soft);
+    margin-top: 10px; font-style: italic;
+  }
+
+  /* INCLUDED */
+  .included-band { background: var(--aqua-mist); padding: 52px 0; }
+  .included-band h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem; font-weight: 600;
+    color: var(--ink); margin-bottom: 24px;
+  }
+  .included-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px; }
+  .included-card {
+    background: var(--white); border-radius: 10px;
+    padding: 18px 16px; border: 1px solid var(--line);
+  }
+  .included-icon { font-size: 1.1rem; margin-bottom: 8px; }
+  .included-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem; font-weight: 600;
+    color: var(--ink); margin-bottom: 5px;
+  }
+  .included-card p { font-size: 0.8rem; color: var(--ink-soft); line-height: 1.5; }
+
+  /* FORM */
+  .form-band { background: var(--white); padding: 56px 0 60px; }
+  .form-band h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem; font-weight: 600;
+    color: var(--ink); margin-bottom: 8px;
+  }
+  .form-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 1.05rem;
+    color: var(--ink-soft); margin-bottom: 28px;
+  }
+  .commitment-bottom {
+    background: var(--aqua-pale); border-radius: 10px;
+    padding: 18px 22px; margin-bottom: 32px;
+    font-size: 0.88rem; color: var(--ink); line-height: 1.6;
+  }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 560px) { .form-grid { grid-template-columns: 1fr; } }
+  .form-field { display: flex; flex-direction: column; gap: 6px; }
+  .form-field.full { grid-column: 1 / -1; }
+  .form-field label { font-size: 0.8rem; font-weight: 600; color: var(--ink); letter-spacing: 0.04em; }
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px; padding: 10px 14px;
+    border: 1.5px solid var(--line); border-radius: 7px;
+    background: var(--white); color: var(--ink);
+    outline: none; transition: border-color 0.2s; width: 100%;
+  }
+  .form-field input:focus,
+  .form-field select:focus,
+  .form-field textarea:focus {
+    border-color: var(--aqua-dark);
+    box-shadow: 0 0 0 3px rgba(79,138,140,0.1);
+  }
+  .form-field textarea { resize: vertical; min-height: 100px; }
+
+  .submit-btn {
+    display: block; width: 100%; margin-top: 20px;
+    padding: 15px; background: var(--aqua-dark); color: var(--white);
+    font-family: 'DM Sans', sans-serif; font-size: 16px;
+    font-weight: 600; letter-spacing: 0.04em;
+    border: none; border-radius: 8px;
+    cursor: pointer; transition: background 0.2s, opacity 0.2s;
+  }
+  .submit-btn:hover { background: #3a7172; }
+  .submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+  #thank-you {
+    display: none; text-align: center;
+    padding: 52px 24px; background: var(--aqua-mist); border-radius: 12px;
+  }
+  #thank-you h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem; font-weight: 600;
+    color: var(--ink); margin-bottom: 10px;
+  }
+  #thank-you p { color: var(--ink-soft); font-size: 0.95rem; }
+
+  /* FOOTER */
+  .footer {
+    background: var(--sand-light); padding: 40px 24px;
+    text-align: center; border-top: 1px solid var(--line);
+  }
+  .footer-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem; font-weight: 600; color: var(--ink); margin-bottom: 3px;
+  }
+  .footer-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 0.95rem; color: var(--ink-soft); margin-bottom: 12px;
+  }
+  .footer-contact { font-size: 0.85rem; color: var(--ink-soft); line-height: 1.9; }
+  .footer-contact a { color: var(--aqua-dark); text-decoration: none; }
+  .footer-agency {
+    font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--aqua); margin-top: 16px; font-weight: 600;
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="pmtp-hero">
+  <div class="hero-inner">
+    <div class="pmtp-wordmark">Point Me to Paradise Travel</div>
+    <h1 class="hero-h1">MSC Seascape<br>Western Caribbean</h1>
+    <div class="hero-sub">Seven nights from Galveston · Anniversary sailing</div>
+    <div class="hero-badge">July 26 – August 2, 2026 &nbsp;·&nbsp; David &amp; Guest Wilson</div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="overview-band">
+  <div class="container">
+    <div class="section-eyebrow">Your Trip at a Glance</div>
+    <h2>Seven nights, three countries, one anniversary worth marking.</h2>
+    <p>The MSC Seascape departs Galveston Sunday evening and makes its way south through two sea days before arriving in Costa Maya on Wednesday morning — giving you time to settle in before the ports start. The itinerary then moves through Roatan's reef-lined Bay Island on Thursday, Cozumel's clear shallows on Friday, and a final sea day Saturday before arriving back in Galveston Sunday at 7:00 a.m.</p>
+    <p>MSC Seascape is one of the line's newest ships, launched in late 2022 and designed with more outdoor deck space per passenger than most in its class. The onboard experience — dining options, entertainment programming, the Yacht Club private complex — skews toward guests who want a polished product without the scale of the mega-ships.</p>
+    <div class="commitment-top">
+      We don't book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. The work you'd hate doing — already done.
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ITINERARY -->
+<section class="itin-band">
+  <div class="container">
+    <div class="section-eyebrow">Day by Day</div>
+    <h2>Full Itinerary</h2>
+    <table class="itin-table">
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Date</th>
+          <th>Port</th>
+          <th>Arrives</th>
+          <th>Departs</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Sun</td>
+          <td>Jul 26</td>
+          <td>Galveston, TX <span class="port-tag">Embarkation</span></td>
+          <td>—</td>
+          <td>5:00 PM</td>
+        </tr>
+        <tr class="sea-row">
+          <td>Mon</td>
+          <td>Jul 27</td>
+          <td><span class="sea-text">Day at Sea</span></td>
+          <td>—</td>
+          <td>—</td>
+        </tr>
+        <tr class="sea-row">
+          <td>Tue</td>
+          <td>Jul 28</td>
+          <td><span class="sea-text">Day at Sea</span></td>
+          <td>—</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>Wed</td>
+          <td>Jul 29</td>
+          <td>Costa Maya, Mexico</td>
+          <td>8:00 AM</td>
+          <td>6:00 PM</td>
+        </tr>
+        <tr>
+          <td>Thu</td>
+          <td>Jul 30</td>
+          <td>Isla de Roatan, Honduras</td>
+          <td>8:00 AM</td>
+          <td>4:00 PM</td>
+        </tr>
+        <tr>
+          <td>Fri</td>
+          <td>Jul 31</td>
+          <td>Cozumel, Mexico</td>
+          <td>8:00 AM</td>
+          <td>4:00 PM</td>
+        </tr>
+        <tr class="sea-row">
+          <td>Sat</td>
+          <td>Aug 1</td>
+          <td><span class="sea-text">Day at Sea</span></td>
+          <td>—</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>Sun</td>
+          <td>Aug 2</td>
+          <td>Galveston, TX <span class="port-tag">Disembarkation</span></td>
+          <td>7:00 AM</td>
+          <td>—</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- OPTIONS & CALCULATOR -->
+<section class="options-band">
+  <div class="container">
+    <div class="section-eyebrow">Stateroom Options</div>
+    <h2>Choose Your Cabin</h2>
+    <p class="options-intro">Both options include drinks and Wi-Fi. Select a cabin below — the estimated total updates automatically.</p>
+
+    <div class="cabin-grid">
+
+      <!-- AUREA -->
+      <div class="cabin-card selected" id="card-aurea" onclick="selectCabin('aurea')">
+        <div class="card-header">
+          <div class="cabin-badge">Best Location</div>
+          <div class="cabin-tier">Aurea Experience</div>
+          <div class="cabin-name">Deluxe Balcony Aurea</div>
+          <div class="cabin-code">Category BA · Decks 9–15</div>
+          <div class="price-display">
+            <span class="price-num">$3,164</span>
+            <span class="price-basis">for 2 adults</span>
+          </div>
+          <div class="price-includes">Drinks + Wi-Fi included</div>
+        </div>
+        <div class="card-body">
+          <div class="cabin-spec"><strong>Size:</strong> ~183 ft² interior + 54–97 ft² balcony</div>
+          <div class="cabin-spec"><strong>Bed:</strong> King (convertible to twins on request)</div>
+          <div class="cabin-spec"><strong>View:</strong> Private balcony, glass front (most staterooms)</div>
+          <ul class="perk-list">
+            <li>Choose your specific stateroom and location</li>
+            <li>My Choice flexible dining — no set schedule</li>
+            <li>Dedicated Aurea restaurant or area</li>
+            <li>Priority boarding and luggage drop-off</li>
+            <li>Exclusive Top Solarium access</li>
+            <li>Bathrobe, slippers, pillow menu in cabin</li>
+            <li>Thermal area access (adults only)</li>
+            <li>10% off all spa treatments on board</li>
+            <li>Welcome prosecco and chocolate on arrival</li>
+            <li>Free 24-hr room service and breakfast delivery</li>
+            <li>One free cruise change (30-day advance, restrictions apply)</li>
+          </ul>
+        </div>
+        <div class="radio-row">
+          <input type="radio" name="cabin" id="radio-aurea" value="aurea" checked onchange="selectCabin('aurea')">
+          <label for="radio-aurea">Select Aurea Balcony</label>
+        </div>
+      </div>
+
+      <!-- BELLA -->
+      <div class="cabin-card" id="card-bella" onclick="selectCabin('bella')">
+        <div class="card-header">
+          <div class="cabin-badge value">Value Option</div>
+          <div class="cabin-tier">Bella Experience</div>
+          <div class="cabin-name">Ocean View Bella</div>
+          <div class="cabin-code">Category OB · Deck 5 · Guaranteed</div>
+          <div class="price-display">
+            <span class="price-num">$2,290</span>
+            <span class="price-basis">for 2 adults</span>
+          </div>
+          <div class="price-includes">Drinks + Wi-Fi included</div>
+        </div>
+        <div class="card-body">
+          <div class="cabin-spec"><strong>Size:</strong> ~183 ft²</div>
+          <div class="cabin-spec"><strong>Bed:</strong> King (convertible to twins on request)</div>
+          <div class="cabin-spec"><strong>View:</strong> Fixed window with sea view</div>
+          <ul class="perk-list">
+            <li>Guaranteed stateroom on Deck 5</li>
+            <li>Fixed dining schedule in main restaurant</li>
+            <li>Access to all pools, theater shows, and gym</li>
+            <li>MSC for Me app (where available)</li>
+            <li>Cruise change available for a fee (30-day advance)</li>
+          </ul>
+        </div>
+        <div class="radio-row">
+          <input type="radio" name="cabin" id="radio-bella" value="bella" onchange="selectCabin('bella')">
+          <label for="radio-bella">Select Bella Ocean View</label>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- PRICE BAR -->
+    <div class="price-bar">
+      <div class="price-bar-left">
+        <div class="price-bar-label" id="bar-label">Aurea Deluxe Balcony · 2 Adults</div>
+        <div class="price-bar-note">Drinks + Wi-Fi included</div>
+      </div>
+      <div class="price-bar-right">
+        <div class="price-bar-total-label">Estimated Total</div>
+        <div class="price-bar-amount" id="bar-total">$3,164</div>
+      </div>
+    </div>
+
+    <div class="commitment-pricing">
+      We check every component against public rates and meet or beat them. You're not paying a premium for our convenience — you're paying for the rest of what we do.
+    </div>
+    <div class="price-disclaimer">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor.</div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- WHAT'S ON BOARD -->
+<section class="included-band">
+  <div class="container">
+    <div class="section-eyebrow">What's On Board</div>
+    <h2>Included on Every Sailing</h2>
+    <div class="included-grid">
+      <div class="included-card">
+        <div class="included-icon">🍽️</div>
+        <h4>Dining</h4>
+        <p>Main restaurant for dinner each evening, plus an extensive all-day buffet. Specialty restaurant packages available separately.</p>
+      </div>
+      <div class="included-card">
+        <div class="included-icon">🎭</div>
+        <h4>Entertainment</h4>
+        <p>Broadway-style theater shows nightly, live music across multiple venues, and a full daytime activity program for all ages.</p>
+      </div>
+      <div class="included-card">
+        <div class="included-icon">🏊</div>
+        <h4>Pools &amp; Fitness</h4>
+        <p>Multiple pool areas, open-air sports courts, and a panoramic gym. Seascape's outdoor deck footage is among the largest in its class.</p>
+      </div>
+      <div class="included-card">
+        <div class="included-icon">📱</div>
+        <h4>MSC for Me</h4>
+        <p>The ship's app for navigating dining reservations, show schedules, and on-board services without standing in line.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- FORM -->
+<section class="form-band">
+  <div class="container">
+    <div class="section-eyebrow">Next Steps</div>
+    <h2>Ready to Move Forward?</h2>
+    <p class="form-sub">Let Christina know which option interests you — or send any questions you have.</p>
+
+    <div class="commitment-bottom">
+      What's coming after this quote: a destination guide built for your trip — PDF or interactive in-app, with Google Maps links to every place we send you — a trip app where everything lives, and us when something goes sideways at midnight. You travel; we handle the rest.
+    </div>
+
+    <div id="form-container">
+      <div id="form-error" style="display:none; background:#fff1f1; border:1px solid #f5c6c6; border-radius:6px; padding:14px 18px; font-size:0.875rem; color:#b91c1c; margin-bottom:16px;">
+        We weren't able to send your message. Please contact Christina directly at the address below.
+      </div>
+
+      <form id="pmtp-form" novalidate>
+        <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+        <input type="hidden" name="subject" value="Quote Response — David Wilson | MSC Seascape Western Caribbean">
+        <input type="hidden" name="from_name" value="David Wilson Quote — Point Me to Paradise">
+        <input type="hidden" name="redirect" value="false">
+
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="f-name">Name</label>
+            <input type="text" id="f-name" name="name" placeholder="David Wilson" required>
+          </div>
+          <div class="form-field">
+            <label for="f-email">Email</label>
+            <input type="email" id="f-email" name="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-field">
+            <label for="f-phone">Phone (optional)</label>
+            <input type="tel" id="f-phone" name="phone" placeholder="(000) 000-0000">
+          </div>
+          <div class="form-field">
+            <label for="f-option">Cabin option interest</label>
+            <select id="f-option" name="option_interest">
+              <option value="">— Select an option —</option>
+              <option value="Aurea Deluxe Balcony (BA) — $3,164 for 2 adults">Aurea Deluxe Balcony — $3,164</option>
+              <option value="Bella Ocean View (OB) — $2,290 for 2 adults">Bella Ocean View — $2,290</option>
+              <option value="Undecided — have questions">Undecided — have questions</option>
+            </select>
+          </div>
+          <div class="form-field full">
+            <label for="f-insurance">Travel insurance</label>
+            <select id="f-insurance" name="travel_insurance">
+              <option value="">— Select —</option>
+              <option value="Yes — I'd like a quote">Yes — I'd like a quote</option>
+              <option value="No — not interested">No — not interested</option>
+              <option value="Already have coverage">Already have coverage</option>
+            </select>
+          </div>
+          <div class="form-field full">
+            <label for="f-message">Questions or notes (optional)</label>
+            <textarea id="f-message" name="message" placeholder="Anything you'd like Christina to know — dietary needs, celebration details, questions about the ports…"></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submit-btn">Send to Christina</button>
+      </form>
+    </div>
+
+    <div id="thank-you">
+      <h3>Thank you, David.</h3>
+      <p>Christina will be in touch shortly. Feel free to reply to her directly if anything comes to mind in the meantime.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-name">Christina Garcia</div>
+  <div class="footer-title">Travel Advisor</div>
+  <div class="footer-contact">
+    <span id="footer-email"></span><br>
+    Point Me to Paradise Travel
+  </div>
+  <div class="footer-agency">© 2026 Point Me to Paradise Travel</div>
+</footer>
+
+<script>
+  (function() {
+    var el = document.getElementById('footer-email');
+    var addr = 'christina' + '\u0040' + 'pointmetoparadise.com';
+    var a = document.createElement('a');
+    a.href = 'mailto:' + addr;
+    a.textContent = addr;
+    el.appendChild(a);
+  })();
+
+  var prices = { aurea: 3164, bella: 2290 };
+  var labels = {
+    aurea: 'Aurea Deluxe Balcony \u00b7 2 Adults',
+    bella: 'Bella Ocean View \u00b7 2 Adults'
+  };
+
+  function selectCabin(which) {
+    document.getElementById('card-aurea').classList.toggle('selected', which === 'aurea');
+    document.getElementById('card-bella').classList.toggle('selected', which === 'bella');
+    document.getElementById('radio-aurea').checked = which === 'aurea';
+    document.getElementById('radio-bella').checked = which === 'bella';
+    document.getElementById('bar-total').textContent = '$' + prices[which].toLocaleString();
+    document.getElementById('bar-label').textContent = labels[which];
+  }
+
+  document.getElementById('pmtp-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = document.getElementById('submit-btn');
+    var err = document.getElementById('form-error');
+    btn.disabled = true;
+    btn.textContent = 'Sending\u2026';
+    err.style.display = 'none';
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: new FormData(e.target)
+    })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      if (data.success) {
+        document.getElementById('form-container').style.display = 'none';
+        document.getElementById('thank-you').style.display = 'block';
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'Send to Christina';
+        err.style.display = 'block';
+        err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    })
+    .catch(function() {
+      btn.disabled = false;
+      btn.textContent = 'Send to Christina';
+      err.style.display = 'block';
+      err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  });
+</script>
+</body>
+</html>
