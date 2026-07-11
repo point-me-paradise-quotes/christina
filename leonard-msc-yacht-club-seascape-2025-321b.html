@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MSC Yacht Club — Barbara Leonard | Point Me to Paradise Travel</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --aqua-pale:    #C4E4E1;
+    --aqua-mist:    #EAF3F2;
+    --aqua:         #75AFB1;
+    --aqua-dark:    #4F8A8C;
+    --sand:         #ECE7DC;
+    --sand-light:   #F4F1E9;
+    --gold-whisper: #D6C8A8;
+    --white:        #FFFFFF;
+    --paper:        #FBFDFD;
+    --ink:          #2B2420;
+    --ink-soft:     #6B6359;
+    --line:         #E5E9E8;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.65;
+  }
+
+  /* ── HERO ── */
+  .pmtp-hero {
+    position: relative;
+    background-image: url('https://runway-media-production.global.ssl.fastly.net/us/originals/2024/10/20241025_MSC-Seascape_KTolley_197.jpg?width=2000&crop=16%3A9%2Coffset-x50%2Coffset-y50');
+    background-size: cover;
+    background-position: center 40%;
+    padding: 90px 32px 70px;
+    text-align: center;
+  }
+  .pmtp-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(160deg, rgba(43,36,32,0.62) 0%, rgba(79,138,140,0.45) 100%);
+  }
+  .hero-inner { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; }
+  .pmtp-wordmark {
+    font-family: 'Playfair Display', serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--aqua-pale);
+    margin-bottom: 22px;
+    display: block;
+  }
+  .hero-eyebrow {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--aqua-pale);
+    margin-bottom: 10px;
+    opacity: 0.9;
+  }
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.15;
+    margin-bottom: 14px;
+  }
+  .hero-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.25rem;
+    color: var(--aqua-pale);
+    margin-bottom: 0;
+  }
+
+
+
+  /* ── LAYOUT ── */
+  .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+  section { padding: 52px 0; }
+  section + section { border-top: 1px solid var(--line); }
+
+  /* ── COMMITMENT STRIP (top) ── */
+  .commitment-top {
+    background: var(--aqua-mist);
+    padding: 28px 32px;
+    border-left: 3px solid var(--aqua);
+    border-radius: 0 8px 8px 0;
+    margin: 40px 0 0;
+    font-size: 0.93rem;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+
+  /* ── SECTION HEADINGS ── */
+  .section-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--aqua-dark);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+
+  /* ── SHIP OVERVIEW ── */
+  .overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 24px;
+  }
+  @media (max-width: 560px) { .overview-grid { grid-template-columns: 1fr; } }
+  .overview-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 20px 22px;
+  }
+  .overview-card .oc-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--aqua-dark);
+    margin-bottom: 4px;
+  }
+  .overview-card .oc-value {
+    font-size: 1rem;
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* ── YC WHAT'S INCLUDED ── */
+  .included-band {
+    background: var(--aqua-mist);
+    border-radius: 12px;
+    padding: 32px 36px;
+    margin-top: 32px;
+  }
+  .included-band h3 { margin-bottom: 16px; }
+  .included-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 24px;
+    list-style: none;
+  }
+  @media (max-width: 560px) { .included-list { grid-template-columns: 1fr; } }
+  .included-list li {
+    font-size: 0.91rem;
+    color: var(--ink-soft);
+    padding-left: 18px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .included-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--aqua);
+    font-weight: 600;
+  }
+
+  /* ── OPTION SELECTOR ── */
+  .selector-intro {
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    margin-bottom: 28px;
+    max-width: 640px;
+  }
+
+  .option-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+  .option-tab {
+    padding: 9px 18px;
+    border-radius: 50px;
+    border: 1.5px solid var(--aqua);
+    background: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--aqua-dark);
+    cursor: pointer;
+    transition: all 0.18s;
+    white-space: nowrap;
+  }
+  .option-tab:hover { background: var(--aqua-pale); border-color: var(--aqua-dark); }
+  .option-tab.active { background: var(--aqua-dark); border-color: var(--aqua-dark); color: var(--white); }
+
+  /* ── OPTION CARD ── */
+  .option-card {
+    display: none;
+    background: var(--white);
+    border: 1.5px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 18px rgba(43,36,32,0.06);
+    transition: opacity 0.2s;
+  }
+  .option-card.active { display: block; }
+
+  .option-card-header {
+    background: var(--aqua-mist);
+    padding: 26px 32px 22px;
+    border-bottom: 1px solid var(--line);
+  }
+  .option-date-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--aqua-dark);
+    background: var(--aqua-pale);
+    border-radius: 4px;
+    padding: 3px 10px;
+    margin-bottom: 10px;
+  }
+  .option-card-header h3 {
+    font-size: 1.3rem;
+    margin-bottom: 4px;
+  }
+  .option-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+  }
+
+  .option-card-body { padding: 28px 32px; }
+
+  .option-notice {
+    background: #fffbf0;
+    border: 1px solid #e8d9a0;
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 0.88rem;
+    color: #6b5a1e;
+    margin-bottom: 22px;
+    line-height: 1.55;
+  }
+  .option-notice strong { color: #4a3e10; }
+
+  .cabin-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  @media (max-width: 560px) { .cabin-details { grid-template-columns: 1fr 1fr; } }
+  .cabin-detail-item .cd-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--aqua-dark);
+    margin-bottom: 3px;
+  }
+  .cabin-detail-item .cd-val {
+    font-size: 0.92rem;
+    color: var(--ink);
+  }
+
+  .pricing-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+    margin-top: 8px;
+  }
+  .pricing-label-stack .pl-main {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .pricing-label-stack .pl-basis {
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+  .pricing-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: var(--aqua-dark);
+    line-height: 1;
+  }
+  .pricing-amount span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--ink-soft);
+  }
+  .pricing-note {
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    margin-top: 6px;
+    font-style: italic;
+  }
+
+  /* ── ITINERARY TABLE ── */
+  .itin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.9rem;
+  }
+  .itin-table th {
+    text-align: left;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--aqua-dark);
+    padding: 10px 14px;
+    background: var(--aqua-mist);
+    border-bottom: 1px solid var(--line);
+  }
+  .itin-table td {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink);
+    vertical-align: top;
+  }
+  .itin-table tr:last-child td { border-bottom: none; }
+  .itin-table tr:nth-child(even) td { background: #f8fafa; }
+  .itin-table td:nth-child(3),
+  .itin-table td:nth-child(4),
+  .itin-table th:nth-child(3),
+  .itin-table th:nth-child(4) {
+    text-align: center;
+    white-space: nowrap;
+    width: 80px;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+  }
+  .day-num {
+    font-weight: 700;
+    color: var(--aqua-dark);
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+  .port-name { font-weight: 500; }
+  .port-note { font-size: 0.8rem; color: var(--ink-soft); margin-top: 2px; }
+
+  /* ── PRICING COMMITMENT ── */
+  .pricing-commitment {
+    background: var(--white);
+    border: 1px solid var(--aqua-pale);
+    border-left: 3px solid var(--aqua);
+    border-radius: 0 8px 8px 0;
+    padding: 18px 22px;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    margin: 28px 0 8px;
+    line-height: 1.6;
+  }
+  .pricing-disclaimer {
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    font-style: italic;
+    margin-top: 10px;
+  }
+
+  /* ── FORM SECTION ── */
+  .form-section { background: var(--white); }
+  .bottom-commitment {
+    background: var(--aqua-mist);
+    border-radius: 10px;
+    padding: 26px 30px;
+    margin-bottom: 36px;
+    font-size: 0.93rem;
+    color: var(--ink-soft);
+    border-left: 3px solid var(--aqua);
+    border-radius: 0 10px 10px 0;
+    line-height: 1.65;
+  }
+
+  .form-group { margin-bottom: 18px; }
+  .form-group label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 6px;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1.5px solid var(--line);
+    border-radius: 8px;
+    padding: 11px 14px;
+    transition: border-color 0.15s;
+    appearance: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--aqua);
+    background: var(--white);
+  }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 560px) { .form-row { grid-template-columns: 1fr; } }
+
+  .submit-btn {
+    width: 100%;
+    padding: 15px 24px;
+    background: var(--aqua-dark);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.04em;
+    transition: background 0.18s, transform 0.1s;
+    margin-top: 6px;
+  }
+  .submit-btn:hover:not(:disabled) { background: var(--aqua); }
+  .submit-btn:disabled { opacity: 0.65; cursor: not-allowed; }
+
+  #thank-you {
+    display: none;
+    text-align: center;
+    padding: 48px 24px;
+    background: var(--aqua-mist);
+    border-radius: 12px;
+  }
+  #thank-you h3 { font-size: 1.5rem; margin-bottom: 10px; }
+  #thank-you p { color: var(--ink-soft); font-size: 0.95rem; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--sand-light);
+    padding: 40px 24px;
+    text-align: center;
+    border-top: 1px solid var(--line);
+  }
+  .footer-wordmark {
+    font-family: 'Playfair Display', serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--aqua-dark);
+    margin-bottom: 14px;
+  }
+  .footer-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .footer-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--ink-soft);
+    margin-bottom: 10px;
+  }
+  .footer-contact {
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    line-height: 1.9;
+  }
+  .footer-contact a { color: var(--aqua-dark); text-decoration: none; }
+  .footer-contact a:hover { text-decoration: underline; }
+  .footer-legal {
+    margin-top: 22px;
+    font-size: 0.75rem;
+    color: var(--ink-soft);
+    opacity: 0.7;
+  }
+</style>
+</head>
+<body>
+
+<!-- ── HERO ── -->
+<div class="pmtp-hero">
+  <div class="hero-inner">
+    <span class="pmtp-wordmark">Point Me to Paradise Travel</span>
+    <p class="hero-eyebrow">A private quote prepared for</p>
+    <h1 class="hero-title">Barbara Leonard</h1>
+    <p class="hero-subtitle">MSC Seascape · Yacht Club · Western Caribbean · Nov 2026 – Jan 2027</p>
+  </div>
+</div>
+
+
+
+<!-- ── TRIP OVERVIEW ── -->
+<section>
+  <div class="container">
+    <div class="section-label">The Trip</div>
+    <h2>MSC Seascape, Yacht Club</h2>
+    <p style="color:var(--ink-soft); max-width:640px; font-size:0.95rem;">
+      The MSC Seascape sails a 7-night Western Caribbean loop out of Galveston, Texas, calling on Costa Maya and Cozumel in Mexico and Isla de Roatán in Honduras — with two sea days bookending the ports. The Yacht Club is MSC's ship-within-a-ship concept — a private deck, a dedicated pool, butler service, and a top-deck restaurant that's yours alone. Below are nine sail date options spanning November 2026 through January 2027. Each lists the same cabin category (Yacht Club Deluxe Grand Suite) with its specific pricing and any calendar notes relevant to your schedule.
+    </p>
+
+    <div class="commitment-top">
+      We don't book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. The work you'd hate doing — already done.
+    </div>
+
+    <div class="overview-grid">
+      <div class="overview-card">
+        <div class="oc-label">Ship</div>
+        <div class="oc-value">MSC Seascape</div>
+      </div>
+      <div class="overview-card">
+        <div class="oc-label">Homeport</div>
+        <div class="oc-value">Galveston, Texas</div>
+      </div>
+      <div class="overview-card">
+        <div class="oc-label">Duration</div>
+        <div class="oc-value">7 nights</div>
+      </div>
+      <div class="overview-card">
+        <div class="oc-label">Region</div>
+        <div class="oc-value">Western Caribbean</div>
+      </div>
+      <div class="overview-card">
+        <div class="oc-label">Cabin Category</div>
+        <div class="oc-value">YC Deluxe Grand Suite (YCP)</div>
+      </div>
+      <div class="overview-card">
+        <div class="oc-label">Occupancy</div>
+        <div class="oc-value">2 guests (accessible cabin needed)</div>
+      </div>
+    </div>
+
+    <!-- YC Inclusions -->
+    <div class="included-band">
+      <h3>What's Included in Yacht Club</h3>
+      <ul class="included-list">
+        <li>Private Yacht Club deck, pool &amp; sun terrace</li>
+        <li>Top-sail Lounge with panoramic views</li>
+        <li>The One Restaurant — exclusive to YC guests</li>
+        <li>24-hour butler service in your suite</li>
+        <li>All drinks included (premium brands)</li>
+        <li>Complimentary specialty dining experiences</li>
+        <li>Priority embarkation and disembarkation</li>
+        <li>All gratuities included</li>
+        <li>Dedicated concierge for shore excursions</li>
+        <li>In-suite minibar replenished daily</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── ITINERARY ── -->
+<section style="background:var(--aqua-mist); padding: 48px 0;">
+  <div class="container">
+    <div class="section-label">Ports of Call</div>
+    <h2>Eastern Caribbean, 7 Nights</h2>
+    <p style="color:var(--ink-soft); font-size:0.92rem; margin-bottom:4px;">
+      Itinerary is the same across all sail dates — only the departure date changes. Schedule subject to change based on final berth or anchorage availability.
+    </p>
+    <table class="itin-table">
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Port</th>
+          <th>Arrival</th>
+          <th>Departure</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="day-num">Sun · Day 1</span></td>
+          <td><span class="port-name">Galveston, Texas</span><div class="port-note">Embarkation — board from late morning</div></td>
+          <td>—</td>
+          <td>4:00 PM</td>
+        </tr>
+        <tr>
+          <td><span class="day-num">Mon · Day 2</span></td>
+          <td><span class="port-name">Day at Sea</span><div class="port-note">Full Yacht Club day — pool deck, spa, Top-sail Lounge</div></td>
+          <td>—</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><span class="day-num">Tue · Day 3</span></td>
+          <td><span class="port-name">Day at Sea</span><div class="port-note">Second sea day — settle in, explore the ship</div></td>
+          <td>—</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><span class="day-num">Wed · Day 4</span></td>
+          <td><span class="port-name">Costa Maya, Mexico</span><div class="port-note">Pier access to Mayan ruins at Chacchoben; calm beach clubs nearby</div></td>
+          <td>8:00 AM</td>
+          <td>6:00 PM</td>
+        </tr>
+        <tr>
+          <td><span class="day-num">Thu · Day 5</span></td>
+          <td><span class="port-name">Isla de Roatán, Honduras</span><div class="port-note">Best snorkeling and diving in the Western Caribbean; West End village worth the short taxi ride</div></td>
+          <td>8:00 AM</td>
+          <td>4:00 PM</td>
+        </tr>
+        <tr>
+          <td><span class="day-num">Fri · Day 6</span></td>
+          <td><span class="port-name">Cozumel, Mexico</span><div class="port-note">Palancar Reef, San Miguel town, Mr. Sancho's beach club — one of the most consistent ports in the Caribbean</div></td>
+          <td>8:00 AM</td>
+          <td>4:00 PM</td>
+        </tr>
+        <tr>
+          <td><span class="day-num">Sat · Day 7</span></td>
+          <td><span class="port-name">Day at Sea</span><div class="port-note">Final sea day before return to Galveston</div></td>
+          <td>—</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><span class="day-num">Sun · Day 8</span></td>
+          <td><span class="port-name">Galveston, Texas</span><div class="port-note">Disembarkation — arrives 6:30 AM</div></td>
+          <td>6:30 AM</td>
+          <td>—</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ── SAILING OPTIONS ── -->
+<section>
+  <div class="container">
+    <div class="section-label">Sail Dates &amp; Pricing</div>
+    <h2>Choose Your Sailing</h2>
+    <p class="selector-intro">
+      Nine options below, from early November through late January. Select any tab to review the details and calendar considerations for that sailing. Accessible cabin availability will be confirmed for each option you're interested in.
+    </p>
+
+    <!-- TABS -->
+    <div class="option-tabs">
+      <button class="option-tab active" onclick="selectOption(0, this)" style="border-color:#f5c6c6; color:#b91c1c; background:#fff1f1;">Nov 8–15 ⚑</button>
+      <button class="option-tab" onclick="selectOption(1, this)">Nov 15–22</button>
+      <button class="option-tab" onclick="selectOption(2, this)">Nov 29–Dec 6</button>
+      <button class="option-tab" onclick="selectOption(3, this)" style="border-color:#f5c6c6; color:#b91c1c; background:#fff1f1;">Dec 6–13 ⚑</button>
+      <button class="option-tab" onclick="selectOption(4, this)" style="border-color:#f5c6c6; color:#b91c1c; background:#fff1f1;">Dec 13–20 ⚑</button>
+      <button class="option-tab" onclick="selectOption(5, this)">Jan 3–10</button>
+      <button class="option-tab" onclick="selectOption(6, this)">Jan 10–17</button>
+      <button class="option-tab" onclick="selectOption(7, this)">Jan 17–24</button>
+      <button class="option-tab" onclick="selectOption(8, this)">Jan 24–31</button>
+    </div>
+
+    <!-- ── OPTION 1: Nov 8–15 ── -->
+    <div class="option-card active" id="option-0">
+      <div class="option-card-header" style="background:#fff5f5; border-bottom:1px solid #fecdcd;">
+        <span class="option-date-badge" style="background:#fee2e2; color:#b91c1c;">Option 1 · November 8–15, 2026</span>
+        <h3>Early November — Most Affordable of All Nine Options</h3>
+        <p class="option-sub">YC Deluxe Grand Suite · 7 Nights · Departs Galveston</p>
+      </div>
+      <div class="option-card-body">
+        <div class="option-notice" style="background:#fff1f1; border-color:#f5c6c6; color:#7f1d1d;">
+          <strong>⚑ No accessible cabins available in Yacht Club for this sailing.</strong> This date is not a viable option unless MSC releases additional inventory. Christina will monitor for any changes.
+        </div>
+        <div class="option-notice" style="margin-top:-10px;">
+          <strong>Also note:</strong> This is the least expensive sailing in the entire range. If accessible inventory opens up, it would be worth revisiting. One scheduling flag: if your brother is in town that week, dates would overlap.
+        </div>
+        <div class="cabin-details">
+          <div class="cabin-detail-item">
+            <div class="cd-label">Category</div>
+            <div class="cd-val">YC Deluxe Grand Suite (YCP)</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Decks</div>
+            <div class="cd-val">16–19</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Suite Size</div>
+            <div class="cd-val">269–463 ft²</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Balcony</div>
+            <div class="cd-val">86–129 ft²</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Guests</div>
+            <div class="cd-val">2</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Accessible Cabin</div>
+            <div class="cd-val" style="color:#b91c1c; font-weight:600;">Not available</div>
+          </div>
+        </div>
+        <div class="pricing-row">
+          <div>
+            <div class="pricing-label-stack">
+              <div class="pl-main">Estimated Total</div>
+              <div class="pl-basis">for 2 guests · includes all YC inclusions</div>
+            </div>
+            <div class="pricing-note">Pricing and availability subject to change until fully booked.</div>
+          </div>
+          <div style="text-align:right;">
+            <div class="pricing-amount">$5,990 <span>total</span></div>
+            <div class="pricing-note" style="text-align:right;">~$2,995 per person</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── OPTION 2: Nov 15–22 ── -->
+    <div class="option-card" id="option-1">
+      <div class="option-card-header">
+        <span class="option-date-badge">Option 2 · November 15–22, 2026</span>
+        <h3>Week Before Thanksgiving</h3>
+        <p class="option-sub">YC Deluxe Grand Suite · 7 Nights · Departs Galveston</p>
+      </div>
+      <div class="option-card-body">
+        <div class="option-notice">
+          <strong>Good to know:</strong> You'd sail the week before Thanksgiving and return on November 22nd — back home well before the holiday. This is a popular window for exactly that reason, so the ship will have a lively crowd.
+        </div>
+
+        <!-- Barbara's cabin -->
+        <h3 style="font-size:1rem; margin-bottom:12px; color:var(--aqua-dark);">Your Cabin — YC Deluxe Grand Suite (YCP)</h3>
+        <div class="cabin-details">
+          <div class="cabin-detail-item">
+            <div class="cd-label">Category</div>
+            <div class="cd-val">YC Deluxe Grand Suite (YCP)</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Decks</div>
+            <div class="cd-val">16–19</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Suite Size</div>
+            <div class="cd-val">269–463 ft²</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Balcony</div>
+            <div class="cd-val">86–129 ft²</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Guests</div>
+            <div class="cd-val">2</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Accessible Cabin</div>
+            <div class="cd-val" style="color:#2d7a3a; font-weight:600;">1 remaining</div>
+          </div>
+        </div>
+        <div class="pricing-row">
+          <div>
+            <div class="pricing-label-stack">
+              <div class="pl-main">Estimated Total</div>
+              <div class="pl-basis">for 2 guests · includes all YC inclusions</div>
+            </div>
+            <div class="pricing-note">Pricing and availability subject to change until fully booked.</div>
+          </div>
+          <div style="text-align:right;">
+            <div class="pricing-amount">$6,750 <span>total</span></div>
+            <div class="pricing-note" style="text-align:right;">~$3,375 per person</div>
+          </div>
+        </div>
+
+        <!-- Sailing mates notice -->
+        <div style="background:#fdfaf0; border:1px solid #e8d9a0; border-left:3px solid #c9aa5a; border-radius:0 8px 8px 0; padding:18px 22px; margin-top:28px;">
+          <p style="font-size:0.82rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#7a6020; margin-bottom:10px;">For Sailing Mates</p>
+          <p style="font-size:0.9rem; color:#5c4a18; margin-bottom:14px;">If friends or family are joining you on this sailing, there are a few accessible cabins available in the Yacht Club Deluxe Suite category — one step below your Grand Suite, but still fully within the Yacht Club with all the same access and inclusions.</p>
+          <h4 style="font-family:'Playfair Display',serif; font-size:1rem; font-weight:500; color:#4a3a12; margin-bottom:10px;">YC Deluxe Suite (YC1) · Decks 16–19</h4>
+          <div class="cabin-details" style="margin-bottom:14px;">
+            <div class="cabin-detail-item">
+              <div class="cd-label">Suite Size</div>
+              <div class="cd-val">269–366 ft²</div>
+            </div>
+            <div class="cabin-detail-item">
+              <div class="cd-label">Balcony</div>
+              <div class="cd-val">86 ft²</div>
+            </div>
+            <div class="cabin-detail-item">
+              <div class="cd-label">Accessible</div>
+              <div class="cd-val" style="color:#2d7a3a; font-weight:600;">A few remaining</div>
+            </div>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:10px; border-top:1px solid #e0cf9a; padding-top:14px;">
+            <div style="font-size:0.78rem; color:#7a6020; font-style:italic;">Est. total for 2 · all YC inclusions</div>
+            <div style="font-family:'Playfair Display',serif; font-size:1.6rem; font-weight:600; color:#5c4a18;">$6,510 <span style="font-size:0.9rem; font-weight:400;">total</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── OPTION 3: Nov 29–Dec 6 ── -->
+    <div class="option-card" id="option-2">
+      <div class="option-card-header">
+        <span class="option-date-badge">Option 3 · November 29 – December 6, 2026</span>
+        <h3>Week After Thanksgiving</h3>
+        <p class="option-sub">YC Deluxe Suite (YC1) · 7 Nights · Departs Galveston</p>
+      </div>
+      <div class="option-card-body">
+        <div class="option-notice">
+          <strong>Calendar note:</strong> This sailing returns on December 6th. If your Country Club Christmas party falls on the first weekend of December, you would miss it. Worth confirming the party date before booking this one.
+        </div>
+
+        <!-- Availability notice -->
+        <div style="background:#fdfaf0; border:1px solid #e8d9a0; border-left:3px solid #c9aa5a; border-radius:0 8px 8px 0; padding:16px 20px; margin-bottom:22px;">
+          <p style="font-size:0.88rem; color:#5c4a18;"><strong style="color:#7a6020;">Accessible cabin note:</strong> The Deluxe Grand Suite (YCP) has no accessible inventory on this sailing. The only accessible Yacht Club option available is the Deluxe Suite (YC1) below — and there is just one left. All Yacht Club access and inclusions remain the same.</p>
+        </div>
+
+        <h3 style="font-size:1rem; margin-bottom:12px; color:var(--aqua-dark);">Available Cabin — YC Deluxe Suite (YC1)</h3>
+        <div class="cabin-details">
+          <div class="cabin-detail-item">
+            <div class="cd-label">Category</div>
+            <div class="cd-val">YC Deluxe Suite (YC1)</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Decks</div>
+            <div class="cd-val">16–19</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Suite Size</div>
+            <div class="cd-val">269–366 ft²</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Balcony</div>
+            <div class="cd-val">86 ft²</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Guests</div>
+            <div class="cd-val">2</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Accessible Cabin</div>
+            <div class="cd-val" style="color:#2d7a3a; font-weight:600;">1 remaining</div>
+          </div>
+        </div>
+        <div class="pricing-row">
+          <div>
+            <div class="pricing-label-stack">
+              <div class="pl-main">Estimated Total</div>
+              <div class="pl-basis">for 2 guests · includes all YC inclusions</div>
+            </div>
+            <div class="pricing-note">Pricing and availability subject to change until fully booked.</div>
+          </div>
+          <div style="text-align:right;">
+            <div class="pricing-amount">$6,190 <span>total</span></div>
+            <div class="pricing-note" style="text-align:right;">~$3,095 per person</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── OPTION 4: Dec 6–13 ── -->
+    <div class="option-card" id="option-3">
+      <div class="option-card-header" style="background:#fff5f5; border-bottom:1px solid #fecdcd;">
+        <span class="option-date-badge" style="background:#fee2e2; color:#b91c1c;">Option 4 · December 6–13, 2026</span>
+        <h3>Second Week of December</h3>
+        <p class="option-sub">YC Deluxe Grand Suite · 7 Nights · Departs Galveston</p>
+      </div>
+      <div class="option-card-body">
+        <div class="option-notice" style="background:#fff1f1; border-color:#f5c6c6; color:#7f1d1d;">
+          <strong>⚑ No accessible cabins available in Yacht Club for this sailing.</strong> This date is not a viable option unless MSC releases additional inventory. Christina will monitor for any changes.
+        </div>
+        <div class="option-notice">
+          <strong>Also note:</strong> Two schedule conflicts on this sailing — if your Country Club Christmas party falls on the second weekend of December, you would miss it. This cruise also runs through December 13th, past the golf event you mentioned on December 11th.
+        </div>
+        <div class="cabin-details">
+          <div class="cabin-detail-item">
+            <div class="cd-label">Category</div>
+            <div class="cd-val">YC Deluxe Grand Suite (YCP)</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Decks</div>
+            <div class="cd-val">16–19</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Suite Size</div>
+            <div class="cd-val">269–463 ft²</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Balcony</div>
+            <div class="cd-val">86–129 ft²</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Guests</div>
+            <div class="cd-val">2</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Accessible Cabin</div>
+            <div class="cd-val" style="color:#b91c1c; font-weight:600;">Not available</div>
+          </div>
+        </div>
+        <div class="pricing-row">
+          <div>
+            <div class="pricing-label-stack">
+              <div class="pl-main">Estimated Total</div>
+              <div class="pl-basis">for 2 guests · includes all YC inclusions</div>
+            </div>
+            <div class="pricing-note">Pricing and availability subject to change until fully booked.</div>
+          </div>
+          <div style="text-align:right;">
+            <div class="pricing-amount">$6,430 <span>total</span></div>
+            <div class="pricing-note" style="text-align:right;">~$3,215 per person</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── OPTION 5: Dec 13–20 ── -->
+    <div class="option-card" id="option-4">
+      <div class="option-card-header" style="background:#fff5f5; border-bottom:1px solid #fecdcd;">
+        <span class="option-date-badge" style="background:#fee2e2; color:#b91c1c;">Option 5 · December 13–20, 2026</span>
+        <h3>Mid-December — Back Before Christmas</h3>
+        <p class="option-sub">YC Deluxe Grand Suite · 7 Nights · Departs Galveston</p>
+      </div>
+      <div class="option-card-body">
+        <div class="option-notice" style="background:#fff1f1; border-color:#f5c6c6; color:#7f1d1d;">
+          <strong>⚑ No accessible cabins available in Yacht Club for this sailing.</strong> This date is not a viable option unless MSC releases additional inventory. Christina will monitor for any changes.
+        </div>
+        <div class="cabin-details">
+          <div class="cabin-detail-item">
+            <div class="cd-label">Category</div>
+            <div class="cd-val">YC Deluxe Grand Suite (YCP)</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Decks</div>
+            <div class="cd-val">16–19</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Suite Size</div>
+            <div class="cd-val">269–463 ft²</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Balcony</div>
+            <div class="cd-val">86–129 ft²</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Guests</div>
+            <div class="cd-val">2</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Accessible Cabin</div>
+            <div class="cd-val" style="color:#b91c1c; font-weight:600;">Not available</div>
+          </div>
+        </div>
+        <div class="pricing-row">
+          <div>
+            <div class="pricing-label-stack">
+              <div class="pl-main">Estimated Total</div>
+              <div class="pl-basis">for 2 guests · includes all YC inclusions</div>
+            </div>
+            <div class="pricing-note">Pricing and availability subject to change until fully booked.</div>
+          </div>
+          <div style="text-align:right;">
+            <div class="pricing-amount">$6,470 <span>total</span></div>
+            <div class="pricing-note" style="text-align:right;">~$3,235 per person</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── OPTION 6: Jan 3–10 ── -->
+    <div class="option-card" id="option-5">
+      <div class="option-card-header">
+        <span class="option-date-badge">Option 6 · January 3–10, 2027</span>
+        <h3>Early January — Overlap with School Break</h3>
+        <p class="option-sub">YC Deluxe Suite (YC1) · 7 Nights · Departs Galveston</p>
+      </div>
+      <div class="option-card-body">
+        <div class="option-notice">
+          <strong>Heads up:</strong> This sailing departs while many schools are still on winter break and ends just after kids return to school. The ship may have a higher concentration of families and children than the other January options — still a great sailing, just worth knowing.
+        </div>
+
+        <!-- Availability notice -->
+        <div style="background:#fdfaf0; border:1px solid #e8d9a0; border-left:3px solid #c9aa5a; border-radius:0 8px 8px 0; padding:16px 20px; margin-bottom:22px;">
+          <p style="font-size:0.88rem; color:#5c4a18;"><strong style="color:#7a6020;">Accessible cabin note:</strong> The Deluxe Grand Suite (YCP) has no accessible inventory on this sailing. The YC Deluxe Suite (YC1) is the only accessible Yacht Club option — and there are at least two accessible rooms available on this date. All Yacht Club access and inclusions remain the same.</p>
+        </div>
+
+        <h3 style="font-size:1rem; margin-bottom:12px; color:var(--aqua-dark);">Available Cabin — YC Deluxe Suite (YC1)</h3>
+        <div class="cabin-details">
+          <div class="cabin-detail-item">
+            <div class="cd-label">Category</div>
+            <div class="cd-val">YC Deluxe Suite (YC1)</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Decks</div>
+            <div class="cd-val">16–19</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Suite Size</div>
+            <div class="cd-val">269–366 ft²</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Balcony</div>
+            <div class="cd-val">86 ft²</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Guests</div>
+            <div class="cd-val">2</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Accessible Cabin</div>
+            <div class="cd-val" style="color:#2d7a3a; font-weight:600;">2+ available</div>
+          </div>
+        </div>
+        <div class="pricing-row">
+          <div>
+            <div class="pricing-label-stack">
+              <div class="pl-main">Estimated Total</div>
+              <div class="pl-basis">for 2 guests · includes all YC inclusions</div>
+            </div>
+            <div class="pricing-note">Pricing and availability subject to change until fully booked.</div>
+          </div>
+          <div style="text-align:right;">
+            <div class="pricing-amount">$6,490 <span>total</span></div>
+            <div class="pricing-note" style="text-align:right;">~$3,245 per person</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── OPTION 7: Jan 10–17 ── -->
+    <div class="option-card" id="option-6">
+      <div class="option-card-header">
+        <span class="option-date-badge">Option 7 · January 10–17, 2027</span>
+        <h3>Mid-January — Low Season, Low Crowds</h3>
+        <p class="option-sub">Two Accessible Cabin Options · 7 Nights · Departs Galveston</p>
+      </div>
+      <div class="option-card-body">
+        <div class="option-notice">
+          <strong>Low season sailing:</strong> Kids are back in school, occupancy across the ship tends to be lower, and the Yacht Club will feel especially uncrowded. January weather in the Caribbean is generally excellent — odds of a smooth, quiet sailing are high, though January can occasionally see rougher seas. Worth it for the atmosphere.
+        </div>
+
+        <!-- YCP — Barbara's cabin -->
+        <h3 style="font-size:1rem; margin-bottom:12px; color:var(--aqua-dark);">Your Cabin — YC Deluxe Grand Suite (YCP)</h3>
+        <div class="cabin-details">
+          <div class="cabin-detail-item">
+            <div class="cd-label">Category</div>
+            <div class="cd-val">YC Deluxe Grand Suite (YCP)</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Decks</div>
+            <div class="cd-val">16–19</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Suite Size</div>
+            <div class="cd-val">269–463 ft²</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Balcony</div>
+            <div class="cd-val">86–129 ft²</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Guests</div>
+            <div class="cd-val">2</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Accessible Cabin</div>
+            <div class="cd-val" style="color:#2d7a3a; font-weight:600;">1 remaining</div>
+          </div>
+        </div>
+        <div class="pricing-row">
+          <div>
+            <div class="pricing-label-stack">
+              <div class="pl-main">Estimated Total</div>
+              <div class="pl-basis">for 2 guests · includes all YC inclusions</div>
+            </div>
+            <div class="pricing-note">Pricing and availability subject to change until fully booked.</div>
+          </div>
+          <div style="text-align:right;">
+            <div class="pricing-amount">$6,550 <span>total</span></div>
+            <div class="pricing-note" style="text-align:right;">~$3,275 per person</div>
+          </div>
+        </div>
+
+        <!-- YC1 — sailing mates / alternate -->
+        <div style="background:#fdfaf0; border:1px solid #e8d9a0; border-left:3px solid #c9aa5a; border-radius:0 8px 8px 0; padding:18px 22px; margin-top:28px;">
+          <p style="font-size:0.82rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#7a6020; margin-bottom:10px;">Also Available — Or For Sailing Mates</p>
+          <p style="font-size:0.9rem; color:#5c4a18; margin-bottom:14px;">The YC Deluxe Suite (YC1) also has one accessible cabin open on this sailing — a step below the Grand Suite in square footage, but with full Yacht Club access and all the same inclusions. Works for a traveling companion, or as an alternative if you'd prefer a lower price point.</p>
+          <h4 style="font-family:'Playfair Display',serif; font-size:1rem; font-weight:500; color:#4a3a12; margin-bottom:10px;">YC Deluxe Suite (YC1) · Decks 16–19</h4>
+          <div class="cabin-details" style="margin-bottom:14px;">
+            <div class="cabin-detail-item">
+              <div class="cd-label">Suite Size</div>
+              <div class="cd-val">269–366 ft²</div>
+            </div>
+            <div class="cabin-detail-item">
+              <div class="cd-label">Balcony</div>
+              <div class="cd-val">86 ft²</div>
+            </div>
+            <div class="cabin-detail-item">
+              <div class="cd-label">Accessible</div>
+              <div class="cd-val" style="color:#2d7a3a; font-weight:600;">1 remaining</div>
+            </div>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:10px; border-top:1px solid #e0cf9a; padding-top:14px;">
+            <div style="font-size:0.78rem; color:#7a6020; font-style:italic;">Est. total for 2 · all YC inclusions</div>
+            <div style="font-family:'Playfair Display',serif; font-size:1.6rem; font-weight:600; color:#5c4a18;">$6,310 <span style="font-size:0.9rem; font-weight:400;">total</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── OPTION 8: Jan 17–24 ── -->
+    <div class="option-card" id="option-7">
+      <div class="option-card-header">
+        <span class="option-date-badge">Option 8 · January 17–24, 2027</span>
+        <h3>Mid-January — Low Season, Low Crowds</h3>
+        <p class="option-sub">YC Deluxe Suite (YC1) · 7 Nights · Departs Galveston</p>
+      </div>
+      <div class="option-card-body">
+        <div class="option-notice">
+          <strong>Low season sailing:</strong> January 17th marks the MLK holiday weekend — embarkation day — so there may be a slightly busier boarding day in Galveston, but the sailing itself will settle into the quieter January pace.
+        </div>
+
+        <div style="background:#fdfaf0; border:1px solid #e8d9a0; border-left:3px solid #c9aa5a; border-radius:0 8px 8px 0; padding:16px 20px; margin-bottom:22px;">
+          <p style="font-size:0.88rem; color:#5c4a18;"><strong style="color:#7a6020;">Accessible cabin note:</strong> The only accessible Yacht Club option on this sailing is the YC Deluxe Suite (YC1). Two accessible rooms are available. All Yacht Club access and inclusions remain the same.</p>
+        </div>
+
+        <h3 style="font-size:1rem; margin-bottom:12px; color:var(--aqua-dark);">Available Cabin — YC Deluxe Suite (YC1)</h3>
+        <div class="cabin-details">
+          <div class="cabin-detail-item">
+            <div class="cd-label">Category</div>
+            <div class="cd-val">YC Deluxe Suite (YC1)</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Decks</div>
+            <div class="cd-val">16–19</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Suite Size</div>
+            <div class="cd-val">269–366 ft²</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Balcony</div>
+            <div class="cd-val">86 ft²</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Guests</div>
+            <div class="cd-val">2</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Accessible Cabin</div>
+            <div class="cd-val" style="color:#2d7a3a; font-weight:600;">2 available</div>
+          </div>
+        </div>
+        <div class="pricing-row">
+          <div>
+            <div class="pricing-label-stack">
+              <div class="pl-main">Estimated Total</div>
+              <div class="pl-basis">for 2 guests · includes all YC inclusions</div>
+            </div>
+            <div class="pricing-note">Pricing and availability subject to change until fully booked.</div>
+          </div>
+          <div style="text-align:right;">
+            <div class="pricing-amount">$6,310 <span>total</span></div>
+            <div class="pricing-note" style="text-align:right;">~$3,155 per person</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── OPTION 9: Jan 24–31 ── -->
+    <div class="option-card" id="option-8">
+      <div class="option-card-header">
+        <span class="option-date-badge">Option 9 · January 24–31, 2027</span>
+        <h3>End of January — Quietest Sailing of the Range</h3>
+        <p class="option-sub">YC Deluxe Suite (YC1) · 7 Nights · Departs Galveston</p>
+      </div>
+      <div class="option-card-body">
+        <div class="option-notice">
+          <strong>Low season sailing:</strong> Late January tends to be the least-traveled window of the entire winter Caribbean season. Expect a relaxed ship, open decks, and no school-break energy. Weather is the one variable — January seas can occasionally be choppier than peak season, but many guests find it the most peaceful time to sail.
+        </div>
+
+        <div style="background:#fdfaf0; border:1px solid #e8d9a0; border-left:3px solid #c9aa5a; border-radius:0 8px 8px 0; padding:16px 20px; margin-bottom:22px;">
+          <p style="font-size:0.88rem; color:#5c4a18;"><strong style="color:#7a6020;">Accessible cabin note:</strong> The only accessible Yacht Club option on this sailing is the YC Deluxe Suite (YC1) — and there is just one left. All Yacht Club access and inclusions remain the same.</p>
+        </div>
+
+        <h3 style="font-size:1rem; margin-bottom:12px; color:var(--aqua-dark);">Available Cabin — YC Deluxe Suite (YC1)</h3>
+        <div class="cabin-details">
+          <div class="cabin-detail-item">
+            <div class="cd-label">Category</div>
+            <div class="cd-val">YC Deluxe Suite (YC1)</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Decks</div>
+            <div class="cd-val">16–19</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Suite Size</div>
+            <div class="cd-val">269–366 ft²</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Balcony</div>
+            <div class="cd-val">86 ft²</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Guests</div>
+            <div class="cd-val">2</div>
+          </div>
+          <div class="cabin-detail-item">
+            <div class="cd-label">Accessible Cabin</div>
+            <div class="cd-val" style="color:#2d7a3a; font-weight:600;">1 remaining</div>
+          </div>
+        </div>
+        <div class="pricing-row">
+          <div>
+            <div class="pricing-label-stack">
+              <div class="pl-main">Estimated Total</div>
+              <div class="pl-basis">for 2 guests · includes all YC inclusions</div>
+            </div>
+            <div class="pricing-note">Pricing and availability subject to change until fully booked.</div>
+          </div>
+          <div style="text-align:right;">
+            <div class="pricing-amount">$6,310 <span>total</span></div>
+            <div class="pricing-note" style="text-align:right;">~$3,155 per person</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRICING COMMITMENT -->
+    <div class="pricing-commitment">
+      We check every component against public rates and meet or beat them. You're not paying a premium for our convenience — you're paying for the rest of what we do.
+    </div>
+    <p class="pricing-disclaimer">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor. Accessible cabin availability to be confirmed separately for each sailing of interest.</p>
+  </div>
+</section>
+
+<!-- ── CONTACT FORM ── -->
+<section class="form-section">
+  <div class="container">
+    <div class="section-label">Next Step</div>
+    <h2>Tell Christina What You're Thinking</h2>
+    <p style="color:var(--ink-soft); font-size:0.93rem; margin-bottom:28px;">
+      Let her know which date or two you'd like her to check accessible cabin availability on — and any other questions you have.
+    </p>
+
+    <div id="form-container">
+      <div id="form-error" style="display:none; background:#fff1f1; border:1px solid #f5c6c6; border-radius:6px; padding:14px 18px; font-size:0.875rem; color:#b91c1c; margin-bottom:16px;">
+        We weren't able to send your message. Please contact Christina directly at the address below.
+      </div>
+
+      <form id="pmtp-form">
+        <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+        <input type="hidden" name="subject" value="Quote Response — Barbara Leonard | MSC Seascape Yacht Club">
+        <input type="hidden" name="from_name" value="Barbara Leonard Quote — Point Me to Paradise">
+        <input type="hidden" name="redirect" value="false">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required placeholder="Barbara Leonard">
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="your@email.com">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000">
+          </div>
+          <div class="form-group">
+            <label for="option_interest">Which Sailing(s) Interest You?</label>
+            <select id="option_interest" name="option_interest">
+              <option value="">— Select a sailing —</option>
+              <option value="Nov 8-15 — Option 1 (no accessible availability)">Nov 8–15 — Option 1 (no accessible availability)</option>
+              <option value="Nov 15-22 — Option 2 — YCP Grand Suite ($6,750)">Nov 15–22 — Option 2 — YCP Grand Suite ($6,750)</option>
+              <option value="Nov 29 – Dec 6 — Option 3 — YC1 Deluxe Suite ($6,190)">Nov 29–Dec 6 — Option 3 — YC1 Deluxe Suite ($6,190)</option>
+              <option value="Dec 6-13 — Option 4 (no accessible availability)">Dec 6–13 — Option 4 (no accessible availability)</option>
+              <option value="Dec 13-20 — Option 5 (no accessible availability)">Dec 13–20 — Option 5 (no accessible availability)</option>
+              <option value="Jan 3-10 — Option 6 — YC1 Deluxe Suite ($6,490)">Jan 3–10 — Option 6 — YC1 Deluxe Suite ($6,490)</option>
+              <option value="Jan 10-17 — Option 7 — YCP Grand Suite ($6,550)">Jan 10–17 — Option 7 — YCP Grand Suite ($6,550)</option>
+              <option value="Jan 10-17 — Option 7 — YC1 Deluxe Suite ($6,310)">Jan 10–17 — Option 7 — YC1 Deluxe Suite ($6,310)</option>
+              <option value="Jan 17-24 — Option 8 — YC1 Deluxe Suite ($6,310)">Jan 17–24 — Option 8 — YC1 Deluxe Suite ($6,310)</option>
+              <option value="Jan 24-31 — Option 9 — YC1 Deluxe Suite ($6,310)">Jan 24–31 — Option 9 — YC1 Deluxe Suite ($6,310)</option>
+              <option value="Multiple — see message">Multiple dates — see message below</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="travel_insurance">Travel Insurance</label>
+          <select id="travel_insurance" name="travel_insurance">
+            <option value="Yes — I'd like a quote">Yes — I'd like a quote</option>
+            <option value="No — not interested">No — not interested</option>
+            <option value="Already have coverage">Already have coverage</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Questions or Notes for Christina</label>
+          <textarea id="message" name="message" placeholder="Which dates are you leaning toward? Any questions about the itinerary, the Yacht Club, or accessible cabin options?"></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submit-btn">Send to Christina</button>
+      </form>
+    </div>
+
+    <div id="thank-you">
+      <h3>Message Received</h3>
+      <p>Christina will be in touch shortly to confirm accessible cabin availability on the sailings you've flagged and answer any questions you have.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-wordmark">Point Me to Paradise Travel</div>
+  <div class="footer-name">Christina Garcia</div>
+  <div class="footer-title">Travel Advisor</div>
+  <div class="footer-contact">
+    <span id="footer-email-link"></span><br>
+    Point Me to Paradise Travel
+  </div>
+  <div class="footer-legal">
+    This quote is prepared exclusively for Barbara Leonard. Pricing and availability subject to change until fully booked.
+  </div>
+</footer>
+
+<script>
+  // ── EMAIL OBFUSCATION ──
+  (function() {
+    var u = 'christina';
+    var d = 'pointmetoparadise.com';
+    var e = u + '\u0040' + d;
+    var el = document.getElementById('footer-email-link');
+    if (el) {
+      var a = document.createElement('a');
+      a.href = 'mailto:' + e;
+      a.textContent = e;
+      el.appendChild(a);
+    }
+  })();
+
+  // ── OPTION SELECTOR ──
+  var options = [
+    { name: 'Nov 8–15',      price: '$5,990' },
+    { name: 'Nov 15–22',     price: '$6,750' },
+    { name: 'Nov 29–Dec 6',  price: '$6,430' },
+    { name: 'Dec 6–13',      price: '$6,430' },
+    { name: 'Dec 13–20',     price: '$6,470' },
+    { name: 'Jan 3–10',      price: '$6,730' },
+    { name: 'Jan 10–17',     price: '$6,550' },
+    { name: 'Jan 17–24',     price: '$6,550' },
+    { name: 'Jan 24–31',     price: '$6,550' }
+  ];
+
+  function selectOption(idx, tabEl) {
+    // Hide all cards
+    var cards = document.querySelectorAll('.option-card');
+    cards.forEach(function(c) { c.classList.remove('active'); });
+
+    // Deactivate all tabs
+    var tabs = document.querySelectorAll('.option-tab');
+    tabs.forEach(function(t) { t.classList.remove('active'); });
+
+    // Activate selected
+    document.getElementById('option-' + idx).classList.add('active');
+    tabEl.classList.add('active');
+  }
+
+  // ── FORM SUBMISSION ──
+  document.getElementById('pmtp-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = document.getElementById('submit-btn');
+    var err = document.getElementById('form-error');
+    btn.disabled = true;
+    btn.textContent = 'Sending\u2026';
+    err.style.display = 'none';
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: new FormData(e.target)
+    })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      if (data.success) {
+        document.getElementById('form-container').style.display = 'none';
+        document.getElementById('thank-you').style.display = 'block';
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'Send to Christina';
+        err.style.display = 'block';
+        err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    })
+    .catch(function() {
+      btn.disabled = false;
+      btn.textContent = 'Send to Christina';
+      err.style.display = 'block';
+      err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  });
+</script>
+
+</body>
+</html>
