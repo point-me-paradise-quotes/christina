@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wilson test — Point Me to Paradise Travel</title>
+<script type="application/json" id="pmtp-schema">{"v":1,"formType":"Traveler Info","description":"","fields":[{"id":"fmrih3v5m1","label":"Full Name","type":"text","required":true,"options":[]},{"id":"fmrih3v5m2","label":"Email Address","type":"email","required":true,"options":[]},{"id":"fmrih3v5m3","label":"Phone Number","type":"tel","required":true,"options":[]},{"id":"fmrih3v5m4","label":"Date of Birth","type":"date","required":true,"options":[]},{"id":"fmrih3v5m5","label":"Allergies","type":"textarea","required":false,"options":[]},{"id":"fmrih3v5m6","label":"Dining Preference","type":"radio","required":true,"options":["Early Seating","Late Seating","My Time Dining"]},{"id":"fmrih3v5m7","label":"Bedding Preference","type":"radio","required":true,"options":["Beds Together","Beds Apart"]},{"id":"fmrih3v5m8","label":"Special Requests","type":"textarea","required":false,"options":[]}],"settings":{"travelers":2,"intro":"","thankYou":"Thank you! We've received your details and will be in touch soon.","headerImage":"https://images.unsplash.com/photo-1511316695145-4992006ffddb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5OTc3NTV8MHwxfHNlYXJjaHwyfHxDcnVpc2V8ZW58MHwwfHx8MTc4MzkwMjg0Nnww&ixlib=rb-4.1.0&q=80&w=1080","headerTitle":"Wilson Cruise","headerCredit":null}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#f4f1e9;font-family:'DM Sans',system-ui,sans-serif;color:#1b2d3a;line-height:1.5;padding:24px 14px}
+  .card{max-width:600px;margin:0 auto;background:#fff;border:1px solid #e7ddd0;border-radius:16px;overflow:hidden;box-shadow:0 20px 50px -30px rgba(27,45,58,.4)}
+  .banner{width:100%;max-height:200px;overflow:hidden;line-height:0}
+  .banner img{width:100%;height:100%;max-height:200px;object-fit:cover;display:block}
+  .photocredit{font-size:10px;color:#9ab0bb;text-align:center;padding:6px 12px 0}
+  .photocredit a{color:#9ab0bb;text-decoration:underline}
+  .hd{padding:26px 28px 20px;text-align:center;border-bottom:1px solid #eee6da}
+  .hd .logo{width:78px;height:auto;margin-bottom:12px}
+  .hd h1{font-family:'Playfair Display',serif;font-size:25px;margin:0 0 6px;color:#1b2d3a}
+  .hd p{margin:0;color:#5a7a8a;font-size:14px}
+  form{padding:24px 28px 28px}
+  .field{margin-bottom:16px}
+  label{display:block;font-size:13px;font-weight:700;color:#3a5563}
+  .req{color:#c0392b}
+  input,select,textarea{width:100%;margin-top:6px;font-size:16px;font-family:inherit;color:#1b2d3a;padding:12px 13px;border:1px solid #cfe0e0;border-radius:9px;background:#fbfdfd;min-height:48px}
+  textarea{min-height:96px;resize:vertical}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:#2e8b8b;background:#fff}
+  .cblabel{font-size:13px;font-weight:700;color:#3a5563;margin-bottom:6px}
+  .cbs{display:flex;flex-direction:column;gap:8px}
+  .cb{display:flex;align-items:center;gap:9px;font-weight:400;font-size:15px}
+  .cb input{width:auto;min-height:auto;margin:0}
+  .trav{border:1px dashed #75afb1;border-radius:12px;padding:14px 14px 4px;background:#eef8f8;margin-bottom:14px;position:relative;margin-top:10px}
+  .trav-tag{position:absolute;top:-11px;left:14px;background:#2e8b8b;color:#fff;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 10px;border-radius:11px}
+  .trav label{font-size:12px;color:#4a6675}
+  .addTrav{margin-top:2px;background:#eef8f8;border:1px dashed #2e8b8b;color:#2e8b8b;border-radius:9px;padding:11px 14px;font-size:14px;font-weight:700;font-family:inherit;cursor:pointer;min-height:48px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:440px){.grid2{grid-template-columns:1fr}}
+  .intro{background:#eef8f8;border-left:3px solid #2e8b8b;border-radius:0 8px 8px 0;padding:12px 15px;font-size:14px;color:#2c4a52;margin-bottom:20px}
+  button[type=submit]{width:100%;margin-top:8px;background:#2e8b8b;color:#fff;border:none;border-radius:10px;padding:15px;font-size:16px;font-weight:700;font-family:inherit;cursor:pointer;min-height:52px}
+  button[type=submit]:disabled{opacity:.6;cursor:default}
+  .err{display:none;margin-top:14px;background:#fdecea;border:1px solid #e6b7b1;color:#8a2b20;border-radius:9px;padding:12px 14px;font-size:14px}
+  .thanks{display:none;padding:44px 30px;text-align:center}
+  .thanks h2{font-family:'Playfair Display',serif;color:#2e8b8b;font-size:26px;margin:0 0 10px}
+  .thanks p{color:#5a7a8a;font-size:15px;margin:0}
+  .foot{text-align:center;padding:16px;font-size:11px;color:#9ab0bb;letter-spacing:.06em}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="banner"><img src="https://images.unsplash.com/photo-1511316695145-4992006ffddb?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5OTc3NTV8MHwxfHNlYXJjaHwyfHxDcnVpc2V8ZW58MHwwfHx8MTc4MzkwMjg0Nnww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt=""></div>
+    
+    <div class="hd">
+      <img class="logo" src="https://pmtp.eliteparadiseplanners.com/pmtp-logo.png" alt="Point Me to Paradise Travel">
+      <h1>Wilson Cruise</h1>
+      <p>Point Me to Paradise Travel</p>
+    </div>
+    <form id="pmtpForm">
+      <input type="hidden" name="agent_name" value="Christina Garcia">
+      <input type="hidden" name="form_name" value="wilson test">
+    <input type="hidden" name="form_id" value="804028d2-8aea-4f5d-8895-9c483f28a96b">
+      
+      <div class="field"><label>Full Name <span class="req">*</span><input type="text" name="Name" required></label></div>
+<div class="field"><label>Email Address <span class="req">*</span><input type="email" name="Email" required></label></div>
+<div class="field"><label>Phone Number <span class="req">*</span><input type="tel" name="Phone Number" required></label></div>
+<div class="field"><label>Date of Birth <span class="req">*</span><input type="date" name="Date of Birth" required></label></div>
+<div class="field"><label>Allergies<textarea name="Allergies" rows="4"></textarea></label></div>
+<div class="field"><div class="cblabel">Dining Preference <span class="req">*</span></div><div class="cbs"><label class="cb"><input type="radio" name="Dining Preference" value="Early Seating" required> Early Seating</label><label class="cb"><input type="radio" name="Dining Preference" value="Late Seating" required> Late Seating</label><label class="cb"><input type="radio" name="Dining Preference" value="My Time Dining" required> My Time Dining</label></div></div>
+<div class="field"><div class="cblabel">Bedding Preference <span class="req">*</span></div><div class="cbs"><label class="cb"><input type="radio" name="Bedding Preference" value="Beds Together" required> Beds Together</label><label class="cb"><input type="radio" name="Bedding Preference" value="Beds Apart" required> Beds Apart</label></div></div>
+<div class="field"><label>Special Requests<textarea name="Special Requests" rows="4"></textarea></label></div>
+      <button type="submit">Submit</button>
+      <div class="err" id="pmtpErr">Something went wrong sending your form. Please email us directly and we'll take care of it.</div>
+    </form>
+    <div class="thanks" id="pmtpThanks">
+      <h2>Thank you!</h2>
+      <p>Thank you! We've received your details and will be in touch soon.</p>
+    </div>
+  </div>
+  <div class="foot">POINT ME TO PARADISE TRAVEL</div>
+<script>
+  (function(){
+    // "Send to client" links carry ?client=<id> — attach it as a hidden field
+    // so the submission links to that exact client (100% match, no email guess).
+    try {
+      var _p = new URLSearchParams(window.location.search);
+      var _cid = _p.get('client') || _p.get('c');
+      if (_cid) {
+        var _f = document.getElementById('pmtpForm');
+        var _h = document.createElement('input');
+        _h.type = 'hidden'; _h.name = 'client_id'; _h.value = _cid;
+        _f.appendChild(_h);
+      }
+    } catch (e) {}
+
+    // Traveler blocks: render the starting count, and let clients add more.
+    function travBlock(i){
+      var d=document.createElement('div'); d.className='trav';
+      var rel='<option value="">Relationship to main contact…</option><option>Spouse</option><option>Partner</option><option>Domestic Partner</option><option>Child</option><option>Parent</option><option>Sibling</option><option>Relative</option><option>Friend</option><option>Other</option>';
+      d.innerHTML='<div class="trav-tag">Traveler '+i+'</div>'+
+        '<div class="grid2"><label>Full name (as on passport)<input type="text" name="Traveler '+i+' Name"></label>'+
+        '<label>Date of birth<input type="date" name="Traveler '+i+' DOB"></label></div>'+
+        '<div class="grid2"><label>Passport #<input type="text" name="Traveler '+i+' Passport #"></label>'+
+        '<label>Expiration<input type="date" name="Traveler '+i+' Passport Exp"></label></div>'+
+        '<label>Relationship to main contact<select name="Traveler '+i+' Relationship">'+rel+'</select></label>';
+      return d;
+    }
+    Array.prototype.forEach.call(document.querySelectorAll('.travgroup'),function(g){
+      var wrap=g.querySelector('.travwrap'), btn=g.querySelector('.addTrav');
+      var start=parseInt(wrap.getAttribute('data-n'),10)||1, count=0;
+      function add(){ count++; wrap.appendChild(travBlock(count)); }
+      for(var i=0;i<start;i++) add();
+      if(btn) btn.addEventListener('click', add);
+    });
+
+    var form=document.getElementById('pmtpForm');
+    form.addEventListener('submit',async function(e){
+      e.preventDefault();
+      var btn=form.querySelector('button[type=submit]'); btn.disabled=true; btn.textContent='Sending…';
+      document.getElementById('pmtpErr').style.display='none';
+      var data=Object.fromEntries(new FormData(form).entries());
+      try{
+        var r=await fetch('https://pmtp.eliteparadiseplanners.com/api/form-notify',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+        var j=await r.json().catch(function(){return {}});
+        if(!r.ok||j.success===false) throw new Error('failed');
+        form.style.display='none';
+        document.getElementById('pmtpThanks').style.display='block';
+        window.scrollTo({top:0,behavior:'smooth'});
+      }catch(err){
+        document.getElementById('pmtpErr').style.display='block';
+        btn.disabled=false; btn.textContent='Submit';
+      }
+    });
+  })();
+</script>
+</body>
+</html>
