@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Ladies' Grand Mediterranean · October 2026 · Point Me to Paradise Travel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --aqua:#B1E6E0;
+    --aqua-soft:#E4F7F4;
+    --aqua-mist:#F3FBFA;
+    --teal:#75AFB1;
+    --ink:#3E5C5E;
+    --ink-deep:#2F4A4C;
+    --sand:#FDFBF7;
+    --shell:#FFFFFF;
+    --coral:#E8A587;
+    --coral-soft:#FBEFE7;
+    --gold:#D9B96E;
+    --gold-soft:#FAF3E2;
+    --line:#DCEEEB;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'DM Sans',sans-serif;
+    background:var(--sand);
+    color:var(--ink);
+    font-size:16px;
+    line-height:1.65;
+  }
+  .mono{font-family:'JetBrains Mono',monospace}
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px}
+
+  /* ---------- HERO ---------- */
+  header{
+    background:linear-gradient(160deg,var(--aqua-mist) 0%,var(--aqua-soft) 55%,var(--aqua) 140%);
+    border-bottom:1px solid var(--line);
+    padding:64px 0 56px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  header::before{
+    content:"";
+    position:absolute;inset:0;
+    background:
+      radial-gradient(circle at 15% 20%, rgba(255,255,255,.7), transparent 45%),
+      radial-gradient(circle at 85% 80%, rgba(177,230,224,.55), transparent 50%);
+    pointer-events:none;
+  }
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;
+    font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--teal);margin-bottom:18px;
+  }
+  h1{
+    font-family:'Fraunces',serif;font-weight:500;
+    font-size:clamp(2.1rem,5.5vw,3.4rem);
+    color:var(--ink-deep);line-height:1.12;
+    max-width:640px;margin:0 auto 16px;
+  }
+  .hero-sub{max-width:520px;margin:0 auto;color:var(--ink);font-size:1.05rem}
+  .hero-dates{
+    display:inline-block;margin-top:26px;
+    font-family:'JetBrains Mono',monospace;font-size:.8rem;letter-spacing:.12em;
+    background:var(--shell);border:1px solid var(--aqua);
+    padding:10px 22px;border-radius:100px;color:var(--ink-deep);
+  }
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:52px 0}
+  .section-label{
+    font-family:'JetBrains Mono',monospace;font-size:.7rem;
+    letter-spacing:.26em;text-transform:uppercase;color:var(--teal);
+    margin-bottom:10px;
+  }
+  h2{
+    font-family:'Fraunces',serif;font-weight:500;font-size:1.9rem;
+    color:var(--ink-deep);margin-bottom:22px;line-height:1.2;
+  }
+  h3{
+    font-family:'Fraunces',serif;font-weight:500;font-size:1.25rem;
+    color:var(--ink-deep);margin-bottom:8px;
+  }
+  p+p{margin-top:12px}
+
+  /* ---------- SNAPSHOT ---------- */
+  .snapshot{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+    gap:14px;margin-top:8px;
+  }
+  .snap-card{
+    background:var(--shell);border:1px solid var(--line);border-radius:16px;
+    padding:20px 22px;
+  }
+  .snap-card .k{
+    font-family:'JetBrains Mono',monospace;font-size:.68rem;
+    letter-spacing:.2em;text-transform:uppercase;color:var(--teal);
+    margin-bottom:6px;
+  }
+  .snap-card .v{font-weight:600;color:var(--ink-deep);font-size:1.02rem;line-height:1.4}
+  .snap-card .s{font-size:.85rem;color:var(--ink);margin-top:2px}
+
+  /* ---------- PACE NOTE ---------- */
+  .pace{
+    background:var(--gold-soft);border:1px solid #EFE0BC;border-radius:18px;
+    padding:26px 28px;margin-top:30px;
+  }
+  .pace h3{margin-bottom:10px}
+  .pace ul{margin:10px 0 0 18px}
+  .pace li{margin-bottom:8px}
+
+  /* ---------- FLIGHTS ---------- */
+  .flight-card{
+    background:var(--shell);border:1px solid var(--line);border-radius:18px;
+    overflow:hidden;margin-bottom:18px;
+  }
+  .flight-head{
+    background:var(--aqua-soft);padding:14px 24px;
+    font-family:'JetBrains Mono',monospace;font-size:.75rem;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--ink-deep);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;
+  }
+  .flight-body{padding:20px 24px}
+  .leg{
+    display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:center;
+    padding:14px 0;
+  }
+  .leg+.leg{border-top:1px dashed var(--line)}
+  .leg .city{font-weight:600;color:var(--ink-deep)}
+  .leg .time{font-family:'JetBrains Mono',monospace;font-size:.85rem}
+  .leg .mid{
+    text-align:center;color:var(--teal);
+    font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.1em;
+  }
+  .leg .mid .plane{font-size:1.1rem;display:block;margin-bottom:2px}
+  .fnote{font-size:.85rem;color:var(--ink);padding:0 24px 20px}
+  table.seats{
+    width:100%;border-collapse:collapse;margin-top:6px;font-size:.9rem;
+  }
+  table.seats th{
+    font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--teal);text-align:left;
+    padding:8px 10px;border-bottom:1px solid var(--line);
+  }
+  table.seats td{padding:8px 10px;border-bottom:1px solid var(--aqua-mist)}
+  table.seats td:first-child{font-weight:600;color:var(--ink-deep)}
+  .mono-cell{font-family:'JetBrains Mono',monospace;font-size:.85rem}
+
+  /* ---------- TIMELINE / DAY CARDS ---------- */
+  .timeline{position:relative;margin-top:10px}
+  .day{
+    background:var(--shell);border:1px solid var(--line);border-radius:20px;
+    padding:28px 30px;margin-bottom:22px;position:relative;
+  }
+  .day-top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+  .day-date{
+    font-family:'JetBrains Mono',monospace;font-size:.72rem;
+    letter-spacing:.22em;text-transform:uppercase;color:var(--teal);
+    margin-bottom:6px;
+  }
+  .day h3{font-size:1.35rem;margin-bottom:2px}
+  .port-times{
+    font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--ink);
+    margin-bottom:12px;letter-spacing:.06em;
+  }
+  .badge{
+    font-family:'JetBrains Mono',monospace;font-size:.66rem;
+    letter-spacing:.16em;text-transform:uppercase;
+    padding:6px 14px;border-radius:100px;white-space:nowrap;flex-shrink:0;
+  }
+  .b-booked{background:var(--aqua);color:var(--ink-deep)}
+  .b-plan{background:var(--coral-soft);color:#B06A43;border:1px solid #F2D5C2}
+  .b-easy{background:var(--gold-soft);color:#A98938;border:1px solid #EFE0BC}
+  .b-ship{background:var(--aqua-mist);color:var(--teal);border:1px solid var(--line)}
+
+  .booked-box{
+    background:var(--aqua-mist);border:1px solid var(--line);border-radius:14px;
+    padding:16px 20px;margin:14px 0;
+  }
+  .booked-box .bk{
+    font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--teal);margin-bottom:6px;
+  }
+  .booked-box .bt{font-weight:600;color:var(--ink-deep)}
+  .booked-box .bd{font-size:.88rem;margin-top:4px}
+
+  .suggest{margin-top:14px}
+  .suggest .sk{
+    font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.2em;
+    text-transform:uppercase;color:#B06A43;margin-bottom:8px;
+  }
+  .suggest ul{margin-left:18px}
+  .suggest li{margin-bottom:8px}
+
+  .gentle{
+    display:flex;gap:10px;align-items:flex-start;
+    background:var(--gold-soft);border-radius:12px;padding:12px 16px;margin-top:14px;
+    font-size:.9rem;
+  }
+  .gentle .ic{flex-shrink:0}
+
+  .divider-day{
+    text-align:center;margin:38px 0 30px;
+  }
+  .divider-day span{
+    font-family:'Fraunces',serif;font-style:italic;font-size:1.15rem;color:var(--teal);
+    background:var(--sand);padding:0 18px;position:relative;z-index:1;
+  }
+  .divider-day{position:relative}
+  .divider-day::before{
+    content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:var(--line);
+  }
+
+  /* ---------- BUDGET ---------- */
+  table.budget{width:100%;border-collapse:collapse;background:var(--shell);
+    border:1px solid var(--line);border-radius:16px;overflow:hidden;font-size:.92rem}
+  table.budget th{
+    background:var(--aqua-soft);font-family:'JetBrains Mono',monospace;
+    font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-deep);
+    text-align:left;padding:12px 14px;
+  }
+  table.budget td{padding:12px 14px;border-top:1px solid var(--aqua-mist);vertical-align:top}
+  table.budget tr.total td{background:var(--aqua-mist);font-weight:700;color:var(--ink-deep)}
+  .num{font-family:'JetBrains Mono',monospace;font-size:.85rem;white-space:nowrap}
+
+  /* ---------- TIPS ---------- */
+  .tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+  .tip{background:var(--shell);border:1px solid var(--line);border-radius:16px;padding:22px 24px}
+  .tip h3{font-size:1.05rem;margin-bottom:8px}
+  .tip ul{margin-left:16px;font-size:.92rem}
+  .tip li{margin-bottom:6px}
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:linear-gradient(160deg,var(--aqua-soft),var(--aqua));
+    text-align:center;padding:54px 24px;margin-top:30px;
+  }
+  footer .tagline{
+    font-family:'Fraunces',serif;font-style:italic;font-size:1.3rem;
+    color:var(--ink-deep);margin-bottom:10px;
+  }
+  footer .agency{
+    font-family:'JetBrains Mono',monospace;font-size:.72rem;
+    letter-spacing:.24em;text-transform:uppercase;color:var(--ink-deep);
+  }
+
+  @media (max-width:600px){
+    .day{padding:22px 20px}
+    .leg{grid-template-columns:1fr;text-align:left;gap:4px}
+    .leg .mid{text-align:left}
+  }
+  @media print{
+    header,section{padding:24px 0}
+    .day{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap" style="position:relative">
+    <div class="eyebrow">Point Me to Paradise Travel · Client Itinerary</div>
+    <h1>The Ladies' Grand Mediterranean</h1>
+    <p class="hero-sub">Athens · Enchanted Princess · the Greek Isles, Croatia &amp; Montenegro · three golden days in Rome</p>
+    <div class="hero-dates">OCT 28 — NOV 13, 2026 · 17 DAYS</div>
+  </div>
+</header>
+
+<!-- SNAPSHOT -->
+<section>
+  <div class="wrap">
+    <div class="section-label">At a Glance</div>
+    <h2>Your trip, in one view</h2>
+    <div class="snapshot">
+      <div class="snap-card"><div class="k">Ship</div><div class="v">Enchanted Princess</div><div class="s">Mini Suite R514 · Mid-Ship, Deck 14 · Princess Plus</div></div>
+      <div class="snap-card"><div class="k">Pre-Cruise</div><div class="v">Athens · 2 nights</div><div class="s">Electra Metropolis Hotel</div></div>
+      <div class="snap-card"><div class="k">Cruise</div><div class="v">Oct 31 – Nov 10</div><div class="s">7 ports + 1 sea day</div></div>
+      <div class="snap-card"><div class="k">Post-Cruise</div><div class="v">Rome · 3 nights</div><div class="s">Fly home Friday, Nov 13</div></div>
+    </div>
+
+    <div class="pace">
+      <h3>🌿 How this trip is paced — please read first</h3>
+      <p>This is a wonderfully full itinerary, and the secret to loving every day of it is simple: <strong>one anchor activity per day, then permission to rest.</strong> Every suggestion below follows that rule. Nothing on this trip requires you to rush, climb, or power through — the ship, a shaded café, or a bench with a view is always a perfectly good Plan B.</p>
+      <ul>
+        <li><strong>Mornings are your friend.</strong> Tour early while it's cool and quiet, be back aboard for a late lunch and a slow afternoon.</li>
+        <li><strong>Sit-down lunches are part of the sightseeing.</strong> A long taverna lunch <em>is</em> the culture — never feel guilty about it.</li>
+        <li><strong>Shoes matter more than anything you pack.</strong> Old-town Europe is marble, cobblestone, and polished stone. Broken-in walking shoes with real grip, every single day.</li>
+        <li><strong>It's okay to split up.</strong> If two ladies want the city walls and two want a café on the harbor, that's a perfect day for everyone.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FLIGHTS -->
+<section style="background:var(--aqua-mist);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="section-label">Flights</div>
+    <h2>Getting there &amp; home — Delta / KLM</h2>
+
+    <div class="flight-card">
+      <div class="flight-head"><span>Outbound · Wed, Oct 28 → Thu, Oct 29</span><span>Houston → Athens</span></div>
+      <div class="flight-body">
+        <div class="leg">
+          <div><div class="city">Houston–Bush (IAH)</div><div class="time">4:30 PM · Wed 10/28</div></div>
+          <div class="mid"><span class="plane">✈</span>DL 9459 · KLM<br>Premium Comfort</div>
+          <div><div class="city">Amsterdam (AMS)</div><div class="time">7:35 AM · Thu 10/29</div></div>
+        </div>
+        <div class="leg">
+          <div><div class="city">Amsterdam (AMS)</div><div class="time">12:25 PM · Thu 10/29</div></div>
+          <div class="mid"><span class="plane">✈</span>DL 9185 · KLM<br>Europe Economy</div>
+          <div><div class="city">Athens (ATH)</div><div class="time">4:35 PM · Thu 10/29</div></div>
+        </div>
+      </div>
+      <div class="fnote">Comfortable ~4-hour connection in Amsterdam — time for coffee and a stroll, no stress.</div>
+    </div>
+
+    <div class="flight-card">
+      <div class="flight-head"><span>Return · Fri, Nov 13</span><span>Rome → Houston</span></div>
+      <div class="flight-body">
+        <div class="leg">
+          <div><div class="city">Rome–Fiumicino (FCO)</div><div class="time">12:40 PM · Fri 11/13</div></div>
+          <div class="mid"><span class="plane">✈</span>DL 67<br>Premium Select</div>
+          <div><div class="city">Atlanta (ATL)</div><div class="time">6:00 PM · Fri 11/13</div></div>
+        </div>
+        <div class="leg">
+          <div><div class="city">Atlanta (ATL)</div><div class="time">10:40 PM · Fri 11/13</div></div>
+          <div class="mid"><span class="plane">✈</span>DL 1601<br>Comfort+</div>
+          <div><div class="city">Houston–Bush (IAH)</div><div class="time">11:58 PM · Fri 11/13</div></div>
+        </div>
+      </div>
+      <div class="fnote">You clear U.S. customs in Atlanta, so the Atlanta layover does the hard work — the hop home is easy.</div>
+    </div>
+
+    <h3 style="margin-top:26px">Seat assignments</h3>
+    <table class="seats">
+      <tr><th>Traveler</th><th>DL 9459</th><th>DL 9185</th><th>DL 67</th><th>DL 1601</th></tr>
+      <tr><td>Tracy McCarley</td><td class="mono-cell">12D</td><td class="mono-cell">07A</td><td class="mono-cell">21C</td><td class="mono-cell">11D</td></tr>
+      <tr><td>Elizabeth Nelson</td><td class="mono-cell">12F</td><td class="mono-cell">07C</td><td class="mono-cell">21G</td><td class="mono-cell">11F</td></tr>
+    </table>
+    <p style="font-size:.85rem;margin-top:10px">Manage seats anytime at delta.com or in the Fly Delta app. Passports must be valid at least 6 months past your return date (through mid-May 2027).</p>
+  </div>
+</section>
+
+<!-- DAY BY DAY -->
+<section>
+  <div class="wrap">
+    <div class="section-label">Day by Day</div>
+    <h2>Your itinerary, one beautiful day at a time</h2>
+
+    <div class="divider-day"><span>Part One · Athens</span></div>
+
+    <!-- OCT 28 -->
+    <div class="day">
+      <div class="day-top">
+        <div><div class="day-date">Wednesday · October 28</div><h3>Travel Day — Houston to Europe</h3></div>
+        <span class="badge b-easy">Easy Day</span>
+      </div>
+      <p>Depart Houston at 4:30 PM on the overnight flight to Amsterdam. Have a relaxed morning at home, eat a real lunch before the airport, and plan to be at IAH around 1:30 PM.</p>
+      <div class="gentle"><span class="ic">🌿</span><div><strong>Gentle-pace tip:</strong> On the overnight flight — eyeshade, water instead of wine, and set your watch to Athens time as soon as you board. Even dozing helps.</div></div>
+    </div>
+
+    <!-- OCT 29 -->
+    <div class="day">
+      <div class="day-top">
+        <div><div class="day-date">Thursday · October 29</div><h3>Arrive Athens — Welcome to Greece</h3></div>
+        <span class="badge b-easy">Easy Day</span>
+      </div>
+      <p>Land in Athens at 4:35 PM and check into the <strong>Electra Metropolis</strong>, right in the heart of the city a short stroll from Plaka and Syntagma Square.</p>
+      <div class="suggest">
+        <div class="sk">Tonight's Plan</div>
+        <ul>
+          <li>Keep it simple: dinner at the hotel's rooftop restaurant with the Acropolis glowing above the city — no better welcome to Greece, and zero effort required.</li>
+          <li>Early to bed. Tomorrow is your one big Athens day, and jet lag is real on night one.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- OCT 30 -->
+    <div class="day">
+      <div class="day-top">
+        <div><div class="day-date">Friday · October 30</div><h3>Athens — The Acropolis</h3></div>
+        <span class="badge b-booked">Booked ✓</span>
+      </div>
+      <div class="booked-box">
+        <div class="bk">Confirmed Excursion</div>
+        <div class="bt">Complete Skip-the-Line Acropolis &amp; Parthenon Tour with Guided Museum Visit</div>
+        <div class="bd">Booked through Christina · $270 per person</div>
+      </div>
+      <p>Your guide handles the tickets and the lines — you just soak it in. The path up the Acropolis is a steady uphill on marble that's been polished by 2,500 years of footsteps, so take it slow, use the handrails, and stop for photos often (the views are the best excuse to catch your breath).</p>
+      <div class="suggest">
+        <div class="sk">For the Rest of the Day</div>
+        <ul>
+          <li>Long, unhurried lunch in <strong>Plaka</strong> — the old quarter at the foot of the Acropolis. Pick a shaded courtyard taverna and order the grilled everything.</li>
+          <li>Afternoon rest at the hotel, then an easy evening stroll through <strong>Anafiotika</strong>, the tiny whitewashed island-village hidden inside Plaka's lanes.</li>
+        </ul>
+      </div>
+      <div class="gentle"><span class="ic">🌿</span><div><strong>Gentle-pace tip:</strong> Do the tour in the morning while it's cool. If anyone prefers to skip the final climb to the top, the Acropolis Museum portion is world-class on its own.</div></div>
+    </div>
+
+    <!-- OCT 31 -->
+    <div class="day">
+      <div class="day-top">
+        <div><div class="day-date">Saturday · October 31</div><h3>Board the Enchanted Princess</h3></div>
+        <span class="badge b-ship">Ship Day</span>
+      </div>
+      <p>Slow morning, breakfast at the hotel, then transfer to the port at Piraeus (about 30–40 minutes from downtown Athens). Once aboard, find Mini Suite <span class="mono">R514</span>, unpack <em>once</em> — that's the magic of cruising — and head up on deck for sailaway.</p>
+      <div class="suggest">
+        <div class="sk">Settling-In Suggestions</div>
+        <ul>
+          <li>Book any specialty dining and spa appointments on day one — the best times go fast, and your Princess Plus package makes it easy.</li>
+          <li>Champagne on your balcony as Athens slips away is mandatory. Doctor's orders.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider-day"><span>Part Two · The Cruise</span></div>
+
+    <!-- NOV 1 -->
+    <div class="day">
+      <div class="day-top">
+        <div><div class="day-date">Sunday · November 1</div><h3>Santorini — Oia on Your Own</h3></div>
+        <span class="badge b-plan">Self-Guided Plan</span>
+      </div>
+      <div class="port-times">YOUR PLAN · ASHORE ~9 AM · BACK ABOARD BY ~6 PM</div>
+      <p>The famous one — white villages balanced on the rim of a volcanic caldera, a thousand feet above the bluest water you've ever seen. Your plan is already the right one:</p>
+      <div class="suggest">
+        <div class="sk">The Day, Step by Step</div>
+        <ul>
+          <li>Breakfast on the ship, then tender ashore and take a <strong>taxi from the port up to Oia</strong> (~30–40 minutes of dramatic switchbacks — sit back and enjoy the show).</li>
+          <li>Wander Oia's marble lanes at your own pace — the blue-domed churches, the little galleries, the caldera views around every corner.</li>
+          <li><strong>Lunch at Adami at Canaves Ena</strong> — a long, lovely, sit-down affair with the caldera spread out below you. This is the anchor of the day.</li>
+          <li>Taxi back down to the port by ~5:00 PM and tender back to the ship.</li>
+        </ul>
+      </div>
+      <div class="gentle"><span class="ic">🌿</span><div><strong>Gentle-pace tip:</strong> Oia is gorgeous but uneven — marble steps and sloped lanes everywhere. Grippy shoes, take the lanes slowly, and agree on a café meeting spot in case the group naturally drifts apart. Skip anything labeled "steps to Ammoudi Bay" — that's 300 steep stairs you do not need.</div></div>
+    </div>
+
+    <!-- NOV 2 -->
+    <div class="day">
+      <div class="day-top">
+        <div><div class="day-date">Monday · November 2</div><h3>Chania, Crete — Private Day</h3></div>
+        <span class="badge b-booked">Booked ✓ · Paid</span>
+      </div>
+      <div class="booked-box">
+        <div class="bk">Confirmed Private Excursion</div>
+        <div class="bt">Private Shore Excursion: City Charm, Beach Bliss &amp; Sacred Sites</div>
+        <div class="bd">Project Expedition (guide: Laura Williams) · Conf. <span class="mono">PE165925815</span> · $200.44 pp · Paid in full · Free cancellation until Oct 28</div>
+      </div>
+      <p>A whole day of Crete with your own guide and vehicle — exactly the right way to do this island. Chania's Venetian harbor is one of the prettiest in Greece: pastel houses, a lighthouse at the harbor mouth, and covered market lanes that smell like honey, oregano, and leather.</p>
+      <div class="gentle"><span class="ic">🌿</span><div><strong>Gentle-pace tip:</strong> Private means <em>your</em> pace. Tell Laura at the start of the day: "We like to see a lot, sit often, and have a wonderful long lunch." A good guide will build the day around exactly that.</div></div>
+    </div>
+
+    <!-- NOV 3 -->
+    <div class="day">
+      <div class="day-top">
+        <div><div class="day-date">Tuesday · November 3</div><h3>Katakolon — Ancient Olympia</h3></div>
+        <span class="badge b-plan">To Book · Ship Excursion</span>
+      </div>
+      <p>Katakolon is a sweet, sleepy little port town whose whole purpose is Olympia — birthplace of the Olympic Games, about 40 minutes inland.</p>
+      <div class="suggest">
+        <div class="sk">Recommendation</div>
+        <ul>
+          <li><strong>Book the Princess ship excursion to Ancient Olympia</strong> (per our plan). It handles the transfer, timing, and admission — perfect for this stop, where getting there is the whole logistics puzzle.</li>
+          <li>Once there, the good news: Olympia is one of the <strong>flattest, most stroll-friendly ancient sites in Greece</strong> — shaded paths through pine trees, ruins at ground level, benches along the way. Standing on the original Olympic stadium starting line is a genuine goosebump moment.</li>
+          <li>Prefer a no-tour day? Katakolon itself is a pleasant hour: one harborfront street of cafés and shops, perfect for coffee with a sea view and a slow morning aboard.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- NOV 4 -->
+    <div class="day">
+      <div class="day-top">
+        <div><div class="day-date">Wednesday · November 4</div><h3>Corfu — Green Island Elegance</h3></div>
+        <span class="badge b-plan">To Plan</span>
+      </div>
+      <p>Corfu is Greece with an Italian accent — Venetian arcades, French-style esplanades, and an old town that feels more like a small European capital than an island port. Note: this is a <strong>shorter port day</strong>, so plan one thing and do it well.</p>
+      <div class="suggest">
+        <div class="sk">Suggestions (choose one)</div>
+        <ul>
+          <li><strong>Best fit: a private half-day driving tour</strong> (~4 hours) — Achilleion Palace, the empress Sisi's dreamy hilltop villa; the Kanoni viewpoint over Mouse Island; then drop-off in Old Town for lunch under the arcades of the Liston promenade. Minimal walking, maximum Corfu.</li>
+          <li><strong>Simplest: taxi to Old Town on your own.</strong> The historic center is flat and compact — wander the arcades, peek into St. Spyridon church, sit for a long lunch, taxi back.</li>
+        </ul>
+      </div>
+      <div class="gentle"><span class="ic">🌿</span><div><strong>Gentle-pace tip:</strong> Achilleion has some stairs and terraces — lovely, but let anyone who prefers wait in the gorgeous gardens. The views are democratic; they're everywhere.</div></div>
+    </div>
+
+    <!-- NOV 5 -->
+    <div class="day">
+      <div class="day-top">
+        <div><div class="day-date">Thursday · November 5</div><h3>Split, Croatia — Diocletian's Palace</h3></div>
+        <span class="badge b-plan">To Book · Private Tour</span>
+      </div>
+      <p>Split is unlike anywhere else: a living city built <em>inside</em> a Roman emperor's retirement palace. People shop, sip coffee, and hang laundry between 1,700-year-old columns. A later arrival today means a civilized morning aboard first.</p>
+      <div class="suggest">
+        <div class="sk">Recommendation — We'll Arrange</div>
+        <ul>
+          <li><strong>Private 2-hour walking tour of Diocletian's Palace &amp; Old Town</strong> with a licensed local guide, starting right at the port (it's a short, flat walk from the ship to the palace walls). The palace quarter itself is compact and level — this is one of the easiest great old towns in Europe.</li>
+          <li>After the tour: lunch on the <strong>Riva</strong>, Split's palm-lined seafront promenade, watching the harbor life go by.</li>
+          <li>If energy allows, the <strong>Green Market</strong> just outside the palace's Silver Gate is a wonderful browse — figs, lavender, local cheeses.</li>
+        </ul>
+      </div>
+      <div class="gentle"><span class="ic">🌿</span><div><strong>Gentle-pace tip:</strong> The palace's stone streets are polished slick — this is the day for your grippiest soles. Skip the bell tower climb; the view from a Riva café table is the one you'll remember anyway.</div></div>
+    </div>
+
+    <!-- NOV 6 -->
+    <div class="day">
+      <div class="day-top">
+        <div><div class="day-date">Friday · November 6</div><h3>Dubrovnik — The Pearl of the Adriatic</h3></div>
+        <span class="badge b-plan">To Book · Private Tour</span>
+      </div>
+      <p>Dubrovnik's walled old town is one of the most beautiful urban spaces on earth — a marble-paved city sealed inside medieval walls, glowing honey-gold against the sea.</p>
+      <div class="suggest">
+        <div class="sk">Recommendation — We'll Arrange</div>
+        <ul>
+          <li><strong>Private guide for the Old Town</strong> (~1.5–2 hrs): the Stradun main street, Rector's Palace, Franciscan Monastery with Europe's oldest working pharmacy. The Stradun itself is beautifully flat.</li>
+          <li><strong>About the famous city wall walk — an honest word:</strong> it's spectacular, but it's roughly 1.2 miles with <em>lots</em> of steep stairs and no shade or exits partway. If the group wants it, do just the first stretch from the Pile Gate entrance and come back down — you'll get the postcard views without the full circuit.</li>
+          <li><strong>The gentle alternative with even better views:</strong> the <strong>cable car up Mt. Srđ</strong> — four minutes up, a terrace café at the top, and the entire walled city and islands spread below you. All of the wow, none of the stairs.</li>
+        </ul>
+      </div>
+      <div class="gentle"><span class="ic">🌿</span><div><strong>Gentle-pace tip:</strong> This is the trip's biggest "choose your adventure" day. Walls for the energetic, cable car for the wise, and a gelato on the Stradun for absolutely everyone.</div></div>
+    </div>
+
+    <!-- NOV 7 -->
+    <div class="day">
+      <div class="day-top">
+        <div><div class="day-date">Saturday · November 7</div><h3>Kotor, Montenegro — Fjord of the South</h3></div>
+        <span class="badge b-plan">To Plan</span>
+      </div>
+      <p>Today's show starts before breakfast: the ship glides deep into the <strong>Bay of Kotor</strong>, mountains rising straight from the water on both sides. Coffee on your balcony during the sail-in is not optional — it's the best free excursion of the entire cruise.</p>
+      <div class="suggest">
+        <div class="sk">Suggestions (choose one)</div>
+        <ul>
+          <li><strong>Best fit: private boat to Our Lady of the Rocks &amp; Perast</strong> (~half day) — a tiny man-made island with a blue-domed church in the middle of the bay, and the impossibly pretty baroque village of Perast. Almost all sitting, endlessly scenic, and very "us."</li>
+          <li><strong>Simplest: Kotor Old Town on foot.</strong> It's right at the pier, flat, and pocket-sized — squares, cats (Kotor adores its cats), a small maritime museum, café tables under stone facades.</li>
+        </ul>
+      </div>
+      <div class="gentle"><span class="ic">🌿</span><div><strong>Gentle-pace tip:</strong> You will see people climbing to the fortress above town — 1,350+ rough steps. Wave at them kindly from a café. That is not our climb.</div></div>
+    </div>
+
+    <!-- NOV 8 -->
+    <div class="day">
+      <div class="day-top">
+        <div><div class="day-date">Sunday · November 8</div><h3>At Sea — Rest Day</h3></div>
+        <span class="badge b-ship">Sea Day</span>
+      </div>
+      <p>Perfectly placed. Seven ports down, and the grand Italian finale ahead — today the only itinerary is <em>recover and enjoy the ship</em>.</p>
+      <div class="suggest">
+        <div class="sk">Sea Day Menu</div>
+        <ul>
+          <li>Sleep in. Long breakfast. Spa morning if you booked it (and if you didn't, today's the day to try).</li>
+          <li>Afternoon tea, a good book on the balcony, maybe the production show tonight.</li>
+          <li>One small task: lay out tomorrow's Naples plan and comfortable shoes tonight — it's an early arrival and the fullest day of the cruise.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- NOV 9 -->
+    <div class="day">
+      <div class="day-top">
+        <div><div class="day-date">Monday · November 9</div><h3>Naples — Pompeii (&amp; the Capri Question)</h3></div>
+        <span class="badge b-plan">To Book · Private Tour</span>
+      </div>
+      <p>The big one. Naples is the gateway to both Pompeii and Capri — and here's my honest, love-you-like-family advice: <strong>doing both in one port day is a marathon</strong> (boats, funiculars, crowds, 10+ hours on your feet). Let's do one of them beautifully instead.</p>
+      <div class="suggest">
+        <div class="sk">Recommendation — We'll Arrange</div>
+        <ul>
+          <li><strong>My pick for this group: Private Pompeii + Sorrento day.</strong> A private driver and licensed guide, a 2-hour <em>highlights</em> tour of Pompeii (not the exhausting full circuit — and we'll request the flatter, smoother "Pompeii for All" route, which was built exactly for comfortable walking), then a scenic drive to Sorrento for a long lunch above the sea and a little shopping before returning to the ship. Unforgettable, and paced like a vacation.</li>
+          <li><strong>The alternative: a Capri day</strong> — hydrofoil across the bay, the Piazzetta, gardens of Augustus, lunch with a view. Magical, but be aware it involves boat transfers, the funicular, and more standing/queueing. Choose this only if the sea day left everyone feeling fresh.</li>
+        </ul>
+      </div>
+      <div class="gentle"><span class="ic">🌿</span><div><strong>Gentle-pace tip:</strong> Pompeii's original Roman streets are lumpy and rutted — this is the single most important day of the trip for sturdy shoes. A collapsible cane is genuinely smart here (and nobody at Pompeii will bat an eye; the Romans would have approved).</div></div>
+    </div>
+
+    <div class="divider-day"><span>Part Three · Roma</span></div>
+
+    <!-- NOV 10 -->
+    <div class="day">
+      <div class="day-top">
+        <div><div class="day-date">Tuesday · November 10</div><h3>Farewell Ship, Hello Rome</h3></div>
+        <span class="badge b-easy">Travel Day</span>
+      </div>
+      <p>Disembark this morning at Civitavecchia, Rome's port, and transfer into the city (about 1½ hours). Bags out the night before, breakfast aboard, and let the ship's leisurely disembarkation work in your favor.</p>
+      <div class="suggest">
+        <div class="sk">Today's Plan</div>
+        <ul>
+          <li>Private transfer to the hotel, check in (or store bags), and keep the afternoon <strong>deliberately unscheduled</strong>.</li>
+          <li>Perfect first evening: an easy stroll to the <strong>Trevi Fountain and the Pantheon</strong> district — both free, both flat-ish, both magic after dark — and dinner at a trattoria along the way. Toss the coin; it means you'll return.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- NOV 11 -->
+    <div class="day">
+      <div class="day-top">
+        <div><div class="day-date">Wednesday · November 11</div><h3>Rome — Ancient Rome &amp; a Roman Evening</h3></div>
+        <span class="badge b-booked">Booked ✓ ×2</span>
+      </div>
+      <div class="booked-box">
+        <div class="bk">Confirmed · Morning</div>
+        <div class="bt">Ancient Rome Essentials Experience</div>
+        <div class="bd">Booked through Christina · $56 per person · Colosseum &amp; Forum area</div>
+      </div>
+      <div class="booked-box">
+        <div class="bk">Confirmed · Evening</div>
+        <div class="bt">Tipsy Roman Aperitivo &amp; Pasta Night</div>
+        <div class="bd">Booked through Christina · $100 per person · The most fun way to eat like a local</div>
+      </div>
+      <p>The perfect Rome day shape: ancient wonders in the cool of the morning, then the <strong>whole afternoon off</strong> — nap, pool, café, shopping, nothing at all — before an evening of aperitivo, pasta, and laughter that requires exactly zero stamina and delivers maximum joy.</p>
+      <div class="gentle"><span class="ic">🌿</span><div><strong>Gentle-pace tip:</strong> The Forum area is uneven ancient paving. Stick with the guide's easier paths, and don't hesitate to find a shaded ledge and let the group circle back to you — the Colosseum looks even better sitting down.</div></div>
+    </div>
+
+    <!-- NOV 12 -->
+    <div class="day">
+      <div class="day-top">
+        <div><div class="day-date">Thursday · November 12</div><h3>Rome — The Vatican</h3></div>
+        <span class="badge b-booked">Booked ✓</span>
+      </div>
+      <div class="booked-box">
+        <div class="bk">Confirmed Excursion</div>
+        <div class="bt">Semi-Private Vatican Masterpieces Experience</div>
+        <div class="bd">Booked through Christina · $135.50 per person · Vatican Museums, Sistine Chapel &amp; St. Peter's</div>
+      </div>
+      <p>The grand finale: the Sistine Chapel ceiling and St. Peter's Basilica, with a small-group guide who knows exactly which corridors to take and which to skip. Fair warning delivered with love — the Vatican is a lot of <em>slow standing</em>, which is more tiring than walking. Big breakfast, comfy shoes, and a totally free evening afterward.</p>
+      <div class="suggest">
+        <div class="sk">Last Evening in Rome</div>
+        <ul>
+          <li>Celebration dinner — somewhere lingering and lovely. (Tell me if you'd like a reservation; I have thoughts.)</li>
+          <li>Pack tonight so tomorrow morning is calm.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- NOV 13 -->
+    <div class="day">
+      <div class="day-top">
+        <div><div class="day-date">Friday · November 13</div><h3>Homeward — Rome to Houston</h3></div>
+        <span class="badge b-easy">Travel Day</span>
+      </div>
+      <p>Leave the hotel by <strong>9:00 AM</strong> for the 12:40 PM departure from Fiumicino — international check-in lines in Rome deserve respect. Land in Atlanta at 6:00 PM, clear customs there, then the final easy hop home, arriving Houston at 11:58 PM.</p>
+      <p style="font-family:'Fraunces',serif;font-style:italic;color:var(--teal);margin-top:14px">Seventeen days. Three countries by land, five by sea. And a group chat full of photos that will take weeks to get through. 🥂</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- BUDGET -->
+<section style="background:var(--aqua-mist);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="section-label">Excursion Summary</div>
+    <h2>What's booked &amp; what's left</h2>
+    <table class="budget">
+      <tr><th>Date</th><th>Excursion</th><th>Per Person</th><th>Total</th><th>Status</th></tr>
+      <tr><td class="num">Fri 10/30</td><td>Acropolis &amp; Parthenon w/ Museum (Athens)</td><td class="num">$270.00</td><td class="num">$1,080.00</td><td>Booked · balance due</td></tr>
+      <tr><td class="num">Mon 11/2</td><td>Private Chania Day (Crete)</td><td class="num">$200.44</td><td class="num">$801.74</td><td>✓ Paid in full</td></tr>
+      <tr><td class="num">Wed 11/11</td><td>Ancient Rome Essentials (morning)</td><td class="num">$56.00</td><td class="num">$224.00</td><td>Booked · balance due</td></tr>
+      <tr><td class="num">Wed 11/11</td><td>Tipsy Roman Aperitivo &amp; Pasta Night (evening)</td><td class="num">$100.00</td><td class="num">$400.00</td><td>Booked · balance due</td></tr>
+      <tr><td class="num">Thu 11/12</td><td>Semi-Private Vatican Masterpieces</td><td class="num">$135.50</td><td class="num">$542.00</td><td>Booked · balance due</td></tr>
+      <tr class="total"><td></td><td>Booked so far</td><td></td><td class="num">$3,047.74</td><td class="num">$801.74 paid · $2,246.00 remaining</td></tr>
+    </table>
+    <p style="margin-top:16px;font-size:.92rem"><strong>Still to arrange:</strong> Olympia ship excursion (11/3) · Corfu plan (11/4) · Split private tour (11/5) · Dubrovnik private guide (11/6) · Kotor plan (11/7) · Naples private day (11/9). Christina is on it — decisions on the Naples "Pompeii vs. Capri" question and Kotor boat trip are the two we should settle first, as private guides there book up early.</p>
+    <p style="margin-top:8px;font-size:.85rem">Chania excursion: free cancellation through October 28.</p>
+  </div>
+</section>
+
+<!-- PRACTICAL TIPS -->
+<section>
+  <div class="wrap">
+    <div class="section-label">The Fine Print, Made Friendly</div>
+    <h2>Small things that make a big trip easy</h2>
+    <div class="tips">
+      <div class="tip">
+        <h3>👟 Feet first</h3>
+        <ul>
+          <li>Two pairs of broken-in walking shoes with grippy soles — alternate days.</li>
+          <li>A collapsible cane packs flat and earns its keep at Pompeii and on marble lanes.</li>
+          <li>Compression socks for both long flights.</li>
+        </ul>
+      </div>
+      <div class="tip">
+        <h3>🧣 Late-fall Mediterranean</h3>
+        <ul>
+          <li>Think layers: light sweater + scarf + packable rain jacket. Days are mild, evenings cool.</li>
+          <li>Shoulders and knees covered for church visits (Vatican, St. Spyridon) — a big scarf solves everything.</li>
+        </ul>
+      </div>
+      <div class="tip">
+        <h3>💶 Money &amp; phones</h3>
+        <ul>
+          <li>Euro everywhere except Croatia... which also uses the euro now. Easy!</li>
+          <li>Cards work nearly everywhere; carry ~€50 small bills for taxis, markets, and tips.</li>
+          <li>Turn on your carrier's international plan before departure.</li>
+        </ul>
+      </div>
+      <div class="tip">
+        <h3>🛳 Ship rhythm</h3>
+        <ul>
+          <li>Back-aboard time is sacred — plan to return an hour before all-aboard, every port.</li>
+          <li>Medallion on the watch strap = hands free all cruise.</li>
+          <li>Hydrate like it's your job. Port days are sneaky-long.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="tagline">"The world is your oyster. We are your pearl."</div>
+  <div class="agency">Point Me to Paradise Travel · Prepared with love by Christina</div>
+</footer>
+
+</body>
+</html>
