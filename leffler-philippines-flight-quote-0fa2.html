@@ -79,33 +79,34 @@ section { padding:56px 0; }
 .leg-amenities { font-size:.78rem; color:var(--ink-soft); margin-top:10px; padding-top:10px; border-top:1px dashed var(--line); }
 .flight-total { padding:14px 26px; background:var(--sand-light); font-size:.85rem; color:var(--ink-soft); border-top:1px solid var(--line); }
 .flight-total strong { color:var(--ink); font-weight:600; }
+.gold-note { background:var(--sand-light); border:1px solid var(--gold-whisper); border-radius:8px; padding:13px 17px; font-size:.85rem; color:var(--ink-soft); margin-top:14px; }
+.gold-note strong { color:var(--ink); font-weight:600; }
+.photo-grid { display:grid; grid-template-columns:2fr 1fr; grid-template-rows:repeat(3,1fr); gap:8px; height:340px; border-radius:10px; overflow:hidden; margin-bottom:20px; }
+.photo-grid img { width:100%; height:100%; object-fit:cover; display:block; }
+.photo-main { grid-row:span 3; }
+.pax-toggle { display:flex; gap:10px; margin-top:14px; flex-wrap:wrap; }
+.pax-btn { font-family:'DM Sans',sans-serif; font-size:16px; font-weight:600; color:var(--aqua-dark); background:var(--white); border:1.5px solid var(--line); border-radius:999px; padding:10px 22px; cursor:pointer; transition:all .15s ease; }
+.pax-btn:hover { border-color:var(--aqua); }
+.pax-btn.active { background:var(--aqua-dark); border-color:var(--aqua-dark); color:var(--white); }
+.selectable { transition:border-color .18s ease, box-shadow .18s ease; }
+.selectable.selected { border-color:var(--aqua-dark); box-shadow:0 4px 18px rgba(79,138,140,.12); }
+@media (max-width:640px) {
+  .photo-grid { grid-template-columns:repeat(3,1fr); grid-template-rows:170px 90px; height:auto; }
+  .photo-main { grid-column:span 3; grid-row:auto; }
+}
 
-/* ---------- FARE OPTIONS ---------- */
-.fare-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; }
-.fare-card { position:relative; background:var(--white); border:1.5px solid var(--line); border-radius:12px; padding:24px 22px 20px; cursor:pointer; transition:border-color .18s ease, box-shadow .18s ease, transform .18s ease; }
-.fare-card:hover { border-color:var(--aqua); }
-.fare-card:focus-visible { outline:2px solid var(--aqua-dark); outline-offset:3px; }
-.fare-card.selected { border-color:var(--aqua-dark); background:var(--aqua-mist); box-shadow:0 4px 18px rgba(79,138,140,.12); }
-.fare-card.selected::after { content:"Selected"; position:absolute; top:14px; right:14px; font-size:.66rem; letter-spacing:.14em; text-transform:uppercase; font-weight:700; color:var(--white); background:var(--aqua); padding:4px 10px; border-radius:999px; }
-.fare-cabin { font-size:.68rem; letter-spacing:.18em; text-transform:uppercase; color:var(--aqua-dark); font-weight:600; margin-bottom:4px; }
-.fare-name { font-family:'Playfair Display',serif; font-size:1.15rem; font-weight:600; color:var(--ink); }
-.fare-price { font-family:'Playfair Display',serif; font-size:1.6rem; font-weight:600; color:var(--aqua-dark); margin:10px 0 2px; }
-.fare-basis { font-size:.75rem; color:var(--ink-soft); margin-bottom:14px; }
-.fare-feats { list-style:none; }
-.fare-feats li { font-size:.85rem; color:var(--ink); padding:5px 0 5px 22px; position:relative; border-top:1px solid var(--line); }
-.fare-feats li:first-child { border-top:none; }
-.fare-feats li::before { content:"✓"; position:absolute; left:0; color:var(--aqua-dark); font-weight:700; }
-.fare-feats li.fee::before { content:"$"; color:var(--ink-soft); font-weight:600; }
-.fare-feats li.fee { color:var(--ink-soft); }
-
-/* ---------- PRICE SUMMARY ---------- */
-.price-summary { margin-top:30px; background:var(--white); border:1px solid var(--line); border-radius:12px; padding:26px 28px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; }
-.ps-left .ps-label { font-size:.72rem; letter-spacing:.18em; text-transform:uppercase; color:var(--aqua-dark); font-weight:600; }
-.ps-left .ps-fare { font-family:'Playfair Display',serif; font-size:1.25rem; font-weight:600; margin-top:4px; }
-.ps-right { text-align:right; }
-.ps-price { font-family:'Playfair Display',serif; font-size:2rem; font-weight:600; color:var(--aqua-dark); line-height:1.1; }
-.ps-basis { font-size:.78rem; color:var(--ink-soft); margin-top:2px; }
-.bags-note { margin-top:18px; font-size:.9rem; color:var(--ink-soft); border-left:2px solid var(--gold-whisper); padding-left:16px; }
+/* ---------- PRICING ---------- */
+.price-block { background:var(--white); border:1px solid var(--line); border-radius:14px; padding:34px 32px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px; }
+.pb-left { max-width:440px; }
+.pb-left h3 { font-size:1.3rem; margin-bottom:6px; }
+.pb-left p { font-size:.92rem; color:var(--ink-soft); }
+.pb-right { text-align:right; }
+.pb-price { font-family:'Playfair Display',serif; font-size:2.4rem; font-weight:600; color:var(--aqua-dark); line-height:1.05; }
+.pb-basis { font-size:.8rem; color:var(--ink-soft); margin-top:4px; }
+.included { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px; margin-top:22px; }
+.inc-item { background:var(--white); border:1px solid var(--line); border-radius:10px; padding:16px 18px; font-size:.9rem; }
+.inc-item strong { display:block; font-family:'Playfair Display',serif; font-weight:600; font-size:1rem; margin-bottom:3px; color:var(--ink); }
+.inc-item span { color:var(--ink-soft); font-size:.85rem; }
 .disclaimer { margin-top:18px; font-size:.82rem; color:var(--ink-soft); font-style:italic; }
 
 /* ---------- FORM ---------- */
@@ -134,8 +135,8 @@ footer { background:var(--sand-light); padding:48px 24px 42px; text-align:center
   .flight-body { padding:20px 18px 16px; }
   .flight-card-header { padding:16px 18px; }
   .flight-airport { font-size:1.2rem; }
-  .price-summary, .form-shell { padding:24px 20px; }
-  .ps-right { text-align:left; }
+  .price-block, .form-shell { padding:24px 20px; }
+  .pb-right { text-align:left; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior:auto; }
@@ -159,9 +160,9 @@ footer { background:var(--sand-light); padding:48px 24px 42px; text-align:center
     <h1>The Philippines</h1>
     <div class="hero-sub">Flight quote prepared for the Leffler party</div>
     <div class="hero-meta">
-      <span>Aug 26 – Sep 4, 2026</span>
+      <span>Aug 26 – Sep 5, 2026</span>
       <span>Greenville-Spartanburg ⇄ Manila</span>
-      <span>United Airlines</span>
+      <span>United &amp; ANA</span>
     </div>
   </div>
 </header>
@@ -170,32 +171,62 @@ footer { background:var(--sand-light); padding:48px 24px 42px; text-align:center
 <section>
   <div class="wrap">
     <div class="eyebrow">Trip Overview</div>
-    <h2 class="section-title">One ticket, protected end to end</h2>
-    <p class="section-lede">Every leg on this itinerary sits on a single United ticket — if a connection slips, the airline owns the fix.</p>
-    <p>You depart Greenville-Spartanburg at 7:00 a.m. on Wednesday, August 26 and land in Manila at 7:00 p.m. Thursday evening, local time — 24 hours door to door, with two connections that each leave comfortable margin. Coming home on Friday, September 4, you leave Manila in the morning and, thanks to the date line, walk back into GSP at 9:58 p.m. that same Friday night.</p>
+    <h2 class="section-title">One itinerary, protected end to end</h2>
+    <p class="section-lede">Every leg is booked together on a single itinerary — if a connection slips, the airline owns the fix.</p>
+    <p>You depart Greenville-Spartanburg at 7:00 a.m. on Wednesday, August 26 and land in Manila at 7:00 p.m. Thursday evening, local time — 24 hours door to door, with two connections that each leave comfortable margin. You overnight near the airport — the Hilton or the Savoy, your pick below — then a quick Cebu Pacific hop puts you in Dipolog by 8:00 a.m. Friday. Coming home on Saturday, September 5, you fly ANA through Tokyo and Chicago, and the date line hands you the day back: you leave Manila at 9:10 a.m. Saturday and walk into GSP at 9:07 p.m. that same Saturday night.</p>
     <div class="tiles">
       <div class="tile">
         <div class="t-label">Depart</div>
         <div class="t-value">Wed, Aug 26</div>
-        <div class="t-note">GSP 7:00 a.m. → Manila 7:00 p.m. (+1)</div>
+        <div class="t-note">GSP 7:00 a.m. → Manila 7:00 p.m. (+1) · via Houston &amp; San Francisco</div>
+      </div>
+      <div class="tile">
+        <div class="t-label">Manila Overnight</div>
+        <div class="t-value">Thu, Aug 27</div>
+        <div class="t-note">Hilton Manila (held) or Savoy Hotel Manila — your pick</div>
+      </div>
+      <div class="tile">
+        <div class="t-label">Onward to Dipolog</div>
+        <div class="t-value">Fri, Aug 28</div>
+        <div class="t-note">Manila 6:15 a.m. → Dipolog 8:00 a.m. · Cebu Pacific</div>
+      </div>
+      <div class="tile">
+        <div class="t-label">Dipolog Stay</div>
+        <div class="t-value">Aug 28 – 30</div>
+        <div class="t-note">2 nights · property being finalized</div>
+      </div>
+      <div class="tile">
+        <div class="t-label">Cebu Stay</div>
+        <div class="t-value">Shangri-La Mactan</div>
+        <div class="t-note">Aug 30 – Sep 5 · Main Wing deluxe king · breakfast for 2</div>
+      </div>
+      <div class="tile">
+        <div class="t-label">Back to Manila</div>
+        <div class="t-value">Fri, Sep 4</div>
+        <div class="t-note">Cebu 9:45 p.m. → Manila 11:20 p.m. · Cebu Pacific</div>
+      </div>
+      <div class="tile">
+        <div class="t-label">Final Night</div>
+        <div class="t-value">Savoy Hotel Manila</div>
+        <div class="t-note">Sep 4 · near NAIA Terminal 3 · breakfast included</div>
       </div>
       <div class="tile">
         <div class="t-label">Return</div>
-        <div class="t-value">Fri, Sep 4</div>
-        <div class="t-note">Manila 8:40 a.m. → GSP 9:58 p.m. same day</div>
+        <div class="t-value">Sat, Sep 5</div>
+        <div class="t-note">Manila 9:10 a.m. → GSP 9:07 p.m. same day · via Tokyo &amp; Chicago</div>
       </div>
       <div class="tile">
-        <div class="t-label">Routing</div>
-        <div class="t-value">GSP · Houston · San Francisco · Manila</div>
-        <div class="t-note">Two stops each way, one ticket</div>
+        <div class="t-label">Carriers</div>
+        <div class="t-value">United outbound · ANA home</div>
+        <div class="t-note">One itinerary, two stops each way</div>
       </div>
       <div class="tile">
         <div class="t-label">Long-haul aircraft</div>
-        <div class="t-value">Boeing 777</div>
+        <div class="t-value">Boeing 777 &amp; 787 Dreamliner</div>
         <div class="t-note">On-demand video, in-seat power &amp; USB</div>
       </div>
     </div>
-    <p class="scope-note">This quote covers the international round trip between Greenville-Spartanburg and Manila. Your flights within the Philippines are being handled separately.</p>
+    <p class="scope-note">This quote covers the international round trip between Greenville-Spartanburg and Manila, your choice of Manila hotel for the night of August 27, the Manila–Dipolog flight on August 28, the Shangri-La Mactan stay in Cebu, the Cebu–Manila flight on the night of September 4, and the final night at the Savoy Hotel Manila. Your Dipolog accommodation (August 28–30) is being finalized and will be added here, and the Dipolog–Cebu flight is being handled separately.</p>
     <div class="commit">
       <div class="c-tag">How we work</div>
       <p>We don't book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. The work you'd hate doing — already done.</p>
@@ -203,12 +234,12 @@ footer { background:var(--sand-light); padding:48px 24px 42px; text-align:center
   </div>
 </section>
 
-<!-- ================= FLIGHTS ================= -->
+<!-- ================= STEP 1 — FLY TO MANILA ================= -->
 <section class="band">
   <div class="wrap">
-    <div class="eyebrow">Your Flights</div>
-    <h2 class="section-title">The routing, leg by leg</h2>
-    <p class="section-lede">The flights below stay the same across every fare option — only the fare rules change.</p>
+    <div class="eyebrow">Step 1 · Wed, Aug 26 – Thu, Aug 27</div>
+    <h2 class="section-title">Fly to Manila</h2>
+    <p class="section-lede">GSP to Manila on United — 24 hours door to door.</p>
 
     <!-- OUTBOUND -->
     <div class="flight-card">
@@ -233,7 +264,7 @@ footer { background:var(--sand-light); padding:48px 24px 42px; text-align:center
             <div class="flight-meta">George Bush Intercontinental, Houston</div>
           </div>
         </div>
-        <div class="flight-no">UA 6174 · Embraer 175 · United Express · free Wi-Fi</div>
+        <div class="flight-no">UA 6174 · Embraer E175 · operated by Mesa Airlines dba United Express</div>
         <div class="layover-row"><span class="layover-label">1h 26m connection in Houston (IAH)</span></div>
         <div class="flight-leg">
           <div>
@@ -251,7 +282,7 @@ footer { background:var(--sand-light); padding:48px 24px 42px; text-align:center
             <div class="flight-meta">San Francisco International</div>
           </div>
         </div>
-        <div class="flight-no">UA 2358 · Boeing 777</div>
+        <div class="flight-no">UA 2358 · Boeing 777-200</div>
         <div class="layover-row"><span class="layover-label">2h 1m connection in San Francisco (SFO)</span></div>
         <div class="flight-leg">
           <div>
@@ -269,176 +300,465 @@ footer { background:var(--sand-light); padding:48px 24px 42px; text-align:center
             <div class="flight-meta">Ninoy Aquino Intl, Manila — arrives Thu, Aug 27</div>
           </div>
         </div>
-        <div class="flight-no">UA 809 · Boeing 777</div>
-        <div class="leg-amenities">The trans-Pacific leg carries on-demand seatback video plus in-seat power and USB at every seat — 13 hours 45 minutes over the water, landing in Manila at 7:00 p.m. Thursday, local time.</div>
+        <div class="flight-no">UA 809 · Boeing 777-300ER</div>
+        <div class="leg-amenities">The trans-Pacific leg carries on-demand seatback video plus in-seat power and USB at every seat — 13 hours 45 minutes over the water, landing in Manila at 7:00 p.m. Thursday, local time. This flight crosses the date line, which is why you arrive a calendar day after you depart.</div>
       </div>
       <div class="flight-total">Total outbound travel time: <strong>24 hours</strong>, Greenville-Spartanburg to Manila.</div>
     </div>
+  </div>
+</section>
 
-    <!-- RETURN -->
+<!-- ================= MANILA OVERNIGHT — TWO OPTIONS ================= -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Step 2 · Thu, Aug 27</div>
+    <h2 class="section-title">Your first night in Manila — two options</h2>
+    <p class="section-lede">Land Thursday evening, sleep near the airport, fly to Dipolog at dawn. Pick the room that suits you — the totals below update with your choice.</p>
+
+    <div class="flight-card selectable selected" id="card-hilton">
+      <div class="flight-card-header">
+        <span class="flight-direction">Option 1 — Hilton Manila, Newport World Resorts</span>
+        <span class="flight-date">Thu, Aug 27 → Fri, Aug 28, 2026</span>
+      </div>
+      <div class="flight-body">
+        <div class="tiles" style="margin-top:0;">
+          <div class="tile">
+            <div class="t-label">Check-in</div>
+            <div class="t-value">Thu, Aug 27</div>
+            <div class="t-note">From 3:00 p.m.</div>
+          </div>
+          <div class="tile">
+            <div class="t-label">Checkout</div>
+            <div class="t-value">Fri, Aug 28</div>
+            <div class="t-note">By 12:00 p.m. — you'll be gone well before, for the 6:15 a.m. flight</div>
+          </div>
+          <div class="tile">
+            <div class="t-label">Room</div>
+            <div class="t-value">1 King Bed</div>
+            <div class="t-note">2 adults · city view · room only</div>
+          </div>
+          <div class="tile">
+            <div class="t-label">Room Holder</div>
+            <div class="t-value">Greg Leffler</div>
+            <div class="t-note">Confirmation 2513109557</div>
+          </div>
+        </div>
+        <div class="gold-note"><strong>Currently held.</strong> This room is in the system under confirmation 2513109557, pending final confirmation — nothing needed from you. Free cancellation through August 25; from August 26, a one-night penalty applies. Early departure or no-show counts as a cancellation with no refund.</div>
+        <div class="pax-toggle">
+          <button type="button" class="pax-btn night1-btn active" data-night="hilton">Hilton for the 27th — Est. $192</button>
+        </div>
+      </div>
+      <div class="flight-total">Rate: <strong>Est. $192 total, taxes &amp; fees included</strong> · room only · refundable through Aug 25.</div>
+    </div>
+
+    <div class="flight-card selectable" id="card-savoy1">
+      <div class="flight-card-header">
+        <span class="flight-direction">Option 2 — Savoy Hotel Manila</span>
+        <span class="flight-date">Thu, Aug 27 → Fri, Aug 28, 2026</span>
+      </div>
+      <div class="flight-body">
+        <div class="tiles" style="margin-top:0;">
+          <div class="tile">
+            <div class="t-label">Room</div>
+            <div class="t-value">Standard Queen</div>
+            <div class="t-note">Pool &amp; gym access · breakfast included</div>
+          </div>
+          <div class="tile">
+            <div class="t-label">Location</div>
+            <div class="t-value">Near NAIA Terminal 3</div>
+            <div class="t-note">Short ride to the 6:15 a.m. Dipolog flight</div>
+          </div>
+          <div class="tile">
+            <div class="t-label">Rate Type</div>
+            <div class="t-value">Refundable</div>
+            <div class="t-note">Can be released if plans shift</div>
+          </div>
+        </div>
+        <div class="gold-note"><strong>Familiar ground.</strong> This is the same hotel booked for your final night on September 4 — choose it here too and you'll know exactly where you're headed on both ends of the trip, with breakfast included both mornings.</div>
+        <div class="pax-toggle">
+          <button type="button" class="pax-btn night1-btn" data-night="savoy">Savoy for the 27th — Est. $78</button>
+        </div>
+      </div>
+      <div class="flight-total">Rate: <strong>Est. $78, refundable</strong> · breakfast included.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STEP 3 — FLY TO DIPOLOG ================= -->
+<section class="band">
+  <div class="wrap">
+    <div class="eyebrow">Step 3 · Fri, Aug 28</div>
+    <h2 class="section-title">Fly to Dipolog</h2>
+    <p class="section-lede">A 6:15 a.m. Cebu Pacific hop — you’re there by 8:00 a.m.</p>
+
+    <!-- MANILA TO DIPOLOG -->
     <div class="flight-card">
       <div class="flight-card-header">
-        <span class="flight-direction">Return — home to GSP</span>
-        <span class="flight-date">Friday, September 4, 2026</span>
+        <span class="flight-direction">Onward — Manila to Dipolog</span>
+        <span class="flight-date">Friday, August 28, 2026</span>
       </div>
       <div class="flight-body">
         <div class="flight-leg">
           <div>
             <span class="flight-airport">MNL</span>
-            <span class="flight-time">8:40 AM</span>
+            <span class="flight-time">6:15 AM</span>
             <div class="flight-meta">Ninoy Aquino Intl, Manila</div>
           </div>
           <div class="flight-arrow">
             <div class="flight-arrow-line"><svg viewBox="0 0 40 12" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="6" x2="34" y2="6" stroke="currentColor" stroke-width="1.5"/><polyline points="28,2 36,6 28,10" fill="currentColor" stroke="currentColor" stroke-width="1"/></svg></div>
-            <div class="flight-duration">13h 0m</div>
+            <div class="flight-duration">1h 45m</div>
           </div>
           <div class="leg-right">
-            <span class="flight-airport">SFO</span>
-            <span class="flight-time">6:40 AM</span>
-            <div class="flight-meta">San Francisco — same calendar day, thanks to the date line</div>
+            <span class="flight-airport">DPL</span>
+            <span class="flight-time">8:00 AM</span>
+            <div class="flight-meta">Dipolog Airport</div>
           </div>
         </div>
-        <div class="flight-no">UA 190 · Boeing 777 · on-demand video, in-seat power &amp; USB</div>
-        <div class="layover-row"><span class="layover-label">2h 5m connection in San Francisco (SFO)</span></div>
-        <div class="flight-leg">
-          <div>
-            <span class="flight-airport">SFO</span>
-            <span class="flight-time">8:45 AM</span>
-            <div class="flight-meta">San Francisco International</div>
-          </div>
-          <div class="flight-arrow">
-            <div class="flight-arrow-line"><svg viewBox="0 0 40 12" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="6" x2="34" y2="6" stroke="currentColor" stroke-width="1.5"/><polyline points="28,2 36,6 28,10" fill="currentColor" stroke="currentColor" stroke-width="1"/></svg></div>
-            <div class="flight-duration">4h 11m</div>
-          </div>
-          <div class="leg-right">
-            <span class="flight-airport">IAH</span>
-            <span class="flight-time">2:56 PM</span>
-            <div class="flight-meta">George Bush Intercontinental, Houston</div>
-          </div>
-        </div>
-        <div class="flight-no">UA 2498 · Boeing 737</div>
-        <div class="layover-row"><span class="layover-label">3h 39m connection in Houston (IAH)</span></div>
-        <div class="flight-leg">
-          <div>
-            <span class="flight-airport">IAH</span>
-            <span class="flight-time">6:35 PM</span>
-            <div class="flight-meta">George Bush Intercontinental</div>
-          </div>
-          <div class="flight-arrow">
-            <div class="flight-arrow-line"><svg viewBox="0 0 40 12" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="6" x2="34" y2="6" stroke="currentColor" stroke-width="1.5"/><polyline points="28,2 36,6 28,10" fill="currentColor" stroke="currentColor" stroke-width="1"/></svg></div>
-            <div class="flight-duration">2h 23m</div>
-          </div>
-          <div class="leg-right">
-            <span class="flight-airport">GSP</span>
-            <span class="flight-time">9:58 PM</span>
-            <div class="flight-meta">Greenville-Spartanburg Intl</div>
-          </div>
-        </div>
-        <div class="flight-no">UA 5340 · Embraer 175 · United Express · free Wi-Fi</div>
-        <div class="leg-amenities">You leave Manila Friday morning and land at GSP at 9:58 p.m. the same Friday — the date line hands back the day you lost on the way over. The longer Houston connection gives you time for a real meal before the last hop home.</div>
+        <div class="flight-no">5J 703 · Airbus A320 · Cebu Pacific</div>
+        <div class="leg-amenities">Both Manila hotel options sit minutes from the airport, so Friday's 6:15 a.m. departure is a short ride, not a scramble — and the overnight doubles as your buffer if anything runs late on the way over. It's an early start, but you're in Dipolog by 8:00 a.m. with the whole day ahead of you.</div>
       </div>
-      <div class="flight-total">Total return travel time: <strong>25 hours 18 minutes</strong>, Manila to Greenville-Spartanburg.</div>
+      <div class="flight-total">Flight time: <strong>1 hour 45 minutes</strong>, Manila to Dipolog.</div>
     </div>
   </div>
 </section>
 
-<!-- ================= FARE OPTIONS ================= -->
+<!-- ================= DIPOLOG STAY (TO BE CONFIRMED) ================= -->
 <section>
   <div class="wrap">
-    <div class="eyebrow">Fare Options</div>
-    <h2 class="section-title">Same flights, five ways to buy them</h2>
-    <p class="section-lede">Pick the fare that matches how much flexibility — and how many bags — you want.</p>
+    <div class="eyebrow">Step 4 · Fri, Aug 28 – Sun, Aug 30</div>
+    <h2 class="section-title">Two nights in Dipolog</h2>
+    <p class="section-lede">Friday to Sunday — the property is being finalized now.</p>
 
-    <div class="fare-grid" id="fare-grid">
-      <div class="fare-card" role="button" tabindex="0" data-fare="Basic Economy" data-price="1762" data-display="$1,762">
-        <div class="fare-cabin">Economy Cabin</div>
-        <div class="fare-name">Basic Economy</div>
-        <div class="fare-price">$1,762</div>
-        <div class="fare-basis">per traveler</div>
-        <ul class="fare-feats">
-          <li>1 free carry-on</li>
-          <li>1st checked bag free</li>
-          <li class="fee">Seat selection for a fee</li>
-          <li class="fee">Priority boarding for a fee</li>
-          <li class="fee">Ticket changes for a fee</li>
-        </ul>
+    <div class="flight-card">
+      <div class="flight-card-header">
+        <span class="flight-direction">2 Nights · Property To Be Confirmed</span>
+        <span class="flight-date">Fri, Aug 28 → Sun, Aug 30, 2026</span>
       </div>
-
-      <div class="fare-card" role="button" tabindex="0" data-fare="Economy" data-price="1982" data-display="$1,982">
-        <div class="fare-cabin">Economy Cabin</div>
-        <div class="fare-name">Economy</div>
-        <div class="fare-price">$1,982</div>
-        <div class="fare-basis">per traveler</div>
-        <ul class="fare-feats">
-          <li>1 free carry-on</li>
-          <li>2 free checked bags</li>
-          <li>Free seat selection</li>
-          <li>Free changes (fare difference may apply)</li>
-          <li class="fee">Extra legroom for a fee</li>
-          <li class="fee">Priority boarding for a fee</li>
-        </ul>
+      <div class="flight-body">
+        <div class="tiles" style="margin-top:0;">
+          <div class="tile">
+            <div class="t-label">Check-in</div>
+            <div class="t-value">Fri, Aug 28</div>
+            <div class="t-note">You land in Dipolog at 8:00 a.m. that morning</div>
+          </div>
+          <div class="tile">
+            <div class="t-label">Checkout</div>
+            <div class="t-value">Sun, Aug 30</div>
+          </div>
+          <div class="tile">
+            <div class="t-label">Nights</div>
+            <div class="t-value">2</div>
+            <div class="t-note">For two</div>
+          </div>
+        </div>
+        <div class="gold-note"><strong>Property being finalized.</strong> Christina is confirming your Dipolog accommodation now — this page will update with the property, room, and rate as soon as it's locked in. The dates above are held in the plan.</div>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="fare-card" role="button" tabindex="0" data-fare="Economy Fully Refundable" data-price="2352" data-display="$2,352">
-        <div class="fare-cabin">Economy Cabin</div>
-        <div class="fare-name">Economy — Fully Refundable</div>
-        <div class="fare-price">$2,352</div>
-        <div class="fare-basis">per traveler</div>
-        <ul class="fare-feats">
-          <li>Fully refundable ticket</li>
-          <li>1 free carry-on</li>
-          <li>2 free checked bags</li>
-          <li>Free seat selection</li>
-          <li>Free changes (fare difference may apply)</li>
-          <li class="fee">Extra legroom for a fee</li>
-        </ul>
+<!-- ================= CEBU STAY — SHANGRI-LA MACTAN ================= -->
+<section class="band">
+  <div class="wrap">
+    <div class="eyebrow">Step 5 · Sun, Aug 30 – Sat, Sep 5</div>
+    <h2 class="section-title">Shangri-La Mactan, Cebu</h2>
+    <p class="section-lede">A private beach where the fish come to you — with the room held through your last evening.</p>
+    <p class="scope-note" style="margin:0 0 26px;">Your Dipolog–Cebu flight on August 30 is being arranged separately and will be added here.</p>
+
+    <div class="flight-card">
+      <div class="flight-card-header">
+        <span class="flight-direction">Deluxe Room · 1 King Bed · Garden View · Main Wing</span>
+        <span class="flight-date">For Two · Aug 30 → Sep 5, 2026</span>
       </div>
-
-      <div class="fare-card" role="button" tabindex="0" data-fare="Base Premium Economy" data-price="2982" data-display="$2,982">
-        <div class="fare-cabin">Premium Economy Cabin</div>
-        <div class="fare-name">Base Premium Economy</div>
-        <div class="fare-price">$2,982</div>
-        <div class="fare-basis">per traveler</div>
-        <ul class="fare-feats">
-          <li>Premium Economy cabin seating</li>
-          <li>Priority boarding included</li>
-          <li>1 free carry-on</li>
-          <li>1st checked bag free</li>
-          <li class="fee">Seat selection for a fee</li>
-          <li class="fee">Ticket changes for a fee</li>
-        </ul>
+      <div class="flight-body">
+        <div class="photo-grid">
+          <img class="photo-main" src="https://img.cdnpth.com/media/151420/5d74c42c-b393-463c-b6db-a46c36f5795e_main.jpg" alt="Shangri-La Mactan resort and beachfront">
+          <img src="https://images.trvl-media.com/lodging/1000000/200000/190600/190534/0db72042.jpg?impolicy=fcrop&w=1200&h=800&quality=medium" alt="Shangri-La Mactan grounds">
+          <img src="https://images.trvl-media.com/lodging/1000000/200000/190600/190534/6d8f80f1.jpg?impolicy=fcrop&w=1200&h=800&quality=medium" alt="Shangri-La Mactan pool">
+          <img src="https://images.trvl-media.com/lodging/1000000/200000/190600/190534/09d7b540.jpg?impolicy=fcrop&w=1200&h=800&quality=medium" alt="Shangri-La Mactan room">
+        </div>
+        <p style="font-size:.95rem; color:var(--ink); margin-bottom:18px;">Tropical gardens run down to a private beach where you can watch reef fish from the sand — no mask required. There are several pools to trade between, including the main pool, open until 9:00 p.m., and the Ocean Wing pool looking straight out to sea. Mornings start with yoga if you want them to; evenings bring cultural performances; and the Chi Spa is there for whatever the day did to you.</p>
+        <div class="tiles" style="margin-top:0;">
+          <div class="tile">
+            <div class="t-label">Check-in</div>
+            <div class="t-value">Sun, Aug 30</div>
+          </div>
+          <div class="tile">
+            <div class="t-label">Checkout</div>
+            <div class="t-value">Sat, Sep 5</div>
+            <div class="t-note">The room stays yours through your final evening in Cebu</div>
+          </div>
+          <div class="tile">
+            <div class="t-label">Room</div>
+            <div class="t-value">Deluxe, 1 King Bed</div>
+            <div class="t-note">Main Wing · 36 sq m · garden view · sleeps up to 4</div>
+          </div>
+          <div class="tile">
+            <div class="t-label">Breakfast</div>
+            <div class="t-value">Included for 2</div>
+            <div class="t-note">Daily · free WiFi &amp; parking throughout</div>
+          </div>
+        </div>
+        <div class="gold-note"><strong>Christina's note — why the room is held through the night of Sep 4:</strong> you fly to Manila that evening and home the next morning, but the room stays booked so your last day in Cebu has no noon checkout hanging over it. No packing at dawn, no waiting out the afternoon with your bags in a lobby — you keep the beach, the pool, and a shower until it's actually time to head to the airport. For the most relaxed end to the trip, it's worth it.</div>
       </div>
+      <div class="flight-total">Rate: <strong>Est. $1,300 total, taxes &amp; fees included</strong> · breakfast for two daily.</div>
+    </div>
+  </div>
+</section>
 
-      <div class="fare-card" role="button" tabindex="0" data-fare="Premium Economy" data-price="3282" data-display="$3,282">
-        <div class="fare-cabin">Premium Economy Cabin</div>
-        <div class="fare-name">Premium Economy</div>
-        <div class="fare-price">$3,282</div>
-        <div class="fare-basis">per traveler</div>
-        <ul class="fare-feats">
-          <li>Premium Economy cabin seating</li>
-          <li>Priority boarding included</li>
-          <li>Free seat selection</li>
-          <li>Free changes (fare difference may apply)</li>
-          <li>1 free carry-on</li>
-          <li>2 free checked bags</li>
-        </ul>
+<!-- ================= STEP 6 — FLY BACK TO MANILA ================= -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Step 6 · Fri, Sep 4 — Evening</div>
+    <h2 class="section-title">Fly back to Manila</h2>
+    <p class="section-lede">After a full last day at the resort, a short evening hop north.</p>
+
+    <!-- CEBU TO MANILA -->
+    <div class="flight-card">
+      <div class="flight-card-header">
+        <span class="flight-direction">Back to Manila — for your flight home</span>
+        <span class="flight-date">Friday, September 4, 2026</span>
+      </div>
+      <div class="flight-body">
+        <div class="flight-leg">
+          <div>
+            <span class="flight-airport">CEB</span>
+            <span class="flight-time">9:45 PM</span>
+            <div class="flight-meta">Mactan-Cebu International</div>
+          </div>
+          <div class="flight-arrow">
+            <div class="flight-arrow-line"><svg viewBox="0 0 40 12" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="6" x2="34" y2="6" stroke="currentColor" stroke-width="1.5"/><polyline points="28,2 36,6 28,10" fill="currentColor" stroke="currentColor" stroke-width="1"/></svg></div>
+            <div class="flight-duration">1h 35m</div>
+          </div>
+          <div class="leg-right">
+            <span class="flight-airport">MNL</span>
+            <span class="flight-time">11:20 PM</span>
+            <div class="flight-meta">Ninoy Aquino Intl, Manila</div>
+          </div>
+        </div>
+        <div class="flight-no">5J 588 · Airbus A320 · Cebu Pacific</div>
+        <div class="leg-amenities">A short evening hop after a full last day at the resort — you land in Manila at 11:20 p.m., the night before your 9:10 a.m. flight home. Booked above Cebu Pacific's lowest fare tier. Choose below whether this flight is for one or for two.</div>
+        <div class="pax-toggle" role="group" aria-label="Number of travelers on the Cebu to Manila flight">
+          <button type="button" class="pax-btn" data-pax="1">1 traveler — Est. $50</button>
+          <button type="button" class="pax-btn" data-pax="2">2 travelers — Est. $100</button>
+        </div>
+      </div>
+      <div class="flight-total">Fare: <strong>Est. $50 per person</strong> · currently selected: <strong id="cebu-card-total">1 traveler, Est. $50</strong>.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL NIGHT — SAVOY MANILA ================= -->
+<section class="band">
+  <div class="wrap">
+    <div class="eyebrow">Step 7 · Fri, Sep 4 — Overnight</div>
+    <h2 class="section-title">Savoy Hotel Manila</h2>
+    <p class="section-lede">Land at 11:20 p.m., sleep minutes from the terminal, fly home in the morning.</p>
+
+    <div class="flight-card">
+      <div class="flight-card-header">
+        <span class="flight-direction">Standard Queen · Near NAIA Terminal 3</span>
+        <span class="flight-date">Fri, Sep 4 → Sat, Sep 5, 2026</span>
+      </div>
+      <div class="flight-body">
+        <div class="tiles" style="margin-top:0;">
+          <div class="tile">
+            <div class="t-label">Check-in</div>
+            <div class="t-value">Fri, Sep 4</div>
+            <div class="t-note">Late arrival — your Cebu flight lands 11:20 p.m.</div>
+          </div>
+          <div class="tile">
+            <div class="t-label">Checkout</div>
+            <div class="t-value">Sat, Sep 5</div>
+            <div class="t-note">Early out for the 9:10 a.m. flight home</div>
+          </div>
+          <div class="tile">
+            <div class="t-label">Room</div>
+            <div class="t-value">Standard Queen</div>
+            <div class="t-note">Pool &amp; gym access · breakfast included</div>
+          </div>
+        </div>
+        <div class="gold-note"><strong>Refundable rate.</strong> This night is booked on a refundable rate, so it can be released if plans shift.</div>
+      </div>
+      <div class="flight-total">Rate: <strong>Est. $78, refundable</strong> · breakfast included.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STEP 8 — FLY HOME ================= -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Step 8 · Sat, Sep 5</div>
+    <h2 class="section-title">Fly home</h2>
+    <p class="section-lede">Manila to GSP on ANA and United — you land the same day you leave.</p>
+
+    <!-- RETURN -->
+    <div class="flight-card">
+      <div class="flight-card-header">
+        <span class="flight-direction">Return — home to GSP</span>
+        <span class="flight-date">Saturday, September 5, 2026</span>
+      </div>
+      <div class="flight-body">
+        <div class="flight-leg">
+          <div>
+            <span class="flight-airport">MNL</span>
+            <span class="flight-time">9:10 AM</span>
+            <div class="flight-meta">Ninoy Aquino Intl, Manila</div>
+          </div>
+          <div class="flight-arrow">
+            <div class="flight-arrow-line"><svg viewBox="0 0 40 12" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="6" x2="34" y2="6" stroke="currentColor" stroke-width="1.5"/><polyline points="28,2 36,6 28,10" fill="currentColor" stroke="currentColor" stroke-width="1"/></svg></div>
+            <div class="flight-duration">4h 40m</div>
+          </div>
+          <div class="leg-right">
+            <span class="flight-airport">NRT</span>
+            <span class="flight-time">2:50 PM</span>
+            <div class="flight-meta">Narita International, Tokyo</div>
+          </div>
+        </div>
+        <div class="flight-no">NH 820 · Boeing 787-8 Dreamliner · All Nippon Airways</div>
+        <div class="layover-row"><span class="layover-label">2h 10m connection in Tokyo (NRT)</span></div>
+        <div class="flight-leg">
+          <div>
+            <span class="flight-airport">NRT</span>
+            <span class="flight-time">5:00 PM</span>
+            <div class="flight-meta">Narita International</div>
+          </div>
+          <div class="flight-arrow">
+            <div class="flight-arrow-line"><svg viewBox="0 0 40 12" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="6" x2="34" y2="6" stroke="currentColor" stroke-width="1.5"/><polyline points="28,2 36,6 28,10" fill="currentColor" stroke="currentColor" stroke-width="1"/></svg></div>
+            <div class="flight-duration">11h 55m</div>
+          </div>
+          <div class="leg-right">
+            <span class="flight-airport">ORD</span>
+            <span class="flight-time">2:55 PM</span>
+            <div class="flight-meta">Chicago O'Hare — same calendar day, thanks to the date line</div>
+          </div>
+        </div>
+        <div class="flight-no">NH 12 · Boeing 777-300ER · All Nippon Airways</div>
+        <div class="layover-row"><span class="layover-label">3h 4m connection in Chicago (ORD)</span></div>
+        <div class="flight-leg">
+          <div>
+            <span class="flight-airport">ORD</span>
+            <span class="flight-time">5:59 PM</span>
+            <div class="flight-meta">Chicago O'Hare International</div>
+          </div>
+          <div class="flight-arrow">
+            <div class="flight-arrow-line"><svg viewBox="0 0 40 12" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="6" x2="34" y2="6" stroke="currentColor" stroke-width="1.5"/><polyline points="28,2 36,6 28,10" fill="currentColor" stroke="currentColor" stroke-width="1"/></svg></div>
+            <div class="flight-duration">2h 8m</div>
+          </div>
+          <div class="leg-right">
+            <span class="flight-airport">GSP</span>
+            <span class="flight-time">9:07 PM</span>
+            <div class="flight-meta">Greenville-Spartanburg Intl</div>
+          </div>
+        </div>
+        <div class="flight-no">UA 3514 · Embraer E175 · operated by Republic Airways dba United Express</div>
+        <div class="leg-amenities">Both ANA legs carry on-demand video and in-seat power and USB, and the Tokyo–Chicago flight seats you with 34 inches of legroom — more room than a standard domestic economy seat. You leave Manila Saturday morning and land at GSP at 9:07 p.m. the same Saturday; the date line hands back the day you lost flying over. The Chicago connection leaves time for a real meal before the last hop home.</div>
+      </div>
+      <div class="flight-total">Total return travel time: <strong>23 hours 57 minutes</strong>, Manila to Greenville-Spartanburg.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Pricing</div>
+    <h2 class="section-title">The fares</h2>
+    <p class="section-lede">Three components, bags included on the long haul.</p>
+
+    <div class="price-block">
+      <div class="pb-left">
+        <h3>Round trip, GSP ⇄ Manila</h3>
+        <p>One traveler. Economy cabin on all six flights, booked as a single protected itinerary across United and ANA.</p>
+      </div>
+      <div class="pb-right">
+        <div class="pb-price">Est. $2,005</div>
+        <div class="pb-basis">total, 1 traveler</div>
       </div>
     </div>
 
-    <div class="price-summary" id="price-summary">
-      <div class="ps-left">
-        <div class="ps-label">Your Selection</div>
-        <div class="ps-fare" id="ps-fare">Economy</div>
+    <div class="price-block" style="margin-top:14px;">
+      <div class="pb-left">
+        <h3 id="night1-title">Hilton Manila, night of Aug 27</h3>
+        <p id="night1-desc">King room, city view, for two. Free cancellation through August 25. Your selection above updates this line and the trip total.</p>
       </div>
-      <div class="ps-right">
-        <div class="ps-price" id="ps-price">Est. $1,982</div>
-        <div class="ps-basis">per traveler · round trip, GSP ⇄ Manila</div>
+      <div class="pb-right">
+        <div class="pb-price" id="night1-price">Est. $192</div>
+        <div class="pb-basis" id="night1-basis">total, taxes &amp; fees included</div>
       </div>
     </div>
 
-    <p class="bags-note">Worth weighing for a trip this long: the standard Economy fare adds a second free checked bag and free changes for $220 over Basic — on a 10-day international itinerary, that flexibility tends to earn its keep.</p>
+    <div class="price-block" style="margin-top:14px;">
+      <div class="pb-left">
+        <h3>Manila → Dipolog, Aug 28</h3>
+        <p>Cebu Pacific, one way for two travelers. Booked above Cebu Pacific's lowest fare tier; seat selection may carry a small fee.</p>
+      </div>
+      <div class="pb-right">
+        <div class="pb-price">Est. $135</div>
+        <div class="pb-basis">total for 2 travelers</div>
+      </div>
+    </div>
 
-    <div class="commit" style="margin-top:26px;">
+    <div class="price-block" style="margin-top:14px;">
+      <div class="pb-left">
+        <h3>Shangri-La Mactan, Cebu · Aug 30 – Sep 5</h3>
+        <p>Deluxe king, Main Wing, garden view, for two — daily breakfast for two included. Booked through your departure evening so the last day is unhurried.</p>
+      </div>
+      <div class="pb-right">
+        <div class="pb-price">Est. $1,300</div>
+        <div class="pb-basis">total, taxes &amp; fees included</div>
+      </div>
+    </div>
+
+    <div class="price-block" style="margin-top:14px;">
+      <div class="pb-left">
+        <h3>Cebu → Manila, night of Sep 4</h3>
+        <p>Cebu Pacific evening flight, booked above the lowest fare tier. Fare is a close estimate — pick one or two travelers on the flight card above and the totals update here.</p>
+      </div>
+      <div class="pb-right">
+        <div class="pb-price" id="cebu-price-row">Est. $50</div>
+        <div class="pb-basis" id="cebu-price-basis">total, 1 traveler</div>
+      </div>
+    </div>
+
+    <div class="price-block" style="margin-top:14px;">
+      <div class="pb-left">
+        <h3>Savoy Hotel Manila, night of Sep 4</h3>
+        <p>Standard Queen near NAIA Terminal 3, breakfast included. Refundable rate.</p>
+      </div>
+      <div class="pb-right">
+        <div class="pb-price">Est. $78</div>
+        <div class="pb-basis">total, refundable</div>
+      </div>
+    </div>
+
+    <div class="price-block" style="margin-top:14px; background:var(--aqua-mist); border-color:var(--aqua-pale);">
+      <div class="pb-left">
+        <h3>Trip total, everything confirmed so far</h3>
+        <p>International round trip for one; the Aug 27 Manila night as selected; Manila–Dipolog flight and the Shangri-La Mactan stay for two; the Savoy night on Sep 4; Cebu–Manila flight as selected. The Dipolog stay (Aug 28–30) will be added once the property is confirmed.</p>
+      </div>
+      <div class="pb-right">
+        <div class="pb-price" id="trip-total">Est. $3,760</div>
+        <div class="pb-basis">total</div>
+      </div>
+    </div>
+
+    <div class="included">
+      <div class="inc-item">
+        <strong>2 free checked bags</strong>
+        <span>Included for the entire trip, both directions</span>
+      </div>
+      <div class="inc-item">
+        <strong>ANA long-haul comfort</strong>
+        <span>34-inch legroom Tokyo to Chicago, on-demand video on every long leg</span>
+      </div>
+      <div class="inc-item">
+        <strong>One protected itinerary</strong>
+        <span>Connections are the airline's responsibility, not yours</span>
+      </div>
+    </div>
+
+    <div class="commit">
       <div class="c-tag">On Price</div>
       <p>We check every component against public rates and meet or beat them. You're not paying a premium for our convenience — you're paying for the rest of what we do.</p>
     </div>
@@ -451,8 +771,8 @@ footer { background:var(--sand-light); padding:48px 24px 42px; text-align:center
 <section class="band">
   <div class="wrap">
     <div class="eyebrow">Next Step</div>
-    <h2 class="section-title">Tell Christina which fare works</h2>
-    <p class="section-lede">Airfare moves daily — a quick reply lets us lock this in while it holds.</p>
+    <h2 class="section-title">Ready to lock it in?</h2>
+    <p class="section-lede">Airfare moves daily — a quick reply lets us hold this while it lasts.</p>
 
     <div class="commit" style="margin:0 0 28px; background:var(--aqua-pale);">
       <div class="c-tag">After This Quote</div>
@@ -479,13 +799,17 @@ footer { background:var(--sand-light); padding:48px 24px 42px; text-align:center
           <input type="tel" id="f-phone" name="phone" autocomplete="tel">
         </div>
         <div class="form-row">
-          <label for="f-option">Which fare are you leaning toward?</label>
-          <select id="f-option" name="option_interest">
-            <option value="Basic Economy — $1,762 per traveler">Basic Economy — $1,762 per traveler</option>
-            <option value="Economy — $1,982 per traveler" selected>Economy — $1,982 per traveler</option>
-            <option value="Economy Fully Refundable — $2,352 per traveler">Economy Fully Refundable — $2,352 per traveler</option>
-            <option value="Base Premium Economy — $2,982 per traveler">Base Premium Economy — $2,982 per traveler</option>
-            <option value="Premium Economy — $3,282 per traveler">Premium Economy — $3,282 per traveler</option>
+          <label for="f-night1">First night in Manila, Aug 27</label>
+          <select id="f-night1" name="manila_first_night">
+            <option value="Hilton Manila — Est. $192" selected>Hilton Manila — Est. $192</option>
+            <option value="Savoy Hotel Manila — Est. $78 (refundable)">Savoy Hotel Manila — Est. $78 (refundable)</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="f-cebu-pax">Cebu → Manila flight, Sep 4</label>
+          <select id="f-cebu-pax" name="cebu_manila_travelers">
+            <option value="1 traveler — Est. $50" selected>1 traveler — Est. $50</option>
+            <option value="2 travelers — Est. $100">2 travelers — Est. $100</option>
           </select>
         </div>
         <div class="form-row">
@@ -536,48 +860,84 @@ footer { background:var(--sand-light); padding:48px 24px 42px; text-align:center
   link.textContent = addr;
   link.href = 'mailto:' + addr;
 
-  /* ----- Fare selection: cards <-> summary <-> form select, in sync ----- */
-  var cards = Array.prototype.slice.call(document.querySelectorAll('.fare-card'));
-  var psFare = document.getElementById('ps-fare');
-  var psPrice = document.getElementById('ps-price');
-  var optionSelect = document.getElementById('f-option');
+  /* ----- Live calculator: first-night hotel + Cebu → Manila travelers ----- */
+  var CORE_TOTAL = 3518; /* flights for one + MNL-DPL + Shangri-La + Savoy Sep 4 (excludes first-night hotel and Cebu-Manila flight) */
+  var CEBU_PP = 50;
+  var NIGHT1 = {
+    hilton: { cost: 192, title: 'Hilton Manila, night of Aug 27', desc: 'King room, city view, for two. Free cancellation through August 25. Your selection above updates this line and the trip total.', priceText: 'Est. $192', basis: 'total, taxes & fees included' },
+    savoy:  { cost: 78,  title: 'Savoy Hotel Manila, night of Aug 27', desc: 'Standard Queen near NAIA Terminal 3, breakfast included. Refundable rate. Your selection above updates this line and the trip total.', priceText: 'Est. $78', basis: 'total, refundable' }
+  };
+  var night1Key = 'hilton';
+  var cebuPax = 1;
 
-  function selectFare(fareName, fromForm) {
-    cards.forEach(function(card) {
-      var isMatch = card.getAttribute('data-fare') === fareName;
-      card.classList.toggle('selected', isMatch);
-      card.setAttribute('aria-pressed', isMatch ? 'true' : 'false');
-      if (isMatch) {
-        psFare.textContent = card.querySelector('.fare-name').textContent;
-        psPrice.textContent = 'Est. ' + card.getAttribute('data-display');
-      }
-    });
-    if (!fromForm) {
-      for (var i = 0; i < optionSelect.options.length; i++) {
-        if (optionSelect.options[i].value.indexOf(fareName + ' —') === 0) {
-          optionSelect.selectedIndex = i;
-          break;
-        }
-      }
-    }
+  var night1Btns = Array.prototype.slice.call(document.querySelectorAll('.night1-btn'));
+  var night1Select = document.getElementById('f-night1');
+  var cardHilton = document.getElementById('card-hilton');
+  var cardSavoy1 = document.getElementById('card-savoy1');
+  var n1Title = document.getElementById('night1-title');
+  var n1Desc = document.getElementById('night1-desc');
+  var n1Price = document.getElementById('night1-price');
+  var n1Basis = document.getElementById('night1-basis');
+
+  var paxBtns = Array.prototype.slice.call(document.querySelectorAll('.pax-btn[data-pax]'));
+  var cebuCardTotal = document.getElementById('cebu-card-total');
+  var cebuPriceRow = document.getElementById('cebu-price-row');
+  var cebuPriceBasis = document.getElementById('cebu-price-basis');
+  var cebuSelect = document.getElementById('f-cebu-pax');
+  var tripTotal = document.getElementById('trip-total');
+
+  function fmt(n) { return '$' + n.toLocaleString('en-US'); }
+
+  function updateTripTotal() {
+    tripTotal.textContent = 'Est. ' + fmt(CORE_TOTAL + NIGHT1[night1Key].cost + CEBU_PP * cebuPax);
   }
 
-  cards.forEach(function(card) {
-    card.addEventListener('click', function() { selectFare(card.getAttribute('data-fare'), false); });
-    card.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectFare(card.getAttribute('data-fare'), false); }
+  function setNight1(key, fromForm) {
+    night1Key = key;
+    var opt = NIGHT1[key];
+    night1Btns.forEach(function(b) {
+      var active = b.getAttribute('data-night') === key;
+      b.classList.toggle('active', active);
+      b.setAttribute('aria-pressed', active ? 'true' : 'false');
     });
-  });
+    cardHilton.classList.toggle('selected', key === 'hilton');
+    cardSavoy1.classList.toggle('selected', key === 'savoy');
+    n1Title.textContent = opt.title;
+    n1Desc.textContent = opt.desc;
+    n1Price.textContent = opt.priceText;
+    n1Basis.textContent = opt.basis;
+    if (!fromForm) { night1Select.selectedIndex = (key === 'hilton') ? 0 : 1; }
+    updateTripTotal();
+  }
 
-  optionSelect.addEventListener('change', function() {
-    var val = optionSelect.value;
-    var fareName = val.split(' — ')[0];
-    if (fareName === 'Economy Fully Refundable') { fareName = 'Economy Fully Refundable'; }
-    selectFare(fareName, true);
-  });
+  function setCebuPax(n, fromForm) {
+    cebuPax = n;
+    var cost = CEBU_PP * n;
+    var label = n === 1 ? '1 traveler' : '2 travelers';
+    paxBtns.forEach(function(b) {
+      var active = parseInt(b.getAttribute('data-pax'), 10) === n;
+      b.classList.toggle('active', active);
+      b.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+    cebuCardTotal.textContent = label + ', Est. ' + fmt(cost);
+    cebuPriceRow.textContent = 'Est. ' + fmt(cost);
+    cebuPriceBasis.textContent = 'total, ' + label;
+    if (!fromForm) { cebuSelect.selectedIndex = n - 1; }
+    updateTripTotal();
+  }
 
-  /* default selection */
-  selectFare('Economy', false);
+  night1Btns.forEach(function(b) {
+    b.addEventListener('click', function() { setNight1(b.getAttribute('data-night'), false); });
+  });
+  night1Select.addEventListener('change', function() { setNight1(night1Select.selectedIndex === 0 ? 'hilton' : 'savoy', true); });
+
+  paxBtns.forEach(function(b) {
+    b.addEventListener('click', function() { setCebuPax(parseInt(b.getAttribute('data-pax'), 10), false); });
+  });
+  cebuSelect.addEventListener('change', function() { setCebuPax(cebuSelect.selectedIndex + 1, true); });
+
+  setNight1('hilton', false);
+  setCebuPax(1, false);
 
   /* ----- Form submit via fetch ----- */
   document.getElementById('pmtp-form').addEventListener('submit', function(e) {
