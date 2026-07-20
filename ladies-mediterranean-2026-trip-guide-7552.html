@@ -160,6 +160,9 @@ section { padding:54px 0; }
 .rc-price-box.total-box { background:var(--aqua-mist); border-color:var(--aqua-pale); }
 .rc-refund { font-size:.85rem; color:var(--aqua-dark); font-weight:500; margin-top:12px; }
 .rc-math { font-size:.85rem; color:var(--ink-soft); background:var(--paper); border:1px dashed var(--line); border-radius:10px; padding:10px 14px; margin-top:12px; }
+.choice-row { display:flex; gap:10px; flex-wrap:wrap; margin-top:16px; }
+.choice-btn { font-family:'DM Sans',sans-serif; font-size:.9rem; font-weight:600; padding:12px 22px; border-radius:100px; border:1.5px solid var(--aqua-dark); background:var(--white); color:var(--aqua-dark); cursor:pointer; transition:all .15s ease; }
+.choice-btn.on { background:var(--aqua-dark); color:var(--white); }
 
 /* ---------- CAROUSEL ---------- */
 .carousel { position:relative; background:var(--aqua-mist); }
@@ -544,7 +547,7 @@ footer .fbrand { margin-top:16px; font-size:.78rem; font-weight:600; letter-spac
       <div class="dd">Tue, Nov 10<small>Day 14</small></div>
       <div class="dt"><div class="t">Disembark · hello, Rome · Hotel Barocco</div><div class="x">An easy morning off the ship, a 90-minute transfer, then a free first evening — the Trevi Fountain and Pantheon glow after dark.</div>
         <div style="margin-top:10px; background:var(--aqua-mist); border-radius:10px; padding:10px 14px; font-size:.85rem; color:var(--ink-soft);"><strong style="color:var(--ink); font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; display:block; margin-bottom:3px;">Nothing needed — just so you know</strong>Christina is booking your transfer from the ship to your Rome hotel — you'll walk off the ship and your ride will be waiting.</div>
-        <div class="needed"><span class="nh">Needed from you</span>Just one thing: a simple <strong>yes</strong>. There's only one room to look at here — no choosing between options — Christina books it the moment you give the go-ahead.</div>
+        <div class="needed"><span class="nh">Needed from you</span>One easy decision, two buttons: say <strong>yes</strong> to the room we found (there's just the one to look at), or tap <strong>"show me other hotel options"</strong> and Christina will bring you alternatives. Either way, one tap below and she takes it from there.</div>
         <a class="jump-link" href="#rome-hotel">Jump to see your Rome room ↓</a></div>
       <span class="status pending">Christina will book</span>
     </div>
@@ -892,7 +895,7 @@ footer .fbrand { margin-top:16px; font-size:.78rem; font-weight:600; letter-spac
       <div class="rc-body">
         <div class="rc-head">
           <h3>Superior Double Room · Free Breakfast</h3>
-          <div class="rc-pick" style="background:var(--aqua-dark); color:var(--white); border-color:var(--aqua-dark);">Your Rome room</div>
+          <div class="rc-pick" id="rome-state-pill" style="background:var(--aqua-dark); color:var(--white); border-color:var(--aqua-dark);">Selected ✓</div>
         </div>
         <div class="rc-specs">
           <span>16 sq m</span><span>2 twin beds on request</span><span>Breakfast included</span><span>Free WiFi</span>
@@ -907,6 +910,10 @@ footer .fbrand { margin-top:16px; font-size:.78rem; font-weight:600; letter-spac
         <div class="rc-refund">✓ Fully refundable before Nov 8 · auto pay-later in late October</div>
         <div style="margin-top:14px; background:var(--sand-light); border:1px solid var(--gold-whisper); border-radius:10px; padding:12px 16px; font-size:.88rem;">
           <strong>Only one of these rooms remains</strong> at this rate for your dates — worth deciding on Rome sooner rather than later. It's fully refundable before Nov 8, so holding it costs nothing.
+        </div>
+        <div class="choice-row">
+          <button type="button" class="choice-btn on" id="rome-btn-yes" onclick="setRomeChoice('yes')">✓ Yes — book this room for us</button>
+          <button type="button" class="choice-btn" id="rome-btn-ask" onclick="setRomeChoice('ask')">Show me other hotel options instead</button>
         </div>
       </div>
     </div>
@@ -1038,7 +1045,7 @@ footer .fbrand { margin-top:16px; font-size:.78rem; font-weight:600; letter-spac
         <input type="hidden" name="from_name" value="Tracy McCarley &amp; Margaret Hipple Quote — Point Me to Paradise">
         <input type="hidden" name="redirect" value="false">
         <input type="hidden" name="tours_selected" id="tours-selected-field" value="None yet">
-        <input type="hidden" name="rome_hotel" value="Hotel Barocco · Superior Double Room — $1,072.41">
+
         <input type="hidden" name="estimated_total" id="estimated-total-field" value="$2,324.42">
 
         <div class="form-row">
@@ -1064,6 +1071,13 @@ footer .fbrand { margin-top:16px; font-size:.78rem; font-weight:600; letter-spac
         <div class="form-row">
           <label>Tours you've added</label>
           <div class="tour-summary-line" id="tour-summary-line">None yet — tap "Add to trip" on any tour above and it will appear here.</div>
+        </div>
+        <div class="form-row">
+          <label for="f-rome">Rome hotel</label>
+          <select id="f-rome" name="rome_hotel">
+            <option value="Yes — book Hotel Barocco Superior Double — $1,072.41" selected>Yes — book Hotel Barocco Superior Double — $1,072.41</option>
+            <option value="Please show us other Rome hotel options">Please show us other Rome hotel options</option>
+          </select>
         </div>
         <div class="form-row">
           <label for="f-insurance">Travel insurance</label>
@@ -1163,15 +1177,37 @@ var tours = {
   "vatican":      { label: "Semi-Private Vatican Masterpieces (Nov 12)", price: 271 }
 };
 var ROME_ROOM = { label: "Hotel Barocco · Superior Double", price: 1072.41 };
+var romeChoice = 'yes';
 var selectedRoom = 'superior';
 var addedTours = [];
+
+function setRomeChoice(c) {
+  romeChoice = c;
+  var y = document.getElementById('rome-btn-yes'), a = document.getElementById('rome-btn-ask');
+  var pill = document.getElementById('rome-state-pill');
+  var card = document.getElementById('room-rome-superior');
+  if (c === 'yes') {
+    y.classList.add('on'); a.classList.remove('on');
+    pill.textContent = 'Selected ✓';
+    pill.style.background = 'var(--aqua-dark)'; pill.style.color = 'var(--white)'; pill.style.borderColor = 'var(--aqua-dark)';
+    card.classList.add('selected');
+    document.getElementById('f-rome').value = 'Yes — book Hotel Barocco Superior Double — $1,072.41';
+  } else {
+    a.classList.add('on'); y.classList.remove('on');
+    pill.textContent = 'Exploring other options';
+    pill.style.background = 'var(--paper)'; pill.style.color = 'var(--aqua-dark)'; pill.style.borderColor = 'var(--aqua)';
+    card.classList.remove('selected');
+    document.getElementById('f-rome').value = 'Please show us other Rome hotel options';
+  }
+  updateTotals();
+}
 
 function money(n) {
   return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
 
 function updateTotals() {
-  var total = rooms[selectedRoom].price + ROME_ROOM.price;
+  var total = rooms[selectedRoom].price + (romeChoice === 'yes' ? ROME_ROOM.price : 0);
   var tourLabels = [];
   for (var i = 0; i < addedTours.length; i++) {
     total += tours[addedTours[i]].price;
@@ -1180,8 +1216,9 @@ function updateTotals() {
   var totalStr = 'Est. ' + money(total);
   document.getElementById('live-total-1').textContent = totalStr;
   document.getElementById('live-total-2').textContent = totalStr;
-  document.getElementById('sel-room-label').textContent = 'Athens: ' + rooms[selectedRoom].label + ' + Rome: Hotel Barocco' + (addedTours.length ? ' + ' + addedTours.length + (addedTours.length === 1 ? ' tour' : ' tours') : '');
-  document.getElementById('sel-summary-2').textContent = 'Athens: ' + rooms[selectedRoom].label + ' · Rome: Hotel Barocco' + (addedTours.length ? ' · ' + addedTours.length + (addedTours.length === 1 ? ' tour added' : ' tours added') : ' · no tours added yet');
+  var romeLbl = (romeChoice === 'yes') ? 'Rome: Hotel Barocco' : 'Rome: other options requested';
+  document.getElementById('sel-room-label').textContent = 'Athens: ' + rooms[selectedRoom].label + ' + ' + romeLbl + (addedTours.length ? ' + ' + addedTours.length + (addedTours.length === 1 ? ' tour' : ' tours') : '');
+  document.getElementById('sel-summary-2').textContent = 'Athens: ' + rooms[selectedRoom].label + ' · ' + romeLbl + (addedTours.length ? ' · ' + addedTours.length + (addedTours.length === 1 ? ' tour added' : ' tours added') : ' · no tours added yet');
   var summaryLine = document.getElementById('tour-summary-line');
   summaryLine.textContent = tourLabels.length ? tourLabels.join(' · ') : 'None yet — tap "Add to trip" on any tour above and it will appear here.';
   document.getElementById('tours-selected-field').value = tourLabels.length ? tourLabels.join('; ') : 'None yet';
@@ -1205,6 +1242,10 @@ document.getElementById('f-option').addEventListener('change', function() {
   for (var key in rooms) {
     if (rooms[key].optValue === this.value) { selectRoom(key); break; }
   }
+});
+
+document.getElementById('f-rome').addEventListener('change', function() {
+  setRomeChoice(this.value.indexOf('Yes') === 0 ? 'yes' : 'ask');
 });
 
 function toggleTour(key) {
