@@ -140,6 +140,8 @@ section { padding:54px 0; }
 .leg .mid .cab { color:var(--ink-soft); }
 .leg .ap.arr { text-align:right; }
 .flight-note { font-size:.88rem; color:var(--ink-soft); margin-top:12px; }
+.seat-row { background:var(--aqua-mist); border-radius:8px; padding:8px 14px; font-size:.85rem; margin:6px 0 4px; }
+.seat-row strong { color:var(--aqua-dark); }
 .pending-chip { display:inline-block; background:var(--sand-light); border:1px solid var(--gold-whisper); color:var(--ink); font-size:.8rem; font-weight:600; padding:6px 14px; border-radius:100px; margin-top:14px; }
 
 /* ---------- ROOM OPTIONS ---------- */
@@ -252,6 +254,42 @@ footer .fbrand { margin-top:16px; font-size:.78rem; font-weight:600; letter-spac
   .carousel img { height:240px; }
   .form-shell { padding:26px 20px 30px; }
 }
+
+/* ---------- MOBILE REFINEMENTS ---------- */
+html { -webkit-text-size-adjust:100%; }
+@media (max-width: 640px) {
+  section { padding:38px 0; }
+  .wrap { padding:0 18px; }
+  .pmtp-hero { padding:56px 20px 46px; }
+  h2 { font-size:1.55rem; }
+  .snap-card, .flight-card { padding:18px 18px; }
+  .rc-body { padding:20px 18px; }
+  .rc-pricing { grid-template-columns:1fr; }
+  .rc-price-box .amt { font-size:1.2rem; }
+  .notes-panel, .dine-panel { padding:20px 16px; }
+  .dine-wrap, .notes-wrap { display:block; }
+  .dine-panel { max-width:100%; }
+  .choice-row { flex-direction:column; }
+  .choice-btn { width:100%; }
+  .tour-card { padding:18px 18px; }
+  .tour-price { text-align:left; }
+  .total-bar { padding:18px 18px; }
+  .total-bar .amt { font-size:1.55rem; }
+  #submit-btn { width:100%; }
+  .jump-link { padding:9px 18px; }
+  .day-row { padding:14px 16px; }
+  .legend { padding:16px 16px; }
+  .amen-grid { padding:4px 16px 18px; }
+  details.amenities summary { padding:15px 16px; }
+  .arranging { padding:18px 18px; }
+  .video-grid { grid-template-columns:1fr; }
+  footer { padding:38px 0 44px; }
+}
+@media (max-width: 400px) {
+  .hero-dates { font-size:.72rem; padding:9px 16px; }
+  .seat-row { font-size:.8rem; }
+  .status { font-size:.68rem; padding:5px 11px; }
+}
 </style>
 </head>
 <body>
@@ -335,7 +373,7 @@ footer .fbrand { margin-top:16px; font-size:.78rem; font-weight:600; letter-spac
       <div class="snap-card">
         <div class="k">Cruise</div>
         <div class="v">Enchanted Princess</div>
-        <div class="d">Oct 31 – Nov 10 · 7 ports + 1 sea day · Princess Plus</div>
+        <div class="d">Oct 31 – Nov 10 · 7 ports + 1 sea day · Princess Premier</div>
       </div>
       <div class="snap-card">
         <div class="k">Post-Cruise</div>
@@ -373,7 +411,7 @@ footer .fbrand { margin-top:16px; font-size:.78rem; font-weight:600; letter-spac
 
     <div class="day-row">
       <div class="dd">Wed, Oct 28<small>Day 1</small></div>
-      <div class="dt"><div class="t">Fly Houston → Amsterdam, overnight</div><div class="x">Depart IAH 4:30 PM in Premium Comfort. Dinner, a movie, and sleep over the Atlantic. You've already booked this — Margaret is on the same flights as Tracy.</div></div>
+      <div class="dt"><div class="t">Fly Houston → Amsterdam, overnight</div><div class="x">Depart IAH 4:30 PM in Premium Comfort. Dinner, a movie, and sleep over the Atlantic. Booked and confirmed — # HCDEGY — with Tracy, Margaret, and Elizabeth seated together.</div></div>
       <div class="status-stack"><span class="status set">✓ Booked</span><span class="status paid">✓ Paid in full</span></div>
     </div>
     <div class="day-row">
@@ -417,9 +455,9 @@ footer .fbrand { margin-top:16px; font-size:.78rem; font-weight:600; letter-spac
           <div class="dine-panel">
             <h4>The Signature Restaurants — reserve these</h4>
             <ul>
-              <li><strong>Crown Grill</strong> — the ship's steakhouse and its most popular table: aged, hand-cut steaks and premium seafood. Book this one first. Approx. $55 per person.</li>
-              <li><strong>Sabatini's Italian Trattoria</strong> — a multi-course Italian feast of handmade pastas and family recipes. Cozy and celebratory. Approx. $55 per person.</li>
-              <li><strong>The Catch by Rudi</strong> — Chef Rudi Sodamin's seafood restaurant; beautifully presented and a little quieter than Crown Grill. $55 per person.</li>
+              <li><strong>Crown Grill</strong> — the ship's steakhouse and its most popular table: aged, hand-cut steaks and premium seafood. Book this one first. <em>Included with your Premier package.</em></li>
+              <li><strong>Sabatini's Italian Trattoria</strong> — a multi-course Italian feast of handmade pastas and family recipes. Cozy and celebratory. <em>Included with your Premier package.</em></li>
+              <li><strong>The Catch by Rudi</strong> — Chef Rudi Sodamin's seafood restaurant; beautifully presented and a little quieter than Crown Grill. <em>Included with your Premier package.</em></li>
               <li><strong>360: An Extraordinary Experience</strong> — a seven-course immersive Mediterranean tasting at a circular table with wraparound visuals and wine pairings. Very limited seats — if this tempts you, say so early. Premium pricing.</li>
               <li><strong>Chef's Table</strong> — an exclusive small-group dinner with wine pairings and a galley tour. Also very limited. Premium pricing.</li>
               <li><strong>Ultimate Balcony Dining</strong> — a four-course dinner served by your own waiter on your Mini Suite balcony. Sailaway from Kotor comes to mind. Approx. $50 per person.</li>
@@ -431,7 +469,7 @@ footer .fbrand { margin-top:16px; font-size:.78rem; font-weight:600; letter-spac
               <li><strong>Ocean Terrace Sushi</strong> — fresh sushi and sashimi</li>
               <li><strong>Salty Dog Café &amp; Gelateria</strong> — laid-back bites and gelato indulgences</li>
             </ul>
-            <p class="dp-note">Your Princess Plus package includes <strong>two casual-dining meals each</strong> — use them at the casual spots above. The signature restaurants carry a per-person cover charge plus an 18% service charge; exact prices show in the Princess app when you book, and menus vary by sailing.</p>
+            <p class="dp-note">Wonderful news: your <strong>Princess Premier package includes specialty dining</strong> at Crown Grill, Sabatini's, and The Catch by Rudi — no cover charges for you, and casual dining is covered too. You still need to <strong>reserve your nights</strong>, and the best tables go fast. The premium experiences — 360, Chef's Table, and Ultimate Balcony Dining — carry their own separate pricing; exact details show in the Princess app.</p>
           </div>
         </div>
       </div>
@@ -596,42 +634,45 @@ footer .fbrand { margin-top:16px; font-size:.78rem; font-weight:600; letter-spac
     <p style="margin-top:10px; font-size:.92rem; color:var(--ink-soft);"><em>This is the flight schedule for Margaret, Tracy, and Elizabeth — all three of you are on these same flights. Christina is asking Lisa to send hers.</em></p>
 
     <div class="flight-card">
-      <h3>Outbound · Houston → Athens <span class="fdate">Wed, Oct 28 → Thu, Oct 29</span></h3>
+      <h3>Outbound · Houston → Athens <span class="fdate">Wed, Oct 28 → Thu, Oct 29 · Conf # HCDEGY</span></h3>
       <div class="leg">
         <div class="ap"><div class="city">Houston–Bush (IAH)</div><div class="time">4:30 PM · Wed 10/28</div></div>
         <div class="mid"><div class="fl">DL 9459 · KLM</div><div class="cab">Premium Comfort</div></div>
         <div class="ap arr"><div class="city">Amsterdam (AMS)</div><div class="time">7:35 AM · Thu 10/29</div></div>
       </div>
+      <div class="seat-row"><strong>Seats:</strong> Tracy 12D · Margaret 12E · Elizabeth 12F — all together</div>
       <div class="leg">
         <div class="ap"><div class="city">Amsterdam (AMS)</div><div class="time">12:25 PM · Thu 10/29</div></div>
         <div class="mid"><div class="fl">DL 9185 · KLM</div><div class="cab">Europe Economy</div></div>
         <div class="ap arr"><div class="city">Athens (ATH)</div><div class="time">4:35 PM · Thu 10/29</div></div>
       </div>
+      <div class="seat-row"><strong>Seats:</strong> Tracy 6A · Margaret 6B · Elizabeth 6C — all together</div>
       <div class="flight-note">A comfortable ~4-hour connection in Amsterdam — time for coffee and a stroll, no stress.</div>
     </div>
 
     <div class="flight-card">
-      <h3>Return · Rome → Houston <span class="fdate">Fri, Nov 13</span></h3>
+      <h3>Return · Rome → Houston <span class="fdate">Fri, Nov 13 · Conf # HCDEGY</span></h3>
       <div class="leg">
         <div class="ap"><div class="city">Rome–Fiumicino (FCO)</div><div class="time">12:40 PM · Fri 11/13</div></div>
         <div class="mid"><div class="fl">DL 67</div><div class="cab">Premium Select</div></div>
         <div class="ap arr"><div class="city">Atlanta (ATL)</div><div class="time">6:00 PM · Fri 11/13</div></div>
       </div>
+      <div class="seat-row"><strong>Seats:</strong> Tracy 21C · Margaret 21D · Elizabeth 21G</div>
       <div class="leg">
         <div class="ap"><div class="city">Atlanta (ATL)</div><div class="time">10:40 PM · Fri 11/13</div></div>
         <div class="mid"><div class="fl">DL 1601</div><div class="cab">Comfort+</div></div>
         <div class="ap arr"><div class="city">Houston–Bush (IAH)</div><div class="time">11:58 PM · Fri 11/13</div></div>
       </div>
+      <div class="seat-row"><strong>Seats:</strong> Tracy 11D · Margaret 11E · Elizabeth 11F — all together</div>
       <div class="flight-note">Passports must be valid at least 6 months past your return date — through mid-May 2027.</div>
     </div>
 
-    <div style="margin-top:18px; background:var(--sand-light); border:1px solid var(--gold-whisper); border-radius:14px; padding:22px 26px;">
-      <h3 style="font-size:1.05rem;">What Christina still needs</h3>
-      <p style="font-size:.9rem; color:var(--ink-soft); margin-top:4px;">Love that your flights are already set! Just three little things, whenever you have a moment — then your final itinerary will be complete:</p>
-      <ul style="list-style:none; margin-top:12px; font-size:.95rem;">
-        <li style="padding:7px 0; border-bottom:1px dashed var(--gold-whisper);">☐ &nbsp;<strong>Lisa's flight information</strong> — Christina is reaching out to Lisa for this, nothing needed from you</li>
-        <li style="padding:7px 0; border-bottom:1px dashed var(--gold-whisper);">☐ &nbsp;<strong>Margaret's seat numbers</strong></li>
-        <li style="padding:7px 0;">☐ &nbsp;<strong>Flight confirmation numbers for everyone</strong> — so Christina can watch for any schedule changes for you</li>
+    <div style="margin-top:18px; background:var(--aqua-mist); border:1px solid var(--aqua-pale); border-radius:14px; padding:22px 26px;">
+      <h3 style="font-size:1.05rem;">Flight details — all set ✓</h3>
+      <ul style="list-style:none; margin-top:10px; font-size:.95rem;">
+        <li style="padding:7px 0; border-bottom:1px dashed var(--aqua-pale);">✓ &nbsp;<strong>Confirmation # HCDEGY</strong> — on file for Tracy, Margaret, and Elizabeth. Christina is watching for any schedule changes.</li>
+        <li style="padding:7px 0; border-bottom:1px dashed var(--aqua-pale);">✓ &nbsp;<strong>Seats assigned for all three</strong> — shown on each flight above, seated together.</li>
+        <li style="padding:7px 0;">☐ &nbsp;<strong>Lisa's flight information</strong> — the one open item; Christina is getting it from Lisa directly, nothing needed from you.</li>
       </ul>
     </div>
   </div>
@@ -798,7 +839,7 @@ footer .fbrand { margin-top:16px; font-size:.78rem; font-weight:600; letter-spac
   <div class="wrap">
     <div class="eyebrow">The Cruise · Oct 31 – Nov 10</div>
     <h2>Enchanted Princess — the Greek Isles, Croatia &amp; Montenegro</h2>
-    <p>Board in Piraeus on Saturday, October 31, unpack once, and let seven ports come to you. The route threads the best of two seas: Santorini's caldera villages, a private day on Crete, ancient Olympia, Corfu's Venetian old town, then north up the Adriatic — Split, Dubrovnik, and the mountain-walled Bay of Kotor — before a well-placed sea day and the grand Italian finale at Naples. Your Princess Plus fare covers drinks, WiFi, and crew appreciation throughout.</p>
+    <p>Board in Piraeus on Saturday, October 31, unpack once, and let seven ports come to you. The route threads the best of two seas: Santorini's caldera villages, a private day on Crete, ancient Olympia, Corfu's Venetian old town, then north up the Adriatic — Split, Dubrovnik, and the mountain-walled Bay of Kotor — before a well-placed sea day and the grand Italian finale at Naples. Your Princess Premier package covers premium drinks, WiFi, crew appreciation — and your specialty dining restaurants — throughout.</p>
 
     <div class="port-list">
       <div class="port"><div class="pd">Sat · Oct 31</div><div class="pn">Athens (Piraeus)</div><div class="pt">Embarkation &amp; sailaway</div></div>
@@ -814,7 +855,7 @@ footer .fbrand { margin-top:16px; font-size:.78rem; font-weight:600; letter-spac
       <div class="port"><div class="pd">Tue · Nov 10</div><div class="pn">Rome (Civitavecchia)</div><div class="pt">Disembark for three Roman days</div></div>
     </div>
 
-    <div style="margin-top:22px; display:inline-block; background:var(--aqua-pale); border-radius:100px; padding:12px 26px; font-weight:600; font-size:.92rem;">✓ Your cruise is booked and paid in full — Mini Suite R514, mid-ship, Deck 14, with Princess Plus</div>
+    <div style="margin-top:22px; display:inline-block; background:var(--aqua-pale); border-radius:100px; padding:12px 26px; font-weight:600; font-size:.92rem;">✓ Your cruise is booked and paid in full — Mini Suite R514, mid-ship, Deck 14, with Princess Premier</div>
   </div>
 </section>
 
