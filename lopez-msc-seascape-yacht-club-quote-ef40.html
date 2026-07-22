@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jennifer &amp; Jason Lopez — MSC Seascape Yacht Club | Point Me to Paradise</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --aqua-deep:#2e8b8b;
+    --aqua-mid:#4f8a8c;
+    --aqua-soft:#75afb1;
+    --aqua-mist:#e4f1f0;
+    --aqua-pale:#f0f7f6;
+    --cream:#fdfbf6;
+    --sand:#f6f1e7;
+    --sand-deep:#efe7d8;
+    --gold:#cdb87a;
+    --gold-pale:#f3ecd9;
+    --ink:#2b3d3c;
+    --ink-soft:#4c605e;
+    --ink-faint:#7b8d8b;
+    --line:#dcebe9;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'DM Sans',sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.65;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Playfair Display',serif;font-weight:600;color:var(--ink);}
+  .accent-script{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px;}
+  section{padding:64px 0;}
+  .eyebrow{
+    font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--aqua-deep);font-weight:600;margin-bottom:12px;
+  }
+  .section-title{font-size:32px;margin-bottom:8px;}
+  .section-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:var(--ink-soft);margin-bottom:32px;}
+  .icon{width:22px;height:22px;stroke:var(--aqua-deep);stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;}
+  .icon-sm{width:18px;height:18px;}
+
+  /* HEADER */
+  header{
+    background:linear-gradient(160deg,var(--aqua-pale) 0%,var(--aqua-mist) 55%,var(--sand) 100%);
+    border-bottom:1px solid var(--line);
+    padding:56px 0 64px;
+    text-align:center;
+  }
+  .brand-mark{
+    font-family:'Playfair Display',serif;font-size:15px;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--aqua-deep);margin-bottom:6px;font-weight:500;
+  }
+  .brand-tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:var(--ink-faint);margin-bottom:40px;}
+  .hero-prepared{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:10px;}
+  .hero-names{font-size:26px;font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-soft);margin-bottom:22px;}
+  header h1{font-size:clamp(34px,5.5vw,52px);line-height:1.12;margin-bottom:10px;}
+  .hero-experience{
+    display:inline-block;margin:14px 0 26px;padding:8px 22px;
+    background:#ffffff;border:1px solid var(--gold);border-radius:999px;
+    font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;
+  }
+  .hero-facts{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:14px 34px;
+    font-size:15px;color:var(--ink-soft);
+  }
+  .hero-facts span{display:inline-flex;align-items:center;gap:8px;}
+  .status-chip{
+    display:inline-flex;align-items:center;gap:8px;margin-top:28px;
+    background:var(--aqua-deep);color:#fff;border-radius:999px;
+    padding:10px 24px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;
+  }
+  .status-chip svg{stroke:#fff;}
+
+  /* OVERVIEW CARDS */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px;}
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:14px;
+    padding:24px 22px;
+  }
+  .card .icon{margin-bottom:12px;}
+  .card h3{font-size:13px;font-family:'DM Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;margin-bottom:6px;}
+  .card p{font-size:17px;color:var(--ink);font-weight:500;}
+  .card p small{display:block;font-size:14px;color:var(--ink-soft);font-weight:400;margin-top:3px;}
+
+  /* ITINERARY */
+  .itin-band{background:var(--aqua-pale);}
+  .itin-table{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;border:1px solid var(--line);}
+  .itin-table th{
+    background:var(--aqua-mist);color:var(--ink-soft);text-align:left;
+    font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;
+    padding:14px 18px;
+  }
+  .itin-table td{padding:15px 18px;border-top:1px solid var(--line);font-size:15px;vertical-align:top;}
+  .itin-table td.day{white-space:nowrap;color:var(--ink-faint);font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;}
+  .itin-table td.port{font-weight:500;}
+  .itin-table td.port .accent-script{display:block;font-size:15px;color:var(--ink-faint);font-style:italic;font-weight:400;}
+  .sea-day td.port{color:var(--aqua-mid);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;}
+  .itin-note{font-size:13px;color:var(--ink-faint);margin-top:14px;}
+
+  /* SUITE */
+  .suite-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:start;}
+  .suite-panel{background:var(--sand);border:1px solid var(--sand-deep);border-radius:14px;padding:28px;}
+  .spec-list{list-style:none;}
+  .spec-list li{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--sand-deep);font-size:15px;}
+  .spec-list li:last-child{border-bottom:none;}
+  .spec-list .k{color:var(--ink-faint);}
+  .spec-list .v{font-weight:500;text-align:right;}
+
+  /* PRIVILEGES */
+  .priv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;}
+  .priv-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;}
+  .priv-card h3{font-size:19px;margin-bottom:6px;}
+  .priv-card .accent-script{color:var(--aqua-mid);font-size:16px;display:block;margin-bottom:14px;}
+  .priv-card ul{list-style:none;}
+  .priv-card li{display:flex;gap:10px;padding:6px 0;font-size:15px;color:var(--ink-soft);}
+  .priv-card li svg{margin-top:4px;}
+
+  /* PRICING */
+  .price-band{background:var(--aqua-pale);}
+  .price-panel{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;max-width:640px;margin:0 auto;}
+  .price-panel table{width:100%;border-collapse:collapse;font-size:15px;}
+  .price-panel td{padding:14px 24px;border-top:1px solid var(--line);}
+  .price-panel tr:first-child td{border-top:none;}
+  .price-panel td:last-child{text-align:right;font-weight:500;white-space:nowrap;}
+  .price-panel .sub td{color:var(--ink-soft);}
+  .price-panel .total-row td{
+    background:var(--aqua-mist);font-size:18px;font-weight:600;
+    font-family:'Playfair Display',serif;padding:18px 24px;
+  }
+  .price-panel .paid-row td{background:var(--gold-pale);color:var(--ink);font-weight:600;}
+  .price-note{font-size:13px;color:var(--ink-faint);text-align:center;margin-top:16px;max-width:640px;margin-left:auto;margin-right:auto;}
+
+  /* GOOD TO KNOW */
+  .know-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;}
+  .know-card{background:var(--sand);border:1px solid var(--sand-deep);border-radius:14px;padding:24px;}
+  .know-card h3{font-size:16px;font-family:'DM Sans',sans-serif;font-weight:600;display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+  .know-card p{font-size:14.5px;color:var(--ink-soft);}
+
+  /* CANCELLATION */
+  .cancel-panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px;}
+  .cancel-panel table{width:100%;border-collapse:collapse;font-size:15px;margin-top:10px;}
+  .cancel-panel th{text-align:left;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;padding:10px 12px;border-bottom:1px solid var(--line);}
+  .cancel-panel td{padding:12px;border-bottom:1px solid var(--line);color:var(--ink-soft);}
+  .cancel-panel tr:last-child td{border-bottom:none;}
+  .fine{font-size:13px;color:var(--ink-faint);margin-top:14px;}
+
+  /* ADVISOR */
+  .advisor-band{background:linear-gradient(150deg,var(--aqua-mist),var(--sand));border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .advisor-box{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;}
+  .advisor-box h2{font-size:28px;margin-bottom:4px;}
+  .advisor-contact{display:flex;flex-direction:column;gap:8px;font-size:16px;}
+  .advisor-contact a{color:var(--aqua-deep);text-decoration:none;font-weight:500;display:inline-flex;align-items:center;gap:10px;}
+  .advisor-contact a:hover{text-decoration:underline;}
+
+  /* FORM */
+  .form-panel{background:#fff;border:1px solid var(--line);border-radius:16px;padding:36px;max-width:680px;margin:0 auto;}
+  .form-panel label{display:block;font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--ink-soft);margin-bottom:6px;}
+  .form-panel .req{color:var(--aqua-deep);}
+  .form-row{margin-bottom:20px;}
+  .form-panel input[type=text],.form-panel input[type=email],.form-panel input[type=tel],.form-panel textarea,.form-panel select{
+    width:100%;padding:13px 15px;font-size:16px;font-family:'DM Sans',sans-serif;
+    border:1px solid var(--line);border-radius:10px;background:var(--cream);color:var(--ink);
+  }
+  .form-panel textarea{min-height:110px;resize:vertical;}
+  .form-panel input:focus,.form-panel textarea:focus,.form-panel select:focus{outline:2px solid var(--aqua-soft);border-color:var(--aqua-soft);}
+  .radio-row{display:flex;flex-wrap:wrap;gap:12px;}
+  .radio-pill{position:relative;}
+  .radio-pill input{position:absolute;opacity:0;inset:0;cursor:pointer;}
+  .radio-pill span{
+    display:inline-block;padding:10px 20px;border:1px solid var(--line);border-radius:999px;
+    font-size:16px;color:var(--ink-soft);background:var(--cream);cursor:pointer;
+  }
+  .radio-pill input:checked + span{background:var(--aqua-deep);color:#fff;border-color:var(--aqua-deep);}
+  .submit-btn{
+    display:inline-flex;align-items:center;gap:10px;
+    background:var(--aqua-deep);color:#fff;border:none;border-radius:999px;
+    padding:15px 36px;font-size:16px;font-weight:600;font-family:'DM Sans',sans-serif;
+    letter-spacing:.04em;cursor:pointer;transition:background .2s;
+  }
+  .submit-btn:hover{background:var(--aqua-mid);}
+  .submit-btn:disabled{opacity:.6;cursor:wait;}
+  .form-status{margin-top:14px;font-size:14px;color:var(--ink-soft);}
+  .thanks{
+    display:none;text-align:center;padding:24px 12px;
+  }
+  .thanks .icon{width:44px;height:44px;margin:0 auto 16px;display:block;}
+  .thanks h3{font-size:26px;margin-bottom:10px;}
+  .thanks p{color:var(--ink-soft);font-size:16px;}
+
+  /* FOOTER */
+  footer{background:var(--sand);border-top:1px solid var(--sand-deep);padding:40px 0 120px;text-align:center;}
+  footer .brand-mark{margin-bottom:4px;}
+  footer p{font-size:13px;color:var(--ink-faint);max-width:640px;margin:8px auto 0;}
+
+  /* STICKY BAR */
+  .sticky-bar{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;
+    background:rgba(253,251,246,.96);backdrop-filter:blur(6px);
+    border-top:1px solid var(--line);
+    padding:12px 0;
+  }
+  .sticky-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+  .sticky-price{font-family:'Playfair Display',serif;font-size:20px;font-weight:600;}
+  .sticky-price small{display:block;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;}
+  .sticky-paid{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--gold-pale);border:1px solid var(--gold);border-radius:999px;
+    padding:7px 18px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);
+  }
+  .sticky-cta{
+    background:var(--aqua-deep);color:#fff;text-decoration:none;border-radius:999px;
+    padding:11px 26px;font-size:14px;font-weight:600;letter-spacing:.04em;
+  }
+  .sticky-cta:hover{background:var(--aqua-mid);}
+
+  @media(max-width:720px){
+    section{padding:48px 0;}
+    .suite-grid{grid-template-columns:1fr;}
+    .itin-table td,.itin-table th{padding:12px;}
+    .sticky-inner{justify-content:center;text-align:center;}
+    .form-panel{padding:26px 20px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="wrap">
+    <div class="brand-mark">Point Me to Paradise</div>
+    <div class="brand-tag">The world is your oyster. We are your pearl.</div>
+
+    <div class="hero-prepared">Prepared exclusively for</div>
+    <div class="hero-names">Jennifer Orr de Lopez &amp; Jason Lopez</div>
+
+    <h1>MSC Seascape<br>Western Caribbean</h1>
+    <div class="hero-experience">MSC Yacht Club &mdash; Grand Suite</div>
+
+    <div class="hero-facts">
+      <span>
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+        October 25 &ndash; November 1, 2026
+      </span>
+      <span>
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M12 21c-4.5-3.5-8-7-8-11a8 8 0 0 1 16 0c0 4-3.5 7.5-8 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        Roundtrip Galveston, Texas
+      </span>
+      <span>
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M12 3l2 5h5l-4 3.5L16.5 17 12 14l-4.5 3L9 11.5 5 8h5z"/></svg>
+        7 Nights &middot; 2 Guests
+      </span>
+    </div>
+
+    <div class="status-chip">
+      <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg>
+      Booking Confirmed &mdash; No. 72394592
+    </div>
+  </div>
+</header>
+
+<!-- ============ OVERVIEW ============ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Your Sailing at a Glance</div>
+    <h2 class="section-title">One Week, Three Ports, Zero Airports</h2>
+    <p class="section-sub">The ship leaves from your own backyard &mdash; and the Yacht Club keys are already in hand.</p>
+
+    <div class="cards">
+      <div class="card">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M3 17l2-7h14l2 7M5 10V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4M2 21c1.5-1.2 3-1.2 4.5 0s3 1.2 4.5 0 3-1.2 4.5 0 3 1.2 4.5 0"/></svg>
+        <h3>Ship</h3>
+        <p>MSC Seascape<small>Seaside EVO Class</small></p>
+      </div>
+      <div class="card">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M4 21V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16M4 21h16M9 21v-4h6v4M8 7h2M8 11h2M14 7h2M14 11h2"/></svg>
+        <h3>Suite</h3>
+        <p>Yacht Club Grand Suite<small>Stateroom 19009 &middot; Category YCP</small></p>
+      </div>
+      <div class="card">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+        <h3>Embarkation</h3>
+        <p>Sun, Oct 25, 2026<small>Check-in opens 1:00 PM &middot; Sails 5:00 PM</small></p>
+      </div>
+      <div class="card">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M5 12l4-4M5 12l4 4M19 5v14"/></svg>
+        <h3>Return</h3>
+        <p>Sun, Nov 1, 2026<small>Arrives Galveston 7:00 AM</small></p>
+      </div>
+      <div class="card">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M6 20c0-3 2.5-5 6-5s6 2 6 5M12 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/></svg>
+        <h3>Dining</h3>
+        <p>Yacht Club Restaurant<small>Anytime Dining on request fleetwide</small></p>
+      </div>
+      <div class="card">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg>
+        <h3>Fare Type</h3>
+        <p>Flash Sale &mdash; Cruise Only<small>Booked May 20, 2026</small></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ITINERARY ============ -->
+<section class="itin-band">
+  <div class="wrap">
+    <div class="eyebrow">Day by Day</div>
+    <h2 class="section-title">Your Itinerary</h2>
+    <p class="section-sub">Two lazy sea days out, three ports in a row, and one more sea day to savor it all on the way home.</p>
+
+    <table class="itin-table">
+      <thead>
+        <tr><th>Day</th><th>Port</th><th>Arrive</th><th>Depart</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="day">Sun &middot; Oct 25</td>
+          <td class="port">Galveston, United States<span class="accent-script">Embarkation day</span></td>
+          <td>&mdash;</td><td>5:00 PM</td>
+        </tr>
+        <tr class="sea-day">
+          <td class="day">Mon &middot; Oct 26</td>
+          <td class="port">At Sea</td>
+          <td>&mdash;</td><td>&mdash;</td>
+        </tr>
+        <tr class="sea-day">
+          <td class="day">Tue &middot; Oct 27</td>
+          <td class="port">At Sea</td>
+          <td>&mdash;</td><td>&mdash;</td>
+        </tr>
+        <tr>
+          <td class="day">Wed &middot; Oct 28</td>
+          <td class="port">Costa Maya, Mexico</td>
+          <td>8:00 AM</td><td>6:00 PM</td>
+        </tr>
+        <tr>
+          <td class="day">Thu &middot; Oct 29</td>
+          <td class="port">Isla de Roat&aacute;n, Honduras</td>
+          <td>8:00 AM</td><td>4:00 PM</td>
+        </tr>
+        <tr>
+          <td class="day">Fri &middot; Oct 30</td>
+          <td class="port">Cozumel, Mexico</td>
+          <td>8:00 AM</td><td>4:00 PM</td>
+        </tr>
+        <tr class="sea-day">
+          <td class="day">Sat &middot; Oct 31</td>
+          <td class="port">At Sea</td>
+          <td>&mdash;</td><td>&mdash;</td>
+        </tr>
+        <tr>
+          <td class="day">Sun &middot; Nov 1</td>
+          <td class="port">Galveston, United States<span class="accent-script">Disembarkation</span></td>
+          <td>7:00 AM</td><td>&mdash;</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="itin-note">Arrival and departure times may vary for operational reasons. Booking shore excursions through MSC guarantees adaptation to the ship&rsquo;s schedule. As Yacht Club guests, you also enjoy priority departure and return on excursion days.</p>
+  </div>
+</section>
+
+<!-- ============ SUITE ============ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Your Home at Sea</div>
+    <h2 class="section-title">Yacht Club Grand Suite &mdash; Stateroom 19009</h2>
+    <p class="section-sub">Perched in the foredecks on Deck 19, inside the ship&rsquo;s private enclave.</p>
+
+    <div class="suite-grid">
+      <div>
+        <p style="margin-bottom:16px;">Your Grand Suite sits within the MSC Yacht Club &mdash; a ship-within-a-ship reserved for a small circle of guests, with its own restaurant, lounge, pool deck, and dedicated staff. From the moment your butler greets you at check-in, the pace of the week is yours to set: breakfast on the balcony, an afternoon in the Top Sail Lounge as the Gulf slides by, dinner &agrave; la carte whenever the mood strikes.</p>
+        <p>Because your fare includes the Premium Extra drinks package, unlimited internet for two devices, and thermal spa access, very little on board will ever ask for your wallet.</p>
+      </div>
+      <div class="suite-panel">
+        <ul class="spec-list">
+          <li><span class="k">Suite category</span><span class="v">YCP &mdash; Yacht Club Grand Suite</span></li>
+          <li><span class="k">Total module area</span><span class="v">33 m&sup2; (approx. 355 sq ft)</span></li>
+          <li><span class="k">Interior cabin area</span><span class="v">29 m&sup2; (approx. 312 sq ft)</span></li>
+          <li><span class="k">Private balcony</span><span class="v">8 m&sup2; (approx. 86 sq ft)</span></li>
+          <li><span class="k">Bathroom</span><span class="v">4 m&sup2; with shower</span></li>
+          <li><span class="k">Dining request</span><span class="v">Anytime Dining</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ YACHT CLUB PRIVILEGES ============ -->
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="eyebrow">Included in Your Fare</div>
+    <h2 class="section-title">The Yacht Club Difference</h2>
+    <p class="section-sub">Everything below is already part of your booking &mdash; nothing extra to purchase.</p>
+
+    <div class="priv-grid">
+      <div class="priv-card">
+        <h3>Privileges</h3>
+        <span class="accent-script">Service that follows you everywhere</span>
+        <ul>
+          <li><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg>Dedicated priority check-in, check-out, and priority departure and return on excursion days</li>
+          <li><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg>24-hour butler service and dedicated concierge</li>
+          <li><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg>24-hour room service</li>
+          <li><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg>Premium Extra drinks package &mdash; valid in all areas of the ship, including your suite minibar</li>
+          <li><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg>Unlimited internet package for two devices</li>
+          <li><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg>Complimentary access to the Thermal Area of the MSC Aurea Spa</li>
+          <li><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg>Bathrobes, slippers, bespoke MED bath amenities, and a pillow menu</li>
+          <li><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg>Luggage packing and unpacking service; digital international press</li>
+          <li><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg>MSC for Me wristband (where available)</li>
+        </ul>
+      </div>
+      <div class="priv-card">
+        <h3>Exclusivity</h3>
+        <span class="accent-script">A private ship within the ship</span>
+        <ul>
+          <li><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg>Private area of the ship accessible only to Yacht Club guests</li>
+          <li><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg>Panoramic Top Sail Lounge with bar, afternoon tea, day-and-night light bites, and evening live entertainment</li>
+          <li><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg>Private, spacious pool deck with whirlpools, sunbathing area, and an outdoor bar with the best views on board</li>
+          <li><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg>Gourmet Yacht Club restaurant &mdash; &agrave; la carte breakfast, lunch, and dinner</li>
+          <li><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg>Tailor-made experiences, from shopping to excursions</li>
+        </ul>
+      </div>
+      <div class="priv-card">
+        <h3>World of Choice</h3>
+        <span class="accent-script">Flexibility and full run of the ship</span>
+        <ul>
+          <li><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg>One free cruise change (dates or destination) up to 30 days before departure, for a new cruise sailing within 90 days of the original date</li>
+          <li><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg>Discounted pre-cruise packages</li>
+          <li><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg>Full access to the wider ship: bars and lounges, specialty restaurants, pools, premium buffet, theater shows, sports facilities, and the panoramic gym</li>
+          <li><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg>10% discount on all spa treatments purchased on board</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="price-band" id="pricing">
+  <div class="wrap">
+    <div class="eyebrow">Investment</div>
+    <h2 class="section-title" style="text-align:center;">Your Booking Summary</h2>
+    <p class="section-sub" style="text-align:center;">All amounts in USD &middot; Fare: Flash Sale, Cruise Only</p>
+
+    <div class="price-panel">
+      <table>
+        <tr class="sub"><td>Yacht Club cabin fare &mdash; Jennifer</td><td>$3,014.00</td></tr>
+        <tr class="sub"><td>Hotel service charge (Yacht Club) &mdash; Jennifer</td><td>$161.00</td></tr>
+        <tr class="sub"><td>Government fees &amp; taxes &mdash; Jennifer</td><td>$14.79</td></tr>
+        <tr class="sub"><td>Yacht Club cabin fare &mdash; Jason</td><td>$3,014.00</td></tr>
+        <tr class="sub"><td>Hotel service charge (Yacht Club) &mdash; Jason</td><td>$161.00</td></tr>
+        <tr class="sub"><td>Government fees &amp; taxes &mdash; Jason</td><td>$14.79</td></tr>
+        <tr class="total-row"><td>Total booking amount</td><td>$6,379.58</td></tr>
+        <tr class="paid-row"><td>Paid to date</td><td>$6,379.58</td></tr>
+        <tr class="total-row" style="background:var(--aqua-pale);"><td>Balance due</td><td>$0.00 &mdash; Paid in Full</td></tr>
+      </table>
+    </div>
+    <p class="price-note">Deposit of $398.00 was due May 21, 2026 and final payment was due July 27, 2026 &mdash; both are complete. Your booking is confirmed and fully paid. Yacht Club exclusivity and luxury inclusions are provided at no additional charge.</p>
+  </div>
+</section>
+
+<!-- ============ GOOD TO KNOW ============ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Before You Sail</div>
+    <h2 class="section-title">Good to Know</h2>
+    <p class="section-sub">A few housekeeping notes so embarkation day feels effortless.</p>
+
+    <div class="know-grid">
+      <div class="know-card">
+        <h3><svg class="icon icon-sm" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 7h6M9 11h6M9 15h4"/></svg>Travel Documents</h3>
+        <p>All guests must carry a valid passport plus any visas or immunizations required for the itinerary. Each guest is responsible for identifying and presenting the required documents at boarding and upon re-entry to the United States.</p>
+      </div>
+      <div class="know-card">
+        <h3><svg class="icon icon-sm" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg>Web Check-In</h3>
+        <p>Online check-in opens 30 days before sailing and closes 24 hours prior. Completing it early speeds up your priority Yacht Club check-in at the pier, which opens at 1:00 PM on embarkation day.</p>
+      </div>
+      <div class="know-card">
+        <h3><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg>Travel Insurance</h3>
+        <p>MSC recommends every guest carry adequate travel insurance. If you have not yet secured coverage, let me know using the form below &mdash; I can walk you through the options before you sail.</p>
+      </div>
+      <div class="know-card">
+        <h3><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M15 5l4 4L8 20H4v-4z"/><path d="M12 8l4 4"/></svg>eTickets</h3>
+        <p>Tickets are issued at least 21 days before departure, once all guest data is on file and payment is complete &mdash; your payment is done, so you are well ahead of the game.</p>
+      </div>
+      <div class="know-card">
+        <h3><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M4 19c1.5-1.2 3-1.2 4.5 0s3 1.2 4.5 0 3-1.2 4.5 0M6 16l1.5-8h9L18 16M10 8V5h4v3"/></svg>Excursions &amp; Extras</h3>
+        <p>Shore excursions, spa appointments, and other extras can be added anytime through Manage Booking on the MSC website &mdash; or simply ask me and I will handle it for you.</p>
+      </div>
+      <div class="know-card">
+        <h3><svg class="icon icon-sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l2.5 2.5"/></svg>Disembarkation</h3>
+        <p>The ship arrives back in Galveston at 7:00 AM on November 1. If you are planning any onward arrangements, allow 2&ndash;3 hours for disembarkation due to operational needs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CANCELLATION ============ -->
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="eyebrow">The Fine Print</div>
+    <h2 class="section-title">Cancellation Schedule</h2>
+    <p class="section-sub">MSC Yacht Club, cruises of 5 nights or more &mdash; the policy that applies to your sailing.</p>
+
+    <div class="cancel-panel">
+      <table>
+        <thead>
+          <tr><th>If cancelled</th><th>Penalty</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>61 days or more before departure</td><td>Deposit non-refundable</td></tr>
+          <tr><td>60&ndash;46 days before departure</td><td>50% of the total fare</td></tr>
+          <tr><td>45&ndash;16 days before departure</td><td>75% of the total fare</td></tr>
+          <tr><td>15&ndash;0 days before departure</td><td>100% of the total fare</td></tr>
+        </tbody>
+      </table>
+      <p class="fine">All cancellations and refund requests must be submitted in writing. Changes and cancellations are subject to penalty per MSC&rsquo;s Booking Terms and Conditions, available at msccruisesusa.com. This page is a summary of your booking confirmation and is not a ticket or invoice; the supplier&rsquo;s booking confirmation and terms govern in the event of any discrepancy.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ADVISOR ============ -->
+<section class="advisor-band">
+  <div class="wrap">
+    <div class="advisor-box">
+      <div>
+        <div class="eyebrow">Your Travel Advisor</div>
+        <h2>Christina Garcia</h2>
+        <p class="accent-script" style="font-size:18px;color:var(--ink-soft);">Point Me to Paradise Travel</p>
+      </div>
+      <div class="advisor-contact">
+        <a href="mailto:christina@pointmetoparadise.com">
+          <svg class="icon icon-sm" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          christina@pointmetoparadise.com
+        </a>
+        <a href="tel:+12812290862">
+          <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+          +1 (281) 229-0862
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORM ============ -->
+<section id="contact">
+  <div class="wrap">
+    <div class="eyebrow" style="text-align:center;">Next Steps</div>
+    <h2 class="section-title" style="text-align:center;">Questions or Requests?</h2>
+    <p class="section-sub" style="text-align:center;">Insurance, excursions, celebrations on board, dinner reservations &mdash; tell me what you need and I will take it from here.</p>
+
+    <div class="form-panel">
+      <div id="quote-form-wrap">
+        <div class="form-row">
+          <label for="cf-name">Name <span class="req">*</span></label>
+          <input type="text" id="cf-name" name="name" required autocomplete="name">
+        </div>
+        <div class="form-row">
+          <label for="cf-email">Email <span class="req">*</span></label>
+          <input type="email" id="cf-email" name="email" required autocomplete="email">
+        </div>
+        <div class="form-row">
+          <label for="cf-phone">Phone</label>
+          <input type="tel" id="cf-phone" name="phone" autocomplete="tel">
+        </div>
+        <div class="form-row">
+          <label>Travel insurance</label>
+          <div class="radio-row">
+            <label class="radio-pill"><input type="radio" name="insurance" value="Yes, please send options"><span>Yes, send me options</span></label>
+            <label class="radio-pill"><input type="radio" name="insurance" value="No, thank you"><span>No, thank you</span></label>
+            <label class="radio-pill"><input type="radio" name="insurance" value="Already have coverage"><span>Already have coverage</span></label>
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" placeholder="Excursion ideas, dining requests, special occasions, questions..."></textarea>
+        </div>
+        <button type="button" class="submit-btn" id="cf-submit">
+          Send to Christina
+          <svg class="icon icon-sm" viewBox="0 0 24 24" style="stroke:#fff;"><path d="M4 12h15M14 6l6 6-6 6"/></svg>
+        </button>
+        <div class="form-status" id="cf-status"></div>
+      </div>
+
+      <div class="thanks" id="cf-thanks">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>
+        <h3>Thank You</h3>
+        <p>Your message is on its way to Christina. She will be in touch shortly &mdash; in the meantime, start dreaming of that private pool deck.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="brand-mark">Point Me to Paradise</div>
+    <p class="accent-script" style="font-size:16px;color:var(--ink-soft);">The world is your oyster. We are your pearl.</p>
+    <p>This document summarizes MSC booking confirmation no. 72394592 for planning convenience and is not a ticket or invoice. All sailings, times, staterooms, inclusions, and penalties are governed by MSC Cruises&rsquo; Booking Terms and Conditions. Final stateroom numbers may change prior to departure; MSC guarantees the same or a higher stateroom category.</p>
+  </div>
+</footer>
+
+<!-- ============ STICKY BAR ============ -->
+<div class="sticky-bar">
+  <div class="wrap sticky-inner">
+    <div class="sticky-price">
+      <small>Total &middot; 2 Guests &middot; 7 Nights</small>
+      $6,379.58
+    </div>
+    <span class="sticky-paid">
+      <svg class="icon icon-sm" viewBox="0 0 24 24" style="width:15px;height:15px;"><path d="M4 12.5l5 5L20 6.5"/></svg>
+      Paid in Full
+    </span>
+    <a href="#contact" class="sticky-cta">Contact Christina</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  var btn = document.getElementById('cf-submit');
+  var statusEl = document.getElementById('cf-status');
+  btn.addEventListener('click', function(){
+    var name = document.getElementById('cf-name').value.trim();
+    var email = document.getElementById('cf-email').value.trim();
+    var phone = document.getElementById('cf-phone').value.trim();
+    var message = document.getElementById('cf-message').value.trim();
+    var insEl = document.querySelector('input[name="insurance"]:checked');
+    var insurance = insEl ? insEl.value : 'Not answered';
+
+    statusEl.textContent = '';
+    if(!name){ statusEl.textContent = 'Please enter your name.'; return; }
+    if(!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ statusEl.textContent = 'Please enter a valid email address.'; return; }
+
+    btn.disabled = true;
+    statusEl.textContent = 'Sending...';
+
+    var payload = {
+      access_key: '7b40d437-1004-48e2-9031-171a8b0ef4f1',
+      redirect: false,
+      subject: 'Jennifer & Jason Lopez \u2014 MSC Seascape Western Caribbean Quote Selections',
+      from_name: 'Jennifer & Jason Lopez Quote \u2014 Point Me to Paradise',
+      name: name,
+      email: email,
+      phone: phone || 'Not provided',
+      travel_insurance: insurance,
+      message: message || 'No message provided',
+      booking_reference: 'MSC Seascape Yacht Club \u00b7 Oct 25\u2013Nov 1, 2026 \u00b7 Booking 72394592'
+    };
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+    .then(function(res){ return res.json(); })
+    .then(function(data){
+      if(data && data.success){
+        document.getElementById('quote-form-wrap').style.display = 'none';
+        document.getElementById('cf-thanks').style.display = 'block';
+      } else {
+        btn.disabled = false;
+        statusEl.textContent = 'Something went wrong. Please try again, or email Christina directly at christina@pointmetoparadise.com.';
+      }
+    })
+    .catch(function(){
+      btn.disabled = false;
+      statusEl.textContent = 'Something went wrong. Please try again, or email Christina directly at christina@pointmetoparadise.com.';
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
