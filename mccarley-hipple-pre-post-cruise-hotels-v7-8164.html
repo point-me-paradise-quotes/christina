@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Athens &amp; Rome — Your Hotels Before and After the Cruise | Point Me to Paradise Travel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --aqua-pale:#C4E4E1;
+  --aqua-mist:#EAF3F2;
+  --aqua:#75AFB1;
+  --aqua-dark:#4F8A8C;
+  --sand:#ECE7DC;
+  --sand-light:#F4F1E9;
+  --gold-whisper:#D6C8A8;
+  --white:#FFFFFF;
+  --paper:#FBFDFD;
+  --ink:#2B2420;
+  --ink-soft:#6B6359;
+  --line:#E5E9E8;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  overflow-x:hidden;
+  font-family:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+  font-weight:400; font-size:1rem; line-height:1.68;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:500;color:var(--ink);margin:0;}
+p{margin:0 0 16px;}
+a{color:var(--aqua-dark);}
+img{display:block;max-width:100%;}
+.wrap{max-width:960px;margin:0 auto;padding:0 26px;}
+.sec{padding:62px 0;}
+.band{background:var(--aqua-mist);}
+.band-sand{background:var(--sand-light);}
+
+/* ---------- HERO ---------- */
+.pmtp-hero{
+  position:relative; background-size:cover; background-position:center 40%;
+  background-repeat:no-repeat; background-attachment:scroll;
+  background-image:
+    linear-gradient(150deg, rgba(196,228,225,.90) 0%, rgba(234,243,242,.84) 42%, rgba(236,231,220,.90) 100%),
+    url('https://images.squarespace-cdn.com/content/v1/5c7976ec11f78465c3ab8a2d/66318e54-ac0c-41ca-ad13-c1eef50fbee5/Rome%2C+Italy-1589-September+22%2C+2018.jpg');
+  padding:78px 32px 60px; text-align:center;
+  border-bottom:1px solid var(--line);
+}
+.pmtp-wordmark{
+  font-family:'Playfair Display',serif; font-size:11px; font-weight:600;
+  letter-spacing:.22em; text-transform:uppercase; color:var(--aqua-dark);
+}
+.hero-rule{width:46px;height:1px;background:var(--aqua);margin:16px auto 20px;opacity:.7;}
+.pmtp-hero h1{font-size:clamp(2rem,5.2vw,3.15rem);line-height:1.14;letter-spacing:-.01em;}
+.pmtp-hero .tagline{
+  font-family:'Cormorant Garamond',serif; font-style:italic;
+  font-size:clamp(1.1rem,2.4vw,1.35rem); color:var(--ink-soft); margin-top:12px;
+}
+.hero-meta{margin-top:26px;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;}
+.hero-meta span{
+  background:var(--white); border:1px solid var(--line); border-radius:100px;
+  padding:7px 17px; font-size:.8rem; letter-spacing:.04em; color:var(--ink-soft);
+}
+.hero-guests{
+  margin-top:22px; font-size:.82rem; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--aqua-dark); font-weight:600;
+}
+
+/* ---------- SHARED ---------- */
+.eyebrow{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--aqua-dark);font-weight:600;margin-bottom:12px;}
+.sec h2{font-size:clamp(1.6rem,3.4vw,2.15rem);margin-bottom:8px;line-height:1.22;}
+.sec .sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem;color:var(--ink-soft);margin-bottom:26px;}
+.lede{font-size:1.06rem;max-width:70ch;}
+
+.commit{background:var(--aqua-pale);border-radius:12px;padding:22px 26px;margin:26px 0;font-size:.97rem;line-height:1.62;}
+.commit strong{font-weight:600;}
+.commit-line{border-left:3px solid var(--aqua);background:var(--white);border-radius:0 10px 10px 0;padding:16px 22px;margin:22px 0;font-size:.94rem;color:var(--ink-soft);}
+
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:30px 0 6px;}
+.tile{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:20px 22px;}
+.tile .k{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--aqua-dark);font-weight:600;}
+.tile .v{font-family:'Playfair Display',serif;font-size:1.22rem;margin-top:7px;line-height:1.3;}
+.tile .n{font-size:.85rem;color:var(--ink-soft);margin-top:5px;}
+
+/* hotel block */
+.hotel{background:var(--white);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-top:8px;}
+.hotel-head{padding:30px 32px 22px;border-bottom:1px solid var(--line);}
+.hotel-head .loc{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--aqua-dark);font-weight:600;}
+.hotel-head h3{font-size:1.62rem;margin-top:9px;}
+.hotel-head .stay{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--ink-soft);margin-top:5px;}
+.hotel-body{padding:26px 32px 30px;}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px;}
+.facts span{background:var(--aqua-mist);border-radius:100px;padding:6px 15px;font-size:.79rem;color:var(--ink-soft);}
+
+/* room cards */
+.rooms{display:grid;gap:16px;margin-top:8px;}
+.room{
+  border:1.5px solid var(--line); border-radius:14px; background:var(--white);
+  overflow:hidden; transition:border-color .18s, box-shadow .18s;
+}
+.room.on{border-color:var(--aqua);box-shadow:0 0 0 3px var(--aqua-mist);}
+.gal{background:var(--sand-light);}
+.gal-main{width:100%;aspect-ratio:3/2;object-fit:cover;background:var(--sand);}
+.gal-strip{
+  display:flex;gap:6px;padding:6px;overflow-x:auto;
+  -webkit-overflow-scrolling:touch;scroll-snap-type:x proximity;
+  scrollbar-width:thin;
+}
+.gal-strip img{
+  width:74px;height:52px;object-fit:cover;border-radius:5px;cursor:pointer;
+  scroll-snap-align:start;
+  opacity:.62; transition:opacity .15s, outline-color .15s;
+  outline:2px solid transparent; outline-offset:-2px; flex:none;
+}
+.gal-strip img:hover{opacity:.88;}
+.gal-strip img.sel{opacity:1;outline-color:var(--aqua);}
+.room-in{padding:22px 24px 24px;}
+.room-top{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap;}
+.room-name{font-family:'Playfair Display',serif;font-size:1.16rem;font-weight:500;}
+.room-price{font-family:'Playfair Display',serif;font-size:1.24rem;white-space:nowrap;color:var(--aqua-dark);text-align:right;}
+.room-price small{display:block;font-family:'DM Sans',sans-serif;font-size:.71rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-top:3px;font-weight:500;}
+.room-specs{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px;}
+.room-specs span{border:1px solid var(--line);border-radius:100px;padding:4px 12px;font-size:.76rem;color:var(--ink-soft);}
+.room-desc{font-size:.93rem;color:var(--ink-soft);margin-top:13px;}
+.math{border-top:1px dashed var(--line);margin-top:15px;padding-top:13px;font-size:.87rem;color:var(--ink-soft);line-height:1.75;}
+.math strong{color:var(--ink);}
+.refund{font-size:.86rem;color:var(--aqua-dark);margin-top:11px;font-weight:500;}
+.pick{
+  margin-top:16px; font-family:'DM Sans',sans-serif; font-size:16px; font-weight:600;
+  letter-spacing:.04em; background:var(--white); color:var(--aqua-dark);
+  border:1.5px solid var(--aqua); border-radius:100px; padding:11px 26px; cursor:pointer;
+  display:inline-flex; align-items:center; gap:9px; transition:background .18s,color .18s;
+}
+.pick:hover{background:var(--aqua-mist);}
+.room.on .pick{background:var(--aqua);color:var(--white);border-color:var(--aqua);}
+.dot{width:14px;height:14px;border-radius:50%;border:2px solid currentColor;display:inline-block;position:relative;flex:none;}
+.room.on .dot::after{content:"";position:absolute;inset:2.5px;border-radius:50%;background:currentColor;}
+.rec{
+  display:inline-block;background:var(--aqua-pale);border-radius:100px;
+  padding:4px 13px;font-size:.71rem;letter-spacing:.14em;text-transform:uppercase;
+  font-weight:600;color:var(--ink);margin-bottom:9px;
+}
+.rec.warn{background:var(--sand);border:1px solid var(--gold-whisper);}
+.note-gold{background:var(--sand-light);border:1px solid var(--gold-whisper);border-radius:11px;padding:15px 19px;font-size:.9rem;margin-top:18px;}
+
+/* price bar */
+.total-bar{
+  background:var(--white);border:1px solid var(--aqua-pale);border-radius:14px;
+  padding:22px 26px;display:flex;justify-content:space-between;align-items:center;
+  gap:20px;flex-wrap:wrap;margin-top:24px;
+}
+.total-bar .tl .h{font-family:'Playfair Display',serif;font-size:1.06rem;}
+.total-bar .tl .s{font-size:.85rem;color:var(--ink-soft);margin-top:5px;}
+.total-bar .amt{font-family:'Playfair Display',serif;font-size:1.95rem;color:var(--aqua-dark);white-space:nowrap;}
+.total-bar .amt.small{font-size:1.08rem;line-height:1.45;white-space:normal;max-width:300px;text-align:right;}
+.disclaimer{font-size:.84rem;color:var(--ink-soft);margin-top:14px;}
+
+/* form */
+.form-card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:34px 34px 38px;margin-top:26px;}
+.field{margin-bottom:18px;}
+.field label{display:block;font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;margin-bottom:7px;}
+.field input,.field select,.field textarea{
+  width:100%;font-family:'DM Sans',sans-serif;font-size:16px;
+  padding:13px 15px;border:1px solid var(--line);border-radius:9px;
+  background:var(--paper);color:var(--ink);
+}
+.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--aqua);outline-offset:1px;border-color:var(--aqua);}
+.field textarea{min-height:112px;resize:vertical;}
+.btn{
+  font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;letter-spacing:.05em;
+  background:var(--aqua);color:var(--white);border:none;border-radius:100px;
+  padding:15px 40px;cursor:pointer;transition:background .18s;
+}
+.btn:hover{background:var(--aqua-dark);}
+.btn:disabled{opacity:.6;cursor:default;}
+#thank-you{display:none;background:var(--aqua-mist);border-radius:14px;padding:34px;text-align:center;}
+#thank-you h3{font-size:1.5rem;}
+
+/* footer */
+.footer{background:var(--sand-light);padding:50px 0 44px;border-top:1px solid var(--line);text-align:center;}
+.footer .nm{font-family:'Playfair Display',serif;font-size:1.3rem;}
+.footer .ti{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:var(--ink-soft);margin-top:3px;}
+.footer .ct{margin-top:16px;font-size:.94rem;}
+.footer .ct a{text-decoration:none;}
+.footer .brand{margin-top:22px;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--aqua-dark);font-weight:600;}
+.footer .sig{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:var(--ink-soft);margin-top:12px;}
+.fine{max-width:960px;margin:0 auto;padding:26px;font-size:.79rem;color:var(--ink-soft);text-align:center;line-height:1.7;}
+
+@media (max-width:760px){
+  .wrap{padding:0 18px;}
+  .sec{padding:44px 0;}
+
+  /* hero */
+  .pmtp-hero{padding:56px 20px 44px;background-position:center 42%;}
+  .pmtp-hero h1{font-size:1.95rem;}
+  .hero-meta{gap:7px;margin-top:20px;}
+  .hero-meta span{font-size:.75rem;padding:6px 13px;}
+  .hero-guests{font-size:.74rem;letter-spacing:.13em;}
+
+  /* structure */
+  .hotel{border-radius:13px;}
+  .hotel-head{padding:24px 18px 18px;}
+  .hotel-head h3{font-size:1.38rem;}
+  .hotel-body{padding:22px 18px 26px;}
+  .facts{gap:6px;margin-bottom:18px;}
+  .facts span{font-size:.75rem;padding:5px 12px;}
+  .tiles{gap:11px;}
+  .tile{padding:17px 18px;}
+  .commit{padding:19px 20px;font-size:.93rem;}
+  .commit-line{padding:14px 17px;}
+
+  /* room cards — stack name over price, full-width tap target */
+  .room-in{padding:19px 17px 21px;}
+  .room-top{flex-direction:column;gap:6px;}
+  .room-price{text-align:left;font-size:1.3rem;}
+  .room-price small{margin-top:2px;}
+  .room-name{font-size:1.1rem;}
+  .room-specs{gap:6px;}
+  .room-specs span{font-size:.73rem;padding:4px 10px;}
+  .math{font-size:.85rem;line-height:1.85;}
+  .pick{width:100%;justify-content:center;padding:14px 20px;}
+  .gal-main{aspect-ratio:4/3;}
+  .gal-strip img{width:66px;height:47px;}
+
+  /* price bars stack instead of squeezing */
+  .total-bar{flex-direction:column;align-items:flex-start;gap:12px;padding:19px 20px;}
+  .total-bar .amt{font-size:1.85rem;}
+  .total-bar .amt.small{font-size:1rem;text-align:left;max-width:none;}
+
+  .form-card{padding:24px 18px 28px;border-radius:13px;}
+  .btn{width:100%;padding:16px 20px;}
+  #thank-you{padding:28px 20px;}
+  .fine{padding:22px 18px;}
+}
+
+@media (max-width:400px){
+  .pmtp-hero h1{font-size:1.72rem;}
+  .pmtp-hero .tagline{font-size:1.02rem;}
+  .sec h2{font-size:1.42rem;}
+  .total-bar .amt{font-size:1.62rem;}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *{transition:none!important;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="pmtp-hero">
+  <div class="pmtp-wordmark">Point Me to Paradise Travel</div>
+  <div class="hero-rule"></div>
+  <h1>Athens Before, Rome After</h1>
+  <div class="tagline">Your two hotel stays, bookending the Mediterranean</div>
+  <div class="hero-meta">
+    <span>October 29 – November 13, 2026</span>
+    <span>2 nights Athens · 3 nights Rome</span>
+    <span>Tracy &amp; Peggy</span>
+  </div>
+  <div class="hero-guests">Prepared by Christina Garcia</div>
+</header>
+
+<!-- ============ OVERVIEW ============ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">The shape of it</div>
+    <h2>Two cities, one trip, no wasted days</h2>
+    <div class="sub">Land early in Athens. Leave slowly from Rome.</div>
+    <p class="lede">The cruise is the middle of this trip, not the whole of it. Two nights in Athens on the front end give you the Acropolis without the jet lag, and an evening in Plaka before you ever see the ship. Three nights in Rome on the back end mean you disembark into a city rather than an airport — and fly home rested instead of scrambling.</p>
+    <p class="lede">Both hotels sit inside the historic center of their cities. You can walk out the front door and be somewhere worth being in under ten minutes. That's the whole reason they were chosen. Pick one room in each city below and your total assembles itself as you go.</p>
+
+    <div class="tiles">
+      <div class="tile">
+        <div class="k">Before the cruise</div>
+        <div class="v">Athens</div>
+        <div class="n">Oct 29 – Oct 31 · 2 nights · Electra Metropolis · 4 rooms to choose from</div>
+      </div>
+      <div class="tile">
+        <div class="k">After the cruise</div>
+        <div class="v">Rome</div>
+        <div class="n">Nov 10 – Nov 13 · 3 nights · Hotel Barocco · 2 rooms to choose from</div>
+      </div>
+      <div class="tile">
+        <div class="k">Handled for you</div>
+        <div class="v">Both transfers</div>
+        <div class="n">Airport to hotel in Athens · port to hotel in Rome</div>
+      </div>
+    </div>
+
+    <div class="commit">
+      <strong>We don't book hotels. We build trips.</strong> Custom guides, trip app, real human when something goes sideways. The work you'd hate doing — already done.
+    </div>
+  </div>
+</section>
+
+<!-- ============ ATHENS ============ -->
+<section class="sec band" id="athens">
+  <div class="wrap">
+    <div class="eyebrow">Pre-cruise · October 29 – 31 · 2 nights</div>
+    <h2>Electra Metropolis, Athens</h2>
+    <div class="sub">Mitropoleos Street, two blocks off Syntagma Square</div>
+
+    <div class="hotel">
+      <div class="hotel-head">
+        <div class="loc">Athens · Historic Center</div>
+        <h3>Electra Metropolis</h3>
+        <div class="stay">Check in Thursday, Oct 29 · check out Saturday, Oct 31</div>
+      </div>
+      <div class="hotel-body">
+        <div class="facts">
+          <span>Rooftop pool &amp; bar</span>
+          <span>Breakfast buffet included</span>
+          <span>Free Wi-Fi</span>
+          <span>5 min walk to Plaka</span>
+          <span>Syntagma metro, 3 min</span>
+          <span>Airport transfer included</span>
+        </div>
+        <p>You land at 4:35 p.m., which is exactly late enough that the smart move is to do nothing ambitious. Drop your bags, take the lift to the rooftop, and let the first thing you see in Greece be the Parthenon lit up above the rooftops with a drink in your hand.</p>
+        <p>The hotel sits on Mitropoleos, the street running from Syntagma Square down to the cathedral — the seam between modern Athens and the old town. Turn left out the door and you're at the Parliament building for the changing of the guard. Turn right and you're in Plaka in five minutes, on the marble lanes below the Acropolis where the tavernas put tables out under the bougainvillea. Breakfast is included in every room type below and worth getting up for.</p>
+
+        <h4 style="font-size:1.12rem;margin:30px 0 6px;">Four rooms, four price points</h4>
+        <p style="font-size:.93rem;color:var(--ink-soft);margin-bottom:8px;">Every one of these sleeps three and includes breakfast and Wi-Fi. The difference is square meters, the view, and when you pay: the Classic and the Suite charge automatically on October 20, while the two Superior rooms are settled at the property when you arrive. Where a room offers a choice of one double or two twins, Christina requests your preference &mdash; the hotel assigns the actual bed at check-in.</p>
+
+        <div class="rooms">
+
+          <!-- CLASSIC -->
+          <div class="room" data-city="athens" data-room="classic" data-price="1060.83" data-label="Classic Room">
+            <div class="gal">
+              <img class="gal-main" alt="Classic Room at Electra Metropolis" loading="lazy"
+                   src="https://images.trvl-media.com/lodging/15000000/14850000/14848100/14848029/w3840h2556x0y4-4caff818.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+              <div class="gal-strip">
+                <img class="sel" alt="Classic Room view 1" loading="lazy" src="https://images.trvl-media.com/lodging/15000000/14850000/14848100/14848029/w3840h2556x0y4-4caff818.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+                <img alt="Classic Room view 2" loading="lazy" src="https://images.trvl-media.com/lodging/15000000/14850000/14848100/14848029/w3840h2556x0y4-7af2023f.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+                <img alt="Classic Room view 3" loading="lazy" src="https://images.trvl-media.com/lodging/15000000/14850000/14848100/14848029/3ac4e1b5.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+                <img alt="Classic Room view 4" loading="lazy" src="https://images.trvl-media.com/lodging/15000000/14850000/14848100/14848029/20cb189f.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+                <img alt="Classic Room view 5" loading="lazy" src="https://images.trvl-media.com/lodging/15000000/14850000/14848100/14848029/cec3a1ee.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+              </div>
+            </div>
+            <div class="room-in">
+              <div class="room-top">
+                <div class="room-name">Classic Room</div>
+                <div class="room-price">Est. $1,060.83<small>Total · 2 nights</small></div>
+              </div>
+              <div class="room-specs"><span>25 sq m</span><span>Sleeps 3</span><span>1 double or 2 twins &mdash; on request</span><span>Breakfast buffet</span><span>Free Wi-Fi</span></div>
+              <div class="room-desc">The entry room, and no apology needed for it — you're here two nights and most of them will be spent on the rooftop or in Plaka. Everything the hotel does well is in the public spaces, and this room buys you all of it for the lowest number on the page.</div>
+              <div class="math">
+                Est. $1,026.72 charged automatically on Oct 20<br>
+                + Est. $34.11 paid at the property on arrival<br>
+                = <strong>Est. $1,060.83 total for your party</strong> — nothing further owed
+              </div>
+              <div class="refund">&#10003; Fully refundable before Oct 28 &middot; card guarantee holds it now, automatic payment Oct 20</div>
+              <button class="pick" type="button"><span class="dot"></span> <span class="pick-label">Choose this room</span></button>
+            </div>
+          </div>
+
+          <!-- SUPERIOR DOUBLE -->
+          <div class="room" data-city="athens" data-room="superior-double" data-price="1158.04" data-label="Superior Double Room">
+            <div class="gal">
+              <img class="gal-main" alt="Superior Double Room at Electra Metropolis" loading="lazy"
+                   src="https://images.trvl-media.com/lodging/15000000/14850000/14848100/14848029/w3837h2556x3y4-f00cddf4.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+              <div class="gal-strip">
+                <img class="sel" alt="Superior Double view 1" loading="lazy" src="https://images.trvl-media.com/lodging/15000000/14850000/14848100/14848029/w3837h2556x3y4-f00cddf4.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+                <img alt="Superior Double view 2" loading="lazy" src="https://images.trvl-media.com/lodging/15000000/14850000/14848100/14848029/w3837h2688x3y3-e5acde7e.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+                <img alt="Superior Double view 3" loading="lazy" src="https://images.trvl-media.com/lodging/15000000/14850000/14848100/14848029/w3836h2557x4y3-bfcaf7bd.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+                <img alt="Superior Double view 4" loading="lazy" src="https://images.trvl-media.com/lodging/15000000/14850000/14848100/14848029/w3837h2557x3y3-5b679bc5.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+              </div>
+            </div>
+            <div class="room-in">
+              <div class="room-top">
+                <div class="room-name">Superior Double Room · City view</div>
+                <div class="room-price">Est. $1,158.04<small>Total · 2 nights</small></div>
+              </div>
+              <div class="room-specs"><span>28 sq m</span><span>City view</span><span>Sleeps 3</span><span>1 double or 2 twins &mdash; on request</span><span>Breakfast buffet</span><span>Free Wi-Fi</span></div>
+              <div class="room-desc">Three more square meters than the Classic and a window that looks out over the city rather than into it. Around a hundred dollars for the whole stay to trade up — and it's the only Athens room you don't pay a cent for in advance.</div>
+              <div class="math">
+                $0.00 due in advance<br>
+                + Est. $1,158.04 paid at the property on arrival<br>
+                = <strong>Est. $1,158.04 total for your party</strong> — nothing further owed
+              </div>
+              <div class="refund">✓ Fully refundable before Oct 28 · reserve now, pay later</div>
+              <button class="pick" type="button"><span class="dot"></span> <span class="pick-label">Choose this room</span></button>
+            </div>
+          </div>
+
+          <!-- SUPERIOR TRIPLE -->
+          <div class="room" data-city="athens" data-room="superior-triple" data-price="1244.46" data-label="Superior Triple Room">
+            <div class="gal">
+              <img class="gal-main" alt="Superior Triple Room at Electra Metropolis" loading="lazy"
+                   src="https://images.trvl-media.com/lodging/15000000/14850000/14848100/14848029/w3836h2556x4y4-fd696b4e.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+              <div class="gal-strip">
+                <img class="sel" alt="Superior Triple view 1" loading="lazy" src="https://images.trvl-media.com/lodging/15000000/14850000/14848100/14848029/w3836h2556x4y4-fd696b4e.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+                <img alt="Superior Triple view 2" loading="lazy" src="https://images.trvl-media.com/lodging/15000000/14850000/14848100/14848029/w3840h2556x0y4-380b76fb.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+                <img alt="Superior Triple view 3" loading="lazy" src="https://images.trvl-media.com/lodging/15000000/14850000/14848100/14848029/5b4c4723.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+                <img alt="Superior Triple view 4" loading="lazy" src="https://images.trvl-media.com/lodging/15000000/14850000/14848100/14848029/w3836h2556x4y4-4c65e3e2.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+                <img alt="Superior Triple view 5" loading="lazy" src="https://images.trvl-media.com/lodging/15000000/14850000/14848100/14848029/ed2532f7.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+              </div>
+            </div>
+            <div class="room-in">
+              <div class="rec">Best fit if there are three of you</div>
+              <div class="room-top">
+                <div class="room-name">Superior Triple Room · City view</div>
+                <div class="room-price">Est. $1,244.46<small>Total · 2 nights</small></div>
+              </div>
+              <div class="room-specs"><span>32 sq m</span><span>City view</span><span>Sleeps 3</span><span>2 twins + twin sofa bed</span><span>Rated 9.0 / 10</span><span>Breakfast buffet</span></div>
+              <div class="room-desc">The only room with a genuine third sleeping surface rather than a rollaway — two twins and a sofa bed, in 32 square meters that don't feel crowded by them. If a third traveler joins you, this is the room that works without anyone drawing a short straw.</div>
+              <div class="math">
+                $0.00 due in advance<br>
+                + Est. $1,244.46 paid at the property on arrival<br>
+                = <strong>Est. $1,244.46 total for your party</strong> — nothing further owed
+              </div>
+              <div class="refund">✓ Fully refundable before Oct 28 · card on file to hold the room</div>
+              <button class="pick" type="button"><span class="dot"></span> <span class="pick-label">Choose this room</span></button>
+            </div>
+          </div>
+
+          <!-- SUITE -->
+          <div class="room" data-city="athens" data-room="suite" data-price="2054.57" data-label="Suite, Acropolis View">
+            <div class="gal">
+              <img class="gal-main" alt="Suite with Acropolis view at Electra Metropolis" loading="lazy"
+                   src="https://images.trvl-media.com/lodging/15000000/14850000/14848100/14848029/w3836h2560x4y0-a1ab5650.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+              <div class="gal-strip">
+                <img class="sel" alt="Suite view 1" loading="lazy" src="https://images.trvl-media.com/lodging/15000000/14850000/14848100/14848029/w3836h2560x4y0-a1ab5650.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+                <img alt="Suite view 2" loading="lazy" src="https://images.trvl-media.com/lodging/15000000/14850000/14848100/14848029/w3840h2557x0y3-af3b76a0.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+                <img alt="Suite view 3" loading="lazy" src="https://images.trvl-media.com/lodging/15000000/14850000/14848100/14848029/d867f04f.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+                <img alt="Suite view 4" loading="lazy" src="https://images.trvl-media.com/lodging/15000000/14850000/14848100/14848029/59cd7678.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+                <img alt="Suite view 5" loading="lazy" src="https://images.trvl-media.com/lodging/15000000/14850000/14848100/14848029/w3836h2560x4y0-af81010c.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+                <img alt="Suite view 6" loading="lazy" src="https://images.trvl-media.com/lodging/15000000/14850000/14848100/14848029/w3836h2596x4y3-0f6423b3.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+              </div>
+            </div>
+            <div class="room-in">
+              <div class="rec">Highest guest rating at this hotel — 9.6 / 10</div>
+              <div class="room-top">
+                <div class="room-name">Suite, Acropolis View</div>
+                <div class="room-price">Est. $2,054.57<small>Total · 2 nights</small></div>
+              </div>
+              <div class="room-specs"><span>48 sq m</span><span>Acropolis view</span><span>Separate bedroom</span><span>Sleeps 3</span><span>2 twins + twin sofa bed</span><span>Rated 9.6 / 10</span></div>
+              <div class="room-desc">Forty-eight square meters, a separate bedroom, and the Acropolis in the window — so the view isn't something you go upstairs for at six o'clock, it's what you wake up to. Guests rate this room higher than anything else at the property. It's the most expensive line on this page and the only one anyone comes home talking about.</div>
+              <div class="math">
+                Est. $2,020.46 charged automatically on Oct 20<br>
+                + Est. $34.11 paid at the property on arrival<br>
+                = <strong>Est. $2,054.57 total for your party</strong> — nothing further owed
+              </div>
+              <div class="refund">Card guarantee holds it now &middot; automatic payment Oct 20 &middot; Christina will confirm your cancellation deadline in writing</div>
+              <button class="pick" type="button"><span class="dot"></span> <span class="pick-label">Choose this room</span></button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROME ============ -->
+<section class="sec" id="rome">
+  <div class="wrap">
+    <div class="eyebrow">Post-cruise · November 10 – 13 · 3 nights</div>
+    <h2>Hotel Barocco, Rome</h2>
+    <div class="sub">Piazza Barberini, at the top of the Trevi neighborhood</div>
+
+    <div class="hotel">
+      <div class="hotel-head">
+        <div class="loc">Rome · Piazza Barberini</div>
+        <h3>Hotel Barocco</h3>
+        <div class="stay">Check in Tuesday, Nov 10 · check out Friday, Nov 13</div>
+      </div>
+      <div class="hotel-body">
+        <div class="facts">
+          <span>8 min walk to the Trevi Fountain</span>
+          <span>Barberini metro, Line A, 1 min</span>
+          <span>10 min to the Spanish Steps</span>
+          <span>Small — 41 rooms</span>
+          <span>Breakfast included</span>
+          <span>Port transfer included</span>
+        </div>
+        <p>You disembark in the morning, transfer about ninety minutes into the city, and arrive with the whole evening free. That's deliberate. Rome after dark on your first night — the Trevi Fountain floodlit and half as crowded, the Pantheon's portico open to the sky — beats anything you could have scheduled.</p>
+        <p>The Barocco is a small hotel on the corner of Piazza Barberini, with Bernini's Triton Fountain in the square outside and Via Veneto climbing away behind it. Forty-one rooms, a staff that knows you by the second morning, breakfast in a vaulted room downstairs. What you're buying is position: the metro is a minute away for the Vatican and the Colosseum, and everything in the centro storico is a walk.</p>
+
+        <h4 style="font-size:1.12rem;margin:30px 0 6px;">Two rooms, and the question is beds</h4>
+        <p style="font-size:.93rem;color:var(--ink-soft);margin-bottom:8px;">Est. $92.79 separates these for the whole stay. The Classic is a double bed only; the Superior comes in either configuration. Both include breakfast and Wi-Fi, both are held with a card guarantee and charge automatically on November 1, and both are fully refundable through November 8.</p>
+
+        <div class="rooms">
+
+          <!-- CLASSIC DOUBLE -->
+          <div class="room" data-city="rome" data-room="rome-classic" data-price="973.19" data-label="Classic Double Room">
+            <div class="gal">
+              <img class="gal-main" alt="Classic Double Room at Hotel Barocco" loading="lazy"
+                   src="https://images.trvl-media.com/lodging/1000000/60000/54200/54156/e3d6f258.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+              <div class="gal-strip">
+                <img class="sel" alt="Classic Double view 1" loading="lazy" src="https://images.trvl-media.com/lodging/1000000/60000/54200/54156/e3d6f258.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+                <img alt="Classic Double view 2" loading="lazy" src="https://images.trvl-media.com/lodging/1000000/60000/54200/54156/2c0027e4.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+                <img alt="Classic Double view 3" loading="lazy" src="https://images.trvl-media.com/lodging/1000000/60000/54200/54156/79b13f8d.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+                <img alt="Classic Double view 4" loading="lazy" src="https://images.trvl-media.com/lodging/1000000/60000/54200/54156/bbead02e.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+              </div>
+            </div>
+            <div class="room-in">
+              <div class="rec warn">Only one left at this rate</div>
+              <div class="room-top">
+                <div class="room-name">Classic Double Room</div>
+                <div class="room-price">Est. $973.19<small>Total &middot; 3 nights</small></div>
+              </div>
+              <div class="room-specs"><span>14 sq m</span><span>Sleeps 2</span><span>1 double bed</span><span>Rated 9.2 / 10</span><span>Free breakfast</span><span>Free Wi-Fi</span></div>
+              <div class="room-desc">Fourteen square meters and one double bed &mdash; compact, which is standard for a historic building inside the centro storico. Guests rate it 9.2 out of 10, so the footprint clearly isn&rsquo;t holding it back. Take this one if you&rsquo;re happy sharing a double and would rather put the difference toward dinner.</div>
+              <div class="math">
+                Est. $922.02 charged automatically on Nov 1<br>
+                + Est. $51.17 paid at the property on arrival<br>
+                = <strong>Est. $973.19 total for your party</strong> &mdash; nothing further owed
+              </div>
+              <div class="refund">&#10003; Fully refundable before Nov 8 &middot; card guarantee holds it now</div>
+              <button class="pick" type="button"><span class="dot"></span> <span class="pick-label">Choose this room</span></button>
+            </div>
+          </div>
+
+          <!-- SUPERIOR DOUBLE -->
+          <div class="room" data-city="rome" data-room="rome-superior" data-price="1065.98" data-label="Superior Double Room">
+            <div class="gal">
+              <img class="gal-main" alt="Superior Double Room at Hotel Barocco" loading="lazy"
+                   src="https://images.trvl-media.com/lodging/1000000/60000/54200/54156/04579005.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+              <div class="gal-strip">
+                <img class="sel" alt="Superior Double view 1" loading="lazy" src="https://images.trvl-media.com/lodging/1000000/60000/54200/54156/04579005.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+                <img alt="Superior Double view 2" loading="lazy" src="https://images.trvl-media.com/lodging/1000000/60000/54200/54156/e3b6c304.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+                <img alt="Superior Double view 3" loading="lazy" src="https://images.trvl-media.com/lodging/1000000/60000/54200/54156/3bd58540.jpg?impolicy=fcrop&w=1200&h=800&quality=medium">
+              </div>
+            </div>
+            <div class="room-in">
+              <div class="rec">The only Rome room where twins can be requested</div>
+              <div class="room-top">
+                <div class="room-name">Superior Double Room</div>
+                <div class="room-price">Est. $1,065.98<small>Total &middot; 3 nights</small></div>
+              </div>
+              <div class="room-specs"><span>16 sq m</span><span>Sleeps 2</span><span>1 double or 2 twins &mdash; on request</span><span>Free breakfast</span><span>Free Wi-Fi</span></div>
+              <div class="room-desc">Two square meters more than the Classic, and it&rsquo;s the one Rome category that comes in either configuration &mdash; one double or two twins. Est. $92.79 more for the three nights. If you&rsquo;d each rather have your own bed after two weeks of travel, this is the only room that makes it possible.</div>
+              <div class="math">
+                Est. $1,014.81 charged automatically on Nov 1<br>
+                + Est. $51.17 paid at the property on arrival<br>
+                = <strong>Est. $1,065.98 total for your party</strong> &mdash; nothing further owed
+              </div>
+              <div class="refund">&#10003; Fully refundable before Nov 8 &middot; card guarantee holds it now</div>
+              <button class="pick" type="button"><span class="dot"></span> <span class="pick-label">Choose this room</span></button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="note-gold">
+          <strong>About bedding:</strong> hotels assign specific beds at check-in, so no advisor and no booking site can guarantee a twin setup in advance &mdash; anyone who tells you otherwise is guessing. What Christina can do is put the request on your reservation and follow up with the hotel directly before you arrive, which is how these usually go your way. Booking a category that offers twins at all is the part that matters; the Classic can&rsquo;t be converted.
+        </div>
+
+        <div class="note-gold" style="margin-top:12px;">
+          <strong>Both Rome rooms sleep two.</strong> Athens can absorb a third traveler in any of its four rooms — Rome can't. If someone is joining you, tell Christina now and she'll hold a second room at the Barocco before the November rates move.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="sec band-sand" id="pricing">
+  <div class="wrap">
+    <div class="eyebrow">Your total</div>
+    <h2>Both hotels, one number</h2>
+    <div class="sub">Updates as you choose</div>
+    <p class="lede">This covers two nights in Athens and three nights in Rome, taxes and fees included, priced as a total for your party rather than per person. Breakfast is included at both hotels. Your flights and cruise fare sit outside this page — they're tracked separately in your file.</p>
+
+    <div class="total-bar">
+      <div class="tl">
+        <div class="h" id="sel-label-1">No rooms chosen yet</div>
+        <div class="s">2 nights Athens + 3 nights Rome · total for your party</div>
+      </div>
+      <div class="amt small" id="live-total-1">Choose a room in each city</div>
+    </div>
+
+    <div class="commit-line">
+      We check every component against public rates and meet or beat them. You're not paying a premium for our convenience — you're paying for the rest of what we do.
+    </div>
+
+    <div class="disclaimer">
+      Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor.
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORM ============ -->
+<section class="sec" id="respond">
+  <div class="wrap">
+    <div class="eyebrow">Next step</div>
+    <h2>Tell Christina which rooms</h2>
+    <div class="sub">One reply and both hotels are booked</div>
+
+    <div class="commit">
+      <strong>What's coming after this quote:</strong> a destination guide built for your trip — PDF or interactive in-app, with Google Maps links to every place we send you — a trip app where everything lives, and us when something goes sideways at midnight. You travel; we handle the rest.
+    </div>
+
+    <div class="total-bar">
+      <div class="tl">
+        <div class="h">Your running total</div>
+        <div class="s" id="sel-label-2">No rooms chosen yet</div>
+      </div>
+      <div class="amt small" id="live-total-2">Choose a room in each city</div>
+    </div>
+
+    <div class="form-card" id="form-container">
+      <div id="form-error" style="display:none; background:#fff1f1; border:1px solid #f5c6c6; border-radius:6px; padding:14px 18px; font-size:0.875rem; color:#b91c1c; margin-bottom:16px;">
+        We weren't able to send your message. Please contact Christina directly at the address below.
+      </div>
+
+      <form id="pmtp-form">
+        <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+        <input type="hidden" name="subject" value="Quote Response — McCarley &amp; Hipple | Athens &amp; Rome Hotels">
+        <input type="hidden" name="from_name" value="McCarley &amp; Hipple Quote — Point Me to Paradise">
+        <input type="hidden" name="redirect" value="false">
+        <input type="hidden" name="running_total" id="hidden-total" value="No rooms selected">
+
+        <div class="field">
+          <label for="f-name">Name</label>
+          <input type="text" id="f-name" name="name" required>
+        </div>
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input type="email" id="f-email" name="email" required>
+        </div>
+        <div class="field">
+          <label for="f-phone">Phone <span style="text-transform:none;letter-spacing:0;font-weight:400;">(optional)</span></label>
+          <input type="tel" id="f-phone" name="phone">
+        </div>
+        <div class="field">
+          <label for="f-option">Athens — Electra Metropolis</label>
+          <select id="f-option" name="option_interest">
+            <option value="">Still deciding — let's talk it through</option>
+            <option value="classic">Classic Room — Est. $1,060.83</option>
+            <option value="superior-double">Superior Double Room, City view — Est. $1,158.04</option>
+            <option value="superior-triple">Superior Triple Room, City view — Est. $1,244.46</option>
+            <option value="suite">Suite, Acropolis View — Est. $2,054.57</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-rome">Rome — Hotel Barocco</label>
+          <select id="f-rome" name="rome_room">
+            <option value="">Still deciding — let's talk it through</option>
+            <option value="rome-classic">Classic Double Room, 1 double bed — Est. $973.19</option>
+            <option value="rome-superior">Superior Double Room, 2 twins available — Est. $1,065.98</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-ins">Travel insurance</label>
+          <select id="f-ins" name="travel_insurance">
+            <option>Yes — I'd like a quote</option>
+            <option>No — not interested</option>
+            <option>Already have coverage</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-msg">Questions or notes <span style="text-transform:none;letter-spacing:0;font-weight:400;">(optional)</span></label>
+          <textarea id="f-msg" name="message" placeholder="Anything you want changed, added, or explained — including whether a third traveler is joining."></textarea>
+        </div>
+
+        <button type="submit" class="btn" id="submit-btn">Send to Christina</button>
+      </form>
+    </div>
+
+    <div id="thank-you">
+      <h3>Got it — thank you.</h3>
+      <p style="margin-top:12px;">Your note is on its way to Christina. She'll lock in both rooms and follow up with your transfer details.</p>
+      <p style="margin:0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--ink-soft);">the world is your oyster, we are your pearl</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="nm">Christina Garcia</div>
+    <div class="ti">Travel Advisor</div>
+    <div class="ct"><a id="adv-email" href="#">&nbsp;</a></div>
+    <div class="brand">Point Me to Paradise Travel</div>
+    <div class="sig">Curated Journeys · Expert Advisors</div>
+  </div>
+</footer>
+
+<div class="fine">
+  Rates shown are estimates for your party, including taxes and fees, and are held subject to availability at the time of booking. Breakfast and Wi-Fi are included in every room type shown. Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor. Airfare and cruise fare are quoted separately.
+</div>
+
+<script>
+(function(){
+  var sel = { athens: null, rome: null };
+  var PRICE = {}, LABEL = {};
+
+  var cards = document.querySelectorAll('.room[data-room]');
+  for (var i = 0; i < cards.length; i++){
+    var c = cards[i];
+    PRICE[c.getAttribute('data-room')] = parseFloat(c.getAttribute('data-price'));
+    LABEL[c.getAttribute('data-room')] = c.getAttribute('data-label');
+  }
+
+  function money(n){
+    return '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+
+  function render(){
+    var a = sel.athens, r = sel.rome, label, total, isSmall;
+
+    if (a && r){
+      label = 'Athens: ' + LABEL[a] + ' · Rome: ' + LABEL[r];
+      total = 'Est. ' + money(PRICE[a] + PRICE[r]);
+      isSmall = false;
+    } else if (a || r){
+      var one = a || r;
+      var city = a ? 'Athens' : 'Rome';
+      var missing = a ? 'Rome' : 'Athens';
+      label = city + ': ' + LABEL[one] + ' · ' + missing + ': not chosen yet';
+      total = city + ' Est. ' + money(PRICE[one]) + ' — choose your ' + missing + ' room';
+      isSmall = true;
+    } else {
+      label = 'No rooms chosen yet';
+      total = 'Choose a room in each city';
+      isSmall = true;
+    }
+
+    ['1','2'].forEach(function(i){
+      document.getElementById('sel-label-' + i).textContent = label;
+      var el = document.getElementById('live-total-' + i);
+      el.textContent = total;
+      el.classList.toggle('small', isSmall);
+    });
+
+    document.getElementById('hidden-total').value = (a || r) ? label + ' — ' + total : 'No rooms selected';
+    document.getElementById('f-option').value = a || '';
+    document.getElementById('f-rome').value = r || '';
+
+    for (var i = 0; i < cards.length; i++){
+      var key = cards[i].getAttribute('data-room');
+      var city = cards[i].getAttribute('data-city');
+      var on = sel[city] === key;
+      cards[i].classList.toggle('on', on);
+      var lbl = cards[i].querySelector('.pick-label');
+      if (lbl) lbl.textContent = on ? 'Selected' : 'Choose this room';
+    }
+  }
+
+  for (var i = 0; i < cards.length; i++){
+    (function(card){
+      var btn = card.querySelector('.pick');
+      if (btn){
+        btn.addEventListener('click', function(){
+          sel[card.getAttribute('data-city')] = card.getAttribute('data-room');
+          render();
+        });
+      }
+      var strip = card.querySelectorAll('.gal-strip img');
+      var main = card.querySelector('.gal-main');
+      for (var j = 0; j < strip.length; j++){
+        (function(thumb){
+          thumb.addEventListener('click', function(){
+            main.src = thumb.src;
+            for (var k = 0; k < strip.length; k++) strip[k].classList.remove('sel');
+            thumb.classList.add('sel');
+          });
+        })(strip[j]);
+      }
+    })(cards[i]);
+  }
+
+  document.getElementById('f-option').addEventListener('change', function(){
+    sel.athens = this.value || null; render();
+  });
+  document.getElementById('f-rome').addEventListener('change', function(){
+    sel.rome = this.value || null; render();
+  });
+
+  render();
+
+  var u = 'christina', d = 'pointmetoparadise.com';
+  var el = document.getElementById('adv-email');
+  el.textContent = u + '\u0040' + d;
+  el.href = 'mailto:' + u + '\u0040' + d;
+})();
+
+document.getElementById('pmtp-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var btn = document.getElementById('submit-btn');
+  var err = document.getElementById('form-error');
+  btn.disabled = true; btn.textContent = 'Sending…'; err.style.display = 'none';
+  fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(e.target) })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      if (data.success) {
+        document.getElementById('form-container').style.display = 'none';
+        document.getElementById('thank-you').style.display = 'block';
+      } else {
+        btn.disabled = false; btn.textContent = 'Send to Christina'; err.style.display = 'block';
+        err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    })
+    .catch(function() {
+      btn.disabled = false; btn.textContent = 'Send to Christina'; err.style.display = 'block';
+      err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+});
+</script>
+</body>
+</html>
