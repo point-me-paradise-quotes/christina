@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Icon of the Seas — 8 Nights, Western Caribbean | Point Me to Paradise Travel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --aqua-pale:#C4E4E1;
+  --aqua-mist:#EAF3F2;
+  --aqua:#75AFB1;
+  --aqua-dark:#4F8A8C;
+  --sand:#ECE7DC;
+  --sand-light:#F4F1E9;
+  --gold-whisper:#D6C8A8;
+  --white:#FFFFFF;
+  --paper:#FBFDFD;
+  --ink:#2B2420;
+  --ink-soft:#6B6359;
+  --line:#E5E9E8;
+}
+*{box-sizing:border-box;}
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+}
+img{max-width:100%;height:auto;}
+body,p,li,span,h1,h2,h3,h4{overflow-wrap:break-word;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'DM Sans',system-ui,-apple-system,sans-serif;
+  font-weight:400;
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:104px;
+}
+h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:500;color:var(--ink);margin:0;line-height:1.2;}
+p{margin:0 0 16px;}
+a{color:var(--aqua-dark);}
+.wrap{max-width:940px;margin:0 auto;padding:0 26px;}
+.narrow{max-width:760px;margin:0 auto;padding:0 26px;}
+
+/* ── HERO ───────────────────────────── */
+.pmtp-hero{
+  position:relative;
+  /* fallback: solid brand tint, then the gradient wash, then the photo */
+  background-color:var(--aqua-mist);
+  background-image:
+    linear-gradient(180deg,
+      rgba(251,253,253,0.90) 0%,
+      rgba(234,243,242,0.72) 34%,
+      rgba(234,243,242,0.74) 62%,
+      rgba(251,253,253,0.94) 100%),
+    url('https://www.cruzely.com/wp-content/uploads/icon-aft-sm.jpg');
+  background-size:cover, cover;
+  background-position:center, center 38%;
+  background-repeat:no-repeat, no-repeat;
+  padding:96px 32px 76px;
+  text-align:center;
+  border-bottom:1px solid var(--line);
+}
+.pmtp-hero > *{position:relative;z-index:1;}
+@media (max-width:640px){
+  .pmtp-hero{
+    padding:64px 22px 52px;
+    background-image:
+      linear-gradient(180deg,
+        rgba(251,253,253,0.93) 0%,
+        rgba(234,243,242,0.80) 40%,
+        rgba(251,253,253,0.95) 100%),
+      url('https://www.cruzely.com/wp-content/uploads/icon-aft-sm.jpg');
+  }
+}
+.pmtp-wordmark{
+  font-family:'Playfair Display',serif;font-size:11px;font-weight:600;
+  letter-spacing:0.22em;text-transform:uppercase;color:var(--aqua-dark);
+}
+.pmtp-tagline{
+  font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;
+  font-size:15px;color:var(--ink-soft);letter-spacing:0.04em;margin-top:4px;
+}
+.hero-rule{width:44px;height:1px;background:var(--gold-whisper);margin:26px auto 24px;}
+.pmtp-hero h1{font-size:clamp(2.1rem,5.4vw,3.35rem);letter-spacing:-0.01em;text-shadow:0 1px 2px rgba(251,253,253,0.9);}
+.hero-ship{
+  font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;
+  font-size:clamp(1.15rem,2.6vw,1.45rem);color:var(--ink-soft);margin-top:12px;
+}
+.hero-facts{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:28px;
+}
+.fact{
+  background:var(--white);border:1px solid var(--line);border-radius:999px;
+  padding:7px 17px;font-size:0.78rem;letter-spacing:0.09em;text-transform:uppercase;
+  color:var(--ink-soft);font-weight:500;
+}
+
+/* ── SECTIONS ───────────────────────── */
+section{padding:62px 0;}
+.band{background:var(--aqua-mist);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.eyebrow{
+  font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--aqua-dark);font-weight:600;margin-bottom:14px;
+}
+h2{font-size:clamp(1.6rem,3.4vw,2.1rem);margin-bottom:8px;}
+.sub{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:1.15rem;color:var(--ink-soft);margin-bottom:30px;}
+
+/* ── COMMITMENT CALLOUTS ────────────── */
+.commit{
+  background:var(--aqua-pale);border-radius:10px;padding:24px 28px;
+  font-size:1rem;line-height:1.7;color:var(--ink);margin:30px 0 0;
+}
+.commit strong{font-weight:600;}
+.commit-quiet{
+  background:var(--sand-light);border-left:3px solid var(--gold-whisper);
+  border-radius:6px;padding:20px 24px;font-size:0.95rem;color:var(--ink-soft);margin:24px 0 0;
+}
+
+/* ── ITINERARY ──────────────────────── */
+.itin-map{width:100%;border-radius:10px;border:1px solid var(--line);display:block;margin-bottom:34px;background:var(--white);}
+.day{
+  display:grid;grid-template-columns:78px 1fr;gap:22px;
+  padding:20px 0;border-bottom:1px solid var(--line);
+}
+.day:last-child{border-bottom:none;}
+.day-num{
+  font-family:'Playfair Display',serif;font-size:0.72rem;font-weight:600;
+  letter-spacing:0.16em;text-transform:uppercase;color:var(--aqua-dark);padding-top:4px;
+}
+.day-port{font-family:'Playfair Display',serif;font-size:1.22rem;font-weight:600;margin-bottom:3px;}
+.day-time{font-size:0.85rem;color:var(--aqua-dark);font-weight:500;letter-spacing:0.02em;margin-bottom:8px;}
+.day-note{font-size:0.95rem;color:var(--ink-soft);margin:0;}
+.day.sea .day-port{color:var(--ink-soft);font-weight:400;font-style:italic;}
+
+/* ── OPTIONS / CABINS ───────────────── */
+.opt{
+  background:var(--white);border:1px solid var(--line);border-radius:12px;
+  overflow:hidden;margin-bottom:22px;transition:border-color .18s ease, box-shadow .18s ease;
+}
+.opt.selected{border-color:var(--aqua);box-shadow:0 2px 18px rgba(79,138,140,0.11);}
+.opt-head{
+  display:flex;flex-wrap:wrap;align-items:center;gap:12px;
+  padding:22px 26px 0;
+}
+.opt-code{
+  background:var(--aqua-pale);color:var(--ink);border-radius:5px;
+  padding:4px 11px;font-size:0.78rem;font-weight:700;letter-spacing:0.12em;
+}
+.opt-tag{
+  border:1px solid var(--gold-whisper);color:var(--ink-soft);border-radius:999px;
+  padding:3px 12px;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;font-weight:500;
+}
+.opt-stock{
+  margin-left:auto;background:var(--aqua-mist);color:var(--aqua-dark);border-radius:999px;
+  padding:4px 13px;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:600;
+}
+.opt-obc{
+  display:inline-block;background:var(--aqua-pale);border-radius:6px;
+  padding:9px 15px;font-size:0.88rem;font-weight:500;margin-bottom:18px;
+}
+.opt-obc b{font-weight:700;}
+.compare-note{
+  background:var(--white);border:1px solid var(--line);border-radius:10px;
+  padding:22px 26px;margin-bottom:26px;font-size:0.95rem;color:var(--ink-soft);
+}
+.compare-note strong{color:var(--ink);}
+
+/* expand prompt */
+.expand-prompt{
+  display:flex;align-items:flex-start;gap:14px;
+  background:var(--aqua-pale);border-radius:10px;padding:18px 22px;margin-bottom:26px;
+  font-size:0.97rem;line-height:1.6;
+}
+.expand-prompt-icon{
+  font-family:'DM Sans',sans-serif;font-size:1.3rem;font-weight:600;color:var(--aqua-dark);
+  line-height:1.2;flex-shrink:0;
+}
+
+/* accordion */
+.cat{border:1px solid var(--line);border-radius:12px;background:var(--white);margin-bottom:16px;overflow:hidden;}
+.cat.open{border-color:var(--aqua);box-shadow:0 2px 18px rgba(79,138,140,0.10);}
+.cat-head{
+  width:100%;display:flex;align-items:center;gap:16px;text-align:left;
+  background:var(--white);border:none;padding:22px 24px;cursor:pointer;
+  font-family:'DM Sans',sans-serif;transition:background .16s ease;
+}
+.cat-head:hover{background:var(--aqua-mist);}
+.cat.open .cat-head{background:var(--aqua-mist);border-bottom:1px solid var(--line);}
+.cat-chev{
+  font-size:1.4rem;font-weight:600;color:var(--aqua-dark);line-height:1;
+  width:30px;height:30px;border-radius:50%;background:var(--aqua-pale);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.cat-main{display:flex;flex-direction:column;gap:3px;min-width:0;}
+.cat-name{
+  font-family:'Playfair Display',serif;font-size:1.28rem;font-weight:600;color:var(--ink);
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+}
+.cat-grp{
+  font-family:'DM Sans',sans-serif;font-size:0.64rem;font-weight:700;letter-spacing:0.12em;
+  text-transform:uppercase;background:var(--aqua-pale);color:var(--aqua-dark);
+  border-radius:999px;padding:3px 10px;
+}
+.cat-desc{font-size:0.88rem;color:var(--ink-soft);}
+.cat-meta{margin-left:auto;text-align:right;flex-shrink:0;}
+.cat-from{
+  display:block;font-family:'Playfair Display',serif;font-size:1.05rem;
+  font-weight:600;color:var(--aqua-dark);
+}
+.cat-count{
+  display:block;font-size:0.74rem;letter-spacing:0.09em;text-transform:uppercase;
+  color:var(--ink-soft);font-weight:600;margin-top:3px;
+}
+.cat-body{padding:22px 24px 6px;background:var(--paper);}
+.cat-photo-wrap{margin:0 0 22px;}
+.cat-photo{
+  width:100%;display:block;border-radius:10px;border:1px solid var(--line);
+  aspect-ratio:16/9;object-fit:cover;background:var(--aqua-mist);
+}
+.cat-caption{
+  font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;
+  font-size:1rem;color:var(--ink-soft);margin:9px 2px 0;line-height:1.5;
+}
+.listen{
+  display:flex;align-items:center;gap:20px;flex-wrap:wrap;
+  background:var(--aqua-pale);border-radius:11px;padding:26px 28px;margin-top:30px;
+}
+.listen-main{flex:1 1 300px;min-width:0;}
+.listen h3{font-size:1.32rem;margin-bottom:7px;}
+.listen p{font-size:0.95rem;color:var(--ink-soft);margin:0;}
+.listen-cta{
+  background:var(--aqua-dark);color:var(--white);text-decoration:none;border-radius:7px;
+  padding:14px 28px;font-size:0.94rem;font-weight:600;letter-spacing:0.04em;white-space:nowrap;
+}
+.listen-cta:hover{background:var(--aqua);}
+.listen-player{flex:1 1 100%;margin-top:6px;}
+.listen-player audio{
+  width:100%;height:44px;display:block;border-radius:8px;
+}
+.listen-fallback{font-size:0.86rem;color:var(--ink-soft);margin-top:10px;}
+.opt-grp{
+  background:var(--aqua-dark);color:var(--white);border-radius:5px;
+  padding:4px 11px;font-size:0.68rem;font-weight:700;letter-spacing:0.11em;text-transform:uppercase;
+}
+.opt-split{font-size:0.88rem;font-style:italic;}
+.opt-compare{
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;
+  background:var(--sand-light);border-left:3px solid var(--gold-whisper);
+  border-radius:6px;padding:13px 18px;margin-bottom:18px;font-size:0.9rem;
+}
+.oc-label{color:var(--ink-soft);}
+.oc-strike{text-decoration:line-through;color:var(--ink-soft);}
+.oc-save{margin-left:auto;font-weight:700;color:var(--aqua-dark);}
+.grat{
+  background:var(--aqua-mist);border-radius:9px;padding:18px 20px;margin-top:20px;
+}
+.grat-row{display:flex;align-items:flex-start;gap:13px;cursor:pointer;}
+.grat-row input{
+  width:20px;height:20px;flex-shrink:0;margin:2px 0 0;accent-color:var(--aqua-dark);cursor:pointer;
+}
+.grat-row span{font-size:0.97rem;line-height:1.5;}
+.grat-note{font-size:0.86rem;color:var(--ink-soft);margin:11px 0 0 33px;line-height:1.6;}
+.grand-note{
+  display:block;font-family:'DM Sans',sans-serif;font-size:0.78rem;font-weight:500;
+  letter-spacing:0.05em;color:var(--ink-soft);margin-top:4px;
+}
+@media (max-width:640px){.oc-save{margin-left:0;}}
+
+/* pricing empty state */
+#price-empty{text-align:center;padding:14px 0 6px;}
+#price-empty .pe-big{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:600;display:block;margin-bottom:8px;}
+#price-empty p{font-size:0.95rem;color:var(--ink-soft);margin:0 auto;max-width:430px;}
+.pe-btn{
+  display:inline-block;margin-top:20px;background:var(--aqua-dark);color:var(--white);
+  text-decoration:none;border-radius:7px;padding:13px 26px;font-size:0.93rem;font-weight:600;letter-spacing:0.04em;
+}
+.pe-btn:hover{background:var(--aqua);}
+.opt-body{padding:14px 26px 26px;}
+.opt-body h3{font-size:1.42rem;margin-bottom:10px;}
+.opt-specs{
+  display:flex;flex-wrap:wrap;gap:0 30px;margin:0 0 16px;padding:0;list-style:none;
+  font-size:0.87rem;color:var(--ink-soft);
+}
+.opt-specs li strong{color:var(--ink);font-weight:600;}
+.opt-desc{font-size:0.97rem;color:var(--ink-soft);margin-bottom:20px;}
+.opt-price-row{
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px;
+  padding-top:18px;border-top:1px solid var(--line);
+}
+.opt-pp{font-family:'Playfair Display',serif;font-size:1.75rem;font-weight:600;}
+.opt-pp-label{font-size:0.85rem;color:var(--ink-soft);}
+.opt-total{margin-left:auto;font-size:0.9rem;color:var(--ink-soft);}
+.opt-total b{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--ink);font-weight:600;}
+.select-btn{
+  margin-top:20px;width:100%;background:var(--aqua-dark);color:var(--white);
+  border:none;border-radius:7px;padding:14px 20px;font-family:'DM Sans',sans-serif;
+  font-size:0.95rem;font-weight:600;letter-spacing:0.04em;cursor:pointer;transition:background .18s ease;
+}
+.select-btn:hover{background:var(--aqua);}
+.opt.selected .select-btn{background:var(--aqua);}
+.opt.selected .select-btn::before{content:"✓  ";}
+
+/* ── PRICE PANEL ────────────────────── */
+.price-panel{
+  background:var(--white);border:1px solid var(--line);border-radius:12px;padding:30px 30px 26px;
+}
+.price-line{
+  display:flex;justify-content:space-between;gap:18px;
+  padding:11px 0;border-bottom:1px solid var(--line);font-size:0.95rem;
+}
+.price-line:last-of-type{border-bottom:none;}
+.price-line span:last-child{font-weight:600;white-space:nowrap;}
+.price-grand{
+  display:flex;justify-content:space-between;align-items:baseline;gap:18px;
+  margin-top:18px;padding-top:20px;border-top:2px solid var(--aqua-pale);
+}
+.price-grand .lbl{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;}
+.price-grand .amt{font-family:'Playfair Display',serif;font-size:2.05rem;font-weight:600;color:var(--aqua-dark);}
+.not-included{
+  background:var(--sand-light);border-radius:8px;padding:18px 22px;margin-top:22px;
+  font-size:0.9rem;color:var(--ink-soft);
+}
+.not-included h4{font-size:0.95rem;margin-bottom:8px;}
+.not-included ul{margin:0;padding-left:19px;}
+.not-included li{margin-bottom:6px;}
+
+/* ── STICKY BAR ─────────────────────── */
+.sticky-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:40;
+  background:var(--white);border-top:1px solid var(--line);
+  box-shadow:0 -3px 20px rgba(43,36,32,0.07);
+  padding:13px 26px;
+}
+.sticky-inner{
+  max-width:940px;margin:0 auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+}
+.sticky-label{font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-soft);}
+.sticky-cabin{font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;}
+.sticky-amt{margin-left:auto;text-align:right;}
+.sticky-amt .big{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:600;color:var(--aqua-dark);}
+.sticky-amt .small{display:block;font-size:0.74rem;color:var(--ink-soft);letter-spacing:0.04em;}
+.sticky-cta{
+  background:var(--aqua-dark);color:var(--white);text-decoration:none;border-radius:7px;
+  padding:12px 24px;font-size:0.9rem;font-weight:600;letter-spacing:0.04em;white-space:nowrap;
+}
+.sticky-cta:hover{background:var(--aqua);}
+
+/* ── SHIP / INCLUDED ────────────────── */
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:20px;}
+.tile{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:24px 26px;}
+.tile h4{font-size:1.08rem;margin-bottom:9px;}
+.tile p{font-size:0.93rem;color:var(--ink-soft);margin:0;}
+.steps{list-style:none;margin:0;padding:0;counter-reset:step;}
+.steps li{
+  position:relative;padding:0 0 26px 62px;counter-increment:step;
+}
+.steps li::before{
+  content:counter(step);position:absolute;left:0;top:0;
+  width:38px;height:38px;border-radius:50%;background:var(--aqua-pale);
+  color:var(--aqua-dark);font-family:'Playfair Display',serif;font-size:1.05rem;
+  font-weight:600;display:flex;align-items:center;justify-content:center;
+}
+.steps li::after{
+  content:'';position:absolute;left:19px;top:44px;bottom:6px;width:1px;background:var(--line);
+}
+.steps li:last-child{padding-bottom:0;}
+.steps li:last-child::after{display:none;}
+.steps h4{font-size:1.12rem;margin-bottom:6px;}
+.steps p{font-size:0.95rem;color:var(--ink-soft);margin:0 0 8px;}
+.steps p:last-child{margin-bottom:0;}
+.step-key{
+  display:inline-block;background:var(--sand-light);border-left:3px solid var(--gold-whisper);
+  border-radius:5px;padding:9px 15px;font-size:0.9rem;color:var(--ink);margin-top:4px;
+}
+.privacy-note{
+  background:var(--aqua-mist);border-radius:9px;padding:18px 22px;margin-top:26px;
+  font-size:0.92rem;color:var(--ink-soft);line-height:1.65;
+}
+@media (max-width:640px){
+  .steps li{padding-left:52px;padding-bottom:24px;}
+  .steps li::before{width:34px;height:34px;font-size:0.98rem;}
+  .steps li::after{left:17px;top:40px;}
+  .privacy-note{padding:16px 18px;}
+}
+.inc-list{list-style:none;margin:0;padding:0;columns:2;column-gap:34px;}
+.inc-list li{
+  font-size:0.95rem;color:var(--ink-soft);padding:7px 0 7px 22px;position:relative;
+  break-inside:avoid;
+}
+.inc-list li::before{content:"—";position:absolute;left:0;color:var(--aqua);}
+
+/* ── FORM ───────────────────────────── */
+.form-wrap{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:34px 32px;}
+.field{margin-bottom:19px;}
+label{display:block;font-size:0.85rem;font-weight:600;letter-spacing:0.05em;margin-bottom:7px;color:var(--ink);}
+label .opt-note{font-weight:400;color:var(--ink-soft);letter-spacing:0;}
+input,select,textarea{
+  width:100%;font-family:'DM Sans',sans-serif;font-size:16px;color:var(--ink);
+  background:var(--paper);border:1px solid var(--line);border-radius:7px;
+  padding:13px 15px;line-height:1.45;
+}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--aqua);outline-offset:1px;border-color:var(--aqua);}
+textarea{min-height:118px;resize:vertical;}
+#submit-btn{
+  width:100%;background:var(--aqua-dark);color:var(--white);border:none;border-radius:7px;
+  padding:16px 22px;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;
+  letter-spacing:0.05em;cursor:pointer;transition:background .18s ease;
+}
+#submit-btn:hover{background:var(--aqua);}
+#submit-btn:disabled{background:var(--aqua);cursor:default;opacity:.75;}
+#thank-you{display:none;background:var(--aqua-pale);border-radius:12px;padding:38px 32px;text-align:center;}
+#thank-you h3{font-size:1.5rem;margin-bottom:10px;}
+#thank-you p{color:var(--ink-soft);margin:0;}
+
+/* ── FOOTER ─────────────────────────── */
+footer{background:var(--sand-light);border-top:1px solid var(--line);padding:52px 26px 46px;text-align:center;}
+.adv-name{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:600;}
+.adv-title{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:var(--ink-soft);margin-bottom:16px;}
+.adv-contact{font-size:0.95rem;color:var(--ink-soft);line-height:2;}
+.adv-contact a{color:var(--aqua-dark);text-decoration:none;}
+.adv-contact a:hover{text-decoration:underline;}
+.foot-rule{width:44px;height:1px;background:var(--gold-whisper);margin:26px auto;}
+.foot-brand{font-family:'Playfair Display',serif;font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--aqua-dark);}
+.foot-tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.02rem;color:var(--ink-soft);margin-top:6px;}
+.legal{max-width:700px;margin:30px auto 0;font-size:0.79rem;line-height:1.7;color:var(--ink-soft);}
+
+@media (max-width:640px){
+  .wrap,.narrow{padding:0 18px;}
+  section{padding:44px 0;}
+  h2{font-size:1.5rem;}
+  .sub{font-size:1.05rem;margin-bottom:24px;}
+
+  /* itinerary */
+  .day{grid-template-columns:1fr;gap:4px;padding:18px 0;}
+  .day-num{padding-top:0;}
+  .day-port{font-size:1.1rem;}
+  .inc-list{columns:1;}
+
+  /* accordion headers stack: chevron + name on row 1, price + prompt on row 2 */
+  .cat-head{flex-wrap:wrap;gap:12px;padding:18px 16px;}
+  .cat-name{font-size:1.12rem;gap:8px;}
+  .cat-desc{font-size:0.84rem;}
+  .cat-main{flex:1 1 0;min-width:0;}
+  .cat-meta{
+    flex:1 1 100%;margin-left:0;text-align:left;padding-left:46px;
+    display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
+  }
+  .cat-count{margin-top:0;}
+  .cat-body{padding:16px 12px 4px;}
+  .cat-photo{aspect-ratio:3/2;}
+  .cat-photo-wrap{margin-bottom:18px;}
+  .cat-caption{font-size:0.95rem;}
+  .listen{padding:22px 20px;}
+  .listen-cta{width:100%;text-align:center;}
+
+  /* stateroom cards */
+  .opt-head{padding:18px 18px 0;gap:8px;}
+  .opt-stock{margin-left:0;}
+  .opt-body{padding:14px 18px 22px;}
+  .opt-body h3{font-size:1.22rem;}
+  .opt-specs{gap:2px 18px;font-size:0.85rem;}
+  .opt-price-row{gap:4px;}
+  .opt-pp{font-size:1.55rem;}
+  .opt-total{margin-left:0;width:100%;}
+  .opt-compare{padding:12px 14px;font-size:0.86rem;}
+
+  /* panels + forms */
+  .form-wrap,.price-panel,.compare-note{padding:22px 18px;}
+  .commit{padding:20px 20px;font-size:0.96rem;}
+  .commit-quiet{padding:18px 18px;}
+  .expand-prompt{padding:16px 18px;font-size:0.93rem;}
+  .price-line{font-size:0.9rem;gap:12px;}
+  .price-grand .amt{font-size:1.7rem;}
+  .grat-note{margin-left:0;}
+  .tile{padding:20px 20px;}
+  .adv-contact{overflow-wrap:anywhere;}
+
+  /* sticky bar: name + total on one row, full-width CTA below */
+  .sticky-bar{padding:11px 16px;}
+  .sticky-inner{gap:9px 12px;}
+  .sticky-sel{flex:1 1 auto;min-width:0;}
+  .sticky-label{display:none;}
+  .sticky-cabin{
+    font-size:0.9rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  }
+  .sticky-amt{margin-left:auto;text-align:right;flex-shrink:0;}
+  .sticky-amt .big{font-size:1.16rem;}
+  .sticky-amt .small{font-size:0.67rem;line-height:1.35;}
+  .sticky-cta{flex:1 1 100%;width:100%;text-align:center;padding:13px 20px;}
+}
+
+@media (max-width:380px){
+  .cat-meta{padding-left:0;}
+  .opt-specs{gap:2px 12px;}
+  .sticky-amt .small{display:none;}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none !important;scroll-behavior:auto !important;}}
+</style>
+</head>
+<body>
+
+<!-- ══ HERO ══════════════════════════ -->
+<header class="pmtp-hero">
+  <div class="pmtp-wordmark">Point Me to Paradise Travel</div>
+  <div class="pmtp-tagline">Curated Journeys · Expert Advisors</div>
+  <div class="hero-rule"></div>
+  <h1>Eight Nights,<br>Western Caribbean</h1>
+  <div class="hero-ship">Icon of the Seas · Royal Caribbean International</div>
+  <div class="hero-facts">
+    <span class="fact">Galveston Round-Trip</span>
+    <span class="fact">Oct 9 – 17, 2027</span>
+    <span class="fact">3 Ports · 4 Sea Days</span>
+  </div>
+</header>
+
+<!-- ══ OVERVIEW ══════════════════════ -->
+<section>
+  <div class="narrow">
+    <div class="eyebrow">The Trip</div>
+    <h2>Drive to the pier. Sail on the largest ship afloat.</h2>
+    <p class="sub">No airport, no connections, no lost luggage — Galveston is a two-hour drive from most of Houston.</p>
+    <p>Icon of the Seas moves to Galveston in August 2027, and this October sailing is one of its early Texas departures. It carries the largest waterpark at sea, a suspended infinity pool, an ice rink, and eight distinct neighborhoods — Surfside for families, Chill Island for adults, Central Park in the middle of it all. It is less a ship than a small coastal town that happens to relocate overnight.</p>
+    <p>The route is built around three very different days ashore. Cozumel for reef diving and a short ferry to the mainland. Costa Maya for the quieter Yucatán coast, where the beach clubs at Mahahual are a ten-minute cab from the pier. Perfect Day at CocoCay in the Bahamas, Royal Caribbean's private island, where a full day costs you nothing extra unless you want the waterpark or a cabana.</p>
+    <p>Four sea days are woven through the eight nights — one early, one mid-route, and two on the long westward run home from the Bahamas. On a ship this size, those are the days the ship itself becomes the destination.</p>
+
+    <div class="commit">
+      <strong>We don't book hotels. We build trips.</strong> Custom guides, trip app, real human when something goes sideways. The work you'd hate doing — already done.
+    </div>
+  </div>
+</section>
+
+<!-- ══ ITINERARY ═════════════════════ -->
+<section class="band">
+  <div class="wrap">
+    <div class="eyebrow">Day by Day</div>
+    <h2>The Route</h2>
+    <p class="sub">All times local. Ports of call may vary by departure date and are subject to weather and other conditions.</p>
+
+    <img class="itin-map" src="https://contents.odysol.com/content/images/Itineraries/GLS_CZM_CST_CCY_GLS-vODY-638986108730000000.jpg" alt="Map of the Western Caribbean route from Galveston to Cozumel, Costa Maya, and Perfect Day at CocoCay">
+
+    <div class="day">
+      <div class="day-num">Day 1<br>Oct 9</div>
+      <div>
+        <div class="day-port">Galveston, Texas</div>
+        <div class="day-time">Depart 4:30 p.m.</div>
+        <p class="day-note">Terminal doors open early afternoon. Aim to be checked in by 2:00 p.m. so you have time to find your muster station, drop your carry-on, and be on deck for the sail-away past the jetties.</p>
+      </div>
+    </div>
+
+    <div class="day sea">
+      <div class="day-num">Day 2<br>Oct 10</div>
+      <div>
+        <div class="day-port">At Sea</div>
+        <p class="day-note">First full day. This is when you book the shows — Aqua Dome and the ice theater fill fast on the opening sea day.</p>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-num">Day 3<br>Oct 11</div>
+      <div>
+        <div class="day-port">Cozumel, Mexico</div>
+        <div class="day-time">8:00 a.m. – 6:00 p.m.</div>
+        <p class="day-note">Ten hours is a generous port day. Long enough for a two-tank dive on Palancar, a beach club on the west shore, or the ferry across to Playa del Carmen and back.</p>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-num">Day 4<br>Oct 12</div>
+      <div>
+        <div class="day-port">Puerto Costa Maya, Mexico</div>
+        <div class="day-time">8:00 a.m. – 5:00 p.m.</div>
+        <p class="day-note">The port sits about 350 miles south of Cancún, near the Belize border. Mahahual village and its beach clubs are a short ride from the pier; Chacchoben's Mayan ruins are about an hour inland.</p>
+      </div>
+    </div>
+
+    <div class="day sea">
+      <div class="day-num">Day 5<br>Oct 13</div>
+      <div>
+        <div class="day-port">At Sea</div>
+        <p class="day-note">The crossing east toward the Bahamas. A good day for the Solarium, a specialty lunch, or the thermal suite.</p>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-num">Day 6<br>Oct 14</div>
+      <div>
+        <div class="day-port">Perfect Day at CocoCay, Bahamas</div>
+        <div class="day-time">8:30 a.m. – 5:00 p.m.</div>
+        <p class="day-note">Royal Caribbean's private island. Beaches, the freshwater pool, and lunch are included with your fare. Thrill Waterpark, Coco Beach Club, and cabanas are add-ons — and they sell out months ahead.</p>
+      </div>
+    </div>
+
+    <div class="day sea">
+      <div class="day-num">Day 7<br>Oct 15</div>
+      <div>
+        <div class="day-port">At Sea</div>
+        <p class="day-note">Westbound. The long return through the Florida Straits and into the Gulf begins.</p>
+      </div>
+    </div>
+
+    <div class="day sea">
+      <div class="day-num">Day 8<br>Oct 16</div>
+      <div>
+        <div class="day-port">At Sea</div>
+        <p class="day-note">Last full day. Settle the onboard account, pack the night bag, and take one more run at whatever you missed.</p>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-num">Day 9<br>Oct 17</div>
+      <div>
+        <div class="day-port">Galveston, Texas</div>
+        <div class="day-time">Arrive 6:00 a.m.</div>
+        <p class="day-note">Early arrival. Self-carry walk-off usually begins around 7:00 a.m. — most guests are in their cars and headed north by mid-morning.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ STATEROOM OPTIONS ═════════════ -->
+<section id="staterooms">
+  <div class="wrap">
+    <div class="eyebrow">Your Stateroom</div>
+    <h2>Where You'll Stay</h2>
+    <p class="sub">Eleven staterooms across four categories. All pricing is for two guests sharing.</p>
+
+    <div class="compare-note">
+      <strong>Three of these are held in our group space</strong> — the D4, the IF and the N4, each marked with a Group Rate badge. Those three price below everything else on this page, including the interior staterooms. That is not an error. Group fares are negotiated and locked in advance; every other stateroom here reflects what the cruise line is charging the public today, on a promotion where the second guest pays a reduced fare.
+    </div>
+
+    <div class="expand-prompt">
+      <span class="expand-prompt-icon">＋</span>
+      <span><strong>Each category below is collapsed.</strong> Tap a category to open it and see the staterooms inside, then select one to build your total.</span>
+    </div>
+
+    <div class="cat" id="cat-inside">
+      <button class="cat-head" type="button" aria-expanded="false" aria-controls="body-inside" onclick="toggleCat('inside')">
+        <span class="cat-chev" aria-hidden="true">＋</span>
+        <span class="cat-main">
+          <span class="cat-name">Inside</span>
+          <span class="cat-desc">No window. The quietest and darkest rooms on the ship.</span>
+        </span>
+        <span class="cat-meta">
+          <span class="cat-from">From $4,621.92</span>
+          <span class="cat-count" id="count-inside">Tap to see 3 staterooms</span>
+        </span>
+      </button>
+      <div class="cat-body" id="body-inside" hidden>
+        <figure class="cat-photo-wrap">
+          <img class="cat-photo" src="https://d23n7ahjfnjotp.cloudfront.net/imgs/iphone/cabins/new/791/r3xl.jpg" alt="Interior stateroom aboard Icon of the Seas" loading="lazy" decoding="async">
+          <figcaption class="cat-caption">A Spacious Interior stateroom. Layout and size vary across the three interior categories below. Representative image &mdash; the stateroom you receive may differ.</figcaption>
+        </figure>
+      <div class="opt" id="opt-ZI"
+           data-label="ZI — Interior Stateroom (Guarantee)"
+           data-fares="3029.00,1211.00"
+           data-taxes="190.96,190.96"
+           data-obc="100">
+        <div class="opt-head">
+          <span class="opt-code">ZI</span><span class="opt-tag">Guarantee</span><span class="opt-tag">No Window</span>
+          <span class="opt-stock">Limited availability</span>
+        </div>
+        <div class="opt-body">
+          <h3>Interior Stateroom</h3>
+          <ul class="opt-specs"><li>Interior — <strong>no window</strong></li><li>Assigned by the cruise line</li><li>Location set up to sail date</li></ul>
+          <div class="opt-obc">Includes <b>$100.00 onboard credit</b> per stateroom</div>
+          <p class="opt-desc">A guarantee assignment within the interior category or better, anywhere on the ship. The room number and deck are set at any time after the reservation is complete and paid in full, up to the day of sailing.</p><p class="opt-desc">Interior rooms are the darkest and quietest on board. Some travelers sleep better in them, and on a ship this size you are rarely in the room anyway.</p><p class="opt-desc opt-split">Priced on a promotion where the first and second guests pay different fares. The full breakdown appears in the pricing panel when you select this stateroom.</p>
+          <div class="opt-price-row">
+            <span class="opt-pp">$2,310.96</span>
+            <span class="opt-pp-label">average per person, taxes and fees included</span>
+            <span class="opt-total">Two guests — <b>Est. $4,621.92</b></span>
+          </div>
+          <button class="select-btn" type="button" onclick="selectOption('ZI')">Select this stateroom</button>
+        </div>
+      </div>
+      <div class="opt" id="opt-Q2"
+           data-label="Q2 — Interior Plus Stateroom"
+           data-fares="3319.00,1327.00"
+           data-taxes="190.96,190.96"
+           data-obc="100">
+        <div class="opt-head">
+          <span class="opt-code">Q2</span><span class="opt-tag">Room You Choose</span><span class="opt-tag">No Window</span>
+          <span class="opt-stock">Decks 9 &amp; 10 available</span>
+        </div>
+        <div class="opt-body">
+          <h3>Interior Plus Stateroom</h3>
+          <ul class="opt-specs"><li><strong>157 sq. ft.</strong></li><li>Interior — <strong>no window</strong></li><li>Decks <strong>7 – 11</strong></li><li>Sleeps <strong>2</strong></li></ul>
+          <div class="opt-obc">Includes <b>$100.00 onboard credit</b> per stateroom</div>
+          <p class="opt-desc">The storage-forward interior. A walk-in closet with its own vanity, a lounge chair with ottoman, two twin beds that convert to a Royal King, and a full bathroom with a bench in the shower.</p><p class="opt-desc">You pick the exact room, on decks 9 or 10. Two guests maximum.</p><p class="opt-desc opt-split">Priced on a promotion where the first and second guests pay different fares. The full breakdown appears in the pricing panel when you select this stateroom.</p>
+          <div class="opt-price-row">
+            <span class="opt-pp">$2,513.96</span>
+            <span class="opt-pp-label">average per person, taxes and fees included</span>
+            <span class="opt-total">Two guests — <b>Est. $5,027.92</b></span>
+          </div>
+          <button class="select-btn" type="button" onclick="selectOption('Q2')">Select this stateroom</button>
+        </div>
+      </div>
+      <div class="opt" id="opt-R4"
+           data-label="R4 — Spacious Interior Stateroom"
+           data-fares="3422.00,1368.00"
+           data-taxes="190.96,190.96"
+           data-obc="100">
+        <div class="opt-head">
+          <span class="opt-code">R4</span><span class="opt-tag">Room You Choose</span><span class="opt-tag">No Window</span>
+          <span class="opt-stock">Decks 3, 9, 10 &amp; 11 available</span>
+        </div>
+        <div class="opt-body">
+          <h3>Spacious Interior Stateroom</h3>
+          <ul class="opt-specs"><li><strong>178 sq. ft.</strong></li><li>Interior — <strong>no window</strong></li><li>Decks <strong>3, 7 – 12 &amp; 14</strong></li><li>Sleeps <strong>2</strong> in available rooms</li></ul>
+          <div class="opt-obc">Includes <b>$100.00 onboard credit</b> per stateroom</div>
+          <p class="opt-desc">The largest of the interiors — 21 square feet more than Interior Plus, laid out with a proper sitting area and sofa rather than a single chair. Two twin beds convert to a Royal King, plus a vanity and a full bathroom with a bench in the shower.</p><p class="opt-desc">Availability spans deck 3 up to deck 11, so location is genuinely open. Deck 3 is low and central; deck 11 puts you near the neighborhoods.</p><p class="opt-desc opt-split">Priced on a promotion where the first and second guests pay different fares. The full breakdown appears in the pricing panel when you select this stateroom.</p>
+          <div class="opt-price-row">
+            <span class="opt-pp">$2,585.96</span>
+            <span class="opt-pp-label">average per person, taxes and fees included</span>
+            <span class="opt-total">Two guests — <b>Est. $5,171.92</b></span>
+          </div>
+          <button class="select-btn" type="button" onclick="selectOption('R4')">Select this stateroom</button>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="cat" id="cat-oceanview">
+      <button class="cat-head" type="button" aria-expanded="false" aria-controls="body-oceanview" onclick="toggleCat('oceanview')">
+        <span class="cat-chev" aria-hidden="true">＋</span>
+        <span class="cat-main">
+          <span class="cat-name">Ocean View <span class="cat-grp">Group rate inside</span></span>
+          <span class="cat-desc">A window to the water. No outdoor space.</span>
+        </span>
+        <span class="cat-meta">
+          <span class="cat-from">From $3,497.92</span>
+          <span class="cat-count" id="count-oceanview">Tap to see 2 staterooms</span>
+        </span>
+      </button>
+      <div class="cat-body" id="body-oceanview" hidden>
+        <figure class="cat-photo-wrap">
+          <img class="cat-photo" src="https://www.royalcaribbeanblog.com/sites/default/files/styles/mobile_1x/public/2022-10/surfside-family-view-balcony.jpg.webp?itok=DT5Kqq7J" alt="Ocean view stateroom aboard Icon of the Seas" loading="lazy" decoding="async">
+          <figcaption class="cat-caption">Representative of the ocean view staterooms below. Representative image &mdash; the stateroom you receive may differ.</figcaption>
+        </figure>
+      <div class="opt" id="opt-N4"
+           data-label="N4 — Ocean View Stateroom (Window)"
+           data-fares="1558.00,1558.00"
+           data-taxes="190.96,190.96"
+           data-compare="6165.92"
+           data-obc="50">
+        <div class="opt-head">
+          <span class="opt-code">N4</span><span class="opt-grp">Our Group Rate</span><span class="opt-tag">Window</span><span class="opt-tag">No Balcony</span>
+          <span class="opt-stock">4 left at this rate</span>
+        </div>
+        <div class="opt-body">
+          <h3>Ocean View Stateroom</h3>
+          <ul class="opt-specs"><li><strong>160 – 187 sq. ft.</strong></li><li>No balcony</li><li>Decks <strong>3, 4, 7 – 11</strong></li><li>Sleeps up to <strong>4</strong></li></ul>
+          <div class="opt-obc">Includes <b>$50.00 onboard credit</b> per stateroom</div>
+          <p class="opt-desc">A picture window onto the water, with the same bed configuration as the balcony rooms — two twins that convert to a Royal King, a sitting area with sofa, vanity, and a full bathroom with a bench in the shower. Rooms holding three guests have a single sofa bed; those holding four have a double.</p><p class="opt-desc">Lower and more central than the balcony categories, which some travelers prefer for motion. The trade is no outdoor space of your own, and roughly 20 to 45 square feet less room than a balcony stateroom.</p>
+          <div class="opt-compare"><span class="oc-label">Same stateroom at the public rate:</span><span class="oc-strike">$6,165.92</span><span class="oc-save">You save $2,668.00</span></div>
+          <div class="opt-price-row">
+            <span class="opt-pp">$1,748.96</span>
+            <span class="opt-pp-label">per person, taxes and fees included</span>
+            <span class="opt-total">Two guests — <b>Est. $3,497.92</b></span>
+          </div>
+          <button class="select-btn" type="button" onclick="selectOption('N4')">Select this stateroom</button>
+        </div>
+      </div>
+      <div class="opt" id="opt-YO"
+           data-label="YO — Ocean View Stateroom (Guarantee)"
+           data-fares="3243.00,1297.00"
+           data-taxes="190.96,190.96"
+           data-obc="100">
+        <div class="opt-head">
+          <span class="opt-code">YO</span><span class="opt-tag">Guarantee</span><span class="opt-tag">Window</span>
+          <span class="opt-stock">Limited availability</span>
+        </div>
+        <div class="opt-body">
+          <h3>Ocean View Stateroom</h3>
+          <ul class="opt-specs"><li>Window — <strong>view may be obstructed</strong></li><li>Assigned by the cruise line</li><li>Location set up to sail date</li></ul>
+          <div class="opt-obc">Includes <b>$100.00 onboard credit</b> per stateroom</div>
+          <p class="opt-desc">A guarantee assignment within the ocean view category or better, anywhere on the ship. The room number and deck are set at any time after the reservation is complete and paid in full.</p><p class="opt-desc">One thing to know before you choose this: the view may be partially blocked by a lifeboat or other equipment. There is a window, and it may look onto hardware rather than water. If an unobstructed view matters, book the N4 above, where the fare is lower and the category is not obstruction-flagged.</p><p class="opt-desc opt-split">Priced on a promotion where the first and second guests pay different fares. The full breakdown appears in the pricing panel when you select this stateroom.</p>
+          <div class="opt-price-row">
+            <span class="opt-pp">$2,460.96</span>
+            <span class="opt-pp-label">average per person, taxes and fees included</span>
+            <span class="opt-total">Two guests — <b>Est. $4,921.92</b></span>
+          </div>
+          <button class="select-btn" type="button" onclick="selectOption('YO')">Select this stateroom</button>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="cat" id="cat-park">
+      <button class="cat-head" type="button" aria-expanded="false" aria-controls="body-park" onclick="toggleCat('park')">
+        <span class="cat-chev" aria-hidden="true">＋</span>
+        <span class="cat-main">
+          <span class="cat-name">Neighborhood &amp; Central Park Balcony <span class="cat-grp">Group rate inside</span></span>
+          <span class="cat-desc">A balcony looking inward over the ship&rsquo;s open-air neighborhoods.</span>
+        </span>
+        <span class="cat-meta">
+          <span class="cat-from">From $3,423.92</span>
+          <span class="cat-count" id="count-park">Tap to see 3 staterooms</span>
+        </span>
+      </button>
+      <div class="cat-body" id="body-park" hidden>
+        <figure class="cat-photo-wrap">
+          <img class="cat-photo" src="https://d23n7ahjfnjotp.cloudfront.net/imgs/iphone/cabins/new/791/ifxl.jpg" alt="Central Park view stateroom with the infinite balcony open" loading="lazy" decoding="async">
+          <figcaption class="cat-caption">A Central Park view stateroom with the window wall lowered. Representative image &mdash; the stateroom you receive may differ.</figcaption>
+        </figure>
+      <div class="opt" id="opt-IF"
+           data-label="IF — Central Park View Infinite Balcony"
+           data-fares="1521.00,1521.00"
+           data-taxes="190.96,190.96"
+           data-compare="5467.92"
+           data-obc="50">
+        <div class="opt-head">
+          <span class="opt-code">IF</span><span class="opt-grp">Our Group Rate</span><span class="opt-tag">Room You Choose</span><span class="opt-tag">Central Park</span>
+          <span class="opt-stock">5 left at this rate</span>
+        </div>
+        <div class="opt-body">
+          <h3>Spacious Infinite Central Park View Balcony</h3>
+          <ul class="opt-specs"><li><strong>200 sq. ft.</strong> stateroom</li><li><strong>50 sq. ft.</strong> convertible balcony</li><li>Decks <strong>10, 11 &amp; 12</strong></li><li>Sleeps up to <strong>3</strong></li></ul>
+          <div class="opt-obc">Includes <b>$50.00 onboard credit</b> per stateroom</div>
+          <p class="opt-desc">The window wall drops away and the balcony becomes part of the room — one open 200-square-foot space instead of a room and a separate slab outside. Close it and the whole thing is air-conditioned, which matters on a Gulf sailing in October. Two twin beds convert to a Royal King, plus a sitting area with sofa, vanity, and a full bathroom with a bench in the shower.</p><p class="opt-desc">The view faces Central Park — the open-air garden neighborhood at the center of the ship, with restaurants and trees below you rather than open water. Quiet, shaded, and sheltered in weather. It is not an ocean view, and that is the trade.</p>
+          <div class="opt-compare"><span class="oc-label">Same stateroom at the public rate:</span><span class="oc-strike">$5,467.92</span><span class="oc-save">You save $2,044.00</span></div>
+          <div class="opt-price-row">
+            <span class="opt-pp">$1,711.96</span>
+            <span class="opt-pp-label">per person, taxes and fees included</span>
+            <span class="opt-total">Two guests — <b>Est. $3,423.92</b></span>
+          </div>
+          <button class="select-btn" type="button" onclick="selectOption('IF')">Select this stateroom</button>
+        </div>
+      </div>
+      <div class="opt" id="opt-XN"
+           data-label="XN — Neighborhood Balcony Stateroom (Guarantee)"
+           data-fares="3297.00,1318.00"
+           data-taxes="190.96,190.96"
+           data-obc="100">
+        <div class="opt-head">
+          <span class="opt-code">XN</span><span class="opt-tag">Guarantee</span><span class="opt-tag">Neighborhood View</span>
+          <span class="opt-stock">Limited availability</span>
+        </div>
+        <div class="opt-body">
+          <h3>Neighborhood Balcony Stateroom</h3>
+          <ul class="opt-specs"><li>Balcony over <strong>Central Park or Surfside</strong></li><li>Assigned by the cruise line</li><li>View <strong>may be obstructed</strong></li></ul>
+          <div class="opt-obc">Includes <b>$100.00 onboard credit</b> per stateroom</div>
+          <p class="opt-desc">A traditional open balcony looking inward over one of the ship&rsquo;s open-air neighborhoods rather than out to sea. Central Park is the quiet one — trees, restaurants, evening music. Surfside is the family side, and it is louder by design.</p><p class="opt-desc">Two things come with the guarantee: you do not choose which neighborhood you land above, and the view may be partially blocked. If you want Central Park specifically, the IF above gives you that outlook at a lower fare with the room number locked in today.</p><p class="opt-desc opt-split">Priced on a promotion where the first and second guests pay different fares. The full breakdown appears in the pricing panel when you select this stateroom.</p>
+          <div class="opt-price-row">
+            <span class="opt-pp">$2,498.46</span>
+            <span class="opt-pp-label">average per person, taxes and fees included</span>
+            <span class="opt-total">Two guests — <b>Est. $4,996.92</b></span>
+          </div>
+          <button class="select-btn" type="button" onclick="selectOption('XN')">Select this stateroom</button>
+        </div>
+      </div>
+      <div class="opt" id="opt-F5"
+           data-label="F5 — Central Park View Balcony Stateroom"
+           data-fares="3801.00,1520.00"
+           data-taxes="190.96,190.96"
+           data-obc="100">
+        <div class="opt-head">
+          <span class="opt-code">F5</span><span class="opt-tag">Room You Choose</span><span class="opt-tag">Open Balcony</span>
+          <span class="opt-stock">20 rooms, deck 14</span>
+        </div>
+        <div class="opt-body">
+          <h3>Central Park View Balcony Stateroom</h3>
+          <ul class="opt-specs"><li><strong>196 sq. ft.</strong> stateroom</li><li><strong>50 sq. ft.</strong> open balcony</li><li>Deck <strong>14</strong></li><li>Sleeps up to <strong>3</strong></li></ul>
+          <div class="opt-obc">Includes <b>$100.00 onboard credit</b> per stateroom</div>
+          <p class="opt-desc">A traditional open-air balcony over Central Park, at the top of the neighborhood on deck 14. You step outside to a separate 50-square-foot balcony rather than folding the outdoors into the room — 246 square feet in total, and the highest vantage over the park on the ship.</p><p class="opt-desc">This is the one stateroom on this page that gives you something the IF cannot: a true open balcony over Central Park, and deck 14 height. If stepping outside matters to you, this is the only way to do it over the park.</p><p class="opt-desc opt-split">Priced on a promotion where the first and second guests pay different fares. The full breakdown appears in the pricing panel when you select this stateroom.</p>
+          <div class="opt-price-row">
+            <span class="opt-pp">$2,851.46</span>
+            <span class="opt-pp-label">average per person, taxes and fees included</span>
+            <span class="opt-total">Two guests — <b>Est. $5,702.92</b></span>
+          </div>
+          <button class="select-btn" type="button" onclick="selectOption('F5')">Select this stateroom</button>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="cat" id="cat-ovbalcony">
+      <button class="cat-head" type="button" aria-expanded="false" aria-controls="body-ovbalcony" onclick="toggleCat('ovbalcony')">
+        <span class="cat-chev" aria-hidden="true">＋</span>
+        <span class="cat-main">
+          <span class="cat-name">Ocean View Balcony <span class="cat-grp">Group rate inside</span></span>
+          <span class="cat-desc">A balcony facing open water.</span>
+        </span>
+        <span class="cat-meta">
+          <span class="cat-from">From $3,423.92</span>
+          <span class="cat-count" id="count-ovbalcony">Tap to see 3 staterooms</span>
+        </span>
+      </button>
+      <div class="cat-body" id="body-ovbalcony" hidden>
+        <figure class="cat-photo-wrap">
+          <img class="cat-photo" src="https://cruiseline-shipmedia.imgix.net/ship/icon-of-the-seas/4ca2f77a35968792d50ff10acf347d9d.jpeg?auto=format,compress&amp;w=730&amp;h=411&amp;" alt="Ocean view balcony stateroom aboard Icon of the Seas" loading="lazy" decoding="async">
+          <figcaption class="cat-caption">An ocean-facing balcony stateroom. Representative image &mdash; the stateroom you receive may differ.</figcaption>
+        </figure>
+      <div class="opt" id="opt-D4"
+           data-label="D4 — Ocean View Balcony (Guarantee)"
+           data-fares="1521.00,1521.00"
+           data-taxes="190.96,190.96"
+           data-obc="50">
+        <div class="opt-head">
+          <span class="opt-code">D4</span><span class="opt-grp">Our Group Rate</span><span class="opt-tag">Guarantee</span><span class="opt-tag">Ocean View</span>
+          <span class="opt-stock">8 left at this rate</span>
+        </div>
+        <div class="opt-body">
+          <h3>Ocean View Balcony Stateroom</h3>
+          <ul class="opt-specs"><li><strong>204 sq. ft.</strong> stateroom</li><li><strong>50 sq. ft.</strong> balcony</li><li>Category decks <strong>12 &amp; 14</strong></li><li>Sleeps up to <strong>4</strong></li></ul>
+          <div class="opt-obc">Includes <b>$50.00 onboard credit</b> per stateroom</div>
+          <p class="opt-desc">A private balcony with two chairs and a table, a separate sitting area with sofa, vanity, and a full bathroom with a bench in the shower. Two twin beds convert to a Royal King. Staterooms holding three guests have a single sofa bed; those holding four have a double sofa bed.</p><p class="opt-desc">This is a guarantee category: the cruise line assigns your room, typically on deck 12 or 14, at any time up to the day of sailing.</p>
+          <div class="opt-price-row">
+            <span class="opt-pp">$1,711.96</span>
+            <span class="opt-pp-label">per person, taxes and fees included</span>
+            <span class="opt-total">Two guests — <b>Est. $3,423.92</b></span>
+          </div>
+          <button class="select-btn" type="button" onclick="selectOption('D4')">Select this stateroom</button>
+        </div>
+      </div>
+      <div class="opt" id="opt-XB"
+           data-label="XB — Balcony Stateroom (Guarantee)"
+           data-fares="3726.00,1490.00"
+           data-taxes="190.96,190.96"
+           data-obc="100">
+        <div class="opt-head">
+          <span class="opt-code">XB</span><span class="opt-tag">Guarantee</span><span class="opt-tag">Balcony</span>
+          <span class="opt-stock">Limited availability</span>
+        </div>
+        <div class="opt-body">
+          <h3>Balcony Stateroom</h3>
+          <ul class="opt-specs"><li>Private balcony</li><li>Assigned by the cruise line</li><li>View <strong>may be obstructed</strong></li></ul>
+          <div class="opt-obc">Includes <b>$100.00 onboard credit</b> per stateroom</div>
+          <p class="opt-desc">A guarantee assignment within the balcony category or better, anywhere on the ship. The room number and deck are set at any time up to the day of sailing, and the view may be partially blocked.</p><p class="opt-desc">This is the same class of room as the D4 above, on the same guarantee mechanic. The D4 is the better booking: a lower fare and no obstruction note.</p><p class="opt-desc opt-split">Priced on a promotion where the first and second guests pay different fares. The full breakdown appears in the pricing panel when you select this stateroom.</p>
+          <div class="opt-price-row">
+            <span class="opt-pp">$2,798.96</span>
+            <span class="opt-pp-label">average per person, taxes and fees included</span>
+            <span class="opt-total">Two guests — <b>Est. $5,597.92</b></span>
+          </div>
+          <button class="select-btn" type="button" onclick="selectOption('XB')">Select this stateroom</button>
+        </div>
+      </div>
+      <div class="opt" id="opt-I1"
+           data-label="I1 — Spacious Infinite Balcony Stateroom (Ocean)"
+           data-fares="4177.00,1670.00"
+           data-taxes="190.96,190.96"
+           data-obc="100">
+        <div class="opt-head">
+          <span class="opt-code">I1</span><span class="opt-tag">Room You Choose</span><span class="opt-tag">Ocean Facing</span>
+          <span class="opt-stock">Decks 9 &amp; 10 available</span>
+        </div>
+        <div class="opt-body">
+          <h3>Spacious Infinite Balcony Stateroom</h3>
+          <ul class="opt-specs"><li><strong>200 sq. ft.</strong> stateroom</li><li><strong>50 sq. ft.</strong> convertible balcony</li><li>Decks <strong>9, 10 &amp; 11</strong></li><li>Sleeps up to <strong>3</strong></li></ul>
+          <div class="opt-obc">Includes <b>$100.00 onboard credit</b> per stateroom</div>
+          <p class="opt-desc">The same convertible-balcony format as the IF, turned outward. The window wall drops and the room opens onto the sea instead of the park — 200 square feet of one continuous space, air-conditioned when closed. You pick the exact room on deck 9 or 10.</p><p class="opt-desc">Worth comparing against the D4 before you decide. The D4 is also ocean-facing and gives you a separate open-air balcony you can step onto. What you gain here is choosing your room number and the enclosed format; what you give up is the open rail.</p><p class="opt-desc opt-split">Priced on a promotion where the first and second guests pay different fares. The full breakdown appears in the pricing panel when you select this stateroom.</p>
+          <div class="opt-price-row">
+            <span class="opt-pp">$3,114.46</span>
+            <span class="opt-pp-label">average per person, taxes and fees included</span>
+            <span class="opt-total">Two guests — <b>Est. $6,228.92</b></span>
+          </div>
+          <button class="select-btn" type="button" onclick="selectOption('I1')">Select this stateroom</button>
+        </div>
+      </div>
+      </div>
+    </div>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     AUDIO OVERVIEW — TWO WAYS TO SHIP IT. PICK ONE, DELETE THE OTHER.
+
+     OPTION A (recommended): a self-hosted MP3.
+       Plays inline on the page. Nothing leaves your control, and the
+       listener never sees the NotebookLM notebook or its sources.
+       Replace PASTE_MP3_URL_HERE with the file's https:// address.
+
+     OPTION B: a NotebookLM share link.
+       No hosting needed, but the notebook must be shared as "anyone with
+       a link" with full-notebook access — which means the listener can
+       open your source brief, including the group-rate figures and the
+       internal guardrails. The link also dies if the audio is deleted.
+       Replace PASTE_NOTEBOOKLM_LINK_HERE with the share URL.
+
+     Leave both commented out if there is no episode. A dead player or a
+     button that goes nowhere is worse than neither.
+═══════════════════════════════════════════════════════════════════ -->
+
+<!-- ── OPTION A · self-hosted MP3 ──────────────────────────────────
+    <div class="listen">
+      <div class="listen-main">
+        <h3>Prefer to listen?</h3>
+        <p>A short audio walkthrough of this sailing — the route, the four stateroom types, what the fare covers, and what to book early.</p>
+      </div>
+      <div class="listen-player">
+        <audio controls preload="none" src="PASTE_MP3_URL_HERE">
+          Your browser can't play audio inline.
+        </audio>
+        <p class="listen-fallback">Trouble playing it? <a href="PASTE_MP3_URL_HERE">Open the audio in a new tab.</a></p>
+      </div>
+    </div>
+─────────────────────────────────────────────────────────────────── -->
+
+<!-- ── OPTION B · NotebookLM share link ────────────────────────────
+    <div class="listen">
+      <div class="listen-main">
+        <h3>Prefer to listen?</h3>
+        <p>A short audio walkthrough of this sailing — the route, the four stateroom types, what the fare covers, and what to book early.</p>
+      </div>
+      <a class="listen-cta" href="PASTE_NOTEBOOKLM_LINK_HERE" target="_blank" rel="noopener">Play the overview</a>
+    </div>
+─────────────────────────────────────────────────────────────────── -->
+
+
+    <div class="commit-quiet">
+      <strong>Guarantee categories versus rooms you choose.</strong> A guarantee means you are guaranteed a stateroom within the selected category class or better, anywhere on the ship — but the actual room assignment and location may be determined at any time after your reservation is complete and paid in full, up to the day of sailing. Categories marked <em>Room You Choose</em> are assigned the moment we book, and the room is yours. Availability moves daily; if a particular room matters to you, tell me and I'll check it before anything else.
+    </div>
+  </div>
+</section>
+
+<!-- ══ PRICING ═══════════════════════ -->
+<section class="band" id="pricing">
+  <div class="narrow">
+    <div class="eyebrow">Investment</div>
+    <h2>What It Costs</h2>
+    <p class="sub">All figures in U.S. dollars, for two guests sharing one stateroom.</p>
+
+    <div class="price-panel">
+      <div id="price-empty">
+        <span class="pe-big">No stateroom selected yet</span>
+        <p>Open a category above and choose a stateroom. Your per-person fare, taxes and estimated total will fill in here automatically.</p>
+        <a class="pe-btn" href="#staterooms">Go to the staterooms</a>
+      </div>
+
+      <div id="price-detail" style="display:none;">
+      <div class="price-line"><span>Stateroom</span><span id="pp-label">—</span></div>
+      <div id="fare-rows"></div>
+      <div class="price-line"><span>Guests</span><span id="pp-guests">2</span></div>
+      <div class="price-line" id="row-obc" style="display:none;"><span>Onboard credit included</span><span id="pp-obc">$50.00</span></div>
+      <div class="price-line" id="row-compare" style="display:none;"><span>Same stateroom at the public rate</span><span id="pp-compare">—</span></div>
+
+      <div class="price-line" id="row-grat" style="display:none;"><span>Prepaid gratuities</span><span>$296.00</span></div>
+
+      <div class="grat">
+        <label class="grat-row" for="grat-check">
+          <input type="checkbox" id="grat-check">
+          <span>Add prepaid gratuities to my total — <b>$296.00</b> for two guests</span>
+        </label>
+        <p class="grat-note">Gratuities are $296.00 either way. Prepay them here and they are settled before you sail; leave this unchecked and the cruise line adds them to your onboard account automatically during the voyage.</p>
+      </div>
+
+      <div class="price-grand">
+        <span class="lbl">Estimated Total<span class="grand-note" id="grand-note">Gratuities charged onboard</span></span>
+        <span class="amt" id="pp-grand">—</span>
+      </div>
+
+      <p id="obc-note" style="display:none; font-size:0.86rem; color:var(--ink-soft); margin:12px 0 0;">
+        The onboard credit is applied to your shipboard account once you sail — it is not deducted from the total above. Spend it on drinks, dining, the spa, or an excursion.
+      </p>
+      </div>
+
+      <div class="not-included">
+        <h4>Not included in the figure above</h4>
+        <ul>
+          <li><strong>Daily gratuities</strong> — $296.00 for two guests across the eight nights, unless you add them above. You pay the same amount either way; prepaying simply keeps them off your shipboard bill. The cruise line sets this rate and it is subject to change.</li>
+          <li><strong>Onboard extras</strong> — beverage packages, specialty dining, spa, internet, shore excursions, and CocoCay add-ons such as Thrill Waterpark or a cabana.</li>
+          <li><strong>Travel insurance</strong> — quoted separately. There's a question about it on the form below.</li>
+          <li><strong>Parking or transfers</strong> in Galveston.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="commit">
+      We check every component against public rates and meet or beat them. You're not paying a premium for our convenience — you're paying for the rest of what we do.
+    </div>
+
+    <div class="commit-quiet">
+      Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor.
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHAT'S INCLUDED ═══════════════ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Onboard</div>
+    <h2>Included With Your Fare</h2>
+    <p class="sub">The things you never have to think about once you're aboard.</p>
+
+    <ul class="inc-list">
+      <li>Main Dining Room breakfast, lunch and dinner</li>
+      <li>Windjammer buffet and the AquaDome Market food hall</li>
+      <li>Room service breakfast (delivery fee applies)</li>
+      <li>Filtered water, coffee, tea, lemonade and iced tea</li>
+      <li>Broadway-style theater, ice show and AquaDome water show</li>
+      <li>Category 6 Waterpark — six slides</li>
+      <li>Seven pools, including the Royal Bay infinity pool</li>
+      <li>Surfside neighborhood, Adventure Ocean kids' clubs</li>
+      <li>FlowRider surf simulator, rock wall, and Crown's Edge</li>
+      <li>Fitness center and jogging track</li>
+      <li>Beaches, pools and lunch at Perfect Day at CocoCay</li>
+      <li>Nightly live music across the neighborhoods</li>
+    </ul>
+
+    <div class="grid2" style="margin-top:34px;">
+      <div class="tile">
+        <h4>Book the extras early</h4>
+        <p>Specialty dining, shows, and CocoCay cabanas open in the Royal Caribbean app roughly 12 months out and are cheaper pre-cruise than onboard. The best slots go first.</p>
+      </div>
+      <div class="tile">
+        <h4>Documents</h4>
+        <p>A U.S. passport book valid at least six months past October 17, 2027 is the cleanest option for this closed-loop sailing. We'll walk you through the alternatives if you don't have one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ HOLDING A STATEROOM ═══════════ -->
+<section>
+  <div class="narrow">
+    <div class="eyebrow">If You Want to Move</div>
+    <h2>Holding a Stateroom</h2>
+    <p class="sub">Nothing on this page is reserved until we take that step together.</p>
+
+    <ol class="steps">
+      <li>
+        <h4>Tell me which stateroom</h4>
+        <p>Use the form below, or reply to the email this page came in. Naming a category is enough to start — you can change it before any money moves.</p>
+      </li>
+      <li>
+        <h4>Send me names and dates of birth</h4>
+        <p>I need the full legal name of every guest in the stateroom, spelled exactly as it appears on the passport or travel document they will sail with, plus each guest's date of birth. A nickname or a misspelling has to be corrected later, sometimes for a fee, so it is worth checking the document rather than typing from memory.</p>
+        <p>With those in hand I can place a courtesy hold. A hold costs nothing and takes no payment — it simply keeps the stateroom off the market briefly while you decide.</p>
+      </li>
+      <li>
+        <h4>Confirm with a deposit</h4>
+        <p>A deposit converts the hold into a real booking with your names on it.</p>
+        <p class="step-key"><strong>$500 deposit per stateroom</strong></p>
+      </li>
+      <li>
+        <h4>Final payment</h4>
+        <p>The balance is due 90 days before you sail. Nothing is owed between deposit and that date, and you can pay it down in pieces before then if you prefer.</p>
+        <p class="step-key"><strong>Due Sunday, July 11, 2027</strong></p>
+      </li>
+    </ol>
+
+    <div class="privacy-note">
+      <strong>One note on sending personal details.</strong> Please don't put dates of birth in the message box below. That form sends by ordinary email, which isn't the right place for information that could be used to impersonate someone. Send me the stateroom you want and any questions here, and I'll come back to you directly to collect names and dates of birth.
+    </div>
+  </div>
+</section>
+
+<!-- ══ FORM ══════════════════════════ -->
+<section class="band" id="respond">
+  <div class="narrow">
+    <div class="eyebrow">Next Step</div>
+    <h2>Tell Me What You Think</h2>
+    <p class="sub">Questions, changes, a different category — send it over and I'll come right back to you.</p>
+
+    <div class="commit">
+      <strong>What's coming after this quote:</strong> a destination guide built for your trip — PDF or interactive in-app, with Google Maps links to every place we send you — a trip app where everything lives, and us when something goes sideways at midnight. You travel; we handle the rest.
+    </div>
+
+    <div style="height:30px;"></div>
+
+    <div id="form-container" class="form-wrap">
+      <div id="form-error">
+        We weren't able to send your message. Please contact Christina directly at the address below.
+      </div>
+
+      <form id="pmtp-form">
+        <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+        <input type="hidden" name="subject" value="Quote Response — Icon of the Seas Oct 2027 | Western Caribbean">
+        <input type="hidden" name="from_name" value="Icon of the Seas Quote — Point Me to Paradise">
+        <input type="hidden" name="redirect" value="false">
+        <input type="hidden" name="sailing" value="Icon of the Seas | Galveston | Oct 9-17, 2027 | 8 Nights Western Caribbean">
+        <input type="hidden" name="prepaid_gratuities" id="grat-field" value="Not added — gratuities to be charged onboard">
+
+        <div class="field">
+          <label for="f-name">Name</label>
+          <input type="text" id="f-name" name="name" required autocomplete="name">
+        </div>
+
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input type="email" id="f-email" name="email" required autocomplete="email">
+        </div>
+
+        <div class="field">
+          <label for="f-phone">Phone <span class="opt-note">— optional</span></label>
+          <input type="tel" id="f-phone" name="phone" autocomplete="tel">
+        </div>
+
+        <div id="option-interest-field"></div>
+
+        <div class="field">
+          <label for="f-hold">Would you like a courtesy hold?</label>
+          <select id="f-hold" name="courtesy_hold">
+            <option>Not yet — still deciding</option>
+            <option>Yes — please hold this stateroom</option>
+            <option>Tell me more about how a hold works</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="f-ins">Travel insurance</label>
+          <select id="f-ins" name="travel_insurance">
+            <option>Yes — I'd like a quote</option>
+            <option>No — not interested</option>
+            <option>Already have coverage</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="f-msg">Message or questions <span class="opt-note">— optional</span></label>
+          <textarea id="f-msg" name="message"></textarea>
+        </div>
+
+        <button type="submit" id="submit-btn">Send to Christina</button>
+      </form>
+    </div>
+
+    <div id="thank-you">
+      <h3>Got it — thank you.</h3>
+      <p>Your note is on its way to Christina. You'll hear back shortly.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ════════════════════════ -->
+<footer>
+  <div class="adv-name">Christina Garcia</div>
+  <div class="adv-title">Travel Advisor</div>
+  <div class="adv-contact">
+    <a href="tel:+12812290862">+1 281 229 0862</a><br>
+    <a id="adv-email" href="#">&nbsp;</a>
+  </div>
+  <div class="foot-rule"></div>
+  <div class="foot-brand">Point Me to Paradise Travel</div>
+  <div class="foot-tag">The world is your oyster, we are your pearl.</div>
+
+  <p class="legal">
+    Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor. Fares are quoted in U.S. dollars for two guests sharing one stateroom and include taxes, fees and port expenses as shown. Daily gratuities, onboard purchases, travel insurance, parking and transfers are additional. Ports of call, times and shipboard features may vary by departure date and are subject to weather, itinerary changes and other conditions. Guarantee stateroom assignments are made at the discretion of the cruise line at any time up to the day of sailing. This quote is not a confirmed reservation.
+  </p>
+</footer>
+
+<!-- ══ STICKY BAR ════════════════════ -->
+<div class="sticky-bar">
+  <div class="sticky-inner">
+    <div class="sticky-sel">
+      <div class="sticky-label">Your selection</div>
+      <div class="sticky-cabin" id="sticky-label">None yet — open a category to choose</div>
+    </div>
+    <div class="sticky-amt">
+      <span class="big" id="sticky-grand">From Est. $3,423.92</span>
+      <span class="small" id="sticky-pp">Two guests · 11 staterooms available</span>
+    </div>
+    <a class="sticky-cta" id="sticky-cta" href="#staterooms">See staterooms</a>
+  </div>
+</div>
+
+<script>
+/* ── Email assembly (never hardcode the @) ── */
+(function(){
+  var user = 'christina';
+  var host = 'pointmetoparadise.com';
+  var addr = user + '\u0040' + host;
+  var el = document.getElementById('adv-email');
+  el.textContent = addr;
+  el.setAttribute('href', 'mailto:' + addr);
+})();
+
+/* ── Pricing engine ── */
+var money = function(n){
+  return '$' + n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+};
+
+function optionNodes(){
+  return Array.prototype.slice.call(document.querySelectorAll('.opt'));
+}
+
+/* ── Accordion ── */
+function toggleCat(gid){
+  var cat  = document.getElementById('cat-' + gid);
+  var body = document.getElementById('body-' + gid);
+  var head = cat.querySelector('.cat-head');
+  var chev = cat.querySelector('.cat-chev');
+  var cnt  = document.getElementById('count-' + gid);
+  var open = body.hasAttribute('hidden');
+  if (open) {
+    body.removeAttribute('hidden');
+    cat.classList.add('open');
+    head.setAttribute('aria-expanded','true');
+    chev.textContent = '\u2212';
+    cnt.textContent = 'Tap to close';
+  } else {
+    body.setAttribute('hidden','');
+    cat.classList.remove('open');
+    head.setAttribute('aria-expanded','false');
+    chev.textContent = '\uFF0B';
+    cnt.textContent = cnt.getAttribute('data-label');
+  }
+}
+
+/* ── Selection ── */
+function selectOption(id){
+  optionNodes().forEach(function(n){
+    var on = (n.id === 'opt-' + id);
+    n.classList.toggle('selected', on);
+    var btn = n.querySelector('.select-btn');
+    if (btn) btn.textContent = on ? 'Selected' : 'Select this stateroom';
+  });
+  render(id);
+  var sel = document.querySelector('select[name="option_interest"]');
+  if (sel) {
+    var node = document.getElementById('opt-' + id);
+    if (node) sel.value = node.getAttribute('data-label');
+  }
+  var cta = document.getElementById('sticky-cta');
+  if (cta) { cta.setAttribute('href', '#respond'); cta.textContent = 'Respond'; }
+}
+
+var GRATUITIES = 296.00;
+var SELECTED = null;
+
+function render(id){
+  var n = document.getElementById('opt-' + id);
+  if (!n) return;
+  SELECTED = id;
+
+  var fares = n.getAttribute('data-fares').split(',').map(parseFloat);
+  var taxes = n.getAttribute('data-taxes').split(',').map(parseFloat);
+  var obc   = parseFloat(n.getAttribute('data-obc') || '0');
+  var label = n.getAttribute('data-label');
+  var guests = fares.length;
+
+  var grand = 0;
+  for (var i = 0; i < guests; i++) { grand += fares[i] + taxes[i]; }
+  var avgPP   = grand / guests;
+  var uniform = fares.every(function(f){ return f === fares[0]; });
+
+  var rows = '';
+  if (uniform) {
+    rows += '<div class="price-line"><span>Cruise fare — per person</span><span>' + money(fares[0]) + '</span></div>';
+    rows += '<div class="price-line"><span>Taxes, fees &amp; port expenses — per person</span><span>' + money(taxes[0]) + '</span></div>';
+    rows += '<div class="price-line"><span>Per person, all in</span><span>' + money(fares[0] + taxes[0]) + '</span></div>';
+  } else {
+    for (var g = 0; g < guests; g++) {
+      rows += '<div class="price-line"><span>Guest ' + (g + 1) + ' — cruise fare</span><span>' + money(fares[g]) + '</span></div>';
+    }
+    rows += '<div class="price-line"><span>Taxes, fees &amp; port expenses — per person</span><span>' + money(taxes[0]) + '</span></div>';
+    rows += '<div class="price-line"><span>Average per person, all in</span><span>' + money(avgPP) + '</span></div>';
+  }
+  document.getElementById('fare-rows').innerHTML = rows;
+
+  document.getElementById('pp-label').textContent  = label;
+  document.getElementById('pp-guests').textContent = guests;
+  var gratOn  = document.getElementById('grat-check').checked;
+  var payable = grand + (gratOn ? GRATUITIES : 0);
+  document.getElementById('row-grat').style.display = gratOn ? 'flex' : 'none';
+  document.getElementById('grand-note').textContent =
+    gratOn ? 'Includes prepaid gratuities' : 'Gratuities charged onboard';
+  document.getElementById('grat-field').value =
+    gratOn ? 'Yes — add prepaid gratuities ($296.00)' : 'Not added — gratuities to be charged onboard';
+  document.getElementById('pp-grand').textContent  = 'Est. ' + money(payable);
+
+  var rowObc  = document.getElementById('row-obc');
+  var noteObc = document.getElementById('obc-note');
+  if (obc > 0) {
+    document.getElementById('pp-obc').textContent = money(obc);
+    rowObc.style.display  = 'flex';
+    noteObc.style.display = 'block';
+  } else {
+    rowObc.style.display  = 'none';
+    noteObc.style.display = 'none';
+  }
+
+  var cmpAttr = n.getAttribute('data-compare');
+  var rowCmp  = document.getElementById('row-compare');
+  if (cmpAttr) {
+    var pub = parseFloat(cmpAttr);
+    document.getElementById('pp-compare').innerHTML =
+      '<span style="text-decoration:line-through; color:var(--ink-soft); font-weight:400;">' +
+      money(pub) + '</span> &nbsp; you save ' + money(pub - grand);
+    rowCmp.style.display = 'flex';
+  } else {
+    rowCmp.style.display = 'none';
+  }
+
+  document.getElementById('price-empty').style.display  = 'none';
+  document.getElementById('price-detail').style.display = 'block';
+
+  document.getElementById('sticky-label').textContent = label;
+  document.getElementById('sticky-grand').textContent = 'Est. ' + money(payable);
+  document.getElementById('sticky-pp').textContent =
+    money(avgPP) + (uniform ? ' per person · ' : ' avg. per person · ') + guests + ' guests' +
+    (obc > 0 ? ' · ' + money(obc) + ' onboard credit' : '') +
+    (gratOn ? ' · gratuities prepaid' : '');
+
+  if (window.pmtpSyncPad) { window.pmtpSyncPad(); }
+}
+
+document.getElementById('grat-check').addEventListener('change', function(){
+  if (SELECTED) render(SELECTED);
+});
+
+/* ── Stash the collapsed labels so toggling can restore them ── */
+(function(){
+  Array.prototype.slice.call(document.querySelectorAll('.cat-count')).forEach(function(el){
+    el.setAttribute('data-label', el.textContent);
+  });
+})();
+
+/* ── Build option_interest select, grouped, when 2+ options exist ── */
+(function(){
+  var nodes = optionNodes();
+  if (nodes.length < 2) return;
+  var host = document.getElementById('option-interest-field');
+  if (!host) return;
+  var html = '<div class="field"><label for="f-opt">Which stateroom interests you?</label>' +
+             '<select id="f-opt" name="option_interest">' +
+             '<option>Not sure yet — let\'s talk</option>';
+  Array.prototype.slice.call(document.querySelectorAll('.cat')).forEach(function(cat){
+    var nameEl = cat.querySelector('.cat-name');
+    var gname  = nameEl ? nameEl.childNodes[0].nodeValue.trim() : '';
+    html += '<optgroup label="' + gname + '">';
+    Array.prototype.slice.call(cat.querySelectorAll('.opt')).forEach(function(o){
+      html += '<option>' + o.getAttribute('data-label') + '</option>';
+    });
+    html += '</optgroup>';
+  });
+  html += '</select></div>';
+  host.innerHTML = html;
+})();
+
+/* ── Keep page bottom clear of the sticky bar at any height ── */
+(function(){
+  var bar = document.querySelector('.sticky-bar');
+  if (!bar) return;
+  function syncPad(){
+    document.body.style.paddingBottom = (bar.offsetHeight + 18) + 'px';
+  }
+  syncPad();
+  window.addEventListener('resize', syncPad);
+  window.addEventListener('orientationchange', syncPad);
+  if (window.ResizeObserver) { new ResizeObserver(syncPad).observe(bar); }
+  window.pmtpSyncPad = syncPad;
+})();
+
+/* ── Form submit ── */
+document.getElementById('pmtp-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var btn = document.getElementById('submit-btn');
+  var err = document.getElementById('form-error');
+  btn.disabled = true; btn.textContent = 'Sending…'; err.style.display = 'none';
+  fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(e.target) })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      if (data.success) {
+        document.getElementById('form-container').style.display = 'none';
+        document.getElementById('thank-you').style.display = 'block';
+      } else {
+        btn.disabled = false; btn.textContent = 'Send to Christina'; err.style.display = 'block';
+        err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    })
+    .catch(function() {
+      btn.disabled = false; btn.textContent = 'Send to Christina'; err.style.display = 'block';
+      err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+});
+</script>
+
+</body>
+</html>
