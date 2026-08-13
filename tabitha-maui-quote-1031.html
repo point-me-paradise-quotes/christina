@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ka&#699;anapali, Maui &middot; Prepared for Tabitha &middot; Point Me to Paradise Travel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --aqua-pale:#C4E4E1;
+  --aqua-mist:#EAF3F2;
+  --aqua:#75AFB1;
+  --aqua-dark:#4F8A8C;
+  --sand:#ECE7DC;
+  --sand-light:#F4F1E9;
+  --gold-whisper:#D6C8A8;
+  --white:#FFFFFF;
+  --paper:#FBFDFD;
+  --ink:#2B2420;
+  --ink-soft:#6B6359;
+  --line:#E5E9E8;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'DM Sans',system-ui,-apple-system,sans-serif;
+  font-weight:400;
+  font-size:17px;
+  line-height:1.68;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:500;color:var(--ink);margin:0;line-height:1.2;}
+p{margin:0 0 1.05em;}
+a{color:var(--aqua-dark);}
+img{max-width:100%;display:block;}
+
+.wrap{max-width:900px;margin:0 auto;padding:0 26px;}
+.narrow{max-width:760px;margin:0 auto;padding:0 26px;}
+
+/* ---------- HERO ---------- */
+.pmtp-hero{
+  position:relative;
+  background-image:
+    linear-gradient(180deg, rgba(234,243,242,0.93) 0%, rgba(196,228,225,0.72) 42%, rgba(251,253,253,0.97) 100%),
+    url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvPhW89eeoecWd1TXoPUEnL3_QVbQu5zqNl_blnFWuVg&s=10');
+  background-size:cover;
+  background-position:center;
+  padding:78px 32px 60px;
+  text-align:center;
+  border-bottom:1px solid var(--line);
+}
+.pmtp-wordmark{
+  font-family:'Playfair Display',serif;
+  font-size:11px;font-weight:600;letter-spacing:0.22em;
+  text-transform:uppercase;color:var(--aqua-dark);
+}
+.pmtp-wordmark-sub{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-style:italic;font-size:15px;color:var(--ink-soft);
+  margin-top:4px;letter-spacing:0.03em;
+}
+.hero-rule{width:44px;height:1px;background:var(--gold-whisper);margin:22px auto 20px;border:0;}
+.hero-kicker{
+  font-family:'DM Sans',sans-serif;font-size:10.5px;font-weight:600;
+  letter-spacing:0.26em;text-transform:uppercase;color:var(--aqua-dark);
+  margin-bottom:14px;
+}
+.pmtp-hero h1{font-size:clamp(2.35rem,6.4vw,3.6rem);letter-spacing:-0.012em;}
+.hero-sub{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-style:italic;font-size:clamp(1.28rem,3vw,1.6rem);
+  color:var(--ink-soft);margin-top:12px;
+}
+.hero-facts{
+  margin-top:26px;font-size:0.94rem;color:var(--ink-soft);
+  letter-spacing:0.015em;
+}
+.hero-facts strong{color:var(--ink);font-weight:500;}
+.hero-prepared{
+  margin-top:8px;font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.06rem;color:var(--ink-soft);
+}
+
+/* ---------- SECTIONS ---------- */
+.band{background:var(--aqua-mist);}
+.band-white{background:var(--white);}
+.band-sand{background:var(--sand-light);}
+.sec{padding:62px 0;}
+.sec-sm{padding:46px 0;}
+.eyebrow{
+  font-size:10.5px;font-weight:600;letter-spacing:0.24em;
+  text-transform:uppercase;color:var(--aqua-dark);margin-bottom:12px;
+}
+h2{font-size:clamp(1.68rem,3.7vw,2.15rem);}
+.sub-italic{
+  font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;
+  font-size:1.16rem;color:var(--ink-soft);margin:9px 0 0;
+}
+.sec-head{margin-bottom:34px;}
+.gold-hr{height:1px;background:var(--gold-whisper);border:0;margin:0;opacity:0.85;}
+
+/* ---------- INTRO ---------- */
+.intro-note{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-top:2px solid var(--aqua-pale);
+  border-radius:3px;
+  padding:36px 34px 30px;
+  box-shadow:0 1px 3px rgba(43,36,32,0.035);
+}
+.intro-note p{font-size:1.06rem;}
+.intro-sig{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.18rem;color:var(--aqua-dark);margin:0;
+}
+
+/* ---------- COMMITMENT CALLOUTS ---------- */
+.commit{
+  background:var(--aqua-pale);
+  border-radius:3px;
+  padding:24px 28px;
+  font-size:1.01rem;
+  line-height:1.66;
+  color:var(--ink);
+}
+.commit .commit-label{
+  display:block;font-family:'DM Sans',sans-serif;font-size:10.5px;font-weight:600;
+  letter-spacing:0.22em;text-transform:uppercase;color:var(--aqua-dark);margin-bottom:9px;
+}
+
+/* ---------- VALUE STRIP ---------- */
+.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;}
+.value-col{padding:0 28px;border-left:1px solid var(--gold-whisper);}
+.value-col:first-child{padding-left:0;border-left:0;}
+.value-col:last-child{padding-right:0;}
+.value-col h3{font-size:1.16rem;margin-bottom:10px;}
+.value-col p{font-size:0.95rem;color:var(--ink-soft);margin:0;line-height:1.62;}
+
+/* ---------- DAY / ITEM CARDS ---------- */
+.day-head{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:6px;}
+.day-chip{
+  display:inline-block;background:var(--white);border:1px solid var(--aqua-pale);
+  color:var(--aqua-dark);font-size:10.5px;font-weight:600;letter-spacing:0.2em;
+  text-transform:uppercase;padding:7px 13px;border-radius:2px;
+}
+.card{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:3px;
+  overflow:hidden;
+  margin-bottom:26px;
+  box-shadow:0 1px 3px rgba(43,36,32,0.035);
+}
+.card-head{
+  padding:26px 30px 20px;
+  border-bottom:1px solid var(--line);
+  display:flex;gap:16px;align-items:flex-start;
+}
+.card-icon{color:var(--aqua);flex-shrink:0;margin-top:3px;}
+.card-kicker{
+  font-size:10.5px;font-weight:600;letter-spacing:0.22em;
+  text-transform:uppercase;color:var(--aqua-dark);margin-bottom:6px;
+}
+.card-head h3{font-size:1.44rem;}
+.card-head .card-sub{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.08rem;color:var(--ink-soft);margin-top:6px;
+}
+.card-body{padding:26px 30px 30px;}
+.card-body > p:last-child{margin-bottom:0;}
+
+/* ---------- FLIGHT LEGS ---------- */
+.leg{border-left:2px solid var(--aqua-pale);padding:0 0 0 22px;margin-bottom:22px;}
+.leg:last-of-type{margin-bottom:0;}
+.leg-title{font-size:0.79rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--aqua-dark);margin-bottom:12px;}
+.leg-row{display:flex;gap:22px;align-items:flex-start;flex-wrap:wrap;margin-bottom:8px;}
+.leg-time{font-family:'Playfair Display',serif;font-size:1.32rem;min-width:104px;}
+.leg-place{font-size:0.97rem;line-height:1.5;}
+.leg-place span{display:block;color:var(--ink-soft);font-size:0.87rem;}
+.leg-meta{font-size:0.89rem;color:var(--ink-soft);margin-top:10px;letter-spacing:0.01em;}
+.layover{
+  background:var(--aqua-mist);border-radius:2px;padding:10px 16px;
+  font-size:0.89rem;color:var(--ink-soft);margin:0 0 22px 22px;display:inline-block;
+}
+
+/* ---------- LISTS ---------- */
+ul.tick{list-style:none;padding:0;margin:0 0 4px;}
+ul.tick li{
+  position:relative;padding-left:26px;margin-bottom:10px;
+  font-size:0.98rem;line-height:1.6;
+}
+ul.tick li::before{
+  content:"";position:absolute;left:0;top:9px;width:9px;height:9px;
+  border-left:1.4px solid var(--aqua);border-bottom:1.4px solid var(--aqua);
+  transform:rotate(-45deg);
+}
+ul.plain{list-style:none;padding:0;margin:0;}
+ul.plain li{
+  position:relative;padding-left:20px;margin-bottom:9px;font-size:0.97rem;line-height:1.58;
+}
+ul.plain li::before{
+  content:"";position:absolute;left:0;top:11px;width:7px;height:1px;background:var(--aqua);
+}
+h4.mini{
+  font-family:'DM Sans',sans-serif;font-size:10.5px;font-weight:600;
+  letter-spacing:0.2em;text-transform:uppercase;color:var(--aqua-dark);
+  margin:26px 0 13px;
+}
+h4.mini:first-child{margin-top:0;}
+
+/* ---------- FEE TABLE ---------- */
+.fee-wrap{border:1px solid var(--line);border-radius:3px;overflow:hidden;margin-bottom:8px;}
+.fee-head{
+  background:var(--aqua-mist);padding:13px 18px;
+  font-size:10.5px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--aqua-dark);
+}
+table.fee{width:100%;border-collapse:collapse;}
+table.fee td{
+  padding:13px 18px;border-top:1px solid var(--line);
+  font-size:0.94rem;vertical-align:top;line-height:1.52;
+}
+table.fee tr:first-child td{border-top:0;}
+table.fee td.amt{text-align:right;white-space:nowrap;font-weight:500;width:1%;}
+table.fee td.amt small{display:block;font-weight:400;color:var(--ink-soft);font-size:0.8rem;white-space:normal;}
+.tag-req{color:var(--aqua-dark);font-size:0.76rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;display:block;margin-top:3px;}
+.tag-opt{color:var(--ink-soft);font-size:0.76rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;display:block;margin-top:3px;}
+
+/* ---------- NOTE / POLICY ---------- */
+.note{
+  background:var(--sand-light);border-left:2px solid var(--gold-whisper);
+  padding:16px 20px;font-size:0.93rem;color:var(--ink-soft);line-height:1.6;
+  border-radius:0 3px 3px 0;margin:0 0 4px;
+}
+.note strong{color:var(--ink);font-weight:500;}
+.policy{
+  background:var(--aqua-mist);border-radius:3px;padding:18px 22px;margin-top:22px;
+}
+.policy h4{
+  font-family:'DM Sans',sans-serif;font-size:10.5px;font-weight:600;
+  letter-spacing:0.2em;text-transform:uppercase;color:var(--aqua-dark);margin:0 0 11px;
+}
+.policy ul.plain li{font-size:0.93rem;color:var(--ink-soft);}
+.policy ul.plain li strong{color:var(--ink);font-weight:500;}
+
+/* ---------- PRICE ---------- */
+.price-panel{
+  background:var(--white);border:1px solid var(--aqua-pale);border-radius:3px;
+  text-align:center;padding:42px 30px 36px;
+  box-shadow:0 1px 3px rgba(43,36,32,0.04);
+}
+.price-label{font-size:10.5px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--aqua-dark);}
+.price-figure{
+  font-family:'Playfair Display',serif;font-size:clamp(3rem,9vw,4.1rem);
+  font-weight:500;letter-spacing:-0.02em;margin:12px 0 4px;line-height:1;
+}
+.price-basis{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.14rem;color:var(--ink-soft);}
+.price-split{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:34px;text-align:left;}
+.price-split h4{
+  font-family:'DM Sans',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:0.2em;
+  text-transform:uppercase;color:var(--aqua-dark);margin:0 0 12px;
+}
+.pay-schedule{
+  background:var(--sand-light);border-radius:3px;padding:26px 28px;margin-top:26px;
+}
+.pay-row{
+  display:flex;justify-content:space-between;gap:18px;align-items:baseline;
+  padding:12px 0;border-bottom:1px solid var(--gold-whisper);
+}
+.pay-row:last-child{border-bottom:0;padding-bottom:0;}
+.pay-row .pay-when{font-size:0.9rem;color:var(--ink-soft);display:block;font-weight:400;}
+.pay-row .pay-what{font-weight:500;}
+.pay-row .pay-amt{font-family:'Playfair Display',serif;font-size:1.24rem;white-space:nowrap;}
+.disclaimer{
+  font-size:0.9rem;color:var(--ink-soft);text-align:center;
+  margin-top:22px;line-height:1.6;
+}
+
+/* ---------- FORM ---------- */
+.form-card{
+  background:var(--white);border:1px solid var(--line);border-radius:3px;
+  padding:38px 34px 36px;box-shadow:0 1px 3px rgba(43,36,32,0.035);
+}
+.field{margin-bottom:20px;}
+label{display:block;font-size:0.86rem;font-weight:500;letter-spacing:0.05em;margin-bottom:7px;color:var(--ink);}
+label .opt{color:var(--ink-soft);font-weight:400;}
+input,select,textarea{
+  width:100%;font-family:'DM Sans',sans-serif;font-size:16px;
+  color:var(--ink);background:var(--paper);
+  border:1px solid var(--line);border-radius:3px;
+  padding:13px 15px;min-height:48px;line-height:1.45;
+}
+textarea{min-height:120px;resize:vertical;}
+input:focus,select:focus,textarea:focus{
+  outline:2px solid var(--aqua);outline-offset:1px;border-color:var(--aqua);background:var(--white);
+}
+select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,#4F8A8C 50%),linear-gradient(135deg,#4F8A8C 50%,transparent 50%);background-position:calc(100% - 20px) 22px,calc(100% - 14px) 22px;background-size:6px 6px,6px 6px;background-repeat:no-repeat;padding-right:44px;}
+.btn{
+  display:block;width:100%;min-height:56px;cursor:pointer;
+  background:var(--aqua-dark);color:var(--white);
+  font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;
+  letter-spacing:0.12em;text-transform:uppercase;
+  border:0;border-radius:3px;padding:17px 22px;
+  transition:background 160ms ease;
+}
+.btn:hover{background:var(--aqua);}
+.btn:focus-visible{outline:2px solid var(--ink);outline-offset:3px;}
+.btn:disabled{background:var(--aqua);cursor:default;opacity:0.75;}
+.form-foot{font-size:0.87rem;color:var(--ink-soft);text-align:center;margin:16px 0 0;}
+#thank-you{
+  display:none;background:var(--aqua-mist);border-radius:3px;
+  padding:44px 32px;text-align:center;
+}
+#thank-you h3{font-size:1.6rem;margin-bottom:12px;}
+#thank-you p{color:var(--ink-soft);max-width:440px;margin:0 auto 0.8em;}
+
+/* ---------- FOOTER ---------- */
+.pmtp-footer{background:var(--sand-light);padding:56px 0 46px;border-top:1px solid var(--gold-whisper);}
+.advisor{text-align:center;}
+.advisor .adv-name{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:500;}
+.advisor .adv-title{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;
+  color:var(--ink-soft);margin-top:3px;
+}
+.advisor .adv-contact{margin-top:14px;font-size:0.97rem;line-height:1.9;}
+.advisor .adv-contact a{color:var(--aqua-dark);text-decoration:none;border-bottom:1px solid var(--aqua-pale);}
+.advisor .adv-contact a:hover{border-bottom-color:var(--aqua-dark);}
+.adv-agency{
+  margin-top:18px;font-family:'Playfair Display',serif;font-size:11px;font-weight:600;
+  letter-spacing:0.22em;text-transform:uppercase;color:var(--aqua-dark);
+}
+.adv-tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:var(--ink-soft);margin-top:5px;}
+.foot-disclosure{
+  margin-top:38px;padding-top:30px;border-top:1px solid var(--gold-whisper);
+  font-size:0.92rem;color:var(--ink);line-height:1.68;
+}
+.foot-fine{margin-top:22px;font-size:0.84rem;color:var(--ink-soft);line-height:1.6;}
+
+@media (max-width:768px){
+  body{font-size:16px;}
+  .pmtp-hero{padding:56px 22px 46px;}
+  .sec{padding:46px 0;}
+  .value-grid{grid-template-columns:1fr;}
+  .value-col{padding:26px 0;border-left:0;border-top:1px solid var(--gold-whisper);}
+  .value-col:first-child{padding-top:0;border-top:0;}
+  .value-col:last-child{padding-bottom:0;}
+  .price-split{grid-template-columns:1fr;gap:26px;}
+  .card-head,.card-body{padding-left:22px;padding-right:22px;}
+  .intro-note,.form-card{padding-left:24px;padding-right:24px;}
+  .leg-time{min-width:0;}
+  .leg-row{gap:12px;}
+  table.fee td{padding:12px 14px;font-size:0.9rem;}
+  .pay-row{flex-direction:column;gap:4px;}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important;animation:none !important;}
+  html{scroll-behavior:auto;}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="pmtp-hero" id="pmtp-hero">
+  <div class="pmtp-wordmark">Point Me to Paradise Travel</div>
+  <div class="pmtp-wordmark-sub">Curated Journeys &middot; Expert Advisors</div>
+  <hr class="hero-rule">
+  <div class="hero-kicker">Maui Wowie</div>
+  <h1>Ka&#699;anapali, Maui</h1>
+  <p class="hero-sub">Fourteen nights on the west shore, with the whole island in reach</p>
+  <p class="hero-facts">September 1&ndash;15, 2026 &middot; <strong>Houston to Kahului</strong> &middot; rental car &middot; oceanfront at The Westin Maui</p>
+  <p class="hero-prepared">Prepared for Tabitha by Christina Garcia</p>
+</header>
+
+<!-- ================= INTRO ================= -->
+<section class="sec-sm band-white">
+  <div class="narrow">
+    <div class="intro-note">
+      <p>I'm so excited to share this Maui itinerary with you, Tabitha. I've put together a trip that gets you the best of the island &mdash; the long drive out to Hana, the west-facing sunsets you've been picturing, and a base on Ka&#699;anapali Beach that you won't want to leave. September is one of my favorite months to send people to Maui: the summer crowds have thinned, the water is still warm, and the afternoons stay bright late.</p>
+      <p>Have a look through, and tell me what you think. Anything here can be adjusted &mdash; the room category, the car, the flight times. This is a starting point, not a final answer.</p>
+      <p class="intro-sig">&mdash; Christina</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OVERVIEW + COMMITMENT 1 ================= -->
+<section class="sec band">
+  <div class="narrow">
+    <div class="sec-head">
+      <div class="eyebrow">Your Trip at a Glance</div>
+      <h2>Two weeks, one very good base</h2>
+      <p class="sub-italic">One resort, one car, and enough time to see Maui at its own pace.</p>
+    </div>
+    <ul class="tick">
+      <li><strong>September 1&ndash;15, 2026</strong> &mdash; 14 nights on Maui.</li>
+      <li><strong>Outbound:</strong> United from Houston (IAH) through Denver to Kahului (OGG), landing 3:05 p.m. on Tuesday, September 1.</li>
+      <li><strong>On island:</strong> Alamo rental car collected at Kahului Airport at 4:00 p.m. on arrival day &mdash; unlimited miles, second driver included.</li>
+      <li><strong>Where you stay:</strong> The Westin Maui Resort &amp; Spa, Ka&#699;anapali &mdash; directly on the beach, two minutes' walk to Whalers Village.</li>
+      <li><strong>Return:</strong> Southwest overnight from Kahului via San Diego into Houston Hobby (HOU), arriving 1:50 p.m. Wednesday, September 16.</li>
+    </ul>
+    <div class="commit" style="margin-top:30px;">
+      <span class="commit-label">How we work</span>
+      We don't book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. The work you'd hate doing &mdash; already done.
+    </div>
+  </div>
+</section>
+
+<!-- ================= BEYOND THE BOOKING ================= -->
+<section class="sec band-sand">
+  <div class="wrap">
+    <div class="sec-head" style="text-align:center;">
+      <div class="eyebrow">Beyond the Booking</div>
+      <h2>What comes with working with us</h2>
+      <p class="sub-italic">Three things that exist whether or not anything goes wrong.</p>
+    </div>
+    <div class="value-grid">
+      <div class="value-col">
+        <h3>The Trip Guide</h3>
+        <p>A document built for your week: restaurants we'd return to, neighborhoods worth the walk, what to skip, the places open on a Sunday. Not pulled from a database. Researched against where you're staying and what you've told us matters.</p>
+      </div>
+      <div class="value-col">
+        <h3>The Trip App</h3>
+        <p>Itinerary, confirmation numbers, transfer windows, and ground contacts in one place, accessible offline, updated in real time. If a flight shifts or weather moves, the app moves with it.</p>
+      </div>
+      <div class="value-col">
+        <h3>Best-Rate Assurance</h3>
+        <p>Every hotel night, cruise rate, and tour in your quote is priced at publicly available rates. If you find the same component for less elsewhere, we'll match it, so you don't have to wonder whether you're overpaying for a piece of your trip.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SECTION 1 ================= -->
+<section class="sec band-white">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="day-head">
+        <span class="day-chip">Section 1</span>
+        <div class="eyebrow" style="margin:0;">Sep 01 &middot; Tuesday</div>
+      </div>
+      <h2>Getting there, and getting settled</h2>
+      <p class="sub-italic">A morning departure from Houston puts you on Ka&#699;anapali Beach before dinner.</p>
+    </div>
+
+    <!-- FLIGHT: UNITED -->
+    <article class="card">
+      <div class="card-head">
+        <svg class="card-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5a2.1 2.1 0 0 0-3-3L13 8 4.8 6.2a.5.5 0 0 0-.5.8l3.2 3.6-2.1 2.1-2-.4a.5.5 0 0 0-.5.8l2.4 2.4 2.4 2.4a.5.5 0 0 0 .8-.5l-.4-2 2.1-2.1 3.6 3.2a.5.5 0 0 0 .8-.5Z"/></svg>
+        <div>
+          <div class="card-kicker">Flight &middot; Outbound</div>
+          <h3>United &mdash; Houston to Kahului</h3>
+          <p class="card-sub">Tuesday, September 1, 2026 &middot; Economy &middot; one stop in Denver</p>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="leg">
+          <div class="leg-title">Leg 1 &middot; UA 584</div>
+          <div class="leg-row">
+            <div class="leg-time">9:33 a.m.</div>
+            <div class="leg-place">Houston &mdash; George Bush Intercontinental<span>IAH</span></div>
+          </div>
+          <div class="leg-row">
+            <div class="leg-time">11:10 a.m.</div>
+            <div class="leg-place">Denver International<span>DEN</span></div>
+          </div>
+          <div class="leg-meta">2 hr 37 min &middot; Airbus A321neo &middot; Economy</div>
+        </div>
+        <div class="layover">Layover in Denver &mdash; 50 minutes. Tight but workable; both legs are United, same terminal complex.</div>
+        <div class="leg">
+          <div class="leg-title">Leg 2 &middot; UA 1736</div>
+          <div class="leg-row">
+            <div class="leg-time">12:00 p.m.</div>
+            <div class="leg-place">Denver International<span>DEN</span></div>
+          </div>
+          <div class="leg-row">
+            <div class="leg-time">3:05 p.m.</div>
+            <div class="leg-place">Kahului, Maui<span>OGG</span></div>
+          </div>
+          <div class="leg-meta">7 hr 5 min &middot; Boeing 777 &middot; Economy</div>
+        </div>
+
+        <h4 class="mini">Good to know</h4>
+        <ul class="plain">
+          <li>Total elapsed travel time IAH to OGG: <strong>10 hr 32 min</strong>, accounting for the time-zone change. You land mid-afternoon Hawaii time with the evening still ahead of you.</li>
+          <li>This is a <strong>one-way fare</strong> priced as a separate ticket from your return, which is on Southwest. The two are not linked, so a delay on one does not automatically protect the other.</li>
+          <li>Checked-bag allowance, seat assignments, and any fare-class change or cancellation rules aren't reflected in the fare detail I have. I'll confirm them in writing before we ticket.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- CAR: ALAMO -->
+    <article class="card">
+      <div class="card-head">
+        <svg class="card-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17h14M5 17a2 2 0 0 1-2-2v-3l2-5.2A2 2 0 0 1 6.9 5.5h10.2a2 2 0 0 1 1.9 1.3L21 12v3a2 2 0 0 1-2 2M3 12h18"/><circle cx="7.5" cy="17" r="1.6"/><circle cx="16.5" cy="17" r="1.6"/></svg>
+        <div>
+          <div class="card-kicker">Rental Car</div>
+          <h3>Alamo &mdash; Kahului Airport</h3>
+          <p class="card-sub">Collected Tuesday, September 1 at 4:00 p.m.</p>
+        </div>
+      </div>
+      <div class="card-body">
+        <p>You'll pick up directly at Kahului Airport, about an hour after you land &mdash; enough buffer for bags and the shuttle to the consolidated rental facility. On Maui a car isn't optional if you want the island beyond your resort: the Road to Hana, upcountry Makawao, the Kula lavender farms, and the drive around the west side all require your own wheels.</p>
+        <h4 class="mini">Included with this rental</h4>
+        <ul class="tick">
+          <li>Unlimited miles</li>
+          <li>Free additional driver</li>
+          <li>Spouse drives free</li>
+          <li>Free cancellation</li>
+        </ul>
+        <div class="policy">
+          <h4>Good to know</h4>
+          <ul class="plain">
+            <li><strong>Drop-off:</strong> the return date and time weren't captured in the reservation detail I have. I'll set it to line up with your Southwest departure on September 15 and confirm it back to you.</li>
+            <li><strong>Vehicle class:</strong> not yet specified on this reservation &mdash; tell me whether you want a convertible, an SUV for the Hana road, or the least expensive thing that runs, and I'll lock it in.</li>
+            <li><strong>At the counter:</strong> expect a credit card in the primary driver's name and a valid license. Fuel policy, young-driver surcharges, and any insurance you decline or accept are settled at pickup and are not part of the quoted package.</li>
+            <li><strong>Parking at the resort is separate</strong> &mdash; see the pay-at-property charges below.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- HOTEL: WESTIN MAUI -->
+    <article class="card">
+      <div class="card-head">
+        <svg class="card-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V8l7-4 7 4v13M10 21v-5h4v5"/><path d="M9 11h.01M15 11h.01"/></svg>
+        <div>
+          <div class="card-kicker">Where You Stay &middot; 14 Nights</div>
+          <h3>The Westin Maui Resort &amp; Spa, Ka&#699;anapali</h3>
+          <p class="card-sub">2365 Kaanapali Parkway, Lahaina, HI 96761</p>
+        </div>
+      </div>
+      <div class="card-body">
+        <p>Waterfalls and koi ponds run through the entry, and the property opens straight onto Ka&#699;anapali Beach &mdash; two minutes on foot, with loungers, umbrellas, and towels waiting. There are three outdoor pools, including an adults-only pool if you want quiet, and water slides at the other end if you don't. A poolside bar, a beachfront restaurant, a hot tub, and a full-service spa mean you can go a full day without touching the car. Whalers Village, with its shops and restaurants, is the same two-minute walk; the Ka&#699;anapali Kai golf course is nine minutes on foot.</p>
+        <p>It's rated 9.2 out of 10 across 1,179 guest reviews, with cleanliness at 9.6 and amenities at 9.4 &mdash; consistent with what I hear back from clients I've sent there.</p>
+
+        <h4 class="mini">What the room rate includes</h4>
+        <ul class="tick">
+          <li>Your room for all 14 nights</li>
+          <li>Wired in-room internet, included with every room type</li>
+          <li>Beach access with loungers, umbrellas, and towels</li>
+          <li>Three outdoor pools, adults-only pool area, water slides, and hot tub</li>
+          <li>Fitness and health club access, in-room bottled water, internet, phone calls, and resort shuttle service &mdash; all bundled into the mandatory resort fee below</li>
+        </ul>
+        <div class="note" style="margin-top:16px;">
+          <strong>One honest note on rate inclusions.</strong> Some rate plans at this resort bundle in extras &mdash; a daily resort credit, breakfast for two, or evening drinks and hors d'oeuvres. Those vary by the specific room and rate combination and are <strong>not standard</strong>. I have not assumed any of them are attached to your rate. If you'd like me to price a rate that includes a daily credit or breakfast, say the word and I'll run the comparison.
+        </div>
+
+        <h4 class="mini">Nearby, without the car</h4>
+        <ul class="plain">
+          <li>Ka&#699;anapali Beach &mdash; 2-minute walk</li>
+          <li>Whalers Village shopping and dining &mdash; 2-minute walk (an ABC Store is right there for sunscreen and snacks)</li>
+          <li>Ka&#699;anapali Kai golf course &mdash; 9-minute walk</li>
+          <li>Sunset cocktail cruises depart from the beach essentially at your doorstep; the Myths of Maui luau at Royal Lahaina is about a mile up the road</li>
+          <li>Kahului Airport (OGG) &mdash; 42-minute drive</li>
+        </ul>
+
+        <h4 class="mini">Pay now vs. pay at the property</h4>
+        <div class="fee-wrap">
+          <div class="fee-head">Quoted in your package price</div>
+          <table class="fee">
+            <tr>
+              <td>Guest room at The Westin Maui, Ka&#699;anapali &mdash; 14 nights, September 1&ndash;15, 2026</td>
+              <td class="amt">Included</td>
+            </tr>
+          </table>
+        </div>
+        <div class="fee-wrap" style="margin-top:16px;">
+          <div class="fee-head">Charged at the property &mdash; additional to your quote</div>
+          <table class="fee">
+            <tr>
+              <td>Resort fee <span class="tag-req">Required</span>Covers fitness and health club access, in-room bottled water, internet access, phone calls, and shuttle service.</td>
+              <td class="amt">$57.80<small>per room, per night &mdash; approx. $809.20 across 14 nights</small></td>
+            </tr>
+            <tr>
+              <td>Self-parking <span class="tag-opt">Optional</span>Includes in-and-out privileges.</td>
+              <td class="amt">$50<small>per day &mdash; approx. $700 across 14 days</small></td>
+            </tr>
+            <tr>
+              <td>Valet parking <span class="tag-opt">Optional</span>Includes in-and-out privileges. Choose valet or self-park, not both.</td>
+              <td class="amt">$55<small>per day &mdash; approx. $770 across 14 days</small></td>
+            </tr>
+            <tr>
+              <td>Cooked-to-order breakfast <span class="tag-opt">Optional</span>Available but not automatically included. Additional charges apply for children age 4+ sharing existing bedding.</td>
+              <td class="amt">$18&ndash;25<small>per person</small></td>
+            </tr>
+            <tr>
+              <td>Airport shuttle <span class="tag-opt">Optional</span>Contact the resort 72 hours before arrival to arrange pickup; surcharges may apply. You have a rental car, so this is likely unnecessary.</td>
+              <td class="amt">$80<small>per adult; $80 per child</small></td>
+            </tr>
+            <tr>
+              <td>Rollaway / extra bed <span class="tag-opt">Optional</span>Only if you request an additional bed.</td>
+              <td class="amt">$30<small>per day</small></td>
+            </tr>
+            <tr>
+              <td>Incidental deposit <span class="tag-opt">On arrival</span>A government-issued photo ID and a credit card, debit card, or cash deposit may be required at check-in for incidentals. The resort does not accept cash as payment for the room itself.</td>
+              <td class="amt">Varies<small>amount not specified</small></td>
+            </tr>
+            <tr>
+              <td>Pets <span class="tag-opt">No charge</span>Dogs only, one pet up to 40 lbs. Service animals are exempt from fees and welcome. Restrictions apply &mdash; contact the resort for details.</td>
+              <td class="amt">Free</td>
+            </tr>
+          </table>
+        </div>
+        <div class="note" style="margin-top:16px;">
+          These charges are collected by the resort at check-out and are <strong>not part of the package price below</strong>. Fees and deposits may not include tax and are subject to change; no effective date was published alongside the property's fee schedule. <strong>Worth flagging:</strong> the mandatory resort fee lists "shuttle service" among its inclusions, while the airport shuttle carries its own $80 charge &mdash; I read that as a local resort shuttle being covered and the airport run being separate, but I'll verify with the property before you travel.
+        </div>
+
+        <div class="policy">
+          <h4>Policies &amp; good to know</h4>
+          <ul class="plain">
+            <li><strong>Check-in:</strong> from 4:00 p.m. (through 5:30 a.m.). Contactless check-in available. Minimum check-in age is 18.</li>
+            <li><strong>Check-out:</strong> before 11:00 a.m. Contactless and express check-out available. Your Southwest flight doesn't leave until 8:55 p.m. on September 15 &mdash; I can request a late check-out or arrange day-use of the resort's facilities so you're not sitting in the lobby all afternoon.</li>
+            <li><strong>Early / late check-in and check-out:</strong> no separate fee was published by the property, but both depend on availability on the day.</li>
+            <li><strong>Cancellation:</strong> the resort's cancellation deadlines and penalties for this rate weren't included in the detail I have. I'll confirm the exact terms in writing before your deposit is processed &mdash; please don't treat this booking as freely cancellable until I do.</li>
+            <li><strong>Amenity list:</strong> the property's full amenity sheet didn't load in full during research, so the list above reflects what was published rather than an exhaustive inventory.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= SECTION 2 ================= -->
+<section class="sec band">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="day-head">
+        <span class="day-chip">Section 2</span>
+        <div class="eyebrow" style="margin:0;">Sep 15 &middot; Tuesday</div>
+      </div>
+      <h2>The way home</h2>
+      <p class="sub-italic">A red-eye out of Kahului that gives you the whole last day on the island.</p>
+    </div>
+
+    <article class="card">
+      <div class="card-head">
+        <svg class="card-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5a2.1 2.1 0 0 0-3-3L13 8 4.8 6.2a.5.5 0 0 0-.5.8l3.2 3.6-2.1 2.1-2-.4a.5.5 0 0 0-.5.8l2.4 2.4 2.4 2.4a.5.5 0 0 0 .8-.5l-.4-2 2.1-2.1 3.6 3.2a.5.5 0 0 0 .8-.5Z"/></svg>
+        <div>
+          <div class="card-kicker">Flight &middot; Return</div>
+          <h3>Southwest &mdash; Kahului to Houston</h3>
+          <p class="card-sub">Tuesday, September 15 into Wednesday, September 16, 2026 &middot; Economy &middot; one stop in San Diego</p>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="leg">
+          <div class="leg-title">Leg 1 &middot; WN 3041</div>
+          <div class="leg-row">
+            <div class="leg-time">8:55 p.m.</div>
+            <div class="leg-place">Kahului, Maui &mdash; Tue, Sep 15<span>OGG</span></div>
+          </div>
+          <div class="leg-row">
+            <div class="leg-time">5:05 a.m.</div>
+            <div class="leg-place">San Diego International &mdash; Wed, Sep 16 <em>(+1 day)</em><span>SAN</span></div>
+          </div>
+          <div class="leg-meta">5 hr 10 min &middot; Boeing 737 MAX 8 &middot; Economy &middot; overnight</div>
+        </div>
+        <div class="layover">Layover in San Diego &mdash; 3 hr 30 min. Long enough for breakfast and a shower-adjacent reset before the last leg.</div>
+        <div class="leg">
+          <div class="leg-title">Leg 2 &middot; WN 3423</div>
+          <div class="leg-row">
+            <div class="leg-time">8:35 a.m.</div>
+            <div class="leg-place">San Diego International &mdash; Wed, Sep 16<span>SAN</span></div>
+          </div>
+          <div class="leg-row">
+            <div class="leg-time">1:50 p.m.</div>
+            <div class="leg-place">Houston &mdash; William P. Hobby<span>HOU</span></div>
+          </div>
+          <div class="leg-meta">3 hr 15 min &middot; Boeing 737 MAX 8 &middot; Economy</div>
+        </div>
+
+        <h4 class="mini">Your fare &mdash; Southwest "Choice"</h4>
+        <ul class="tick">
+          <li>Free seat selection</li>
+          <li>Free changes, with any fare difference payable at the time of change</li>
+          <li>Non-refundable</li>
+        </ul>
+        <div class="note" style="margin-top:16px;">
+          <strong>First checked bag: $45</strong>, paid to the airline and not included in your package price. If you'd rather have full refundability, Southwest's "Choice Preferred" fare offers it at a higher price &mdash; tell me and I'll reprice.
+        </div>
+
+        <div class="policy">
+          <h4>Two things to plan around</h4>
+          <ul class="plain">
+            <li><strong>Different Houston airports.</strong> You depart from George Bush Intercontinental (IAH) and return into William P. Hobby (HOU). If you're parking a car or arranging a ride home, book it against the right airport &mdash; they're roughly 30 miles apart.</li>
+            <li><strong>Total elapsed travel time OGG to HOU: 11 hr 55 min</strong>, adjusted for time zones. It's an overnight, so plan a soft landing on Wednesday afternoon rather than anything scheduled.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section class="sec band-white" id="pricing">
+  <div class="narrow">
+    <div class="sec-head" style="text-align:center;">
+      <div class="eyebrow">Your Investment</div>
+      <h2>One price, everything above</h2>
+      <p class="sub-italic">Flights, car, and 14 nights at Ka&#699;anapali, quoted as a single package.</p>
+    </div>
+
+    <div class="price-panel">
+      <div class="price-label">Package Total</div>
+      <div class="price-figure">Est. $5,677</div>
+      <div class="price-basis">Total for the trip as quoted</div>
+
+      <div class="price-split">
+        <div>
+          <h4>Included in this price</h4>
+          <ul class="plain">
+            <li>United flights, Houston (IAH) to Kahului, September 1</li>
+            <li>Alamo rental car from Kahului Airport, unlimited miles</li>
+            <li>14 nights at The Westin Maui Resort &amp; Spa, Ka&#699;anapali</li>
+            <li>Southwest "Choice" flights, Kahului to Houston (HOU), September 15&ndash;16</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Not included &mdash; paid separately</h4>
+          <ul class="plain">
+            <li>Resort fee of $57.80 per room, per night, charged at the property</li>
+            <li>Parking at the resort &mdash; $50 self, $55 valet, per day</li>
+            <li>Breakfast, spa, and other on-property charges</li>
+            <li>Checked bags, including Southwest's $45 first bag</li>
+            <li>Rental car fuel, optional coverage, and counter add-ons</li>
+            <li>Meals, activities, and anything not listed above</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="commit" style="margin-top:26px;">
+      <span class="commit-label">On price</span>
+      We check every component against public rates and meet or beat them. You're not paying a premium for our convenience &mdash; you're paying for the rest of what we do.
+    </div>
+
+    <div class="pay-schedule">
+      <h4 style="font-family:'DM Sans',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--aqua-dark);margin:0 0 6px;">Payment schedule</h4>
+      <div class="pay-row">
+        <div><span class="pay-what">Deposit</span><span class="pay-when">Due August 13, 2026 &mdash; secures the booking</span></div>
+        <div class="pay-amt">$500</div>
+      </div>
+      <div class="pay-row">
+        <div><span class="pay-what">Final payment</span><span class="pay-when">Due August 25, 2026</span></div>
+        <div class="pay-amt">Balance</div>
+      </div>
+      <div class="pay-row">
+        <div><span class="pay-what">At the property</span><span class="pay-when">Resort fee, parking, and any on-property charges, settled at check-out</span></div>
+        <div class="pay-amt">Additional</div>
+      </div>
+    </div>
+
+    <p class="disclaimer">
+      Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor.<br>
+      Rates and availability are subject to change until booked.
+    </p>
+  </div>
+</section>
+
+<!-- ================= FORM ================= -->
+<section class="sec band">
+  <div class="narrow">
+    <div class="commit" style="background:var(--aqua-pale);margin-bottom:34px;">
+      <span class="commit-label">What happens next</span>
+      What's coming after this quote: a destination guide built for your trip &mdash; PDF or interactive in-app, with Google Maps links to every place we send you &mdash; a trip app where everything lives, and us when something goes sideways at midnight. You travel; we handle the rest.
+    </div>
+
+    <div class="sec-head" style="text-align:center;">
+      <div class="eyebrow">Ready When You Are</div>
+      <h2>Approve this trip</h2>
+      <p class="sub-italic">Send it back to me and I'll start holding what needs holding.</p>
+    </div>
+
+    <div id="form-container" class="form-card">
+      <div id="form-error" style="display:none; background:#fff1f1; border:1px solid #f5c6c6; border-radius:6px; padding:14px 18px; font-size:0.875rem; color:#b91c1c; margin-bottom:16px;">
+        We weren't able to send your message. Please contact Christina directly at the address below.
+      </div>
+      <form id="pmtp-form">
+        <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+        <input type="hidden" name="subject" value="Quote Response — Tabitha | Maui">
+        <input type="hidden" name="from_name" value="Tabitha Quote — Point Me to Paradise">
+        <input type="hidden" name="redirect" value="false">
+        <input type="hidden" name="quote_reference" value="Maui Wowie — Tabitha Goes to Maui, Sep 1–15 2026, Est. $5,677">
+
+        <div class="field">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="phone">Phone <span class="opt">(optional)</span></label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel">
+        </div>
+        <div class="field">
+          <label for="travel_insurance">Travel insurance</label>
+          <select id="travel_insurance" name="travel_insurance">
+            <option value="Yes — I'd like a quote">Yes &mdash; I'd like a quote</option>
+            <option value="No — not interested">No &mdash; not interested</option>
+            <option value="Already have coverage">Already have coverage</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Message or questions <span class="opt">(optional)</span></label>
+          <textarea id="message" name="message" placeholder="Anything you'd like changed — room category, car type, flight times."></textarea>
+        </div>
+        <button type="submit" id="submit-btn" class="btn">Approve This Trip &middot; Send to Christina</button>
+        <p class="form-foot">Approving sends this straight to Christina. Nothing is charged from this page.</p>
+      </form>
+    </div>
+
+    <div id="thank-you">
+      <h3>Thank you, Tabitha</h3>
+      <p>That's landed with Christina. She'll be in touch shortly to confirm availability, walk you through the deposit, and start locking in the pieces.</p>
+      <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem;color:var(--aqua-dark);margin-top:18px;">The world is your oyster, we are your pearl.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="pmtp-footer">
+  <div class="narrow">
+    <div class="advisor">
+      <div class="adv-name">Christina Garcia</div>
+      <div class="adv-title">Travel Advisor</div>
+      <div class="adv-contact">
+        <a id="adv-email" href="#">&nbsp;</a><br>
+        <a href="tel:+12812290862">+1 281 229 0862</a>
+      </div>
+      <div class="adv-agency">Point Me to Paradise Travel</div>
+      <div class="adv-tag">Curated Journeys &middot; Expert Advisors</div>
+    </div>
+
+    <div class="foot-disclosure">
+      Individual hotels, transfers, and tours in your quote are priced at publicly available rates &mdash; and in many cases lower than what you'd find on your own. You don't have to worry about overpaying for a piece of your trip. What you're paying for is the rest: the right rooms at the right property, operators we've used for years, the trip app, and a human who answers when something doesn't go to plan.
+    </div>
+
+    <div class="foot-fine">
+      Rates and availability are subject to change until booked. Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor. Charges paid directly to the resort &mdash; including the mandatory resort fee, parking, and incidentals &mdash; are additional to the package price shown and are collected by the property.
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Hero image fallback — Google-cached thumbnail URLs can expire without warning.
+   If the primary hero image fails to load, swap in the Pexels original so the
+   header never renders as a bare gradient in front of a client. */
+(function () {
+  var hero = document.getElementById('pmtp-hero');
+  if (!hero) return;
+  var primary = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvPhW89eeoecWd1TXoPUEnL3_QVbQu5zqNl_blnFWuVg&s=10';
+  var fallback = 'https://images.pexels.com/photos/33411275/pexels-photo-33411275.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940';
+  var haze = 'linear-gradient(180deg, rgba(234,243,242,0.93) 0%, rgba(196,228,225,0.72) 42%, rgba(251,253,253,0.97) 100%)';
+  var test = new Image();
+  test.onerror = function () {
+    hero.style.backgroundImage = haze + ", url('" + fallback + "')";
+  };
+  test.src = primary;
+})();
+
+(function () {
+  var addr = 'christina' + '\u0040' + 'pointmetoparadise.com';
+  var el = document.getElementById('adv-email');
+  if (el) { el.textContent = addr; el.setAttribute('href', 'mailto:' + addr); }
+})();
+
+document.getElementById('pmtp-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var btn = document.getElementById('submit-btn');
+  var err = document.getElementById('form-error');
+  btn.disabled = true; btn.textContent = 'Sending…'; err.style.display = 'none';
+  fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(e.target) })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      if (data.success) {
+        document.getElementById('form-container').style.display = 'none';
+        document.getElementById('thank-you').style.display = 'block';
+        document.getElementById('thank-you').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        btn.disabled = false; btn.textContent = 'Approve This Trip · Send to Christina'; err.style.display = 'block';
+        err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    })
+    .catch(function() {
+      btn.disabled = false; btn.textContent = 'Approve This Trip · Send to Christina'; err.style.display = 'block';
+      err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+});
+</script>
+
+</body>
+</html>
