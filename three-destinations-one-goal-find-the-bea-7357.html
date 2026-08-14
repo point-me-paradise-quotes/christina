@@ -1,0 +1,778 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Los Cabos Proposal — Point Me To Paradise Travel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --white:#ffffff;
+    --paper:#fbfaf6;
+    --sand:#f1e8d8;
+    --sand-line:#e3d3ad;
+    --aqua-tint:#eaf5f3;
+    --aqua:#7fc4bb;
+    --aqua-deep:#3f8f85;
+    --gold:#c9ab6a;
+    --ink:#2b3a38;
+    --ink-soft:#5c6b68;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:'DM Sans', sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:'Playfair Display', serif;
+    font-weight:500;
+    margin:0 0 0.3em 0;
+    color:var(--ink);
+  }
+  .italic-sub{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    color:var(--ink-soft);
+    font-size:1.15rem;
+    margin:0 0 1.4em 0;
+  }
+  a{color:var(--aqua-deep);}
+  img{max-width:100%;display:block;}
+
+  /* HERO */
+  .hero{
+    position:relative;
+    min-height:520px;
+    background-image:
+      linear-gradient(180deg, rgba(63,143,133,0.55) 0%, rgba(63,143,133,0.35) 45%, rgba(255,255,255,0.92) 100%),
+      url('https://images.pexels.com/photos/28408402/pexels-photo-28408402.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:flex-end;
+    padding:60px 24px 40px;
+  }
+  .hero-inner{
+    max-width:920px;
+    margin:0 auto;
+    width:100%;
+    color:var(--white);
+  }
+  .kicker{
+    font-family:'DM Sans', sans-serif;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    font-size:0.78rem;
+    font-weight:600;
+    opacity:0.95;
+    margin-bottom:10px;
+  }
+  .hero h1{
+    color:var(--white);
+    font-size:2.4rem;
+    line-height:1.15;
+    max-width:760px;
+    text-shadow:0 2px 18px rgba(0,0,0,0.18);
+  }
+  .hero-sub{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:1.3rem;
+    color:var(--white);
+    max-width:640px;
+    margin-top:14px;
+    text-shadow:0 1px 10px rgba(0,0,0,0.16);
+  }
+
+  .wrap{max-width:920px;margin:0 auto;padding:0 24px;}
+
+  .intro-card{
+    background:var(--white);
+    margin-top:-40px;
+    position:relative;
+    border-radius:var(--radius);
+    padding:32px;
+    box-shadow:0 12px 40px rgba(63,143,133,0.12);
+  }
+  .intro-card p{font-size:1.05rem;color:var(--ink);}
+  .detail-line{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    color:var(--ink-soft);
+    font-size:1.1rem;
+    margin-top:14px;
+    padding-top:14px;
+    border-top:1px solid var(--gold);
+  }
+  .advisor-line{
+    font-size:0.92rem;
+    color:var(--ink-soft);
+    margin-top:8px;
+  }
+
+  section.block{padding:48px 0 8px;}
+  section.block h2{font-size:1.7rem;}
+  .section-icon{
+    display:inline-flex;
+    vertical-align:middle;
+    margin-right:10px;
+    color:var(--aqua-deep);
+  }
+
+  /* CARDS */
+  .card{
+    background:var(--white);
+    border:1px solid var(--aqua-tint);
+    border-radius:var(--radius);
+    padding:26px;
+    margin-bottom:24px;
+    box-shadow:0 4px 18px rgba(63,143,133,0.06);
+  }
+  .card h3{font-size:1.3rem;margin-bottom:4px;}
+  .card .meta{color:var(--ink-soft);font-size:0.95rem;margin-bottom:14px;}
+  .badge{
+    display:inline-block;
+    background:var(--aqua-tint);
+    color:var(--aqua-deep);
+    font-size:0.78rem;
+    font-weight:600;
+    padding:5px 12px;
+    border-radius:20px;
+    margin-bottom:10px;
+    letter-spacing:0.02em;
+  }
+  .price-tag{
+    font-family:'Playfair Display', serif;
+    font-size:1.1rem;
+    color:var(--ink);
+    font-weight:600;
+  }
+  .price-note{font-size:0.85rem;color:var(--ink-soft);}
+
+  .flight-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    margin:14px 0;
+  }
+  .flight-col .label{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--ink-soft);margin-bottom:2px;}
+  .flight-col .value{font-size:1.05rem;font-weight:600;}
+  .divider-gold{border:none;border-top:1px solid var(--gold);margin:16px 0;opacity:0.6;}
+
+  ul.incl{margin:10px 0;padding-left:20px;}
+  ul.incl li{margin-bottom:5px;}
+
+  .good-know{
+    background:var(--aqua-tint);
+    border-radius:10px;
+    padding:14px 18px;
+    margin-top:14px;
+    font-size:0.92rem;
+  }
+  .good-know strong{color:var(--aqua-deep);}
+
+  .pay-split{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+    margin-top:16px;
+  }
+  .pay-box{
+    border-radius:10px;
+    padding:16px;
+  }
+  .pay-box.now{background:var(--aqua-tint);}
+  .pay-box.property{background:var(--sand);}
+  .pay-box h4{font-size:0.95rem;margin-bottom:8px;color:var(--ink);}
+  .pay-box ul{margin:0;padding-left:18px;font-size:0.9rem;}
+
+  fieldset.option-group{
+    border:1px dashed var(--sand-line);
+    border-radius:12px;
+    padding:18px;
+    margin-bottom:24px;
+  }
+  fieldset.option-group legend{
+    font-family:'Playfair Display', serif;
+    font-size:1.05rem;
+    padding:0 8px;
+    color:var(--ink);
+  }
+  .opt-label{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    padding:14px;
+    border-radius:10px;
+    cursor:pointer;
+    margin-bottom:10px;
+  }
+  .opt-label:hover{background:var(--aqua-tint);}
+  .opt-label input{margin-top:4px;min-width:20px;min-height:20px;}
+
+  /* CAROUSEL */
+  .carousel{
+    position:relative;
+    border-radius:12px;
+    overflow:hidden;
+    background:var(--paper);
+    margin:16px 0;
+  }
+  .carousel-track{
+    width:100%;
+    aspect-ratio:16/10;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--sand);
+    overflow:hidden;
+  }
+  .carousel-track img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+  .carousel-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(255,255,255,0.85);
+    border:none;
+    border-radius:50%;
+    width:44px;height:44px;
+    display:flex;align-items:center;justify-content:center;
+    cursor:pointer;
+    color:var(--aqua-deep);
+    box-shadow:0 2px 10px rgba(0,0,0,0.15);
+  }
+  .carousel-btn.prev{left:10px;}
+  .carousel-btn.next{right:10px;}
+  .carousel-counter{
+    position:absolute;
+    bottom:10px;left:0;right:0;
+    text-align:center;
+    color:var(--white);
+    font-size:0.85rem;
+    text-shadow:0 1px 4px rgba(0,0,0,0.5);
+  }
+  .two-up{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+
+  /* VALUE STRIP */
+  .value-strip{
+    background:var(--sand);
+    padding:44px 24px;
+    margin-top:40px;
+  }
+  .value-grid{
+    max-width:1000px;margin:0 auto;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+  }
+  .value-col{
+    padding:0 24px;
+    text-align:left;
+  }
+  .value-col + .value-col{
+    border-left:1px solid var(--gold);
+  }
+  .value-col h4{font-size:1.05rem;margin-bottom:8px;}
+  .value-col p{font-size:0.9rem;color:var(--ink-soft);}
+
+  /* PRICING SUMMARY */
+  .summary-panel{
+    background:var(--aqua-tint);
+    border-radius:var(--radius);
+    padding:30px;
+    margin:30px 0;
+  }
+  .summary-row{
+    display:flex;
+    justify-content:space-between;
+    padding:8px 0;
+    border-bottom:1px solid rgba(63,143,133,0.15);
+    font-size:0.95rem;
+  }
+  .summary-row.total{
+    font-family:'Playfair Display', serif;
+    font-size:1.4rem;
+    border-bottom:none;
+    padding-top:16px;
+    font-weight:600;
+  }
+  .schedule-callout{
+    background:var(--sand);
+    border-radius:10px;
+    padding:16px 20px;
+    margin-top:16px;
+    font-size:0.92rem;
+  }
+
+  .disclaimer{
+    font-size:0.85rem;
+    color:var(--ink-soft);
+    font-style:italic;
+    margin:20px 0;
+  }
+
+  /* APPROVE / FORM */
+  .approve-section{
+    background:var(--white);
+    text-align:center;
+    padding:50px 24px 60px;
+  }
+  .cta-btn{
+    background:var(--aqua-deep);
+    color:var(--white);
+    border:none;
+    padding:16px 40px;
+    font-size:1.05rem;
+    font-family:'DM Sans', sans-serif;
+    font-weight:600;
+    border-radius:30px;
+    cursor:pointer;
+    min-height:52px;
+    box-shadow:0 6px 20px rgba(63,143,133,0.3);
+  }
+  .cta-btn:hover{background:#357a71;}
+  form.approve-form{
+    max-width:480px;
+    margin:24px auto 0;
+    text-align:left;
+  }
+  form.approve-form label{
+    display:block;
+    font-size:0.85rem;
+    margin-bottom:4px;
+    color:var(--ink-soft);
+  }
+  form.approve-form input, form.approve-form textarea{
+    width:100%;
+    font-size:16px;
+    padding:12px 14px;
+    border:1px solid var(--sand-line);
+    border-radius:8px;
+    margin-bottom:16px;
+    font-family:'DM Sans', sans-serif;
+    min-height:48px;
+  }
+  form.approve-form textarea{min-height:90px;}
+
+  footer{
+    background:var(--sand);
+    padding:40px 24px;
+    font-size:0.85rem;
+    color:var(--ink);
+  }
+  footer .footer-wrap{max-width:920px;margin:0 auto;}
+  footer .contact-line{margin-top:18px;font-size:0.95rem;}
+  footer a{color:var(--aqua-deep);}
+
+  @media(max-width:768px){
+    .flight-grid, .pay-split, .two-up{grid-template-columns:1fr;}
+    .value-grid{grid-template-columns:1fr;}
+    .value-col{border-left:none;border-top:1px solid var(--gold);padding:20px 0 0;margin-top:20px;}
+    .value-col:first-child{border-top:none;margin-top:0;padding-top:0;}
+    .hero h1{font-size:1.7rem;}
+    .hero{min-height:440px;padding:40px 18px 30px;}
+    .intro-card{padding:22px;margin-top:-30px;}
+    .wrap{padding:0 16px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="kicker">Point Me To Paradise Travel · A Proposal For Your Escape</div>
+    <h1>Three Destinations, One Goal. Find the Beach.</h1>
+    <div class="hero-sub">Los Cabos, Mexico — where the Sea of Cortez meets the Pacific at Land's End, and the days move at whatever pace you set.</div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="intro-card">
+    <p>I'd love to share what I've put together for you! After hearing about what you're looking for, I've crafted an itinerary that I think will be exactly the kind of experience you're after. I'm excited to walk you through all the details and can't wait to hear what you think—let me know if you'd like to adjust anything along the way, and we'll make sure this trip is perfect for you.</p>
+    <div class="detail-line">Five nights in Los Cabos, Mexico · October 11–16, 2026 · for two travelers</div>
+    <div class="advisor-line">Prepared by Christina Garcia, Point Me To Paradise Travel</div>
+  </div>
+
+  <!-- SECTION 1: FLIGHTS -->
+  <section class="block">
+    <h2><span class="section-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7Z"/></svg></span>Flights</h2>
+    <div class="italic-sub">Two nonstop-feeling hops on American Airlines, bookending your week on the Pacific.</div>
+
+    <div class="card">
+      <span class="badge">Priced within your Flights &amp; Hotel Package</span>
+      <h3>American Airlines #2372 · Dallas/Fort Worth to Los Cabos</h3>
+      <div class="meta">Sunday, October 11, 2026 · Main Cabin Coach (Q)</div>
+      <div class="flight-grid">
+        <div class="flight-col">
+          <div class="label">Depart</div>
+          <div class="value">1:29 PM — Dallas/Fort Worth (DFW)</div>
+        </div>
+        <div class="flight-col">
+          <div class="label">Arrive</div>
+          <div class="value">2:22 PM — Los Cabos (SJD)</div>
+        </div>
+      </div>
+      <div class="meta">Travel time: 2 hours 53 minutes</div>
+      <div class="good-know"><strong>Good to know:</strong> Additional baggage charges may apply beyond your included allowance — confirm current bag fees with American Airlines before you fly.</div>
+    </div>
+
+    <div class="card">
+      <span class="badge">Priced within your Flights &amp; Hotel Package</span>
+      <h3>American Airlines #2372 · Los Cabos to Dallas/Fort Worth</h3>
+      <div class="meta">Friday, October 16, 2026 · Main Cabin Coach (O)</div>
+      <div class="flight-grid">
+        <div class="flight-col">
+          <div class="label">Depart</div>
+          <div class="value">3:22 PM — Los Cabos (SJD)</div>
+        </div>
+        <div class="flight-col">
+          <div class="label">Arrive</div>
+          <div class="value">8:15 PM — Dallas/Fort Worth (DFW)</div>
+        </div>
+      </div>
+      <div class="meta">Travel time: 2 hours 53 minutes</div>
+      <div class="good-know"><strong>Good to know:</strong> Additional baggage charges may apply beyond your included allowance — confirm current bag fees with American Airlines before you fly.</div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: HOTEL -->
+  <section class="block">
+    <h2><span class="section-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg></span>Hotel</h2>
+    <div class="italic-sub">Two adults-only, all-inclusive properties on Mexico's Pacific coast — pick the one that fits how you want to spend your week.</div>
+
+    <fieldset class="option-group">
+      <legend>Choose your resort (only one is included in your package total)</legend>
+
+      <label class="opt-label">
+        <input type="radio" name="hotelChoice" value="riu">
+        <span>
+          <strong>Riu Palace Baja California</strong> — All Inclusive, Adults Only, 5-star, Junior Suite for 2 Adults. Live entertainment, multiple pools, and access to sister properties Riu Cabo San Lucas and Riu Santa Fe.
+        </span>
+      </label>
+      <label class="opt-label">
+        <input type="radio" name="hotelChoice" value="pueblo" checked>
+        <span>
+          <strong>Pueblo Bonito Pacifica Golf &amp; Spa Resort</strong> — All Inclusive, Adults Only, 4.5-star, 9.2/10 guest rating. Mountainside on a private Pacific beach, five restaurants, full-service spa, whale-watching in season.
+        </span>
+      </label>
+    </fieldset>
+
+    <!-- Riu Palace -->
+    <div class="card">
+      <span class="badge">Priced within your Flights &amp; Hotel Package</span>
+      <h3>Riu Palace Baja California</h3>
+      <div class="meta">All Inclusive · Adults Only · 5-star · Junior Suite for 2 Adults</div>
+      <div class="meta">Check-in: October 11, 2026 &nbsp;·&nbsp; Check-out: October 16, 2026</div>
+
+      <h4 style="margin-top:16px;">What's included</h4>
+      <ul class="incl">
+        <li>All meals, snacks, and beverages at hotel bars and restaurants, including international drinks with top brands</li>
+        <li>24-hour room service and turndown service</li>
+        <li>Regularly refilled minibar and liquor dispenser; in-room safe</li>
+        <li>Free sports and activities: tennis, pickleball, one scuba tryout in the pool, RiuFit program</li>
+        <li>Free gym access and drinks service at the pool</li>
+        <li>WiFi throughout the hotel</li>
+        <li>Daytime entertainment program for adults, live music, shows, and Riu entertainment</li>
+        <li>Pacha Discotheque and Riu Party nights at Riu Santa Fe (days may vary)</li>
+        <li>Access to bars, lunch, and snacks at sister properties Riu Cabo San Lucas and Riu Santa Fe</li>
+      </ul>
+
+      <h4 style="margin-top:16px;">Resort credits (up to $750 per room, per stay)</h4>
+      <ul class="incl">
+        <li>Renova Spa: $200 in coupons</li>
+        <li>Scuba Caribe: $200 in coupons</li>
+        <li>Weddings by Riu: $100 in coupons</li>
+        <li>Photoventura: $60 in coupons</li>
+        <li>Alamo Rent-a-Car: $60 in coupons</li>
+        <li>Romantic Dinner: $30 in coupons</li>
+        <li>Diamonds International: $100 in coupons</li>
+      </ul>
+      <div class="price-note">Credits are non-transferable, non-refundable, non-combinable; some restrictions apply.</div>
+
+      <h4 style="margin-top:16px;">If you're celebrating a honeymoon</h4>
+      <div class="price-note">Proof of marriage required, issued less than 90 days prior to travel.</div>
+      <ul class="incl">
+        <li>Surprise welcome gift in room and a small bottle of sparkling wine</li>
+        <li>King bed and late checkout, subject to availability</li>
+        <li>Complimentary upgrade to next available room category, subject to availability, upon request</li>
+        <li>$35 spa credit for the "Senses" 120-minute couples service (hot stone massage and flash facial)</li>
+      </ul>
+
+      <div class="pay-split">
+        <div class="pay-box now">
+          <h4>Pay now</h4>
+          <ul><li>Room rate — included in Flights &amp; Hotel Package total (see Booking Details)</li></ul>
+        </div>
+        <div class="pay-box property">
+          <h4>Pay at property</h4>
+          <ul><li>Environmental Sanitation Tax: 83.00 MXN per room, per night — collected at hotel, subject to change</li></ul>
+        </div>
+      </div>
+
+      <div class="good-know">
+        <strong>Good to know:</strong> Student groups and Spring Breakers are not permitted; parties in rooms are not allowed; guests disturbing others may be removed at their own expense. The Taj Mahal Indian restaurant on property has not been available since November 13, 2023.
+      </div>
+    </div>
+
+    <!-- Pueblo Bonito Pacifica -->
+    <div class="card">
+      <span class="badge">Priced within your Flights &amp; Hotel Package</span>
+      <h3>Pueblo Bonito Pacifica Golf &amp; Spa Resort</h3>
+      <div class="meta">Cabo Pacifica S/N, Cabo San Lucas, BCS 23450 · Paraíso Escondido</div>
+      <div class="meta">All Inclusive · Adults Only · 4.5-star · 9.2/10 "Wonderful" (1,498 reviews)</div>
+      <div class="meta">Check-in: October 11, 2026 &nbsp;·&nbsp; Check-out: October 16, 2026</div>
+
+      <div class="carousel" data-carousel="pueblo">
+        <div class="carousel-track">
+          <img data-role="slide" alt="Pueblo Bonito Pacifica">
+        </div>
+        <button class="carousel-btn prev" aria-label="Previous photo">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18 9 12l6-6"/></svg>
+        </button>
+        <button class="carousel-btn next" aria-label="Next photo">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
+        <div class="carousel-counter" data-role="counter"></div>
+      </div>
+
+      <p>The resort sits in the mountains on a private beach along the Pacific, with ocean views where whales breach offshore in season. It's built around pools with swim-up bars and cabanas, five restaurants (including an oceanview sushi specialist), and a full-service spa with six treatment rooms. Guests rate cleanliness at 9.6/10, service at 9.4/10, and amenities at 9.2/10.</p>
+
+      <h4>What's included in the stay</h4>
+      <ul class="incl">
+        <li>Access to four restaurants and three bars/lounges — breakfast, lunch, and dinner service</li>
+        <li>Coffee shop/café, poolside bar, swim-up bar, and snack bar/deli</li>
+        <li>Coffee and tea in common areas</li>
+        <li>Free WiFi in rooms and public areas</li>
+        <li>Self-parking and valet parking on site</li>
+        <li>Daily housekeeping and turndown service</li>
+      </ul>
+
+      <h4>Restaurants on site</h4>
+      <ul class="incl">
+        <li><strong>Siempre</strong> — oceanview, breakfast/lunch/dinner, alfresco dining, reservations required</li>
+        <li><strong>Pescados</strong> — oceanview sushi specialist, lunch/dinner</li>
+        <li><strong>Aire</strong> — beachfront, lunch/dinner, alfresco dining</li>
+        <li><strong>Bocados</strong> — poolside coffee shop, breakfast/lunch/dinner</li>
+        <li><strong>Horizons</strong> — beachfront, international cuisine, dinner only</li>
+      </ul>
+
+      <h4>On-site amenities</h4>
+      <ul class="incl">
+        <li>Two outdoor pools, one hot tub, sun loungers and umbrellas</li>
+        <li>Fitness facility and beach yoga; two outdoor tennis courts with lessons; beach volleyball; golf course</li>
+        <li>Full-service spa: aromatherapy, Ayurvedic treatments, deep-tissue/hot stone/Swedish massage, facials, manicures/pedicures, reflexology, thalassotherapy, hydrotherapy, mud bath, sauna, steam room</li>
+        <li>24-hour front desk, ATM, gift shop, grocery/convenience store, hair salon, laundry, luggage storage, in-room safe</li>
+        <li>Concierge, multilingual staff, porter/bellhop, tour and ticket assistance, wedding services</li>
+      </ul>
+
+      <h4>Getting around</h4>
+      <ul class="incl">
+        <li>Airport: San José del Cabo (SJD) — about 48 minutes' drive</li>
+        <li>A car is recommended for getting to and from the property; a roundtrip airport shuttle is available for a surcharge, running 8:00 AM–8:00 PM</li>
+        <li>Nearby: Quivira Golf Club (8 min), Marina Del Rey (17 min), Cabo San Lucas Country Club (21 min), Cabo del Sol Golf (28 min), Santa Maria Beach (34 min), Chileno Beach (37 min)</li>
+        <li>Land's End and The Arch, plus Lover's Beach, are noted nearby landmarks</li>
+      </ul>
+
+      <div class="pay-split">
+        <div class="pay-box now">
+          <h4>Pay now</h4>
+          <ul><li>Room rate — included in Flights &amp; Hotel Package total (see Booking Details)</li></ul>
+        </div>
+        <div class="pay-box property">
+          <h4>Pay at property (as applicable)</h4>
+          <ul>
+            <li>Roundtrip airport shuttle — surcharge if selected</li>
+            <li>Beach cabana rental — surcharge if selected</li>
+            <li>Government-issued photo ID and a credit/debit card or cash deposit may be required at check-in for incidentals; cash is not accepted for payment</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="good-know">
+        <strong>Good to know:</strong> Check-in begins at 4:00 PM (minimum check-in age 21); check-out is before 11:00 AM. This is an adults-only property — guests under 18 are not permitted. Express and contactless check-in/check-out are available.
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: TRANSFERS -->
+  <section class="block">
+    <h2><span class="section-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M5 17a2 2 0 1 0 4 0M15 17a2 2 0 1 0 4 0M5 17V9l2-4h10l2 4v8"/></svg></span>Transfers</h2>
+    <div class="italic-sub">One less thing to arrange on arrival day — your ride is already booked.</div>
+
+    <div class="card">
+      <span class="price-tag">$94.00</span>
+      <div class="price-note">Included in your Full Payment total — see Booking Details for the full breakdown</div>
+      <h3 style="margin-top:10px;">Transportation to &amp; from Hotel</h3>
+      <div class="meta">Sunday, October 11, 2026 · For 2 Adults</div>
+      <div class="good-know"><strong>Good to know:</strong> Specific vehicle type, private-vs-shared arrangement, and wait-time details for this transfer weren't included in the research provided — we'll confirm those specifics before departure.</div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: BOOKING DETAILS -->
+  <section class="block">
+    <h2><span class="section-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h6M9 16h6M9 8h6"/><rect x="4" y="3" width="16" height="18" rx="2"/></svg></span>Booking Details</h2>
+    <div class="italic-sub">Here's exactly how the payments break down and what's optional along the way.</div>
+
+    <div class="card">
+      <h3>Payment Schedule</h3>
+      <div class="summary-row"><span>Flights &amp; Hotel Package (2 Adults)</span><span>$3,153.15</span></div>
+      <div class="summary-row"><span>&nbsp;&nbsp;Adult Base Price (each, ×2)</span><span>$1,576.58</span></div>
+      <div class="summary-row"><span>Transportation to &amp; from hotel</span><span>$94.00</span></div>
+      <div class="summary-row"><span>Balance Due</span><span>$3,247.15</span></div>
+      <div class="summary-row total"><span>Total Price (incl. taxes &amp; fees)</span><span>$3,272.63</span></div>
+      <div class="summary-row"><span>Pay in Destination (subject to exchange rate fluctuations)</span><span>$25.48</span></div>
+
+      <div class="schedule-callout">
+        <strong>Deposit due August 16, 2026:</strong> $500.00<br>
+        <strong>Full payment due August 27, 2026:</strong> $3,247.15
+      </div>
+      <div class="disclaimer">Rates and availability are subject to change until booked.</div>
+    </div>
+
+    <div class="card">
+      <h3>Travel Protection Plan (Optional)</h3>
+      <p>An optional plan is available and includes: (1) a Part A Non-Insurance Cancel For Any Reason waiver, (2) Part B insurance benefits, and (3) a fee for non-insurance assistance services.</p>
+      <ul class="incl">
+        <li>For plan fees, email: <a href="mailto:assistancefees@tripmate.com">assistancefees@tripmate.com</a></li>
+        <li>Plan details: <a href="https://www.tripmate.com/wpN430F" target="_blank" rel="noopener">www.tripmate.com/wpN430F</a></li>
+        <li>Important disclosures: <a href="https://www.tripmate.com/main/consumer-disclosures/" target="_blank" rel="noopener">www.tripmate.com/main/consumer-disclosures/</a></li>
+      </ul>
+      <div class="price-note">This plan is optional and its cost is not included in the totals above.</div>
+    </div>
+  </section>
+
+  <!-- PRICING SUMMARY -->
+  <div class="summary-panel">
+    <h3 style="margin-bottom:8px;">Your Trip Total</h3>
+    <div class="summary-row"><span>Flights, Hotel &amp; Transfer Package</span><span>$3,247.15</span></div>
+    <div class="summary-row"><span>Taxes &amp; fees</span><span>included above*</span></div>
+    <div class="summary-row total"><span>Total Price</span><span>$3,272.63</span></div>
+    <div class="price-note" style="margin-top:10px;">*Reflects the itemized package figures disclosed in your Payment Schedule. Hotel resort/tax fees paid at property (see each hotel option above) and any optional Travel Protection Plan are additional and not reflected in this total. Only one hotel option, once selected, applies to your booking.</div>
+    <div class="disclaimer">Rates and availability are subject to change until booked.</div>
+  </div>
+</div>
+
+<!-- VALUE STRIP -->
+<div class="value-strip">
+  <div class="value-grid">
+    <div class="value-col">
+      <h4>The Trip Guide</h4>
+      <p>A document built for your week: restaurants we'd return to, neighborhoods worth the walk, what to skip, the places open on a Sunday. Not pulled from a database. Researched against where you're staying and what you've told us matters.</p>
+    </div>
+    <div class="value-col">
+      <h4>The Trip App</h4>
+      <p>Itinerary, confirmation numbers, transfer windows, and ground contacts in one place, accessible offline, updated in real time. If a flight shifts or weather moves, the app moves with it.</p>
+    </div>
+    <div class="value-col">
+      <h4>Best-Rate Assurance</h4>
+      <p>Every hotel night, cruise rate, and tour in your quote is priced at publicly available rates. If you find the same component for less elsewhere, we'll match it, so you don't have to wonder whether you're overpaying for a piece of your trip.</p>
+    </div>
+  </div>
+</div>
+
+<!-- APPROVE -->
+<div class="approve-section">
+  <h2>Ready when you are</h2>
+  <div class="italic-sub">Let us know and we'll lock in your dates.</div>
+  <p style="max-width:520px;margin:0 auto;">Click below to let Christina know you'd like to move forward, or send a quick note with any changes first.</p>
+
+  <form class="approve-form" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+    <input type="hidden" name="subject" value="Trip Approval — Los Cabos Proposal">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+    <label for="message">Notes (optional)</label>
+    <textarea id="message" name="message" placeholder="e.g. Please book the Pueblo Bonito option..."></textarea>
+    <button type="submit" class="cta-btn">Approve This Trip</button>
+  </form>
+  <div class="disclaimer">Rates and availability are subject to change until booked.</div>
+</div>
+
+<footer>
+  <div class="footer-wrap">
+    <p>Individual hotels, transfers, and tours in your quote are priced at publicly available rates — and in many cases lower than what you'd find on your own. You don't have to worry about overpaying for a piece of your trip. What you're paying for is the rest: the right rooms at the right property, operators we've used for years, the trip app, and a human who answers when something doesn't go to plan.</p>
+    <div class="contact-line">
+      Christina Garcia · Point Me To Paradise Travel · +1 (281) 229-0862 · <a id="advisor-email" href="#">christina@pointmetoparadise.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Assemble advisor email at runtime
+  var addr = 'christina' + '@' + 'pointmetoparadise.com';
+  var emailEl = document.getElementById('advisor-email');
+  if(emailEl){
+    emailEl.href = 'mailto:' + addr;
+    emailEl.textContent = addr;
+  }
+
+  // Pueblo Bonito photo set
+  var puebloPhotos = [
+    "57e539b0","aeabef8d","f42f2e8d","6e5cd8cf","439e3b84","4b6ee1dc","966e28ae","265d96b6","69a7a437","394cf1a7",
+    "c6668ab8","e9ca0101","6972c053","797569b3","f854dad5","3dce1d60","8c1ee526","e90802c7","676f0d16","6e421647",
+    "07723922","40649e61","058acae4","2abaae21","0fd95dc8","243561c6","62f0c564","c8e9172c","8c1ad045","33577d2e",
+    "03e83e26","c4308bd0","3065415c","098062fe","f4ff3252","f9643fb8","c6db54c2","90e2de60","7b2199bb","717b0458",
+    "99d7a858","4dd498b0","df278860","fd21606e","846f40aa","a6ef2fc9","f3b7f8cb","fa035d06","cb33528e","82219af2",
+    "00685627","d9cdc668","6a07548e","314b7aac","011795fb","c1433e9c","5ba1d064","f7696938","1bf20917","22af8d4f",
+    "e7d199ca","80cc04b6","6641097d","55c6f014","e50758a1","aff4bb24","69e436bb","21ae4dee","a20e167d","95b69dbf",
+    "e89c9631","9424c15f","d1714927","2d61bbc6","604c4f3e","de79e72a","807230d8","17f4879a","4de0eedd","11a1e936",
+    "f764aea3","f86c29e5","c123768c","787a3811","6fff0fbb","3202d752","2990d603","fe32584d","cfc564e3","fd65b155",
+    "8332767b","25b19289","72a5fea6","66f58066","016cf3b7","5bc43361","afd780dd","846c0e27","22064e6a","59474a40"
+  ].map(function(id){
+    return "https://images.trvl-media.com/lodging/2000000/1180000/1172900/1172873/" + id + ".jpg";
+  });
+
+  function initCarousel(container, photos){
+    var idx = 0;
+    var img = container.querySelector('[data-role="slide"]');
+    var counter = container.querySelector('[data-role="counter"]');
+    var prev = container.querySelector('.carousel-btn.prev');
+    var next = container.querySelector('.carousel-btn.next');
+
+    function render(){
+      img.src = photos[idx];
+      img.alt = "Photo " + (idx+1) + " of " + photos.length;
+      if(counter){ counter.textContent = (idx+1) + " / " + photos.length; }
+    }
+    if(prev){ prev.addEventListener('click', function(){ idx = (idx - 1 + photos.length) % photos.length; render(); }); }
+    if(next){ next.addEventListener('click', function(){ idx = (idx + 1) % photos.length; render(); }); }
+    render();
+  }
+
+  var puebloContainer = document.querySelector('[data-carousel="pueblo"]');
+  if(puebloContainer){ initCarousel(puebloContainer, puebloPhotos); }
+</script>
+
+<!--
+DESIGN NOTES (advisor review — visual choices made where the brand brief did not specify an exact value):
+1. Exact hex values used (nearest allowed reading of "light, airy, white-dominant, soft aqua-green accent, whisper gold, sparing warm sand"):
+   --white:#ffffff, --paper:#fbfaf6, --sand:#f1e8d8, --sand-line:#e3d3ad, --aqua-tint:#eaf5f3,
+   --aqua:#7fc4bb, --aqua-deep:#3f8f85 (used for the CTA button and price accents), --gold:#c9ab6a (hairlines/italic only),
+   --ink:#2b3a38, --ink-soft:#5c6b68. No project-supplied hex values were provided, so these were chosen as the
+   plainest values matching the described roles.
+2. The two Section 2 hotel listings (Riu Palace Baja California and Pueblo Bonito Pacifica) were treated as a
+   single-choice OPTION GROUP with radio buttons, since both cover the same travel dates and neither carries a
+   separate price — this seemed the most honest way to present them as alternatives rather than as two booked stays.
+3. The Transfer item's $94.00 and the two-flights-plus-hotel figure were surfaced from the Payment Schedule note
+   (Booking Details) rather than left blank, since those exact figures were explicitly provided elsewhere in the
+   brief for the same components — no amount was invented.
+4. With 100 photos supplied for Pueblo Bonito Pacifica, a numeric counter ("12 / 100") was used in place of 100
+   individual dot indicators, since dots at that volume would be unusable; all 100 images were preserved in the
+   carousel array rather than trimmed.
+5. Section icons (plane, bed, van, document) are custom single-stroke SVGs drawn for this piece, since no icon set
+   was supplied.
+-->
+</body>
+</html>
