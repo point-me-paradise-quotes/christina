@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hotel Sunny Villas, Santorini — The Martins | Point Me to Paradise Travel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --aqua-pale:#C4E4E1;
+  --aqua-mist:#EAF3F2;
+  --aqua:#75AFB1;
+  --aqua-dark:#4F8A8C;
+  --sand:#ECE7DC;
+  --sand-light:#F4F1E9;
+  --gold-whisper:#D6C8A8;
+  --white:#FFFFFF;
+  --paper:#FBFDFD;
+  --ink:#2B2420;
+  --ink-soft:#6B6359;
+  --line:#E5E9E8;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'DM Sans',system-ui,sans-serif;
+  font-weight:400;
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:500;margin:0;line-height:1.2;}
+p{margin:0 0 1.05em;}
+a{color:var(--aqua-dark);}
+.wrap{max-width:960px;margin:0 auto;padding:0 26px;}
+.narrow{max-width:760px;margin:0 auto;padding:0 26px;}
+
+/* ── top bar ── */
+.pmtp-topbar{background:var(--white);border-bottom:1px solid var(--line);padding:16px 26px;text-align:center;}
+.pmtp-wordmark{font-family:'Playfair Display',serif;font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--aqua-dark);}
+.pmtp-topbar .sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--ink-soft);margin-top:2px;}
+
+/* ── hero ── */
+.pmtp-hero{
+  position:relative;
+  background-image:linear-gradient(180deg,rgba(43,36,32,0.34) 0%,rgba(43,36,32,0.20) 42%,rgba(43,36,32,0.62) 100%),url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLooY3D59aXY8W0nGZO21fjxUG6HolnqLSoMUD_7h0m_APOMLz-t1PaEY&s=10');
+  background-size:cover;
+  background-position:center;
+  padding:78px 32px 60px;
+  text-align:center;
+  color:var(--white);
+}
+.hero-eyebrow{font-size:11px;letter-spacing:0.24em;text-transform:uppercase;font-weight:600;color:var(--aqua-pale);margin-bottom:18px;}
+.pmtp-hero h1{font-size:clamp(38px,7vw,62px);color:var(--white);font-weight:600;letter-spacing:0.01em;}
+.hero-rule{width:56px;height:1px;background:var(--aqua-pale);margin:22px auto;}
+.hero-tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(19px,2.6vw,24px);color:var(--white);opacity:.95;max-width:520px;margin:0 auto;}
+.hero-meta{margin-top:28px;font-size:13.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--white);opacity:.92;}
+.hero-meta span{display:inline-block;margin:0 9px;}
+
+/* ── sticky bar ── */
+.sticky-bar{
+  position:sticky;top:0;z-index:60;
+  background:var(--white);border-bottom:1px solid var(--line);
+  box-shadow:0 1px 10px rgba(43,36,32,0.05);
+}
+.sticky-inner{max-width:960px;margin:0 auto;padding:11px 26px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.sticky-left{font-size:13px;color:var(--ink-soft);line-height:1.35;}
+.sticky-left strong{display:block;font-family:'Playfair Display',serif;font-weight:600;font-size:15px;color:var(--ink);}
+.sticky-right{text-align:right;line-height:1.2;}
+.sticky-right .amt{font-family:'Playfair Display',serif;font-size:23px;font-weight:600;color:var(--ink);}
+.sticky-right .lbl{font-size:11px;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink-soft);}
+
+/* ── sections ── */
+section{padding:58px 0;}
+.band{background:var(--aqua-mist);}
+.eyebrow{font-size:11px;letter-spacing:0.22em;text-transform:uppercase;font-weight:600;color:var(--aqua-dark);margin-bottom:12px;}
+h2{font-size:clamp(28px,4.2vw,38px);margin-bottom:8px;}
+.subhead{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:var(--ink-soft);margin-bottom:26px;}
+
+/* ── commitments ── */
+.commit{
+  background:var(--aqua-pale);
+  border-radius:10px;
+  padding:22px 26px;
+  font-size:16px;
+  line-height:1.6;
+  color:var(--ink);
+  margin:26px 0;
+}
+.commit.plain{background:var(--white);border:1px solid var(--line);}
+
+/* ── overview facts ── */
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:30px 0;}
+.fact{background:var(--white);padding:18px 20px;}
+.fact .k{font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--aqua-dark);font-weight:600;margin-bottom:5px;}
+.fact .v{font-family:'Playfair Display',serif;font-size:17px;font-weight:500;}
+.fact .v small{display:block;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--ink-soft);font-weight:400;margin-top:2px;}
+
+/* ── rate toggle ── */
+.rate-toggle{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:20px 24px;margin:0 0 30px;}
+.rate-toggle h4{font-size:19px;margin-bottom:4px;}
+.rate-toggle p{font-size:14.5px;color:var(--ink-soft);margin-bottom:14px;}
+.toggle-row{display:flex;gap:10px;flex-wrap:wrap;}
+.toggle-opt{flex:1 1 240px;position:relative;}
+.toggle-opt input{position:absolute;opacity:0;width:0;height:0;}
+.toggle-opt label{
+  display:block;border:1px solid var(--line);border-radius:8px;padding:13px 16px;cursor:pointer;
+  font-size:14.5px;line-height:1.4;transition:border-color .15s,background .15s;
+}
+.toggle-opt label b{display:block;font-size:15.5px;font-weight:600;margin-bottom:2px;}
+.toggle-opt label span{color:var(--ink-soft);font-size:13.5px;}
+.toggle-opt input:checked + label{border-color:var(--aqua);background:var(--aqua-mist);box-shadow:inset 0 0 0 1px var(--aqua);}
+
+/* ── carousel ── */
+.carousel{position:relative;aspect-ratio:3/2;background:var(--aqua-mist);border-radius:11px 11px 0 0;overflow:hidden;}
+.carousel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .35s ease;}
+.carousel img.on{opacity:1;}
+.cbtn{position:absolute;top:50%;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;border:none;background:rgba(255,255,255,.9);color:var(--ink);font-family:'DM Sans',sans-serif;font-size:20px;line-height:1;padding:0 0 3px;cursor:pointer;box-shadow:0 1px 7px rgba(43,36,32,.2);}
+.cbtn:hover{background:var(--white);}
+.cbtn.prev{left:12px;}
+.cbtn.next{right:12px;}
+.counter{position:absolute;right:12px;bottom:12px;background:rgba(255,255,255,.9);border-radius:20px;padding:3px 11px;font-size:11.5px;letter-spacing:.07em;color:var(--ink);}
+.dots{position:absolute;left:0;right:0;bottom:14px;display:flex;justify-content:center;gap:6px;pointer-events:none;}
+.dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.6);border:none;padding:0;cursor:pointer;pointer-events:auto;transition:width .2s,background .2s;}
+.dot.on{background:var(--white);width:17px;border-radius:3px;}
+
+/* ── room cards ── */
+.rooms{display:grid;gap:16px;}
+.room{position:relative;background:var(--white);border:1px solid var(--line);border-radius:12px;transition:border-color .15s,box-shadow .15s;}
+.room input{position:absolute;opacity:0;width:0;height:0;}
+.room label{display:block;padding:24px 26px;cursor:pointer;}
+.room input:checked ~ label{background:var(--aqua-mist);}
+.room:has(input:checked){border-color:var(--aqua);box-shadow:0 0 0 1px var(--aqua);}
+.room-head{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap;}
+.room-name{font-family:'Playfair Display',serif;font-size:22px;font-weight:600;line-height:1.25;}
+.room-specs{font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-soft);margin-top:6px;}
+.room-price{text-align:right;white-space:nowrap;}
+.room-price .amt{font-family:'Playfair Display',serif;font-size:25px;font-weight:600;}
+.room-price .per{font-size:12.5px;color:var(--ink-soft);}
+.room-desc{margin-top:14px;font-size:16px;color:var(--ink);}
+.room-desc p{margin-bottom:0;}
+.room-foot{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13.5px;color:var(--ink-soft);}
+.room-cancel{font-weight:500;}
+.pick{display:inline-block;background:var(--aqua-dark);color:var(--white);font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;font-weight:600;padding:4px 10px;border-radius:20px;margin-bottom:9px;}
+.select-hint{font-size:12.5px;letter-spacing:0.12em;text-transform:uppercase;color:var(--aqua-dark);font-weight:600;}
+
+/* ── summary panel ── */
+.summary{background:var(--white);border:1px solid var(--aqua);border-radius:12px;padding:28px 30px;margin-top:34px;}
+.summary .line{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px;}
+.summary .line:last-of-type{border-bottom:none;}
+.summary .total{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-top:16px;padding-top:16px;border-top:2px solid var(--aqua-pale);}
+.summary .total .lbl{font-family:'Playfair Display',serif;font-size:20px;font-weight:600;}
+.summary .total .amt{font-family:'Playfair Display',serif;font-size:34px;font-weight:600;}
+.summary .foot{font-size:13.5px;color:var(--ink-soft);margin-top:10px;}
+
+/* ── lists ── */
+.two-col{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px;}
+.card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:26px 28px;}
+.card h3{font-size:21px;margin-bottom:12px;}
+ul.clean{list-style:none;padding:0;margin:0;}
+ul.clean li{position:relative;padding-left:20px;margin-bottom:10px;font-size:15.5px;line-height:1.55;}
+ul.clean li:before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%;background:var(--aqua);}
+ul.clean li:last-child{margin-bottom:0;}
+.note{background:var(--sand-light);border-left:3px solid var(--gold-whisper);border-radius:0 8px 8px 0;padding:18px 22px;font-size:15px;margin:22px 0;}
+.note b{font-weight:600;}
+
+/* ── form ── */
+.form-wrap{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:32px 30px;}
+.field{margin-bottom:18px;}
+.field label{display:block;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;font-weight:600;color:var(--ink-soft);margin-bottom:7px;}
+.field input,.field select,.field textarea{
+  width:100%;font-family:'DM Sans',sans-serif;font-size:16px;color:var(--ink);
+  background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:12px 14px;
+}
+.field textarea{min-height:110px;resize:vertical;}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--aqua);box-shadow:0 0 0 3px var(--aqua-mist);}
+.btn{
+  display:inline-block;width:100%;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;
+  letter-spacing:0.04em;background:var(--aqua-dark);color:var(--white);border:none;border-radius:8px;
+  padding:15px 22px;cursor:pointer;transition:background .15s;
+}
+.btn:hover{background:var(--aqua);}
+.btn:disabled{opacity:.65;cursor:default;}
+#thank-you{display:none;background:var(--aqua-mist);border:1px solid var(--aqua);border-radius:12px;padding:34px 30px;text-align:center;}
+#thank-you h3{font-size:26px;margin-bottom:8px;}
+
+/* ── footer ── */
+footer{background:var(--sand-light);border-top:1px solid var(--line);padding:46px 0 40px;text-align:center;}
+.advisor-name{font-family:'Playfair Display',serif;font-size:24px;font-weight:600;}
+.advisor-title{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--ink-soft);margin-bottom:14px;}
+.advisor-contact{font-size:15.5px;line-height:1.9;}
+.advisor-contact a{text-decoration:none;}
+.foot-rule{width:44px;height:1px;background:var(--gold-whisper);margin:22px auto;}
+.foot-tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:var(--ink-soft);}
+.disclaimer{font-size:12.5px;color:var(--ink-soft);line-height:1.7;max-width:700px;margin:24px auto 0;}
+
+@media (max-width:640px){
+  body{font-size:16px;}
+  section{padding:44px 0;}
+  .room label{padding:20px 20px;}
+  .room-price{text-align:left;}
+  .sticky-right .amt{font-size:20px;}
+  .pmtp-hero{padding:60px 22px 48px;}
+}
+</style>
+</head>
+<body>
+
+<div class="pmtp-topbar">
+  <div class="pmtp-wordmark">Point Me to Paradise Travel</div>
+  <div class="sub">Curated Journeys · Expert Advisors</div>
+</div>
+
+<header class="pmtp-hero">
+  <div class="hero-eyebrow">Prepared for the Martins</div>
+  <h1>Santorini</h1>
+  <div class="hero-rule"></div>
+  <div class="hero-tag">Four nights on the caldera rim at Imerovigli — the quiet side of the cliff, with the whole volcano in front of you.</div>
+  <div class="hero-meta"><span>October 13–17, 2026</span>·<span>4 Nights</span>·<span>Hotel Sunny Villas</span></div>
+</header>
+
+<div class="sticky-bar">
+  <div class="sticky-inner">
+    <div class="sticky-left">
+      <strong id="bar-room">Standard Studio, Caldera &amp; Sea View</strong>
+      <span id="bar-rate">Partially refundable · cancel by September 29, 2026</span>
+    </div>
+    <div class="sticky-right">
+      <div class="amt" id="bar-total">Est. $1,307</div>
+      <div class="lbl">Total · 4 nights · 2 guests</div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="narrow">
+    <div class="eyebrow">Your Trip</div>
+    <h2>An anniversary on the caldera</h2>
+    <div class="subhead">Imerovigli, Santorini · Tuesday, October 13 – Saturday, October 17, 2026</div>
+
+    <p>Imerovigli sits at the highest point of the caldera rim, between Fira's noise and Oia's crowds. It is the village people move to once they've been to Santorini a few times. Hotel Sunny Villas is built into the cliff face directly above Skaros Rock — a cluster of restored, whitewashed dwellings stacked down the slope, each one turned toward the volcano and the water.</p>
+
+    <p>Mid-October is the island's best-kept trade-off: the days still run warm enough for the pool, the light goes long and gold by late afternoon, and the August crush is gone. Breakfast is cooked to order and can be brought to your terrace — you fill out a card the night before and tell them when.</p>
+
+    <div class="commit">We don't book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. The work you'd hate doing — already done.</div>
+
+    <div class="facts">
+      <div class="fact"><div class="k">Dates</div><div class="v">Oct 13 – 17, 2026<small>4 nights</small></div></div>
+      <div class="fact"><div class="k">Village</div><div class="v">Imerovigli<small>Caldera rim, Santorini</small></div></div>
+      <div class="fact"><div class="k">Guests</div><div class="v">2 travelers<small>One room</small></div></div>
+      <div class="fact"><div class="k">Included</div><div class="v">Breakfast daily<small>Cooked to order</small></div></div>
+    </div>
+
+    <h3 style="font-size:22px;margin-bottom:10px;">What's within walking distance</h3>
+    <ul class="clean">
+      <li><b>Caldera viewpoint</b> — 2 minutes on foot from the property.</li>
+      <li><b>Imerovigli village center</b> — about 3 minutes; a handful of tavernas and sunset bars, including the one next door.</li>
+      <li><b>Agios Nikolaos</b> — 10 minutes on foot along the rim path.</li>
+      <li><b>Fira</b> — roughly 15 minutes' walk south along the caldera, or a short taxi.</li>
+      <li><b>Fira-to-Oia trail</b> — the trailhead is about 9 minutes away; the full walk to Oia takes 3–4 hours and Imerovigli is the natural starting point.</li>
+      <li><b>Oia</b> — about 20 minutes by car.</li>
+      <li><b>Thira airport (JTR)</b> — 11 minutes by car.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="eyebrow">Choose Your Room</div>
+    <h2>Four categories, hand-picked for you</h2>
+    <div class="subhead">Browse the photos, then select one to update your total. Every rate below includes breakfast for two and all taxes and fees.</div>
+
+    <div class="rate-toggle">
+      <h4>First, choose how you want to hold it</h4>
+      <p>The property offers two rate structures for these dates. Same room, different cancellation terms. Neither one is fully refundable &mdash; I'll put the exact refundable portion in writing before anything is booked.</p>
+      <div class="toggle-row">
+        <div class="toggle-opt">
+          <input type="radio" name="ratetype" id="rate-flex" value="flex" checked>
+          <label for="rate-flex"><b>Partially refundable</b><span>Cancel by September 29, 2026 and a portion of what you've paid comes back &mdash; not the full amount. Costs slightly more up front.</span></label>
+        </div>
+        <div class="toggle-opt">
+          <input type="radio" name="ratetype" id="rate-nr" value="nr">
+          <label for="rate-nr"><b>Non-refundable</b><span>Lowest rate. No refund at any point after booking.</span></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="rooms">
+
+      <div class="room">
+        <input type="radio" name="room" id="room-1" value="1" data-name="Standard Studio, Caldera &amp; Sea View" data-nr="1189" data-flex="1307" checked>
+        <div class="carousel" data-carousel>
+            <img class="cimg on" src="https://images.trvl-media.com/lodging/2000000/1100000/1095700/1095677/bb9dd403.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Standard Studio, Caldera and Sea View — photo 1 of 4">
+            <img class="cimg" src="https://images.trvl-media.com/lodging/2000000/1100000/1095700/1095677/fb3502bb.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Standard Studio, Caldera and Sea View — photo 2 of 4" loading="lazy">
+            <img class="cimg" src="https://images.trvl-media.com/lodging/2000000/1100000/1095700/1095677/db4e09c2.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Standard Studio, Caldera and Sea View — photo 3 of 4" loading="lazy">
+            <img class="cimg" src="https://images.trvl-media.com/lodging/2000000/1100000/1095700/1095677/24612e2a.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Standard Studio, Caldera and Sea View — photo 4 of 4" loading="lazy">
+            <button class="cbtn prev" type="button" aria-label="Previous photo">&#8249;</button>
+            <button class="cbtn next" type="button" aria-label="Next photo">&#8250;</button>
+            <div class="dots"></div>
+            <div class="counter"><span class="cur">1</span> / 4</div>
+        </div>
+        <label for="room-1">
+          <div class="room-head">
+            <div>
+              <div class="room-name">Standard Studio, Caldera &amp; Sea View</div>
+              <div class="room-specs">237 sq ft &middot; Sleeps 2 &middot; One double bed</div>
+            </div>
+            <div class="room-price"><div class="amt" data-price="1">Est. $1,307</div><div class="per" data-per="1">about $327 per night</div></div>
+          </div>
+          <div class="room-desc"><p>The smallest room on the property and still pointed straight at the volcano. One room, one double bed, a private stretch of terrace, and the same view the suites get. If the plan is to be out on the rim all day and come back to sleep, this is the honest choice. Three left for your dates.</p></div>
+          <div class="room-foot"><span class="room-cancel" data-cancel="1">Partial refund if cancelled by September 29, 2026</span><span class="select-hint">Selected</span></div>
+        </label>
+      </div>
+
+      <div class="room">
+        <input type="radio" name="room" id="room-2" value="2" data-name="Superior Studio Sea View" data-nr="1366" data-flex="1502">
+        <div class="carousel" data-carousel>
+            <img class="cimg on" src="https://images.trvl-media.com/lodging/2000000/1100000/1095700/1095677/0bbd8d32.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Superior Studio Sea View — photo 1 of 11">
+            <img class="cimg" src="https://images.trvl-media.com/lodging/2000000/1100000/1095700/1095677/e894a630.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Superior Studio Sea View — photo 2 of 11" loading="lazy">
+            <img class="cimg" src="https://images.trvl-media.com/lodging/2000000/1100000/1095700/1095677/414c7dbc.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Superior Studio Sea View — photo 3 of 11" loading="lazy">
+            <img class="cimg" src="https://images.trvl-media.com/lodging/2000000/1100000/1095700/1095677/24ab4f24.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Superior Studio Sea View — photo 4 of 11" loading="lazy">
+            <img class="cimg" src="https://images.trvl-media.com/lodging/2000000/1100000/1095700/1095677/d6e378e0.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Superior Studio Sea View — photo 5 of 11" loading="lazy">
+            <img class="cimg" src="https://images.trvl-media.com/lodging/2000000/1100000/1095700/1095677/5c97cc3a.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Superior Studio Sea View — photo 6 of 11" loading="lazy">
+            <img class="cimg" src="https://images.trvl-media.com/lodging/2000000/1100000/1095700/1095677/21a36e33.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Superior Studio Sea View — photo 7 of 11" loading="lazy">
+            <img class="cimg" src="https://images.trvl-media.com/lodging/2000000/1100000/1095700/1095677/942e2207.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Superior Studio Sea View — photo 8 of 11" loading="lazy">
+            <img class="cimg" src="https://images.trvl-media.com/lodging/2000000/1100000/1095700/1095677/3df96ca0.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Superior Studio Sea View — photo 9 of 11" loading="lazy">
+            <img class="cimg" src="https://images.trvl-media.com/lodging/2000000/1100000/1095700/1095677/a59c9569.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Superior Studio Sea View — photo 10 of 11" loading="lazy">
+            <img class="cimg" src="https://images.trvl-media.com/lodging/2000000/1100000/1095700/1095677/064da801.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Superior Studio Sea View — photo 11 of 11" loading="lazy">
+            <button class="cbtn prev" type="button" aria-label="Previous photo">&#8249;</button>
+            <button class="cbtn next" type="button" aria-label="Next photo">&#8250;</button>
+            <div class="dots"></div>
+            <div class="counter"><span class="cur">1</span> / 11</div>
+        </div>
+        <label for="room-2">
+          <div class="room-head">
+            <div>
+              <div class="room-name">Superior Studio Sea View</div>
+              <div class="room-specs">377 sq ft &middot; Sleeps 3 &middot; Queen bed + twin sofa bed</div>
+            </div>
+            <div class="room-price"><div class="amt" data-price="2">Est. $1,502</div><div class="per" data-per="2">about $376 per night</div></div>
+          </div>
+          <div class="room-desc"><p>Half again the size of the standard, with a proper sitting area, a kitchenette, and a terrace wide enough for two loungers and a table. Room to have coffee across from each other rather than side by side on a ledge. The step up most couples are glad they took &mdash; three left for your dates.</p></div>
+          <div class="room-foot"><span class="room-cancel" data-cancel="2">Partial refund if cancelled by September 29, 2026</span><span class="select-hint">Select</span></div>
+        </label>
+      </div>
+
+      <div class="room">
+        <input type="radio" name="room" id="room-3" value="3" data-name="Suite, 1 Bedroom, Caldera &amp; Sea View" data-nr="2153" data-flex="2367">
+        <div class="carousel" data-carousel>
+            <img class="cimg on" src="https://images.trvl-media.com/lodging/2000000/1100000/1095700/1095677/4547a9a3.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Suite, 1 Bedroom, Caldera and Sea View — photo 1 of 3">
+            <img class="cimg" src="https://images.trvl-media.com/lodging/2000000/1100000/1095700/1095677/6aa36e18.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Suite, 1 Bedroom, Caldera and Sea View — photo 2 of 3" loading="lazy">
+            <img class="cimg" src="https://images.trvl-media.com/lodging/2000000/1100000/1095700/1095677/be98d052.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Suite, 1 Bedroom, Caldera and Sea View — photo 3 of 3" loading="lazy">
+            <button class="cbtn prev" type="button" aria-label="Previous photo">&#8249;</button>
+            <button class="cbtn next" type="button" aria-label="Next photo">&#8250;</button>
+            <div class="dots"></div>
+            <div class="counter"><span class="cur">1</span> / 3</div>
+        </div>
+        <label for="room-3">
+          <div class="room-head">
+            <div>
+              <div class="room-name">Suite, 1 Bedroom, Caldera &amp; Sea View</div>
+              <div class="room-specs">592 sq ft &middot; Sleeps up to 5 &middot; Queen bed, separate living room</div>
+            </div>
+            <div class="room-price"><div class="amt" data-price="3">Est. $2,367</div><div class="per" data-per="3">about $592 per night</div></div>
+          </div>
+          <div class="room-desc"><p>A bedroom with a door, a separate living room, two bathrooms, and the widest private patio on this tier &mdash; arched ceilings, a sofa facing the window, and the caldera filling the frame. For two people it reads as a small apartment on the rim. One left for your dates.</p></div>
+          <div class="room-foot"><span class="room-cancel" data-cancel="3">Partial refund if cancelled by September 29, 2026</span><span class="select-hint">Select</span></div>
+        </label>
+      </div>
+
+      <div class="room">
+        <input type="radio" name="room" id="room-4" value="4" data-name="Honeymoon Studio Suite, 1 Bedroom, Hot Tub, Caldera &amp; Sea View" data-nr="2370" data-flex="2606">
+        <div class="carousel" data-carousel>
+            <img class="cimg on" src="https://images.trvl-media.com/lodging/2000000/1100000/1095700/1095677/3d8eba2c.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Honeymoon Studio Suite with hot tub, Caldera and Sea View — photo 1 of 9">
+            <img class="cimg" src="https://images.trvl-media.com/lodging/2000000/1100000/1095700/1095677/2a0c2c73.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Honeymoon Studio Suite with hot tub, Caldera and Sea View — photo 2 of 9" loading="lazy">
+            <img class="cimg" src="https://images.trvl-media.com/lodging/2000000/1100000/1095700/1095677/a1a55cc3.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Honeymoon Studio Suite with hot tub, Caldera and Sea View — photo 3 of 9" loading="lazy">
+            <img class="cimg" src="https://images.trvl-media.com/lodging/2000000/1100000/1095700/1095677/63647b55.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Honeymoon Studio Suite with hot tub, Caldera and Sea View — photo 4 of 9" loading="lazy">
+            <img class="cimg" src="https://images.trvl-media.com/lodging/2000000/1100000/1095700/1095677/38586d6d.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Honeymoon Studio Suite with hot tub, Caldera and Sea View — photo 5 of 9" loading="lazy">
+            <img class="cimg" src="https://images.trvl-media.com/lodging/2000000/1100000/1095700/1095677/b796d3a1.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Honeymoon Studio Suite with hot tub, Caldera and Sea View — photo 6 of 9" loading="lazy">
+            <img class="cimg" src="https://images.trvl-media.com/lodging/2000000/1100000/1095700/1095677/be9b19e2.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Honeymoon Studio Suite with hot tub, Caldera and Sea View — photo 7 of 9" loading="lazy">
+            <img class="cimg" src="https://images.trvl-media.com/lodging/2000000/1100000/1095700/1095677/ef08eaf8.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Honeymoon Studio Suite with hot tub, Caldera and Sea View — photo 8 of 9" loading="lazy">
+            <img class="cimg" src="https://images.trvl-media.com/lodging/2000000/1100000/1095700/1095677/ef8bc66f.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Honeymoon Studio Suite with hot tub, Caldera and Sea View — photo 9 of 9" loading="lazy">
+            <button class="cbtn prev" type="button" aria-label="Previous photo">&#8249;</button>
+            <button class="cbtn next" type="button" aria-label="Next photo">&#8250;</button>
+            <div class="dots"></div>
+            <div class="counter"><span class="cur">1</span> / 9</div>
+        </div>
+        <label for="room-4">
+          <div class="room-head">
+            <div>
+              <div class="pick">Advisor's pick for this trip</div>
+              <div class="room-name">Honeymoon Studio Suite, 1 Bedroom, Hot Tub, Caldera &amp; Sea View</div>
+              <div class="room-specs">538 sq ft &middot; Sleeps 2 &middot; Queen bed</div>
+            </div>
+            <div class="room-price"><div class="amt" data-price="4">Est. $2,606</div><div class="per" data-per="4">about $652 per night</div></div>
+          </div>
+          <div class="room-desc"><p>A private hot tub set into the room with the caldera in the window &mdash; you can be in the water at 7:00 p.m. watching the sun drop behind Thirassia without leaving the suite. There is a second tub on the terrace and a separate soaking tub in the bath. Built for two, sized for two, and the reason to book this property rather than the one next door. One left for your dates.</p></div>
+          <div class="room-foot"><span class="room-cancel" data-cancel="4">Partial refund if cancelled by September 29, 2026</span><span class="select-hint">Select</span></div>
+        </label>
+      </div>
+
+    </div>
+
+    <div class="summary">
+      <div class="line"><span>Room</span><strong id="sum-room">Standard Studio, Caldera &amp; Sea View</strong></div>
+      <div class="line"><span>Dates</span><strong>October 13 – 17, 2026 · 4 nights</strong></div>
+      <div class="line"><span>Occupancy</span><strong>2 guests</strong></div>
+      <div class="line"><span>Breakfast</span><strong>Included daily</strong></div>
+      <div class="line"><span>Rate type</span><strong id="sum-rate">Partially refundable — partial refund if cancelled by September 29, 2026</strong></div>
+      <div class="total"><span class="lbl">Estimated total</span><span class="amt" id="sum-total">Est. $1,307</span></div>
+      <div class="foot" id="sum-foot">Total for the stay, taxes and fees included. Works out to about $327 per night.</div>
+    </div>
+
+    <div class="commit" style="margin-top:26px;">We check every component against public rates and meet or beat them. You're not paying a premium for our convenience — you're paying for the rest of what we do.</div>
+
+    <div class="commit plain">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Before You Decide</div>
+    <h2>The things worth knowing</h2>
+    <div class="subhead">Told straight, so nothing surprises you at check-in.</div>
+
+    <div class="note">
+      <b>This property is built on a cliff, and there are a lot of stairs.</b> There is no elevator anywhere on the grounds, and the paths between the road, the reception, and the rooms are steep stone steps. Staff carry luggage down for you, and guests consistently say it's worth it — but if either of you has a knee, hip, or balance issue, tell me now and I'll steer us to a rim property with level access instead.
+    </div>
+
+    <div class="two-col">
+      <div class="card">
+        <h3>Arrival &amp; departure</h3>
+        <ul class="clean">
+          <li>Check-in 2:00 p.m. to 10:30 p.m.; check-out by 11:30 a.m.</li>
+          <li>The front desk is staffed 8:00 a.m. to 10:30 p.m. only. The property needs your flight details in advance — I handle that with them once you're confirmed.</li>
+          <li>Airport transfer runs €40 per vehicle each way, up to three people, available around the clock. I can book it, or arrange a private car.</li>
+          <li>Thira airport is an 11-minute drive; Athinios ferry port about 10 minutes.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>What's included in your rate</h3>
+        <ul class="clean">
+          <li>Cooked-to-order breakfast daily for two — order the night before, eat on your terrace if you'd rather.</li>
+          <li>All taxes and fees shown in the totals above.</li>
+          <li>Pool and poolside bar, open April through October — running for your dates.</li>
+          <li>Shared hot tub, open for October.</li>
+          <li>Luggage service down the stairs to your room.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Paid at the property</h3>
+        <ul class="clean">
+          <li>Greek accommodation tax: €2.00 per room, per night — €8 for the four nights, collected at check-in.</li>
+          <li>Airport transfers, if you take them.</li>
+          <li>In-room massage — reservations must be made before arrival, and I'll put the request in for you.</li>
+          <li>Cash payments at the property are capped at €500 by Greek law; bring a card.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Two more notes</h3>
+        <ul class="clean">
+          <li>Rates quoted are for two guests. Additional travelers in the larger suites may carry an extra-person charge — I'll confirm before anything is booked.</li>
+          <li>Several of the property's room types are already sold out for October 13–17, and both suites above are down to a single room. The studios have three each. With seventeen units on the whole property, inventory moves fast — a decision this month protects the choice.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="narrow">
+    <div class="eyebrow">Next</div>
+    <h2>Tell me which one</h2>
+    <div class="subhead">Reply below and I'll confirm live availability and hold it.</div>
+
+    <div class="commit">What's coming after this quote: a destination guide built for your trip — PDF or interactive in-app, with Google Maps links to every place we send you — a trip app where everything lives, and us when something goes sideways at midnight. You travel; we handle the rest.</div>
+
+    <div id="form-container" class="form-wrap">
+      <div id="form-error" style="display:none; background:#fff1f1; border:1px solid #f5c6c6; border-radius:6px; padding:14px 18px; font-size:0.875rem; color:#b91c1c; margin-bottom:16px;">
+        We weren't able to send your message. Please contact Christina directly at the address below.
+      </div>
+
+      <form id="pmtp-form">
+        <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+        <input type="hidden" name="subject" value="Quote Response — The Martins | Santorini">
+        <input type="hidden" name="from_name" value="The Martins Quote — Point Me to Paradise">
+        <input type="hidden" name="redirect" value="false">
+        <input type="hidden" name="rate_type" id="hidden-rate" value="Partially refundable — partial refund if cancelled by September 29, 2026">
+        <input type="hidden" name="estimated_total" id="hidden-total" value="Est. $1,307">
+
+        <div class="field">
+          <label for="f-name">Name</label>
+          <input type="text" id="f-name" name="name" required>
+        </div>
+
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input type="email" id="f-email" name="email" required>
+        </div>
+
+        <div class="field">
+          <label for="f-phone">Phone <span style="text-transform:none;letter-spacing:0;font-weight:400;">(optional)</span></label>
+          <input type="tel" id="f-phone" name="phone">
+        </div>
+
+        <div class="field">
+          <label for="f-option">Which room are you interested in?</label>
+          <select id="f-option" name="option_interest">
+            <option value="Standard Studio, Caldera &amp; Sea View">Standard Studio, Caldera &amp; Sea View</option>
+            <option value="Superior Studio Sea View">Superior Studio Sea View</option>
+            <option value="Suite, 1 Bedroom, Caldera &amp; Sea View">Suite, 1 Bedroom, Caldera &amp; Sea View</option>
+            <option value="Honeymoon Studio Suite, 1 Bedroom, Hot Tub, Caldera &amp; Sea View">Honeymoon Studio Suite, 1 Bedroom, Hot Tub, Caldera &amp; Sea View</option>
+            <option value="Still deciding — let's talk it through">Still deciding — let's talk it through</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="f-insurance">Travel insurance</label>
+          <select id="f-insurance" name="travel_insurance">
+            <option value="Yes — I'd like a quote">Yes — I'd like a quote</option>
+            <option value="No — not interested">No — not interested</option>
+            <option value="Already have coverage">Already have coverage</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="f-message">Message or questions <span style="text-transform:none;letter-spacing:0;font-weight:400;">(optional)</span></label>
+          <textarea id="f-message" name="message" placeholder="Flights, transfers, a dinner reservation for the anniversary — anything you want handled."></textarea>
+        </div>
+
+        <button type="submit" class="btn" id="submit-btn">Send to Christina</button>
+      </form>
+    </div>
+
+    <div id="thank-you">
+      <h3>Got it — thank you.</h3>
+      <p style="margin-bottom:0;">Your note is on its way to me. I'll confirm live availability with the property and come back to you within one business day. If it's urgent, call or text me at +1 281 229 0862.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="narrow">
+    <div class="pmtp-wordmark" style="margin-bottom:14px;">Point Me to Paradise Travel</div>
+    <div class="advisor-name">Christina Garcia</div>
+    <div class="advisor-title">Travel Advisor</div>
+    <div class="advisor-contact">
+      <a id="advisor-email" href="#">&nbsp;</a><br>
+      <a href="tel:+12812290862">+1 281 229 0862</a>
+    </div>
+    <div class="foot-rule"></div>
+    <div class="foot-tag">The world is your oyster, we are your pearl.</div>
+    <p class="disclaimer">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor. Rates shown are totals for the dates and occupancy listed, in U.S. dollars, and include breakfast for two plus applicable taxes and fees; the Greek accommodation tax is collected by the property at check-in. Cancellation terms vary by rate selected and are confirmed in writing at the time of booking. Neither rate offered for these dates is fully refundable: the non-refundable rate carries no refund at any point, and the partially refundable rate returns only a portion of the amount paid when cancelled on or before September 29, 2026. Room descriptions, square footage, and bedding configurations are provided by the property and may vary by individual unit.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var NIGHTS = 4;
+  var CANCEL_DATE = 'September 29, 2026';
+
+  function money(n){ return '$' + n.toLocaleString('en-US'); }
+
+  function currentRateType(){
+    return document.querySelector('input[name="ratetype"]:checked').value;
+  }
+
+  function priceFor(input, type){
+    return parseInt(type === 'nr' ? input.getAttribute('data-nr') : input.getAttribute('data-flex'), 10);
+  }
+
+  function refresh(){
+    var type = currentRateType();
+    var rateLabelShort = (type === 'nr') ? 'Non-refundable rate' : 'Partially refundable · cancel by ' + CANCEL_DATE;
+    var rateLabelLong  = (type === 'nr') ? 'Non-refundable — no refund after booking' : 'Partially refundable — partial refund if cancelled by ' + CANCEL_DATE;
+
+    // update every card's displayed price + cancellation line
+    var inputs = document.querySelectorAll('input[name="room"]');
+    for (var i = 0; i < inputs.length; i++){
+      var inp = inputs[i];
+      var v = inp.value;
+      var total = priceFor(inp, type);
+      var priceEl = document.querySelector('[data-price="' + v + '"]');
+      var perEl = document.querySelector('[data-per="' + v + '"]');
+      var cancelEl = document.querySelector('[data-cancel="' + v + '"]');
+      if (priceEl) priceEl.textContent = 'Est. ' + money(total);
+      if (perEl) perEl.textContent = 'about ' + money(Math.round(total / NIGHTS)) + ' per night';
+      if (cancelEl) cancelEl.textContent = (type === 'nr') ? 'Non-refundable — no cancellation' : 'Partial refund if cancelled by ' + CANCEL_DATE;
+      var hint = inp.parentNode.querySelector('.select-hint');
+      if (hint) hint.textContent = inp.checked ? 'Selected' : 'Select';
+    }
+
+    // selected room drives both pricing bars
+    var sel = document.querySelector('input[name="room"]:checked');
+    var name = sel.getAttribute('data-name').replace(/&amp;/g, '&');
+    var selTotal = priceFor(sel, type);
+
+    document.getElementById('bar-room').textContent = name;
+    document.getElementById('bar-rate').textContent = rateLabelShort;
+    document.getElementById('bar-total').textContent = 'Est. ' + money(selTotal);
+
+    document.getElementById('sum-room').textContent = name;
+    document.getElementById('sum-rate').textContent = rateLabelLong;
+    document.getElementById('sum-total').textContent = 'Est. ' + money(selTotal);
+    document.getElementById('sum-foot').textContent =
+      'Total for the stay, taxes and fees included. Works out to about ' + money(Math.round(selTotal / NIGHTS)) + ' per night.';
+
+    document.getElementById('hidden-rate').value = rateLabelLong;
+    document.getElementById('hidden-total').value = 'Est. ' + money(selTotal);
+
+    // keep the form's room selector in sync
+    var optSel = document.getElementById('f-option');
+    for (var j = 0; j < optSel.options.length; j++){
+      if (optSel.options[j].value === name){ optSel.selectedIndex = j; break; }
+    }
+  }
+
+  var watched = document.querySelectorAll('input[name="room"], input[name="ratetype"]');
+  for (var k = 0; k < watched.length; k++){
+    watched[k].addEventListener('change', refresh);
+  }
+  refresh();
+
+  // photo carousels
+  var carousels = document.querySelectorAll('[data-carousel]');
+  for (var c = 0; c < carousels.length; c++){
+    (function(box){
+      var imgs = box.querySelectorAll('.cimg');
+      var dotsWrap = box.querySelector('.dots');
+      var cur = box.querySelector('.cur');
+      var i = 0;
+      var dots = [];
+
+      function go(n){
+        imgs[i].classList.remove('on');
+        dots[i].classList.remove('on');
+        i = (n + imgs.length) % imgs.length;
+        imgs[i].classList.add('on');
+        dots[i].classList.add('on');
+        cur.textContent = i + 1;
+      }
+
+      for (var d = 0; d < imgs.length; d++){
+        (function(n){
+          var dot = document.createElement('button');
+          dot.type = 'button';
+          dot.className = 'dot' + (n === 0 ? ' on' : '');
+          dot.setAttribute('aria-label', 'Photo ' + (n + 1));
+          dot.addEventListener('click', function(ev){ ev.preventDefault(); ev.stopPropagation(); go(n); });
+          dotsWrap.appendChild(dot);
+          dots.push(dot);
+        })(d);
+      }
+
+      box.querySelector('.prev').addEventListener('click', function(ev){ ev.preventDefault(); ev.stopPropagation(); go(i - 1); });
+      box.querySelector('.next').addEventListener('click', function(ev){ ev.preventDefault(); ev.stopPropagation(); go(i + 1); });
+
+      var x0 = null;
+      box.addEventListener('touchstart', function(ev){ x0 = ev.changedTouches[0].clientX; }, {passive:true});
+      box.addEventListener('touchend', function(ev){
+        if (x0 === null) return;
+        var dx = ev.changedTouches[0].clientX - x0;
+        if (Math.abs(dx) > 40) go(dx < 0 ? i + 1 : i - 1);
+        x0 = null;
+      }, {passive:true});
+    })(carousels[c]);
+  }
+
+  // advisor email, assembled at runtime
+  var a = document.getElementById('advisor-email');
+  var addr = 'christina' + '\u0040' + 'pointmetoparadise.com';
+  a.textContent = addr;
+  a.setAttribute('href', 'mailto:' + addr);
+})();
+
+document.getElementById('pmtp-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var btn = document.getElementById('submit-btn');
+  var err = document.getElementById('form-error');
+  btn.disabled = true; btn.textContent = 'Sending…'; err.style.display = 'none';
+  fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(e.target) })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      if (data.success) {
+        document.getElementById('form-container').style.display = 'none';
+        document.getElementById('thank-you').style.display = 'block';
+      } else {
+        btn.disabled = false; btn.textContent = 'Send to Christina'; err.style.display = 'block';
+        err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    })
+    .catch(function() {
+      btn.disabled = false; btn.textContent = 'Send to Christina'; err.style.display = 'block';
+      err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+});
+</script>
+
+</body>
+</html>
