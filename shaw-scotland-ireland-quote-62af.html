@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Scotland &amp; Ireland — Prepared for Taylor Shaw</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --aqua-pale:#C4E4E1; --aqua-mist:#EAF3F2; --aqua:#75AFB1; --aqua-dark:#4F8A8C;
+  --sand:#ECE7DC; --sand-light:#F4F1E9; --gold-whisper:#D6C8A8;
+  --white:#FFFFFF; --paper:#FBFDFD; --ink:#2B2420; --ink-soft:#6B6359; --line:#E5E9E8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:500;line-height:1.22}
+img{max-width:100%;display:block}
+.wrap{max-width:940px;margin:0 auto;padding:0 20px}
+.narrow{max-width:740px;margin:0 auto;padding:0 20px}
+
+.pmtp-hero{position:relative;background-size:cover;background-position:center;padding:64px 20px 52px;text-align:center;
+  background-image:linear-gradient(160deg,var(--aqua-mist) 0%,var(--aqua-pale) 45%,var(--sand-light) 100%)}
+.pmtp-hero.has-photo{background-color:var(--aqua-mist)}
+.pmtp-hero.has-photo .pmtp-wordmark,.pmtp-hero.has-photo .hero-tag,
+.pmtp-hero.has-photo h1,.pmtp-hero.has-photo .hero-sub{color:var(--white);text-shadow:0 1px 14px rgba(43,36,32,.45)}
+.pmtp-hero.has-photo .chip{background:rgba(255,255,255,.92);border-color:transparent}
+.pmtp-wordmark{font-family:'Playfair Display',serif;font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--aqua-dark)}
+.hero-tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--ink-soft);margin-top:6px}
+.pmtp-hero h1{font-size:clamp(32px,8vw,54px);margin:22px 0 12px}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(17px,4.4vw,23px);color:var(--ink-soft)}
+.hero-meta{margin-top:22px;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.chip{background:var(--white);border:1px solid var(--line);border-radius:100px;padding:6px 15px;font-size:12.5px;color:var(--ink-soft)}
+
+section{padding:48px 0}
+.band{background:var(--aqua-mist)}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--aqua-dark);margin-bottom:10px}
+h2{font-size:clamp(24px,5.6vw,33px);margin-bottom:8px}
+.lede{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(17px,4vw,19px);color:var(--ink-soft);margin-bottom:24px}
+p{margin-bottom:14px;font-size:clamp(15px,3.8vw,16px)}
+p:last-child{margin-bottom:0}
+
+.commit{background:var(--aqua-pale);border-radius:10px;padding:22px 24px;margin:26px 0;font-size:15.5px;line-height:1.7}
+.commit-lite{background:var(--white);border:1px solid var(--line);border-left:3px solid var(--aqua);border-radius:8px;padding:18px 20px;margin:20px 0;font-size:14.5px;color:var(--ink-soft)}
+
+.day{display:grid;grid-template-columns:58px 1fr;gap:16px;margin-bottom:26px}
+.daynum{font-family:'Playfair Display',serif;font-size:15px;font-weight:600;color:var(--aqua-dark);border-right:2px solid var(--aqua-pale);padding-right:14px;padding-top:2px;line-height:1.35}
+.daynum span{display:block;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;color:var(--ink-soft);margin-top:2px}
+.daybody h3{font-size:19px;margin-bottom:6px}
+.daybody p{color:var(--ink-soft);margin-bottom:0}
+@media(max-width:520px){.day{grid-template-columns:1fr;gap:4px}.daynum{border-right:none;border-left:2px solid var(--aqua-pale);padding-left:12px;padding-right:0;margin-bottom:6px}}
+
+.hotel{background:var(--white);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:20px}
+.carousel{position:relative;background:linear-gradient(150deg,var(--aqua-mist),var(--sand-light));aspect-ratio:16/9;overflow:hidden}
+.track{display:flex;height:100%;transition:transform .32s ease;touch-action:pan-y}
+.slide{min-width:100%;height:100%}
+.slide img{width:100%;height:100%;object-fit:cover}
+.ph{display:flex;align-items:center;justify-content:center;height:100%;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--aqua-dark);text-align:center;padding:20px}
+.cbtn{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.92);border:none;color:var(--ink);font-size:18px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+.cbtn.prev{left:10px}.cbtn.next{right:10px}
+.dots{position:absolute;bottom:10px;left:0;right:0;display:flex;justify-content:center;gap:6px}
+.dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.6);border:none;padding:0;cursor:pointer}
+.dot.on{background:var(--white);width:18px;border-radius:100px}
+.hbody{padding:20px 22px}
+.hhead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:3px}
+.hbody h3{font-size:20px}
+.hloc{font-size:12.5px;color:var(--ink-soft);margin-bottom:12px}
+.hrate{text-align:right;white-space:nowrap}
+.hrate .amt{font-family:'Playfair Display',serif;font-size:21px;font-weight:600}
+.hrate .per{display:block;font-size:11.5px;color:var(--ink-soft)}
+.hbody p{font-size:14.5px;color:var(--ink-soft);margin-bottom:12px}
+.facts{display:flex;flex-wrap:wrap;gap:6px}
+.fact{background:var(--aqua-mist);border-radius:100px;padding:4px 11px;font-size:11.5px;color:var(--aqua-dark);font-weight:500}
+.hotel.alt{margin-left:0;border-style:dashed}
+.altflag{background:var(--sand-light);border-bottom:1px solid var(--line);padding:9px 22px;font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-soft)}
+.orline{display:flex;align-items:center;gap:12px;margin:-6px 0 14px;color:var(--ink-soft);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px}
+.orline:before,.orline:after{content:"";flex:1;height:1px;background:var(--line)}
+
+.optgroup{margin-bottom:26px}
+.optgroup>h3{font-size:19px;margin-bottom:3px}
+.optgroup>.sub{font-size:13.5px;color:var(--ink-soft);margin-bottom:12px}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.opt{background:var(--white);border:2px solid var(--line);border-radius:10px;padding:18px 20px;cursor:pointer;transition:border-color .15s,background .15s;position:relative}
+.opt.sel{border-color:var(--aqua);background:var(--aqua-mist)}
+.opt h4{font-size:16.5px;margin-bottom:4px}
+.optprice{font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--aqua-dark);margin-bottom:7px}
+.opt .why{font-size:13.5px;color:var(--ink-soft);line-height:1.6}
+.rec{display:inline-block;background:var(--aqua-dark);color:var(--white);font-size:10px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;padding:3px 9px;border-radius:100px;margin-bottom:8px}
+.opt input{position:absolute;opacity:0;pointer-events:none}
+
+.pricebar{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:24px 22px;text-align:center;margin:24px 0}
+.pricebar .lbl{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--aqua-dark);margin-bottom:7px}
+.pricebar .amt{font-family:'Playfair Display',serif;font-size:clamp(30px,8vw,44px);font-weight:600}
+.pricebar .pp{font-size:13.5px;color:var(--ink-soft);margin-top:5px}
+.pricebar .hint{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15.5px;color:var(--ink-soft)}
+.brk{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:13.5px;color:var(--ink-soft);text-align:left;max-width:340px;margin-left:auto;margin-right:auto}
+.brk div{display:flex;justify-content:space-between;padding:3px 0}
+.brk .tot{border-top:1px solid var(--line);margin-top:6px;padding-top:8px;font-weight:600;color:var(--ink)}
+
+.sticky{position:sticky;bottom:0;z-index:40;background:var(--white);border-top:1px solid var(--line);box-shadow:0 -2px 14px rgba(43,36,32,.07);padding:11px 18px;display:flex;justify-content:center;align-items:baseline;gap:12px;flex-wrap:wrap;padding-bottom:calc(11px + env(safe-area-inset-bottom))}
+.sticky .k{font-size:10.5px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--aqua-dark)}
+.sticky .v{font-family:'Playfair Display',serif;font-size:22px;font-weight:600}
+.sticky .u{font-size:12.5px;color:var(--ink-soft)}
+
+ul.plain{list-style:none;margin-top:4px}
+ul.plain li{padding-left:19px;position:relative;font-size:15px;color:var(--ink-soft);margin-bottom:7px}
+ul.plain li:before{content:"";position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%;background:var(--aqua)}
+
+.formwrap{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:26px 22px}
+label{display:block;font-size:13px;font-weight:600;margin-bottom:6px}
+input,select,textarea{width:100%;font-family:'DM Sans',sans-serif;font-size:16px;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:7px;padding:12px 14px;margin-bottom:16px}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--aqua)}
+textarea{min-height:105px;resize:vertical}
+button[type=submit]{width:100%;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:var(--white);background:var(--aqua-dark);border:none;border-radius:7px;padding:15px;cursor:pointer}
+button[type=submit]:disabled{opacity:.6}
+#thank-you{display:none;text-align:center;padding:30px 16px}
+#thank-you h3{font-size:24px;margin-bottom:8px}
+
+footer{background:var(--sand-light);padding:42px 0 36px;text-align:center;border-top:1px solid var(--line)}
+footer .nm{font-family:'Playfair Display',serif;font-size:20px;font-weight:600}
+footer .ti{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15.5px;color:var(--ink-soft);margin-bottom:10px}
+footer a{color:var(--aqua-dark);text-decoration:none;font-size:15px;display:inline-block;padding:4px 0}
+footer .co{margin-top:14px;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--aqua-dark)}
+footer .sig{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--ink-soft);margin-top:6px}
+/* ROUTE SPINE */
+.route{max-width:620px;margin:0 auto}
+.stop{display:grid;grid-template-columns:22px 1fr;gap:16px;align-items:start}
+.rail{position:relative;height:100%;min-height:26px;display:flex;justify-content:center}
+.rail:before{content:"";position:absolute;top:13px;bottom:-2px;width:2px;background:var(--aqua-pale)}
+.stop:last-child .rail:before{display:none}
+.pin{width:13px;height:13px;border-radius:50%;background:var(--aqua-dark);margin-top:7px;position:relative;z-index:2;flex:none}
+.pin.big{width:17px;height:17px;margin-top:5px;box-shadow:0 0 0 4px var(--aqua-pale)}
+.stopbody{padding-bottom:4px}
+.stopname{font-family:'Playfair Display',serif;font-size:17px;font-weight:600;display:flex;flex-wrap:wrap;align-items:baseline;gap:9px}
+.nts{font-family:'DM Sans',sans-serif;font-size:11.5px;font-weight:600;color:var(--aqua-dark);background:var(--aqua-mist);border-radius:100px;padding:2px 10px}
+.stopnote{font-size:13.5px;color:var(--ink-soft);margin-top:2px}
+.hop{display:grid;grid-template-columns:22px 1fr;gap:16px}
+.hop .rail:before{top:0;bottom:0}
+.hoptext{font-size:12.5px;color:var(--ink-soft);padding:9px 0 11px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px}
+.hop.fly .rail:before{background:repeating-linear-gradient(var(--aqua) 0 5px,transparent 5px 10px)}
+.hop.fly .hoptext{color:var(--aqua-dark);font-weight:500;font-family:'DM Sans',sans-serif;font-style:normal;font-size:12.5px;letter-spacing:.02em}
+
+/* NIGHTS STRIP */
+.nightstrip{display:flex;gap:3px;margin:22px 0 8px;border-radius:6px;overflow:hidden}
+.nb{flex:1;height:38px;background:var(--aqua-pale);position:relative;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:var(--aqua-dark)}
+.nb.b2{background:var(--aqua-mist)}
+.nb.b3{background:var(--aqua);color:var(--white)}
+.striplabel{display:flex;justify-content:space-between;font-size:11.5px;color:var(--ink-soft)}
+.statrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:11px;margin-top:24px}
+.stat{background:var(--white);border:1px solid var(--line);border-radius:9px;padding:15px 17px;text-align:center}
+.stat .n{font-family:'Playfair Display',serif;font-size:23px;font-weight:600}
+.stat .l{font-size:11.5px;color:var(--ink-soft);margin-top:2px;line-height:1.4}
+@media(max-width:560px){.nb{font-size:0}.stop,.hop{gap:12px}}
+.disc{font-size:12.5px;color:var(--ink-soft);text-align:center;padding:24px 20px;line-height:1.7}
+</style>
+</head>
+<body>
+
+<div class="pmtp-hero">
+  <div class="pmtp-wordmark">Point Me to Paradise Travel</div>
+  <div class="hero-tag">Curated Journeys · Expert Advisors</div>
+  <h1>Scotland &amp; Ireland</h1>
+  <div class="hero-sub">Edinburgh to the Highlands, Belfast to Kerry</div>
+  <div class="hero-meta">
+    <span class="chip">25 Sep – 8 Oct, 2026</span>
+    <span class="chip">13 nights</span>
+    <span class="chip">2 travelers</span>
+    <span class="chip">Self-drive</span>
+  </div>
+</div>
+
+<section>
+  <div class="narrow">
+    <div class="eyebrow">Prepared for Taylor Shaw</div>
+    <h2>The shape of the trip</h2>
+    <div class="lede">Two countries, one direction of travel — north into the Highlands, then west across the water.</div>
+    <p>You land in Edinburgh and spend two nights on foot, because nothing you want to see there needs a car. The car arrives on the third morning, and from there it's the A9 north through Perthshire, then west toward Skye, then south through Glencoe.</p>
+    <p>From Glasgow you fly to Dublin, pick up a second car, and drive north to Belfast for the Causeway Coast and the Titanic yards. Then the long run south to Kenmare, where the driving stops for three nights and the days finally open up. A last night near Shannon puts you twenty-five minutes from the flight home.</p>
+    <div class="commit">We don't book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. The work you'd hate doing — already done.</div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="eyebrow">The flow</div>
+    <h2>What the trip feels like</h2>
+    <div class="lede">One continuous line, north then west. You never double back on yourself.</div>
+    <p style="max-width:620px;margin:0 auto 26px;color:var(--ink-soft)">The first week keeps moving — one or two nights in each place, a new view out the window every morning. That's deliberate; Scotland rewards covering ground. Then the pace breaks. You land in Kerry with three nights in one room, nothing booked, and the car parked. By the time you get there you'll want exactly that.</p>
+
+    <div class="route">
+      <div class="stop"><div class="rail"><div class="pin"></div></div><div class="stopbody">
+        <div class="stopname">Edinburgh <span class="nts">2 nights</span></div>
+        <div class="stopnote">Old Town on foot. No car, no parking.</div></div></div>
+      <div class="hop"><div class="rail"></div><div class="hoptext">3h30 north on the A9 — Perthshire castles and a distillery on the way</div></div>
+
+      <div class="stop"><div class="rail"><div class="pin"></div></div><div class="stopbody">
+        <div class="stopname">Inverness <span class="nts">2 nights</span></div>
+        <div class="stopnote">Whisky and music the first night. Skye the full day after.</div></div></div>
+      <div class="hop"><div class="rail"></div><div class="hoptext">2h30 down the length of Loch Ness, with the cruise at Fort Augustus</div></div>
+
+      <div class="stop"><div class="rail"><div class="pin"></div></div><div class="stopbody">
+        <div class="stopname">Fort William <span class="nts">1 night</span></div>
+        <div class="stopnote">Ben Nevis out the window. Glenfinnan seventeen miles west.</div></div></div>
+      <div class="hop"><div class="rail"></div><div class="hoptext">3h through Glencoe and Loch Lomond, with Stirling Castle and the Kelpies</div></div>
+
+      <div class="stop"><div class="rail"><div class="pin"></div></div><div class="stopbody">
+        <div class="stopname">Glasgow <span class="nts">1 night</span></div>
+        <div class="stopnote">At the airport. A short night that buys an easy morning.</div></div></div>
+      <div class="hop fly"><div class="rail"></div><div class="hoptext">✈ Fly to Dublin, 8:35 a.m. · 1h15 · then 2h north by road</div></div>
+
+      <div class="stop"><div class="rail"><div class="pin"></div></div><div class="stopbody">
+        <div class="stopname">Belfast <span class="nts">2 nights</span></div>
+        <div class="stopnote">The Titanic yards, then the whole Causeway Coast.</div></div></div>
+      <div class="hop"><div class="rail"></div><div class="hoptext">5h30 south — the long one, and the only genuinely big drive</div></div>
+
+      <div class="stop"><div class="rail"><div class="pin"></div></div><div class="stopbody">
+        <div class="stopname">Cork <span class="nts">1 night</span></div>
+        <div class="stopnote">Arrive, eat well, sleep. Fota in the morning.</div></div></div>
+      <div class="hop"><div class="rail"></div><div class="hoptext">2h west into Kerry — and the driving effectively stops here</div></div>
+
+      <div class="stop"><div class="rail"><div class="pin big"></div></div><div class="stopbody">
+        <div class="stopname">Kenmare <span class="nts">3 nights</span></div>
+        <div class="stopnote">The estate, the spa, the Ring of Kerry. Unpack properly.</div></div></div>
+      <div class="hop"><div class="rail"></div><div class="hoptext">2h30 north through Adare</div></div>
+
+      <div class="stop"><div class="rail"><div class="pin"></div></div><div class="stopbody">
+        <div class="stopname">Ennis <span class="nts">1 night</span></div>
+        <div class="stopnote">Traditional music downstairs. Shannon 25 minutes away.</div></div></div>
+    </div>
+
+    <div style="max-width:620px;margin:32px auto 0">
+      <div class="nightstrip">
+        <div class="nb b2">EDI</div><div class="nb b2">EDI</div>
+        <div class="nb">INV</div><div class="nb">INV</div>
+        <div class="nb b2">FTW</div>
+        <div class="nb">GLA</div>
+        <div class="nb b2">BEL</div><div class="nb b2">BEL</div>
+        <div class="nb">COR</div>
+        <div class="nb b3">KEN</div><div class="nb b3">KEN</div><div class="nb b3">KEN</div>
+        <div class="nb b2">ENN</div>
+      </div>
+      <div class="striplabel"><span>25 Sep</span><span>13 nights, 8 places to sleep</span><span>8 Oct</span></div>
+
+      <div class="statrow">
+        <div class="stat"><div class="n">21h</div><div class="l">total driving between bases, across two weeks</div></div>
+        <div class="stat"><div class="n">6</div><div class="l">days with a transfer — the other eight stay open</div></div>
+        <div class="stat"><div class="n">3</div><div class="l">consecutive nights in Kenmare, the longest stay</div></div>
+        <div class="stat"><div class="n">2</div><div class="l">nights before you touch a car at all</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Day by day</div>
+    <h2>How it actually goes</h2>
+    <div class="lede">Fourteen days, arranged so the long drives land on transfer days and the good days stay open.</div>
+
+    <div class="day"><div class="daynum">Day 1<span>Fri 25 Sep</span></div><div class="daybody">
+      <h3>Land in Edinburgh</h3>
+      <p>You come in off the overnight and the day is deliberately empty. The hotel sits four minutes from Princes Street on the airport tram line, so there's no car, no parking, no queue — you drop the bags and walk. Eat somewhere close and go to bed early.</p></div></div>
+
+    <div class="day"><div class="daynum">Day 2<span>Sat 26 Sep</span></div><div class="daybody">
+      <h3>Edinburgh, on foot</h3>
+      <p>The morning is yours — Dean Village is twenty minutes away on the Water of Leith and feels nothing like a capital city, or Arthur's Seat if the legs have recovered. At one o'clock a storyteller takes you through the wynds and closes of the Old Town and walks you straight over the drawbridge into the Castle. You'll be inside until late afternoon.</p></div></div>
+
+    <div class="day"><div class="daynum">Day 3<span>Sun 27 Sep</span></div><div class="daybody">
+      <h3>North on the A9 to Inverness</h3>
+      <p>Collect the car and head for the Highlands. Blair Castle sits directly on the route at Pitlochry — the Duke of Atholl still keeps a private army there — and the distillery is eight miles further on. You reach Inverness late afternoon. That evening, two of the better-known names in Scottish traditional music pour you Glenmorangie, Dalmore, Tomatin, Glen Ord and Dalwhinnie and tell you where each one comes from.</p></div></div>
+
+    <div class="day"><div class="daynum">Day 4<span>Mon 28 Sep</span></div><div class="daybody">
+      <h3>The Isle of Skye</h3>
+      <p>West through Glen Shiel to Eilean Donan, sitting on its own island where three lochs meet, then over the bridge onto Skye. The Old Man of Storr, the Quiraing, Kilt Rock, lunch on the harbour front at Portree. This is the biggest day of the Scottish half, and how you spend it is the one real choice in the trip — see the options below.</p></div></div>
+
+    <div class="day"><div class="daynum">Day 5<span>Tue 29 Sep</span></div><div class="daybody">
+      <h3>Down Loch Ness to Fort William</h3>
+      <p>An easy morning. You drive the length of Loch Ness and stop at Fort Augustus for a fifty-minute cruise — live sonar sweeping the water beneath you, the abbey rising off the shoreline. You're in Fort William by early afternoon with the day still open: Glenfinnan and its viaduct are seventeen miles west, and Ben Nevis is ten minutes from the door.</p></div></div>
+
+    <div class="day"><div class="daynum">Day 6<span>Wed 30 Sep</span></div><div class="daybody">
+      <h3>Glencoe, Loch Lomond and Stirling</h3>
+      <p>The best driving day in Scotland. Glencoe first, where the road runs between walls of rock, then the long western shore of Loch Lomond. Stirling Castle is worth ninety minutes — seven battlefields are visible from the ramparts — and the Kelpies stand a hundred feet high at Falkirk on the way past. You finish at Glasgow Airport, because tomorrow starts early.</p></div></div>
+
+    <div class="day"><div class="daynum">Day 7<span>Thu 1 Oct</span></div><div class="daybody">
+      <h3>Fly to Dublin, drive to Belfast</h3>
+      <p>Glasgow to Dublin at 8:35, wheels down at 9:50. You collect the Irish car and drive north — two hours, and you're in Belfast by early afternoon. That leaves the Titanic yards for the same day: nine galleries on the exact slipway where she was built, plus the SS Nomadic, her original tender ship and the last White Star vessel afloat.</p></div></div>
+
+    <div class="day"><div class="daynum">Day 8<span>Fri 2 Oct</span></div><div class="daybody">
+      <h3>The Causeway Coast</h3>
+      <p>An hour north and the coast road opens up. Forty thousand basalt columns stepping down into the Atlantic, with a guided tour and audio guide included. Then Carrick-a-Rede if the nerve holds, Dunluce Castle falling off its headland, and the Dark Hedges on the way back — a beech avenue planted in the 1700s that you'll recognise the moment you see it.</p></div></div>
+
+    <div class="day"><div class="daynum">Day 9<span>Sat 3 Oct</span></div><div class="daybody">
+      <h3>South to Cork</h3>
+      <p>The long one — most of the length of the island. We've kept the day otherwise clear so you can break it where you like; the Rock of Cashel sits roughly halfway if you want a reason to stop. You arrive in Cork in the evening, ten minutes' walk from a city that takes its food seriously.</p></div></div>
+
+    <div class="day"><div class="daynum">Day 10<span>Sun 4 Oct</span></div><div class="daybody">
+      <h3>Fota, then west to Kenmare</h3>
+      <p>Fota Wildlife Park is twenty minutes east of Cork on its own island — seventy acres where most of the animals aren't behind anything. Give it the morning, then drive west into Kerry. You arrive at the estate in the afternoon and the car can stay where it is for two days.</p></div></div>
+
+    <div class="day"><div class="daynum">Day 11<span>Mon 5 Oct</span></div><div class="daybody">
+      <h3>Kenmare and Killarney</h3>
+      <p>The spa in the morning. Then out along the N71 through Moll's Gap to Ladies View, named for Queen Victoria's ladies-in-waiting who stopped there in 1861 and wouldn't move on. Killarney National Park runs to twenty-six thousand acres below it, with Muckross House at the centre.</p></div></div>
+
+    <div class="day"><div class="daynum">Day 12<span>Tue 6 Oct</span></div><div class="daybody">
+      <h3>The Ring of Kerry</h3>
+      <p>A hundred and ten miles around the Iveragh Peninsula, and Kenmare is the right place to start it. Drive it clockwise — the tour coaches all run counterclockwise, and you'd rather see them coming than meet them head-on for four hours. Sneem, Waterville and Glenbeigh are the villages worth stopping in.</p></div></div>
+
+    <div class="day"><div class="daynum">Day 13<span>Wed 7 Oct</span></div><div class="daybody">
+      <h3>North to Ennis</h3>
+      <p>Two and a half hours up through Adare, thatched roofs the length of the main street. Ennis has something close to a hundred pubs and a serious reputation for traditional music — and the best-known session bar in town is inside your hotel, so the last night in Ireland needs no planning at all.</p></div></div>
+
+    <div class="day"><div class="daynum">Day 14<span>Thu 8 Oct</span></div><div class="daybody">
+      <h3>Shannon, and home</h3>
+      <p>Twenty-five minutes to the airport. Drop the car and fly.</p></div></div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="eyebrow">Where you sleep</div>
+    <h2>The hotels</h2>
+    <div class="lede">Eight properties, thirteen nights. Rates below are the full cost of each stay, taxes included.</div>
+
+    <div class="hotel" data-photos="edinburgh">
+      <div class="carousel"></div>
+      <div class="hbody">
+        <div class="hhead"><h3>Hotel Indigo Edinburgh</h3>
+          <div class="hrate"><span class="amt">$1,412</span><span class="per">2 nights · total</span></div></div>
+        <div class="hloc">York Place, New Town · Fri 25 – Sun 27 Sep</div>
+        <p>Four-star boutique on the New Town side, four minutes from Princes Street and ten from the Royal Mile. Restaurant, bar and gym on site. It sits on the airport tram line, which is why you can get from the plane to the room without a taxi on your first morning.</p>
+        <div class="facts"><span class="fact">Premium Room</span><span class="fact">1 King</span><span class="fact">9.0 / 1,006 reviews</span><span class="fact">Free WiFi</span></div>
+      </div>
+    </div>
+
+    <div class="orline">or</div>
+
+    <div class="hotel alt" data-photos="edinburgh_grand">
+      <div class="altflag">Alternative for Edinburgh</div>
+      <div class="carousel"></div>
+      <div class="hbody">
+        <div class="hhead"><h3>The Edinburgh Grand</h3>
+          <div class="hrate"><span class="amt">$2,090</span><span class="per">2 nights · total</span></div></div>
+        <div class="hloc">42 St Andrew Square, New Town · Fri 25 – Sun 27 Sep</div>
+        <p>A five-star residence in the old National Bank of Scotland headquarters, two minutes from Princes Street. These are apartments rather than hotel rooms — a studio with a full kitchen and a separate sitting area, in a marble banking hall of a building. More space and more privacy, less of a front-desk experience.</p>
+        <div class="facts"><span class="fact">Studio · 344 sq ft</span><span class="fact">1 King</span><span class="fact">Kitchen &amp; living area</span><span class="fact">5-star</span></div>
+      </div>
+    </div>
+
+    <div class="hotel" data-photos="inverness">
+      <div class="carousel"></div>
+      <div class="hbody">
+        <div class="hhead"><h3>Glen Mhor Hotel</h3>
+          <div class="hrate"><span class="amt">$950</span><span class="per">2 nights · total</span></div></div>
+        <div class="hloc">Ness Bank, Inverness · Sun 27 – Tue 29 Sep</div>
+        <p>On the river with a short walk into town, and a working brewery and distillery on the premises — which matters more than it sounds on the night you come back from Skye. Dinner, a dram and bed without going anywhere. River-view room, full breakfast included.</p>
+        <div class="facts"><span class="fact">Classic Double, river view</span><span class="fact">1 Double</span><span class="fact">Full breakfast</span><span class="fact">Distillery on site</span></div>
+      </div>
+    </div>
+
+    <div class="orline">or</div>
+
+    <div class="hotel alt" data-photos="inverness_beaufort">
+      <div class="altflag">Alternative for Inverness</div>
+      <div class="carousel"></div>
+      <div class="hbody">
+        <div class="hhead"><h3>The Beaufort Hotel</h3>
+          <div class="hrate"><span class="amt">$696</span><span class="per">2 nights · total</span></div></div>
+        <div class="hloc">Inverness · Sun 27 – Tue 29 Sep</div>
+        <p>The straightforward option, and $254 less across the stay. Parking is included, which is worth more here than it sounds — the car sits unused for two full days while you're on Skye. A king bed can be requested rather than a double, which the Glen Mhor room can't offer.</p>
+        <div class="facts"><span class="fact">Deluxe Double or Twin</span><span class="fact">King or twin</span><span class="fact">Parking included</span><span class="fact">Free WiFi</span></div>
+      </div>
+    </div>
+
+    <div class="hotel" data-photos="fortwilliam">
+      <div class="carousel"></div>
+      <div class="hbody">
+        <div class="hhead"><h3>Nevis Bank Inn</h3>
+          <div class="hrate"><span class="amt">$369</span><span class="per">1 night · total</span></div></div>
+        <div class="hloc">Fort William, Highlands · Tue 29 – Wed 30 Sep</div>
+        <p>A short walk from the High Street with parking on site, at the Glen Nevis end of town. One night, and it only needs to do two things: hold the car overnight and get you out the door early for the Glencoe run.</p>
+        <div class="facts"><span class="fact">Double Room</span><span class="fact">Parking included</span><span class="fact">Free WiFi</span></div>
+      </div>
+    </div>
+
+    <div class="hotel" data-photos="glasgow">
+      <div class="carousel"></div>
+      <div class="hbody">
+        <div class="hhead"><h3>Holiday Inn Glasgow Airport</h3>
+          <div class="hrate"><span class="amt">$256</span><span class="per">1 night · total</span></div></div>
+        <div class="hloc">Glasgow Airport · Wed 30 Sep – Thu 1 Oct</div>
+        <p>Chosen for one reason: the Dublin flight leaves at 8:35 and this puts you five minutes from the rental return and a short walk from the terminal. It's the practical night in a trip that otherwise isn't, and it buys you a calm start on the busiest travel day.</p>
+        <div class="facts"><span class="fact">Standard Room</span><span class="fact">At the terminal</span><span class="fact">Free WiFi</span></div>
+      </div>
+    </div>
+
+    <div class="hotel" data-photos="belfast">
+      <div class="carousel"></div>
+      <div class="hbody">
+        <div class="hhead"><h3>The Fitzwilliam Hotel Belfast</h3>
+          <div class="hrate"><span class="amt">$492</span><span class="per">2 nights · total</span></div></div>
+        <div class="hloc">Great Victoria Street, city centre · Thu 1 – Sat 3 Oct</div>
+        <p>Next door to the Grand Opera House and a few minutes from the Cathedral Quarter, so dinner is on foot both nights. An Executive Room with a city view and a king bed — and at $246 a night for a property rated 9.6, the best value on the whole trip.</p>
+        <div class="facts"><span class="fact">Executive Room</span><span class="fact">1 King</span><span class="fact">City view</span><span class="fact">9.6 / 141 reviews</span></div>
+      </div>
+    </div>
+
+    <div class="hotel" data-photos="cork">
+      <div class="carousel"></div>
+      <div class="hbody">
+        <div class="hhead"><h3>The River Lee Hotel</h3>
+          <div class="hrate"><span class="amt">$329</span><span class="per">1 night · total</span></div></div>
+        <div class="hloc">Western Road, Cork · Sat 3 – Sun 4 Oct</div>
+        <p>Four-star on the river, ten minutes' walk into the city. You arrive off the longest drive of the trip, so what matters is that dinner is close and you don't have to move the car again. Cancellable up to the day before you arrive.</p>
+        <div class="facts"><span class="fact">Classic Room</span><span class="fact">Riverside</span><span class="fact">Walk to city centre</span></div>
+      </div>
+    </div>
+
+    <div class="hotel" data-photos="kenmare">
+      <div class="carousel"></div>
+      <div class="hbody">
+        <div class="hhead"><h3>Sheen Falls Lodge</h3>
+          <div class="hrate"><span class="amt">$1,511</span><span class="per">3 nights · total</span></div></div>
+        <div class="hloc">Kenmare, County Kerry · Sun 4 – Wed 7 Oct</div>
+        <p>A three-hundred-acre estate above the falls on the edge of Kenmare, and one of two hotels in the village holding a Michelin star. The Estate Room runs six hundred and fifty square feet looking over the grounds — comfortably the largest room in the trip. Spa on site, breakfast included, and three nights in one place after nine days of moving.</p>
+        <div class="facts"><span class="fact">Estate Room · 650 sq ft</span><span class="fact">1 Double</span><span class="fact">Breakfast included</span><span class="fact">Spa on site</span></div>
+      </div>
+    </div>
+
+    <div class="orline">or</div>
+
+    <div class="hotel alt" data-photos="kenmare_suite">
+      <div class="altflag">Alternative for Kenmare · same hotel, upgraded room</div>
+      <div class="carousel"></div>
+      <div class="hbody">
+        <div class="hhead"><h3>Sheen Falls Lodge — Signature Suite</h3>
+          <div class="hrate"><span class="amt">$2,617</span><span class="per">3 nights · total</span></div></div>
+        <div class="hloc">Kenmare, County Kerry · Sun 4 – Wed 7 Oct</div>
+        <p>Same estate, a suite instead of a room — and the only option in Kenmare where a king bed can be requested. Three nights here is the longest you'll be anywhere on this trip, and it's the stretch you'll remember, so this is where an upgrade does the most good. Bed configuration is always a request, never a guarantee.</p>
+        <div class="facts"><span class="fact">Signature Suite</span><span class="fact">King or double</span><span class="fact">Breakfast included</span><span class="fact">Fully refundable to 20 Sep</span></div>
+      </div>
+    </div>
+
+    <div class="hotel" data-photos="ennis">
+      <div class="carousel"></div>
+      <div class="hbody">
+        <div class="hhead"><h3>Old Ground Hotel</h3>
+          <div class="hrate"><span class="amt">$203</span><span class="per">1 night · total</span></div></div>
+        <div class="hloc">O'Connell Street, Ennis · Wed 7 – Thu 8 Oct</div>
+        <p>An eighteenth-century hotel in the middle of town, twenty-five minutes from Shannon. The Poet's Corner — one of the better-regarded traditional music bars in the west of Ireland — is part of the building, which makes the last night in Ireland easy to plan.</p>
+        <div class="facts"><span class="fact">Deluxe Room</span><span class="fact">King or twin</span><span class="fact">Trad music bar on site</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="options">
+  <div class="wrap">
+    <div class="eyebrow">Your choices</div>
+    <h2>Four decisions</h2>
+    <div class="lede">Nothing is pre-selected. Pick what suits you and the total updates as you go.</div>
+
+    <div class="optgroup">
+      <h3>Isle of Skye — how you spend the day</h3>
+      <div class="sub">Monday 28 September. The one choice that genuinely changes the day.</div>
+      <div class="opts">
+        <label class="opt" data-g="skye" data-v="1885">
+          <input type="radio" name="skye" value="1885">
+          <span class="rec">Christina recommends</span>
+          <h4>Private guided day</h4>
+          <div class="why">Collected from your hotel, back when you're ready. You stop where you want and for as long as you want — which on Skye is the whole point. The Storr and the Quiraing become walks instead of photographs taken through a window. Around ten hours rather than thirteen, and far fewer of them sitting.</div>
+        </label>
+        <label class="opt" data-g="skye" data-v="1225">
+          <input type="radio" name="skye" value="1225">
+          <h4>Small group coach</h4>
+          <div class="why">A driver-guide and up to fifteen others in a mini-coach. Twelve to thirteen hours door to door with roughly five of them seated, on a fixed schedule — you see the Trotternish landmarks from the road at the driver's pace. Same ground, considerably less money.</div>
+        </label>
+      </div>
+    </div>
+
+    <div class="optgroup">
+      <h3>Edinburgh — two nights</h3>
+      <div class="sub">Friday 25 to Sunday 27 September.</div>
+      <div class="opts">
+        <label class="opt" data-g="edi" data-v="1412">
+          <input type="radio" name="edi" value="1412">
+          <span class="rec">Christina recommends</span>
+          <h4>Hotel Indigo Edinburgh</h4>
+          <div class="optprice">$1,412 · 2 nights</div>
+          <div class="why">Four-star boutique, four minutes from Princes Street, on the airport tram line. Everything on your Edinburgh list is walkable from the door.</div>
+        </label>
+        <label class="opt" data-g="edi" data-v="2090">
+          <input type="radio" name="edi" value="2090">
+          <h4>The Edinburgh Grand</h4>
+          <div class="optprice">$2,090 · 2 nights</div>
+          <div class="why">Five-star apartment residence on St Andrew Square. A studio with a kitchen and sitting area rather than a hotel room — worth it if you'd rather settle in than check in.</div>
+        </label>
+      </div>
+    </div>
+
+    <div class="optgroup">
+      <h3>Inverness — two nights</h3>
+      <div class="sub">Sunday 27 to Tuesday 29 September.</div>
+      <div class="opts">
+        <label class="opt" data-g="inv" data-v="950">
+          <input type="radio" name="inv" value="950">
+          <span class="rec">Christina recommends</span>
+          <h4>Glen Mhor Hotel</h4>
+          <div class="optprice">$950 · 2 nights</div>
+          <div class="why">Riverside, walk into town, with its own brewery and distillery downstairs. Full breakfast included. The right place to land after the Skye day.</div>
+        </label>
+        <label class="opt" data-g="inv" data-v="696">
+          <input type="radio" name="inv" value="696">
+          <h4>The Beaufort Hotel</h4>
+          <div class="optprice">$696 · 2 nights</div>
+          <div class="why">$254 less, parking included, and a king bed can be requested instead of a double. The straightforward option.</div>
+        </label>
+      </div>
+    </div>
+
+    <div class="optgroup">
+      <h3>Kenmare — three nights</h3>
+      <div class="sub">Sunday 4 to Wednesday 7 October. The longest stay of the trip.</div>
+      <div class="opts">
+        <label class="opt" data-g="ken" data-v="1511">
+          <input type="radio" name="ken" value="1511">
+          <h4>Sheen Falls Lodge — Estate Room</h4>
+          <div class="optprice">$1,511 · 3 nights</div>
+          <div class="why">650 square feet over the estate, breakfast included. The largest room in the trip. One double bed — narrower than a US queen, worth knowing over three nights.</div>
+        </label>
+        <label class="opt" data-g="ken" data-v="2617">
+          <input type="radio" name="ken" value="2617">
+          <span class="rec">Christina recommends</span>
+          <h4>Sheen Falls Lodge — Signature Suite</h4>
+          <div class="optprice">$2,617 · 3 nights</div>
+          <div class="why">A suite, and the only option here where a king can be requested. This is the part of the trip you'll remember — the upgrade lands where it does the most good.</div>
+        </label>
+      </div>
+    </div>
+
+    <div class="pricebar">
+      <div class="lbl">Your trip, land only</div>
+      <div class="amt" id="p-top">—</div>
+      <div class="pp" id="pp-top"><span class="hint">Choose all four above to see your total</span></div>
+      <div class="brk" id="brk" style="display:none">
+        <div><span>Hotels · 13 nights</span><span id="b-hot"></span></div>
+        <div><span>Car hire, insurance &amp; flight</span><span id="b-tra"></span></div>
+        <div><span>Tours &amp; experiences</span><span id="b-tou"></span></div>
+        <div class="tot"><span>Total</span><span id="b-tot"></span></div>
+      </div>
+    </div>
+
+    <div class="commit-lite">We check every component against public rates and meet or beat them. You're not paying a premium for our convenience — you're paying for the rest of what we do.</div>
+    <div class="commit-lite">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor.</div>
+  </div>
+</section>
+
+<section style="border-top:1px solid var(--line)">
+  <div class="narrow">
+    <div class="eyebrow">Included</div>
+    <h2>What the price covers</h2>
+    <ul class="plain">
+      <li>13 nights' accommodation across eight properties, all taxes included</li>
+      <li>Automatic car hire in Scotland — unlimited mileage, damage waiver, roadside cover</li>
+      <li>Automatic car hire in Ireland — unlimited mileage, damage waiver, roadside cover</li>
+      <li>Glasgow to Dublin flight, direct, both of you</li>
+      <li>Royal Mile walking tour with Edinburgh Castle entry</li>
+      <li>An evening of music and whisky in Inverness</li>
+      <li>Isle of Skye and Eilean Donan, full day</li>
+      <li>Loch Ness cruise from Fort Augustus</li>
+      <li>Titanic Belfast, including the SS Nomadic</li>
+      <li>Giant's Causeway visitor experience with guided tour and parking</li>
+    </ul>
+
+    <h2 style="margin-top:34px">Not included</h2>
+    <ul class="plain">
+      <li>Transatlantic flights — quoted separately once your dates are locked</li>
+      <li>Fuel, motorway tolls and hotel parking</li>
+      <li>Meals beyond the breakfasts noted</li>
+      <li>Admission to attractions outside those listed above</li>
+      <li>Travel insurance — ask and I'll quote it</li>
+    </ul>
+    <p style="margin-top:16px;color:var(--ink-soft)">Two practical notes. Ireland requires collision damage waiver at the counter and most US credit-card coverage excludes the Republic — it's built into this quote so there's nothing to argue about on arrival. And the toll on the Dublin ring road is barrier-free with no booth; it has to be paid online the same day. I'll flag both again before you travel.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="narrow">
+    <div class="commit">What's coming after this quote: a destination guide built for your trip — PDF or interactive in-app, with Google Maps links to every place we send you — a trip app where everything lives, and us when something goes sideways at midnight. You travel; we handle the rest.</div>
+
+    <div class="formwrap" style="margin-top:28px">
+      <div id="form-container">
+        <h2 style="font-size:24px;margin-bottom:4px">Send this back to me</h2>
+        <p style="font-size:15px;color:var(--ink-soft);margin-bottom:20px">Tell me which way you're leaning and I'll hold what I can.</p>
+        <div id="form-error" style="display:none; background:#fff1f1; border:1px solid #f5c6c6; border-radius:6px; padding:14px 18px; font-size:0.875rem; color:#b91c1c; margin-bottom:16px;">
+          We weren't able to send your message. Please contact Christina directly at the address below.
+        </div>
+        <form id="pmtp-form">
+          <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+          <input type="hidden" name="subject" value="Quote Response — Taylor Shaw | Scotland &amp; Ireland">
+          <input type="hidden" name="from_name" value="Taylor Shaw Quote — Point Me to Paradise">
+          <input type="hidden" name="redirect" value="false">
+          <input type="hidden" name="selections" id="selections" value="">
+
+          <label for="f-name">Name</label>
+          <input type="text" id="f-name" name="name" required>
+
+          <label for="f-email">Email</label>
+          <input type="email" id="f-email" name="email" required>
+
+          <label for="f-phone">Phone <span style="font-weight:400;color:var(--ink-soft)">(optional)</span></label>
+          <input type="tel" id="f-phone" name="phone">
+
+          <label for="f-opt">Which are you leaning toward?</label>
+          <select id="f-opt" name="option_interest">
+            <option value="">Still deciding</option>
+            <option value="Skye — private guided day">Skye — private guided day</option>
+            <option value="Skye — small group coach">Skye — small group coach</option>
+            <option value="Edinburgh — Hotel Indigo Edinburgh">Edinburgh — Hotel Indigo Edinburgh</option>
+            <option value="Edinburgh — The Edinburgh Grand">Edinburgh — The Edinburgh Grand</option>
+            <option value="Inverness — Glen Mhor Hotel">Inverness — Glen Mhor Hotel</option>
+            <option value="Inverness — The Beaufort Hotel">Inverness — The Beaufort Hotel</option>
+            <option value="Kenmare — Sheen Falls Lodge, Estate Room">Kenmare — Sheen Falls Lodge, Estate Room</option>
+            <option value="Kenmare — Sheen Falls Lodge, Signature Suite">Kenmare — Sheen Falls Lodge, Signature Suite</option>
+          </select>
+
+          <label for="f-ins">Travel insurance</label>
+          <select id="f-ins" name="travel_insurance">
+            <option value="Yes — I'd like a quote">Yes — I'd like a quote</option>
+            <option value="No — not interested">No — not interested</option>
+            <option value="Already have coverage">Already have coverage</option>
+          </select>
+
+          <label for="f-msg">Questions <span style="font-weight:400;color:var(--ink-soft)">(optional)</span></label>
+          <textarea id="f-msg" name="message"></textarea>
+
+          <button type="submit" id="submit-btn">Send to Christina</button>
+        </form>
+      </div>
+      <div id="thank-you">
+        <h3>Got it.</h3>
+        <p style="color:var(--ink-soft)">I'll come back to you shortly with what I can hold and for how long.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="narrow">
+    <div class="nm">Christina Garcia</div>
+    <div class="ti">Travel Advisor</div>
+    <div><a id="adv-mail" href="#"></a></div>
+    <div><a href="tel:+12812290862">+1 281 229 0862</a></div>
+    <div class="co">Point Me to Paradise Travel</div>
+    <div class="sig">the world is your oyster, we are your pearl</div>
+  </div>
+</footer>
+
+<div class="disc">
+  Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor.<br>
+  Prepared 17 August 2026 for Taylor Shaw · 25 September – 8 October 2026 · 2 travelers
+</div>
+
+<div class="sticky">
+  <span class="k">Land total</span>
+  <span class="v" id="p-bot">—</span>
+  <span class="u" id="pp-bot">Choose all four options</span>
+</div>
+
+<script>
+/* ============================================================
+   PHOTOS — paste image URLs between the brackets, comma separated.
+   Example:  edinburgh: ['https://.../1.jpg','https://.../2.jpg'],
+   Leave a list empty and that card shows a plain panel instead.
+   ============================================================ */
+/* HERO IMAGE — paste one wide landscape URL. Empty = gradient only.
+   Wants 1600px+ wide. A Highland or Causeway landscape works best. */
+var HERO_PHOTO = 'https://cms.inspirato.com/ImageGen.ashx?image=%2Fmedia%2F9471410%2Fedinburgh-scotland_dest_1001833188.jpg&width=1920';
+
+var HOTEL_PHOTOS = {
+  edinburgh:          ['https://digital.ihg.com/is/image/ihg/hotel-indigo-edinburgh-8919054166-2x1'],
+  edinburgh_grand:    ['https://cache.marriott.com/is/image/marriotts7prod/lc-edilg-edinburgh-grand-23845:Wide-Hor?wid=1336&fit=constrain'],
+  inverness:          ['https://royaldornoch.com/wp-content/uploads/2024/01/Glen-Mhor-RD.jpg'],
+  inverness_beaufort: ['https://images.trvl-media.com/lodging/4000000/3860000/3859700/3859647/6b7d9738.jpg?impolicy=resizecrop&rw=1200&ra=fit'],
+  fortwilliam:        ['https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/12/bf/9b/nevis-bank-inn.jpg?w=900&h=500&s=1'],
+  glasgow:            ['https://ik.imgkit.net/3vlqs5axxjf/external/ik-seo/https://www.cfmedia.vfmleonardo.com/imageRepo/7/0/103/339/741/GLWRE_3884028830_O/Holiday-Inn-Glasgow-Airport-Exterior.jpg?tr=w-1200%2Ch-675%2Cfo-auto'],
+  belfast:            ['https://www.luxurylink.com/images/sho_58adffc0/11912_550-1280/image-11912_550.jpg'],
+  cork:               ['https://www.doylecollection.com/var/doyle/storage/images/media/doyle-redesign/images/hotels/river-lee/homepage2/hero-banners-1920-x-1080-pixels/grill-room/411695-37-eng-US/grill-room_hotel_homepage_banner.jpg'],
+  kenmare:            ['https://www.sheenfallslodge.ie/wp-content/uploads/2020/07/SheenFalls_Lobby-1366x768-fp_mm-fpoff_0_0.jpg'],
+  kenmare_suite:      ['https://images.trvl-media.com/lodging/1000000/120000/112300/112263/eca62d7b.jpg?impolicy=resizecrop&rw=1200&ra=fit'],
+  ennis:              ['https://odeaclan.org/wp-content/uploads/2015/01/The-Old-Ground-Hotel-1-1024x683.jpg']
+};
+var PH_LABEL = {
+  edinburgh:'Hotel Indigo Edinburgh',
+  edinburgh_grand:'The Edinburgh Grand',
+  inverness:'Glen Mhor Hotel',
+  inverness_beaufort:'The Beaufort Hotel',
+  fortwilliam:'Nevis Bank Inn',
+  glasgow:'Holiday Inn Glasgow Airport',
+  belfast:'The Fitzwilliam Hotel Belfast',
+  cork:'The River Lee Hotel',
+  kenmare:'Sheen Falls Lodge',
+  kenmare_suite:'Sheen Falls Lodge — Signature Suite',
+  ennis:'Old Ground Hotel'
+};
+
+(function(){
+  if(HERO_PHOTO){
+    var hero = document.querySelector('.pmtp-hero');
+    hero.classList.add('has-photo');
+    hero.style.backgroundImage =
+      'linear-gradient(180deg, rgba(43,36,32,.30) 0%, rgba(43,36,32,.42) 60%, rgba(43,36,32,.55) 100%), url("' + HERO_PHOTO + '")';
+  }
+
+  document.querySelectorAll('.hotel').forEach(function(card){
+    var key = card.getAttribute('data-photos');
+    var box = card.querySelector('.carousel');
+    var pics = HOTEL_PHOTOS[key] || [];
+
+    if(!pics.length){
+      box.innerHTML = '<div class="ph">' + (PH_LABEL[key] || '') + '</div>';
+      return;
+    }
+    var track = document.createElement('div');
+    track.className = 'track';
+    pics.forEach(function(src){
+      var s = document.createElement('div');
+      s.className = 'slide';
+      s.innerHTML = '<img src="' + src + '" alt="' + (PH_LABEL[key] || '') + '" loading="lazy">';
+      track.appendChild(s);
+    });
+    box.appendChild(track);
+
+    var idx = 0;
+    function go(n){
+      idx = (n + pics.length) % pics.length;
+      track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+      box.querySelectorAll('.dot').forEach(function(d,i){ d.classList.toggle('on', i === idx); });
+    }
+    if(pics.length > 1){
+      var prev = document.createElement('button');
+      prev.className = 'cbtn prev'; prev.type = 'button'; prev.innerHTML = '&#8249;';
+      prev.setAttribute('aria-label','Previous photo');
+      prev.addEventListener('click', function(e){ e.stopPropagation(); go(idx-1); });
+      var next = document.createElement('button');
+      next.className = 'cbtn next'; next.type = 'button'; next.innerHTML = '&#8250;';
+      next.setAttribute('aria-label','Next photo');
+      next.addEventListener('click', function(e){ e.stopPropagation(); go(idx+1); });
+      var dots = document.createElement('div');
+      dots.className = 'dots';
+      pics.forEach(function(_,i){
+        var d = document.createElement('button');
+        d.className = 'dot' + (i === 0 ? ' on' : ''); d.type = 'button';
+        d.setAttribute('aria-label','Photo ' + (i+1));
+        d.addEventListener('click', function(e){ e.stopPropagation(); go(i); });
+        dots.appendChild(d);
+      });
+      box.appendChild(prev); box.appendChild(next); box.appendChild(dots);
+
+      var x0 = null;
+      box.addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; }, {passive:true});
+      box.addEventListener('touchend', function(e){
+        if(x0 === null) return;
+        var dx = e.changedTouches[0].clientX - x0;
+        if(Math.abs(dx) > 40){ go(dx < 0 ? idx+1 : idx-1); }
+        x0 = null;
+      }, {passive:true});
+    }
+  });
+
+  var HOTELS_FIXED = 1649;
+  var TRANSPORT = 2076.54;
+  var GROUPS = ['skye','edi','inv','ken'];
+  var picked = {};
+  var LABEL = {
+    'skye|1885':'Skye — private guided day',
+    'skye|1225':'Skye — small group coach',
+    'edi|1412':'Edinburgh — Hotel Indigo Edinburgh',
+    'edi|2090':'Edinburgh — The Edinburgh Grand',
+    'inv|950':'Inverness — Glen Mhor Hotel',
+    'inv|696':'Inverness — The Beaufort Hotel',
+    'ken|1511':'Kenmare — Sheen Falls Lodge, Estate Room',
+    'ken|2617':'Kenmare — Sheen Falls Lodge, Signature Suite'
+  };
+  function money(n){ return '$' + Math.round(n).toLocaleString('en-US'); }
+
+  function update(){
+    var done = GROUPS.every(function(g){ return picked[g] !== undefined; });
+    var topA = document.getElementById('p-top'), topP = document.getElementById('pp-top');
+    var botA = document.getElementById('p-bot'), botP = document.getElementById('pp-bot');
+    var brk = document.getElementById('brk');
+
+    if(!done){
+      topA.textContent = '—';
+      topP.innerHTML = '<span class="hint">Choose all four above to see your total</span>';
+      botA.textContent = '—';
+      botP.textContent = 'Choose all four options';
+      brk.style.display = 'none';
+      document.getElementById('selections').value = '';
+      return;
+    }
+    var hotels = HOTELS_FIXED + picked.edi + picked.inv + picked.ken;
+    var tours = picked.skye;
+    var total = hotels + TRANSPORT + tours;
+    var chosen = GROUPS.map(function(g){ return LABEL[g + '|' + picked[g]]; });
+
+    topA.textContent = 'Est. ' + money(total);
+    topP.textContent = money(total/2) + ' per person · land only, flights quoted separately';
+    botA.textContent = 'Est. ' + money(total);
+    botP.textContent = money(total/2) + ' per person';
+    document.getElementById('b-hot').textContent = money(hotels);
+    document.getElementById('b-tra').textContent = money(TRANSPORT);
+    document.getElementById('b-tou').textContent = money(tours);
+    document.getElementById('b-tot').textContent = money(total);
+    brk.style.display = 'block';
+    document.getElementById('selections').value = chosen.join(' | ');
+  }
+
+  document.querySelectorAll('.opt').forEach(function(el){
+    el.addEventListener('click', function(){
+      var g = el.getAttribute('data-g');
+      var v = parseFloat(el.getAttribute('data-v'));
+      document.querySelectorAll('.opt[data-g="' + g + '"]').forEach(function(o){ o.classList.remove('sel'); });
+      el.classList.add('sel');
+      var r = el.querySelector('input'); if(r){ r.checked = true; }
+      picked[g] = v;
+      update();
+    });
+  });
+  update();
+
+  var u = 'christina', d = 'pointmetoparadise.com';
+  var addr = u + '\u0040' + d;
+  var a = document.getElementById('adv-mail');
+  a.textContent = addr;
+  a.setAttribute('href', 'mail' + 'to:' + addr);
+
+  document.getElementById('pmtp-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = document.getElementById('submit-btn');
+    var err = document.getElementById('form-error');
+    btn.disabled = true; btn.textContent = 'Sending…'; err.style.display = 'none';
+    fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(e.target) })
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        if (data.success) {
+          document.getElementById('form-container').style.display = 'none';
+          document.getElementById('thank-you').style.display = 'block';
+        } else {
+          btn.disabled = false; btn.textContent = 'Send to Christina'; err.style.display = 'block';
+          err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      })
+      .catch(function() {
+        btn.disabled = false; btn.textContent = 'Send to Christina'; err.style.display = 'block';
+        err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+  });
+})();
+</script>
+</body>
+</html>
