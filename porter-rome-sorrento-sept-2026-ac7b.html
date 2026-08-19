@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rome &amp; Sorrento — September 2026 | Point Me to Paradise Travel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --aqua-pale:#C4E4E1;
+  --aqua-mist:#EAF3F2;
+  --aqua:#75AFB1;
+  --aqua-dark:#4F8A8C;
+  --sand:#ECE7DC;
+  --sand-light:#F4F1E9;
+  --gold-whisper:#D6C8A8;
+  --white:#FFFFFF;
+  --paper:#FBFDFD;
+  --ink:#2B2420;
+  --ink-soft:#6B6359;
+  --line:#E5E9E8;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+  font-weight:400;
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+
+.wrap{max-width:920px;margin:0 auto;padding:0 28px;}
+.wrap-narrow{max-width:720px;margin:0 auto;padding:0 28px;}
+
+h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:500;color:var(--ink);margin:0;}
+p{margin:0 0 18px;}
+a{color:var(--aqua-dark);}
+
+/* ---------- HERO ---------- */
+.pmtp-hero{
+  position:relative;
+  background-color:var(--aqua-mist);
+  background-size:cover;
+  background-position:center;
+  background-image:
+    radial-gradient(ellipse 60% 45% at 72% 22%, rgba(214,200,168,0.34) 0%, rgba(214,200,168,0) 62%),
+    linear-gradient(168deg, rgba(234,243,242,0.93) 0%, rgba(196,228,225,0.86) 38%, rgba(244,241,233,0.90) 72%, rgba(251,253,253,0.95) 100%),
+    url('https://t4.ftcdn.net/jpg/00/37/04/55/360_F_37045590_7oWDGuxwblGlVzr9ffuxN8OgIxmqLPCJ.jpg');
+  padding:78px 32px 60px;
+  text-align:center;
+  overflow:hidden;
+}
+.pmtp-hero::after{
+  content:"";
+  position:absolute;left:0;right:0;bottom:0;height:120px;
+  background:linear-gradient(to top, var(--paper) 0%, rgba(251,253,253,0) 100%);
+  pointer-events:none;
+}
+.hero-inner{position:relative;z-index:2;max-width:760px;margin:0 auto;}
+.pmtp-wordmark{
+  font-family:'Playfair Display',serif;
+  font-size:11px;font-weight:600;letter-spacing:0.22em;
+  text-transform:uppercase;color:var(--aqua-dark);
+  margin-bottom:6px;
+}
+.pmtp-sub-wordmark{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-style:italic;font-size:15px;color:var(--ink-soft);
+  letter-spacing:0.04em;margin-bottom:34px;
+}
+.hero-eyebrow{
+  font-size:11px;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--ink-soft);font-weight:500;margin-bottom:18px;
+}
+.pmtp-hero h1{
+  font-size:clamp(2.3rem,6.2vw,3.7rem);
+  line-height:1.08;letter-spacing:-0.015em;margin-bottom:20px;
+}
+.hero-rule{
+  width:54px;height:1px;background:var(--aqua-dark);
+  margin:0 auto 22px;opacity:0.55;
+}
+.hero-tagline{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-style:italic;font-size:clamp(1.15rem,2.7vw,1.45rem);
+  color:var(--ink-soft);line-height:1.5;margin-bottom:30px;
+}
+.hero-meta{
+  display:flex;flex-wrap:wrap;justify-content:center;
+  gap:10px 14px;font-size:13px;letter-spacing:0.06em;
+  text-transform:uppercase;color:var(--ink-soft);font-weight:500;
+}
+.hero-meta span{
+  background:rgba(255,255,255,0.72);
+  border:1px solid var(--line);
+  border-radius:100px;padding:7px 16px;
+}
+
+/* ---------- SECTIONS ---------- */
+section{padding:62px 0;}
+.band{background:var(--aqua-mist);}
+.band-white{background:var(--white);}
+
+.sec-label{
+  font-size:11px;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--aqua-dark);font-weight:600;margin-bottom:14px;
+}
+.sec-title{
+  font-size:clamp(1.65rem,3.6vw,2.3rem);
+  line-height:1.2;margin-bottom:16px;letter-spacing:-0.01em;
+}
+.sec-intro{font-size:1.02rem;color:var(--ink-soft);max-width:640px;}
+
+/* ---------- COMMITMENTS ---------- */
+.commit{
+  background:var(--aqua-pale);
+  border-radius:4px;
+  padding:26px 30px;
+  margin:34px 0;
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:1.18rem;line-height:1.6;color:var(--ink);
+  border-left:3px solid var(--aqua-dark);
+}
+.commit-plain{
+  background:var(--sand-light);
+  border-left:3px solid var(--gold-whisper);
+  border-radius:4px;
+  padding:22px 26px;margin:28px 0;
+  font-size:0.94rem;color:var(--ink-soft);line-height:1.6;
+  font-family:'DM Sans',sans-serif;
+}
+
+/* ---------- JOURNEY SPINE ---------- */
+.spine{margin-top:40px;position:relative;}
+.leg{
+  display:grid;grid-template-columns:96px 1fr;
+  gap:22px;padding:22px 0;border-top:1px solid var(--line);
+}
+.leg:last-child{border-bottom:1px solid var(--line);}
+.leg-date{
+  font-family:'Playfair Display',serif;font-size:14px;font-weight:600;
+  color:var(--aqua-dark);letter-spacing:0.04em;padding-top:2px;
+}
+.leg-date small{display:block;font-family:'DM Sans',sans-serif;font-weight:400;
+  font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-soft);margin-top:3px;}
+.leg-body h4{font-size:1.12rem;margin-bottom:6px;}
+.leg-body p{font-size:0.94rem;color:var(--ink-soft);margin:0;}
+.leg-tag{
+  display:inline-block;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;
+  background:var(--aqua-mist);color:var(--aqua-dark);font-weight:600;
+  padding:3px 10px;border-radius:100px;margin-top:9px;
+}
+
+/* ---------- HOTEL CARDS ---------- */
+.hotel{
+  background:var(--white);border:1px solid var(--line);
+  border-radius:5px;padding:34px 34px 30px;margin-bottom:26px;
+}
+.hotel-city{
+  font-size:11px;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--aqua-dark);font-weight:600;margin-bottom:9px;
+}
+.hotel h3{font-size:1.55rem;line-height:1.22;margin-bottom:5px;}
+.hotel-addr{
+  font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;
+  font-size:1.05rem;color:var(--ink-soft);margin-bottom:20px;
+}
+.hotel p{font-size:0.96rem;}
+.facts{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));
+  gap:1px;background:var(--line);border:1px solid var(--line);
+  border-radius:4px;overflow:hidden;margin:22px 0 20px;
+}
+.fact{background:var(--sand-light);padding:14px 16px;}
+.fact dt{
+  font-size:10px;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--ink-soft);font-weight:500;margin-bottom:4px;
+}
+.fact dd{margin:0;font-size:0.92rem;font-weight:500;color:var(--ink);}
+.hotel-notes{list-style:none;padding:0;margin:0;}
+.hotel-notes li{
+  font-size:0.93rem;color:var(--ink-soft);
+  padding:7px 0 7px 20px;position:relative;border-top:1px solid var(--line);
+}
+.hotel-notes li:first-child{border-top:none;}
+.hotel-notes li::before{
+  content:"";position:absolute;left:2px;top:16px;
+  width:6px;height:6px;border-radius:50%;background:var(--aqua);
+}
+
+/* ---------- INCLUDED ---------- */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:34px;}
+.col-card{background:var(--white);border:1px solid var(--line);border-radius:5px;padding:28px 26px;}
+.col-card h4{font-size:1.18rem;margin-bottom:16px;}
+.col-card ul{list-style:none;padding:0;margin:0;}
+.col-card li{font-size:0.93rem;color:var(--ink-soft);padding:8px 0 8px 22px;position:relative;line-height:1.5;}
+.col-card li::before{
+  position:absolute;left:0;top:8px;font-size:0.9rem;color:var(--aqua-dark);font-weight:600;
+}
+.yes li::before{content:"\2713";}
+.no li::before{content:"\2014";color:var(--ink-soft);}
+
+/* ---------- TOURS ---------- */
+.tour-city{margin-top:44px;}
+.tour-city:first-of-type{margin-top:34px;}
+.tour-city > h3{
+  font-size:1.4rem;margin-bottom:6px;
+}
+.tour-city > .tour-city-note{
+  font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;
+  font-size:1.05rem;color:var(--ink-soft);margin-bottom:22px;
+}
+.tours{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.tour{
+  background:var(--white);border:1px solid var(--line);
+  border-radius:5px;padding:24px 24px 20px;
+}
+.tour h4{font-size:1.08rem;margin-bottom:8px;line-height:1.3;}
+.tour p{font-size:0.9rem;color:var(--ink-soft);margin-bottom:12px;}
+.tour .when{
+  font-size:11px;letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--aqua-dark);font-weight:600;
+}
+
+/* ---------- FOLDS ---------- */
+details.fold{
+  border:none;border-top:1px solid var(--line);border-radius:0;
+  background:transparent;margin-top:26px;
+}
+details.fold + details.fold{margin-top:0;}
+details.fold:last-of-type{border-bottom:1px solid var(--line);}
+details.fold > summary{
+  list-style:none;cursor:pointer;
+  padding:18px 4px;
+  display:flex;align-items:baseline;gap:14px;
+  font-family:'Playfair Display',serif;font-weight:500;
+  font-size:1.08rem;color:var(--ink);
+  transition:color 0.18s ease;
+}
+details.fold > summary::-webkit-details-marker{display:none;}
+details.fold > summary:hover{color:var(--aqua-dark);}
+details.fold > summary:focus-visible{outline:2px solid var(--aqua-dark);outline-offset:2px;}
+summary .sum-note{
+  font-family:'DM Sans',sans-serif;font-size:0.85rem;
+  font-weight:400;color:var(--ink-soft);margin-left:auto;
+  text-align:right;flex-shrink:0;
+}
+summary .chev{
+  flex-shrink:0;color:var(--aqua);font-size:0.82rem;
+  transition:transform 0.2s ease;display:inline-block;
+  transform:translateY(-1px);
+}
+details.fold[open] > summary .chev{transform:rotate(90deg) translateX(-1px);}
+details.fold[open] > summary{color:var(--aqua-dark);}
+.fold-body{padding:2px 4px 26px;}
+.fold-body > :last-child{margin-bottom:0;}
+.fold-body .spine{margin-top:0;}
+.fold-body .two-col{margin-top:0;}
+.fold-body .tours{margin-top:0;}
+
+.route{
+  display:flex;position:relative;
+  margin:34px 0 6px;padding-top:4px;
+}
+.route::before{
+  content:"";position:absolute;top:9px;left:10%;right:10%;
+  height:1px;background:var(--aqua-pale);z-index:0;
+}
+.stop{
+  flex:1;text-align:center;position:relative;
+  padding:0 8px;z-index:1;
+}
+.stop::before{
+  content:"";display:block;
+  width:11px;height:11px;border-radius:50%;
+  background:var(--paper);border:1.5px solid var(--aqua);
+  margin:0 auto 16px;
+}
+.stop.anchor::before{background:var(--aqua-dark);border-color:var(--aqua-dark);}
+.stop .d{
+  font-size:10px;letter-spacing:0.13em;text-transform:uppercase;
+  color:var(--aqua-dark);font-weight:600;display:block;margin-bottom:6px;
+}
+.stop .n{
+  font-family:'Playfair Display',Georgia,serif;font-weight:500;
+  font-size:1.02rem;line-height:1.25;color:var(--ink);display:block;
+}
+.stop .s{
+  font-size:0.8rem;color:var(--ink-soft);line-height:1.45;
+  display:block;margin-top:5px;
+}
+
+/* ---------- CAROUSEL ---------- */
+.gal{margin:0 0 24px;}
+.gal-frame{
+  position:relative;overflow:hidden;
+  border-radius:4px;background:var(--aqua-mist);
+  aspect-ratio:3/2;
+}
+.gal-track{
+  display:flex;height:100%;
+  transition:transform 0.45s cubic-bezier(0.4,0,0.2,1);
+}
+.gal-slide{min-width:100%;height:100%;}
+.gal-slide img{width:100%;height:100%;object-fit:cover;display:block;}
+.gal-btn{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:38px;height:38px;border-radius:50%;
+  background:rgba(255,255,255,0.9);border:1px solid var(--line);
+  color:var(--ink);font-size:17px;line-height:1;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;padding:0;z-index:2;
+  transition:background 0.18s ease;
+}
+.gal-btn:hover{background:var(--white);}
+.gal-btn:focus-visible{outline:2px solid var(--aqua-dark);outline-offset:2px;}
+.gal-prev{left:12px;}
+.gal-next{right:12px;}
+.gal-dots{
+  display:flex;justify-content:center;flex-wrap:wrap;
+  gap:7px;margin-top:12px;
+}
+.gal-dot{
+  width:7px;height:7px;border-radius:50%;padding:0;
+  border:none;background:var(--line);cursor:pointer;
+  transition:background 0.2s ease,transform 0.2s ease;
+}
+.gal-dot[aria-current="true"]{background:var(--aqua-dark);transform:scale(1.35);}
+.gal-dot:focus-visible{outline:2px solid var(--aqua-dark);outline-offset:3px;}
+.gal-note{
+  font-size:0.82rem;color:var(--ink-soft);
+  text-align:center;margin:10px 0 0;font-style:italic;
+  font-family:'Cormorant Garamond',Georgia,serif;
+}
+
+/* ---------- BOOK NOTICE + SKIP LINE ---------- */
+.booknotice{
+  background:var(--aqua-pale);
+  border-left:3px solid var(--aqua-dark);
+  border-radius:4px;
+  padding:26px 30px;
+  margin-top:30px;
+}
+.booknotice h4{font-size:1.2rem;margin-bottom:9px;}
+.booknotice p{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:1.14rem;line-height:1.58;color:var(--ink);margin:0;
+}
+.skipline{
+  background:var(--white);border:1px solid var(--aqua);
+  border-radius:5px;padding:28px 30px 24px;margin-bottom:26px;
+}
+.skipline h4{font-size:1.18rem;margin-bottom:9px;}
+.skipline p{font-size:0.95rem;color:var(--ink-soft);margin-bottom:14px;}
+.link-row{
+  display:flex;flex-wrap:wrap;
+  gap:12px 28px;align-items:baseline;
+}
+.skipline .book-link{display:inline-block;}
+
+/* ---------- BOOKABLE ---------- */
+.booknow{
+  background:var(--white);border:1px solid var(--line);
+  border-radius:5px;padding:32px 30px 28px;margin-top:26px;
+}
+.booknow > h4{font-size:1.28rem;margin-bottom:8px;}
+.booknow > .booknow-intro{
+  font-size:0.96rem;color:var(--ink-soft);margin-bottom:24px;max-width:600px;
+}
+.book-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.book-card{
+  background:var(--sand-light);border:1px solid var(--line);
+  border-radius:4px;padding:22px 22px 20px;
+  display:flex;flex-direction:column;
+}
+.badge{
+  display:inline-block;align-self:flex-start;
+  font-size:10px;letter-spacing:0.12em;text-transform:uppercase;font-weight:600;
+  padding:3px 10px;border-radius:100px;margin-bottom:10px;
+}
+.badge-small{background:var(--aqua-mist);color:var(--aqua-dark);}
+.badge-private{background:var(--aqua-pale);color:var(--ink);}
+.book-card h5{
+  font-family:'Playfair Display',serif;font-weight:500;
+  font-size:1.05rem;line-height:1.3;margin:0 0 8px;color:var(--ink);
+}
+.book-card p{font-size:0.89rem;color:var(--ink-soft);margin-bottom:14px;}
+.book-card .spec{
+  font-size:0.84rem;color:var(--ink-soft);list-style:none;padding:0;
+  margin:0 0 16px;border-top:1px solid var(--line);
+}
+.book-card .spec li{padding:6px 0;border-bottom:1px solid var(--line);}
+.book-link{
+  margin-top:auto;align-self:flex-start;
+  font-size:0.88rem;font-weight:600;letter-spacing:0.04em;
+  color:var(--aqua-dark);text-decoration:none;
+  border-bottom:1px solid var(--aqua);padding-bottom:2px;
+}
+.book-link:hover{color:var(--ink);border-color:var(--ink);}
+.browse-all{
+  margin:22px 0 0;padding-top:20px;border-top:1px solid var(--line);
+  font-size:0.92rem;color:var(--ink-soft);
+}
+
+/* ---------- ACTION NEEDED ---------- */
+.action{
+  background:var(--aqua-pale);
+  border:1px solid var(--aqua);
+  border-radius:5px;
+  padding:30px 32px;
+  margin-top:32px;
+}
+.action h4{font-size:1.22rem;margin-bottom:10px;}
+.action > p{font-size:0.96rem;color:var(--ink);margin-bottom:18px;}
+.need{list-style:none;padding:0;margin:0 0 18px;}
+.need li{
+  font-size:0.95rem;color:var(--ink);padding:9px 0 9px 26px;
+  position:relative;border-top:1px solid rgba(79,138,140,0.22);line-height:1.5;
+}
+.need li:first-child{border-top:none;}
+.need li::before{
+  content:"\2192";position:absolute;left:2px;top:9px;
+  color:var(--aqua-dark);font-weight:600;
+}
+.action .why{
+  font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;
+  font-size:1.08rem;color:var(--ink);margin:0;line-height:1.55;
+}
+
+/* ---------- FORM ---------- */
+.form-shell{
+  background:var(--white);border:1px solid var(--line);
+  border-radius:5px;padding:38px 34px;margin-top:34px;
+}
+.field{margin-bottom:20px;}
+label{
+  display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--ink-soft);font-weight:600;margin-bottom:7px;
+}
+input,select,textarea{
+  width:100%;font-family:'DM Sans',sans-serif;font-size:16px;
+  color:var(--ink);background:var(--paper);
+  border:1px solid var(--line);border-radius:4px;
+  padding:12px 14px;line-height:1.4;
+}
+input:focus,select:focus,textarea:focus{
+  outline:2px solid var(--aqua);outline-offset:1px;border-color:var(--aqua);
+}
+textarea{min-height:110px;resize:vertical;}
+button{
+  font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;
+  letter-spacing:0.04em;background:var(--aqua-dark);color:var(--white);
+  border:none;border-radius:4px;padding:15px 34px;cursor:pointer;
+  transition:background 0.18s ease;
+}
+button:hover:not(:disabled){background:var(--aqua);}
+button:disabled{opacity:0.6;cursor:default;}
+.privacy{font-size:0.82rem;color:var(--ink-soft);margin:16px 0 0;}
+#thank-you{display:none;text-align:center;padding:22px 0;}
+#thank-you h3{font-size:1.5rem;margin-bottom:12px;}
+#thank-you p{color:var(--ink-soft);margin:0;}
+
+/* ---------- FOOTER ---------- */
+footer{background:var(--sand-light);padding:52px 0 44px;border-top:1px solid var(--line);}
+.adv{text-align:center;}
+.adv .name{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:600;margin-bottom:3px;}
+.adv .title{
+  font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;
+  font-size:1.05rem;color:var(--ink-soft);margin-bottom:16px;
+}
+.adv .contact{font-size:0.94rem;color:var(--ink-soft);line-height:1.9;}
+.adv .contact a{color:var(--aqua-dark);text-decoration:none;}
+.adv .contact a:hover{text-decoration:underline;}
+.adv .agency{
+  margin-top:22px;padding-top:20px;border-top:1px solid var(--line);
+  font-family:'Playfair Display',serif;font-size:11px;font-weight:600;
+  letter-spacing:0.22em;text-transform:uppercase;color:var(--aqua-dark);
+}
+.adv .motto{
+  font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;
+  font-size:1rem;color:var(--ink-soft);margin-top:8px;
+}
+.disclaimer{
+  font-size:0.8rem;color:var(--ink-soft);text-align:center;
+  margin-top:26px;line-height:1.6;
+}
+
+@media (max-width:720px){
+  section{padding:48px 0;}
+  .pmtp-hero{padding:58px 24px 46px;}
+  .two-col,.tours,.book-grid{grid-template-columns:1fr;}
+  .route{flex-direction:column;padding-top:0;}
+  .route::before{
+    top:6px;bottom:6px;left:5px;right:auto;
+    width:1px;height:auto;
+  }
+  .stop{
+    text-align:left;display:grid;
+    grid-template-columns:26px 1fr;
+    align-items:start;padding:0 0 20px 0;
+  }
+  .stop:last-child{padding-bottom:0;}
+  .stop::before{margin:4px 0 0;grid-row:1 / span 3;}
+  .stop .d,.stop .n,.stop .s{grid-column:2;}
+  .leg{grid-template-columns:1fr;gap:8px;}
+  .leg-date small{display:inline;margin-left:8px;}
+  .hotel{padding:26px 22px 24px;}
+  .form-shell{padding:28px 22px;}
+  .wrap,.wrap-narrow{padding:0 22px;}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none !important;transition:none !important;}
+  html{scroll-behavior:auto;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="pmtp-hero">
+  <div class="hero-inner">
+    <div class="pmtp-wordmark">Point Me to Paradise Travel</div>
+    <div class="pmtp-sub-wordmark">Curated Journeys &middot; Expert Advisors</div>
+    <div class="hero-eyebrow">Prepared for Stephanie Porter</div>
+    <h1>Rome &amp; Sorrento</h1>
+    <div class="hero-rule"></div>
+    <div class="hero-tagline">Three mornings in the old capital, three above the Bay of Naples,<br>and a fast train through the middle of Italy to join them.</div>
+    <div class="hero-meta">
+      <span>20&ndash;28 September 2026</span>
+      <span>8 nights</span>
+      <span>2 travelers</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ OVERVIEW ============ -->
+<section class="wrap">
+  <div class="sec-label">The Trip</div>
+  <h2 class="sec-title">Two cities, one week, no wasted days</h2>
+  <p class="sec-intro">You land at Fiumicino at 7:55 on a Monday morning with a driver waiting and the whole city still ahead of you. Three days later you take a train south, and by late afternoon you're on a cliff road above the water with Vesuvius across the bay.</p>
+
+  <p style="margin-top:24px;">Rome is built for walking, and you're staying where that works &mdash; on Via Flavia, a quiet street off the Via Veneto, with Villa Borghese's gardens a few minutes north and the Trevi Fountain, the Pantheon, and the Spanish Steps all reachable on foot or one stop on the Metro. Evenings are yours: the city stays open late, the piazzas fill after dark, and dinner at nine is normal.</p>
+
+  <p>Sorrento is the opposite kind of place. It sits on a cliff above the sea, and your hotel sits on the best stretch of that cliff &mdash; Via Capo, where the road runs west out of town and the whole Bay of Naples opens up beneath you. Days here are for the water: Capri is a short ferry ride, the Amalfi road starts twenty minutes down the coast, and Pompeii is closer than most people realize.</p>
+
+  <div class="commit">We don't book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. The work you'd hate doing &mdash; already done.</div>
+</section>
+
+<!-- ============ JOURNEY ============ -->
+<section class="band">
+  <div class="wrap">
+    <div class="sec-label">Day by Day</div>
+    <h2 class="sec-title">How the week lays out</h2>
+    <p class="sec-intro">Arrival and departure days are deliberately light. The full days in the middle are open for whatever you choose to do with them.</p>
+
+    <div class="route">
+      <div class="stop"><span class="d">Sep 20&ndash;21</span><span class="n">Fly out</span><span class="s">Overnight, land 7:55 a.m.</span></div>
+      <div class="stop anchor"><span class="d">Sep 21&ndash;24</span><span class="n">Rome</span><span class="s">3 nights</span></div>
+      <div class="stop"><span class="d">Sep 24</span><span class="n">Train south</span><span class="s">Naples, then the coast</span></div>
+      <div class="stop anchor"><span class="d">Sep 24&ndash;27</span><span class="n">Sorrento</span><span class="s">3 nights</span></div>
+      <div class="stop"><span class="d">Sep 27&ndash;28</span><span class="n">Rome airport</span><span class="s">2 nights, then home</span></div>
+    </div>
+
+        <details class="fold">
+      <summary><span class="chev">&#9656;</span>The full day-by-day <span class="sum-note">Nine days, in order</span></summary>
+      <div class="fold-body">
+<div class="spine">
+      <div class="leg">
+        <div class="leg-date">Sep 20<small>Sunday</small></div>
+        <div class="leg-body">
+          <h4>Houston to Chicago, then overnight to Rome</h4>
+          <p>You depart Houston, connect through Chicago, and cross the Atlantic overnight.</p>
+        </div>
+      </div>
+
+      <div class="leg">
+        <div class="leg-date">Sep 21<small>Monday</small></div>
+        <div class="leg-body">
+          <h4>Rome &mdash; arrival, and a slow first day</h4>
+          <p>You land at Fiumicino at 7:55 a.m. A driver meets you inside the arrivals hall and drives you into the city, about forty minutes. Rooms are ready at 3:00 p.m., but the hotel will hold your bags and we'll ask them to get you in early if anything's free. Plan on a short walk, a long lunch, and an early night &mdash; the jet lag is real, and Tuesday is better if you don't fight it.</p>
+          <span class="leg-tag">Private transfer included</span>
+        </div>
+      </div>
+
+      <div class="leg">
+        <div class="leg-date">Sep 22<small>Tuesday</small></div>
+        <div class="leg-body">
+          <h4>Rome &mdash; a full day, yours to shape</h4>
+          <p>The first real day. Ancient Rome and the Vatican are on opposite sides of the city, so most people take one in the morning and save the other for Wednesday.</p>
+        </div>
+      </div>
+
+      <div class="leg">
+        <div class="leg-date">Sep 23<small>Wednesday</small></div>
+        <div class="leg-body">
+          <h4>Rome &mdash; second full day</h4>
+          <p>Whatever Tuesday didn't cover, plus the parts of Rome that aren't on any list &mdash; the market at Campo de' Fiori before noon, the Jewish Quarter for lunch, Trastevere after dark.</p>
+        </div>
+      </div>
+
+      <div class="leg">
+        <div class="leg-date">Sep 24<small>Thursday</small></div>
+        <div class="leg-body">
+          <h4>Rome to Sorrento</h4>
+          <p>A taxi to Roma Termini, then a high-speed train to Napoli Centrale &mdash; a little over an hour, city center to city center. A driver meets you on arrival and takes you down the coast to Via Capo, about an hour depending on traffic through Castellammare. You'll be on the terrace by late afternoon.</p>
+          <span class="leg-tag">Train &amp; private transfer included</span>
+        </div>
+      </div>
+
+      <div class="leg">
+        <div class="leg-date">Sep 25<small>Friday</small></div>
+        <div class="leg-body">
+          <h4>Sorrento &mdash; first full day</h4>
+          <p>The strongest day for Capri. Ferries run from Marina Piccola, roughly twenty-five minutes across. Go early; the day-trip crowds land mid-morning.</p>
+        </div>
+      </div>
+
+      <div class="leg">
+        <div class="leg-date">Sep 26<small>Saturday</small></div>
+        <div class="leg-body">
+          <h4>Sorrento &mdash; second full day</h4>
+          <p>The Amalfi Drive, Pompeii, or a day that never leaves Sorrento. Any of the three works; they just don't combine.</p>
+        </div>
+      </div>
+
+      <div class="leg">
+        <div class="leg-date">Sep 27<small>Sunday</small></div>
+        <div class="leg-body">
+          <h4>Sorrento to Naples, then north to Rome</h4>
+          <p>A driver collects you around 8:00 a.m. for the run to Naples airport and your 11:20 flight to Rome. You'll be at the Hilton Rome Airport by early afternoon &mdash; a quiet last day, close to the terminal, nothing left to solve.</p>
+          <span class="leg-tag">Private transfer included</span>
+        </div>
+      </div>
+
+      <div class="leg">
+        <div class="leg-date">Sep 28<small>Monday</small></div>
+        <div class="leg-body">
+          <h4>Rome to Houston</h4>
+          <p>Home. The hotel is on the airport grounds, so the morning is short and simple.</p>
+        </div>
+      </div>
+    </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ============ HOTELS ============ -->
+<section class="wrap">
+  <div class="sec-label">Where You're Staying</div>
+  <h2 class="sec-title">Two hotels, chosen for two different experiences</h2>
+  <p class="sec-intro">One puts you in the middle of a walking city. The other puts you on a cliff above the sea. Both have staff at the desk around the clock, which matters more than it sounds like it does.</p>
+
+  <div style="margin-top:36px;">
+
+    <article class="hotel">
+      <div class="hotel-city">Rome &middot; 21&ndash;24 September</div>
+      <h3>The Marcella Royal Hotel &mdash; Rooftop Garden</h3>
+      <div class="hotel-addr">Via Flavia 106, 00187 Rome</div>
+
+      <div class="gal" data-gal>
+        <div class="gal-frame">
+          <div class="gal-track" data-gal-track>
+            <div class="gal-slide"><img src="https://cdn.blastness.biz/media/962/top/thumbs/full/marcellaroyal_terrazza1_top.webp" alt="The rooftop garden terrace at The Marcella Royal Hotel, Rome" loading="lazy"></div>
+            <div class="gal-slide"><img src="https://cdn.blastness.biz/media/962/gallery/thumbs/full/royalmarcella_esterni16_gallery.jpg" alt="Exterior view of The Marcella Royal Hotel" loading="lazy"></div>
+            <div class="gal-slide"><img src="https://cdn.blastness.biz/media/962/gallery/thumbs/full/royalmarcella_esterni6_gallery.jpg" alt="Exterior view of The Marcella Royal Hotel" loading="lazy"></div>
+            <div class="gal-slide"><img src="https://cdn.blastness.biz/media/962/gallery/thumbs/full/royalmarcella_esterni14_gallery.jpg" alt="Exterior view of The Marcella Royal Hotel" loading="lazy"></div>
+            <div class="gal-slide"><img src="https://cdn.blastness.biz/media/962/gallery/thumbs/full/1024-colazione3.jpg" alt="Breakfast service at The Marcella Royal Hotel" loading="lazy"></div>
+            <div class="gal-slide"><img src="https://cdn.blastness.biz/media/962/gallery/thumbs/full/D-0273.jpg" alt="Interior at The Marcella Royal Hotel" loading="lazy"></div>
+            <div class="gal-slide"><img src="https://cdn.blastness.biz/media/962/gallery/thumbs/full/D-0118.jpg" alt="Interior at The Marcella Royal Hotel" loading="lazy"></div>
+            <div class="gal-slide"><img src="https://cdn.blastness.biz/media/962/gallery/thumbs/full/D-0258.jpg" alt="Interior at The Marcella Royal Hotel" loading="lazy"></div>
+            <div class="gal-slide"><img src="https://cdn.blastness.biz/media/962/gallery/thumbs/full/D-0141.jpg" alt="Interior at The Marcella Royal Hotel" loading="lazy"></div>
+            <div class="gal-slide"><img src="https://cdn.blastness.biz/media/962/gallery/thumbs/full/D-5460.jpg" alt="Interior at The Marcella Royal Hotel" loading="lazy"></div>
+          </div>
+          <button class="gal-btn gal-prev" type="button" data-gal-prev aria-label="Previous photo">&#8249;</button>
+          <button class="gal-btn gal-next" type="button" data-gal-next aria-label="Next photo">&#8250;</button>
+        </div>
+        <div class="gal-dots" data-gal-dots></div>
+        <p class="gal-note">Photographs show the hotel and its public areas. Your room is a Superior Double.</p>
+      </div>
+      <p>A four-star on a quiet residential street a few blocks off the Via Veneto, in the pocket between Piazza della Repubblica and Villa Borghese. The rooftop garden is the reason people book it &mdash; open through the evening, with the city spread out below and the dome of St. Peter's on the horizon. Downstairs it's calm and well-run, with a desk staffed at every hour.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Nights</dt><dd>3</dd></div>
+        <div class="fact"><dt>Room</dt><dd>Superior Double</dd></div>
+        <div class="fact"><dt>Front desk</dt><dd>24 hours</dd></div>
+        <div class="fact"><dt>Check-in</dt><dd>3:00 p.m.</dd></div>
+      </dl>
+            <details class="fold">
+        <summary><span class="chev">&#9656;</span>Good to know about this hotel <span class="sum-note">Getting around, breakfast, city tax</span></summary>
+        <div class="fold-body">
+<ul class="hotel-notes">
+        <li>Repubblica Metro is a short walk &mdash; Line A runs direct to the Spanish Steps and the Vatican</li>
+        <li>Trevi Fountain, the Pantheon, and Piazza Navona are all walkable; the Colosseum is one Metro change</li>
+        <li>Villa Borghese and its gardens sit just north, past the old city wall</li>
+        <li>Breakfast is not included in this rate &mdash; there are cafes on the surrounding streets, and we can add it at the hotel if you'd rather not think about it</li>
+        <li>Rome charges a city tax of &euro;6 per person per night, collected at checkout</li>
+      </ul>
+    </article>
+
+    <article class="hotel">
+      <div class="hotel-city">Sorrento &middot; 24&ndash;27 September</div>
+        </div>
+      </details>
+      <h3>Hotel Minerva</h3>
+      <div class="hotel-addr">Via Capo 30, 80067 Sorrento</div>
+
+      <div class="gal" data-gal>
+        <div class="gal-frame">
+          <div class="gal-track" data-gal-track>
+            <div class="gal-slide"><img src="https://images.trvl-media.com/lodging/2000000/1080000/1077200/1077134/b4b1c53c.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Hotel Minerva, Sorrento" loading="lazy"></div>
+            <div class="gal-slide"><img src="https://images.trvl-media.com/lodging/2000000/1080000/1077200/1077134/553558a9.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Hotel Minerva, Sorrento" loading="lazy"></div>
+            <div class="gal-slide"><img src="https://images.trvl-media.com/lodging/2000000/1080000/1077200/1077134/3d5fb17f.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Hotel Minerva, Sorrento" loading="lazy"></div>
+            <div class="gal-slide"><img src="https://images.trvl-media.com/lodging/2000000/1080000/1077200/1077134/07f8ea8c.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Hotel Minerva, Sorrento" loading="lazy"></div>
+            <div class="gal-slide"><img src="https://images.trvl-media.com/lodging/2000000/1080000/1077200/1077134/3e5efd7e.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Hotel Minerva, Sorrento" loading="lazy"></div>
+            <div class="gal-slide"><img src="https://images.trvl-media.com/lodging/2000000/1080000/1077200/1077134/1ccc2879.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Hotel Minerva, Sorrento" loading="lazy"></div>
+            <div class="gal-slide"><img src="https://images.trvl-media.com/lodging/2000000/1080000/1077200/1077134/26673659.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Hotel Minerva, Sorrento" loading="lazy"></div>
+            <div class="gal-slide"><img src="https://images.trvl-media.com/lodging/2000000/1080000/1077200/1077134/5767dd69.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Hotel Minerva, Sorrento" loading="lazy"></div>
+            <div class="gal-slide"><img src="https://images.trvl-media.com/lodging/2000000/1080000/1077200/1077134/e766c22f.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Hotel Minerva, Sorrento" loading="lazy"></div>
+            <div class="gal-slide"><img src="https://images.trvl-media.com/lodging/2000000/1080000/1077200/1077134/21a0506d.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Hotel Minerva, Sorrento" loading="lazy"></div>
+            <div class="gal-slide"><img src="https://images.trvl-media.com/lodging/2000000/1080000/1077200/1077134/4e5d7351.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Hotel Minerva, Sorrento" loading="lazy"></div>
+            <div class="gal-slide"><img src="https://images.trvl-media.com/lodging/2000000/1080000/1077200/1077134/e641d51b.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Hotel Minerva, Sorrento" loading="lazy"></div>
+            <div class="gal-slide"><img src="https://images.trvl-media.com/lodging/2000000/1080000/1077200/1077134/3ead358c.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Hotel Minerva, Sorrento" loading="lazy"></div>
+            <div class="gal-slide"><img src="https://images.trvl-media.com/lodging/2000000/1080000/1077200/1077134/47fa1049.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Hotel Minerva, Sorrento" loading="lazy"></div>
+            <div class="gal-slide"><img src="https://images.trvl-media.com/lodging/2000000/1080000/1077200/1077134/8e4ce274.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Hotel Minerva, Sorrento" loading="lazy"></div>
+            <div class="gal-slide"><img src="https://images.trvl-media.com/lodging/2000000/1080000/1077200/1077134/f96fb11e.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Hotel Minerva, Sorrento" loading="lazy"></div>
+            <div class="gal-slide"><img src="https://images.trvl-media.com/lodging/2000000/1080000/1077200/1077134/ae3e5ecd.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Hotel Minerva, Sorrento" loading="lazy"></div>
+          </div>
+          <button class="gal-btn gal-prev" type="button" data-gal-prev aria-label="Previous photo">&#8249;</button>
+          <button class="gal-btn gal-next" type="button" data-gal-next aria-label="Next photo">&#8250;</button>
+        </div>
+        <div class="gal-dots" data-gal-dots></div>
+        <p class="gal-note">Photographs show the hotel. Sea view and balcony are requested, not guaranteed.</p>
+      </div>
+      <p>Built in 1878 and still holding its original bones &mdash; stone, tile, high ceilings, and a position on the Via Capo cliff that newer hotels can't buy. The rooftop pool is set in blue mosaic with the Bay of Naples directly below and Vesuvius across the water. The restaurant serves on a stone terrace at the same elevation. Breakfast is on that terrace, which is a good enough reason to get up.</p>
+      <p>Town is a ten to fifteen minute walk downhill along Via Capo, past the old villas and the lemon groves, into Piazza Tasso. The walk back is uphill &mdash; worth knowing, and worth a taxi some evenings.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Nights</dt><dd>3</dd></div>
+        <div class="fact"><dt>Room</dt><dd>Sea view, balcony requested</dd></div>
+        <div class="fact"><dt>Front desk</dt><dd>24 hours</dd></div>
+        <div class="fact"><dt>Rooftop</dt><dd>Mosaic pool &amp; terrace</dd></div>
+      </dl>
+            <details class="fold">
+        <summary><span class="chev">&#9656;</span>Good to know about this hotel <span class="sum-note">Access, taxes, what to expect</span></summary>
+        <div class="fold-body">
+<ul class="hotel-notes">
+        <li>The terrace, pool, and restaurant sit on the top floor, reached by lift from reception</li>
+        <li>Sea view and balcony are <strong>requested, not guaranteed</strong> &mdash; rooms are assigned by the hotel at check-in. I'll press for it in writing before you travel, but I won't promise what the hotel hasn't confirmed.</li>
+        <li>Sorrento has no beach in the usual sense; swimming happens at platform clubs built into the rock, reached by lift or stairs</li>
+        <li>Ferries to Capri leave from Marina Piccola, on the far side of town from the hotel &mdash; allow time or take a car</li>
+        <li>Sorrento charges a city tax of &euro;1.50 per person per night, paid at the hotel</li>
+      </ul>
+    </article>
+
+    <article class="hotel">
+      <div class="hotel-city">Rome Airport &middot; 27&ndash;28 September</div>
+        </div>
+      </details>
+      <h3>Hilton Rome Airport</h3>
+      <div class="hotel-addr">Fiumicino &mdash; connected to the terminal</div>
+      <p>Your final two nights, gifted separately and already arranged. The hotel connects to the terminal by covered walkway, so Monday morning is a short walk rather than a scramble. If you'd like something to do on Sunday, Ostia Antica &mdash; Rome's original port city, with ruins on the scale of Pompeii and a fraction of the crowds &mdash; is about half an hour away.</p>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ INCLUDED ============ -->
+<section class="band">
+  <div class="wrap">
+    <div class="sec-label">Your Package</div>
+    <h2 class="sec-title">What's covered, and what isn't</h2>
+    <p class="sec-intro">Everything below is arranged, paid, and confirmed by me. No vouchers to redeem, no counters to find, no one to negotiate with on arrival.</p>
+
+        <details class="fold">
+      <summary><span class="chev">&#9656;</span>What's included, and what isn't <span class="sum-note">Hotels, transfers, and the gaps</span></summary>
+      <div class="fold-body">
+<div class="two-col">
+      <div class="col-card">
+        <h4>Included</h4>
+        <ul class="yes">
+          <li>Three nights in Rome at The Marcella Royal, Superior Double</li>
+          <li>Three nights in Sorrento at Hotel Minerva, sea view requested</li>
+          <li>Private transfer from Fiumicino to your Rome hotel, with a driver meeting you inside arrivals</li>
+          <li>Taxi from the hotel to Roma Termini on departure morning</li>
+          <li>High-speed rail, Roma Termini to Napoli Centrale, for two</li>
+          <li>Private transfer from Napoli Centrale to your Sorrento hotel</li>
+          <li>Private transfer from Sorrento to Naples airport on 27 September</li>
+          <li>A destination guide built for these dates, a trip app, and me on call throughout</li>
+        </ul>
+      </div>
+      <div class="col-card">
+        <h4>Not included</h4>
+        <ul class="no">
+          <li>Airfare and your Naples&ndash;Rome flight</li>
+          <li>Tours, guides, entrance tickets, and excursions</li>
+          <li>Meals, other than any breakfast noted at the hotel</li>
+          <li>City taxes, collected at each hotel at checkout</li>
+          <li>Travel insurance</li>
+          <li>Anything personal &mdash; minibar, laundry, spa</li>
+        </ul>
+      </div>
+    </div>
+      </div>
+    </details>
+
+    <div class="commit">We check every component against public rates and meet or beat them. You're not paying a premium for our convenience &mdash; you're paying for the rest of what we do.</div>
+
+    <div class="commit-plain">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor.</div>
+  </div>
+</section>
+
+<!-- ============ TOURS ============ -->
+<section class="wrap">
+  <div class="sec-label">Ideas for Your Open Days</div>
+  <h2 class="sec-title">What I'd do with the time</h2>
+  <p class="sec-intro">Four open days &mdash; two in Rome, two in Sorrento. Some of what follows is bookable right now; the rest I'll price and arrange for you. Tell me which ones interest you and I'll hold the good time slots and handle the tickets. The ones that sell out are marked.</p>
+
+  <div class="booknotice">
+    <h4>Book anything here using my links and your booking info comes straight to me</h4>
+    <p>Every booking made through these links lands with me automatically. I'll check it against the rest of your day, flag anything that clashes, and add it to the final app itinerary I'm building for your trip &mdash; so your whole week sits in one place, in order, with confirmations attached. You don't need to forward me anything.</p>
+  </div>
+
+  <div class="tour-city">
+    <h3>Rome &mdash; Tuesday and Wednesday</h3>
+    <div class="tour-city-note">Two big sites, two very different halves of the city. Most people give each one a morning.</div>
+
+    <div class="skipline">
+      <h4>Start with skip-the-line tickets</h4>
+      <p>This is the one thing worth sorting before anything else. The Colosseum and the Vatican Museums both cap daily entry, and September slots go weeks ahead &mdash; by the time you land, the good morning times are gone. Skip-the-line entry is the difference between walking in at 8:30 and standing in a queue that wraps the building. Browse what's available for your dates, or tell me what you want and I'll book it.</p>
+      <div class="link-row">
+        <a class="book-link" href="https://www.viator.com/Rome/d511-ttd?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener noreferrer">Browse Rome skip-the-line tours &amp; tickets &rarr;</a>
+        <a class="book-link" href="https://www.getyourguide.com?partner_id=5HSVIJY&amp;cmp=share_to_earn" target="_blank" rel="noopener noreferrer">Or search Rome on GetYourGuide &rarr;</a>
+      </div>
+    </div>
+        <details class="fold">
+      <summary><span class="chev">&#9656;</span>Ideas for your two Rome days <span class="sum-note">Colosseum, Vatican, Borghese, food</span></summary>
+      <div class="fold-body">
+<div class="tours">
+
+      <div class="tour">
+        <h4>Colosseum, Roman Forum &amp; Palatine Hill</h4>
+        <p>One ticket covers all three, and they connect. The Forum is where the city actually happened &mdash; the Colosseum is the photograph, but the Forum is the story. Arena floor access is worth the upgrade if it's available; standing where the sand was changes the scale of it.</p>
+        <div class="when">Best early morning &middot; Books out weeks ahead</div>
+      </div>
+
+      <div class="tour">
+        <h4>Vatican Museums &amp; the Sistine Chapel</h4>
+        <p>Miles of galleries ending in one room. Early-entry tours get you into the Sistine Chapel before general admission, which is the difference between seeing the ceiling and standing in a crowd. St. Peter's is next door and free, but the line is long after ten.</p>
+        <div class="when">Before opening &middot; Books out weeks ahead</div>
+      </div>
+
+      <div class="tour">
+        <h4>Borghese Gallery</h4>
+        <p>Bernini's sculptures in the rooms they were carved for, inside a villa in the middle of Rome's largest park. Entry is by timed two-hour slot and capped, so it never feels crowded. A twenty-minute walk from your hotel through the gardens.</p>
+        <div class="when">Timed entry &middot; Reserve early</div>
+      </div>
+
+      <div class="tour">
+        <h4>An evening food walk in Trastevere or Testaccio</h4>
+        <p>Trastevere for the atmosphere &mdash; cobbles, ivy, restaurants that spill into the street. Testaccio for the food, which is where Romans actually eat. Either one is a good way to spend a night you don't want to plan.</p>
+        <div class="when">Evening &middot; Small groups</div>
+      </div>
+
+    </div>
+      </div>
+    </details>
+
+    <div class="booknow">
+      <h4>Ready to book &mdash; Rome by golf cart</h4>
+      <p class="booknow-intro">Rome's sights are further apart than they look on a map, and the walk between them is cobblestone the whole way. A golf cart covers the ground the taxis can't &mdash; the historic center is closed to most traffic, but these carts are permitted. Monday afternoon, after you land, is the best slot for one: you get the shape of the city on day one, and by Tuesday you already know where things are. These are bookable now.</p>
+
+      <div class="book-grid">
+
+        <div class="book-card">
+          <span class="badge badge-small">Small group</span>
+          <h5>Rome City Highlights by Golf Cart</h5>
+          <p>The Colosseum, Trevi Fountain, Spanish Steps, and the Pantheon across a few hours, with headsets so you hear the guide over the street noise. A gelato stop partway through.</p>
+          <ul class="spec">
+            <li>Exteriors only &mdash; no interior entry included</li>
+            <li>Several departure times to choose from</li>
+          </ul>
+          <a class="book-link" href="https://www.viator.com/tours/Rome/Golf-Cart-Small-Group-Guided-Tour-Rome-City-Highlights/d511-387632P2?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener noreferrer">View dates &amp; book &rarr;</a>
+        </div>
+
+        <div class="book-card">
+          <span class="badge badge-small">Small group</span>
+          <h5>Rome Highlights City Tour by Golf Cart with Gelato</h5>
+          <p>The same ground covered efficiently, cutting out both the walking and the heavier traffic. Good as an orientation run &mdash; it hands you a mental map of Trevi, the Spanish Steps, and the Pantheon before you go back on foot. Ends with gelato.</p>
+          <ul class="spec">
+            <li>Morning or afternoon departure</li>
+            <li>Costs less than the private options</li>
+          </ul>
+          <a class="book-link" href="https://www.viator.com/tours/Rome/Rome-Small-Group-City-Tour-by-Golf-Cart-with-Gelato/d511-141019P8?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener noreferrer">View dates &amp; book &rarr;</a>
+        </div>
+
+        <div class="book-card">
+          <span class="badge badge-private">Private</span>
+          <h5>Rome by Golf Cart &mdash; Beyond the Landmarks</h5>
+          <p>A covered, street-legal cart and a guide who builds the route around what you actually want to see. Palaces, fountains, churches, and the statues most people walk past without a second look. You pick the stops from a list.</p>
+          <ul class="spec">
+            <li>Itinerary customized to you</li>
+            <li>Pickup and drop-off at your hotel</li>
+          </ul>
+          <a class="book-link" href="https://www.viator.com/tours/Rome/Rome-by-Golf-Cart-Private-Tour/d511-7377P1?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener noreferrer">View dates &amp; book &rarr;</a>
+        </div>
+
+        <div class="book-card">
+          <span class="badge badge-private">Private</span>
+          <h5>Rome Highlights by Golf Cart &mdash; Private Tour</h5>
+          <p>The efficient version. A personalized route to the landmarks you care about, no stops to collect other travelers, and a local guide filling in the stories along the way. Straight from the hotel door.</p>
+          <ul class="spec">
+            <li>Route built around your priorities</li>
+            <li>City center hotel pickup &mdash; the Marcella qualifies</li>
+          </ul>
+          <a class="book-link" href="https://www.viator.com/tours/Rome/Rome-Highlights-by-Golf-Cart-Private-Tour/d511-23570P17?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener noreferrer">View dates &amp; book &rarr;</a>
+        </div>
+
+      </div>
+
+      <p class="browse-all">Want to compare more options, timings, and prices? <a href="https://www.viator.com/searchResults/all?text=rome+golf+cart+tour&amp;pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener noreferrer">Browse every Rome golf cart tour &rarr;</a> &mdash; or tell me which appeals and I'll book it for you and fold it into your app itinerary.</p>
+    </div>
+
+    <div class="booknow">
+      <h4>Also ready to book in Rome</h4>
+      <p class="booknow-intro">Two things that aren't on anyone's standard list. One gives you photographs of this trip that aren't phone snapshots. The other gives you an afternoon making something instead of looking at something.</p>
+
+      <div class="book-grid">
+
+        <div class="book-card">
+          <span class="badge badge-private">Private session</span>
+          <h5>Professional photoshoot outside the Colosseum</h5>
+          <p>A photographer, the Colosseum behind you, and a set of images you actually keep. Most people come home from Rome with a thousand photos and none of themselves in it. This fixes that.</p>
+          <ul class="spec">
+            <li>Early morning gives the best light and the thinnest crowds</li>
+            <li>Shot outside the monument &mdash; no interior ticket needed</li>
+          </ul>
+          <a class="book-link" href="https://www.viator.com/tours/Rome/Rome-Professional-Photoshoot-Outside-the-Colosseum/d511-321017P11?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener noreferrer">View dates &amp; book &rarr;</a>
+        </div>
+
+        <div class="book-card">
+          <span class="badge badge-small">Browse options</span>
+          <h5>Cooking classes in Rome</h5>
+          <p>Pasta made by hand, usually in a home kitchen or a small studio in the center, ending with you eating what you made. Classes run from a couple of hours to a half day, and several start with a market walk to buy the ingredients.</p>
+          <ul class="spec">
+            <li>Good for a rainy afternoon or a slower second day</li>
+            <li>Sorrento has its own version &mdash; see below if you'd rather do it there</li>
+          </ul>
+          <a class="book-link" href="https://www.viator.com/Rome-tours/Cooking-Classes/d511-g6-c19?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener noreferrer">Browse Rome cooking classes &rarr;</a>
+        </div>
+
+      </div>
+
+      <p class="browse-all">Tell me which of these appeals and I'll book it, confirm the timing against the rest of your day, and add it to your app itinerary.</p>
+    </div>
+  </div>
+
+  <div class="tour-city">
+    <h3>Sorrento &mdash; Friday and Saturday</h3>
+    <div class="tour-city-note">Three options, two days. They don't combine &mdash; Capri and the Amalfi road each take a full day, and Pompeii deserves a morning of its own.</div>
+
+    <div class="skipline">
+      <h4>Book Sorrento and the coast direct</h4>
+      <p>Capri ferries and boat tours, Amalfi Coast drivers, guided Pompeii mornings, and cooking classes in the lemon groves above town &mdash; all bookable for your dates. Book whatever appeals and it comes straight to me: I'll see it, check the timing against the rest of your day, and add it to the final app itinerary. Or tell me what you want and I'll arrange it for you.</p>
+      <div class="link-row">
+        <a class="book-link" href="https://www.viator.com/Sorrento/d947-ttd?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener noreferrer">Browse Sorrento tours &amp; day trips &rarr;</a>
+        <a class="book-link" href="https://www.getyourguide.com?partner_id=5HSVIJY&amp;cmp=share_to_earn" target="_blank" rel="noopener noreferrer">Or search Sorrento on GetYourGuide &rarr;</a>
+      </div>
+    </div>
+        <details class="fold">
+      <summary><span class="chev">&#9656;</span>Ideas for your two Sorrento days <span class="sum-note">Capri, Amalfi, Pompeii</span></summary>
+      <div class="fold-body">
+<div class="tours">
+
+      <div class="tour">
+        <h4>Capri</h4>
+        <p>Twenty-five minutes by ferry from Marina Piccola. The island empties out after four when the day boats leave, which is the best hour to be there. A private boat around the island reaches the sea caves and swimming spots the buses never get near.</p>
+        <div class="when">Friday &middot; Go on an early ferry</div>
+      </div>
+
+      <div class="tour">
+        <h4>The Amalfi Drive, with a driver</h4>
+        <p>Positano, Amalfi, and Ravello along a road cut into the cliff face. Do not drive it yourself &mdash; the road is narrow, the buses are wide, and parking doesn't exist. With a driver you can stop where you want and look out the window the rest of the time.</p>
+        <div class="when">Saturday &middot; Full day, private</div>
+      </div>
+
+      <div class="tour">
+        <h4>Pompeii</h4>
+        <p>Larger than most people expect and confusing without a guide &mdash; a good one turns a field of walls into streets, shops, and houses with names attached. Roughly half an hour from Sorrento. Go in the morning; there's no shade by noon.</p>
+        <div class="when">Morning &middot; Guide strongly recommended</div>
+      </div>
+
+      <div class="tour">
+        <h4>A day that doesn't leave Sorrento</h4>
+        <p>A cooking class in a lemon grove above the town, the woodwork studios in the old streets, lunch down at Marina Grande where the fishing boats still land, and the terrace at the hotel for the rest of it. After Rome and Capri, this is the day people say they'd keep.</p>
+        <div class="when">Either day &middot; Flexible</div>
+      </div>
+
+    </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ============ ARRANGEMENTS + WHAT I NEED ============ -->
+<section class="band">
+  <div class="wrap">
+    <div class="sec-label">Beyond the Booking</div>
+    <h2 class="sec-title">What I can add, and what I need from you</h2>
+    <p class="sec-intro">The hotels and transfers above are settled. Everything else on your days is still open, and most of it is easier to arrange from here than from a hotel lobby in Rome.</p>
+
+        <details class="fold">
+      <summary><span class="chev">&#9656;</span>What I can arrange, and what arrives before you fly <span class="sum-note">Tours, guides, trip app</span></summary>
+      <div class="fold-body">
+<div class="two-col">
+      <div class="col-card">
+        <h4>Things I can arrange</h4>
+        <ul class="yes">
+          <li>Guided tours and skip-the-line entry &mdash; Colosseum, Vatican, Borghese, Pompeii</li>
+          <li>Private drivers for the Amalfi Coast or any full day</li>
+          <li>Ferry tickets and private boats for Capri</li>
+          <li>Additional pick-ups &mdash; ferry ports, restaurants, anywhere the walk isn't appealing</li>
+          <li>Cooking classes, lemon grove visits, and workshops in Sorrento</li>
+          <li>Early check-in, room upgrades, and special occasion arrangements</li>
+          <li>Travel insurance</li>
+        </ul>
+      </div>
+
+      <div class="col-card">
+        <h4>What arrives before you fly</h4>
+        <ul class="yes">
+          <li>A trip app holding your whole itinerary &mdash; hotels, transfers, tours, confirmations, in order</li>
+          <li>Destination guides written for these dates and these neighborhoods</li>
+          <li>Google Maps links to every place I send you, so nothing needs looking up</li>
+          <li>Restaurant and cafe recommendations near each hotel, with the walk times</li>
+          <li>Which restaurants to reserve ahead and how far out &mdash; September fills both cities, and the good tables go early. I'd book anywhere you have your heart set on before you fly.</li>
+          <li>Practical notes &mdash; tipping, taxis, ferry schedules, what to book ahead</li>
+          <li>Transfer confirmations for every leg, with pick-up times and meeting points</li>
+        </ul>
+      </div>
+    </div>
+      </div>
+    </details>
+
+    <div class="action">
+      <h4>One thing I need from you first</h4>
+      <p>Please send me your <strong>flight numbers and airline confirmation codes</strong> &mdash; for every flight, including the Naples to Rome leg on 27 September.</p>
+      <ul class="need">
+        <li>Houston to Chicago, 20 September &mdash; flight number and confirmation</li>
+        <li>Chicago to Rome, 20&ndash;21 September &mdash; flight number, confirmation, and operating airline</li>
+        <li>Naples to Rome, 27 September &mdash; flight number, confirmation, and departure time</li>
+        <li>Rome to Houston, 28 September &mdash; flight number and confirmation</li>
+      </ul>
+      <p class="why">Transfers can't be scheduled without them. Drivers are booked against a specific flight so they know which terminal to meet you at and can track delays &mdash; and if you land late, they're still there. Send these across and I'll lock every pick-up in.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORM ============ -->
+<section class="band-white">
+  <div class="wrap-narrow">
+    <div class="sec-label">Next Step</div>
+    <h2 class="sec-title">Tell me what you'd like to do</h2>
+    <p class="sec-intro">Send me your flight details and let me know which tours interest you. I'll come back with times, prices, and a plan for each open day.</p>
+
+    <div class="commit">What's coming after this quote: a destination guide built for your trip &mdash; PDF or interactive in-app, with Google Maps links to every place we send you &mdash; a trip app where everything lives, and us when something goes sideways at midnight. You travel; we handle the rest.</div>
+
+    <div class="form-shell">
+      <div id="form-container">
+        <div id="form-error" style="display:none; background:#fff1f1; border:1px solid #f5c6c6; border-radius:6px; padding:14px 18px; font-size:0.875rem; color:#b91c1c; margin-bottom:16px;">
+          We weren't able to send your message. Please contact Christina directly at the address below.
+        </div>
+
+        <form id="pmtp-form">
+          <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+          <input type="hidden" name="subject" value="Quote Response — Stephanie Porter | Rome &amp; Sorrento">
+          <input type="hidden" name="from_name" value="Stephanie Porter Quote — Point Me to Paradise">
+          <input type="hidden" name="redirect" value="false">
+
+          <div class="field">
+            <label for="f-name">Name</label>
+            <input type="text" id="f-name" name="name" required>
+          </div>
+
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input type="email" id="f-email" name="email" required>
+          </div>
+
+          <div class="field">
+            <label for="f-phone">Phone <span style="text-transform:none;letter-spacing:0;font-weight:400;">(optional)</span></label>
+            <input type="tel" id="f-phone" name="phone">
+          </div>
+
+          <div class="field">
+            <label for="f-ins">Travel insurance</label>
+            <select id="f-ins" name="travel_insurance">
+              <option>Yes — I'd like a quote</option>
+              <option>No — not interested</option>
+              <option>Already have coverage</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="f-msg">Flight details, tour interest, and anything else</label>
+            <textarea id="f-msg" name="message" placeholder="Flight numbers and confirmation codes for each leg, which tours interest you, anything you'd rather skip, dietary needs, walking pace, bedding preference — anything at all."></textarea>
+          </div>
+
+          <button type="submit" id="submit-btn">Send to Christina</button>
+          <p class="privacy">Personal information you share here is used only to plan and book your travel. It is never sold or shared beyond the suppliers required to make your arrangements.</p>
+        </form>
+      </div>
+
+      <div id="thank-you">
+        <h3>Thank you &mdash; this is on its way.</h3>
+        <p>I'll read it and come back to you with times, prices, and a plan for your open days.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap-narrow adv">
+    <div class="name">Christina Garcia</div>
+    <div class="title">Travel Advisor</div>
+    <div class="contact">
+      <a id="adv-email" href="#">&nbsp;</a><br>
+      <a href="tel:+12812290862">+1 281 229 0862</a>
+    </div>
+    <div class="agency">Point Me to Paradise Travel</div>
+    <div class="motto">the world is your oyster, we are your pearl</div>
+    <p class="disclaimer">
+      This itinerary is prepared for Stephanie Porter and is not transferable. Hotel room categories, bedding, and views are requested and subject to availability at check-in. Rates and availability are subject to change until fully booked. Tours and excursions listed as ideas are not yet reserved.
+    </p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var gals = document.querySelectorAll('[data-gal]');
+  Array.prototype.forEach.call(gals, function(gal){
+    var track = gal.querySelector('[data-gal-track]');
+    var slides = gal.querySelectorAll('.gal-slide');
+    var dotWrap = gal.querySelector('[data-gal-dots]');
+    var total = slides.length;
+    if (!track || !total) return;
+    var i = 0;
+
+    for (var n = 0; n < total; n++) {
+      var d = document.createElement('button');
+      d.type = 'button';
+      d.className = 'gal-dot';
+      d.setAttribute('aria-label', 'Photo ' + (n + 1) + ' of ' + total);
+      d.setAttribute('data-i', n);
+      dotWrap.appendChild(d);
+    }
+    var dots = dotWrap.querySelectorAll('.gal-dot');
+
+    function go(next){
+      i = (next + total) % total;
+      track.style.transform = 'translateX(-' + (i * 100) + '%)';
+      Array.prototype.forEach.call(dots, function(d, k){
+        d.setAttribute('aria-current', k === i ? 'true' : 'false');
+      });
+      Array.prototype.forEach.call(slides, function(s, k){
+        s.setAttribute('aria-hidden', k === i ? 'false' : 'true');
+      });
+    }
+
+    gal.querySelector('[data-gal-prev]').addEventListener('click', function(){ go(i - 1); });
+    gal.querySelector('[data-gal-next]').addEventListener('click', function(){ go(i + 1); });
+    Array.prototype.forEach.call(dots, function(d){
+      d.addEventListener('click', function(){ go(parseInt(d.getAttribute('data-i'), 10)); });
+    });
+
+    gal.setAttribute('tabindex', '0');
+    gal.addEventListener('keydown', function(e){
+      if (e.key === 'ArrowLeft') { e.preventDefault(); go(i - 1); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); go(i + 1); }
+    });
+
+    var x0 = null;
+    gal.addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; }, {passive:true});
+    gal.addEventListener('touchend', function(e){
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 45) { go(dx < 0 ? i + 1 : i - 1); }
+      x0 = null;
+    }, {passive:true});
+
+    go(0);
+  });
+})();
+
+(function(){
+  var u = 'christina';
+  var d = 'pointmetoparadise.com';
+  var addr = u + '\u0040' + d;
+  var el = document.getElementById('adv-email');
+  if (el) { el.textContent = addr; el.setAttribute('href', 'mailto:' + addr); }
+})();
+
+document.getElementById('pmtp-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var btn = document.getElementById('submit-btn');
+  var err = document.getElementById('form-error');
+  btn.disabled = true; btn.textContent = 'Sending…'; err.style.display = 'none';
+  fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(e.target) })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      if (data.success) {
+        document.getElementById('form-container').style.display = 'none';
+        document.getElementById('thank-you').style.display = 'block';
+      } else {
+        btn.disabled = false; btn.textContent = 'Send to Christina'; err.style.display = 'block';
+        err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    })
+    .catch(function() {
+      btn.disabled = false; btn.textContent = 'Send to Christina'; err.style.display = 'block';
+      err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+});
+</script>
+
+</body>
+</html>
