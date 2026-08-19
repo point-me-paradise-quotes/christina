@@ -68,6 +68,7 @@ h2{font-family:'Playfair Display',serif;font-weight:500;font-size:1.85rem;line-h
 .dest-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
 .chip{font-size:0.74rem;font-weight:500;background:var(--sand-light);border:1px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--ink-soft);}
 .chip-hi{background:var(--aqua-pale);border-color:var(--aqua-pale);color:var(--ink);font-weight:600;}
+.chip-air{background:var(--white);border-color:var(--aqua);color:var(--aqua-dark);font-weight:600;}
 .dest-caret{flex:0 0 20px;margin-top:8px;transition:transform .25s;color:var(--aqua-dark);}
 .dest.open .dest-caret{transform:rotate(180deg);}
 .dest-body{display:none;padding:6px 24px 30px;border-top:1px solid var(--line);}
@@ -338,9 +339,9 @@ footer{background:var(--sand-light);padding:48px 24px 40px;text-align:center;}
           <span class="dest-title">Los Cabos, Mexico</span>
           <span class="dest-sub">Desert running into the Sea of Cortez — and the shortest travel day</span>
           <span class="dest-meta">
-            <span class="chip chip-hi">4 resorts · Est. $2,183 – $4,331</span>
+            <span class="chip chip-hi">4 resorts · Est. $1,819 – $3,967</span>
             <span class="chip">Nonstop · 2 hr 35 min</span>
-            <span class="chip">Air Est. $364</span>
+            <span class="chip chip-air" data-air="364">+ Air Est. $364</span>
           </span>
         </span>
         <span class="dest-caret">&#9662;</span>
@@ -536,9 +537,9 @@ footer{background:var(--sand-light);padding:48px 24px 40px;text-align:center;}
           <span class="dest-title">Miches, Dominican Republic</span>
           <span class="dest-sub">Newer resorts, better beaches, almost no crowds — and I&#39;ve walked both of these myself</span>
           <span class="dest-meta">
-            <span class="chip chip-hi">2 resorts · Est. $2,964 – $3,060</span>
+            <span class="chip chip-hi">2 resorts · Est. $1,696 – $1,792</span>
             <span class="chip">1 stop · 7 hr 35 min</span>
-            <span class="chip">Air Est. $1,268</span>
+            <span class="chip chip-air" data-air="1268">+ Air Est. $1,268</span>
           </span>
         </span>
         <span class="dest-caret">&#9662;</span>
@@ -699,9 +700,9 @@ footer{background:var(--sand-light);padding:48px 24px 40px;text-align:center;}
           <span class="dest-title">Nassau, Bahamas</span>
           <span class="dest-sub">Clear water, a private island, and your points cover the entire flight</span>
           <span class="dest-meta">
-            <span class="chip chip-hi">1 resort · Est. $4,218</span>
+            <span class="chip chip-hi">1 resort · Est. $3,800</span>
             <span class="chip">1 stop · 6 hr 10 min</span>
-            <span class="chip">Air Est. $418</span>
+            <span class="chip chip-air" data-air="418">+ Air Est. $418</span>
           </span>
         </span>
         <span class="dest-caret">&#9662;</span>
@@ -798,9 +799,9 @@ footer{background:var(--sand-light);padding:48px 24px 40px;text-align:center;}
           <span class="dest-title">Guanacaste, Costa Rica</span>
           <span class="dest-sub">The one destination here with no hurricane season at all</span>
           <span class="dest-meta">
-            <span class="chip chip-hi">1 resort · Est. $5,329</span>
+            <span class="chip chip-hi">1 resort · Est. $2,476</span>
             <span class="chip">Nonstop · 3 hr 31 min</span>
-            <span class="chip">Air Est. $2,853</span>
+            <span class="chip chip-air" data-air="2853" data-carrier="United">+ Air Est. $2,853</span>
           </span>
         </span>
         <span class="dest-caret">&#9662;</span>
@@ -1309,6 +1310,14 @@ Array.prototype.forEach.call(document.querySelectorAll('.carousel'), function(ca
       else if (pay === 'split')td.textContent = 'Up to Est. ' + money(h + a);
       else                      td.textContent = 'Est. ' + money(h + a);
     });
+    Array.prototype.forEach.call(document.querySelectorAll('.chip-air'), function(chip){
+      var v = parseInt(chip.getAttribute('data-air'),10);
+      var united = chip.getAttribute('data-carrier') === 'United';
+      if (pay === 'amex')            chip.innerHTML = '\u2605 Air on Amex points';
+      else if (pay === 'split' && !united) chip.textContent = '+ Air up to Est. ' + money(v);
+      else                            chip.textContent = '+ Air Est. ' + money(v);
+    });
+
     var cap = document.getElementById('tbl-cap');
     if (cap){
       cap.textContent = pay === 'amex'
