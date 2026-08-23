@@ -123,6 +123,11 @@ a{color:var(--aqua-dark);}
   background:var(--aqua-mist);color:var(--aqua-dark);border:1px solid var(--aqua-pale);
   padding:5px 10px;border-radius:3px;white-space:nowrap;
 }
+.s-star{
+  flex:0 0 auto;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  background:var(--aqua);color:var(--white);border:1px solid var(--aqua);
+  padding:5px 10px;border-radius:3px;white-space:nowrap;
+}
 .s-titles{flex:1 1 200px;min-width:0;}
 .s-name{font-family:'Playfair Display',serif;font-weight:500;font-size:1.1rem;line-height:1.25;display:block;}
 .s-meta{display:block;font-size:.82rem;color:var(--ink-soft);margin-top:1px;line-height:1.45;}
@@ -238,7 +243,8 @@ a{color:var(--aqua-dark);}
   .s-open{flex-wrap:wrap;gap:8px 12px;padding:12px 16px;}
   .s-pick{padding:0 10px 0 14px;}
   .s-titles{flex:1 1 100%;order:2;}
-  .s-chip{order:1;}
+  .s-chip,.s-star{order:1;}
+  .s-star{font-size:9px;padding:4px 8px;}
   .chev{order:1;margin-left:auto;}
   .s-priceblk{order:3;text-align:left;flex:1 1 100%;}
   .s-price{display:inline;font-size:1.05rem;}
@@ -277,7 +283,7 @@ a{color:var(--aqua-dark);}
     <hr class="rule">
     <p class="lede">Every sailing here is <strong>open jaw</strong> — you board in one port and step off in another, hundreds of miles away. That's the whole advantage. A round-trip itinerary has to spend its last days sailing back to where it started; a one-way spends them pushing further east. You see more coastline and repeat nothing.</p>
     <p class="lede">It does change how the trip gets booked. Your flights are a multi-city ticket rather than a round-trip, and you'll want a night or two at the embarkation port before you sail — not as a luxury, but as insurance. A delayed connection on the day the ship leaves is the one problem nobody can fix from the pier.</p>
-    <p class="lede">Four sailings, listed in date order. Three run Rome to Athens; one reverses it. Two are large Princess ships and two are the same small Windstar yacht sailing the route in opposite directions. Open any bar for the full itinerary, accommodation, pricing and payment dates — pick one and the total at the bottom of the page follows along.</p>
+    <p class="lede">Four sailings, listed from least to most expensive. Three run Rome to Athens; one reverses it. Two are large Princess ships and two are the same small Windstar yacht sailing the route in opposite directions — those two carry a star, because they are the ones I would look at hardest. Open any bar for the full itinerary, accommodation, pricing and payment dates — pick one and the total at the bottom of the page follows along. Once you settle on a sailing, I’ll add the land on either end; there’s a note on that below the bars.</p>
     <p class="commit" style="margin-top:34px;">We don't book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. The work you'd hate doing — already done.</p>
   </div>
 </section>
@@ -290,116 +296,13 @@ a{color:var(--aqua-dark);}
     <hr class="rule">
 
     <!-- ─── BAR 1 ─── -->
-    <article class="sailing is-selected" id="card-starlegendapr">
-      <div class="s-bar">
-        <label class="s-pick" aria-label="Select the April Star Legend sailing">
-          <input type="radio" name="sailing" value="starlegendapr" data-label="Star Legend · Rome to Athens · Apr 2027" checked>
-        </label>
-        <button class="s-open" type="button" data-target="body-starlegendapr" aria-expanded="false" aria-controls="body-starlegendapr">
-          <span class="s-chip">Option 1</span>
-          <span class="s-titles">
-            <span class="s-name">Star Legend</span>
-            <span class="s-meta">Windstar Cruises · Rome <span class="arrow">→</span> Athens · 8 nights · Apr 1–9, 2027</span>
-          </span>
-          <span class="s-priceblk">
-            <span class="s-price">$10,218.00</span>
-            <span class="s-pricesub">total · 2 guests</span>
-          </span>
-          <span class="chev">▼</span>
-        </button>
-      </div>
-
-      <div class="s-body" id="body-starlegendapr">
-        <div class="s-facts">
-          <div><span>Sailing</span><strong>Apr 1–9, 2027</strong></div>
-          <div><span>Length</span><strong>8 Nights</strong></div>
-          <div><span>Suite</span><strong>Category BS1</strong></div>
-          <div><span>Deposit Due</span><strong>Aug 28, 2026</strong></div>
-        </div>
-        <p class="callout" style="margin-top:22px;"><strong>Rome to Athens, through the Corinth Canal.</strong> Nine ports in eight nights with no day at sea, on a ship carrying 312 guests instead of three thousand — and a canal transit no large ship can make. The All-In package comes complimentary on this sailing, which means drinks, Wi-Fi and gratuities are already covered.</p>
-
-        <h4>Why this ship changes the itinerary</h4>
-        <p style="font-size:.98rem;color:var(--ink-soft);">Look at the port list and you'll notice something: you have probably not heard of half of them. Galaxidi. Fiskardo. Gallipoli. Reggio di Calabria. That isn't an accident, and it isn't a compromise — it's the entire reason to sail this ship.</p>
-        <p style="font-size:.98rem;color:var(--ink-soft);">Star Legend carries 312 guests. A large cruise ship carries ten times that, which means it needs deep water, a long quay, and a town with the infrastructure to absorb three thousand people stepping off at nine in the morning. There are perhaps twenty ports in the Mediterranean that qualify, which is why every big ship calls at the same ones. A small ship has no such constraint. It ties up in the middle of Sorrento. It anchors off a fishing village on Kephalonia. It goes to the places that are still, for the most part, just places.</p>
-        <p style="font-size:.98rem;color:var(--ink-soft);">The trade is intimacy for scale. There is no waterslide, no casino floor, no production show with a cast of forty. What there is instead: a stern platform that folds down in calm anchorages so you can swim, kayak, or paddleboard directly off the back of the ship; an open bridge you can walk onto and talk to the officers; no formal nights, no assigned dining time, no table you're expected at. You eat when you're hungry, with whoever you like.</p>
-
-        <h4>Where you go</h4>
-        <ul class="itin">
-          <li><div class="day">Thu · Apr 1</div><div class="place">Civitavecchia, Rome, Italy<em>Embarkation. The port is about 90 minutes northwest of central Rome — come in ahead of the sailing, ideally two nights.</em></div></li>
-          <li><div class="day">Fri · Apr 2</div><div class="place">Sorrento, Italy<em>Tied up below the cliff town rather than an hour away at a commercial terminal. Pompeii, Capri and the Amalfi Drive all open up from here, or you can simply stay in Sorrento and eat well.</em></div></li>
-          <li><div class="day">Sat · Apr 3</div><div class="place">Reggio di Calabria, Italy<em>Across the strait from Sicily, and home to the Riace Bronzes — two Greek warriors pulled from the seabed in 1972, among the finest surviving bronzes from the ancient world. Almost nobody comes here. That's rather the point.</em></div></li>
-          <li><div class="day">Sun · Apr 4</div><div class="place">Giardini Naxos, Sicily — for Taormina<em>Taormina is on the cliff directly above you, reached by a switchback road or the cable car. The Greek theatre frames Etna through its ruined stage wall, which is the single best-composed view in Sicily.</em></div></li>
-          <li><div class="day">Mon · Apr 5</div><div class="place">Taranto, Italy<em>One of the great cities of Magna Graecia, founded by Spartans in the eighth century BC. The National Archaeological Museum holds the Ori di Taranto — Greek goldwork of a delicacy that is difficult to believe until you're standing in front of it.</em></div></li>
-          <li><div class="day">Tue · Apr 6</div><div class="place">Gallipoli, Italy<em>Not the Turkish peninsula — this is Gallipoli in Puglia, on the Ionian side of the Salento. The old town sits on a limestone island joined to the mainland by a bridge, ringed by sea walls, with a baroque cathedral at its center.</em></div></li>
-          <li><div class="day">Wed · Apr 7</div><div class="place">Fiskardo, Kephalonia, Greece<em>The only village on Kephalonia to survive the 1953 earthquake intact, which is why the Venetian houses along the harbor are the real thing rather than a reconstruction. Small enough to walk end to end in fifteen minutes.</em></div></li>
-          <li><div class="day">Thu · Apr 8</div><div class="place">Galaxidi, Greece — for Delphi<em>A quiet shipbuilders' town on the Gulf of Corinth, with Delphi about an hour inland. The sanctuary sits on the slope of Mount Parnassus above a valley of olive groves that runs to the sea. Large ships cannot call here at all.</em></div></li>
-          <li><div class="day">Fri · Apr 9</div><div class="place">Piraeus, Athens, Greece<em>Disembarkation. Stay on for Athens — the Acropolis and its museum deserve a full unhurried day, and it would be a shame to fly out having only seen the port.</em></div></li>
-        </ul>
-        <p class="note">Nine ports across eight nights with no scheduled day at sea. That's a full itinerary — worth knowing going in if you were picturing lazy days by the pool. Ports of call and times may vary by departure date and are subject to weather and other conditions.</p>
-
-        <h4>The Corinth Canal</h4>
-        <p style="font-size:.98rem;color:var(--ink-soft);">Between the Italian ports and the Greek ones, this sailing transits the Corinth Canal — a channel cut straight through the isthmus in 1893, four miles long, with limestone walls rising more than 200 feet on either side. It is barely 70 feet wide at the waterline. Ships pass through with a matter of feet to spare on each side, which is why almost no cruise ship can do it at all. Go up on deck for this one; it takes about half an hour and there is nothing else like it.</p>
-
-        <h4>Your accommodation<span class="room-code">BS1</span></h4>
-        <p style="font-size:.98rem;color:var(--ink-soft);">Star Legend is an all-suite, all-ocean-view ship. There is no inside cabin, no obstructed view, no hierarchy of decks to navigate. She was built in 1992 as a Seabourn vessel and cut in half in 2021 to have a new midsection installed — new suites, new dining rooms, new engines — so the ship is small in the way the old yachts were and current in the way the new ones are.</p>
-        <p class="note">Full specifications and deck placement for your Category BS1 suite are coming in a separate note. Bedding configuration can be requested but not guaranteed — tell me your preference and I'll put it on the reservation.</p>
-
-        <h4>What's included</h4>
-        <div class="grid2">
-          <ul class="feature-list">
-            <li>Eight nights in an ocean-view suite</li>
-            <li>All government taxes, fees and port expenses</li>
-            <li><strong>The All-In package, complimentary</strong> — the beverage package, Wi-Fi and crew gratuities, folded in rather than billed to your account. It covers what you spend <em>on</em> the ship; it does not cover what you do <em>off</em> it.</li>
-            <li><strong>$300 onboard credit</strong> per suite</li>
-            <li><strong>All dining venues</strong> — there is no surcharge restaurant on this ship, which is unusual and worth knowing</li>
-            <li><strong>Watersports platform</strong> — kayaks, paddleboards and swimming off the stern in calm anchorages</li>
-          </ul>
-          <ul class="feature-list">
-            <li><strong>Not included:</strong> airfare into Rome and home from Athens</li>
-            <li><strong>Not included:</strong> hotel nights and transfers before or after the sailing</li>
-            <li><strong>Not included:</strong> shore excursions — these are priced individually and are <em>not</em> part of the All-In package</li>
-            <li><strong>Not included:</strong> spa and salon services, and premium spirits above the package's selected brands</li>
-          </ul>
-        </div>
-
-        <p class="note">One thing worth planning for: with nine ports and no sea days, shore excursions are the real variable in what this trip costs. They're booked and paid separately from the fare. Tell me which ports you want guided and which you'd rather walk on your own, and I'll build you a plan with real numbers before you deposit — in several of these towns, walking off on your own is the better answer anyway.</p>
-
-        <h4>How this compares</h4>
-        <p style="font-size:.98rem;color:var(--ink-soft);">The number at the top of this bar is larger than the other two, and I'd rather explain that than let it sit there unaddressed. Some of the gap isn't a gap at all: drinks, Wi-Fi and gratuities are included here and are extra on the Princess sailings, so the fair comparison is this fare against those base fares <em>plus</em> a beverage package, a Wi-Fi plan and crew appreciation for two people for a week. Ask me and I'll price that out so you can see the two numbers side by side.</p>
-        <p style="font-size:.98rem;color:var(--ink-soft);">The rest of the difference is real, and it buys something specific: a ship with 312 guests instead of several thousand, an all-suite product with no category ladder to climb, dining with no surcharge tier, and an itinerary that no large ship can physically operate. Whether that's worth it depends entirely on what you want out of eight days. Tell me which way you're leaning and I'll give you my honest read.</p>
-
-        <h4>Payment schedule</h4>
-        <table class="pay-table">
-          <thead><tr><th>Payment</th><th>Due</th><th>Amount</th></tr></thead>
-          <tbody>
-            <tr>
-              <td class="lbl">Deposit<span class="sub">Confirms the suite</span></td>
-              <td>August 28, 2026<span class="sub">by 11:59 p.m.</span></td>
-              <td class="amt">$300.00</td>
-            </tr>
-            <tr>
-              <td class="lbl">Final payment<span class="sub">Balance of the cruise fare</span></td>
-              <td>January 1, 2027<span class="sub">by 11:59 p.m.</span></td>
-              <td class="amt">$9,918.00</td>
-            </tr>
-            <tr>
-              <td class="lbl">Total</td>
-              <td></td>
-              <td class="amt">$10,218.00</td>
-            </tr>
-          </tbody>
-        </table>
-        <p class="note">The deposit date is set by the cruise line, not by me — the fare and suite hold until then. Cancellation terms follow the cruise line's published schedule for this fare, and I'll confirm the specifics to you in writing before you place the deposit.</p>
-      </div>
-    </article>
-    <!-- ─── BAR 2 ─── -->
-    <article class="sailing" id="card-sunprincess">
+    <article class="sailing is-selected" id="card-sunprincess">
       <div class="s-bar">
         <label class="s-pick" aria-label="Select the Sun Princess sailing">
-          <input type="radio" name="sailing" value="sunprincess" data-label="Sun Princess · Rome to Athens · May 2027">
+          <input type="radio" name="sailing" value="sunprincess" data-label="Sun Princess · Rome to Athens · May 2027" checked>
         </label>
         <button class="s-open" type="button" data-target="body-sunprincess" aria-expanded="false" aria-controls="body-sunprincess">
-          <span class="s-chip">Option 2</span>
+          <span class="s-chip">Option 1</span>
           <span class="s-titles">
             <span class="s-name">Sun Princess</span>
             <span class="s-meta">Princess Cruises · Rome <span class="arrow">→</span> Athens · 7 nights · May 9–16, 2027</span>
@@ -493,114 +396,14 @@ a{color:var(--aqua-dark);}
         <p class="note">The deposit date is set by the cruise line, not by me — the fare and stateroom hold until then. Cancellation terms follow the cruise line's published schedule for this fare, and I'll confirm the specifics to you in writing before you place the deposit.</p>
       </div>
     </article>
-    <!-- ─── BAR 3 ─── -->
-    <article class="sailing" id="card-starlegendmay">
-      <div class="s-bar">
-        <label class="s-pick" aria-label="Select the May Star Legend sailing">
-          <input type="radio" name="sailing" value="starlegendmay" data-label="Star Legend · Athens to Rome · May 2027">
-        </label>
-        <button class="s-open" type="button" data-target="body-starlegendmay" aria-expanded="false" aria-controls="body-starlegendmay">
-          <span class="s-chip">Option 3</span>
-          <span class="s-titles">
-            <span class="s-name">Star Legend</span>
-            <span class="s-meta">Windstar Cruises · Athens <span class="arrow">→</span> Rome · 8 nights · May 11–19, 2027</span>
-          </span>
-          <span class="s-priceblk">
-            <span class="s-price">$9,418.00</span>
-            <span class="s-pricesub">total · 2 guests</span>
-          </span>
-          <span class="chev">▼</span>
-        </button>
-      </div>
-
-      <div class="s-body" id="body-starlegendmay">
-        <div class="s-facts">
-          <div><span>Sailing</span><strong>May 11–19, 2027</strong></div>
-          <div><span>Length</span><strong>8 Nights</strong></div>
-          <div><span>Suite</span><strong>Category BS1</strong></div>
-          <div><span>Deposit Due</span><strong>Aug 28, 2026</strong></div>
-        </div>
-        <p class="callout" style="margin-top:22px;"><strong>This one runs the other direction — Athens to Rome — and it is a different kind of trip entirely.</strong> Nine ports in eight nights with no day at sea, on a ship carrying 312 guests instead of three thousand. The All-In package comes complimentary on this sailing, which means drinks, Wi-Fi and gratuities are already covered.</p>
-
-        <h4>Why this ship changes the itinerary</h4>
-        <p style="font-size:.98rem;color:var(--ink-soft);">Look at the port list and you'll notice something: you have probably not heard of half of them. Galaxidi. Fiskardo. Gallipoli. Reggio di Calabria. That isn't an accident, and it isn't a compromise — it's the entire reason to sail this ship.</p>
-        <p style="font-size:.98rem;color:var(--ink-soft);">Star Legend carries 312 guests. A large cruise ship carries ten times that, which means it needs deep water, a long quay, and a town with the infrastructure to absorb three thousand people stepping off at nine in the morning. There are perhaps twenty ports in the Mediterranean that qualify, which is why every big ship calls at the same ones. A small ship has no such constraint. It ties up in the middle of Sorrento. It anchors off a fishing village on Kephalonia. It goes to the places that are still, for the most part, just places.</p>
-        <p style="font-size:.98rem;color:var(--ink-soft);">The trade is intimacy for scale. There is no waterslide, no casino floor, no production show with a cast of forty. What there is instead: a stern platform that folds down in calm anchorages so you can swim, kayak, or paddleboard directly off the back of the ship; an open bridge you can walk onto and talk to the officers; no formal nights, no assigned dining time, no table you're expected at. You eat when you're hungry, with whoever you like.</p>
-
-        <h4>Where you go</h4>
-        <ul class="itin">
-          <li><div class="day">Tue · May 11</div><div class="place">Piraeus, Athens, Greece<em>Athens' port and your starting point. Come in a night or two early — the Acropolis and its museum deserve a full unhurried day.</em></div></li>
-          <li><div class="day">Wed · May 12</div><div class="place">Galaxidi, Greece — for Delphi<em>A quiet shipbuilders' town on the Gulf of Corinth, with Delphi about an hour inland. The sanctuary sits on the slope of Mount Parnassus above a valley of olive groves that runs to the sea. Large ships cannot call here at all.</em></div></li>
-          <li><div class="day">Thu · May 13</div><div class="place">Fiskardo, Kephalonia, Greece<em>The only village on Kephalonia to survive the 1953 earthquake intact, which is why the Venetian houses along the harbor are the real thing rather than a reconstruction. Small enough to walk end to end in fifteen minutes.</em></div></li>
-          <li><div class="day">Fri · May 14</div><div class="place">Gallipoli, Italy<em>Not the Turkish peninsula — this is Gallipoli in Puglia, on the Ionian side of the Salento. The old town sits on a limestone island joined to the mainland by a bridge, ringed by sea walls, with a baroque cathedral at its center.</em></div></li>
-          <li><div class="day">Sat · May 15</div><div class="place">Taranto, Italy<em>One of the great cities of Magna Graecia, founded by Spartans in the eighth century BC. The National Archaeological Museum holds the Ori di Taranto — Greek goldwork of a delicacy that is difficult to believe until you're standing in front of it.</em></div></li>
-          <li><div class="day">Sun · May 16</div><div class="place">Giardini Naxos, Sicily — for Taormina<em>Taormina is on the cliff directly above you, reached by a switchback road or the cable car. The Greek theatre frames Etna through its ruined stage wall, which is the single best-composed view in Sicily.</em></div></li>
-          <li><div class="day">Mon · May 17</div><div class="place">Reggio di Calabria, Italy<em>Across the strait from Sicily, and home to the Riace Bronzes — two Greek warriors pulled from the seabed in 1972, among the finest surviving bronzes from the ancient world. Almost nobody comes here. That's rather the point.</em></div></li>
-          <li><div class="day">Tue · May 18</div><div class="place">Sorrento, Italy<em>Tied up below the cliff town rather than an hour away at a commercial terminal. Pompeii, Capri and the Amalfi Drive all open up from here, or you can simply stay in Sorrento and eat well.</em></div></li>
-          <li><div class="day">Wed · May 19</div><div class="place">Civitavecchia, Rome, Italy<em>About 90 minutes northwest of central Rome. Build in days at the end if you can — arriving in Rome and leaving the next morning is a waste of a good city.</em></div></li>
-        </ul>
-        <p class="note">Nine ports across eight nights with no scheduled day at sea. That's a full itinerary — worth knowing going in if you were picturing lazy days by the pool. Ports of call and times may vary by departure date and are subject to weather and other conditions.</p>
-
-        <h4>Your accommodation<span class="room-code">BS1</span></h4>
-        <p style="font-size:.98rem;color:var(--ink-soft);">Star Legend is an all-suite, all-ocean-view ship. There is no inside cabin, no obstructed view, no hierarchy of decks to navigate. She was built in 1992 as a Seabourn vessel and cut in half in 2021 to have a new midsection installed — new suites, new dining rooms, new engines — so the ship is small in the way the old yachts were and current in the way the new ones are.</p>
-        <p class="note">Full specifications and deck placement for your Category BS1 suite are coming in a separate note. Bedding configuration can be requested but not guaranteed — tell me your preference and I'll put it on the reservation.</p>
-
-        <h4>What's included</h4>
-        <div class="grid2">
-          <ul class="feature-list">
-            <li>Eight nights in an ocean-view suite</li>
-            <li>All government taxes, fees and port expenses</li>
-            <li><strong>The All-In package, complimentary</strong> — the beverage package, Wi-Fi and crew gratuities, folded in rather than billed to your account. It covers what you spend <em>on</em> the ship; it does not cover what you do <em>off</em> it.</li>
-            <li><strong>$300 onboard credit</strong> per suite</li>
-            <li><strong>All dining venues</strong> — there is no surcharge restaurant on this ship, which is unusual and worth knowing</li>
-            <li><strong>Watersports platform</strong> — kayaks, paddleboards and swimming off the stern in calm anchorages</li>
-          </ul>
-          <ul class="feature-list">
-            <li><strong>Not included:</strong> airfare into Athens and home from Rome</li>
-            <li><strong>Not included:</strong> hotel nights and transfers before or after the sailing</li>
-            <li><strong>Not included:</strong> shore excursions — these are priced individually and are <em>not</em> part of the All-In package</li>
-            <li><strong>Not included:</strong> spa and salon services, and premium spirits above the package's selected brands</li>
-          </ul>
-        </div>
-
-        <p class="note">One thing worth planning for: with nine ports and no sea days, shore excursions are the real variable in what this trip costs. They're booked and paid separately from the fare. Tell me which ports you want guided and which you'd rather walk on your own, and I'll build you a plan with real numbers before you deposit — in several of these towns, walking off on your own is the better answer anyway.</p>
-
-        <h4>How this compares</h4>
-        <p style="font-size:.98rem;color:var(--ink-soft);">The number at the top of this bar is larger than the other two, and I'd rather explain that than let it sit there unaddressed. Some of the gap isn't a gap at all: drinks, Wi-Fi and gratuities are included here and are extra on the Princess sailings, so the fair comparison is this fare against those base fares <em>plus</em> a beverage package, a Wi-Fi plan and crew appreciation for two people for a week. Ask me and I'll price that out so you can see the two numbers side by side.</p>
-        <p style="font-size:.98rem;color:var(--ink-soft);">The rest of the difference is real, and it buys something specific: a ship with 312 guests instead of several thousand, an all-suite product with no category ladder to climb, dining with no surcharge tier, and an itinerary that no large ship can physically operate. Whether that's worth it depends entirely on what you want out of eight days. Tell me which way you're leaning and I'll give you my honest read.</p>
-
-        <h4>Payment schedule</h4>
-        <table class="pay-table">
-          <thead><tr><th>Payment</th><th>Due</th><th>Amount</th></tr></thead>
-          <tbody>
-            <tr>
-              <td class="lbl">Deposit<span class="sub">Confirms the suite</span></td>
-              <td>August 28, 2026<span class="sub">by 11:59 p.m.</span></td>
-              <td class="amt">$300.00</td>
-            </tr>
-            <tr>
-              <td class="lbl">Final payment<span class="sub">Balance of the cruise fare</span></td>
-              <td>February 10, 2027<span class="sub">by 11:59 p.m.</span></td>
-              <td class="amt">$9,118.00</td>
-            </tr>
-            <tr>
-              <td class="lbl">Total</td>
-              <td></td>
-              <td class="amt">$9,418.00</td>
-            </tr>
-          </tbody>
-        </table>
-        <p class="note">The deposit date is set by the cruise line, not by me — the fare and suite hold until then. Cancellation terms follow the cruise line's published schedule for this fare, and I'll confirm the specifics to you in writing before you place the deposit.</p>
-      </div>
-    </article>
-    <!-- ─── BAR 4 ─── -->
+    <!-- ─── BAR 2 ─── -->
     <article class="sailing" id="card-enchanted">
       <div class="s-bar">
         <label class="s-pick" aria-label="Select the Enchanted Princess sailing">
           <input type="radio" name="sailing" value="enchanted" data-label="Enchanted Princess · Rome to Athens · May 2027">
         </label>
         <button class="s-open" type="button" data-target="body-enchanted" aria-expanded="false" aria-controls="body-enchanted">
-          <span class="s-chip">Option 4</span>
+          <span class="s-chip">Option 2</span>
           <span class="s-titles">
             <span class="s-name">Enchanted Princess</span>
             <span class="s-meta">Princess Cruises · Rome <span class="arrow">→</span> Athens · 10 nights · May 22 – Jun 1, 2027</span>
@@ -701,7 +504,227 @@ a{color:var(--aqua-dark);}
         <p class="note">The deposit date is set by the cruise line, not by me — the fare and stateroom hold until then. Cancellation terms follow the cruise line's published schedule for this fare, and I'll confirm the specifics to you in writing before you place the deposit.</p>
       </div>
     </article>
+    <!-- ─── BAR 3 ─── -->
+    <article class="sailing" id="card-starlegendmay">
+      <div class="s-bar">
+        <label class="s-pick" aria-label="Select the May Star Legend sailing">
+          <input type="radio" name="sailing" value="starlegendmay" data-label="Star Legend · Athens to Rome · May 2027">
+        </label>
+        <button class="s-open" type="button" data-target="body-starlegendmay" aria-expanded="false" aria-controls="body-starlegendmay">
+          <span class="s-chip">Option 3</span><span class="s-star">★ Worth your attention</span>
+          <span class="s-titles">
+            <span class="s-name">Star Legend</span>
+            <span class="s-meta">Windstar Cruises · Athens <span class="arrow">→</span> Rome · 8 nights · May 11–19, 2027</span>
+          </span>
+          <span class="s-priceblk">
+            <span class="s-price">$9,418.00</span>
+            <span class="s-pricesub">total · 2 guests</span>
+          </span>
+          <span class="chev">▼</span>
+        </button>
+      </div>
 
+      <div class="s-body" id="body-starlegendmay">
+        <div class="s-facts">
+          <div><span>Sailing</span><strong>May 11–19, 2027</strong></div>
+          <div><span>Length</span><strong>8 Nights</strong></div>
+          <div><span>Suite</span><strong>Category BS1</strong></div>
+          <div><span>Deposit Due</span><strong>Aug 28, 2026</strong></div>
+        </div>
+        <p class="callout" style="margin-top:22px;"><strong>This one runs the other direction — Athens to Rome — and it is a different kind of trip entirely.</strong> Nine ports in eight nights with no day at sea, on a ship carrying 312 guests instead of three thousand. The All-In package comes complimentary on this sailing, which means drinks, Wi-Fi and gratuities are already covered.</p>
+
+        <h4>Why this ship changes the itinerary</h4>
+        <p style="font-size:.98rem;color:var(--ink-soft);">Look at the port list and you'll notice something: you have probably not heard of half of them. Galaxidi. Fiskardo. Gallipoli. Reggio di Calabria. That isn't an accident, and it isn't a compromise — it's the entire reason to sail this ship.</p>
+        <p style="font-size:.98rem;color:var(--ink-soft);">Star Legend carries 312 guests. A large cruise ship carries ten times that, which means it needs deep water, a long quay, and a town with the infrastructure to absorb three thousand people stepping off at nine in the morning. There are perhaps twenty ports in the Mediterranean that qualify, which is why every big ship calls at the same ones. A small ship has no such constraint. It ties up in the middle of Sorrento. It anchors off a fishing village on Kephalonia. It goes to the places that are still, for the most part, just places.</p>
+        <p style="font-size:.98rem;color:var(--ink-soft);">The trade is intimacy for scale. There is no waterslide, no casino floor, no production show with a cast of forty. What there is instead: a stern platform that folds down in calm anchorages so you can swim, kayak, or paddleboard directly off the back of the ship; an open bridge you can walk onto and talk to the officers; no formal nights, no assigned dining time, no table you're expected at. You eat when you're hungry, with whoever you like.</p>
+
+        <h4>Where you go</h4>
+        <ul class="itin">
+          <li><div class="day">Tue · May 11</div><div class="place">Piraeus, Athens, Greece<em>Athens' port and your starting point. Come in a night or two early — the Acropolis and its museum deserve a full unhurried day.</em></div></li>
+          <li><div class="day">Wed · May 12</div><div class="place">Galaxidi, Greece — for Delphi<em>A quiet shipbuilders' town on the Gulf of Corinth, with Delphi about an hour inland. The sanctuary sits on the slope of Mount Parnassus above a valley of olive groves that runs to the sea. Large ships cannot call here at all.</em></div></li>
+          <li><div class="day">Thu · May 13</div><div class="place">Fiskardo, Kephalonia, Greece<em>The only village on Kephalonia to survive the 1953 earthquake intact, which is why the Venetian houses along the harbor are the real thing rather than a reconstruction. Small enough to walk end to end in fifteen minutes.</em></div></li>
+          <li><div class="day">Fri · May 14</div><div class="place">Gallipoli, Italy<em>Not the Turkish peninsula — this is Gallipoli in Puglia, on the Ionian side of the Salento. The old town sits on a limestone island joined to the mainland by a bridge, ringed by sea walls, with a baroque cathedral at its center.</em></div></li>
+          <li><div class="day">Sat · May 15</div><div class="place">Taranto, Italy<em>One of the great cities of Magna Graecia, founded by Spartans in the eighth century BC. The National Archaeological Museum holds the Ori di Taranto — Greek goldwork of a delicacy that is difficult to believe until you're standing in front of it.</em></div></li>
+          <li><div class="day">Sun · May 16</div><div class="place">Giardini Naxos, Sicily — for Taormina<em>Taormina is on the cliff directly above you, reached by a switchback road or the cable car. The Greek theatre frames Etna through its ruined stage wall, which is the single best-composed view in Sicily.</em></div></li>
+          <li><div class="day">Mon · May 17</div><div class="place">Reggio di Calabria, Italy<em>Across the strait from Sicily, and home to the Riace Bronzes — two Greek warriors pulled from the seabed in 1972, among the finest surviving bronzes from the ancient world. Almost nobody comes here. That's rather the point.</em></div></li>
+          <li><div class="day">Tue · May 18</div><div class="place">Sorrento, Italy<em>Tied up below the cliff town rather than an hour away at a commercial terminal. Pompeii, Capri and the Amalfi Drive all open up from here, or you can simply stay in Sorrento and eat well.</em></div></li>
+          <li><div class="day">Wed · May 19</div><div class="place">Civitavecchia, Rome, Italy<em>About 90 minutes northwest of central Rome. Build in days at the end if you can — arriving in Rome and leaving the next morning is a waste of a good city.</em></div></li>
+        </ul>
+        <p class="note">Nine ports across eight nights with no scheduled day at sea. That's a full itinerary — worth knowing going in if you were picturing lazy days by the pool. Ports of call and times may vary by departure date and are subject to weather and other conditions.</p>
+
+        <h4>Your accommodation<span class="room-code">BS1</span></h4>
+        <p style="font-size:.98rem;color:var(--ink-soft);">Star Legend is an all-suite, all-ocean-view ship. There is no inside cabin, no obstructed view, no hierarchy of decks to navigate. She was built in 1992 as a Seabourn vessel and cut in half in 2021 to have a new midsection installed — new suites, new dining rooms, new engines — so the ship is small in the way the old yachts were and current in the way the new ones are.</p>
+        <p class="note">Full specifications and deck placement for your Category BS1 suite are coming in a separate note. Bedding configuration can be requested but not guaranteed — tell me your preference and I'll put it on the reservation.</p>
+
+        <h4>What's included</h4>
+        <div class="grid2">
+          <ul class="feature-list">
+            <li>Eight nights in an ocean-view suite</li>
+            <li>All government taxes, fees and port expenses</li>
+            <li><strong>The All-In package, complimentary</strong> — the beverage package, Wi-Fi and crew gratuities, folded in rather than billed to your account. It covers what you spend <em>on</em> the ship; it does not cover what you do <em>off</em> it.</li>
+            <li><strong>$300 onboard credit</strong> per suite</li>
+            <li><strong>All dining venues</strong> — there is no surcharge restaurant on this ship, which is unusual and worth knowing</li>
+            <li><strong>Watersports platform</strong> — kayaks, paddleboards and swimming off the stern in calm anchorages</li>
+          </ul>
+          <ul class="feature-list">
+            <li><strong>Not included:</strong> airfare into Athens and home from Rome</li>
+            <li><strong>Not included:</strong> hotel nights and transfers before or after the sailing</li>
+            <li><strong>Not included:</strong> shore excursions — these are priced individually and are <em>not</em> part of the All-In package</li>
+            <li><strong>Not included:</strong> spa and salon services, and premium spirits above the package's selected brands</li>
+          </ul>
+        </div>
+
+        <p class="note">One thing worth planning for: with nine ports and no sea days, shore excursions are the real variable in what this trip costs. They're booked and paid separately from the fare. Tell me which ports you want guided and which you'd rather walk on your own, and I'll build you a plan with real numbers before you deposit — in several of these towns, walking off on your own is the better answer anyway.</p>
+
+        <h4>How this compares</h4>
+        <p style="font-size:.98rem;color:var(--ink-soft);">The number at the top of this bar is larger than the other two, and I'd rather explain that than let it sit there unaddressed. Some of the gap isn't a gap at all: drinks, Wi-Fi and gratuities are included here and are extra on the Princess sailings, so the fair comparison is this fare against those base fares <em>plus</em> a beverage package, a Wi-Fi plan and crew appreciation for two people for a week. Ask me and I'll price that out so you can see the two numbers side by side.</p>
+        <p style="font-size:.98rem;color:var(--ink-soft);">The rest of the difference is real, and it buys something specific: a ship with 312 guests instead of several thousand, an all-suite product with no category ladder to climb, dining with no surcharge tier, and an itinerary that no large ship can physically operate. Whether that's worth it depends entirely on what you want out of eight days. Tell me which way you're leaning and I'll give you my honest read.</p>
+
+        <h4>Payment schedule</h4>
+        <table class="pay-table">
+          <thead><tr><th>Payment</th><th>Due</th><th>Amount</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="lbl">Deposit<span class="sub">Confirms the suite</span></td>
+              <td>August 28, 2026<span class="sub">by 11:59 p.m.</span></td>
+              <td class="amt">$300.00</td>
+            </tr>
+            <tr>
+              <td class="lbl">Final payment<span class="sub">Balance of the cruise fare</span></td>
+              <td>February 10, 2027<span class="sub">by 11:59 p.m.</span></td>
+              <td class="amt">$9,118.00</td>
+            </tr>
+            <tr>
+              <td class="lbl">Total</td>
+              <td></td>
+              <td class="amt">$9,418.00</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="note">The deposit date is set by the cruise line, not by me — the fare and suite hold until then. Cancellation terms follow the cruise line's published schedule for this fare, and I'll confirm the specifics to you in writing before you place the deposit.</p>
+      </div>
+    </article>
+    <!-- ─── BAR 4 ─── -->
+    <article class="sailing" id="card-starlegendapr">
+      <div class="s-bar">
+        <label class="s-pick" aria-label="Select the April Star Legend sailing">
+          <input type="radio" name="sailing" value="starlegendapr" data-label="Star Legend · Rome to Athens · Apr 2027">
+        </label>
+        <button class="s-open" type="button" data-target="body-starlegendapr" aria-expanded="false" aria-controls="body-starlegendapr">
+          <span class="s-chip">Option 4</span><span class="s-star">★ Worth your attention</span>
+          <span class="s-titles">
+            <span class="s-name">Star Legend</span>
+            <span class="s-meta">Windstar Cruises · Rome <span class="arrow">→</span> Athens · 8 nights · Apr 1–9, 2027</span>
+          </span>
+          <span class="s-priceblk">
+            <span class="s-price">$10,218.00</span>
+            <span class="s-pricesub">total · 2 guests</span>
+          </span>
+          <span class="chev">▼</span>
+        </button>
+      </div>
+
+      <div class="s-body" id="body-starlegendapr">
+        <div class="s-facts">
+          <div><span>Sailing</span><strong>Apr 1–9, 2027</strong></div>
+          <div><span>Length</span><strong>8 Nights</strong></div>
+          <div><span>Suite</span><strong>Category BS1</strong></div>
+          <div><span>Deposit Due</span><strong>Aug 28, 2026</strong></div>
+        </div>
+        <p class="callout" style="margin-top:22px;"><strong>Rome to Athens, through the Corinth Canal.</strong> Nine ports in eight nights with no day at sea, on a ship carrying 312 guests instead of three thousand — and a canal transit no large ship can make. The All-In package comes complimentary on this sailing, which means drinks, Wi-Fi and gratuities are already covered.</p>
+
+        <h4>Why this ship changes the itinerary</h4>
+        <p style="font-size:.98rem;color:var(--ink-soft);">Look at the port list and you'll notice something: you have probably not heard of half of them. Galaxidi. Fiskardo. Gallipoli. Reggio di Calabria. That isn't an accident, and it isn't a compromise — it's the entire reason to sail this ship.</p>
+        <p style="font-size:.98rem;color:var(--ink-soft);">Star Legend carries 312 guests. A large cruise ship carries ten times that, which means it needs deep water, a long quay, and a town with the infrastructure to absorb three thousand people stepping off at nine in the morning. There are perhaps twenty ports in the Mediterranean that qualify, which is why every big ship calls at the same ones. A small ship has no such constraint. It ties up in the middle of Sorrento. It anchors off a fishing village on Kephalonia. It goes to the places that are still, for the most part, just places.</p>
+        <p style="font-size:.98rem;color:var(--ink-soft);">The trade is intimacy for scale. There is no waterslide, no casino floor, no production show with a cast of forty. What there is instead: a stern platform that folds down in calm anchorages so you can swim, kayak, or paddleboard directly off the back of the ship; an open bridge you can walk onto and talk to the officers; no formal nights, no assigned dining time, no table you're expected at. You eat when you're hungry, with whoever you like.</p>
+
+        <h4>Where you go</h4>
+        <ul class="itin">
+          <li><div class="day">Thu · Apr 1</div><div class="place">Civitavecchia, Rome, Italy<em>Embarkation. The port is about 90 minutes northwest of central Rome — come in ahead of the sailing, ideally two nights.</em></div></li>
+          <li><div class="day">Fri · Apr 2</div><div class="place">Sorrento, Italy<em>Tied up below the cliff town rather than an hour away at a commercial terminal. Pompeii, Capri and the Amalfi Drive all open up from here, or you can simply stay in Sorrento and eat well.</em></div></li>
+          <li><div class="day">Sat · Apr 3</div><div class="place">Reggio di Calabria, Italy<em>Across the strait from Sicily, and home to the Riace Bronzes — two Greek warriors pulled from the seabed in 1972, among the finest surviving bronzes from the ancient world. Almost nobody comes here. That's rather the point.</em></div></li>
+          <li><div class="day">Sun · Apr 4</div><div class="place">Giardini Naxos, Sicily — for Taormina<em>Taormina is on the cliff directly above you, reached by a switchback road or the cable car. The Greek theatre frames Etna through its ruined stage wall, which is the single best-composed view in Sicily.</em></div></li>
+          <li><div class="day">Mon · Apr 5</div><div class="place">Taranto, Italy<em>One of the great cities of Magna Graecia, founded by Spartans in the eighth century BC. The National Archaeological Museum holds the Ori di Taranto — Greek goldwork of a delicacy that is difficult to believe until you're standing in front of it.</em></div></li>
+          <li><div class="day">Tue · Apr 6</div><div class="place">Gallipoli, Italy<em>Not the Turkish peninsula — this is Gallipoli in Puglia, on the Ionian side of the Salento. The old town sits on a limestone island joined to the mainland by a bridge, ringed by sea walls, with a baroque cathedral at its center.</em></div></li>
+          <li><div class="day">Wed · Apr 7</div><div class="place">Fiskardo, Kephalonia, Greece<em>The only village on Kephalonia to survive the 1953 earthquake intact, which is why the Venetian houses along the harbor are the real thing rather than a reconstruction. Small enough to walk end to end in fifteen minutes.</em></div></li>
+          <li><div class="day">Thu · Apr 8</div><div class="place">Galaxidi, Greece — for Delphi<em>A quiet shipbuilders' town on the Gulf of Corinth, with Delphi about an hour inland. The sanctuary sits on the slope of Mount Parnassus above a valley of olive groves that runs to the sea. Large ships cannot call here at all.</em></div></li>
+          <li><div class="day">Fri · Apr 9</div><div class="place">Piraeus, Athens, Greece<em>Disembarkation. Stay on for Athens — the Acropolis and its museum deserve a full unhurried day, and it would be a shame to fly out having only seen the port.</em></div></li>
+        </ul>
+        <p class="note">Nine ports across eight nights with no scheduled day at sea. That's a full itinerary — worth knowing going in if you were picturing lazy days by the pool. Ports of call and times may vary by departure date and are subject to weather and other conditions.</p>
+
+        <h4>The Corinth Canal</h4>
+        <p style="font-size:.98rem;color:var(--ink-soft);">Between the Italian ports and the Greek ones, this sailing transits the Corinth Canal — a channel cut straight through the isthmus in 1893, four miles long, with limestone walls rising more than 200 feet on either side. It is barely 70 feet wide at the waterline. Ships pass through with a matter of feet to spare on each side, which is why almost no cruise ship can do it at all. Go up on deck for this one; it takes about half an hour and there is nothing else like it.</p>
+
+        <h4>Your accommodation<span class="room-code">BS1</span></h4>
+        <p style="font-size:.98rem;color:var(--ink-soft);">Star Legend is an all-suite, all-ocean-view ship. There is no inside cabin, no obstructed view, no hierarchy of decks to navigate. She was built in 1992 as a Seabourn vessel and cut in half in 2021 to have a new midsection installed — new suites, new dining rooms, new engines — so the ship is small in the way the old yachts were and current in the way the new ones are.</p>
+        <p class="note">Full specifications and deck placement for your Category BS1 suite are coming in a separate note. Bedding configuration can be requested but not guaranteed — tell me your preference and I'll put it on the reservation.</p>
+
+        <h4>What's included</h4>
+        <div class="grid2">
+          <ul class="feature-list">
+            <li>Eight nights in an ocean-view suite</li>
+            <li>All government taxes, fees and port expenses</li>
+            <li><strong>The All-In package, complimentary</strong> — the beverage package, Wi-Fi and crew gratuities, folded in rather than billed to your account. It covers what you spend <em>on</em> the ship; it does not cover what you do <em>off</em> it.</li>
+            <li><strong>$300 onboard credit</strong> per suite</li>
+            <li><strong>All dining venues</strong> — there is no surcharge restaurant on this ship, which is unusual and worth knowing</li>
+            <li><strong>Watersports platform</strong> — kayaks, paddleboards and swimming off the stern in calm anchorages</li>
+          </ul>
+          <ul class="feature-list">
+            <li><strong>Not included:</strong> airfare into Rome and home from Athens</li>
+            <li><strong>Not included:</strong> hotel nights and transfers before or after the sailing</li>
+            <li><strong>Not included:</strong> shore excursions — these are priced individually and are <em>not</em> part of the All-In package</li>
+            <li><strong>Not included:</strong> spa and salon services, and premium spirits above the package's selected brands</li>
+          </ul>
+        </div>
+
+        <p class="note">One thing worth planning for: with nine ports and no sea days, shore excursions are the real variable in what this trip costs. They're booked and paid separately from the fare. Tell me which ports you want guided and which you'd rather walk on your own, and I'll build you a plan with real numbers before you deposit — in several of these towns, walking off on your own is the better answer anyway.</p>
+
+        <h4>How this compares</h4>
+        <p style="font-size:.98rem;color:var(--ink-soft);">The number at the top of this bar is larger than the other two, and I'd rather explain that than let it sit there unaddressed. Some of the gap isn't a gap at all: drinks, Wi-Fi and gratuities are included here and are extra on the Princess sailings, so the fair comparison is this fare against those base fares <em>plus</em> a beverage package, a Wi-Fi plan and crew appreciation for two people for a week. Ask me and I'll price that out so you can see the two numbers side by side.</p>
+        <p style="font-size:.98rem;color:var(--ink-soft);">The rest of the difference is real, and it buys something specific: a ship with 312 guests instead of several thousand, an all-suite product with no category ladder to climb, dining with no surcharge tier, and an itinerary that no large ship can physically operate. Whether that's worth it depends entirely on what you want out of eight days. Tell me which way you're leaning and I'll give you my honest read.</p>
+
+        <h4>Payment schedule</h4>
+        <table class="pay-table">
+          <thead><tr><th>Payment</th><th>Due</th><th>Amount</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="lbl">Deposit<span class="sub">Confirms the suite</span></td>
+              <td>August 28, 2026<span class="sub">by 11:59 p.m.</span></td>
+              <td class="amt">$300.00</td>
+            </tr>
+            <tr>
+              <td class="lbl">Final payment<span class="sub">Balance of the cruise fare</span></td>
+              <td>January 1, 2027<span class="sub">by 11:59 p.m.</span></td>
+              <td class="amt">$9,918.00</td>
+            </tr>
+            <tr>
+              <td class="lbl">Total</td>
+              <td></td>
+              <td class="amt">$10,218.00</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="note">The deposit date is set by the cruise line, not by me — the fare and suite hold until then. Cancellation terms follow the cruise line's published schedule for this fare, and I'll confirm the specifics to you in writing before you place the deposit.</p>
+      </div>
+    </article>
+
+    <div class="card" style="margin-top:30px;padding:30px 32px;">
+      <p class="eyebrow" style="margin-bottom:10px;">Coming Next</p>
+      <h3 style="font-size:1.45rem;margin-bottom:14px;">The land portion</h3>
+      <p style="font-size:.99rem;color:var(--ink-soft);">Everything above is the cruise on its own. Once you settle on a sailing and the dates are locked, I'll build the land around it — roughly <strong style="color:var(--ink);font-weight:500;">three nights before you board and three after you step off</strong>, with hotels, transfers, guides and the flights to match.</p>
+      <p style="font-size:.99rem;color:var(--ink-soft);">That isn't padding. Every one of these sailings is one-way, so you're landing in one city and leaving from another — and arriving the morning your ship departs leaves no margin for a delayed connection. Three nights up front absorbs the jet lag and the risk. Three on the back end means Rome or Athens gets a real visit rather than a taxi ride to the airport.</p>
+      <div class="grid2" style="margin-top:22px;">
+        <ul class="feature-list">
+          <li><strong>Before you sail</strong> — hotel, arrival transfer, and a guided day or two while your body clock catches up</li>
+          <li><strong>After you sail</strong> — hotel, disembarkation transfer, and time in the city you finish in</li>
+        </ul>
+        <ul class="feature-list">
+          <li><strong>Three of these four</strong> start in Rome and end in Athens; the May 11 Star Legend runs the reverse, so the cities swap ends</li>
+          <li><strong>Flights</strong> are multi-city on all four, and I'll price those alongside the hotels rather than leaving you to piece it together</li>
+        </ul>
+      </div>
+      <p class="note">None of that is in the totals shown above — the land portion is quoted separately once you've chosen a sailing, so you can see the cruise clearly first and then decide how much city you want on either end.</p>
+    </div>
   </div>
 </section>
 
@@ -713,10 +736,10 @@ a{color:var(--aqua-dark);}
     <hr class="rule">
 
     <div class="price-block">
-      <p class="price-basis" id="sum-basis">Star Legend · Rome to Athens · 8 nights · two guests</p>
-      <p class="price-amount" id="sum-total">Est. $10,218.00</p>
-      <p class="price-pp" id="sum-pp">Total for both guests · approximately $5,109.00 per person</p>
-      <p id="sum-note" style="font-size:.9rem;color:var(--ink-soft);margin:18px 0 0;">Includes the All-In package and $300 onboard credit per suite. Select a different sailing above and this updates.</p>
+      <p class="price-basis" id="sum-basis">Sun Princess · 7 nights · two guests</p>
+      <p class="price-amount" id="sum-total">Est. $4,590.00</p>
+      <p class="price-pp" id="sum-pp">Total for both guests · approximately $2,295.00 per person</p>
+      <p id="sum-note" style="font-size:.9rem;color:var(--ink-soft);margin:18px 0 0;">Includes $50 onboard credit per stateroom. Select a different sailing above and this updates.</p>
     </div>
 
     <p class="commit" style="margin-top:30px;">We check every component against public rates and meet or beat them. You're not paying a premium for our convenience — you're paying for the rest of what we do.</p>
@@ -766,10 +789,10 @@ a{color:var(--aqua-dark);}
             <div class="field">
               <label for="f-opt">Which sailing interests you</label>
               <select id="f-opt" name="option_interest">
-                <option>Star Legend · Rome to Athens · Apr 2027</option>
                 <option>Sun Princess · Rome to Athens · May 2027</option>
-                <option>Star Legend · Athens to Rome · May 2027</option>
                 <option>Enchanted Princess · Rome to Athens · May 2027</option>
+                <option>Star Legend · Athens to Rome · May 2027</option>
+                <option>Star Legend · Rome to Athens · Apr 2027</option>
                 <option>Still deciding</option>
               </select>
             </div>
@@ -821,8 +844,8 @@ a{color:var(--aqua-dark);}
 <div class="sticky-bar" id="sticky-bar">
   <div style="text-align:left;">
     <span class="sb-label">Est. Total · 2 Guests</span>
-    <span class="sb-amt" id="sticky-total">$10,218.00</span>
-    <span class="sb-sub" id="sticky-sub">Star Legend · Apr 1–9</span>
+    <span class="sb-amt" id="sticky-total">$4,590.00</span>
+    <span class="sb-sub" id="sticky-sub">Sun Princess · May 9–16</span>
   </div>
   <a href="#respond" class="btn btn--sm">Respond</a>
 </div>
@@ -837,16 +860,16 @@ a{color:var(--aqua-dark);}
 
   /* ── Sailing data. Add a key here when a new bar is added. ── */
   var SAILINGS = {
-    starlegendapr: {
-      total: 10218.00, guests: 2,
-      basis: 'Star Legend · Rome to Athens · 8 nights · two guests',
-      short: 'Star Legend · Apr 1–9',
-      note: 'Includes the All-In package and $300 onboard credit per suite. Select a different sailing above and this updates.'
-    },
     sunprincess: {
       total: 4590.00, guests: 2,
       basis: 'Sun Princess · 7 nights · two guests',
       short: 'Sun Princess · May 9–16',
+      note: 'Includes $50 onboard credit per stateroom. Select a different sailing above and this updates.'
+    },
+    enchanted: {
+      total: 5192.00, guests: 2,
+      basis: 'Enchanted Princess · 10 nights · two guests',
+      short: 'Enchanted Princess · May 22–Jun 1',
       note: 'Includes $50 onboard credit per stateroom. Select a different sailing above and this updates.'
     },
     starlegendmay: {
@@ -855,11 +878,11 @@ a{color:var(--aqua-dark);}
       short: 'Star Legend · May 11–19',
       note: 'Includes the All-In package and $300 onboard credit per suite. Select a different sailing above and this updates.'
     },
-    enchanted: {
-      total: 5192.00, guests: 2,
-      basis: 'Enchanted Princess · 10 nights · two guests',
-      short: 'Enchanted Princess · May 22–Jun 1',
-      note: 'Includes $50 onboard credit per stateroom. Select a different sailing above and this updates.'
+    starlegendapr: {
+      total: 10218.00, guests: 2,
+      basis: 'Star Legend · Rome to Athens · 8 nights · two guests',
+      short: 'Star Legend · Apr 1–9',
+      note: 'Includes the All-In package and $300 onboard credit per suite. Select a different sailing above and this updates.'
     }
   };
 
