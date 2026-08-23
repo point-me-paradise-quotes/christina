@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mediterranean 2027 · Miglicco Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --aqua-pale:#C4E4E1;
+  --aqua-mist:#EAF3F2;
+  --aqua:#75AFB1;
+  --aqua-dark:#4F8A8C;
+  --sand:#ECE7DC;
+  --sand-light:#F4F1E9;
+  --gold-whisper:#D6C8A8;
+  --white:#FFFFFF;
+  --paper:#FBFDFD;
+  --ink:#2B2420;
+  --ink-soft:#6B6359;
+  --line:#E5E9E8;
+
+  /* HERO IMAGE — swap this URL to change the header photo.
+     Set to none and the gradient wash carries the hero on its own. */
+  --hero-photo:url('https://cms.cruiseline.co.uk/wp-content/uploads/2023/08/star-legend.jpg');
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+  font-weight:400;font-size:1rem;line-height:1.68;
+  -webkit-font-smoothing:antialiased;padding-bottom:84px;
+}
+h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:500;color:var(--ink);margin:0;line-height:1.22;}
+p{margin:0 0 1em;}
+a{color:var(--aqua-dark);}
+
+.wrap{max-width:960px;margin:0 auto;padding:0 26px;}
+.section{padding:60px 0;}
+.section--band{background:var(--aqua-mist);}
+.section--paper{background:var(--paper);}
+
+.eyebrow{
+  font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--aqua-dark);margin:0 0 14px;
+}
+.h-sec{font-size:1.9rem;}
+.rule{width:52px;height:2px;background:var(--aqua);border:0;margin:22px 0;}
+
+/* ───────── HERO ───────── */
+.pmtp-hero{
+  position:relative;
+  background-color:var(--aqua-mist);
+  background-image:var(--hero-photo);
+  background-size:cover;background-position:center;
+  padding:78px 32px 60px;text-align:center;overflow:hidden;
+}
+.pmtp-hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse at 22% 4%, rgba(255,255,255,.72) 0%, rgba(255,255,255,0) 60%),
+    linear-gradient(162deg,
+      rgba(255,255,255,.90) 0%,
+      rgba(255,255,255,.74) 38%,
+      rgba(234,243,242,.80) 72%,
+      rgba(196,228,225,.86) 100%);
+}
+.pmtp-hero > *{position:relative;z-index:2;}
+.pmtp-wordmark{
+  font-family:'Playfair Display',serif;font-size:11px;font-weight:600;
+  letter-spacing:0.22em;text-transform:uppercase;color:var(--aqua-dark);margin:0 0 6px;
+}
+.hero-sig{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.98rem;color:var(--ink-soft);margin:0 0 34px;}
+.pmtp-hero h1{font-size:clamp(2.3rem,6.2vw,3.6rem);font-weight:600;letter-spacing:-.01em;margin:0 0 10px;}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.2rem,3vw,1.5rem);color:var(--ink-soft);margin:0 0 30px;}
+.hero-meta{
+  display:flex;flex-wrap:wrap;justify-content:center;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  max-width:620px;margin:0 auto;padding:16px 0;background:rgba(255,255,255,.74);
+}
+.hero-meta div{padding:4px 20px;text-align:center;flex:1 1 130px;}
+.hero-meta span{display:block;font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--aqua-dark);margin-bottom:3px;}
+.hero-meta strong{font-family:'Playfair Display',serif;font-weight:500;font-size:1.02rem;}
+.hero-for{margin:26px 0 0;font-size:.86rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);font-weight:500;}
+
+/* ───────── COMMITMENTS ───────── */
+.commit{
+  background:var(--aqua-pale);border-radius:4px;padding:26px 30px;
+  font-family:'Cormorant Garamond',serif;font-size:1.2rem;line-height:1.62;color:var(--ink);margin:0;
+}
+.commit--plain{background:var(--white);border:1px solid var(--line);}
+
+.lede{font-size:1.08rem;line-height:1.78;color:var(--ink-soft);}
+.lede strong{color:var(--ink);font-weight:500;}
+
+/* ───────── SAILING BARS ───────── */
+.sailing{
+  background:var(--white);border:1px solid var(--line);border-radius:5px;
+  margin-bottom:18px;overflow:hidden;transition:border-color .2s ease,box-shadow .2s ease;
+}
+.sailing.is-selected{border-color:var(--aqua);box-shadow:0 0 0 1px var(--aqua);}
+
+.s-bar{display:flex;align-items:stretch;}
+.s-pick{
+  display:flex;align-items:center;flex:0 0 auto;
+  padding:0 14px 0 20px;cursor:pointer;border-right:1px solid var(--line);
+}
+.s-pick input{width:18px;height:18px;accent-color:var(--aqua-dark);cursor:pointer;margin:0;}
+.s-open{
+  flex:1 1 auto;min-width:0;display:flex;align-items:center;gap:16px;
+  background:none;border:0;text-align:left;cursor:pointer;
+  padding:13px 20px;font-family:'DM Sans',sans-serif;color:var(--ink);
+  transition:background .18s ease;
+}
+.s-open:hover{background:var(--aqua-mist);}
+.s-open:focus-visible{outline:2px solid var(--aqua);outline-offset:-2px;}
+.s-chip{
+  flex:0 0 auto;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  background:var(--aqua-mist);color:var(--aqua-dark);border:1px solid var(--aqua-pale);
+  padding:5px 10px;border-radius:3px;white-space:nowrap;
+}
+.s-titles{flex:1 1 200px;min-width:0;}
+.s-name{font-family:'Playfair Display',serif;font-weight:500;font-size:1.1rem;line-height:1.25;display:block;}
+.s-meta{display:block;font-size:.82rem;color:var(--ink-soft);margin-top:1px;line-height:1.45;}
+.s-meta .arrow{color:var(--aqua-dark);font-weight:600;}
+.s-priceblk{flex:0 0 auto;text-align:right;}
+.s-price{font-family:'Playfair Display',serif;font-weight:600;font-size:1.15rem;line-height:1.15;display:block;}
+.s-pricesub{font-size:.74rem;color:var(--ink-soft);display:block;}
+.chev{flex:0 0 auto;font-size:11px;color:var(--aqua-dark);transition:transform .2s ease;}
+.s-open[aria-expanded="true"] .chev{transform:rotate(180deg);}
+
+.s-facts{display:flex;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:0 0 4px;}
+.s-facts div{flex:1 1 130px;padding:14px 18px;border-right:1px solid var(--line);}
+.s-facts div:last-child{border-right:0;}
+.s-facts span{display:block;font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--aqua-dark);margin-bottom:3px;}
+.s-facts strong{font-family:'Playfair Display',serif;font-weight:500;font-size:.98rem;}
+
+.s-body{display:none;padding:18px 28px 30px;}
+.s-body.open{display:block;}
+.s-body h4{font-size:1.12rem;margin:30px 0 12px;}
+.s-body h4:first-child{margin-top:22px;}
+
+.callout{background:var(--aqua-pale);border-radius:4px;padding:16px 20px;font-size:.93rem;line-height:1.6;color:var(--ink);margin:0;}
+.callout strong{font-weight:600;}
+
+.itin{list-style:none;margin:0;padding:0;}
+.itin li{display:flex;gap:18px;padding:14px 0;border-bottom:1px solid var(--line);align-items:baseline;}
+.itin li:last-child{border-bottom:0;}
+.itin .day{flex:0 0 96px;font-size:10px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--aqua-dark);}
+.itin .place{flex:1 1 auto;font-size:.99rem;color:var(--ink);}
+.itin .place em{display:block;font-family:'DM Sans',sans-serif;font-style:normal;font-size:.87rem;color:var(--ink-soft);margin-top:2px;}
+
+.feature-list{list-style:none;margin:0;padding:0;}
+.feature-list li{position:relative;padding:0 0 0 21px;margin-bottom:10px;font-size:.95rem;color:var(--ink-soft);line-height:1.6;}
+.feature-list li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--aqua);}
+.feature-list strong{color:var(--ink);font-weight:500;}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+
+.room-code{
+  display:inline-block;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;
+  letter-spacing:.14em;background:var(--aqua);color:var(--white);
+  padding:4px 10px;border-radius:3px;margin-left:8px;vertical-align:middle;
+}
+.note{font-size:.87rem;color:var(--ink-soft);line-height:1.62;border-left:2px solid var(--aqua);padding-left:16px;margin:18px 0 0;}
+
+.pay-table{width:100%;border-collapse:collapse;margin-top:6px;}
+.pay-table th{text-align:left;font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--aqua-dark);padding:0 0 11px;border-bottom:1px solid var(--line);}
+.pay-table td{padding:14px 0;border-bottom:1px solid var(--line);font-size:.95rem;color:var(--ink-soft);vertical-align:top;}
+.pay-table tr:last-child td{border-bottom:0;}
+.pay-table td:last-child,.pay-table th:last-child{text-align:right;}
+.pay-table .amt{font-family:'Playfair Display',serif;font-size:1.08rem;font-weight:500;color:var(--ink);white-space:nowrap;}
+.pay-table .lbl{color:var(--ink);font-weight:500;}
+.pay-table .sub{font-weight:400;font-size:.86rem;display:block;}
+
+/* ───────── PRICING SUMMARY ───────── */
+.price-block{background:var(--white);border:1px solid var(--line);border-radius:4px;padding:34px 32px;text-align:center;}
+.price-basis{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem;color:var(--ink-soft);margin:0 0 4px;}
+.price-amount{font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(2.4rem,7vw,3.3rem);line-height:1;color:var(--ink);margin:6px 0 8px;letter-spacing:-.02em;}
+.price-pp{font-size:.9rem;color:var(--ink-soft);margin:0;}
+.disclaimer{font-size:.85rem;color:var(--ink-soft);line-height:1.6;border-left:2px solid var(--aqua);padding-left:16px;margin:26px 0 0;}
+
+/* ───────── STICKY BAR ───────── */
+.sticky-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--white);
+  border-top:1px solid var(--line);box-shadow:0 -3px 18px rgba(43,36,32,.07);
+  padding:12px 20px;display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;
+  transform:translateY(120%);transition:transform .28s ease;
+}
+.sticky-bar.show{transform:translateY(0);}
+.sb-label{display:block;font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--aqua-dark);}
+.sb-amt{font-family:'Playfair Display',serif;font-weight:600;font-size:1.3rem;color:var(--ink);}
+.sb-sub{font-size:.78rem;color:var(--ink-soft);}
+
+.btn{
+  display:inline-block;background:var(--aqua-dark);color:var(--white);
+  font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;letter-spacing:.03em;
+  border:0;border-radius:3px;padding:14px 30px;cursor:pointer;text-decoration:none;transition:background .2s ease;
+}
+.btn:hover{background:var(--aqua);}
+.btn:disabled{opacity:.6;cursor:default;}
+.btn--sm{padding:11px 22px;}
+
+/* ───────── FORM ───────── */
+.form-shell{background:var(--white);border:1px solid var(--line);border-radius:4px;padding:36px 34px;}
+.field{margin-bottom:20px;}
+.field label{display:block;font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:7px;}
+.field .opt{text-transform:none;letter-spacing:0;font-weight:400;}
+.field input,.field select,.field textarea{
+  width:100%;font-family:'DM Sans',sans-serif;font-size:16px;color:var(--ink);
+  background:var(--paper);border:1px solid var(--line);border-radius:3px;padding:13px 14px;line-height:1.5;
+}
+.field textarea{min-height:118px;resize:vertical;}
+.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--aqua);outline-offset:1px;border-color:var(--aqua);}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 20px;}
+#thank-you{display:none;}
+.ty-box{background:var(--aqua-pale);border-radius:4px;padding:34px 30px;text-align:center;}
+.ty-box h3{font-size:1.5rem;margin-bottom:10px;}
+.ty-box p{margin:0;color:var(--ink-soft);}
+
+/* ───────── FOOTER ───────── */
+.pmtp-footer{background:var(--sand-light);padding:52px 26px 46px;text-align:center;}
+.f-name{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:500;margin:0 0 4px;}
+.f-title{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--aqua-dark);margin:0 0 18px;}
+.f-line{font-size:.95rem;color:var(--ink-soft);margin:0 0 5px;}
+.f-agency{font-family:'Playfair Display',serif;font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--aqua-dark);margin:24px 0 6px;}
+.f-tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:var(--ink-soft);margin:0;}
+.legal{max-width:780px;margin:34px auto 0;font-size:.78rem;line-height:1.65;color:var(--ink-soft);border-top:1px solid var(--line);padding-top:22px;}
+
+@media (max-width:760px){
+  .section{padding:46px 0;}
+  .pmtp-hero{padding:56px 22px 44px;}
+  .grid2,.form-grid{grid-template-columns:1fr;}
+  .s-body{padding-left:20px;padding-right:20px;}
+  .s-open{flex-wrap:wrap;gap:8px 12px;padding:12px 16px;}
+  .s-pick{padding:0 10px 0 14px;}
+  .s-titles{flex:1 1 100%;order:2;}
+  .s-chip{order:1;}
+  .chev{order:1;margin-left:auto;}
+  .s-priceblk{order:3;text-align:left;flex:1 1 100%;}
+  .s-price{display:inline;font-size:1.05rem;}
+  .s-pricesub{display:inline;margin-left:6px;}
+  .s-facts div{flex:1 1 100%;border-right:0;border-bottom:1px solid var(--line);}
+  .s-facts div:last-child{border-bottom:0;}
+  .itin li{flex-wrap:wrap;gap:4px 14px;}
+  .itin .day{flex:0 0 100%;}
+  .price-block,.form-shell{padding:26px 20px;}
+  .sticky-bar{gap:12px;padding:10px 14px;}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none !important;scroll-behavior:auto !important;}}
+</style>
+</head>
+<body>
+
+<!-- ══════════ HERO ══════════ -->
+<header class="pmtp-hero">
+  <p class="pmtp-wordmark">Point Me to Paradise Travel</p>
+  <p class="hero-sig">Curated Journeys · Expert Advisors</p>
+  <h1>The Mediterranean</h1>
+  <p class="hero-sub">One-way sailings — board in one country, leave from another</p>
+  <div class="hero-meta">
+    <div><span>Season</span><strong>Spring 2027</strong></div>
+    <div><span>Routing</span><strong>Open Jaw</strong></div>
+    <div><span>Guests</span><strong>Two</strong></div>
+  </div>
+  <p class="hero-for">Prepared for the Miglicco Group</p>
+</header>
+
+<!-- ══════════ OVERVIEW ══════════ -->
+<section class="section section--paper">
+  <div class="wrap">
+    <p class="eyebrow">The Trip</p>
+    <h2 class="h-sec">One-way through the Mediterranean</h2>
+    <hr class="rule">
+    <p class="lede">Every sailing here is <strong>open jaw</strong> — you board in one port and step off in another, hundreds of miles away. That's the whole advantage. A round-trip itinerary has to spend its last days sailing back to where it started; a one-way spends them pushing further east. You see more coastline and repeat nothing.</p>
+    <p class="lede">It does change how the trip gets booked. Your flights are a multi-city ticket rather than a round-trip, and you'll want a night or two at the embarkation port before you sail — not as a luxury, but as insurance. A delayed connection on the day the ship leaves is the one problem nobody can fix from the pier.</p>
+    <p class="lede">Four sailings, listed in date order. Three run Rome to Athens; one reverses it. Two are large Princess ships and two are the same small Windstar yacht sailing the route in opposite directions. Open any bar for the full itinerary, accommodation, pricing and payment dates — pick one and the total at the bottom of the page follows along.</p>
+    <p class="commit" style="margin-top:34px;">We don't book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. The work you'd hate doing — already done.</p>
+  </div>
+</section>
+
+<!-- ══════════ SAILINGS ══════════ -->
+<section class="section section--band" id="sailings">
+  <div class="wrap">
+    <p class="eyebrow">Your Options</p>
+    <h2 class="h-sec">Four sailings</h2>
+    <hr class="rule">
+
+    <!-- ─── BAR 1 ─── -->
+    <article class="sailing is-selected" id="card-starlegendapr">
+      <div class="s-bar">
+        <label class="s-pick" aria-label="Select the April Star Legend sailing">
+          <input type="radio" name="sailing" value="starlegendapr" data-label="Star Legend · Rome to Athens · Apr 2027" checked>
+        </label>
+        <button class="s-open" type="button" data-target="body-starlegendapr" aria-expanded="false" aria-controls="body-starlegendapr">
+          <span class="s-chip">Option 1</span>
+          <span class="s-titles">
+            <span class="s-name">Star Legend</span>
+            <span class="s-meta">Windstar Cruises · Rome <span class="arrow">→</span> Athens · 8 nights · Apr 1–9, 2027</span>
+          </span>
+          <span class="s-priceblk">
+            <span class="s-price">$10,218.00</span>
+            <span class="s-pricesub">total · 2 guests</span>
+          </span>
+          <span class="chev">▼</span>
+        </button>
+      </div>
+
+      <div class="s-body" id="body-starlegendapr">
+        <div class="s-facts">
+          <div><span>Sailing</span><strong>Apr 1–9, 2027</strong></div>
+          <div><span>Length</span><strong>8 Nights</strong></div>
+          <div><span>Suite</span><strong>Category BS1</strong></div>
+          <div><span>Deposit Due</span><strong>Aug 28, 2026</strong></div>
+        </div>
+        <p class="callout" style="margin-top:22px;"><strong>Rome to Athens, through the Corinth Canal.</strong> Nine ports in eight nights with no day at sea, on a ship carrying 312 guests instead of three thousand — and a canal transit no large ship can make. The All-In package comes complimentary on this sailing, which means drinks, Wi-Fi and gratuities are already covered.</p>
+
+        <h4>Why this ship changes the itinerary</h4>
+        <p style="font-size:.98rem;color:var(--ink-soft);">Look at the port list and you'll notice something: you have probably not heard of half of them. Galaxidi. Fiskardo. Gallipoli. Reggio di Calabria. That isn't an accident, and it isn't a compromise — it's the entire reason to sail this ship.</p>
+        <p style="font-size:.98rem;color:var(--ink-soft);">Star Legend carries 312 guests. A large cruise ship carries ten times that, which means it needs deep water, a long quay, and a town with the infrastructure to absorb three thousand people stepping off at nine in the morning. There are perhaps twenty ports in the Mediterranean that qualify, which is why every big ship calls at the same ones. A small ship has no such constraint. It ties up in the middle of Sorrento. It anchors off a fishing village on Kephalonia. It goes to the places that are still, for the most part, just places.</p>
+        <p style="font-size:.98rem;color:var(--ink-soft);">The trade is intimacy for scale. There is no waterslide, no casino floor, no production show with a cast of forty. What there is instead: a stern platform that folds down in calm anchorages so you can swim, kayak, or paddleboard directly off the back of the ship; an open bridge you can walk onto and talk to the officers; no formal nights, no assigned dining time, no table you're expected at. You eat when you're hungry, with whoever you like.</p>
+
+        <h4>Where you go</h4>
+        <ul class="itin">
+          <li><div class="day">Thu · Apr 1</div><div class="place">Civitavecchia, Rome, Italy<em>Embarkation. The port is about 90 minutes northwest of central Rome — come in ahead of the sailing, ideally two nights.</em></div></li>
+          <li><div class="day">Fri · Apr 2</div><div class="place">Sorrento, Italy<em>Tied up below the cliff town rather than an hour away at a commercial terminal. Pompeii, Capri and the Amalfi Drive all open up from here, or you can simply stay in Sorrento and eat well.</em></div></li>
+          <li><div class="day">Sat · Apr 3</div><div class="place">Reggio di Calabria, Italy<em>Across the strait from Sicily, and home to the Riace Bronzes — two Greek warriors pulled from the seabed in 1972, among the finest surviving bronzes from the ancient world. Almost nobody comes here. That's rather the point.</em></div></li>
+          <li><div class="day">Sun · Apr 4</div><div class="place">Giardini Naxos, Sicily — for Taormina<em>Taormina is on the cliff directly above you, reached by a switchback road or the cable car. The Greek theatre frames Etna through its ruined stage wall, which is the single best-composed view in Sicily.</em></div></li>
+          <li><div class="day">Mon · Apr 5</div><div class="place">Taranto, Italy<em>One of the great cities of Magna Graecia, founded by Spartans in the eighth century BC. The National Archaeological Museum holds the Ori di Taranto — Greek goldwork of a delicacy that is difficult to believe until you're standing in front of it.</em></div></li>
+          <li><div class="day">Tue · Apr 6</div><div class="place">Gallipoli, Italy<em>Not the Turkish peninsula — this is Gallipoli in Puglia, on the Ionian side of the Salento. The old town sits on a limestone island joined to the mainland by a bridge, ringed by sea walls, with a baroque cathedral at its center.</em></div></li>
+          <li><div class="day">Wed · Apr 7</div><div class="place">Fiskardo, Kephalonia, Greece<em>The only village on Kephalonia to survive the 1953 earthquake intact, which is why the Venetian houses along the harbor are the real thing rather than a reconstruction. Small enough to walk end to end in fifteen minutes.</em></div></li>
+          <li><div class="day">Thu · Apr 8</div><div class="place">Galaxidi, Greece — for Delphi<em>A quiet shipbuilders' town on the Gulf of Corinth, with Delphi about an hour inland. The sanctuary sits on the slope of Mount Parnassus above a valley of olive groves that runs to the sea. Large ships cannot call here at all.</em></div></li>
+          <li><div class="day">Fri · Apr 9</div><div class="place">Piraeus, Athens, Greece<em>Disembarkation. Stay on for Athens — the Acropolis and its museum deserve a full unhurried day, and it would be a shame to fly out having only seen the port.</em></div></li>
+        </ul>
+        <p class="note">Nine ports across eight nights with no scheduled day at sea. That's a full itinerary — worth knowing going in if you were picturing lazy days by the pool. Ports of call and times may vary by departure date and are subject to weather and other conditions.</p>
+
+        <h4>The Corinth Canal</h4>
+        <p style="font-size:.98rem;color:var(--ink-soft);">Between the Italian ports and the Greek ones, this sailing transits the Corinth Canal — a channel cut straight through the isthmus in 1893, four miles long, with limestone walls rising more than 200 feet on either side. It is barely 70 feet wide at the waterline. Ships pass through with a matter of feet to spare on each side, which is why almost no cruise ship can do it at all. Go up on deck for this one; it takes about half an hour and there is nothing else like it.</p>
+
+        <h4>Your accommodation<span class="room-code">BS1</span></h4>
+        <p style="font-size:.98rem;color:var(--ink-soft);">Star Legend is an all-suite, all-ocean-view ship. There is no inside cabin, no obstructed view, no hierarchy of decks to navigate. She was built in 1992 as a Seabourn vessel and cut in half in 2021 to have a new midsection installed — new suites, new dining rooms, new engines — so the ship is small in the way the old yachts were and current in the way the new ones are.</p>
+        <p class="note">Full specifications and deck placement for your Category BS1 suite are coming in a separate note. Bedding configuration can be requested but not guaranteed — tell me your preference and I'll put it on the reservation.</p>
+
+        <h4>What's included</h4>
+        <div class="grid2">
+          <ul class="feature-list">
+            <li>Eight nights in an ocean-view suite</li>
+            <li>All government taxes, fees and port expenses</li>
+            <li><strong>The All-In package, complimentary</strong> — the beverage package, Wi-Fi and crew gratuities, folded in rather than billed to your account. It covers what you spend <em>on</em> the ship; it does not cover what you do <em>off</em> it.</li>
+            <li><strong>$300 onboard credit</strong> per suite</li>
+            <li><strong>All dining venues</strong> — there is no surcharge restaurant on this ship, which is unusual and worth knowing</li>
+            <li><strong>Watersports platform</strong> — kayaks, paddleboards and swimming off the stern in calm anchorages</li>
+          </ul>
+          <ul class="feature-list">
+            <li><strong>Not included:</strong> airfare into Rome and home from Athens</li>
+            <li><strong>Not included:</strong> hotel nights and transfers before or after the sailing</li>
+            <li><strong>Not included:</strong> shore excursions — these are priced individually and are <em>not</em> part of the All-In package</li>
+            <li><strong>Not included:</strong> spa and salon services, and premium spirits above the package's selected brands</li>
+          </ul>
+        </div>
+
+        <p class="note">One thing worth planning for: with nine ports and no sea days, shore excursions are the real variable in what this trip costs. They're booked and paid separately from the fare. Tell me which ports you want guided and which you'd rather walk on your own, and I'll build you a plan with real numbers before you deposit — in several of these towns, walking off on your own is the better answer anyway.</p>
+
+        <h4>How this compares</h4>
+        <p style="font-size:.98rem;color:var(--ink-soft);">The number at the top of this bar is larger than the other two, and I'd rather explain that than let it sit there unaddressed. Some of the gap isn't a gap at all: drinks, Wi-Fi and gratuities are included here and are extra on the Princess sailings, so the fair comparison is this fare against those base fares <em>plus</em> a beverage package, a Wi-Fi plan and crew appreciation for two people for a week. Ask me and I'll price that out so you can see the two numbers side by side.</p>
+        <p style="font-size:.98rem;color:var(--ink-soft);">The rest of the difference is real, and it buys something specific: a ship with 312 guests instead of several thousand, an all-suite product with no category ladder to climb, dining with no surcharge tier, and an itinerary that no large ship can physically operate. Whether that's worth it depends entirely on what you want out of eight days. Tell me which way you're leaning and I'll give you my honest read.</p>
+
+        <h4>Payment schedule</h4>
+        <table class="pay-table">
+          <thead><tr><th>Payment</th><th>Due</th><th>Amount</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="lbl">Deposit<span class="sub">Confirms the suite</span></td>
+              <td>August 28, 2026<span class="sub">by 11:59 p.m.</span></td>
+              <td class="amt">$300.00</td>
+            </tr>
+            <tr>
+              <td class="lbl">Final payment<span class="sub">Balance of the cruise fare</span></td>
+              <td>January 1, 2027<span class="sub">by 11:59 p.m.</span></td>
+              <td class="amt">$9,918.00</td>
+            </tr>
+            <tr>
+              <td class="lbl">Total</td>
+              <td></td>
+              <td class="amt">$10,218.00</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="note">The deposit date is set by the cruise line, not by me — the fare and suite hold until then. Cancellation terms follow the cruise line's published schedule for this fare, and I'll confirm the specifics to you in writing before you place the deposit.</p>
+      </div>
+    </article>
+    <!-- ─── BAR 2 ─── -->
+    <article class="sailing" id="card-sunprincess">
+      <div class="s-bar">
+        <label class="s-pick" aria-label="Select the Sun Princess sailing">
+          <input type="radio" name="sailing" value="sunprincess" data-label="Sun Princess · Rome to Athens · May 2027">
+        </label>
+        <button class="s-open" type="button" data-target="body-sunprincess" aria-expanded="false" aria-controls="body-sunprincess">
+          <span class="s-chip">Option 2</span>
+          <span class="s-titles">
+            <span class="s-name">Sun Princess</span>
+            <span class="s-meta">Princess Cruises · Rome <span class="arrow">→</span> Athens · 7 nights · May 9–16, 2027</span>
+          </span>
+          <span class="s-priceblk">
+            <span class="s-price">$4,590.00</span>
+            <span class="s-pricesub">total · 2 guests</span>
+          </span>
+          <span class="chev">▼</span>
+        </button>
+      </div>
+
+      <div class="s-body" id="body-sunprincess">
+        <div class="s-facts">
+          <div><span>Sailing</span><strong>May 9–16, 2027</strong></div>
+          <div><span>Length</span><strong>7 Nights</strong></div>
+          <div><span>Stateroom</span><strong>Category DA</strong></div>
+          <div><span>Deposit Due</span><strong>Aug 25, 2026</strong></div>
+        </div>
+        <p class="callout" style="margin-top:22px;"><strong>Four ports in seven nights, with two sea days.</strong> The shorter, less crowded of the two routings — and the newer ship. Sun Princess entered service in 2024.</p>
+
+        <h4>Where you go</h4>
+        <ul class="itin">
+          <li><div class="day">Sun · May 9</div><div class="place">Civitavecchia (for Rome), Italy<em>Embarkation, departing 6:00 p.m. The port is about 90 minutes northwest of central Rome — come in ahead of the sailing.</em></div></li>
+          <li><div class="day">Mon · May 10</div><div class="place">Naples, Italy<em>7:00 a.m. to 7:00 p.m. Pompeii is roughly 40 minutes out; Capri is a ferry from the port. Twelve hours is enough for one of them done properly, not both.</em></div></li>
+          <li><div class="day">Tue · May 11</div><div class="place">At sea</div></li>
+          <li><div class="day">Wed · May 12</div><div class="place">Crete (Chania), Greece<em>8:00 a.m. to 6:00 p.m. The Venetian harbor is a short walk from the berth — arcaded waterfront, a lighthouse at the end of the mole, and the best market food on the island.</em></div></li>
+          <li><div class="day">Thu · May 13</div><div class="place">At sea</div></li>
+          <li><div class="day">Fri · May 14</div><div class="place">Kusadasi, Türkiye (for Ephesus)<em>7:00 a.m. to 6:00 p.m. Eleven hours ashore — comfortable for Ephesus plus the Terrace Houses, with time left for the hill village of Şirince if you want it.</em></div></li>
+          <li><div class="day">Sat · May 15</div><div class="place">Mykonos, Greece<em>7:00 a.m. to 9:00 p.m. Aboard until nine is the point — you get Little Venice and the windmills at sunset rather than at noon with everyone else.</em></div></li>
+          <li><div class="day">Sun · May 16</div><div class="place">Athens (Piraeus), Greece<em>Arriving 6:00 a.m. Stay on for Athens or connect home from ATH.</em></div></li>
+        </ul>
+        <p class="note">Ports of call and times may vary by departure date and are subject to weather and other conditions.</p>
+
+        <h4>Your stateroom<span class="room-code">DA</span></h4>
+        <p style="font-size:.95rem;color:var(--ink-soft);margin-bottom:16px;">Balcony stateroom, Category DA.</p>
+        <p class="note" style="margin-top:0;">Full stateroom specifications, deck and photos are coming in a separate note. Bedding configuration can be requested but not guaranteed — tell me your preference and I'll put it on the reservation.</p>
+
+        <h4>The ship</h4>
+        <div class="grid2">
+          <ul class="feature-list">
+            <li><strong>The Dome</strong> — a glass-enclosed deck over the top of the ship, the first of its kind built at sea</li>
+            <li><strong>The Piazza</strong> — the ship's atrium and social center, opened up with views out to the water</li>
+          </ul>
+          <ul class="feature-list">
+            <li><strong>Sabatini's</strong> — handmade pasta and classic Italian, plus the Lotus Spa for treatments and thermal facilities</li>
+            <li><strong>The Princess Casino</strong> and the ship's theatre and lounges</li>
+          </ul>
+        </div>
+
+        <h4>What's included</h4>
+        <div class="grid2">
+          <ul class="feature-list">
+            <li>Seven nights in a Category DA balcony stateroom</li>
+            <li>All government taxes, fees and port expenses</li>
+            <li><strong>$50 onboard credit</strong> per stateroom</li>
+            <li>Main dining room and casual dining, entertainment, pools and onboard activities</li>
+          </ul>
+          <ul class="feature-list">
+            <li><strong>Not included:</strong> airfare into Rome and home from Athens</li>
+            <li><strong>Not included:</strong> hotel nights and transfers before or after the sailing</li>
+            <li><strong>Not included:</strong> shore excursions, specialty dining and spa services</li>
+            <li><strong>Not included:</strong> beverages, Wi-Fi and crew appreciation — this is the base fare, so those are billed to your onboard account or added as a package</li>
+          </ul>
+        </div>
+
+        <p class="note">This is quoted at the base fare. The line sells upgrade packages that bundle beverages, Wi-Fi and crew appreciation together — ask me and I'll price one against paying as you go, since which comes out ahead depends entirely on how much you drink.</p>
+        <p class="note">Same open-jaw consideration as the other sailing: flights are a multi-city booking rather than a round-trip, and you'll want two nights in Rome on the front end. That air and those hotel nights are real cost this page doesn't show. Say the word and I'll price the full trip.</p>
+
+        <h4>Payment schedule</h4>
+        <table class="pay-table">
+          <thead><tr><th>Payment</th><th>Due</th><th>Amount</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="lbl">Deposit<span class="sub">Confirms the stateroom</span></td>
+              <td>August 25, 2026<span class="sub">by 11:59 p.m.</span></td>
+              <td class="amt">$198.00</td>
+            </tr>
+            <tr>
+              <td class="lbl">Final payment<span class="sub">Balance of the cruise fare</span></td>
+              <td>February 8, 2027<span class="sub">by 11:59 p.m.</span></td>
+              <td class="amt">$4,392.00</td>
+            </tr>
+            <tr>
+              <td class="lbl">Total</td>
+              <td></td>
+              <td class="amt">$4,590.00</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="note">The deposit date is set by the cruise line, not by me — the fare and stateroom hold until then. Cancellation terms follow the cruise line's published schedule for this fare, and I'll confirm the specifics to you in writing before you place the deposit.</p>
+      </div>
+    </article>
+    <!-- ─── BAR 3 ─── -->
+    <article class="sailing" id="card-starlegendmay">
+      <div class="s-bar">
+        <label class="s-pick" aria-label="Select the May Star Legend sailing">
+          <input type="radio" name="sailing" value="starlegendmay" data-label="Star Legend · Athens to Rome · May 2027">
+        </label>
+        <button class="s-open" type="button" data-target="body-starlegendmay" aria-expanded="false" aria-controls="body-starlegendmay">
+          <span class="s-chip">Option 3</span>
+          <span class="s-titles">
+            <span class="s-name">Star Legend</span>
+            <span class="s-meta">Windstar Cruises · Athens <span class="arrow">→</span> Rome · 8 nights · May 11–19, 2027</span>
+          </span>
+          <span class="s-priceblk">
+            <span class="s-price">$9,418.00</span>
+            <span class="s-pricesub">total · 2 guests</span>
+          </span>
+          <span class="chev">▼</span>
+        </button>
+      </div>
+
+      <div class="s-body" id="body-starlegendmay">
+        <div class="s-facts">
+          <div><span>Sailing</span><strong>May 11–19, 2027</strong></div>
+          <div><span>Length</span><strong>8 Nights</strong></div>
+          <div><span>Suite</span><strong>Category BS1</strong></div>
+          <div><span>Deposit Due</span><strong>Aug 28, 2026</strong></div>
+        </div>
+        <p class="callout" style="margin-top:22px;"><strong>This one runs the other direction — Athens to Rome — and it is a different kind of trip entirely.</strong> Nine ports in eight nights with no day at sea, on a ship carrying 312 guests instead of three thousand. The All-In package comes complimentary on this sailing, which means drinks, Wi-Fi and gratuities are already covered.</p>
+
+        <h4>Why this ship changes the itinerary</h4>
+        <p style="font-size:.98rem;color:var(--ink-soft);">Look at the port list and you'll notice something: you have probably not heard of half of them. Galaxidi. Fiskardo. Gallipoli. Reggio di Calabria. That isn't an accident, and it isn't a compromise — it's the entire reason to sail this ship.</p>
+        <p style="font-size:.98rem;color:var(--ink-soft);">Star Legend carries 312 guests. A large cruise ship carries ten times that, which means it needs deep water, a long quay, and a town with the infrastructure to absorb three thousand people stepping off at nine in the morning. There are perhaps twenty ports in the Mediterranean that qualify, which is why every big ship calls at the same ones. A small ship has no such constraint. It ties up in the middle of Sorrento. It anchors off a fishing village on Kephalonia. It goes to the places that are still, for the most part, just places.</p>
+        <p style="font-size:.98rem;color:var(--ink-soft);">The trade is intimacy for scale. There is no waterslide, no casino floor, no production show with a cast of forty. What there is instead: a stern platform that folds down in calm anchorages so you can swim, kayak, or paddleboard directly off the back of the ship; an open bridge you can walk onto and talk to the officers; no formal nights, no assigned dining time, no table you're expected at. You eat when you're hungry, with whoever you like.</p>
+
+        <h4>Where you go</h4>
+        <ul class="itin">
+          <li><div class="day">Tue · May 11</div><div class="place">Piraeus, Athens, Greece<em>Athens' port and your starting point. Come in a night or two early — the Acropolis and its museum deserve a full unhurried day.</em></div></li>
+          <li><div class="day">Wed · May 12</div><div class="place">Galaxidi, Greece — for Delphi<em>A quiet shipbuilders' town on the Gulf of Corinth, with Delphi about an hour inland. The sanctuary sits on the slope of Mount Parnassus above a valley of olive groves that runs to the sea. Large ships cannot call here at all.</em></div></li>
+          <li><div class="day">Thu · May 13</div><div class="place">Fiskardo, Kephalonia, Greece<em>The only village on Kephalonia to survive the 1953 earthquake intact, which is why the Venetian houses along the harbor are the real thing rather than a reconstruction. Small enough to walk end to end in fifteen minutes.</em></div></li>
+          <li><div class="day">Fri · May 14</div><div class="place">Gallipoli, Italy<em>Not the Turkish peninsula — this is Gallipoli in Puglia, on the Ionian side of the Salento. The old town sits on a limestone island joined to the mainland by a bridge, ringed by sea walls, with a baroque cathedral at its center.</em></div></li>
+          <li><div class="day">Sat · May 15</div><div class="place">Taranto, Italy<em>One of the great cities of Magna Graecia, founded by Spartans in the eighth century BC. The National Archaeological Museum holds the Ori di Taranto — Greek goldwork of a delicacy that is difficult to believe until you're standing in front of it.</em></div></li>
+          <li><div class="day">Sun · May 16</div><div class="place">Giardini Naxos, Sicily — for Taormina<em>Taormina is on the cliff directly above you, reached by a switchback road or the cable car. The Greek theatre frames Etna through its ruined stage wall, which is the single best-composed view in Sicily.</em></div></li>
+          <li><div class="day">Mon · May 17</div><div class="place">Reggio di Calabria, Italy<em>Across the strait from Sicily, and home to the Riace Bronzes — two Greek warriors pulled from the seabed in 1972, among the finest surviving bronzes from the ancient world. Almost nobody comes here. That's rather the point.</em></div></li>
+          <li><div class="day">Tue · May 18</div><div class="place">Sorrento, Italy<em>Tied up below the cliff town rather than an hour away at a commercial terminal. Pompeii, Capri and the Amalfi Drive all open up from here, or you can simply stay in Sorrento and eat well.</em></div></li>
+          <li><div class="day">Wed · May 19</div><div class="place">Civitavecchia, Rome, Italy<em>About 90 minutes northwest of central Rome. Build in days at the end if you can — arriving in Rome and leaving the next morning is a waste of a good city.</em></div></li>
+        </ul>
+        <p class="note">Nine ports across eight nights with no scheduled day at sea. That's a full itinerary — worth knowing going in if you were picturing lazy days by the pool. Ports of call and times may vary by departure date and are subject to weather and other conditions.</p>
+
+        <h4>Your accommodation<span class="room-code">BS1</span></h4>
+        <p style="font-size:.98rem;color:var(--ink-soft);">Star Legend is an all-suite, all-ocean-view ship. There is no inside cabin, no obstructed view, no hierarchy of decks to navigate. She was built in 1992 as a Seabourn vessel and cut in half in 2021 to have a new midsection installed — new suites, new dining rooms, new engines — so the ship is small in the way the old yachts were and current in the way the new ones are.</p>
+        <p class="note">Full specifications and deck placement for your Category BS1 suite are coming in a separate note. Bedding configuration can be requested but not guaranteed — tell me your preference and I'll put it on the reservation.</p>
+
+        <h4>What's included</h4>
+        <div class="grid2">
+          <ul class="feature-list">
+            <li>Eight nights in an ocean-view suite</li>
+            <li>All government taxes, fees and port expenses</li>
+            <li><strong>The All-In package, complimentary</strong> — the beverage package, Wi-Fi and crew gratuities, folded in rather than billed to your account. It covers what you spend <em>on</em> the ship; it does not cover what you do <em>off</em> it.</li>
+            <li><strong>$300 onboard credit</strong> per suite</li>
+            <li><strong>All dining venues</strong> — there is no surcharge restaurant on this ship, which is unusual and worth knowing</li>
+            <li><strong>Watersports platform</strong> — kayaks, paddleboards and swimming off the stern in calm anchorages</li>
+          </ul>
+          <ul class="feature-list">
+            <li><strong>Not included:</strong> airfare into Athens and home from Rome</li>
+            <li><strong>Not included:</strong> hotel nights and transfers before or after the sailing</li>
+            <li><strong>Not included:</strong> shore excursions — these are priced individually and are <em>not</em> part of the All-In package</li>
+            <li><strong>Not included:</strong> spa and salon services, and premium spirits above the package's selected brands</li>
+          </ul>
+        </div>
+
+        <p class="note">One thing worth planning for: with nine ports and no sea days, shore excursions are the real variable in what this trip costs. They're booked and paid separately from the fare. Tell me which ports you want guided and which you'd rather walk on your own, and I'll build you a plan with real numbers before you deposit — in several of these towns, walking off on your own is the better answer anyway.</p>
+
+        <h4>How this compares</h4>
+        <p style="font-size:.98rem;color:var(--ink-soft);">The number at the top of this bar is larger than the other two, and I'd rather explain that than let it sit there unaddressed. Some of the gap isn't a gap at all: drinks, Wi-Fi and gratuities are included here and are extra on the Princess sailings, so the fair comparison is this fare against those base fares <em>plus</em> a beverage package, a Wi-Fi plan and crew appreciation for two people for a week. Ask me and I'll price that out so you can see the two numbers side by side.</p>
+        <p style="font-size:.98rem;color:var(--ink-soft);">The rest of the difference is real, and it buys something specific: a ship with 312 guests instead of several thousand, an all-suite product with no category ladder to climb, dining with no surcharge tier, and an itinerary that no large ship can physically operate. Whether that's worth it depends entirely on what you want out of eight days. Tell me which way you're leaning and I'll give you my honest read.</p>
+
+        <h4>Payment schedule</h4>
+        <table class="pay-table">
+          <thead><tr><th>Payment</th><th>Due</th><th>Amount</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="lbl">Deposit<span class="sub">Confirms the suite</span></td>
+              <td>August 28, 2026<span class="sub">by 11:59 p.m.</span></td>
+              <td class="amt">$300.00</td>
+            </tr>
+            <tr>
+              <td class="lbl">Final payment<span class="sub">Balance of the cruise fare</span></td>
+              <td>February 10, 2027<span class="sub">by 11:59 p.m.</span></td>
+              <td class="amt">$9,118.00</td>
+            </tr>
+            <tr>
+              <td class="lbl">Total</td>
+              <td></td>
+              <td class="amt">$9,418.00</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="note">The deposit date is set by the cruise line, not by me — the fare and suite hold until then. Cancellation terms follow the cruise line's published schedule for this fare, and I'll confirm the specifics to you in writing before you place the deposit.</p>
+      </div>
+    </article>
+    <!-- ─── BAR 4 ─── -->
+    <article class="sailing" id="card-enchanted">
+      <div class="s-bar">
+        <label class="s-pick" aria-label="Select the Enchanted Princess sailing">
+          <input type="radio" name="sailing" value="enchanted" data-label="Enchanted Princess · Rome to Athens · May 2027">
+        </label>
+        <button class="s-open" type="button" data-target="body-enchanted" aria-expanded="false" aria-controls="body-enchanted">
+          <span class="s-chip">Option 4</span>
+          <span class="s-titles">
+            <span class="s-name">Enchanted Princess</span>
+            <span class="s-meta">Princess Cruises · Rome <span class="arrow">→</span> Athens · 10 nights · May 22 – Jun 1, 2027</span>
+          </span>
+          <span class="s-priceblk">
+            <span class="s-price">$5,192.00</span>
+            <span class="s-pricesub">total · 2 guests</span>
+          </span>
+          <span class="chev">▼</span>
+        </button>
+      </div>
+
+      <div class="s-body" id="body-enchanted">
+        <div class="s-facts">
+          <div><span>Sailing</span><strong>May 22 – Jun 1, 2027</strong></div>
+          <div><span>Length</span><strong>10 Nights</strong></div>
+          <div><span>Stateroom</span><strong>Category MC · Deck 15</strong></div>
+          <div><span>Deposit Due</span><strong>Aug 25, 2026</strong></div>
+        </div>
+        <p class="callout" style="margin-top:22px;"><strong>Nine ports in ten nights.</strong> This is the fuller of the Mediterranean routings — Italy, Sicily twice, Malta, and then four Greek and Turkish calls before Athens. One day at sea to catch your breath.</p>
+
+        <h4>Where you go</h4>
+        <ul class="itin">
+          <li><div class="day">Embark</div><div class="place">Civitavecchia (for Rome), Italy<em>The port sits about 90 minutes northwest of central Rome. Come in ahead — two nights in the city is the right amount before you sail.</em></div></li>
+          <li><div class="day">Port</div><div class="place">Amalfi Coast (Salerno), Italy<em>Salerno is the practical door to the Amalfi Drive — Ravello, Amalfi town, Positano strung along the cliff road. The ferry from Salerno beats the coast road in traffic, and by a wide margin.</em></div></li>
+          <li><div class="day">Port</div><div class="place">Sicily (Messina), Italy<em>Messina is where you go inland or up. Taormina and its Greek theatre are about 45 minutes south; Etna is the other direction and takes most of the day.</em></div></li>
+          <li><div class="day">Port</div><div class="place">Sicily (Palermo), Italy<em>A second Sicilian day, and a completely different one. Palermo is Norman cathedrals, Arab-Norman mosaics at Monreale, and street food — panelle, arancine, sfincione — eaten standing up at the Ballarò market.</em></div></li>
+          <li><div class="day">Port</div><div class="place">Valletta, Malta<em>The ship berths in the Grand Harbour, directly below the bastion walls. The city is small enough to cross on foot: St. John's Co-Cathedral, the Upper Barrakka Gardens, and the Caravaggio hanging where it was painted to hang.</em></div></li>
+          <li><div class="day">Port</div><div class="place">Santorini, Greece<em>A tender port — you come ashore by boat, then take the cable car, the donkey path, or the switchback road up to Fira. Oia is a bus ride north and worth the trip early rather than at sunset.</em></div></li>
+          <li><div class="day">Port</div><div class="place">Mykonos, Greece<em>Little Venice, the windmills above the waterfront, and a warren of whitewashed lanes designed centuries ago to confuse pirates. It still works on visitors.</em></div></li>
+          <li><div class="day">Port</div><div class="place">Kusadasi, Türkiye (for Ephesus)<em>Roughly 30 minutes from the pier. The Library of Celsus, the terrace-house mosaics, a theatre that seated 24,000. Go early — the marble throws heat by midday.</em></div></li>
+          <li><div class="day">Port</div><div class="place">Crete (Heraklion), Greece<em>Knossos is 15 minutes from the port and the Archaeological Museum in town holds everything they took out of it. Cretan food is its own thing — more greens, more herbs, more olive oil than seems reasonable.</em></div></li>
+          <li><div class="day">Disembark</div><div class="place">Athens (Piraeus), Greece<em>Stay on for Athens or connect home from ATH. If you have the days, the Acropolis deserves more than a layover.</em></div></li>
+        </ul>
+        <p class="note">One day at sea is built into the sailing. Exact port times and the placement of the sea day are released by the cruise line closer to departure — I'll send the finalized day-by-day when it drops. Ports of call may vary by departure date and are subject to weather and other conditions.</p>
+
+        <h4>Your stateroom<span class="room-code">MC</span></h4>
+        <p style="font-size:.95rem;color:var(--ink-soft);margin-bottom:16px;">Deck 15, midship starboard — currently available.</p>
+        <ul class="feature-list">
+          <li><strong>Midship</strong> is the steadiest part of the ship and the shortest walk to everything on board</li>
+          <li><strong>Deck 15</strong> puts you high in the ship and close to the pool deck and the Lotus Spa</li>
+          <li><strong>Starboard side</strong> — on this eastbound routing, the side facing the coast on most approaches</li>
+        </ul>
+        <p class="note">Full stateroom specifications and photos are coming in a separate note. Bedding configuration can be requested but not guaranteed — tell me your preference and I'll put it on the reservation.</p>
+
+        <h4>The ship</h4>
+        <div class="grid2">
+          <ul class="feature-list">
+            <li><strong>The Piazza</strong> — the ship's atrium and social center, modeled on a European public square and busy from morning coffee through late music</li>
+            <li><strong>The Princess Theater</strong> — tiered seating with clear sight lines from anywhere in the room</li>
+          </ul>
+          <ul class="feature-list">
+            <li><strong>Lotus Spa and Fitness Center</strong> — treatments, thermal facilities and a full gym</li>
+            <li><strong>Vista Lounge</strong> for daytime programming, plus specialty restaurants beyond the main dining rooms</li>
+          </ul>
+        </div>
+
+        <h4>What's included</h4>
+        <div class="grid2">
+          <ul class="feature-list">
+            <li>Ten nights in a Category MC stateroom, deck 15 midship</li>
+            <li>All government taxes, fees and port expenses</li>
+            <li><strong>$50 onboard credit</strong> per stateroom</li>
+            <li>Main dining room and casual dining, entertainment, pools and onboard activities</li>
+          </ul>
+          <ul class="feature-list">
+            <li><strong>Not included:</strong> airfare into Rome and home from Athens</li>
+            <li><strong>Not included:</strong> hotel nights and transfers before or after the sailing</li>
+            <li><strong>Not included:</strong> shore excursions, specialty dining and spa services</li>
+            <li><strong>Not included:</strong> beverages, Wi-Fi and crew appreciation — this is the base fare, so those are billed to your onboard account or added as a package</li>
+          </ul>
+        </div>
+
+        <p class="note">This is quoted at the base fare. The line sells upgrade packages that bundle beverages, Wi-Fi and crew appreciation together — ask me and I'll price one against paying as you go, since which comes out ahead depends entirely on how much you drink.</p>
+        <p class="note">Because this sails Rome to Athens, your flights are a multi-city booking rather than a round-trip, and you'll want two nights in Rome on the front end. That air and those hotel nights are real cost this page doesn't show. Say the word and I'll price the full trip so you're looking at the whole number.</p>
+
+        <h4>Payment schedule</h4>
+        <table class="pay-table">
+          <thead><tr><th>Payment</th><th>Due</th><th>Amount</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="lbl">Deposit<span class="sub">Confirms the stateroom</span></td>
+              <td>August 25, 2026<span class="sub">by 11:59 p.m.</span></td>
+              <td class="amt">$198.00</td>
+            </tr>
+            <tr>
+              <td class="lbl">Final payment<span class="sub">Balance of the cruise fare</span></td>
+              <td>February 21, 2027<span class="sub">by 11:59 p.m.</span></td>
+              <td class="amt">$4,994.00</td>
+            </tr>
+            <tr>
+              <td class="lbl">Total</td>
+              <td></td>
+              <td class="amt">$5,192.00</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="note">The deposit date is set by the cruise line, not by me — the fare and stateroom hold until then. Cancellation terms follow the cruise line's published schedule for this fare, and I'll confirm the specifics to you in writing before you place the deposit.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ══════════ PRICING SUMMARY ══════════ -->
+<section class="section section--paper" id="pricing">
+  <div class="wrap">
+    <p class="eyebrow">Investment</p>
+    <h2 class="h-sec">Your quote</h2>
+    <hr class="rule">
+
+    <div class="price-block">
+      <p class="price-basis" id="sum-basis">Star Legend · Rome to Athens · 8 nights · two guests</p>
+      <p class="price-amount" id="sum-total">Est. $10,218.00</p>
+      <p class="price-pp" id="sum-pp">Total for both guests · approximately $5,109.00 per person</p>
+      <p id="sum-note" style="font-size:.9rem;color:var(--ink-soft);margin:18px 0 0;">Includes the All-In package and $300 onboard credit per suite. Select a different sailing above and this updates.</p>
+    </div>
+
+    <p class="commit" style="margin-top:30px;">We check every component against public rates and meet or beat them. You're not paying a premium for our convenience — you're paying for the rest of what we do.</p>
+
+    <p class="disclaimer">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor.</p>
+  </div>
+</section>
+
+<!-- ══════════ FORM ══════════ -->
+<section class="section section--band" id="respond">
+  <div class="wrap">
+    <p class="commit commit--plain" style="margin-bottom:34px;">What's coming after this quote: a destination guide built for your trip — PDF or interactive in-app, with Google Maps links to every place we send you — a trip app where everything lives, and us when something goes sideways at midnight. You travel; we handle the rest.</p>
+
+    <div id="form-container">
+      <p class="eyebrow">Next Step</p>
+      <h2 class="h-sec">Tell me what you think</h2>
+      <hr class="rule">
+      <p style="color:var(--ink-soft);max-width:620px;">Questions, changes, or a green light — all of it lands in the same inbox. If this is the one, say so here and I'll walk you through the deposit before the deadline.</p>
+
+      <div class="form-shell" style="margin-top:28px;">
+        <div id="form-error" style="display:none; background:#fff1f1; border:1px solid #f5c6c6; border-radius:6px; padding:14px 18px; font-size:0.875rem; color:#b91c1c; margin-bottom:16px;">
+          We weren't able to send your message. Please contact Christina directly at the address below.
+        </div>
+
+        <form id="pmtp-form">
+          <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+          <input type="hidden" name="subject" value="Quote Response — Miglicco Group | Mediterranean">
+          <input type="hidden" name="from_name" value="Miglicco Group Quote — Point Me to Paradise">
+          <input type="hidden" name="redirect" value="false">
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="f-name">Name</label>
+              <input type="text" id="f-name" name="name" required>
+            </div>
+            <div class="field">
+              <label for="f-email">Email</label>
+              <input type="email" id="f-email" name="email" required>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="f-phone">Phone <span class="opt">(optional)</span></label>
+              <input type="tel" id="f-phone" name="phone">
+            </div>
+            <div class="field">
+              <label for="f-opt">Which sailing interests you</label>
+              <select id="f-opt" name="option_interest">
+                <option>Star Legend · Rome to Athens · Apr 2027</option>
+                <option>Sun Princess · Rome to Athens · May 2027</option>
+                <option>Star Legend · Athens to Rome · May 2027</option>
+                <option>Enchanted Princess · Rome to Athens · May 2027</option>
+                <option>Still deciding</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="f-ins">Travel insurance</label>
+            <select id="f-ins" name="travel_insurance">
+              <option>Yes — I'd like a quote</option>
+              <option>No — not interested</option>
+              <option>Already have coverage</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="f-msg">Message or questions <span class="opt">(optional)</span></label>
+            <textarea id="f-msg" name="message"></textarea>
+          </div>
+
+          <button type="submit" class="btn" id="submit-btn">Send to Christina</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="thank-you">
+      <div class="ty-box">
+        <h3>Got it — thank you.</h3>
+        <p>Your message is on its way to Christina. You'll hear back within one business day, usually sooner. If it's urgent, call or text +1 281 229 0862.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="pmtp-footer">
+  <p class="f-name">Christina Garcia</p>
+  <p class="f-title">Travel Advisor</p>
+  <p class="f-line"><a id="advisor-email" href="#">Email Christina</a></p>
+  <p class="f-line"><a href="tel:+12812290862">+1 281 229 0862</a></p>
+  <p class="f-agency">Point Me to Paradise Travel</p>
+  <p class="f-tag">The world is your oyster, we are your pearl.</p>
+
+  <div class="legal">
+    <p>Prepared for the Miglicco Group · Quote issued August 23, 2026. All pricing is in U.S. dollars for two guests sharing one stateroom and includes government taxes, fees and port expenses. Cancellation and refund terms follow the cruise line's published schedule for the applicable fare and will be confirmed in writing before payment. Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor. Airfare, hotels, transfers, shore excursions, beverage packages, Wi-Fi and specialty dining are not included unless stated. Onboard credit, where shown, has no cash value and expires at the end of the sailing if unused. Guest counts, ship specifications and included features are as published by the operating cruise line. Stateroom features and square footage vary within category; bedding configuration can be requested but not guaranteed. Ports of call and times may vary by departure date and are subject to weather and other conditions.</p>
+  </div>
+</footer>
+
+<!-- ══════════ STICKY BAR ══════════ -->
+<div class="sticky-bar" id="sticky-bar">
+  <div style="text-align:left;">
+    <span class="sb-label">Est. Total · 2 Guests</span>
+    <span class="sb-amt" id="sticky-total">$10,218.00</span>
+    <span class="sb-sub" id="sticky-sub">Star Legend · Apr 1–9</span>
+  </div>
+  <a href="#respond" class="btn btn--sm">Respond</a>
+</div>
+
+<script>
+(function(){
+  /* ── Advisor email, assembled at runtime ── */
+  var user = 'christina', host = 'pointmetoparadise.com';
+  var addr = user + '\u0040' + host;
+  var el = document.getElementById('advisor-email');
+  if (el) { el.href = 'mailto:' + addr; el.textContent = addr; }
+
+  /* ── Sailing data. Add a key here when a new bar is added. ── */
+  var SAILINGS = {
+    starlegendapr: {
+      total: 10218.00, guests: 2,
+      basis: 'Star Legend · Rome to Athens · 8 nights · two guests',
+      short: 'Star Legend · Apr 1–9',
+      note: 'Includes the All-In package and $300 onboard credit per suite. Select a different sailing above and this updates.'
+    },
+    sunprincess: {
+      total: 4590.00, guests: 2,
+      basis: 'Sun Princess · 7 nights · two guests',
+      short: 'Sun Princess · May 9–16',
+      note: 'Includes $50 onboard credit per stateroom. Select a different sailing above and this updates.'
+    },
+    starlegendmay: {
+      total: 9418.00, guests: 2,
+      basis: 'Star Legend · Athens to Rome · 8 nights · two guests',
+      short: 'Star Legend · May 11–19',
+      note: 'Includes the All-In package and $300 onboard credit per suite. Select a different sailing above and this updates.'
+    },
+    enchanted: {
+      total: 5192.00, guests: 2,
+      basis: 'Enchanted Princess · 10 nights · two guests',
+      short: 'Enchanted Princess · May 22–Jun 1',
+      note: 'Includes $50 onboard credit per stateroom. Select a different sailing above and this updates.'
+    }
+  };
+
+  function money(n){
+    return '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+  function currentKey(){
+    var r = document.querySelector('input[name="sailing"]:checked');
+    return r ? r.value : Object.keys(SAILINGS)[0];
+  }
+
+  function render(){
+    var key = currentKey();
+    var s = SAILINGS[key];
+    if (!s) return;
+    var pp = s.total / s.guests;
+
+    document.getElementById('sum-basis').textContent = s.basis;
+    document.getElementById('sum-total').textContent = 'Est. ' + money(s.total);
+    document.getElementById('sum-pp').textContent =
+      'Total for both guests · approximately ' + money(pp) + ' per person';
+    document.getElementById('sticky-total').textContent = money(s.total);
+    document.getElementById('sticky-sub').textContent = s.short;
+    document.getElementById('sum-note').textContent = s.note;
+
+    document.querySelectorAll('.sailing').forEach(function(c){
+      c.classList.toggle('is-selected', c.id === 'card-' + key);
+    });
+
+    var checked = document.querySelector('input[name="sailing"]:checked');
+    var sel = document.getElementById('f-opt');
+    if (checked && sel) {
+      var want = checked.getAttribute('data-label');
+      for (var i = 0; i < sel.options.length; i++) {
+        if (sel.options[i].text === want) { sel.selectedIndex = i; break; }
+      }
+    }
+  }
+
+  document.querySelectorAll('input[name="sailing"]').forEach(function(r){
+    r.addEventListener('change', render);
+  });
+  render();
+
+  /* ── Collapsible bars ── */
+  document.querySelectorAll('.s-open').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var body = document.getElementById(btn.getAttribute('data-target'));
+      var open = body.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  });
+
+  /* ── Sticky bar reveal ── */
+  var bar = document.getElementById('sticky-bar');
+  var start = document.getElementById('sailings');
+  var respond = document.getElementById('respond');
+  function checkBar(){
+    var top = start.getBoundingClientRect().top;
+    var formTop = respond.getBoundingClientRect().top;
+    if (top < window.innerHeight * 0.5 && formTop > window.innerHeight * 0.5) {
+      bar.classList.add('show');
+    } else {
+      bar.classList.remove('show');
+    }
+  }
+  window.addEventListener('scroll', checkBar, {passive:true});
+  window.addEventListener('resize', checkBar);
+  checkBar();
+})();
+
+document.getElementById('pmtp-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var btn = document.getElementById('submit-btn');
+  var err = document.getElementById('form-error');
+  btn.disabled = true; btn.textContent = 'Sending…'; err.style.display = 'none';
+  fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(e.target) })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      if (data.success) {
+        document.getElementById('form-container').style.display = 'none';
+        document.getElementById('thank-you').style.display = 'block';
+      } else {
+        btn.disabled = false; btn.textContent = 'Send to Christina'; err.style.display = 'block';
+        err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    })
+    .catch(function() {
+      btn.disabled = false; btn.textContent = 'Send to Christina'; err.style.display = 'block';
+      err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+});
+</script>
+
+</body>
+</html>
