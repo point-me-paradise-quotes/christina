@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Greek Isles &amp; the Mediterranean · Celebrity Equinox · Miglicco Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --aqua-pale:#C4E4E1;
+  --aqua-mist:#EAF3F2;
+  --aqua:#75AFB1;
+  --aqua-dark:#4F8A8C;
+  --sand:#ECE7DC;
+  --sand-light:#F4F1E9;
+  --gold-whisper:#D6C8A8;
+  --white:#FFFFFF;
+  --paper:#FBFDFD;
+  --ink:#2B2420;
+  --ink-soft:#6B6359;
+  --line:#E5E9E8;
+
+  /* HERO IMAGE — swap this URL to change the header photo. */
+  --hero-photo:url('https://contents.odysol.com/content/images/cruise/2/1176/ship_520-vODY-637951226120000000.jpg');
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+  font-weight:400;font-size:1rem;line-height:1.68;
+  -webkit-font-smoothing:antialiased;padding-bottom:84px;overflow-wrap:break-word;
+}
+h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:500;color:var(--ink);margin:0;line-height:1.22;}
+p{margin:0 0 1em;}
+a{color:var(--aqua-dark);}
+img{max-width:100%;display:block;}
+
+.wrap{max-width:940px;margin:0 auto;padding:0 26px;}
+.section{padding:60px 0;}
+.section--band{background:var(--aqua-mist);}
+.section--paper{background:var(--paper);}
+
+.eyebrow{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--aqua-dark);margin:0 0 14px;}
+.h-sec{font-size:1.9rem;}
+.rule{width:52px;height:2px;background:var(--aqua);border:0;margin:22px 0;}
+
+/* ───────── HERO ───────── */
+.pmtp-hero{
+  position:relative;background-color:var(--aqua-mist);background-image:var(--hero-photo);
+  background-size:cover;background-position:center;padding:78px 32px 60px;text-align:center;overflow:hidden;
+}
+.pmtp-hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse at 22% 4%, rgba(255,255,255,.72) 0%, rgba(255,255,255,0) 60%),
+    linear-gradient(162deg, rgba(255,255,255,.90) 0%, rgba(255,255,255,.74) 38%, rgba(234,243,242,.80) 72%, rgba(196,228,225,.86) 100%);
+}
+.pmtp-hero > *{position:relative;z-index:2;}
+.pmtp-wordmark{font-family:'Playfair Display',serif;font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--aqua-dark);margin:0 0 6px;}
+.hero-sig{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.98rem;color:var(--ink-soft);margin:0 0 32px;}
+.hero-route{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 16px;}
+.pmtp-hero h1{font-size:clamp(2.2rem,6vw,3.4rem);font-weight:600;letter-spacing:-.01em;margin:0 0 10px;}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.2rem,3vw,1.5rem);color:var(--ink-soft);margin:0 0 30px;}
+.hero-meta{display:flex;flex-wrap:wrap;justify-content:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);max-width:660px;margin:0 auto;padding:16px 0;background:rgba(255,255,255,.74);}
+.hero-meta div{padding:4px 20px;text-align:center;flex:1 1 130px;}
+.hero-meta span{display:block;font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--aqua-dark);margin-bottom:3px;}
+.hero-meta strong{font-family:'Playfair Display',serif;font-weight:500;font-size:1.02rem;}
+.hero-for{margin:26px 0 0;font-size:.86rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);font-weight:500;}
+
+/* ───────── SHARED ───────── */
+.commit{background:var(--aqua-pale);border-radius:4px;padding:26px 30px;font-family:'Cormorant Garamond',serif;font-size:1.2rem;line-height:1.62;color:var(--ink);margin:0;}
+.commit--plain{background:var(--white);border:1px solid var(--line);}
+.lede{font-size:1.08rem;line-height:1.78;color:var(--ink-soft);}
+.lede strong{color:var(--ink);font-weight:500;}
+.note{font-size:.87rem;color:var(--ink-soft);line-height:1.62;border-left:2px solid var(--aqua);padding-left:16px;margin:18px 0 0;}
+.callout{background:var(--aqua-pale);border-radius:4px;padding:20px 24px;font-size:.97rem;line-height:1.62;color:var(--ink);margin:0;}
+.callout strong{font-weight:600;}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.card{background:var(--white);border:1px solid var(--line);border-radius:4px;padding:26px 28px;}
+.card h4{font-size:1.1rem;margin:0 0 10px;}
+.card p{font-size:.95rem;color:var(--ink-soft);margin:0;}
+.feature-list{list-style:none;margin:0;padding:0;}
+.feature-list li{position:relative;padding:0 0 0 21px;margin-bottom:10px;font-size:.95rem;color:var(--ink-soft);line-height:1.6;}
+.feature-list li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--aqua);}
+.feature-list strong{color:var(--ink);font-weight:500;}
+
+/* ───────── COLLAPSIBLE BARS ───────── */
+.acc{background:var(--white);border:1px solid var(--line);border-radius:5px;overflow:hidden;}
+.acc + .acc{margin-top:16px;}
+.acc-bar{width:100%;display:flex;align-items:center;gap:18px;background:none;border:0;text-align:left;cursor:pointer;padding:18px 24px;font-family:'DM Sans',sans-serif;color:var(--ink);transition:background .18s ease;}
+.acc-bar:hover{background:var(--aqua-mist);}
+.acc-bar:focus-visible{outline:2px solid var(--aqua);outline-offset:-2px;}
+.acc-eyebrow{flex:0 0 auto;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:var(--aqua-mist);color:var(--aqua-dark);border:1px solid var(--aqua-pale);padding:5px 10px;border-radius:3px;white-space:nowrap;}
+.acc-titles{flex:1 1 auto;min-width:0;}
+.acc-name{font-family:'Playfair Display',serif;font-weight:500;font-size:1.28rem;line-height:1.25;display:block;}
+.acc-meta{display:block;font-size:.85rem;color:var(--ink-soft);margin-top:2px;line-height:1.45;}
+.chev{flex:0 0 auto;font-size:11px;color:var(--aqua-dark);transition:transform .2s ease;}
+.acc-bar[aria-expanded="true"] .chev{transform:rotate(180deg);}
+.acc-body{display:none;padding:4px 24px 30px;border-top:1px solid var(--line);}
+.acc-body.open{display:block;}
+.acc-body > h4{font-size:1.12rem;margin:26px 0 12px;}
+
+/* ───────── ITINERARY ───────── */
+.itin{list-style:none;margin:0;padding:0;}
+.itin li{display:flex;gap:18px;padding:16px 0;border-bottom:1px solid var(--line);align-items:baseline;}
+.itin li:last-child{border-bottom:0;}
+.itin .day{flex:0 0 108px;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--aqua-dark);}
+.itin .place{flex:1 1 auto;font-size:1.01rem;color:var(--ink);}
+.itin .place em{display:block;font-family:'DM Sans',sans-serif;font-style:normal;font-size:.89rem;color:var(--ink-soft);margin-top:3px;}
+.itin .hours{flex:0 0 auto;font-size:.85rem;color:var(--ink-soft);white-space:nowrap;}
+.tender{display:inline-block;font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:var(--aqua-mist);color:var(--aqua-dark);border:1px solid var(--aqua-pale);padding:2px 7px;border-radius:3px;margin-left:8px;vertical-align:middle;}
+
+/* ───────── STATEROOM OPTIONS ───────── */
+.opt{background:var(--white);border:1px solid var(--line);border-radius:5px;margin-bottom:18px;transition:border-color .2s ease,box-shadow .2s ease;}
+.opt.is-selected{border-color:var(--aqua);box-shadow:0 0 0 1px var(--aqua);}
+.opt-head{display:flex;align-items:stretch;}
+.opt-pick{display:flex;align-items:center;flex:0 0 auto;padding:0 14px 0 20px;cursor:pointer;border-right:1px solid var(--line);}
+.opt-pick input{width:18px;height:18px;accent-color:var(--aqua-dark);cursor:pointer;margin:0;}
+.opt-main{flex:1 1 auto;min-width:0;display:flex;align-items:center;gap:16px;padding:16px 20px;flex-wrap:wrap;}
+.opt-code{flex:0 0 auto;font-size:11px;font-weight:700;letter-spacing:.14em;background:var(--aqua);color:var(--white);padding:5px 11px;border-radius:3px;}
+.opt-titles{flex:1 1 200px;min-width:0;}
+.opt-name{font-family:'Playfair Display',serif;font-weight:500;font-size:1.15rem;line-height:1.25;display:block;}
+.opt-meta{display:block;font-size:.84rem;color:var(--ink-soft);margin-top:1px;}
+.opt-price{flex:0 0 auto;text-align:right;}
+.opt-price strong{font-family:'Playfair Display',serif;font-weight:600;font-size:1.2rem;display:block;line-height:1.15;}
+.opt-price span{font-size:.75rem;color:var(--ink-soft);display:block;}
+.opt-body{padding:0 24px 24px;}
+.rooms{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;}
+.rooms span{font-family:'DM Sans',sans-serif;font-size:.86rem;font-weight:500;background:var(--paper);border:1px solid var(--line);border-radius:3px;padding:7px 12px;color:var(--ink);}
+.sides{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:16px;}
+.decks{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:16px;}
+.side{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:18px 20px;}
+.side h5{font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--aqua-dark);margin:0 0 4px;}
+.side p{font-size:.82rem;color:var(--ink-soft);margin:0 0 10px;}
+
+/* ───────── PRICING ───────── */
+.price-block{background:var(--white);border:1px solid var(--line);border-radius:4px;padding:34px 32px;text-align:center;}
+.price-basis{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem;color:var(--ink-soft);margin:0 0 4px;}
+.price-amount{font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(2.4rem,7vw,3.3rem);line-height:1;color:var(--ink);margin:6px 0 8px;letter-spacing:-.02em;}
+.price-pp{font-size:.9rem;color:var(--ink-soft);margin:0;}
+.toggle-row{display:flex;align-items:flex-start;gap:14px;background:var(--aqua-mist);border:1px solid var(--line);border-radius:4px;padding:20px 22px;margin:28px 0 0;cursor:pointer;text-align:left;}
+.toggle-row input{width:20px;height:20px;margin:2px 0 0;flex:0 0 auto;accent-color:var(--aqua-dark);cursor:pointer;}
+.toggle-row label{cursor:pointer;}
+.toggle-row .t-title{display:block;font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:500;margin-bottom:3px;}
+.toggle-row .t-desc{display:block;font-size:.9rem;color:var(--ink-soft);line-height:1.55;}
+.toggle-row .t-price{display:block;margin-top:6px;font-size:.9rem;font-weight:600;color:var(--aqua-dark);}
+.pay-table{width:100%;border-collapse:collapse;margin-top:6px;}
+.pay-table th{text-align:left;font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--aqua-dark);padding:0 0 12px;border-bottom:1px solid var(--line);}
+.pay-table td{padding:16px 0;border-bottom:1px solid var(--line);font-size:.96rem;color:var(--ink-soft);vertical-align:top;}
+.pay-table tr:last-child td{border-bottom:0;}
+.pay-table td:last-child,.pay-table th:last-child{text-align:right;}
+.pay-table .amt{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:500;color:var(--ink);white-space:nowrap;}
+.pay-table .lbl{color:var(--ink);font-weight:500;}
+.pay-table .sub{font-weight:400;font-size:.86rem;display:block;}
+.disclaimer{font-size:.85rem;color:var(--ink-soft);line-height:1.6;border-left:2px solid var(--aqua);padding-left:16px;margin:26px 0 0;}
+
+/* ───────── STICKY BAR ───────── */
+.sticky-bar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--white);border-top:1px solid var(--line);box-shadow:0 -3px 18px rgba(43,36,32,.07);padding:12px 20px;display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;transform:translateY(120%);transition:transform .28s ease;}
+.sticky-bar.show{transform:translateY(0);}
+.sb-label{display:block;font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--aqua-dark);}
+.sb-amt{font-family:'Playfair Display',serif;font-weight:600;font-size:1.3rem;color:var(--ink);}
+.sb-sub{font-size:.78rem;color:var(--ink-soft);}
+.btn{display:inline-block;background:var(--aqua-dark);color:var(--white);font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;letter-spacing:.03em;border:0;border-radius:3px;padding:14px 30px;cursor:pointer;text-decoration:none;transition:background .2s ease;}
+.btn:hover{background:var(--aqua);}
+.btn:disabled{opacity:.6;cursor:default;}
+.btn--sm{padding:11px 22px;}
+
+/* ───────── FORM ───────── */
+.form-shell{background:var(--white);border:1px solid var(--line);border-radius:4px;padding:36px 34px;}
+.field{margin-bottom:20px;}
+.field label{display:block;font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:7px;}
+.field .lo{text-transform:none;letter-spacing:0;font-weight:400;}
+.field input,.field select,.field textarea{width:100%;font-family:'DM Sans',sans-serif;font-size:16px;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:3px;padding:13px 14px;line-height:1.5;}
+.field textarea{min-height:118px;resize:vertical;}
+.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--aqua);outline-offset:1px;border-color:var(--aqua);}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 20px;}
+.guests{border-top:1px solid var(--line);margin-top:8px;padding-top:26px;}
+.guests-head{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:500;margin:0 0 6px;}
+.guests-sub{font-size:.9rem;color:var(--ink-soft);line-height:1.6;margin:0 0 22px;}
+.room-group{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:18px 20px 4px;margin-bottom:16px;}
+.room-group h5{font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--aqua-dark);margin:0 0 14px;}
+.room-group .field input{background:var(--white);}
+#thank-you{display:none;}
+.ty-box{background:var(--aqua-pale);border-radius:4px;padding:34px 30px;text-align:center;}
+.ty-box h3{font-size:1.5rem;margin-bottom:10px;}
+.ty-box p{margin:0;color:var(--ink-soft);}
+
+/* ───────── FOOTER ───────── */
+.pmtp-footer{background:var(--sand-light);padding:52px 26px 46px;text-align:center;}
+.f-name{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:500;margin:0 0 4px;}
+.f-title{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--aqua-dark);margin:0 0 18px;}
+.f-line{font-size:.95rem;color:var(--ink-soft);margin:0 0 5px;}
+.f-agency{font-family:'Playfair Display',serif;font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--aqua-dark);margin:24px 0 6px;}
+.f-tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:var(--ink-soft);margin:0;}
+.legal{max-width:780px;margin:34px auto 0;font-size:.78rem;line-height:1.65;color:var(--ink-soft);border-top:1px solid var(--line);padding-top:22px;}
+
+@media (max-width:760px){
+  .section{padding:46px 0;}
+  .pmtp-hero{padding:56px 22px 44px;}
+  .grid2,.form-grid,.sides{grid-template-columns:1fr;}
+  .decks{grid-template-columns:1fr;}
+  .itin li{flex-wrap:wrap;gap:4px 14px;}
+  .itin .day{flex:0 0 100%;}
+  .price-block,.form-shell{padding:26px 20px;}
+  .commit{padding:22px 22px;font-size:1.12rem;}
+  .card{padding:22px 20px;}
+  .callout{padding:18px 20px;}
+  .acc-bar{flex-wrap:wrap;gap:10px 14px;padding:15px 18px;}
+  .acc-titles{flex:1 1 100%;order:2;}
+  .acc-eyebrow{order:1;}
+  .chev{order:1;margin-left:auto;}
+  .acc-name{font-size:1.15rem;}
+  .acc-body{padding:4px 18px 26px;}
+  .opt-main{padding:14px 16px;}
+  .opt-price{flex:1 1 100%;text-align:left;}
+  .opt-body{padding:0 18px 20px;}
+  .pay-table th{font-size:9px;letter-spacing:.1em;}
+  .pay-table td{font-size:.9rem;padding:13px 0;}
+  .pay-table .amt{font-size:1rem;}
+  .sticky-bar{gap:12px;padding:10px 14px;}
+}
+@media (max-width:430px){
+  .wrap{padding:0 18px;}
+  .pmtp-hero{padding:48px 18px 38px;}
+  .section{padding:40px 0;}
+  .h-sec{font-size:1.6rem;}
+  .price-amount{font-size:2.1rem;}
+  .price-block,.form-shell,.card{padding:22px 16px;}
+  .commit{padding:20px 18px;font-size:1.08rem;}
+  .hero-meta div{flex:1 1 45%;padding:6px 10px;}
+  .rooms{gap:6px;}
+  .rooms span{padding:6px 9px;font-size:.82rem;}
+  .btn{padding:14px 22px;width:100%;text-align:center;}
+  .sticky-bar .btn--sm{width:auto;padding:11px 18px;}
+  .sb-amt{font-size:1.15rem;}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none !important;scroll-behavior:auto !important;}}
+</style>
+</head>
+<body>
+
+<!-- ══════════ HERO ══════════ -->
+<header class="pmtp-hero">
+  <p class="pmtp-wordmark">Point Me to Paradise Travel</p>
+  <p class="hero-sig">Curated Journeys · Expert Advisors</p>
+  <p class="hero-route">Barcelona · Malta · Athens · Santorini · Ephesus · Mykonos · Olympia · Rome</p>
+  <h1>Greek Isles &amp; the Mediterranean</h1>
+  <p class="hero-sub">Ten nights from Barcelona to Rome aboard Celebrity Equinox</p>
+  <div class="hero-meta">
+    <div><span>Sailing</span><strong>May 1–11, 2027</strong></div>
+    <div><span>Length</span><strong>10 Nights</strong></div>
+    <div><span>Ship</span><strong>Celebrity Equinox</strong></div>
+    <div><span>Ports</span><strong>7 · 3 Sea Days</strong></div>
+  </div>
+  <p class="hero-for">Prepared for the Miglicco Group</p>
+</header>
+
+<!-- ══════════ OVERVIEW ══════════ -->
+<section class="section section--paper">
+  <div class="wrap">
+    <p class="eyebrow">The Trip</p>
+    <h2 class="h-sec">West to east, Spain to Italy, the long way round</h2>
+    <hr class="rule">
+    <p class="lede">You board in <strong>Barcelona</strong> and step off ten nights later at <strong>Civitavecchia</strong>, having crossed most of the Mediterranean to get there. It's the reverse of what people expect — rather than starting in Italy and working east, this one runs the length of the sea and delivers you back to Rome at the end.</p>
+    <p class="lede">The middle of it is the Greek Isles, properly done. <strong>Athens</strong> for twelve hours, which is enough for the Acropolis and its museum without rushing. <strong>Santorini</strong> until 10:00 p.m. — the caldera at sunset, which is the entire reason to go and something day-callers never see. <strong>Ephesus</strong>, <strong>Mykonos</strong>, and <strong>Olympia</strong>, where the ancient games were held. <strong>Valletta</strong> comes early, and the ship berths in the Grand Harbour directly beneath the bastion walls.</p>
+    <p class="lede">Three sea days are built in, spaced to break up the long legs rather than clustered at one end. On a ship this size that's a genuine part of the trip, not filler.</p>
+    <p class="commit" style="margin-top:34px;">We don't book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. The work you'd hate doing — already done.</p>
+  </div>
+</section>
+
+<!-- ══════════ GROUP NOTE ══════════ -->
+<section class="section section--band">
+  <div class="wrap">
+    <p class="eyebrow">How This Is Priced</p>
+    <h2 class="h-sec">Three couples, three staterooms</h2>
+    <hr class="rule">
+    <div class="grid2">
+      <div>
+        <p style="font-size:1.02rem;color:var(--ink-soft);">Everything on this page is quoted <strong style="color:var(--ink);font-weight:500;">per stateroom, at double occupancy</strong> — two guests sharing one room. Each couple books their own, and each couple pays the figure shown.</p>
+        <p style="font-size:1.02rem;color:var(--ink-soft);">I've deliberately not shown a combined total for all three. Every couple should be able to look at this page and see exactly what their own booking costs, without doing arithmetic to work out their share.</p>
+      </div>
+      <div>
+        <ul class="feature-list">
+          <li><strong>Each stateroom</strong> carries its own deposit, its own final payment and its own $100 onboard credit</li>
+          <li><strong>Each couple</strong> can decide separately on prepaid gratuities — one couple adding them doesn't commit the others</li>
+          <li><strong>Four categories below.</strong> All three couples don't have to pick the same one, though staying together makes the locations easier to coordinate</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ITINERARY + SHIP ══════════ -->
+<section class="section section--paper">
+  <div class="wrap">
+
+    <div class="acc">
+      <button class="acc-bar" type="button" data-target="acc-ports" aria-expanded="false" aria-controls="acc-ports">
+        <span class="acc-eyebrow">Where You Go</span>
+        <span class="acc-titles">
+          <span class="acc-name">Day by day</span>
+          <span class="acc-meta">Seven ports across Spain, Malta, Greece and Türkiye · three days at sea</span>
+        </span>
+        <span class="chev">▼</span>
+      </button>
+      <div class="acc-body" id="acc-ports">
+        <ul class="itin" style="margin-top:20px;">
+          <li><div class="day">Day 1 · Sat May 1</div><div class="place">Barcelona, Spain<em>Embarkation, departing 5:00 p.m. Come in ahead — Barcelona is not a city to see from a taxi window on the way to the pier.</em></div><div class="hours">Depart 5:00 p.m.</div></li>
+          <li><div class="day">Day 2 · Sun May 2</div><div class="place">At sea</div><div class="hours">—</div></li>
+          <li><div class="day">Day 3 · Mon May 3</div><div class="place">Valletta, Malta<em>The ship ties up in the Grand Harbour directly below the bastion walls. The city is small enough to cross on foot: St. John's Co-Cathedral, the Upper Barrakka Gardens, and a Caravaggio hanging where it was painted to hang.</em></div><div class="hours">8:00 a.m.–5:00 p.m.</div></li>
+          <li><div class="day">Day 4 · Tue May 4</div><div class="place">At sea</div><div class="hours">—</div></li>
+          <li><div class="day">Day 5 · Wed May 5</div><div class="place">Athens (Piraeus), Greece<em>Twelve hours, which is a real day rather than a dash. The Acropolis in the morning before the heat, the Acropolis Museum after, and a late lunch in Plaka. Piraeus is about 40 minutes from the centre.</em></div><div class="hours">7:00 a.m.–7:00 p.m.</div></li>
+          <li><div class="day">Day 6 · Thu May 6</div><div class="place">Santorini, Greece<span class="tender">Tender</span><em>Aboard until 10:00 p.m. — the long call, and the one that matters. You come ashore by tender, then take the cable car or the switchback road up to Fira. Most ships leave by late afternoon; you'll still be there for sunset over the caldera.</em></div><div class="hours">7:00 a.m.–10:00 p.m.</div></li>
+          <li><div class="day">Day 7 · Fri May 7</div><div class="place">Ephesus (Kusadasi), Türkiye<em>About 30 minutes from the pier. The Library of Celsus, the terrace-house mosaics, and a theatre that seated 24,000. Go early — the marble throws heat by midday.</em></div><div class="hours">9:00 a.m.–7:00 p.m.</div></li>
+          <li><div class="day">Day 8 · Sat May 8</div><div class="place">Mykonos, Greece<span class="tender">Tender</span><em>Little Venice, the windmills above the waterfront, and a warren of whitewashed lanes laid out centuries ago to confuse pirates. It still works on visitors.</em></div><div class="hours">7:00 a.m.–6:00 p.m.</div></li>
+          <li><div class="day">Day 9 · Sun May 9</div><div class="place">Olympia (Katakolon), Greece<em>The birthplace of the games, about 40 minutes inland. You can still walk onto the original stadium track and stand at the starting line — a rare case of an ancient site you're allowed to use rather than only look at.</em></div><div class="hours">11:00 a.m.–8:00 p.m.</div></li>
+          <li><div class="day">Day 10 · Mon May 10</div><div class="place">At sea</div><div class="hours">—</div></li>
+          <li><div class="day">Day 11 · Tue May 11</div><div class="place">Rome (Civitavecchia), Italy<em>Arriving 5:00 a.m. The port is about 90 minutes northwest of central Rome. Stay on for the city — it deserves more than a transfer to the airport.</em></div><div class="hours">Arrive 5:00 a.m.</div></li>
+        </ul>
+        <p class="note"><strong>Two tender ports.</strong> At Santorini and Mykonos the ship anchors offshore and you come in by small boat. It's straightforward in normal conditions, but worth knowing in advance if anyone in the group would rather not manage a tender — and tendering can be cancelled in rough weather, which is a decision the captain makes on the day.</p>
+        <p class="note">Port times are as scheduled and may vary by departure date, weather, safety or operational considerations.</p>
+      </div>
+    </div>
+
+    <div class="acc">
+      <button class="acc-bar" type="button" data-target="acc-ship" aria-expanded="false" aria-controls="acc-ship">
+        <span class="acc-eyebrow">The Ship</span>
+        <span class="acc-titles">
+          <span class="acc-name">Celebrity Equinox</span>
+          <span class="acc-meta">Solstice class · 2,852 guests · 14 decks · fully refurbished in 2019</span>
+        </span>
+        <span class="chev">▼</span>
+      </button>
+      <div class="acc-body" id="acc-ship">
+        <p class="lede" style="margin-top:24px;">The second of Celebrity's five Solstice-class ships, launched in 2009 and taken through the line's full <strong>Celebrity Revolution</strong> refit in 2019. She carries <strong>2,852 guests</strong> across 14 decks — mid-sized by current standards, which is the useful size: enough to carry a full theatre, a spa and a genuine range of restaurants, small enough that you aren't queuing forty minutes to get off in port.</p>
+        <div class="grid2" style="margin-top:26px;">
+          <div class="card">
+            <h4>The top deck</h4>
+            <p>Half an acre of real, growing grass — the Lawn Club, and the thing Solstice-class ships have always been known for. Lawn games, open-air concerts and the best place on the ship to watch a coastline go by. One note: Celebrity is rolling out a redesigned version of this deck, called Sunset Park, across the class. Equinox's turn hasn't been dated yet, so I'll confirm which version you'll sail with as we get closer.</p>
+          </div>
+          <div class="card">
+            <h4>Eating well</h4>
+            <p>Tuscan Grille and Murano are the two specialty rooms worth booking, both for a surcharge. Craft Social handles beer and comfort food. The Martini Bar's flair bartenders are a performance in their own right, and the ice-topped bar is where the ship gathers before dinner.</p>
+          </div>
+          <div class="card">
+            <h4>The Spa</h4>
+            <p>A full treatment menu plus the Persian Garden, a thermal suite of aromatic steam rooms and heated stone loungers. Both are available to book — worth reserving on a port day, when the place is close to empty.</p>
+          </div>
+          <div class="card">
+            <h4>Connected</h4>
+            <p>Starlink high-speed internet across the ship. Also on board: the Sunset Bar at the stern, a casino, the theatre, The Library, and a Silent Disco that is far better than it sounds.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════ STATEROOMS ══════════ -->
+<section class="section section--band" id="staterooms">
+  <div class="wrap">
+    <p class="eyebrow">Your Stateroom</p>
+    <h2 class="h-sec">Four categories to choose from</h2>
+    <hr class="rule">
+
+    <p class="callout" style="margin-bottom:26px;"><strong>One thing to clear up before you look at a deck plan.</strong> Deck 6 is named the <em>Continental deck</em> on Celebrity Equinox — that's the name of the deck itself, not a room type. Both options below are <strong>veranda staterooms</strong> with a private balcony. The difference between them is location and price, not the room.</p>
+
+    <!-- OPTION: V4 -->
+    <article class="opt is-selected" id="card-v4">
+      <div class="opt-head">
+        <label class="opt-pick" aria-label="Select category V4">
+          <input type="radio" name="cat" value="v4" data-label="Category V4 — forward of midship veranda" checked>
+        </label>
+        <div class="opt-main">
+          <span class="opt-code">V4</span>
+          <span class="opt-titles">
+            <span class="opt-name">Veranda — forward of midship</span>
+            <span class="opt-meta">Deck 6 Continental · exactly 3 staterooms open · $688 less</span>
+          </span>
+          <span class="opt-price"><strong>$4,474.62</strong><span>per stateroom · 2 guests</span></span>
+        </div>
+      </div>
+      <div class="opt-body">
+        <p style="font-size:.96rem;color:var(--ink-soft);margin-bottom:4px;">These sit <strong style="color:var(--ink);font-weight:500;">forward on Deck 6, heading toward midship — but not exactly midship.</strong> That's the honest description, and it's the whole reason they cost $688 less per stateroom. Forward of centre means slightly more motion on a sea day and a slightly longer walk aft; for most people, neither is noticeable.</p>
+        <div class="sides" style="grid-template-columns:1fr;">
+          <div class="side">
+            <h5>Starboard side · right</h5>
+            <p>3 open, all together</p>
+            <div class="rooms"><span>6136</span><span>6140</span><span>6144</span></div>
+          </div>
+        </div>
+        <p class="note"><strong>There are exactly three.</strong> Three couples, three rooms, all on the same side and near each other — which is as neat as this ever gets, and also means there's no margin. If one goes, the group can't stay together in this category.</p>
+      </div>
+    </article>
+
+    <!-- OPTION: V2 -->
+    <article class="opt" id="card-v2">
+      <div class="opt-head">
+        <label class="opt-pick" aria-label="Select category V2">
+          <input type="radio" name="cat" value="v2" data-label="Category V2 — Prime Veranda">
+        </label>
+        <div class="opt-main">
+          <span class="opt-code">V2</span>
+          <span class="opt-titles">
+            <span class="opt-name">Prime Veranda Stateroom</span>
+            <span class="opt-meta">Deck 6 Continental · 5 staterooms open · true midship</span>
+          </span>
+          <span class="opt-price"><strong>$5,162.62</strong><span>per stateroom · 2 guests</span></span>
+        </div>
+      </div>
+      <div class="opt-body">
+        <p style="font-size:.96rem;color:var(--ink-soft);margin-bottom:4px;">All five are <strong style="color:var(--ink);font-weight:500;">true midship</strong> — the steadiest part of the ship in open water, and the shortest walk to just about everything on board. With three sea days and two tender ports on this itinerary, that position earns its premium.</p>
+        <div class="sides">
+          <div class="side">
+            <h5>Port side · left</h5>
+            <p>Odd-numbered · 3 open</p>
+            <div class="rooms"><span>6227</span><span>6231</span><span>6235</span></div>
+          </div>
+          <div class="side">
+            <h5>Starboard side · right</h5>
+            <p>Even-numbered · 2 open</p>
+            <div class="rooms"><span>6216</span><span>6220</span></div>
+          </div>
+        </div>
+        <p class="note">Three couples could take all three port-side rooms together, or split across both sides. Tell me which matters more — being on the same side, or being closest to the lifts — and I'll sort it.</p>
+      </div>
+    </article>
+
+    <!-- OPTION: PREMIUM TIER -->
+    <article class="opt" id="card-premium">
+      <div class="opt-head">
+        <label class="opt-pick" aria-label="Select the wider-choice veranda category">
+          <input type="radio" name="cat" value="premium" data-label="Category DV — Deluxe Veranda">
+        </label>
+        <div class="opt-main">
+          <span class="opt-code">DV</span>
+          <span class="opt-titles">
+            <span class="opt-name">Deluxe Veranda Stateroom</span>
+            <span class="opt-meta">Decks 6, 7, 8 and 9 · 26 staterooms open · most midship</span>
+          </span>
+          <span class="opt-price"><strong>$5,884.62</strong><span>per stateroom · 2 guests</span></span>
+        </div>
+      </div>
+      <div class="opt-body">
+        <p style="font-size:.96rem;color:var(--ink-soft);margin-bottom:4px;">The Deluxe Veranda is the step up from the Prime Veranda above, and by some distance the most flexible on this sailing: <strong style="color:var(--ink);font-weight:500;">twenty-six staterooms open across four decks</strong>, most of them midship. If the priority is three rooms genuinely next to one another, this is the category that can actually deliver it — the other two are working with three and five rooms respectively.</p>
+        <p style="font-size:.96rem;color:var(--ink-soft);">Eleven are on the port side, fifteen on starboard. Higher decks sit further from engine noise and closer to the pool and Lawn Club; lower decks mean a shorter walk down when you're coming back aboard in a port. Neither is better, and I'm happy to talk through specific rooms once you know roughly where you want to be.</p>
+        <div class="decks">
+          <div class="side">
+            <h5>Deck 6 · Continental</h5>
+            <p>3 open · 2 port, 1 starboard</p>
+            <div class="rooms"><span>6215</span><span>6236</span><span>6239</span></div>
+          </div>
+          <div class="side">
+            <h5>Deck 7 · Sunrise</h5>
+            <p>11 open · 5 port, 6 starboard</p>
+            <div class="rooms"><span>7161</span><span>7206</span><span>7219</span><span>7243</span><span>7247</span><span>7258</span><span>7262</span><span>7286</span><span>7290</span><span>7305</span><span>7354</span></div>
+          </div>
+          <div class="side">
+            <h5>Deck 8 · Vista</h5>
+            <p>10 open · 4 port, 6 starboard</p>
+            <div class="rooms"><span>8160</span><span>8199</span><span>8224</span><span>8228</span><span>8256</span><span>8258</span><span>8281</span><span>8285</span><span>8334</span><span>8343</span></div>
+          </div>
+          <div class="side">
+            <h5>Deck 9 · Panorama</h5>
+            <p>2 open · both starboard</p>
+            <div class="rooms"><span>9264</span><span>9268</span></div>
+          </div>
+        </div>
+        <p class="note">Deck 6 is named Continental, Deck 7 Sunrise, Deck 8 Vista and Deck 9 Panorama. Those are deck names, not room types — every stateroom listed here is a veranda with a private balcony.</p>
+      </div>
+    </article>
+
+    <!-- OPTION: A1 AQUACLASS -->
+    <article class="opt" id="card-a1">
+      <div class="opt-head">
+        <label class="opt-pick" aria-label="Select category A1 Prime AquaClass">
+          <input type="radio" name="cat" value="a1" data-label="Category A1 — Prime AquaClass">
+        </label>
+        <div class="opt-main">
+          <span class="opt-code">A1</span>
+          <span class="opt-titles">
+            <span class="opt-name">Prime AquaClass</span>
+            <span class="opt-meta">Deck 11 Penthouse · 30 staterooms open · own restaurant and spa access</span>
+          </span>
+          <span class="opt-price"><strong>$7,262.62</strong><span>per stateroom · 2 guests</span></span>
+        </div>
+      </div>
+      <div class="opt-body">
+        <p style="font-size:.96rem;color:var(--ink-soft);margin-bottom:4px;">This is the only category on the page that changes what your days look like rather than just where you sleep. AquaClass is Celebrity's spa tier, and it comes with two things no veranda stateroom gets:</p>
+        <ul class="feature-list" style="margin:14px 0 4px;">
+          <li><strong>Blu</strong> — a restaurant reserved for AquaClass guests only. Lighter cooking, no queue, no assigned seating time, and small enough that the staff know you by the second night. On a ten-night sailing that's a different rhythm to your evenings, not just a nicer table.</li>
+          <li><strong>The Persian Garden</strong> — included access to the spa's thermal suite, a set of aromatic steam rooms and heated stone loungers. Everyone else pays for it.</li>
+          <li><strong>Spa-inspired stateroom amenities</strong> and a private veranda, same as the categories above</li>
+        </ul>
+        <p style="font-size:.96rem;color:var(--ink-soft);margin-top:14px;">Thirty staterooms are open on Deck 11, and plenty of them are midship — so three rooms together is comfortably achievable here. Deck 11 is quiet: an accommodation deck rather than a thoroughfare, with The Library aft of the staterooms and the Relaxation Lounge forward.</p>
+        <div class="sides">
+          <div class="side">
+            <h5>Port side · left</h5>
+            <p>Odd-numbered · 11 open</p>
+            <div class="rooms"><span>1565</span><span>1567</span><span>1573</span><span>1575</span><span>1579</span><span>1581</span><span>1587</span><span>1589</span><span>1591</span><span>1593</span><span>1595</span></div>
+          </div>
+          <div class="side">
+            <h5>Starboard side · right</h5>
+            <p>Even-numbered · 19 open</p>
+            <div class="rooms"><span>1562</span><span>1564</span><span>1566</span><span>1568</span><span>1570</span><span>1572</span><span>1574</span><span>1576</span><span>1578</span><span>1580</span><span>1582</span><span>1584</span><span>1586</span><span>1588</span><span>1590</span><span>1592</span><span>1594</span><span>1596</span><span>1598</span></div>
+          </div>
+        </div>
+        <p class="note">Deck 11 is named the <em>Penthouse deck</em> — the name of the deck, because the ship's Penthouse Suites sit at one end of it. These are AquaClass veranda staterooms, not penthouse suites.</p>
+      </div>
+    </article>
+
+    <p class="note" style="margin-top:24px;">Odd numbers run down the port side of the ship, even numbers down the starboard side. Availability is as of today and changes constantly — I can't hold a specific stateroom number without a deposit or a courtesy hold. Bedding configuration can be requested but not guaranteed.</p>
+  </div>
+</section>
+
+<!-- ══════════ HOLD ══════════ -->
+<section class="section section--paper">
+  <div class="wrap">
+    <p class="eyebrow">Before You Decide</p>
+    <h2 class="h-sec">Want me to hold three staterooms?</h2>
+    <hr class="rule">
+    <div class="grid2">
+      <div>
+        <p style="font-size:1.02rem;color:var(--ink-soft);">I can place a <strong style="color:var(--ink);font-weight:500;">complimentary hold</strong> on three staterooms while the six of you talk it over. No payment, no card, no obligation — it simply takes the rooms off the market so nobody else books them out from under you.</p>
+        <p style="font-size:1.02rem;color:var(--ink-soft);">To place it, I need three things for <strong style="color:var(--ink);font-weight:500;">each of the six travelers</strong>:</p>
+        <ul class="feature-list">
+          <li><strong>Full legal name</strong> — exactly as it appears on the passport you'll travel on, including middle names</li>
+          <li><strong>Date of birth</strong></li>
+          <li><strong>Email address</strong> — the cruise line attaches one to each guest for confirmations and boarding documents</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>How to send it</h4>
+        <p style="margin-bottom:16px;">There are fields for all six travelers on the form at the bottom of this page. Fill in what you have and send it; that's everything I need to place the hold.</p>
+        <p style="margin-bottom:16px;">If you'd rather send it another way, either of these works:</p>
+        <p style="margin:0 0 6px;"><a id="hold-email" href="#">Email Christina</a></p>
+        <p style="margin:0 0 16px;"><a href="tel:+12812290862">+1 281 229 0862</a> — call or text</p>
+        <p style="margin:0;">One person can send all six, or each couple can send their own. I'll confirm how long the hold runs once it's placed.</p>
+      </div>
+    </div>
+    <p class="note">Names must match the passport exactly. A name entered incorrectly at booking can be expensive to change later, and in some cases cannot be changed at all — so it's worth checking the document rather than typing it from memory. A hold reserves the stateroom, not the fare; pricing remains subject to change until deposited.</p>
+  </div>
+</section>
+
+<!-- ══════════ PRICING ══════════ -->
+<section class="section section--band" id="pricing">
+  <div class="wrap">
+    <p class="eyebrow">Investment</p>
+    <h2 class="h-sec">Per stateroom</h2>
+    <hr class="rule">
+
+    <div class="price-block">
+      <p class="price-basis" id="sum-basis">Category V4 · forward of midship · two guests sharing</p>
+      <p class="price-amount" id="sum-total">Est. $4,474.62</p>
+      <p class="price-pp" id="sum-pp">Per stateroom, taxes and fees included · approximately $2,237.31 per guest</p>
+
+      <div class="toggle-row" id="grat-row">
+        <input type="checkbox" id="grat-toggle">
+        <label for="grat-toggle">
+          <span class="t-title">Add prepaid gratuities</span>
+          <span class="t-desc">Cover crew gratuities now rather than having them charged to your onboard account each day. You'll pay them either way — prepaying takes the line item off your final bill and locks today's rate. Each couple can decide this separately.</span>
+          <span class="t-price" id="grat-amt">+ $390.00 per stateroom</span>
+        </label>
+      </div>
+      <p id="grat-pending" style="display:none;background:var(--aqua-mist);border:1px solid var(--line);border-radius:4px;padding:16px 20px;margin:28px 0 0;text-align:left;font-size:.9rem;color:var(--ink-soft);line-height:1.55;">Prepaid gratuities for this category are being confirmed with the cruise line — I'll send the exact figure before anything is deposited. Gratuities are payable either way, prepaid or charged to your onboard account during the sailing.</p>
+      <p style="font-size:.9rem;color:var(--ink-soft);margin:16px 0 0;"><strong style="color:var(--ink);font-weight:500;">Includes $100 onboard credit per stateroom</strong> — on every category, for each of the three rooms.</p>
+      <p style="font-size:.88rem;color:var(--ink-soft);margin:6px 0 0;">Change your category selection above and these figures update.</p>
+    </div>
+
+    <p class="commit" style="margin-top:30px;">We check every component against public rates and meet or beat them. You're not paying a premium for our convenience — you're paying for the rest of what we do.</p>
+
+    <h3 style="font-size:1.35rem;margin:44px 0 6px;">What's included</h3>
+    <div class="grid2" style="margin-top:18px;">
+      <div>
+        <ul class="feature-list">
+          <li>Ten nights in a veranda stateroom with private balcony</li>
+          <li>All government taxes, fees and port expenses</li>
+          <li><strong>$100 onboard credit</strong> per stateroom, on every category</li>
+          <li>Main dining room, Oceanview Café and the ship's included restaurants</li>
+          <li>Entertainment, pools, fitness centre and onboard activities</li>
+          <li><strong>Category A1 only:</strong> Blu restaurant and Persian Garden thermal suite access</li>
+        </ul>
+      </div>
+      <div>
+        <ul class="feature-list">
+          <li><strong>Not included:</strong> airfare into Barcelona and home from Rome</li>
+          <li><strong>Not included:</strong> hotel nights and transfers before or after the sailing</li>
+          <li><strong>Not included:</strong> shore excursions, specialty restaurants and spa treatments (the Persian Garden is included in A1 only)</li>
+          <li><strong>Not included:</strong> beverage and Wi-Fi packages</li>
+          <li><strong>Not included:</strong> gratuities, unless added above</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="font-size:1.35rem;margin:46px 0 6px;">Payment schedule</h3>
+    <p style="font-size:.96rem;color:var(--ink-soft);">Per stateroom. Each couple pays their own.</p>
+    <table class="pay-table">
+      <thead><tr><th>Payment</th><th>Due</th><th>Amount</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="lbl">Deposit<span class="sub">Confirms the stateroom</span></td>
+          <td id="dep-date">August 29, 2026<span class="sub">by 4:59 p.m.</span></td>
+          <td class="amt">$900.00</td>
+        </tr>
+        <tr>
+          <td class="lbl">Final payment<span class="sub" id="final-note">Balance of the cruise fare</span></td>
+          <td>January 31, 2027<span class="sub">by 4:59 p.m.</span></td>
+          <td class="amt" id="final-amt">$3,574.62</td>
+        </tr>
+        <tr>
+          <td class="lbl">Total per stateroom</td>
+          <td></td>
+          <td class="amt" id="sched-total">$4,474.62</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="note">The deposit date is set by the cruise line, not by me — the fare and stateroom hold until then. Cancellation terms follow the cruise line's published schedule for this fare, and I'll confirm the specifics to each of you in writing before any deposit is placed.</p>
+
+    <p class="disclaimer">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor.</p>
+  </div>
+</section>
+
+<!-- ══════════ LAND PORTION ══════════ -->
+<section class="section section--paper">
+  <div class="wrap">
+    <div class="card" style="padding:30px 32px;">
+      <p class="eyebrow" style="margin-bottom:10px;">Coming Next</p>
+      <h3 style="font-size:1.45rem;margin-bottom:14px;">The land portion</h3>
+      <p style="font-size:.99rem;color:var(--ink-soft);">Everything above is the cruise on its own. Once the group settles on this sailing, I'll build the land around it — roughly <strong style="color:var(--ink);font-weight:500;">three nights in Barcelona before you board and three in Rome after you step off</strong>, with hotels, transfers, guides and the flights to match.</p>
+      <p style="font-size:.99rem;color:var(--ink-soft);">This sailing is one-way, so you're flying into Spain and home from Italy — a multi-city ticket rather than a round-trip. Arriving the morning the ship departs leaves no margin for a delayed connection. Three nights up front absorbs the jet lag and the risk; three at the end means Rome gets a real visit rather than a taxi ride to Fiumicino.</p>
+      <p class="note">None of that is in the figures above — the land portion is quoted separately, and it can be arranged for all three couples together or handled individually if you'd rather travel on different dates either side of the cruise.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FORM ══════════ -->
+<section class="section section--band" id="respond">
+  <div class="wrap">
+    <p class="commit commit--plain" style="margin-bottom:34px;">What's coming after this quote: a destination guide built for your trip — PDF or interactive in-app, with Google Maps links to every place we send you — a trip app where everything lives, and us when something goes sideways at midnight. You travel; we handle the rest.</p>
+
+    <div id="form-container">
+      <p class="eyebrow">Next Step</p>
+      <h2 class="h-sec">Tell me what you think</h2>
+      <hr class="rule">
+      <p style="color:var(--ink-soft);max-width:620px;">Questions, changes, or a green light — all of it lands in the same inbox. Each couple can reach out separately, or one of you can speak for the group. If you'd like me to hold three staterooms while you decide, say so below — that costs nothing and takes about ten minutes.</p>
+
+      <div class="form-shell" style="margin-top:28px;">
+        <div id="form-error" style="display:none; background:#fff1f1; border:1px solid #f5c6c6; border-radius:6px; padding:14px 18px; font-size:0.875rem; color:#b91c1c; margin-bottom:16px;">
+          We weren't able to send your message. Please contact Christina directly at the address below.
+        </div>
+
+        <form id="pmtp-form">
+          <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+          <input type="hidden" name="subject" value="Quote Response — Miglicco Group | Equinox Barcelona to Rome">
+          <input type="hidden" name="from_name" value="Miglicco Group Quote — Point Me to Paradise">
+          <input type="hidden" name="redirect" value="false">
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="f-name">Name</label>
+              <input type="text" id="f-name" name="name" required>
+            </div>
+            <div class="field">
+              <label for="f-email">Email</label>
+              <input type="email" id="f-email" name="email" required>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="f-phone">Phone <span class="lo">(optional)</span></label>
+              <input type="tel" id="f-phone" name="phone">
+            </div>
+            <div class="field">
+              <label for="f-opt">Which category interests you</label>
+              <select id="f-opt" name="option_interest">
+                <option>Category V4 — forward of midship veranda</option>
+                <option>Category V2 — Prime Veranda</option>
+                <option>Category DV — Deluxe Veranda</option>
+                <option>Category A1 — Prime AquaClass</option>
+                <option>Still deciding</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="f-hold">Complimentary hold</label>
+              <select id="f-hold" name="complimentary_hold">
+                <option>Not yet — still thinking</option>
+                <option>Yes — please hold three staterooms</option>
+                <option>Yes — please hold one stateroom</option>
+                <option>I have questions first</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-ins">Travel insurance</label>
+              <select id="f-ins" name="travel_insurance">
+                <option>Yes — I'd like a quote</option>
+                <option>No — not interested</option>
+                <option>Already have coverage</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="guests">
+            <p class="guests-head">Traveler details</p>
+            <p class="guests-sub">Only needed if you'd like me to place a hold — skip this if you're just asking a question. <strong style="color:var(--ink);font-weight:500;">Names must match the passport exactly</strong>, including middle names. A name entered incorrectly at booking can be costly to change later, and sometimes cannot be changed at all. Fill in as many as you have; one person can enter all six.</p>
+
+            <div class="room-group">
+              <h5>Stateroom 1</h5>
+              <div class="form-grid">
+                <div class="field"><label for="g1-name">Guest 1 — full legal name</label><input type="text" id="g1-name" name="guest1_name" autocomplete="off"></div>
+                <div class="field"><label for="g1-dob">Guest 1 — date of birth</label><input type="date" id="g1-dob" name="guest1_dob"></div>
+              </div>
+              <div class="form-grid">
+                <div class="field"><label for="g2-name">Guest 2 — full legal name</label><input type="text" id="g2-name" name="guest2_name" autocomplete="off"></div>
+                <div class="field"><label for="g2-dob">Guest 2 — date of birth</label><input type="date" id="g2-dob" name="guest2_dob"></div>
+              </div>
+            </div>
+
+            <div class="room-group">
+              <h5>Stateroom 2</h5>
+              <div class="form-grid">
+                <div class="field"><label for="g3-name">Guest 3 — full legal name</label><input type="text" id="g3-name" name="guest3_name" autocomplete="off"></div>
+                <div class="field"><label for="g3-dob">Guest 3 — date of birth</label><input type="date" id="g3-dob" name="guest3_dob"></div>
+              </div>
+              <div class="form-grid">
+                <div class="field"><label for="g4-name">Guest 4 — full legal name</label><input type="text" id="g4-name" name="guest4_name" autocomplete="off"></div>
+                <div class="field"><label for="g4-dob">Guest 4 — date of birth</label><input type="date" id="g4-dob" name="guest4_dob"></div>
+              </div>
+            </div>
+
+            <div class="room-group">
+              <h5>Stateroom 3</h5>
+              <div class="form-grid">
+                <div class="field"><label for="g5-name">Guest 5 — full legal name</label><input type="text" id="g5-name" name="guest5_name" autocomplete="off"></div>
+                <div class="field"><label for="g5-dob">Guest 5 — date of birth</label><input type="date" id="g5-dob" name="guest5_dob"></div>
+              </div>
+              <div class="form-grid">
+                <div class="field"><label for="g6-name">Guest 6 — full legal name</label><input type="text" id="g6-name" name="guest6_name" autocomplete="off"></div>
+                <div class="field"><label for="g6-dob">Guest 6 — date of birth</label><input type="date" id="g6-dob" name="guest6_dob"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="f-msg">Message or questions <span class="lo">(optional)</span></label>
+            <textarea id="f-msg" name="message"></textarea>
+          </div>
+
+          <p style="font-size:.82rem;color:var(--ink-soft);line-height:1.6;margin:0 0 20px;">Details you enter here are used only to place your hold with the cruise line and to build your booking. Nothing is shared beyond that.</p>
+
+          <button type="submit" class="btn" id="submit-btn">Send to Christina</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="thank-you">
+      <div class="ty-box">
+        <h3>Got it — thank you.</h3>
+        <p>Your message is on its way to Christina. You'll hear back within one business day, usually sooner. If it's urgent, call or text +1 281 229 0862.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="pmtp-footer">
+  <p class="f-name">Christina Garcia</p>
+  <p class="f-title">Travel Advisor</p>
+  <p class="f-line"><a id="advisor-email" href="#">Email Christina</a></p>
+  <p class="f-line"><a href="tel:+12812290862">+1 281 229 0862</a></p>
+  <p class="f-agency">Point Me to Paradise Travel</p>
+  <p class="f-tag">The world is your oyster, we are your pearl.</p>
+
+  <div class="legal">
+    <p>Prepared for the Miglicco Group · Quote issued August 24, 2026. All pricing is in U.S. dollars per stateroom for two guests sharing, and includes government taxes, fees and port expenses. Figures shown are for one stateroom; each couple books, deposits and pays separately. Onboard credit of $100 per stateroom applies to every category shown, has no cash value and expires at the end of the sailing if unused. Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor. Cancellation and refund terms follow the cruise line's published schedule for the applicable fare and will be confirmed in writing before deposit. Airfare, hotels, transfers, shore excursions, beverage packages, Wi-Fi, specialty dining and spa treatments are not included unless stated. Stateroom features vary within category; bedding configuration can be requested but not guaranteed. Stateroom availability is as of the date of issue and is not held without deposit or courtesy hold. Santorini and Mykonos are tender ports; tender operations are subject to weather and the captain's discretion. Ports of call and times may vary by departure date and are subject to weather, safety or operational considerations. Ship specifications and included features are as published by the cruise line.</p>
+  </div>
+</footer>
+
+<!-- ══════════ STICKY BAR ══════════ -->
+<div class="sticky-bar" id="sticky-bar">
+  <div style="text-align:left;">
+    <span class="sb-label">Est. Total · Per Stateroom</span>
+    <span class="sb-amt" id="sticky-total">$4,474.62</span>
+    <span class="sb-sub" id="sticky-sub">10 nights · Category V4</span>
+  </div>
+  <a href="#respond" class="btn btn--sm">Respond</a>
+</div>
+
+<script>
+(function(){
+  /* ── Advisor email, assembled at runtime ── */
+  var user = 'christina', host = 'pointmetoparadise.com';
+  var addr = user + '\u0040' + host;
+  ['advisor-email','hold-email'].forEach(function(id){
+    var el = document.getElementById(id);
+    if (el) { el.href = 'mailto:' + addr; el.textContent = addr; }
+  });
+
+  /* ── Category data ── */
+  var CATS = {
+    v4: {
+      total: 4474.62, deposit: 900.00, depDate: 'August 29, 2026', grat: 390.00,
+      basis: 'Category V4 · forward of midship · two guests sharing',
+      short: '10 nights · Category V4'
+    },
+    v2: {
+      total: 5162.62, deposit: 900.00, depDate: 'August 29, 2026', grat: 390.00,
+      basis: 'Category V2 · Prime Veranda · two guests sharing',
+      short: '10 nights · Category V2'
+    },
+    premium: {
+      total: 5884.62, deposit: 900.00, depDate: 'August 29, 2026', grat: null,
+      basis: 'Category DV · Deluxe Veranda · two guests sharing',
+      short: '10 nights · Category DV'
+    },
+    a1: {
+      total: 7262.62, deposit: 900.00, depDate: 'August 29, 2026', grat: null,
+      basis: 'Category A1 · Prime AquaClass · two guests sharing',
+      short: '10 nights · AquaClass'
+    }
+  };
+  var GUESTS = 2;
+
+  function money(n){
+    return '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+  function currentKey(){
+    var r = document.querySelector('input[name="cat"]:checked');
+    return r ? r.value : 'v2';
+  }
+
+  function render(){
+    var key = currentKey();
+    var c = CATS[key];
+    var box = document.getElementById('grat-toggle');
+    var row = document.getElementById('grat-row');
+    var pend = document.getElementById('grat-pending');
+    var has = (c.grat !== null);
+    row.style.display = has ? 'flex' : 'none';
+    pend.style.display = has ? 'none' : 'block';
+    if (!has) { box.checked = false; }
+    document.getElementById('grat-amt').textContent = has ? ('+ ' + money(c.grat) + ' per stateroom') : '';
+    var grat = has && box.checked;
+    var total = c.total + (grat ? c.grat : 0);
+
+    document.getElementById('sum-basis').textContent = c.basis;
+    document.getElementById('sum-total').textContent = 'Est. ' + money(total);
+    document.getElementById('sum-pp').textContent =
+      'Per stateroom, taxes and fees included · approximately ' + money(total / GUESTS) + ' per guest';
+    document.getElementById('sticky-total').textContent = money(total);
+    document.getElementById('sticky-sub').textContent =
+      c.short + (grat ? ' · gratuities prepaid' : '');
+    document.getElementById('dep-date').innerHTML =
+      c.depDate + '<span class="sub">by 4:59 p.m.</span>';
+    document.getElementById('final-amt').textContent = money(total - c.deposit);
+    document.getElementById('sched-total').textContent = money(total);
+    document.getElementById('final-note').textContent =
+      grat ? 'Balance of cruise fare plus prepaid gratuities' : 'Balance of the cruise fare';
+
+    document.querySelectorAll('.opt').forEach(function(o){
+      o.classList.toggle('is-selected', o.id === 'card-' + key);
+    });
+    var checked = document.querySelector('input[name="cat"]:checked');
+    var sel = document.getElementById('f-opt');
+    if (checked && sel) {
+      var want = checked.getAttribute('data-label');
+      for (var i = 0; i < sel.options.length; i++) {
+        if (sel.options[i].text === want) { sel.selectedIndex = i; break; }
+      }
+    }
+  }
+
+  document.querySelectorAll('input[name="cat"]').forEach(function(r){
+    r.addEventListener('change', render);
+  });
+  document.getElementById('grat-toggle').addEventListener('change', render);
+  render();
+
+  /* ── Collapsible bars ── */
+  document.querySelectorAll('.acc-bar').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var body = document.getElementById(btn.getAttribute('data-target'));
+      var open = body.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  });
+
+  /* ── Sticky bar reveal ── */
+  var bar = document.getElementById('sticky-bar');
+  var start = document.getElementById('staterooms');
+  var respond = document.getElementById('respond');
+  function checkBar(){
+    var top = start.getBoundingClientRect().top;
+    var formTop = respond.getBoundingClientRect().top;
+    if (top < window.innerHeight * 0.6 && formTop > window.innerHeight * 0.5) {
+      bar.classList.add('show');
+    } else {
+      bar.classList.remove('show');
+    }
+  }
+  window.addEventListener('scroll', checkBar, {passive:true});
+  window.addEventListener('resize', checkBar);
+  checkBar();
+})();
+
+document.getElementById('pmtp-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var btn = document.getElementById('submit-btn');
+  var err = document.getElementById('form-error');
+  btn.disabled = true; btn.textContent = 'Sending…'; err.style.display = 'none';
+  fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(e.target) })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      if (data.success) {
+        document.getElementById('form-container').style.display = 'none';
+        document.getElementById('thank-you').style.display = 'block';
+      } else {
+        btn.disabled = false; btn.textContent = 'Send to Christina'; err.style.display = 'block';
+        err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    })
+    .catch(function() {
+      btn.disabled = false; btn.textContent = 'Send to Christina'; err.style.display = 'block';
+      err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+});
+</script>
+
+</body>
+</html>
