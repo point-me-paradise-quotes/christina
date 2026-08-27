@@ -41,7 +41,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; font-weight: 6
 /* ══ HERO ══ */
 .pmtp-hero {
   position: relative;
-  background-image: url('https://images.unsplash.com/photo-1589197331516-4d84b72ebde3?auto=format&fit=crop&w=2000&q=80');
+  background-image: url('https://www.outlooktravelmag.com/media/Moorea-Island-In-Focus-Main-jpg-1536x884.webp');
   background-color: var(--aqua-dark);
   background-size: cover;
   background-position: center;
@@ -328,6 +328,18 @@ section { padding: 62px 0; }
 .inc-cost small { display: block; font-size: 0.72rem; color: var(--ink-soft); letter-spacing: 0.03em; }
 .inc-body { margin-top: 18px; padding-top: 18px; border-top: 1px dashed var(--line); font-size: 0.94rem; color: var(--ink-soft); }
 .inc-body p + p { margin-top: 11px; }
+.terms { background: var(--white); border: 1.5px solid var(--aqua); border-radius: 6px; padding: 28px 30px; margin-top: 30px; }
+.terms h3 { font-size: 1.2rem; margin-bottom: 6px; }
+.terms .lede { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.05rem; color: var(--ink-soft); margin-bottom: 18px; }
+.terms-row { display: flex; justify-content: space-between; align-items: baseline; gap: 18px; padding: 12px 0; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.terms-row:last-of-type { border-bottom: none; }
+.terms-k { font-size: 0.95rem; font-weight: 500; }
+.terms-k small { display: block; font-size: 0.83rem; font-weight: 400; color: var(--ink-soft); margin-top: 2px; }
+.terms-v { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 600; white-space: nowrap; text-align: right; }
+.terms-v small { display: block; font-family: 'DM Sans', sans-serif; font-size: 0.72rem; font-weight: 400; color: var(--ink-soft); letter-spacing: 0.02em; margin-top: 3px; }
+.terms-note { margin-top: 16px; padding-top: 16px; border-top: 1px dashed var(--line); font-size: 0.92rem; color: var(--ink-soft); }
+.terms-note b { color: var(--ink); font-weight: 600; }
+.terms-note p + p { margin-top: 10px; }
 .inc-body b { color: var(--ink); font-weight: 600; }
 
 .room-note { font-size: 0.9rem; color: var(--ink-soft); margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--line); }
@@ -1703,7 +1715,7 @@ footer { background: var(--sand-light); padding: 56px 0 44px; border-top: 1px so
       <p>That's the honest headline. Now the part that complicates it.</p>
       <p><strong>What the Hilton asks of you</strong> is that you settle in and stay put. There's almost nothing within walking distance, so you'll want a car, and dinner becomes a plan rather than a decision. The beach is well kept but small for a resort that size, and it runs a little more manicured than some people want from an island. None of that is a problem if you're picturing four days of pool, lagoon and not much else. It's a real one if the idea of eating on property four nights running makes you tired.</p>
       <p><strong>What the Manava gives you back</strong> is a village. You walk out the gate to a grocery, a bank and a handful of restaurants people genuinely rate, which changes how the evenings feel. It's smaller and more Polynesian in character, it's ten minutes closer to the ferry, and the view from its overwater bungalows back at those jagged peaks is the best thing about the property. It's also meaningfully cheaper, and every room I've quoted you there has a real twin bed rather than a fold-out. What you're giving up is the water out front, and I'd rather you go in knowing that than find out on your first morning.</p>
-      <p><strong>So here's how I'd decide it.</strong> If your days are going to revolve around the lagoon in front of your bungalow, pay for the Hilton and rent a car. If you're happy to drive twenty minutes west to Tiahura for the good snorkelling, which is better than anything either resort has out front, then the Manava saves you real money and gives you a nicer evening. Neither of these is the wrong answer. They're just different trips.</p>
+      <p><strong>So here's how I'd decide it.</strong> If your days are going to revolve around the lagoon in front of your bungalow, pay for the Hilton and plan on a car. I'll sort the car with you once the hotels are settled, and it's normally paid at pickup rather than now. If you're happy to drive twenty minutes west to Tiahura for the good snorkelling, which is better than anything either resort has out front, then the Manava saves you real money and gives you a nicer evening. Neither of these is the wrong answer. They're just different trips.</p>
       <p><strong>If you asked me to pick tonight,</strong> I'd put you in the Manava beach bungalow and book you a morning out at Tiahura, and I'd put what you saved toward the things you'll actually remember. But if you tell me you want to walk into the water from your own deck and have it be beautiful, I'll move you to the Hilton without a second thought and I won't try to talk you out of it.</p>
       <p>Everything I've written above comes from what guests who've stayed at both keep reporting, not from brochures. I left the unflattering parts in on purpose. You should hear them from me now rather than find them out on day one.</p>
       <span class="sig">the world is your oyster, we are your pearl</span>
@@ -1733,10 +1745,34 @@ footer { background: var(--sand-light); padding: 56px 0 44px; border-top: 1px so
         <div class="sum-v" id="mrm-price">Est. $3,879<small>total for the bungalow</small></div>
       </div>
       <div class="sum-row">
+        <div class="sum-k">Rental car<small>Once the hotels are settled · usually paid at pickup</small></div>
+        <div class="sum-v">To discuss<small>not quoted yet</small></div>
+      </div>
+      <div class="sum-row">
         <div class="sum-k">Ferry — Pape'ete to Mo'orea, round trip<small>Feb 23 and Feb 27 · I book and ticket it</small></div>
         <div class="sum-v">Included<small>approx. $60 for two<br>not in the totals yet</small></div>
       </div>
-      <div class="sum-foot">The ferry is included in your trip but is not yet built into the figures above — it joins your final rate once the flights and bungalow are settled. Also still to come: your San Francisco hotel night if you take Option A, and airport transfers on both islands. Each gets quoted on its own so you can see what you're paying for.</div>
+      <div class="sum-foot">The ferry is included in your trip but is not yet built into the figures above — it joins your final rate once the flights and bungalow are settled. Also still to come: a rental car if you want one, your San Francisco hotel night if you take Option A, and airport transfers on both islands. Each gets quoted on its own so you can see what you're paying for.</div>
+    </div>
+
+    <div class="terms">
+      <h3>How payment works</h3>
+      <div class="lede">Nothing here is held, and nothing is charged until you tell me to go ahead.</div>
+      <div class="terms-row">
+        <div class="terms-k">Deposit to lock it in<small>As little as $500, depending on which supplier gives you the best rate. At the top end it's the cost of your flights.</small></div>
+        <div class="terms-v">From $500<small>up to the cost of air</small></div>
+      </div>
+      <div class="terms-row">
+        <div class="terms-k">Balance<small>Everything remaining on the trip</small></div>
+        <div class="terms-v">Due Jan 15, 2027</div>
+      </div>
+      <div class="terms-note">
+        <p><b>Why it isn't a single number.</b> Every supplier sets its own deposit, and I book across several to find you the best rate rather than the most convenient one. So the figure depends on where your rooms end up. Five hundred is the low end and I'll confirm the exact amount before you pay a cent.</p>
+        <p><b>What sets the top of that range.</b> Airfare has to be paid in full the moment it's ticketed — that's the airline's rule, not mine. So if we lock the flights up front, the deposit is the cost of the flights. That's the high end. If you'd rather hold the rooms first on $500 and keep watching the fare, we can do it that way instead. Either is fine by me; it's a question of whether you'd rather have the airfare pinned down or keep the money in your pocket a while longer.</p>
+        <p><b>And here's the part I want you to notice.</b> Your final payment lands on January 15, but every room quoted on this page stays fully refundable into the middle of February — the 15th, 16th, 17th or 18th depending on which one you choose. Paying the balance does not close the door on changing your mind about a hotel. I'll tell you exactly which date applies once you pick.</p>
+        <p><b>Rental cars work differently.</b> I'll come back to you about a car once the outline is settled, because whether you want one depends on which hotels you land on. Car hire is normally paid at pickup on a credit card guarantee rather than up front, so it doesn't touch the deposit or the January balance at all. The one exception is when prepaying comes in cheaper. If it does, I'll tell you and let you choose.</p>
+        <p>If those dates don't work with how you'd rather pay, say so. There's usually room to move them and I'd rather sort it now than in January.</p>
+      </div>
     </div>
 
     <div class="commit">
@@ -1879,7 +1915,7 @@ footer { background: var(--sand-light); padding: 56px 0 44px; border-top: 1px so
       </div>
     </div>
     <div class="foot-legal">
-      Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor. Airfare is shown as a total for two travelers, round trip, and includes taxes and government fees; it is not held or guaranteed until ticketed, and schedules are subject to change by the airline. Baggage allowances, seat assignments, and change or cancellation terms are set by United Airlines and governed by their contract of carriage. Hotel pricing is estimated, shown as a total for the room at the occupancy quoted, and includes taxes and fees as presented at time of sourcing; local tourist taxes payable at the property may apply separately. Bedding and room configuration are requests and are not guaranteed by the property. Cancellation deadlines are set by the supplier and shown per room. Mo'orea accommodation, airport transfers, and any San Francisco hotel night are quoted separately and are not included in the figures above. Round-trip Pape'ete–Vaiare ferry passage is arranged and ticketed by your advisor and is included in your trip, but it is not reflected in the air or accommodation figures shown above; it is added to your final rate at confirmation. The figure shown for it is an approximation of prevailing published fares, which are set by the operators and can change. Passport validity and entry requirements for French Polynesia are the traveler's responsibility; we will flag what we know and point you to the official source.
+      Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor. A deposit is required to confirm any element of this trip; the amount varies with which components are booked and when, and airfare must be paid in full at the time of ticketing. The balance is due January 15, 2027. Airfare is shown as a total for two travelers, round trip, and includes taxes and government fees; it is not held or guaranteed until ticketed, and schedules are subject to change by the airline. Baggage allowances, seat assignments, and change or cancellation terms are set by United Airlines and governed by their contract of carriage. Hotel pricing is estimated, shown as a total for the room at the occupancy quoted, and includes taxes and fees as presented at time of sourcing; local tourist taxes payable at the property may apply separately. Bedding and room configuration are requests and are not guaranteed by the property. Cancellation deadlines are set by the supplier and shown per room. Mo'orea accommodation, airport transfers, and any San Francisco hotel night are quoted separately and are not included in the figures above. Rental cars, if arranged, are contracted between the traveler and the rental company and are normally paid at pickup on a credit card guarantee; rates and terms are set by the supplier. Round-trip Pape'ete–Vaiare ferry passage is arranged and ticketed by your advisor and is included in your trip, but it is not reflected in the air or accommodation figures shown above; it is added to your final rate at confirmation. The figure shown for it is an approximation of prevailing published fares, which are set by the operators and can change. Passport validity and entry requirements for French Polynesia are the traveler's responsibility; we will flag what we know and point you to the official source.
     </div>
   </div>
 </footer>
