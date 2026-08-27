@@ -1,0 +1,2097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tahiti &amp; Mo'orea — Trip Quote for Rachel · Point Me to Paradise Travel</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --aqua-pale:    #C4E4E1;
+  --aqua-mist:    #EAF3F2;
+  --aqua:         #75AFB1;
+  --aqua-dark:    #4F8A8C;
+  --sand:         #ECE7DC;
+  --sand-light:   #F4F1E9;
+  --gold-whisper: #D6C8A8;
+  --white:        #FFFFFF;
+  --paper:        #FBFDFD;
+  --ink:          #2B2420;
+  --ink-soft:     #6B6359;
+  --line:         #E5E9E8;
+  --mark-no:      #B06A5C;
+  --gold-ink:     #8A6D2F;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width: 940px; margin: 0 auto; padding: 0 24px; }
+h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; line-height: 1.18; }
+
+/* ══ HERO ══ */
+.pmtp-hero {
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1589197331516-4d84b72ebde3?auto=format&fit=crop&w=2000&q=80');
+  background-color: var(--aqua-dark);
+  background-size: cover;
+  background-position: center;
+  padding: 78px 32px 60px;
+  text-align: center;
+}
+.pmtp-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(165deg, rgba(43,36,32,0.50) 0%, rgba(79,138,140,0.42) 55%, rgba(43,36,32,0.62) 100%);
+}
+.hero-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
+.pmtp-wordmark {
+  font-family: 'Playfair Display', serif;
+  font-size: 11px; font-weight: 600;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--aqua-pale); display: block; margin-bottom: 6px;
+}
+.pmtp-sub-wordmark {
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-size: 0.95rem; color: var(--aqua-pale); opacity: 0.85;
+  letter-spacing: 0.05em; margin-bottom: 34px;
+}
+.hero-eyebrow {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--white); opacity: 0.9; margin-bottom: 14px;
+}
+.hero-title {
+  font-size: clamp(2.3rem, 6.4vw, 3.9rem); color: var(--white);
+  margin-bottom: 14px; letter-spacing: -0.01em;
+}
+.hero-tagline {
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-size: clamp(1.15rem, 2.6vw, 1.45rem); color: var(--aqua-pale); margin-bottom: 30px;
+}
+.hero-meta { display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.hero-chip {
+  background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.32);
+  color: var(--white); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.05em;
+  padding: 7px 16px; border-radius: 40px;
+}
+
+/* ══ STICKY PRICE BAR ══ */
+.price-bar { position: sticky; top: 0; z-index: 40; background: var(--aqua-mist); border-bottom: 1px solid var(--line); }
+.price-bar-inner {
+  max-width: 940px; margin: 0 auto; padding: 13px 24px;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+}
+.pb-label { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--aqua-dark); }
+.pb-selection { font-family: 'Playfair Display', serif; font-size: 1rem; margin-top: 1px; }
+.pb-right { text-align: right; }
+.pb-price { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 600; line-height: 1.1; }
+.pb-basis { font-size: 0.72rem; color: var(--ink-soft); letter-spacing: 0.04em; }
+
+/* ══ SECTIONS ══ */
+section { padding: 62px 0; }
+.band { background: var(--aqua-mist); }
+.eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--aqua-dark); margin-bottom: 12px; }
+.section-title { font-size: clamp(1.7rem, 4vw, 2.3rem); margin-bottom: 16px; }
+.section-lead { font-size: 1.06rem; color: var(--ink-soft); max-width: 660px; }
+.section-lead + .section-lead { margin-top: 14px; }
+
+/* ══ COMMITMENTS ══ */
+.commit {
+  background: var(--aqua-pale); border-radius: 4px; padding: 24px 28px;
+  margin-top: 32px; font-size: 1rem; line-height: 1.7; border-left: 3px solid var(--aqua-dark);
+}
+.commit-quiet {
+  background: var(--sand-light); border-left: 3px solid var(--gold-whisper); border-radius: 4px;
+  padding: 20px 24px; margin-top: 20px; font-size: 0.93rem; color: var(--ink-soft); line-height: 1.65;
+}
+
+/* ══ FACT GRID ══ */
+.fact-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1px;
+  background: var(--line); border: 1px solid var(--line); border-radius: 4px; overflow: hidden; margin-top: 34px;
+}
+.fact { background: var(--white); padding: 22px 22px 24px; }
+.fact-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--aqua-dark); margin-bottom: 7px; }
+.fact-value { font-family: 'Playfair Display', serif; font-size: 1.15rem; line-height: 1.35; }
+.fact-note { font-size: 0.83rem; color: var(--ink-soft); margin-top: 4px; }
+
+/* ══ ACCORDION (shared: flights + hotels) ══ */
+.acc { margin-top: 26px; }
+.acc-item {
+  background: var(--white); border: 1.5px solid var(--line); border-radius: 6px;
+  margin-bottom: 16px; overflow: hidden; transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+.acc-item.open { border-color: var(--aqua-dark); box-shadow: 0 6px 22px rgba(79,138,140,0.14); }
+.acc-head {
+  width: 100%; background: var(--white); border: none; font: inherit; color: inherit;
+  text-align: left; cursor: pointer; padding: 22px 26px;
+  display: grid; grid-template-columns: 1fr auto auto; gap: 18px; align-items: center;
+}
+.acc-head:hover { background: var(--paper); }
+.acc-head:focus-visible { outline: 2px solid var(--aqua-dark); outline-offset: -3px; }
+.acc-tag { font-size: 10px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--aqua-dark); margin-bottom: 6px; }
+.acc-tag.property {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.34rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink);
+  line-height: 1.22;
+  margin-bottom: 5px;
+}
+.acc-tag.property .loc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--aqua-dark);
+  white-space: nowrap;
+  margin-left: 8px;
+}
+.acc-name.room {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.99rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--ink-soft);
+  margin-bottom: 2px;
+}
+.acc-name { font-family: 'Playfair Display', serif; font-size: 1.16rem; font-weight: 600; }
+.acc-sub { font-size: 0.87rem; color: var(--ink-soft); margin-top: 4px; line-height: 1.5; }
+.acc-price { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 600; text-align: right; white-space: nowrap; }
+.acc-price small { display: block; font-family: 'DM Sans', sans-serif; font-size: 0.7rem; font-weight: 400; color: var(--ink-soft); letter-spacing: 0.03em; }
+.acc-chev {
+  width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--aqua);
+  display: grid; place-items: center; color: var(--aqua-dark); font-size: 0.72rem;
+  transition: transform 0.22s ease, background 0.18s ease;
+}
+.acc-item.open .acc-chev { transform: rotate(180deg); background: var(--aqua-mist); }
+.acc-prose p { color: var(--ink-soft); font-size: 0.98rem; margin-bottom: 13px; }
+.acc-prose p:last-of-type { margin-bottom: 0; }
+.acc-prose strong { color: var(--ink); font-weight: 600; }
+
+.pc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+.pc-head {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase;
+  margin-bottom: 12px; padding-bottom: 9px; border-bottom: 2px solid var(--aqua-pale);
+}
+.pc-head.warm { border-bottom-color: var(--gold-whisper); color: var(--gold-ink); }
+.pc-head.cool { color: var(--aqua-dark); }
+.pc-list { list-style: none; }
+.pc-list li { position: relative; padding: 9px 0 9px 20px; font-size: 0.9rem; line-height: 1.55; border-bottom: 1px solid var(--line); color: var(--ink-soft); }
+.pc-list li:last-child { border-bottom: none; }
+.pc-list li b { color: var(--ink); font-weight: 600; }
+.pc-list li::before { position: absolute; left: 0; top: 9px; font-weight: 700; font-size: 0.85rem; }
+.pc-list.pro li::before { content: '\002B'; color: var(--aqua-dark); }
+.pc-list.con li::before { content: '\2013'; color: var(--gold-ink); }
+.pc-verdict { margin-top: 22px; padding-top: 18px; border-top: 1px dashed var(--line); font-size: 0.94rem; color: var(--ink-soft); }
+.pc-verdict b { color: var(--ink); font-weight: 600; }
+.pc-verdict p + p { margin-top: 10px; }
+@media (max-width: 780px) { .pc-grid { grid-template-columns: 1fr; gap: 20px; } }
+
+.acc-divider { margin: 34px 0 20px; padding-top: 26px; border-top: 1px solid var(--line); }
+.acc-divider h4 { font-size: 1.28rem; margin-bottom: 8px; }
+.resort-gallery { margin-top: 20px; }
+.resort-gallery .carousel-track { aspect-ratio: 16 / 9; }
+.gallery-cap { font-size: 0.82rem; color: var(--ink-soft); margin-top: 10px; letter-spacing: 0.02em; }
+.acc-divider p { font-size: 1rem; color: var(--ink-soft); max-width: 660px; }
+.acc-panel { display: none; border-top: 1px solid var(--line); }
+.acc-item.open .acc-panel { display: block; }
+.acc-body { padding: 26px; }
+
+/* ══ FLIGHT LEGS ══ */
+.leg { padding: 20px 0; display: grid; grid-template-columns: 96px 1fr; gap: 20px; border-bottom: 1px solid var(--line); }
+.leg:last-child { border-bottom: none; padding-bottom: 0; }
+.leg:first-child { padding-top: 0; }
+.leg-times { border-right: 1px solid var(--line); padding-right: 16px; }
+.leg-time { font-family: 'Playfair Display', serif; font-size: 1.12rem; font-weight: 600; }
+.leg-time-sm { font-size: 0.74rem; color: var(--ink-soft); letter-spacing: 0.04em; }
+.leg-dur { font-size: 0.72rem; color: var(--ink-soft); padding: 8px 0 8px 8px; border-left: 2px solid var(--aqua-pale); margin: 6px 0; }
+.leg-airport { font-size: 0.97rem; font-weight: 500; }
+.leg-airport span { color: var(--ink-soft); font-weight: 400; }
+.leg-gap { height: 12px; }
+.leg-carrier { font-size: 0.82rem; color: var(--ink-soft); margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--line); }
+.leg-carrier b { color: var(--ink); font-weight: 600; }
+.leg-amen { font-size: 0.8rem; color: var(--ink-soft); margin-top: 5px; }
+.layover {
+  background: var(--aqua-mist); border-radius: 4px; padding: 13px 18px; margin: 4px 0 20px;
+  font-size: 0.88rem; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+}
+.layover-tag {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase;
+  color: var(--aqua-dark); border: 1px solid var(--aqua); border-radius: 30px; padding: 3px 11px; white-space: nowrap;
+}
+.layover.flag { background: var(--sand-light); }
+.layover.flag .layover-tag { color: var(--gold-ink); border-color: var(--gold-whisper); }
+
+/* ══ FARE CARDS ══ */
+.fare-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); gap: 20px; margin-top: 30px; }
+.fare {
+  background: var(--white); border: 1.5px solid var(--line); border-radius: 6px;
+  padding: 26px 24px 24px; cursor: pointer; font: inherit; color: inherit; text-align: left; width: 100%;
+  display: flex; flex-direction: column;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+.fare:hover { border-color: var(--aqua); transform: translateY(-2px); }
+.fare:focus-visible { outline: 2px solid var(--aqua-dark); outline-offset: 3px; }
+.fare.selected { border-color: var(--aqua-dark); box-shadow: 0 6px 22px rgba(79,138,140,0.16); }
+.fare-badge {
+  align-self: flex-start; font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--aqua-dark); background: var(--aqua-mist); border-radius: 30px; padding: 4px 12px; margin-bottom: 14px;
+}
+.fare-name { font-family: 'Playfair Display', serif; font-size: 1.28rem; font-weight: 600; margin-bottom: 4px; }
+.fare-cabin { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.02rem; color: var(--ink-soft); margin-bottom: 18px; }
+.fare-price { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 600; line-height: 1; }
+.fare-basis { font-size: 0.76rem; color: var(--ink-soft); margin: 6px 0 20px; letter-spacing: 0.03em; }
+.fare-list { list-style: none; font-size: 0.88rem; line-height: 1.55; flex-grow: 1; }
+.fare-list li { padding: 6px 0 6px 22px; position: relative; border-bottom: 1px solid var(--line); }
+.fare-list li:last-child { border-bottom: none; }
+.fare-list li::before { position: absolute; left: 0; top: 6px; font-size: 0.8rem; font-weight: 700; }
+.fare-list li.yes::before { content: '\2713'; color: var(--aqua-dark); }
+.fare-list li.no::before  { content: '\2715'; color: var(--mark-no); }
+.fare-list li.fee::before { content: '$'; color: var(--ink-soft); }
+.fare-select {
+  margin-top: 20px; border: 1px solid var(--aqua); color: var(--aqua-dark); background: var(--white);
+  border-radius: 4px; padding: 11px; text-align: center; font-size: 0.82rem; font-weight: 600;
+  letter-spacing: 0.09em; text-transform: uppercase;
+}
+.fare.selected .fare-select { background: var(--aqua-dark); color: var(--white); border-color: var(--aqua-dark); }
+
+/* ══ SUMMARY ══ */
+.summary { margin-top: 30px; background: var(--white); border: 1.5px solid var(--aqua); border-radius: 6px; padding: 26px 30px; }
+.sum-label { font-size: 11px; font-weight: 600; letter-spacing: 0.17em; text-transform: uppercase; color: var(--aqua-dark); margin-bottom: 14px; }
+.sum-row { display: flex; justify-content: space-between; align-items: baseline; gap: 18px; padding: 11px 0; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.sum-row:last-of-type { border-bottom: none; }
+.sum-k { font-size: 0.95rem; }
+.sum-k small { display: block; font-size: 0.78rem; color: var(--ink-soft); }
+.sum-v { font-family: 'Playfair Display', serif; font-size: 1.45rem; font-weight: 600; white-space: nowrap; }
+.sum-v small { display: block; font-family: 'DM Sans', sans-serif; font-size: 0.72rem; font-weight: 400; color: var(--ink-soft); text-align: right; }
+.sum-foot { font-size: 0.84rem; color: var(--ink-soft); margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--line); }
+
+/* ══ CAROUSEL ══ */
+.carousel { position: relative; background: var(--aqua-mist); border-radius: 5px; overflow: hidden; }
+.carousel-track { position: relative; width: 100%; aspect-ratio: 3 / 2; }
+.carousel-track img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.28s ease; }
+.carousel-track img.on { opacity: 1; }
+.car-btn {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 38px; height: 38px; border-radius: 50%; border: none; cursor: pointer;
+  background: rgba(251,253,253,0.92); color: var(--ink); font-size: 1rem; line-height: 1;
+  display: grid; place-items: center;
+}
+.car-btn:hover { background: var(--white); }
+.car-btn:focus-visible { outline: 2px solid var(--aqua-dark); outline-offset: 2px; }
+.car-prev { left: 10px; } .car-next { right: 10px; }
+.car-count {
+  position: absolute; right: 12px; bottom: 12px; background: rgba(43,36,32,0.62); color: var(--white);
+  font-size: 0.72rem; letter-spacing: 0.05em; padding: 4px 10px; border-radius: 30px;
+}
+.car-dots { display: flex; justify-content: center; gap: 7px; padding: 12px 0 2px; flex-wrap: wrap; }
+.car-dot { width: 7px; height: 7px; border-radius: 50%; border: none; padding: 0; background: var(--line); cursor: pointer; }
+.car-dot.on { background: var(--aqua-dark); }
+
+/* ══ ROOM DETAIL ══ */
+.room-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 28px; align-items: start; }
+.spec { list-style: none; }
+.spec li { display: flex; justify-content: space-between; gap: 14px; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 0.9rem; }
+.spec li:last-child { border-bottom: none; }
+.spec .k { color: var(--ink-soft); }
+.spec .v { text-align: right; font-weight: 500; }
+.pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.pill { font-size: 0.76rem; font-weight: 500; letter-spacing: 0.03em; background: var(--aqua-mist); color: var(--aqua-dark); border-radius: 30px; padding: 5px 13px; }
+.pill.warm { background: var(--sand-light); color: var(--gold-ink); }
+.included {
+  background: var(--white); border: 1.5px solid var(--aqua); border-radius: 6px;
+  padding: 28px 30px; margin-top: 30px;
+}
+.inc-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap; margin-bottom: 8px; }
+.inc-tag {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--white); background: var(--aqua-dark); border-radius: 30px; padding: 5px 13px; display: inline-block; margin-bottom: 10px;
+}
+.inc-name { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 600; }
+.inc-sub { font-size: 0.9rem; color: var(--ink-soft); margin-top: 5px; }
+.inc-cost { text-align: right; }
+.inc-cost .n { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 600; }
+.inc-cost small { display: block; font-size: 0.72rem; color: var(--ink-soft); letter-spacing: 0.03em; }
+.inc-body { margin-top: 18px; padding-top: 18px; border-top: 1px dashed var(--line); font-size: 0.94rem; color: var(--ink-soft); }
+.inc-body p + p { margin-top: 11px; }
+.inc-body b { color: var(--ink); font-weight: 600; }
+
+.room-note { font-size: 0.9rem; color: var(--ink-soft); margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--line); }
+.room-note b { color: var(--ink); font-weight: 600; }
+.room-note p + p { margin-top: 10px; }
+
+/* ══ ADVISOR NOTE ══ */
+.advisor-note { background: var(--white); border: 1px solid var(--line); border-radius: 6px; padding: 30px 32px; margin-top: 30px; }
+.advisor-note h3 { font-size: 1.25rem; margin-bottom: 14px; }
+.advisor-note p { color: var(--ink-soft); margin-bottom: 13px; font-size: 0.98rem; }
+.advisor-note p:last-of-type { margin-bottom: 0; }
+.advisor-note strong { color: var(--ink); font-weight: 600; }
+.sig { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.15rem; color: var(--aqua-dark); margin-top: 18px; display: block; }
+
+ul.plain { list-style: none; margin-top: 22px; }
+ul.plain li { position: relative; padding: 11px 0 11px 26px; border-bottom: 1px solid var(--line); font-size: 0.97rem; color: var(--ink-soft); }
+ul.plain li:last-child { border-bottom: none; }
+ul.plain li::before { content: '\2014'; position: absolute; left: 0; color: var(--aqua); font-weight: 600; }
+ul.plain li b { color: var(--ink); font-weight: 600; }
+
+/* ══ FORM ══ */
+.form-shell { background: var(--white); border: 1px solid var(--line); border-radius: 6px; padding: 38px 34px; margin-top: 32px; }
+.field { margin-bottom: 20px; }
+.field-label { display: block; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--aqua-dark); margin-bottom: 8px; }
+.field-label .opt { text-transform: none; letter-spacing: 0; font-weight: 400; }
+.field input, .field select, .field textarea {
+  width: 100%; font-family: 'DM Sans', sans-serif; font-size: 16px; color: var(--ink);
+  background: var(--paper); border: 1px solid var(--line); border-radius: 4px; padding: 13px 15px;
+}
+.field textarea { min-height: 118px; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--aqua); box-shadow: 0 0 0 3px var(--aqua-mist); }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+#submit-btn {
+  width: 100%; font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); background: var(--aqua-dark);
+  border: none; border-radius: 4px; padding: 17px; cursor: pointer;
+}
+#submit-btn:hover { background: var(--aqua); }
+#submit-btn:disabled { opacity: 0.65; cursor: default; }
+#thank-you { display: none; background: var(--aqua-pale); border-radius: 6px; padding: 44px 34px; text-align: center; margin-top: 32px; }
+#thank-you h3 { font-size: 1.6rem; margin-bottom: 12px; }
+#thank-you p { color: var(--ink-soft); max-width: 470px; margin: 0 auto; }
+
+/* ══ FOOTER ══ */
+footer { background: var(--sand-light); padding: 56px 0 44px; border-top: 1px solid var(--line); }
+.foot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: start; }
+.foot-name { font-family: 'Playfair Display', serif; font-size: 1.45rem; font-weight: 600; }
+.foot-title { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.08rem; color: var(--ink-soft); margin-bottom: 16px; }
+.foot-line { font-size: 0.95rem; color: var(--ink-soft); margin-bottom: 5px; }
+.foot-line a { color: var(--aqua-dark); text-decoration: none; font-weight: 500; }
+.foot-line a:hover { text-decoration: underline; }
+.foot-agency { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
+.foot-tag { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1rem; color: var(--ink-soft); margin-bottom: 18px; }
+.foot-legal { font-size: 0.8rem; color: var(--ink-soft); line-height: 1.6; margin-top: 30px; padding-top: 22px; border-top: 1px solid var(--line); }
+
+@media (max-width: 780px) {
+  section { padding: 46px 0; }
+  .acc-tag.property { font-size: 1.14rem; }
+  .acc-tag.property .loc { display: block; margin-left: 0; margin-top: 4px; }
+  .pmtp-hero { padding: 62px 22px 48px; }
+  .room-grid { grid-template-columns: 1fr; gap: 22px; }
+  .acc-head { grid-template-columns: 1fr auto; gap: 12px; padding: 18px 18px; }
+  .acc-price { grid-column: 1 / -1; text-align: left; }
+  .acc-price small { text-align: left; }
+  .acc-body { padding: 20px 18px; }
+  .leg { grid-template-columns: 82px 1fr; gap: 14px; }
+  .field-row { grid-template-columns: 1fr; gap: 0; }
+  .foot-grid { grid-template-columns: 1fr; gap: 26px; }
+  .form-shell { padding: 28px 22px; }
+  .summary { padding: 22px; }
+  .pb-right { text-align: left; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ HERO ═══ -->
+<header class="pmtp-hero">
+  <div class="hero-inner">
+    <span class="pmtp-wordmark">Point Me to Paradise Travel</span>
+    <div class="pmtp-sub-wordmark">Curated Journeys · Expert Advisors</div>
+    <div class="hero-eyebrow">Prepared for Rachel</div>
+    <h1 class="hero-title">Tahiti &amp; Mo'orea</h1>
+    <div class="hero-tagline">Flights, hotels and the crossing · seven nights in French Polynesia, February 2027</div>
+    <div class="hero-meta">
+      <span class="hero-chip">3 nights Tahiti · 4 nights Mo'orea</span>
+      <span class="hero-chip">Feb 19/20 – Feb 28, 2027</span>
+      <span class="hero-chip">United · IAH – SFO – PPT</span>
+    </div>
+  </div>
+</header>
+
+<!-- ═══ STICKY PRICE BAR ═══ -->
+<div class="price-bar">
+  <div class="price-bar-inner">
+    <div>
+      <div class="pb-label">Air selection</div>
+      <div class="pb-selection" id="bar-label">Overnight SFO · Economy</div>
+    </div>
+    <div class="pb-right">
+      <div class="pb-price" id="bar-price">Est. $3,841</div>
+      <div class="pb-basis">total for two travelers · round trip · taxes &amp; fees in</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ OVERVIEW ═══ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">The shape of the week</div>
+    <h2 class="section-title">How this trip works</h2>
+    <p class="section-lead">United flies San Francisco to Papeete once a day, and it leaves at 11:55 a.m. Everything else bends around that. You land at Fa'a'ā at 6:40 p.m. on Saturday, sleep on Tahiti, and give yourself three nights on the main island before crossing to Mo'orea for the back half of the week.</p>
+    <p class="section-lead">That split is deliberate. Tahiti is where the airport is, where the market and the mountains are, and where you shake off the flight. Mo'orea is thirty minutes across the water and is the part you'll remember. Three nights, then four.</p>
+
+    <div class="fact-grid">
+      <div class="fact">
+        <div class="fact-label">Leave Houston</div>
+        <div class="fact-value">Feb 19 or 20</div>
+        <div class="fact-note">Friday 9:45 p.m. or Saturday 8:20 a.m.</div>
+      </div>
+      <div class="fact">
+        <div class="fact-label">Tahiti</div>
+        <div class="fact-value">Feb 20 – 23</div>
+        <div class="fact-note">3 nights · arrive 6:40 p.m. Saturday</div>
+      </div>
+      <div class="fact">
+        <div class="fact-label">Mo'orea</div>
+        <div class="fact-value">Feb 23 – 27</div>
+        <div class="fact-note">4 nights · ferry across from Papeete</div>
+      </div>
+      <div class="fact">
+        <div class="fact-label">Home</div>
+        <div class="fact-value">Sun, Feb 28</div>
+        <div class="fact-note">2:59 p.m. into Houston (IAH)</div>
+      </div>
+    </div>
+
+    <div class="commit">
+      We don't book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. The work you'd hate doing — already done.
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FLIGHTS ═══ -->
+<section class="band">
+  <div class="wrap">
+    <div class="eyebrow">Part one</div>
+    <h2 class="section-title">Your flights</h2>
+    <p class="section-lead">Two ways to reach that Saturday departure out of San Francisco. Both land in Papeete at the same minute. Tap either one to open the full leg detail — and tap the fare cards below to change your pricing.</p>
+
+    <div class="acc" id="route-acc">
+
+      <div class="acc-item" data-routing="A" data-short="Overnight SFO" data-note="Depart Fri, Feb 19 · overnight in San Francisco">
+        <button type="button" class="acc-head" aria-expanded="false">
+          <div>
+            <div class="acc-tag">Option A · Recommended</div>
+            <div class="acc-name">Leave Friday night</div>
+            <div class="acc-sub">Houston 9:45 p.m. → San Francisco 12:04 a.m. → hotel → Papeete 6:40 p.m. Saturday. Costs a hotel night. Removes all connection risk.</div>
+          </div>
+          <div class="acc-price">Fare below<small>+ one SFO hotel night</small></div>
+          <span class="acc-chev" aria-hidden="true">&#9660;</span>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-body">
+            <div class="leg">
+              <div class="leg-times">
+                <div class="leg-time">9:45 <span class="leg-time-sm">PM</span></div>
+                <div class="leg-dur">4 hr 19 min</div>
+                <div class="leg-time">12:04 <span class="leg-time-sm">AM +1</span></div>
+              </div>
+              <div>
+                <div class="leg-airport">Houston <span>— George Bush Intercontinental (IAH)</span></div>
+                <div class="leg-gap"></div>
+                <div class="leg-airport">San Francisco <span>— San Francisco International (SFO)</span></div>
+                <div class="leg-carrier"><b>United 1609</b> · Boeing 737 MAX 9 · Economy</div>
+                <div class="leg-amen">30 in average legroom · in-seat power · streaming to your device · Wi-Fi for a fee</div>
+              </div>
+            </div>
+            <div class="layover flag">
+              <span class="layover-tag">Overnight in SFO</span>
+              <span>11 hr 51 min on the ground. You'll want a room, and your bags come off here — see my note below.</span>
+            </div>
+            <div class="leg">
+              <div class="leg-times">
+                <div class="leg-time">11:55 <span class="leg-time-sm">AM</span></div>
+                <div class="leg-dur">8 hr 45 min</div>
+                <div class="leg-time">6:40 <span class="leg-time-sm">PM</span></div>
+              </div>
+              <div>
+                <div class="leg-airport">San Francisco <span>— San Francisco International (SFO)</span></div>
+                <div class="leg-gap"></div>
+                <div class="leg-airport">Papeete <span>— Fa'a'ā International (PPT)</span></div>
+                <div class="leg-carrier"><b>United 115</b> · Boeing 787 Dreamliner · Economy</div>
+                <div class="leg-amen">31 in average legroom · in-seat power &amp; USB · on-demand video · Wi-Fi for a fee</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item" data-routing="B" data-short="Same-day" data-note="Depart Sat, Feb 20 · connect through San Francisco">
+        <button type="button" class="acc-head" aria-expanded="false">
+          <div>
+            <div class="acc-tag">Option B</div>
+            <div class="acc-name">Leave Saturday morning</div>
+            <div class="acc-sub">Houston 8:20 a.m. → San Francisco 10:42 a.m. → Papeete 6:40 p.m. No hotel to pay for. A 1 hr 13 min connection with no cushion.</div>
+          </div>
+          <div class="acc-price">Fare below<small>no hotel night needed</small></div>
+          <span class="acc-chev" aria-hidden="true">&#9660;</span>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-body">
+            <div class="leg">
+              <div class="leg-times">
+                <div class="leg-time">8:20 <span class="leg-time-sm">AM</span></div>
+                <div class="leg-dur">4 hr 22 min</div>
+                <div class="leg-time">10:42 <span class="leg-time-sm">AM</span></div>
+              </div>
+              <div>
+                <div class="leg-airport">Houston <span>— George Bush Intercontinental (IAH)</span></div>
+                <div class="leg-gap"></div>
+                <div class="leg-airport">San Francisco <span>— San Francisco International (SFO)</span></div>
+                <div class="leg-carrier"><b>United 1966</b> · Boeing 737 MAX 9 · Economy</div>
+                <div class="leg-amen">30 in average legroom · in-seat power · streaming to your device · Wi-Fi for a fee</div>
+              </div>
+            </div>
+            <div class="layover flag">
+              <span class="layover-tag">1 hr 13 min connection</span>
+              <span>Legal, but there's no margin in it. Read my note below before you pick this one.</span>
+            </div>
+            <div class="leg">
+              <div class="leg-times">
+                <div class="leg-time">11:55 <span class="leg-time-sm">AM</span></div>
+                <div class="leg-dur">8 hr 45 min</div>
+                <div class="leg-time">6:40 <span class="leg-time-sm">PM</span></div>
+              </div>
+              <div>
+                <div class="leg-airport">San Francisco <span>— San Francisco International (SFO)</span></div>
+                <div class="leg-gap"></div>
+                <div class="leg-airport">Papeete <span>— Fa'a'ā International (PPT)</span></div>
+                <div class="leg-carrier"><b>United 115</b> · Boeing 787 Dreamliner · Economy</div>
+                <div class="leg-amen">31 in average legroom · in-seat power &amp; USB · on-demand video · Wi-Fi for a fee</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item" id="return-item">
+        <button type="button" class="acc-head" aria-expanded="false">
+          <div>
+            <div class="acc-tag">Both options</div>
+            <div class="acc-name">The return</div>
+            <div class="acc-sub">Papeete 8:40 p.m. Saturday → San Francisco 6:55 a.m. → Houston 2:59 p.m. Sunday. Identical either way you fly out.</div>
+          </div>
+          <div class="acc-price">Feb 27 – 28<small>overnight crossing</small></div>
+          <span class="acc-chev" aria-hidden="true">&#9660;</span>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-body">
+            <div class="leg">
+              <div class="leg-times">
+                <div class="leg-time">8:40 <span class="leg-time-sm">PM</span></div>
+                <div class="leg-dur">8 hr 15 min · overnight</div>
+                <div class="leg-time">6:55 <span class="leg-time-sm">AM +1</span></div>
+              </div>
+              <div>
+                <div class="leg-airport">Papeete <span>— Fa'a'ā International (PPT)</span></div>
+                <div class="leg-gap"></div>
+                <div class="leg-airport">San Francisco <span>— San Francisco International (SFO)</span></div>
+                <div class="leg-carrier"><b>United 114</b> · Boeing 787 Dreamliner · Economy</div>
+                <div class="leg-amen">31 in average legroom · in-seat power &amp; USB · on-demand video · Wi-Fi for a fee</div>
+              </div>
+            </div>
+            <div class="layover">
+              <span class="layover-tag">2 hr connection</span>
+              <span>Enough time to clear customs and re-check bags without a sprint.</span>
+            </div>
+            <div class="leg">
+              <div class="leg-times">
+                <div class="leg-time">8:55 <span class="leg-time-sm">AM</span></div>
+                <div class="leg-dur">4 hr 4 min</div>
+                <div class="leg-time">2:59 <span class="leg-time-sm">PM</span></div>
+              </div>
+              <div>
+                <div class="leg-airport">San Francisco <span>— San Francisco International (SFO)</span></div>
+                <div class="leg-gap"></div>
+                <div class="leg-airport">Houston <span>— George Bush Intercontinental (IAH)</span></div>
+                <div class="leg-carrier"><b>United 1240</b> · Boeing 737 MAX 9 · Economy</div>
+                <div class="leg-amen">30 in average legroom · in-seat power · streaming to your device · Wi-Fi for a fee</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="acc" id="routing-note">
+      <div class="acc-item">
+        <button type="button" class="acc-head" aria-expanded="false">
+          <div>
+            <div class="acc-tag">Advisor note · optional reading</div>
+            <div class="acc-name">How I'd actually think about the routing</div>
+            <div class="acc-sub">Why the once-a-day Papeete flight decides this, what a 73-minute connection really risks, where your bags come off, and which one I'd book. Open it if you want the reasoning behind my recommendation.</div>
+          </div>
+          <div class="acc-price">My take<small>a two-minute read</small></div>
+          <span class="acc-chev" aria-hidden="true">&#9660;</span>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-body acc-prose">
+        <p>The thing that should decide this: <strong>United only flies to Papeete once a day.</strong> If you miss that 11:55 a.m. departure, the next one is twenty-four hours later. You'd end up spending the night in San Francisco anyway, except you'd be paying for it twice over in a lost night of resort you'd already booked, plus whatever the rebooking costs.</p>
+        <p><strong>Option B</strong> is legal and United sells it, so on paper it works. In practice: an 8:20 a.m. departure means you're at Bush by 6:15 and awake around 4:45. Then you land at 10:42 with seventy-three minutes to get from United's domestic gates to International Terminal G. The walk is airside, so there's no security to re-clear — though gate assignments won't publish for months. A forty-minute ground delay in Houston, which is not rare in February, puts your week at risk.</p>
+        <p><strong>Option A</strong> takes that worry away, and I'll be straight with you about what it costs. You land at 12:04 a.m. and you're not in a room much before 1. You're up again by 9. It's a short night rather than a real one, and it's a hotel night out of pocket on top of the fare.</p>
+        <p><strong>Where I land:</strong> Option A, staying on airport property. The Grand Hyatt at SFO connects to the terminals by AirTrain — no shuttle line at midnight, no rideshare at 9 a.m., and no wrestling suitcases into a van at 1 a.m. It runs more than the highway hotels in Millbrae or Burlingame, and on a night this compressed, with your bags in tow, it earns the difference. I'll price it once you tell me which way you're leaning.</p>
+        <p><strong>If you're set on Option B,</strong> I suggest we consider insurance with missed-connection coverage. I've done this route without issues myself, but you never know with flights these days.</p>
+        <p><strong>Your bags on Option A — confirmed, and it matters.</strong> They do not check through to Papeete on an overnight connection. You collect them at San Francisco baggage claim after midnight, take them to the hotel, and re-check them in the morning. I've flown this routing myself, so this isn't a guess. It's another reason to stay on airport property rather than shuttle to a highway hotel with luggage at one in the morning. On Option B, with a same-day connection, this doesn't come up at all.</p>
+        <span class="sig">the world is your oyster, we are your pearl</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-size:1.4rem; margin-top:44px;">Choose your fare</h3>
+    <p class="section-lead" style="margin-top:10px;">All four fares price identically on both routings — Friday night or Saturday morning, the ticket costs the same. What you're choosing here is cabin and cancellation rights.</p>
+
+    <div class="fare-grid" id="fare-grid">
+
+      <button type="button" class="fare selected" data-fare="Economy" data-routings="A B" data-price="3841" data-note="non-refundable, changes allowed" aria-pressed="true">
+        <span class="fare-badge">Lowest fare</span>
+        <div class="fare-name">Economy</div>
+        <div class="fare-cabin">Standard economy, both legs</div>
+        <div class="fare-price">Est. $3,841</div>
+        <div class="fare-basis">total for two travelers &middot; round trip &middot; taxes &amp; fees included<br>about $1,921 each</div>
+        <ul class="fare-list">
+          <li class="no">No refunds</li>
+          <li class="yes">Free changes — pay any fare difference</li>
+          <li class="yes">Free seat selection</li>
+          <li class="yes">1 carry-on plus 1 checked bag to 23 kg, free</li>
+          <li class="fee">Extra legroom available for a fee</li>
+          <li class="fee">Priority boarding for a fee</li>
+        </ul>
+        <div class="fare-select">Selected</div>
+      </button>
+
+      <button type="button" class="fare" data-fare="Economy Fully Refundable" data-routings="A B" data-price="4581" data-note="cancel for a full refund, any time" aria-pressed="false">
+        <span class="fare-badge">Most flexible</span>
+        <div class="fare-name">Economy Fully Refundable</div>
+        <div class="fare-cabin">Same seat, no strings</div>
+        <div class="fare-price">Est. $4,581</div>
+        <div class="fare-basis">total for two travelers &middot; round trip &middot; taxes &amp; fees included<br>about $2,291 each</div>
+        <ul class="fare-list">
+          <li class="yes">Full refunds</li>
+          <li class="yes">Free changes — pay any fare difference</li>
+          <li class="yes">Free seat selection</li>
+          <li class="yes">1 carry-on plus 1 checked bag to 23 kg, free</li>
+          <li class="fee">Extra legroom available for a fee</li>
+          <li class="fee">Priority boarding for a fee</li>
+        </ul>
+        <div class="fare-select">Select</div>
+      </button>
+
+      <button type="button" class="fare" data-fare="Base Premium Economy" data-routings="A B" data-price="6021" data-note="wider seat, restricted ticket" aria-pressed="false">
+        <span class="fare-badge">Bigger seat</span>
+        <div class="fare-name">Base Premium Economy</div>
+        <div class="fare-cabin">Premium Plus cabin, entry-level fare</div>
+        <div class="fare-price">Est. $6,021</div>
+        <div class="fare-basis">total for two travelers &middot; round trip &middot; taxes &amp; fees included<br>about $3,011 each</div>
+        <ul class="fare-list">
+          <li class="yes">Standard Premium Plus seat assigned</li>
+          <li class="yes">Priority boarding included</li>
+          <li class="yes">1 carry-on plus 1 checked bag to 23 kg, free</li>
+          <li class="no">No refunds</li>
+          <li class="fee">Ticket changes for a fee</li>
+          <li class="fee">Choosing your own seat carries a fee</li>
+        </ul>
+        <div class="fare-select">Select</div>
+      </button>
+
+      <button type="button" class="fare" data-fare="Premium Economy" data-routings="A B" data-price="6621" data-note="wider seat, free changes and seat choice" aria-pressed="false" hidden>
+        <span class="fare-badge">Bigger seat, unrestricted</span>
+        <div class="fare-name">Premium Economy</div>
+        <div class="fare-cabin">Premium Plus cabin, full fare</div>
+        <div class="fare-price">Est. $6,621</div>
+        <div class="fare-basis">total for two travelers &middot; round trip &middot; taxes &amp; fees included<br>about $3,311 each</div>
+        <ul class="fare-list">
+          <li class="yes">Free seat selection in the Premium Plus cabin</li>
+          <li class="yes">Free changes &mdash; pay any fare difference</li>
+          <li class="yes">Priority boarding included</li>
+          <li class="yes">1 carry-on plus 1 checked bag to 23 kg, free</li>
+          <li class="no">No refunds</li>
+        </ul>
+        <div class="fare-select">Select</div>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TAHITI STAY ═══ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Part two · Nights one through three</div>
+    <h2 class="section-title">Where you stay on Tahiti</h2>
+    <p class="section-lead">You land Saturday evening, and the last thing you want is a long transfer. All three of these sit within about ten minutes of the terminal, on the water, facing west at Mo'orea — the island you'll be standing on three days later. They run from a full resort down to a boutique in the middle of Pape'ete, and the spread between them is real money. Tap any one to open photos, specs, and terms.</p>
+
+    <div class="acc" id="tahiti-acc">
+      <div class="acc-item" data-hotel="ic" data-hotel-label="InterContinental — Classic Room, Mo'orea view" data-hotel-price="2,724" data-hotel-sub="Feb 20 – 23 · breakfast for two · refundable to Feb 18">
+        <button type="button" class="acc-head" aria-expanded="false">
+          <div>
+            <div class="acc-tag property">InterContinental Tahiti Resort &amp; Spa<span class="loc">Fa'a'ā</span></div>
+            <div class="acc-name room">Classic Room — 1 King Bed, Mo'orea Island View</div>
+            <div class="acc-sub">3 nights · Feb 20 – 23, 2027 · breakfast for two daily · fully refundable through Feb 18</div>
+          </div>
+          <div class="acc-price">Est. $2,724<small>total for the room · taxes &amp; fees in</small></div>
+          <span class="acc-chev" aria-hidden="true">&#9660;</span>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-body">
+            <div class="room-grid">
+              <div>
+                <div class="carousel" data-carousel>
+                  <div class="carousel-track">
+                    <img class="on" src="https://images.trvl-media.com/lodging/1000000/30000/20400/20394/83e6897e.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Classic Room at the InterContinental Tahiti Resort and Spa" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/30000/20400/20394/e8d6b5cf.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Guest room interior" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/30000/20400/20394/68d4c80b.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Resort grounds" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/30000/20400/20394/07183231.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Lagoon and pool area" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/30000/20400/20394/aef400eb.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Resort view toward Mo'orea" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/30000/20400/20394/cea27eaf.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Property detail" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/30000/20400/20394/24188ab4.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Property detail" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/30000/20400/20394/78b87a93.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Property detail" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/30000/20400/20394/e9f0ec36.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Property detail" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/30000/20400/20394/bc725733.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Property detail" loading="lazy">
+                    <button type="button" class="car-btn car-prev" aria-label="Previous photo">&#8249;</button>
+                    <button type="button" class="car-btn car-next" aria-label="Next photo">&#8250;</button>
+                    <span class="car-count">1 / 10</span>
+                  </div>
+                  <div class="car-dots"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="pill-row">
+                  <span class="pill">Ocean view</span>
+                  <span class="pill">Breakfast for two</span>
+                  <span class="pill">Parking included</span>
+                  <span class="pill">Free Wi-Fi</span>
+                  <span class="pill warm">Fully refundable to Feb 18</span>
+                </div>
+                <ul class="spec">
+                  <li><span class="k">Dates</span><span class="v">Feb 20 – 23, 2027 · 3 nights</span></li>
+                  <li><span class="k">Room size</span><span class="v">26 sq m / 279 sq ft</span></li>
+                  <li><span class="k">Bedding</span><span class="v">1 king bed</span></li>
+                  <li><span class="k">Occupancy</span><span class="v">Sleeps up to 3</span></li>
+                  <li><span class="k">Outlook</span><span class="v">Across the lagoon to Mo'orea</span></li>
+                  <li><span class="k">Cancel by</span><span class="v">Feb 18, 2027</span></li>
+                  <li><span class="k">Guest rating</span><span class="v">9.0 / 10 · 12 reviews</span></li>
+                  <li><span class="k">Other rooms available</span><span class="v">Ask and I'll price them</span></li>
+                </ul>
+                <div class="room-note">
+                  <p><b>Why here.</b> The resort sits about five minutes from the airport in Fa'a'ā, which matters more than it sounds when you're landing at 6:40 p.m. after twenty hours in transit. It's the largest resort on the main island, built on the lagoon with an infinity pool facing west — so the sunsets happen directly in front of you, with Mo'orea's outline in the middle of them.</p>
+                  <p><b>What it is and isn't.</b> This is the practical bookend of your week, not the centerpiece. Tahiti has the Papeete market, the mountain interior, and Teahupo'o on the far coast. The postcard water is on Mo'orea, and that's where your four nights go.</p>
+                  <p><b>On the rating.</b> Nine out of ten reads well, but it's twelve reviews. That's a small sample and I'd weight it lightly either direction.</p>
+                  <p><b>Rate sweep.</b> I'll keep checking this rate against every channel I have right up until you're committed. If it drops, you get the lower number.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item" data-hotel="hilton" data-hotel-label="Hilton Hotel Tahiti — King Room, garden view" data-hotel-price="2,226" data-hotel-sub="Feb 20 – 23 · 38 sq m · refundable to Feb 17">
+        <button type="button" class="acc-head" aria-expanded="false">
+          <div>
+            <div class="acc-tag property">Hilton Hotel Tahiti<span class="loc">Papeete</span></div>
+            <div class="acc-name room">Room — 1 King Bed, Garden View</div>
+            <div class="acc-sub">3 nights · Feb 20 – 23, 2027 · 38 sq m, the larger room · fully refundable through Feb 17</div>
+          </div>
+          <div class="acc-price">Est. $2,226<small>total for the room · taxes &amp; fees in</small></div>
+          <span class="acc-chev" aria-hidden="true">&#9660;</span>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-body">
+            <div class="room-grid">
+              <div>
+                <div class="carousel" data-carousel>
+                  <div class="carousel-track">
+                    <img class="on" src="https://images.trvl-media.com/lodging/68000000/67550000/67548300/67548272/w5116h3836x4y4-a8dbcb2e.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="King room at the Hilton Hotel Tahiti" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/68000000/67550000/67548300/67548272/ff432112.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Guest room interior" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/68000000/67550000/67548300/67548272/w5120h3836x0y4-bdcfe9f9.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Room detail" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/68000000/67550000/67548300/67548272/4eb913d3.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Property grounds" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/68000000/67550000/67548300/67548272/d667548a.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Pool deck" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/68000000/67550000/67548300/67548272/w5116h3836x4y4-62ce0658.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Property detail" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/68000000/67550000/67548300/67548272/a364cc6e.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Property detail" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/68000000/67550000/67548300/67548272/b03f7491.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Property detail" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/68000000/67550000/67548300/67548272/5abe6ffa.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Property detail" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/68000000/67550000/67548300/67548272/fe031f4b.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Property detail" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/68000000/67550000/67548300/67548272/c88d4bdc.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Property detail" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/68000000/67550000/67548300/67548272/79e84542.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Property detail" loading="lazy">
+                    <button type="button" class="car-btn car-prev" aria-label="Previous photo">&#8249;</button>
+                    <button type="button" class="car-btn car-next" aria-label="Next photo">&#8250;</button>
+                    <span class="car-count">1 / 12</span>
+                  </div>
+                  <div class="car-dots"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="pill-row">
+                  <span class="pill">Garden view</span>
+                  <span class="pill">Parking included</span>
+                  <span class="pill">Sofa bed in the seating area</span>
+                  <span class="pill warm">Fully refundable to Feb 17</span>
+                </div>
+                <ul class="spec">
+                  <li><span class="k">Dates</span><span class="v">Feb 20 – 23, 2027 · 3 nights</span></li>
+                  <li><span class="k">Room size</span><span class="v">38 sq m / 409 sq ft</span></li>
+                  <li><span class="k">Bedding</span><span class="v">1 king bed</span></li>
+                  <li><span class="k">Occupancy</span><span class="v">Sleeps up to 3</span></li>
+                  <li><span class="k">Outlook</span><span class="v">Garden</span></li>
+                  <li><span class="k">Cancel by</span><span class="v">Feb 17, 2027</span></li>
+                  <li><span class="k">Guest rating</span><span class="v">9.2 / 10 · 45 reviews</span></li>
+                  <li><span class="k">Other rooms available</span><span class="v">Ask and I'll price them</span></li>
+                </ul>
+                <div class="room-note">
+                  <p><b>Why here.</b> The Hilton sits on the water between the airport and downtown Papeete, roughly half a mile from the terminal. It has the largest pool on Tahiti, with a swim-up bar and cabanas, and two of its restaurants are built out over the water looking at Mo'orea. There's a shopping center with a full supermarket directly across the road, connected by a walkway — more useful than it sounds when you want water, snacks, and sunscreen without paying resort prices.</p>
+                  <p><b>The history, briefly.</b> This is the old Hotel Tahiti site, which opened in 1960 and hosted a long run of the people who put Tahiti on the map for Americans. It was gutted and rebuilt as a Hilton, so what you get is a new-build interior on the island's most storied piece of hotel land.</p>
+                  <p><b>What garden view means here.</b> Be clear-eyed: this category faces the gardens, not the lagoon, and standard rooms at this property don't have balconies. You get the bigger room and the better price; you don't get the view from your own door. The ocean outlook lives at the pool and the restaurants, which is where you'd be anyway on a three-night stop. If a private balcony over the water matters to you, say so and I'll price the ocean-view category.</p>
+                  <p><b>Rate sweep.</b> I'll keep checking this rate against every channel I have right up until you're committed. If it drops, you get the lower number.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item" data-hotel="kontiki" data-hotel-label="Kon Tiki — Tahitian Room, partial ocean view" data-hotel-price="1,134" data-hotel-sub="Feb 20 – 23 · breakfast included · sleeps 2 · refundable to Feb 15">
+        <button type="button" class="acc-head" aria-expanded="false">
+          <div>
+            <div class="acc-tag property">Boutique Hotel Kon Tiki Tahiti<span class="loc">Downtown Pape'ete</span></div>
+            <div class="acc-name room">Tahitian Room — 1 King Bed</div>
+            <div class="acc-sub">3 nights · Feb 20 – 23, 2027 · breakfast included · sleeps 2 · fully refundable through Feb 15</div>
+          </div>
+          <div class="acc-price">Est. $1,134<small>total for the room · taxes &amp; fees in</small></div>
+          <span class="acc-chev" aria-hidden="true">&#9660;</span>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-body">
+            <div class="room-grid">
+              <div>
+                <div class="carousel" data-carousel>
+                  <div class="carousel-track">
+                    <img class="on" src="https://images.trvl-media.com/lodging/71000000/70570000/70562100/70562051/40c65aef.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Tahitian Room at the Boutique Hotel Kon Tiki Tahiti" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/71000000/70570000/70562100/70562051/3319c861.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Guest room interior" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/71000000/70570000/70562100/70562051/45f29c1e.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Room detail" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/71000000/70570000/70562100/70562051/6930a13b.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Balcony outlook" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/71000000/70570000/70562100/70562051/d4a185e6.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Rooftop bar" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/71000000/70570000/70562100/70562051/cd22045e.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Property detail" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/71000000/70570000/70562100/70562051/14c10de7.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Property detail" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/71000000/70570000/70562100/70562051/fdfcc799.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Property detail" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/71000000/70570000/70562100/70562051/7f333bee.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Property detail" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/71000000/70570000/70562100/70562051/75089c1a.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Property detail" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/71000000/70570000/70562100/70562051/89ad4347.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Property detail" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/71000000/70570000/70562100/70562051/1a9d8cae.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Property detail" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/71000000/70570000/70562100/70562051/bed11e8c.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Property detail" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/71000000/70570000/70562100/70562051/2bde42ab.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Property detail" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/71000000/70570000/70562100/70562051/f5913ed4.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Property detail" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/71000000/70570000/70562100/70562051/8d56e7e7.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Property detail" loading="lazy">
+                    <button type="button" class="car-btn car-prev" aria-label="Previous photo">&#8249;</button>
+                    <button type="button" class="car-btn car-next" aria-label="Next photo">&#8250;</button>
+                    <span class="car-count">1 / 16</span>
+                  </div>
+                  <div class="car-dots"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="pill-row">
+                  <span class="pill">Partial ocean view</span>
+                  <span class="pill">Breakfast included</span>
+                  <span class="pill">Balcony</span>
+                  <span class="pill">Free Wi-Fi</span>
+                  <span class="pill warm">Sleeps 2 only</span>
+                  <span class="pill warm">Fully refundable to Feb 15</span>
+                </div>
+                <ul class="spec">
+                  <li><span class="k">Dates</span><span class="v">Feb 20 – 23, 2027 · 3 nights</span></li>
+                  <li><span class="k">Room size</span><span class="v">35 sq m / 377 sq ft</span></li>
+                  <li><span class="k">Bedding</span><span class="v">1 king bed</span></li>
+                  <li><span class="k">Occupancy</span><span class="v">Sleeps 2</span></li>
+                  <li><span class="k">Outlook</span><span class="v">Partial ocean, with a balcony</span></li>
+                  <li><span class="k">Cancel by</span><span class="v">Feb 15, 2027</span></li>
+                  <li><span class="k">Guest rating</span><span class="v">9.6 / 10 · 41 reviews</span></li>
+                  <li><span class="k">Other rooms available</span><span class="v">Ask and I'll price them</span></li>
+                </ul>
+                <div class="room-note">
+                  <p><b>Why here.</b> The Kon Tiki sits on Boulevard de la Reine Pomare IV, directly across from the ferry quay — a two-minute walk to the boat I've got you on for Mo'orea on the 23rd. The Pape'ete market is seven minutes on foot, and the rooftop bar looks out over the harbor at Mo'orea, which is the view you'd otherwise be paying resort money for. The building has a history: it was a boat, then a hotel, and the current version is a rebuild that leans into that.</p>
+                  <p><b>What you're trading.</b> This is a town hotel, not a resort — a three-star boutique in the middle of a working Polynesian city. You get the market, the waterfront, and dinner within walking distance instead of grounds and a pool deck. For three nights at the front of a trip whose second half is a lagoon, that's a defensible trade, and it's less than half the nightly rate of the other two.</p>
+                  <p><b>On the room itself.</b> It's a double sized for the two of you, with a balcony and a partial view out over the harbour. Thirty-five square metres, which is bigger than the InterContinental's Classic Room at less than half the nightly rate.</p>
+                  <p><b>Rate sweep.</b> I'll keep checking this rate against every channel I have right up until you're committed. If it drops, you get the lower number.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="acc" id="tahiti-verdict">
+      <div class="acc-item">
+        <button type="button" class="acc-head" aria-expanded="false">
+          <div>
+            <div class="acc-tag">Advisor note · optional reading</div>
+            <div class="acc-name">Which of the three, honestly</div>
+            <div class="acc-sub">Which one to pick depends on how you want these three days to feel — resort and pool, or out in Pape'ete. Includes the market timing that might decide it and an honest warning about the food trucks.</div>
+          </div>
+          <div class="acc-price">My take<small>a one-minute read</small></div>
+          <span class="acc-chev" aria-hidden="true">&#9660;</span>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-body acc-prose">
+        <p>All three are a short drive from the airport and from each other. There's <strong>$1,590 between them</strong> across the three nights, so here's what that money is actually getting you.</p>
+        <p><strong>InterContinental, $908 a night.</strong> The Mo'orea outlook from your own terrace, breakfast for two, resort grounds. The smallest room of the three at 26 sq m.</p>
+        <p><strong>Hilton, $742 a night.</strong> The biggest room at 38 sq m and the largest pool on the island, but the garden category has no balcony and looks at landscaping. The Mo'orea view lives at the pool and the overwater restaurants rather than at your door.</p>
+        <p><strong>Kon Tiki, $378 a night.</strong> Less than half of either, with breakfast in and the highest guest rating of the three. It's a boutique in downtown Pape'ete rather than a resort, and it's two minutes from the ferry quay you'll use on the 23rd.</p>
+        <p><strong>Here's how I'd actually decide it,</strong> and it isn't really about the money. It's about what you want these three days to feel like, because these two answers point to different hotels and both of them are right.</p>
+        <p><strong>If you want a resort,</strong> take one. You'll have just come off twenty hours of travel, and there's a lot to be said for landing, sleeping, and spending the next two days doing very little beside a pool with someone bringing you things. If that's the plan, I'd put you at the Hilton — the biggest room of the three, the largest pool on the island, and about $500 less across the stay than the InterContinental. Take the InterContinental instead if you want Mo'orea in front of you from your own terrace and breakfast for two included, and you're happy to pay for it.</p>
+        <p><strong>If you'd rather be out,</strong> the Kon Tiki isn't a compromise, it's the better choice. You're on the waterfront in the middle of Pape'ete, seven minutes' walk from the municipal market, with restaurants and the boulevard on your doorstep and the ferry quay across the street. You'd be paying $378 a night instead of $742 or $908 for a room you're barely in, and putting the difference toward Mo'orea.</p>
+        <p><strong>One piece of timing that might decide it for you.</strong> Sunday the 21st is your only full day with the Sunday market, and the Sunday market is the one worth setting an alarm for — families come in from the outer islands, stalls spill into the streets, and it's mostly over by nine or ten in the morning. From the Kon Tiki you walk to it. From Fa'a'ā or the Hilton you're getting in a car before dawn to make it.</p>
+        <p><strong>And one honest warning about the evenings.</strong> The roulottes at Place Vaiete, the food trucks everyone tells you about, have thinned out in recent years and are not what they were. They still run nightly from around six and are worth one visit for the atmosphere. For an actual good dinner I'd steer you toward the restaurants at Place Toata a short walk along the waterfront instead. I'll have all of this mapped for you either way.</p>
+        <p><strong>One thing before you decide.</strong> That $908 a night at the InterContinental looks high to me for February. I'm re-pricing it through my other channels and I'll let you know if it should be coming down, so don't hang your decision on that number yet.</p>
+        <span class="sig">the world is your oyster, we are your pearl</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MO'OREA STAY ═══ -->
+<section class="band">
+  <div class="wrap">
+    <div class="eyebrow">Part three · Nights four through seven</div>
+    <h2 class="section-title">Where you stay on Mo'orea</h2>
+    <p class="section-lead">Four nights, February 23 to 27. The crossing is handled — details below. Two resorts on opposite corners of the island, priced from a garden bungalow with its own plunge pool up to a premium overwater.</p>
+
+    <div class="acc" id="ferry-note">
+      <div class="acc-item">
+        <button type="button" class="acc-head" aria-expanded="false">
+          <div>
+            <span class="inc-tag">Included · I arrange it</span>
+            <div class="acc-name">The ferry across — Pape'ete to Vaiare, and back</div>
+            <div class="acc-sub">Feb 23 out, Feb 27 back · 30 to 45 minutes each way · booked and ticketed for you · not yet folded into the figures on this page</div>
+          </div>
+          <div class="acc-price">Approx. $60<small>for two, round trip<br>not in the totals yet</small></div>
+          <span class="acc-chev" aria-hidden="true">&#9660;</span>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-body acc-prose">
+        <p><b>You don't need to do anything here.</b> I book both crossings, hold your tickets, and put the QR codes in your trip app alongside everything else. You walk on. The approximate figure above covers both of you — tickets run roughly 1,300 to 2,000 XPF each way per adult depending on which operator sails at the time you want — so you can see what it costs rather than wonder.</p>
+        <p><b>One note on where this sits in the numbers.</b> The ferry will be included in your trip, but it is <em>not</em> in the air and hotel figures shown on this page yet. It gets folded into your final rate once you've picked your flights and your bungalow, and I'll confirm the exact amount then rather than carry an estimate through to the invoice.</p>
+        <p><b>Why the outbound is on the 23rd and not the 20th.</b> There are no overnight crossings, and the last boat leaves in the late afternoon. You land at 6:40 p.m. on the 20th, which puts you at the terminal after the last sailing regardless of how fast customs moves. That's the reason your Tahiti nights exist — the schedule made the decision, not me.</p>
+        <p><b>The return has to be planned, not improvised.</b> Your flight home leaves Fa'a'ā at 8:40 p.m. on the 27th. I'll put you on an afternoon boat with real margin, not the last one, so a delayed sailing never becomes a missed flight. Bags are not an issue — luggage handling on this route is relaxed and people bring far more than you will.</p>
+        <p><b>One thing worth knowing:</b> Vaiare is an arrival harbor, not a place. Whatever you're doing on Mo'orea is a short drive from it, and I'll have your onward transfer sorted before you're off the boat.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-size:1.4rem; margin-top:44px;">Hilton Mo'orea Lagoon Resort &amp; Spa</h3>
+    <p class="section-lead" style="margin-top:10px;">North shore, at Papetoai, sitting between Cook's Bay and ʻOpunohu Bay with Mount Rotui filling the view behind you. A hundred-odd bungalows spread along the water, three restaurants including the only overwater one on the island, and a lagoon-style pool. Tap the room to open photos, specs, and terms.</p>
+
+    <div class="resort-gallery">
+      <div class="carousel" data-carousel>
+        <div class="carousel-track">
+              <img class="on" src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/4acafb11.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Hilton Mo'orea Lagoon Resort grounds" loading="lazy">
+              <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/w5755h3835x5y5-fde9954b.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Overwater bungalows on the lagoon" loading="lazy">
+              <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/67a26574.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Beachfront" loading="lazy">
+              <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/7d8067a2.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Resort gardens" loading="lazy">
+              <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/b473d854.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Dining terrace" loading="lazy">
+              <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/e2ab80a4.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Bar and lounge" loading="lazy">
+              <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/w5755h3840x5y0-e4bd698b.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Mount Rotui from the resort" loading="lazy">
+              <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/w5755h3835x5y5-a7f848ad.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Pool deck" loading="lazy">
+              <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/d8fc4c64.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Spa" loading="lazy">
+              <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/10a7b35f.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Overwater pier" loading="lazy">
+              <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/139e2429.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Beach loungers" loading="lazy">
+              <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/w5755h3840x5y0-8d51299f.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Reception and arrival" loading="lazy">
+              <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/7592a0c1.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Restaurant interior" loading="lazy">
+              <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/5428f13c.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Bungalow exteriors" loading="lazy">
+              <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/c0a5e113.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Watersports and kayaks" loading="lazy">
+              <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/w5731h3840x5y0-f0eca9f7.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Resort pathway" loading="lazy">
+              <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/954f5c06.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Sunset over the lagoon" loading="lazy">
+              <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/9de7d4cd.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Property detail" loading="lazy">
+          <button type="button" class="car-btn car-prev" aria-label="Previous photo">&#8249;</button>
+          <button type="button" class="car-btn car-next" aria-label="Next photo">&#8250;</button>
+          <span class="car-count">1 / 18</span>
+        </div>
+        <div class="car-dots"></div>
+      </div>
+      <div class="gallery-cap">The property itself — grounds, lagoon, pool and dining. Room photos are on each card below.</div>
+    </div>
+
+    <div class="acc" id="moorea-acc">
+      <div class="acc-item" data-mrm="hml-garden-pool" data-mrm-label="Hilton Mo'orea — Garden Bungalow with private pool" data-mrm-price="3,879" data-mrm-sub="Feb 23 – 27 · 74 sq m · breakfast included · refundable to Feb 16">
+        <button type="button" class="acc-head" aria-expanded="false">
+          <div>
+            <div class="acc-tag property">Hilton Mo'orea Lagoon Resort &amp; Spa<span class="loc">Papetoai</span></div>
+            <div class="acc-name room">Bungalow — 1 King Bed, Private Pool, Garden</div>
+            <div class="acc-sub">4 nights · Feb 23 – 27, 2027 · 74 sq m with your own plunge pool · breakfast included · fully refundable through Feb 16</div>
+          </div>
+          <div class="acc-price">Est. $3,879<small>total for the bungalow · taxes &amp; fees in</small></div>
+          <span class="acc-chev" aria-hidden="true">&#9660;</span>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-body">
+            <div class="room-grid">
+              <div>
+                <div class="carousel" data-carousel>
+                  <div class="carousel-track">
+                    <img class="on" src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/20f70b6f.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Garden bungalow with private pool at the Hilton Moorea Lagoon Resort" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/0b5ba21e.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Bungalow interior" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/4d6f2354.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Private plunge pool" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/w5755h3835x5y5-cf5350fd.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Bungalow terrace" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/abb4341a.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Bathroom" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/a2c2bbe9.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Bungalow detail" loading="lazy">
+                    <button type="button" class="car-btn car-prev" aria-label="Previous photo">&#8249;</button>
+                    <button type="button" class="car-btn car-next" aria-label="Next photo">&#8250;</button>
+                    <span class="car-count">1 / 6</span>
+                  </div>
+                  <div class="car-dots"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="pill-row">
+                  <span class="pill">Private plunge pool</span>
+                  <span class="pill">Breakfast included</span>
+                  <span class="pill">Garden setting</span>
+                  <span class="pill">Parking included</span>
+                  <span class="pill">Free Wi-Fi</span>
+                  <span class="pill warm">Fully refundable to Feb 16</span>
+                </div>
+                <ul class="spec">
+                  <li><span class="k">Dates</span><span class="v">Feb 23 – 27, 2027 · 4 nights</span></li>
+                  <li><span class="k">Bungalow size</span><span class="v">74 sq m / 796 sq ft</span></li>
+                  <li><span class="k">Bedding</span><span class="v">1 king bed</span></li>
+                  <li><span class="k">Occupancy</span><span class="v">Sleeps up to 3</span></li>
+                  <li><span class="k">Outlook</span><span class="v">Garden, with a private pool</span></li>
+                  <li><span class="k">Cancel by</span><span class="v">Feb 16, 2027</span></li>
+                  <li><span class="k">Guest rating</span><span class="v">8.6 / 10 · 11 reviews</span></li>
+                  <li><span class="k">Other rooms available</span><span class="v">More coming to this page</span></li>
+                </ul>
+                <div class="room-note">
+                  <p><b>What this bungalow is.</b> Seventy-four square metres — nearly three times the InterContinental room on Tahiti — set in the gardens with a plunge pool that belongs to you and nobody else. It's the version of privacy that overwater doesn't actually give you, since overwater decks on this lagoon face each other.</p>
+                  <p><b>What you give up.</b> Garden means garden. You don't step off your deck into the lagoon and you don't wake up over the water. The trade is space and seclusion for the view, and at four nights that's a real question rather than an obvious one — which is why I'm putting the overwater and lagoon-view categories on this page next to it.</p>
+                  <p><b>Where the resort sits.</b> North shore, between the two big bays, directly in front of Mount Rotui. Ta'ahiamanu Beach is about ten minutes on foot if you want public sand. The resort is roughly twenty-five minutes from the Vaiare ferry dock — I'll have your transfer waiting.</p>
+                  <p><b>The snorkelling, honestly.</b> The lagoon here is calm and good for swimming, but Mo'orea's best water is a short drive west at Tiahura, where blacktip reef sharks and rays come into water you can stand up in. That's a morning trip, not a compromise — and it's exactly the kind of thing that will be in your destination guide with the map pin already dropped.</p>
+                  <p><b>On the rating.</b> 8.6 across 11 reviews. Small sample, so weight it lightly — and note it's a room-level score, not the resort's.</p>
+                  <p><b>Rate sweep.</b> I'll keep checking this rate against every channel I have right up until you're committed. If it drops, you get the lower number.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item" data-mrm="hml-deluxe-garden-pool" data-mrm-label="Hilton Mo'orea — Deluxe Garden Bungalow with private pool" data-mrm-price="4,357" data-mrm-sub="Feb 23 – 27 · 87 sq m · breakfast buffet · refundable to Feb 16">
+        <button type="button" class="acc-head" aria-expanded="false">
+          <div>
+            <div class="acc-tag property">Hilton Mo'orea Lagoon Resort &amp; Spa<span class="loc">Papetoai</span></div>
+            <div class="acc-name room">King Deluxe Garden Bungalow with Private Pool</div>
+            <div class="acc-sub">4 nights · Feb 23 – 27, 2027 · 87 sq m, the larger garden category · breakfast buffet · fully refundable through Feb 16</div>
+          </div>
+          <div class="acc-price">Est. $4,357<small>total for the bungalow · taxes &amp; fees in</small></div>
+          <span class="acc-chev" aria-hidden="true">&#9660;</span>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-body">
+            <div class="room-grid">
+              <div>
+                <div class="carousel" data-carousel>
+                  <div class="carousel-track">
+                    <img class="on" src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/20f70b6f.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Deluxe garden bungalow with private pool at the Hilton Mo'orea Lagoon Resort" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/w5755h3840x5y0-312425a8.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Bungalow interior" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/w5755h3835x5y5-cf5350fd.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Bungalow terrace" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/abb4341a.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Bathroom" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/w5760h3835x0y5-3101b302.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Private plunge pool" loading="lazy">
+                    <button type="button" class="car-btn car-prev" aria-label="Previous photo">&#8249;</button>
+                    <button type="button" class="car-btn car-next" aria-label="Next photo">&#8250;</button>
+                    <span class="car-count">1 / 5</span>
+                  </div>
+                  <div class="car-dots"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="pill-row">
+                  <span class="pill">Private plunge pool</span>
+                  <span class="pill">Breakfast buffet</span>
+                  <span class="pill">Garden setting</span>
+                  <span class="pill">Parking included</span>
+                  <span class="pill">Free Wi-Fi</span>
+                  <span class="pill warm">Fully refundable to Feb 16</span>
+                </div>
+                <ul class="spec">
+                  <li><span class="k">Dates</span><span class="v">Feb 23 – 27, 2027 · 4 nights</span></li>
+                  <li><span class="k">Bungalow size</span><span class="v">87 sq m / 936 sq ft</span></li>
+                  <li><span class="k">Bedding</span><span class="v">1 king bed</span></li>
+                  <li><span class="k">Occupancy</span><span class="v">Sleeps up to 3</span></li>
+                  <li><span class="k">Outlook</span><span class="v">Garden, with a private pool</span></li>
+                  <li><span class="k">Cancel by</span><span class="v">Feb 16, 2027</span></li>
+                  <li><span class="k">Guest rating</span><span class="v">8.0 / 10 · 9 reviews</span></li>
+                  <li><span class="k">Other rooms available</span><span class="v">More coming to this page</span></li>
+                </ul>
+                <div class="room-note">
+                  <p><b>How this differs from the one above.</b> Same garden setting, same private plunge pool, same resort — thirteen more square metres, for $478 more across the four nights. That's about $120 a night for roughly one extra room's worth of floor space.</p>
+                  <p><b>I'd think twice before taking it.</b> The smaller bungalow rates <i>higher</i> with guests — 8.6 against 8.0 — and both are small samples, but the direction isn't what you'd expect from paying more. If the extra space genuinely matters to you, take it. If it doesn't, that $478 is most of a full day's diving or a private lagoon tour for the two of you, and I know which one you'd remember.</p>
+                  <p><b>Same trade as the other garden category.</b> You're not stepping off the deck into the lagoon and you're not waking up over the water. Overwater and lagoon-view pricing is landing on this page next, and that's where the real comparison happens.</p>
+                  <p><b>Rate sweep.</b> I'll keep checking this rate against every channel I have right up until you're committed. If it drops, you get the lower number.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item" data-mrm="hml-lagoon-view" data-mrm-label="Hilton Mo'orea — King Bungalow with lagoon view" data-mrm-price="5,515" data-mrm-sub="Feb 23 – 27 · 62 sq m · breakfast included · refundable to Feb 16">
+        <button type="button" class="acc-head" aria-expanded="false">
+          <div>
+            <div class="acc-tag property">Hilton Mo'orea Lagoon Resort &amp; Spa<span class="loc">Papetoai</span></div>
+            <div class="acc-name room">King Bungalow with Lagoon View</div>
+            <div class="acc-sub">4 nights · Feb 23 – 27, 2027 · 62 sq m facing the water · breakfast included · fully refundable through Feb 16</div>
+          </div>
+          <div class="acc-price">Est. $5,515<small>total for the bungalow · taxes &amp; fees in</small></div>
+          <span class="acc-chev" aria-hidden="true">&#9660;</span>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-body">
+            <div class="room-grid">
+              <div>
+                <div class="carousel" data-carousel>
+                  <div class="carousel-track">
+                    <img class="on" src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/w5760h3835x0y5-f2e4fba5.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Lagoon-view bungalow at the Hilton Mo'orea Lagoon Resort" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/0b5ba21e.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Bungalow interior" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/w5760h3835x0y5-58288c46.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Lagoon outlook" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/w5755h3835x5y5-57a09ee6.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Bungalow terrace" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/w2559h3837x0y3-01624394.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Bathroom" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/66aae1e8.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Resort lagoon" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/w5755h3835x5y5-96a3c6a1.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Bungalow detail" loading="lazy">
+                    <button type="button" class="car-btn car-prev" aria-label="Previous photo">&#8249;</button>
+                    <button type="button" class="car-btn car-next" aria-label="Next photo">&#8250;</button>
+                    <span class="car-count">1 / 7</span>
+                  </div>
+                  <div class="car-dots"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="pill-row">
+                  <span class="pill">Lagoon view</span>
+                  <span class="pill">Breakfast included</span>
+                  <span class="pill">Parking included</span>
+                  <span class="pill">Free Wi-Fi</span>
+                  <span class="pill warm">No private pool</span>
+                  <span class="pill warm">Fully refundable to Feb 16</span>
+                </div>
+                <ul class="spec">
+                  <li><span class="k">Dates</span><span class="v">Feb 23 – 27, 2027 · 4 nights</span></li>
+                  <li><span class="k">Bungalow size</span><span class="v">62 sq m / 667 sq ft</span></li>
+                  <li><span class="k">Bedding</span><span class="v">1 king bed</span></li>
+                  <li><span class="k">Occupancy</span><span class="v">Sleeps up to 3</span></li>
+                  <li><span class="k">Outlook</span><span class="v">The lagoon</span></li>
+                  <li><span class="k">Cancel by</span><span class="v">Feb 16, 2027</span></li>
+                  <li><span class="k">Guest rating</span><span class="v">10 / 10 · 5 reviews</span></li>
+                  <li><span class="k">Other rooms available</span><span class="v">Overwater pricing coming next</span></li>
+                </ul>
+                <div class="room-note">
+                  <p><b>Before anything else, look at the overwater card just below this one.</b> Same 62 square metres, only $254 more across the four nights, and it's actually out over the water. That's the one I'd take. Everything below still stands if you'd rather be on land.</p>
+                  <p><b>This is the one that changes the mornings.</b> You open the door and the water is in front of you rather than behind a hedge. On a four-night stay where the lagoon is the entire reason you flew eight thousand miles, that is not a small thing, and it's the argument for spending here instead of on floor space.</p>
+                  <p><b>What it costs you, in both directions.</b> It's $1,636 more than the garden bungalow with the pool across the four nights. It's also <i>smaller</i> — 62 sq m against 74 — and it has no private plunge pool. So this isn't an upgrade in the usual sense. You're trading square metres and your own pool for the view. That's a preference question, not a value question, and only you can answer it.</p>
+                  <p><b>About the 10 out of 10.</b> Five reviews. That's the thinnest sample anywhere on this page and I won't pretend it means more than it does — I'd read it as "nobody has been disappointed yet" rather than as proof of anything.</p>
+                  <p><b>One thing I'm confirming.</b> How close the deck actually sits to the water in this category, and whether you step onto sand or onto a path. The resort runs beach, garden, and overwater bungalows and the lagoon-view designation sits between them. I'll have the answer before you commit — I'm not going to guess at it in a quote.</p>
+                  <p><b>Rate sweep.</b> I'll keep checking this rate against every channel I have right up until you're committed. If it drops, you get the lower number.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="acc-item" data-mrm="hml-overwater" data-mrm-label="Hilton Mo'orea — King Overwater Bungalow" data-mrm-price="5,769" data-mrm-sub="Feb 23 – 27 · 62 sq m · over the lagoon · breakfast · refundable to Feb 16">
+        <button type="button" class="acc-head" aria-expanded="false">
+          <div>
+            <div class="acc-tag property">Hilton Mo'orea Lagoon Resort &amp; Spa<span class="loc">Papetoai</span></div>
+            <div class="acc-name room">King Overwater Bungalow</div>
+            <div class="acc-sub">4 nights · Feb 23 – 27, 2027 · 62 sq m out over the water · breakfast included · fully refundable through Feb 16</div>
+          </div>
+          <div class="acc-price">Est. $5,769<small>total for the bungalow · taxes &amp; fees in</small></div>
+          <span class="acc-chev" aria-hidden="true">&#9660;</span>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-body">
+            <div class="room-grid">
+              <div>
+                <div class="carousel" data-carousel>
+                  <div class="carousel-track">
+                    <img class="on" src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/w5760h3835x0y5-f2e4fba5.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="King overwater bungalow at the Hilton Mo'orea Lagoon Resort" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/1e694403.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Lagoon from the deck" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/w5760h3835x0y5-58288c46.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Bungalow interior" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/w5755h3840x5y0-a523e28a.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Private sundeck" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/w2559h3837x0y3-01624394.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Bathroom" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/48c52b61.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Overwater bungalows on the lagoon" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/w5755h3835x5y5-d29073ed.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Bungalow detail" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/560000/554800/554778/w5755h3840x5y0-b8993b66.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Deck and lagoon access" loading="lazy">
+                    <button type="button" class="car-btn car-prev" aria-label="Previous photo">&#8249;</button>
+                    <button type="button" class="car-btn car-next" aria-label="Next photo">&#8250;</button>
+                    <span class="car-count">1 / 8</span>
+                  </div>
+                  <div class="car-dots"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="pill-row">
+                  <span class="pill">Over the lagoon</span>
+                  <span class="pill">Breakfast included</span>
+                  <span class="pill">Free Wi-Fi</span>
+                  <span class="pill warm">No private pool</span>
+                  <span class="pill warm">Airport transfer for a fee</span>
+                  <span class="pill warm">Fully refundable to Feb 16</span>
+                </div>
+                <ul class="spec">
+                  <li><span class="k">Dates</span><span class="v">Feb 23 – 27, 2027 · 4 nights</span></li>
+                  <li><span class="k">Bungalow size</span><span class="v">62 sq m / 667 sq ft</span></li>
+                  <li><span class="k">Bedding</span><span class="v">1 king bed</span></li>
+                  <li><span class="k">Occupancy</span><span class="v">Sleeps up to 3</span></li>
+                  <li><span class="k">Outlook</span><span class="v">The lagoon, directly beneath you</span></li>
+                  <li><span class="k">Airport transfer</span><span class="v">Available for a surcharge</span></li>
+                  <li><span class="k">Cancel by</span><span class="v">Feb 16, 2027</span></li>
+                  <li><span class="k">Other rooms available</span><span class="v">Ask and I'll price them</span></li>
+                </ul>
+                <div class="room-note">
+                  <p><b>This is the one that makes the lagoon-view room hard to justify.</b> It's $254 more across the four nights than the Hilton's lagoon-view bungalow, the same 62 square metres, and it's out over the water instead of looking at it from the shore. If you were leaning toward that card, come here instead. Sixty-three dollars a night is not what a decision like that should hinge on.</p>
+                  <p><b>How it compares to the Manava's overwater.</b> It's $856 more across the stay. What that buys is a bigger bungalow, 62 sq m against 48, a position further out over the lagoon rather than close in on a shelf, and clearer water underneath you. If the whole point of the trip is putting your face in that water first thing every morning, this is the best version of it on the page.</p>
+                  <p><b>What it doesn't have.</b> No private plunge pool. If you want your own pool and complete privacy, the garden bungalows do that better and cost a good deal less. Overwater bungalows sit in a row and the decks look at one another; you're buying the water, not seclusion.</p>
+                  <p><b>Worth knowing.</b> Airport transfers here carry a surcharge rather than being included. You'll be arriving by ferry rather than by air, so I'll be arranging your transfer from Vaiare regardless — but I'll price it and put the number in front of you rather than let it turn up on your folio.</p>
+                  <p><b>Rate sweep.</b> I'll keep checking this rate against every channel I have right up until you're committed. If it drops, you get the lower number.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-divider">
+        <h4>Manava Beach Resort &amp; Spa Mo'orea</h4>
+        <p>A different corner of the island — Maharepa, on the northeast shore, about fifteen minutes from the ferry dock. Ninety-odd rooms on three hectares of white sand rather than a large resort, and you can walk into the village for groceries and dinner. It was the first property on Mo'orea to put private pools in its garden bungalows.</p>
+        <div class="resort-gallery">
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <img class="on" src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/b61915a5.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Manava Beach Resort grounds" loading="lazy">
+              <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/6408b518.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Beachfront at the Manava" loading="lazy">
+              <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/00e5d7dc.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Infinity pool" loading="lazy">
+              <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/89e0e429.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Restaurant terrace" loading="lazy">
+              <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/97d75874.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Lagoon frontage" loading="lazy">
+              <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/5771ec29.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Resort gardens" loading="lazy">
+              <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/7a241ceb.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Overwater bungalows on the pier" loading="lazy">
+              <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/f9b0adb6.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Bar and lounge" loading="lazy">
+              <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/29aefb75.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Spa" loading="lazy">
+              <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/7bc219d1.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Beach loungers" loading="lazy">
+              <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/2c2c2298.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Reception and lobby" loading="lazy">
+              <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/2260b12e.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Resort at dusk" loading="lazy">
+              <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/c66f5f38.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit" alt="Property detail" loading="lazy">
+              <button type="button" class="car-btn car-prev" aria-label="Previous photo">&#8249;</button>
+              <button type="button" class="car-btn car-next" aria-label="Next photo">&#8250;</button>
+              <span class="car-count">1 / 13</span>
+            </div>
+            <div class="car-dots"></div>
+          </div>
+          <div class="gallery-cap">The property itself — grounds, beach, pool and dining. Room photos are on each card below.</div>
+        </div>
+      </div>
+
+      <div class="acc-item" data-mrm="manava-garden-pool" data-mrm-label="Manava Beach Resort — Garden Pool Bungalow" data-mrm-price="2,884" data-mrm-sub="Feb 23 – 27 · 48 sq m · full breakfast · king plus a twin · refundable to Feb 16">
+        <button type="button" class="acc-head" aria-expanded="false">
+          <div>
+            <div class="acc-tag property">Manava Beach Resort &amp; Spa Mo'orea<span class="loc">Maharepa</span></div>
+            <div class="acc-name room">Garden Pool Bungalow</div>
+            <div class="acc-sub">4 nights · Feb 23 – 27, 2027 · private plunge pool · full breakfast · a king and a separate twin · fully refundable through Feb 16</div>
+          </div>
+          <div class="acc-price">Est. $2,884<small>total for the bungalow · taxes &amp; fees in</small></div>
+          <span class="acc-chev" aria-hidden="true">&#9660;</span>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-body">
+            <div class="room-grid">
+              <div>
+                <div class="carousel" data-carousel>
+                  <div class="carousel-track">
+                    <img class="on" src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/3dbb65c3.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Garden pool bungalow at the Manava Beach Resort &amp; Spa Mo'orea" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/ccb80e1c.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Bungalow interior" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/e406f1be.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Private plunge pool" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/ae7b17f0.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Bungalow terrace" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/c7a6b10d.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Resort beachfront" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/7bff9bea.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Bungalow detail" loading="lazy">
+                    <button type="button" class="car-btn car-prev" aria-label="Previous photo">&#8249;</button>
+                    <button type="button" class="car-btn car-next" aria-label="Next photo">&#8250;</button>
+                    <span class="car-count">1 / 6</span>
+                  </div>
+                  <div class="car-dots"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="pill-row">
+                  <span class="pill">Private plunge pool</span>
+                  <span class="pill">Full breakfast</span>
+                  <span class="pill">King plus a twin bed</span>
+                  <span class="pill">Parking included</span>
+                  <span class="pill">Free Wi-Fi</span>
+                  <span class="pill warm">Fully refundable to Feb 16</span>
+                </div>
+                <ul class="spec">
+                  <li><span class="k">Dates</span><span class="v">Feb 23 – 27, 2027 · 4 nights</span></li>
+                  <li><span class="k">Bungalow size</span><span class="v">48 sq m / 517 sq ft</span></li>
+                  <li><span class="k">Bedding</span><span class="v">1 king bed and 1 twin bed</span></li>
+                  <li><span class="k">Occupancy</span><span class="v">Sleeps up to 3</span></li>
+                  <li><span class="k">Outlook</span><span class="v">Tropical garden, with a private pool</span></li>
+                  <li><span class="k">Cancel by</span><span class="v">Feb 16, 2027</span></li>
+                  <li><span class="k">Guest rating</span><span class="v">9.4 / 10 · 13 reviews</span></li>
+                  <li><span class="k">Other rooms available</span><span class="v">Beach and overwater — ask</span></li>
+                </ul>
+                <div class="room-note">
+                  <p><b>This is the value on the page.</b> At $721 a night it undercuts every other Mo'orea option, comes with a private plunge pool and full breakfast, and carries the strongest guest rating of the four. It's smaller than the Hilton garden bungalows — 48 sq m against 74 — but you're paying $249 a night less for the difference.</p>
+                  <p><b>A small thing you'll appreciate.</b> The bungalow has a king and a separate twin, so there's a spare bed for bags and wet swimsuits instead of the floor. Over four nights that's more useful than it sounds.</p>
+                  <p><b>What kind of place it is.</b> Ninety rooms on white sand, an infinity pool at the water, a spa, and a dive centre on site. The scale is smaller and more Polynesian than the Hilton, and Maharepa village is a walk away — shops, a grocery, and a couple of restaurants people actually rate. That matters over four nights; it means dinner isn't automatically a resort decision every night.</p>
+                  <p><b>The water here.</b> There's a protected coral nursery off the resort beach and you can snorkel straight off the sand. One thing I'll tell you that the brochures won't: Cook's Bay is five minutes down the road and it is worth driving to and looking at, but it is not where you swim. The bay is a view. The reef in front of this resort, and the shallow water on the west side of the island, are where you actually get in.</p>
+                  <p><b>Getting there.</b> About fifteen minutes from the Vaiare ferry dock — ten minutes closer than the Hilton. Your transfer will be waiting either way.</p>
+                  <p><b>Rate sweep.</b> I'll keep checking this rate against every channel I have right up until you're committed. If it drops, you get the lower number.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item" data-mrm="manava-beach" data-mrm-label="Manava Beach Resort — Beach Bungalow" data-mrm-price="3,234" data-mrm-sub="Feb 23 – 27 · 44 sq m · on the sand · full breakfast · king plus a twin · refundable to Feb 16">
+        <button type="button" class="acc-head" aria-expanded="false">
+          <div>
+            <div class="acc-tag property">Manava Beach Resort &amp; Spa Mo'orea<span class="loc">Maharepa</span></div>
+            <div class="acc-name room">Beach Bungalow</div>
+            <div class="acc-sub">4 nights · Feb 23 – 27, 2027 · on the shoreline with the lagoon in front of you · full breakfast · a king and a separate twin · fully refundable through Feb 16</div>
+          </div>
+          <div class="acc-price">Est. $3,234<small>total for the bungalow · taxes &amp; fees in</small></div>
+          <span class="acc-chev" aria-hidden="true">&#9660;</span>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-body">
+            <div class="room-grid">
+              <div>
+                <div class="carousel" data-carousel>
+                  <div class="carousel-track">
+                    <img class="on" src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/dd7d6453.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Beach bungalow at the Manava Beach Resort &amp; Spa Mo'orea" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/9eade86b.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Bungalow interior" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/e1317dad.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Lagoon outlook" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/0ba7f77b.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Bungalow terrace" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/f0515265.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Resort beachfront" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/721de403.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Bathroom" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/18e9544c.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Bungalow detail" loading="lazy">
+                    <button type="button" class="car-btn car-prev" aria-label="Previous photo">&#8249;</button>
+                    <button type="button" class="car-btn car-next" aria-label="Next photo">&#8250;</button>
+                    <span class="car-count">1 / 7</span>
+                  </div>
+                  <div class="car-dots"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="pill-row">
+                  <span class="pill">On the shoreline</span>
+                  <span class="pill">Lagoon view</span>
+                  <span class="pill">Full breakfast</span>
+                  <span class="pill">King plus a twin bed</span>
+                  <span class="pill">Free Wi-Fi</span>
+                  <span class="pill warm">No private pool</span>
+                  <span class="pill warm">Fully refundable to Feb 16</span>
+                </div>
+                <ul class="spec">
+                  <li><span class="k">Dates</span><span class="v">Feb 23 – 27, 2027 · 4 nights</span></li>
+                  <li><span class="k">Bungalow size</span><span class="v">44 sq m / 474 sq ft</span></li>
+                  <li><span class="k">Bedding</span><span class="v">1 king bed and 1 twin bed</span></li>
+                  <li><span class="k">Occupancy</span><span class="v">Sleeps up to 3</span></li>
+                  <li><span class="k">Outlook</span><span class="v">The lagoon, from the sand</span></li>
+                  <li><span class="k">Cancel by</span><span class="v">Feb 16, 2027</span></li>
+                  <li><span class="k">Other rooms available</span><span class="v">Overwater — pricing to come</span></li>
+                </ul>
+                <div class="room-note">
+                  <p><b>This is the answer to the question the lagoon-view card raised.</b> The Manava beach bungalows sit directly on the shoreline with the water in front of them and the sand underfoot — not a view across a lawn, and no path to walk. If what you want is to open the door onto the lagoon, this is the cheapest way on this page to actually get it.</p>
+                  <p><b>What it costs against the garden bungalow next door.</b> $350 more across the four nights — about $88 a night — and what changes is that you trade your private plunge pool for the beach. That's the whole decision: your own small pool in a garden, or the lagoon and everyone else's company on the sand.</p>
+                  <p><b>What it saves against the Hilton.</b> $2,281 less than the Hilton's lagoon-view bungalow across the same four nights, and this one is genuinely on the beach rather than facing it. The Hilton room is larger — 62 sq m against 44 — so you are paying there for space, not for proximity.</p>
+                  <p><b>Same layout as the garden bungalow.</b> King plus a separate twin, so you get the same spare bed and the same room to spread out.</p>
+                  <p><b>The water in front of you.</b> There's a protected coral nursery off this beach and you can snorkel straight off the sand, with kayaks and paddleboards included. Be realistic about it though — as I set out in the resort comparison further down, the Manava's lagoon is the weaker of the two and it isn't the island's best snorkelling. The good water is the drive west to Tiahura. Cook's Bay is five minutes down the road and worth seeing, but the bay is a view, not a swim.</p>
+                  <p><b>Rate sweep.</b> I'll keep checking this rate against every channel I have right up until you're committed. If it drops, you get the lower number.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item" data-mrm="manava-premium-ow" data-mrm-label="Manava Beach Resort — Premium Overwater Bungalow" data-mrm-price="4,913" data-mrm-sub="Feb 23 – 27 · 48 sq m · over the lagoon · breakfast · king plus a twin · refundable to Feb 16">
+        <button type="button" class="acc-head" aria-expanded="false">
+          <div>
+            <div class="acc-tag property">Manava Beach Resort &amp; Spa Mo'orea<span class="loc">Maharepa</span></div>
+            <div class="acc-name room">Premium Overwater Bungalow</div>
+            <div class="acc-sub">4 nights · Feb 23 – 27, 2027 · the upper of the resort's two overwater categories · breakfast · a king and a separate twin · fully refundable through Feb 16</div>
+          </div>
+          <div class="acc-price">Est. $4,913<small>total for the bungalow · taxes &amp; fees in</small></div>
+          <span class="acc-chev" aria-hidden="true">&#9660;</span>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-body">
+            <div class="room-grid">
+              <div>
+                <div class="carousel" data-carousel>
+                  <div class="carousel-track">
+                    <img class="on" src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/d5ee93a1.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Premium overwater bungalow at the Manava Beach Resort &amp; Spa Mo'orea" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/50be0b21.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Bungalow interior" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/da4db310.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Private sundeck" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/2c616849.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Lagoon beneath the deck" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/810b71f1.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Bathroom" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/2eb31dd7.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Overwater bungalows on the lagoon" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/c377745a.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Bungalow detail" loading="lazy">
+                    <button type="button" class="car-btn car-prev" aria-label="Previous photo">&#8249;</button>
+                    <button type="button" class="car-btn car-next" aria-label="Next photo">&#8250;</button>
+                    <span class="car-count">1 / 7</span>
+                  </div>
+                  <div class="car-dots"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="pill-row">
+                  <span class="pill">Over the lagoon</span>
+                  <span class="pill">Premium category</span>
+                  <span class="pill">Breakfast included</span>
+                  <span class="pill">King plus a twin bed</span>
+                  <span class="pill">Free Wi-Fi</span>
+                  <span class="pill">Ocean-facing</span>
+                  <span class="pill warm">Two overwater types — read below</span>
+                  <span class="pill warm">Fully refundable to Feb 16</span>
+                </div>
+                <ul class="spec">
+                  <li><span class="k">Dates</span><span class="v">Feb 23 – 27, 2027 · 4 nights</span></li>
+                  <li><span class="k">Bungalow size</span><span class="v">48 sq m / 517 sq ft</span></li>
+                  <li><span class="k">Bedding</span><span class="v">1 king bed and 1 twin bed</span></li>
+                  <li><span class="k">Occupancy</span><span class="v">Sleeps up to 3</span></li>
+                  <li><span class="k">Outlook</span><span class="v">Ocean · lagoon directly beneath</span></li>
+                  <li><span class="k">Cancel by</span><span class="v">Feb 16, 2027</span></li>
+                  <li><span class="k">Other rooms available</span><span class="v">Mountain-view overwater — next card</span></li>
+                </ul>
+                <div class="room-note">
+                  <p><b>The resort has two overwater categories, and this quote is the upper one.</b> The bungalow itself is identical in both — same size, same layout, same king and twin. What you're paying the difference for is <em>which way it faces</em>. This Premium category looks out to the ocean. The standard category, priced on the next card, faces back toward the mountains. Same water underneath either way.</p>
+                  <p><b>The comparison that matters.</b> At $4,913 this is <em>$602 less</em> than the Hilton's lagoon-view bungalow across the same four nights — and that Hilton room is on land, looking at the water. You can be over the lagoon here for less than you'd pay to look at it there. That is the single most useful number on this page.</p>
+                  <p><b>Before you take the ocean view by default:</b> the mountain-facing version of this exact bungalow is $350 cheaper, and Mo'orea's peaks are arguably the better thing to wake up to. It's the next card. Read it before you decide.</p>
+                  <p><b>What it costs against the beach bungalow.</b> $1,679 more across the four nights, about $420 a night. That's the real question in front of you: sand underfoot, or water underneath. Both are at the same resort with the same breakfast and the same king-plus-twin, so nothing else changes.</p>
+                  <p><b>What overwater is and isn't.</b> You wake up over the lagoon, and the light coming up through the floor in the morning is the thing people remember. What you don't get is privacy — these bungalows sit in a row on a pier and the decks face one another — and the water beneath them here is shallower and less clear than at the Hilton. The resort comparison further down sets that out properly. If seclusion is what you're after, a garden bungalow with its own pool does it better at less than half.</p>
+                  <p><b>Same bed setup as the other Manava bungalows</b> — a king and a separate twin.</p>
+                  <p><b>Rate sweep.</b> I'll keep checking this rate against every channel I have right up until you're committed. If it drops, you get the lower number.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item" data-mrm="manava-ow-mountain" data-mrm-label="Manava Beach Resort — Overwater Bungalow, mountain view" data-mrm-price="4,563" data-mrm-sub="Feb 23 – 27 · 48 sq m · over the lagoon, facing the peaks · full breakfast · king plus a twin · refundable to Feb 16">
+        <button type="button" class="acc-head" aria-expanded="false">
+          <div>
+            <div class="acc-tag property">Manava Beach Resort &amp; Spa Mo'orea<span class="loc">Maharepa</span></div>
+            <div class="acc-name room">Overwater Bungalow — Mountain View</div>
+            <div class="acc-sub">4 nights · Feb 23 – 27, 2027 · the same bungalow as the Premium, facing the island instead of the ocean · full breakfast · a king and a separate twin · fully refundable through Feb 16</div>
+          </div>
+          <div class="acc-price">Est. $4,563<small>total for the bungalow · taxes &amp; fees in</small></div>
+          <span class="acc-chev" aria-hidden="true">&#9660;</span>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-body">
+            <div class="room-grid">
+              <div>
+                <div class="carousel" data-carousel>
+                  <div class="carousel-track">
+                    <img class="on" src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/50be0b21.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Overwater bungalow interior at the Manava Beach Resort &amp; Spa Mo'orea" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/da4db310.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Bungalow living area" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/78a1da63.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Private deck over the lagoon" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/7336b228.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Mountain outlook from the bungalow" loading="lazy">
+                    <img src="https://images.trvl-media.com/lodging/1000000/870000/867200/867190/89d73f02.jpg?impolicy=fcrop&amp;w=1200&amp;h=800" alt="Bungalow detail" loading="lazy">
+                    <button type="button" class="car-btn car-prev" aria-label="Previous photo">&#8249;</button>
+                    <button type="button" class="car-btn car-next" aria-label="Next photo">&#8250;</button>
+                    <span class="car-count">1 / 5</span>
+                  </div>
+                  <div class="car-dots"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="pill-row">
+                  <span class="pill">Over the lagoon</span>
+                  <span class="pill">Mountain-facing</span>
+                  <span class="pill">Full breakfast</span>
+                  <span class="pill">King plus a twin bed</span>
+                  <span class="pill">Free Wi-Fi</span>
+                  <span class="pill warm">Fully refundable to Feb 16</span>
+                </div>
+                <ul class="spec">
+                  <li><span class="k">Dates</span><span class="v">Feb 23 – 27, 2027 · 4 nights</span></li>
+                  <li><span class="k">Bungalow size</span><span class="v">48 sq m / 517 sq ft — same as the Premium</span></li>
+                  <li><span class="k">Bedding</span><span class="v">1 king bed and 1 twin bed</span></li>
+                  <li><span class="k">Occupancy</span><span class="v">Sleeps up to 3</span></li>
+                  <li><span class="k">Outlook</span><span class="v">Mo'orea's peaks · lagoon directly beneath</span></li>
+                  <li><span class="k">Cancel by</span><span class="v">Feb 16, 2027</span></li>
+                  <li><span class="k">Other rooms available</span><span class="v">Ocean-view overwater — previous card</span></li>
+                </ul>
+                <div class="room-note">
+                  <p><b>This is the same bungalow as the Premium.</b> Same 48 square metres, same layout, same king and twin, same water underneath your floor. The only thing that changes is the direction you're pointed: this one faces back at the island, the Premium faces out to the ocean. <strong>$350 across the four nights</strong> — about $88 a night — separates them.</p>
+                  <p><b>And I'd think hard before assuming ocean is the better half of that trade.</b> Mo'orea's mountains are the reason the island looks the way it does — Rotui and the ridgelines behind the bays are what people photograph, and open ocean from a deck is open ocean anywhere in the world. You are over the lagoon either way. If you're picturing coffee on the deck looking at green volcanic spires coming out of the water, this is the cheaper card and the better view.</p>
+                  <p><b>If it's sunsets or open horizon you want,</b> take the ocean-facing Premium and pay the $350. I'd just rather you spend it on purpose than because the word "premium" is on it.</p>
+                  <p><b>Against the Hilton's lagoon-view room:</b> this is $952 less across the same four nights, and this one is actually over the water rather than looking at it from land.</p>
+                  <p><b>What overwater is and isn't.</b> The bungalows sit in a row on a pier and the decks face one another, so seclusion isn't what you're buying. They also sit closer to shore here than at the Hilton, on a shallower shelf — the resort comparison further down has the full picture. If seclusion is the goal, the garden bungalow with its own plunge pool does it better at less than half the price.</p>
+                  <p><b>Rate sweep.</b> I'll keep checking this rate against every channel I have right up until you're committed. If it drops, you get the lower number.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="acc" id="moorea-verdict">
+      <div class="acc-item">
+        <button type="button" class="acc-head" aria-expanded="false">
+          <div>
+            <div class="acc-tag">Advisor note · optional reading</div>
+            <div class="acc-name">How to think about these eight room options</div>
+            <div class="acc-sub">The full ladder from $721 to $1,442 a night, what each step actually buys, why two of the overwater cards are the same bungalow, and which one I'd book. Open it if you want my reasoning.</div>
+          </div>
+          <div class="acc-price">My take<small>a two-minute read</small></div>
+          <span class="acc-chev" aria-hidden="true">&#9660;</span>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-body acc-prose">
+        <p>There's <strong>$2,885</strong> between the cheapest of these and the priciest, and it doesn't buy what you'd expect. Bigger isn't better here, and paying more doesn't always get you more room.</p>
+        <p><strong>Manava, garden pool bungalow — $721 a night.</strong> The cheapest of the eight, the highest rated, with a private pool and full breakfast. Smaller at 48 sq m, and on the Maharepa side of the island.</p>
+        <p><strong>Manava, beach bungalow — $809 a night.</strong> Same resort, same breakfast, same king-plus-twin — but on the sand with the lagoon in front of you instead of a plunge pool in a garden.</p>
+        <p><strong>Manava, overwater with mountain view — $1,141 a night.</strong> Over the lagoon, facing the island's peaks. The cheaper of the two Manava overwater cards and, to my eye, the better view.</p>
+        <p><strong>Manava, premium overwater with ocean view — $1,228 a night.</strong> The identical bungalow turned to face the open ocean. $350 more across the stay.</p>
+        <p><strong>Hilton, garden with private pool — $970 a night.</strong> The most space of any pool bungalow at 74 sq m. You look at gardens.</p>
+        <p><strong>Hilton, deluxe garden with private pool — $1,089 a night.</strong> Thirteen more square metres than the above and rated lower. I'd skip it unless the space genuinely matters.</p>
+        <p><strong>Hilton, lagoon view — $1,379 a night.</strong> 62 sq m and no private pool, with the water in front of you when you open the door. Read the next line before you pick it.</p>
+        <p><strong>Hilton, king overwater — $1,442 a night.</strong> The same 62 sq m as the lagoon-view room and only $254 more across the stay, except this one is out over the water. The best overwater on the page, and the top of the range.</p>
+        <p><strong>If you want my pick, it's the Manava beach bungalow.</strong> It runs $88 a night more than the cheapest room here and it puts the lagoon right in front of your door, which is what you're flying all that way for. You still get the full breakfast and the extra bed. It also comes in $2,281 under the Hilton's lagoon-view room and sits closer to the water than that one does. The only thing that would change my mind is if you really want your own plunge pool.</p>
+        <p>Now, if you'd rather spend more, I'd steer you to the Hilton's garden bungalow at $970. The rooms there are bigger and it's a larger resort with more places to eat, so that's the one to take if you want a plunge pool and the space. And if you want to spend at the very top, take the Hilton's overwater bungalow at $1,442. What I would not do is take the Hilton's lagoon-view room at $1,379. It's on land, and its own overwater bungalow is only $254 more across the four nights. That isn't a saving, it's just a worse room for almost the same money.</p>
+        <p><strong>About the two Manava overwater cards.</strong> They're the same bungalow. Same size, same layout, same beds, same water underneath. One faces the ocean, one faces the mountains, and there's $350 between them across the four nights. Don't let the word premium decide it for you. Pick the view you'd rather wake up to.</p>
+        <p><strong>The two resorts sit in different parts of the island.</strong> The Hilton is on the north shore at Papetoai, between the two big bays, closer to the west-side snorkelling and pretty self-contained. The Manava is over at Maharepa on the northeast, fifteen minutes from the ferry, with a village you can walk into. Neither one is better. One of them will just suit how you like to spend an evening.</p>
+        <span class="sig">the world is your oyster, we are your pearl</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-size:1.4rem; margin-top:44px;">Now the two resorts themselves, honestly</h3>
+    <p class="section-lead" style="margin-top:10px;">You've seen the rooms and the numbers. This is the part underneath them. Both properties are four-star, both are on the north coast, both have overwater bungalows and a spa — and they are not interchangeable. Open either one: the strengths and the things worth knowing are both there, because you should hear the second list from me rather than find it on arrival.</p>
+
+    <div class="acc" id="resort-compare">
+
+      <div class="acc-item">
+        <button type="button" class="acc-head" aria-expanded="false">
+          <div>
+            <div class="acc-tag">Papetoai · north shore, between the bays</div>
+            <div class="acc-name">Hilton Mo'orea Lagoon Resort &amp; Spa</div>
+            <div class="acc-sub">The bigger, more polished resort. Better water, larger rooms, and you'll want a car.</div>
+          </div>
+          <div class="acc-price">106 bungalows<small>25 min from the ferry</small></div>
+          <span class="acc-chev" aria-hidden="true">&#9660;</span>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-body">
+            <div class="pc-grid">
+              <div>
+                <div class="pc-head cool">What's strong</div>
+                <ul class="pc-list pro">
+                  <li><b>The lagoon is the better one.</b> Guests who have stayed at both consistently rate the snorkelling here above Mo'orea's other overwater resorts. The overwater bungalows sit further out over the lagoon rather than close to shore, and the water underneath them is clearer.</li>
+                  <li><b>Bigger rooms, better bathrooms.</b> The garden bungalows run 74 and 87 sq m against the Manava's 44 to 48. Repeat guests comparing the two properties single out the bathrooms here.</li>
+                  <li><b>More resort.</b> Three restaurants and three bars, a lagoon-style pool, a full spa, tennis, and a fitness centre across a larger property.</li>
+                  <li><b>Spread out.</b> The bungalows are distributed over a wide area rather than clustered, which is the practical form of privacy at a resort this size.</li>
+                  <li><b>The setting.</b> Directly in front of Mount Rotui, between Cook's and ʻOpunohu bays, and a ten-minute walk from Ta'ahiamanu Beach.</li>
+                  <li><b>The Polynesian show</b> is genuinely well regarded by people who have seen a lot of them.</li>
+                </ul>
+              </div>
+              <div>
+                <div class="pc-head warm">What to know</div>
+                <ul class="pc-list con">
+                  <li><b>You'll want a car.</b> There is very little within walking distance. Guests who didn't rent one describe the property as isolated — dinner off-site becomes a logistics question rather than a decision.</li>
+                  <li><b>The beach is small.</b> Well kept, plenty of chairs and shade, but modest for the size of the resort. This is not a long stretch of sand.</li>
+                  <li><b>Polished, and a touch overdone.</b> Everything is well kept and smoothly run, which is most of why people like it. If you're after something rougher around the edges and more local-feeling, this leans a little more manicured than that. Taste, not a flaw.</li>
+                  <li><b>It's a strong four-star, not a five.</b> People arriving from Bora Bora's top properties should calibrate accordingly.</li>
+                  <li><b>The buffet on show night is expensive</b> and frequently flagged as not worth it. The show is worth staying for; the dinner is optional.</li>
+                  <li><b>Farthest from the ferry</b> of the two, at about 25 minutes.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="pc-verdict">
+              <p><b>Who this suits:</b> travellers who want the best water of the two, more space, and a full resort to stay inside — and who are happy to rent a car or eat on property most nights.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button type="button" class="acc-head" aria-expanded="false">
+          <div>
+            <div class="acc-tag">Maharepa · northeast, by the village</div>
+            <div class="acc-name">Manava Beach Resort &amp; Spa Mo'orea</div>
+            <div class="acc-sub">Smaller, more Polynesian, better value and a real village outside the gate. The lagoon is the weaker one.</div>
+          </div>
+          <div class="acc-price">About 90 rooms<small>15 min from the ferry</small></div>
+          <span class="acc-chev" aria-hidden="true">&#9660;</span>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-body">
+            <div class="pc-grid">
+              <div>
+                <div class="pc-head cool">What's strong</div>
+                <ul class="pc-list pro">
+                  <li><b>You can walk out the gate.</b> Maharepa village has a grocery, a bank, a small shopping centre and restaurants people actually rate, all on foot. Over four nights that changes how the evenings work.</li>
+                  <li><b>The mountain views are the best argument for the property.</b> The outlook from the overwater bungalows back toward Mo'orea's jagged peaks is repeatedly singled out as extraordinary — which is exactly why I pushed the mountain-view card over the ocean-facing one.</li>
+                  <li><b>Real value on overwater.</b> Comparable overwater rooms here run meaningfully less per night than the island's other two overwater resorts, and you still get a deck above the lagoon with water access from it.</li>
+                  <li><b>More Polynesian in character,</b> smaller in scale, locally managed — about ninety rooms on three hectares of white sand rather than a large international property.</li>
+                  <li><b>Every Manava room quoted here has a king plus a separate twin,</b> which gives the two of you a spare bed and a little more room to spread out.</li>
+                  <li><b>Closer to the ferry</b> at roughly 15 minutes, and the garden pool bungalows are built to be accessible for guests with reduced mobility.</li>
+                </ul>
+              </div>
+              <div>
+                <div class="pc-head warm">What to know</div>
+                <ul class="pc-list con">
+                  <li><b>The lagoon here is the weaker of the two.</b> It runs deeper and less turquoise, and the overwater bungalows sit closer to shore on a shelf. Guests who have snorkelled at both properties prefer the Hilton's water. There is a protected coral nursery off the beach, but this is not the island's best snorkelling and I won't tell you otherwise.</li>
+                  <li><b>Food and drink draw the most criticism.</b> Complaints about the restaurants and bar recur often enough to be a pattern rather than bad luck. The upside is that you can walk to alternatives — which several guests point out is why it doesn't ruin a stay here.</li>
+                  <li><b>Wear shows in places.</b> Some guests have described garden bungalows as tired. Others in the same period report spotless rooms and excellent service, so it likely varies by unit — worth a specific request when we book.</li>
+                  <li><b>Smaller rooms.</b> 44 to 48 sq m against the Hilton's 62 to 87.</li>
+                  <li><b>Fewer facilities.</b> Fewer restaurants and bars, and less of a self-contained resort. That's the flip side of being able to walk into the village.</li>
+                  <li><b>Not a luxury property.</b> It delivers the core overwater experience at an accessible price. It does not compete on service or polish with the top end.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="pc-verdict">
+              <p><b>Who this suits:</b> travellers who want the overwater experience without the overwater price, who'd rather walk to dinner than be captive to a resort, and who care more about the mountain setting than about having the island's clearest water directly beneath them.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="advisor-note">
+      <h3>Where I'd put you, and why</h3>
+      <p>Short version first: <strong>if getting in the water matters to you at all, book the Hilton.</strong> I went back and forth on these two, and the snorkelling is the one thing that isn't close. The Hilton's lagoon is clearer, its overwater bungalows sit further out rather than hugging the shore, and you can go in off your own steps and actually see something worth seeing. The Manava's water is deeper and murkier and its bungalows sit closer in on a shelf. Guests who've stayed at both say the same thing, and I'm not going to dress it up for you.</p>
+      <p>That's the honest headline. Now the part that complicates it.</p>
+      <p><strong>What the Hilton asks of you</strong> is that you settle in and stay put. There's almost nothing within walking distance, so you'll want a car, and dinner becomes a plan rather than a decision. The beach is well kept but small for a resort that size, and it runs a little more manicured than some people want from an island. None of that is a problem if you're picturing four days of pool, lagoon and not much else. It's a real one if the idea of eating on property four nights running makes you tired.</p>
+      <p><strong>What the Manava gives you back</strong> is a village. You walk out the gate to a grocery, a bank and a handful of restaurants people genuinely rate, which changes how the evenings feel. It's smaller and more Polynesian in character, it's ten minutes closer to the ferry, and the view from its overwater bungalows back at those jagged peaks is the best thing about the property. It's also meaningfully cheaper, and every room I've quoted you there has a real twin bed rather than a fold-out. What you're giving up is the water out front, and I'd rather you go in knowing that than find out on your first morning.</p>
+      <p><strong>So here's how I'd decide it.</strong> If your days are going to revolve around the lagoon in front of your bungalow, pay for the Hilton and rent a car. If you're happy to drive twenty minutes west to Tiahura for the good snorkelling, which is better than anything either resort has out front, then the Manava saves you real money and gives you a nicer evening. Neither of these is the wrong answer. They're just different trips.</p>
+      <p><strong>If you asked me to pick tonight,</strong> I'd put you in the Manava beach bungalow and book you a morning out at Tiahura, and I'd put what you saved toward the things you'll actually remember. But if you tell me you want to walk into the water from your own deck and have it be beautiful, I'll move you to the Hilton without a second thought and I won't try to talk you out of it.</p>
+      <p>Everything I've written above comes from what guests who've stayed at both keep reporting, not from brochures. I left the unflattering parts in on purpose. You should hear them from me now rather than find them out on day one.</p>
+      <span class="sig">the world is your oyster, we are your pearl</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHERE IT STANDS ═══ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Where this stands</div>
+    <h2 class="section-title">Your quote so far</h2>
+    <p class="section-lead">Air, all three Tahiti options, eight Mo'orea bungalows across two resorts including all three overwater categories, and the ferry are priced. Air and hotel are shown separately and on their own bases — combining them before I know your final traveler count would only make the number less useful to you.</p>
+
+    <div class="summary">
+      <div class="sum-label">Current selection</div>
+      <div class="sum-row">
+        <div class="sum-k">Air — <span id="summary-label">Overnight SFO · Economy</span><small id="summary-note">Depart Fri, Feb 19 · overnight in San Francisco · non-refundable, changes allowed</small></div>
+        <div class="sum-v" id="summary-price">Est. $3,841<small>total for two</small></div>
+      </div>
+      <div class="sum-row">
+        <div class="sum-k">Tahiti — <span id="hotel-label">InterContinental — Classic Room, Mo'orea view</span><small id="hotel-sub">Feb 20 – 23 · breakfast for two · refundable to Feb 18</small></div>
+        <div class="sum-v" id="hotel-price">Est. $2,724<small>total for the room</small></div>
+      </div>
+      <div class="sum-row">
+        <div class="sum-k">Mo'orea — <span id="mrm-label">Hilton Mo'orea — Garden Bungalow with private pool</span><small id="mrm-sub">Feb 23 – 27 · 74 sq m · breakfast included · refundable to Feb 16</small></div>
+        <div class="sum-v" id="mrm-price">Est. $3,879<small>total for the bungalow</small></div>
+      </div>
+      <div class="sum-row">
+        <div class="sum-k">Ferry — Pape'ete to Mo'orea, round trip<small>Feb 23 and Feb 27 · I book and ticket it</small></div>
+        <div class="sum-v">Included<small>approx. $60 for two<br>not in the totals yet</small></div>
+      </div>
+      <div class="sum-foot">The ferry is included in your trip but is not yet built into the figures above — it joins your final rate once the flights and bungalow are settled. Also still to come: your San Francisco hotel night if you take Option A, and airport transfers on both islands. Each gets quoted on its own so you can see what you're paying for.</div>
+    </div>
+
+    <div class="commit">
+      We check every component against public rates and meet or beat them. Booking with us doesn't cost you more than booking it yourself. The planning, the guides and the human on the other end come with it.
+    </div>
+
+    <div class="commit-quiet">
+      Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor.
+    </div>
+
+    <ul class="plain">
+      <li><b>Routing doesn't change the fare.</b> Both departures price identically. The real difference is a San Francisco hotel night on Option A versus connection risk on Option B.</li>
+      <li><b>Premium Economy, both versions.</b> Both put you in the wider Premium Plus seat on the 787, which matters on an eight-hour overnight. Base is the restricted one — no free seat selection, changes cost money. The full Premium Economy fare removes both limits for $600 more for the two of you, and it's available on either departure.</li>
+      <li><b>Three Tahiti rooms, one decision.</b> All three are refundable and none is held. Cancellation deadlines run February 15 for the Kon Tiki, February 17 for the Hilton, and February 18 for the InterContinental — close enough that no one option is rushing you, but the Kon Tiki's window closes first.</li>
+      <li><b>Everything here is priced for the two of you.</b> Airfare, both hotel legs and the ferry all assume two travelers, so the totals you see are the totals.</li>
+      <li><b>Bags.</b> Every fare includes a carry-on and one checked bag to 23 kg for each of you. Usually enough for a week where half your wardrobe is swimwear. Note the Option A wrinkle above — on the overnight routing you collect and re-check them at San Francisco.</li>
+      <li><b>Nothing here is held.</b> Air was priced August 26 and isn't ticketed. The Tahiti room is refundable through February 18, which gives you real room to think — but it's not a hold, and the rate can move until it's booked.</li>
+      <li><b>Rates move, and I keep watching.</b> I'll sweep both the fare and the room right up until you're committed. If either drops, you get the lower number.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══ FORM ═══ -->
+<section class="band">
+  <div class="wrap">
+    <div class="eyebrow">Next step</div>
+    <h2 class="section-title">Tell me where you're leaning</h2>
+
+    <div class="commit">
+      What's coming after this quote: a destination guide built for your trip — PDF or interactive in-app, with Google Maps links to every place we send you — a trip app where everything lives, and us when something goes sideways at midnight. You travel; we handle the rest.
+    </div>
+
+    <div class="form-shell" id="form-container">
+      <div id="form-error" style="display:none; background:#fff1f1; border:1px solid #f5c6c6; border-radius:6px; padding:14px 18px; font-size:0.875rem; color:#b91c1c; margin-bottom:16px;">
+        We weren't able to send your message. Please contact Christina directly at the address below.
+      </div>
+
+      <form id="pmtp-form">
+        <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+        <input type="hidden" name="subject" value="Quote Response — Rachel | Tahiti &amp; Mo'orea">
+        <input type="hidden" name="from_name" value="Rachel’s Tahiti &amp; Mo'orea Quote — Point Me to Paradise">
+        <input type="hidden" name="redirect" value="false">
+
+        <div class="field-row">
+          <div class="field">
+            <label class="field-label" for="f-name">Name</label>
+            <input type="text" id="f-name" name="name" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label class="field-label" for="f-email">Email</label>
+            <input type="email" id="f-email" name="email" required autocomplete="email">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="f-phone">Phone <span class="opt">(optional)</span></label>
+          <input type="tel" id="f-phone" name="phone" autocomplete="tel">
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="f-option">Which routing and fare are you leaning toward?</label>
+          <select id="f-option" name="option_interest">
+            <option>Overnight SFO &#183; Economy &#8212; Est. $3,841 for two</option>
+            <option>Overnight SFO &#183; Economy Fully Refundable &#8212; Est. $4,581 for two</option>
+            <option>Overnight SFO &#183; Base Premium Economy &#8212; Est. $6,021 for two</option>
+            <option>Overnight SFO &#183; Premium Economy &#8212; Est. $6,621 for two</option>
+            <option>Same-day &#183; Economy &#8212; Est. $3,841 for two</option>
+            <option>Same-day &#183; Economy Fully Refundable &#8212; Est. $4,581 for two</option>
+            <option>Same-day &#183; Base Premium Economy &#8212; Est. $6,021 for two</option>
+            <option>Same-day &#183; Premium Economy &#8212; Est. $6,621 for two</option>
+            <option>Not sure yet &#8212; let's talk it through</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="f-hotel">Which Tahiti hotel?</label>
+          <select id="f-hotel" name="tahiti_hotel">
+            <option>InterContinental Tahiti &#8212; Classic Room, Mo'orea view &#8212; Est. $2,724 total</option>
+            <option>Hilton Hotel Tahiti &#8212; King Room, garden view &#8212; Est. $2,226 total</option>
+            <option>Boutique Hotel Kon Tiki &#8212; Tahitian Room &#8212; Est. $1,134 total</option>
+            <option>Not sure yet &#8212; talk me through it</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="f-moorea">Which Mo'orea bungalow?</label>
+          <select id="f-moorea" name="moorea_room">
+            <option>Hilton Mo'orea &#8212; Garden Bungalow with private pool &#8212; Est. $3,879 total</option>
+            <option>Hilton Mo'orea &#8212; Deluxe Garden Bungalow with private pool &#8212; Est. $4,357 total</option>
+            <option>Hilton Mo'orea &#8212; King Bungalow with lagoon view &#8212; Est. $5,515 total</option>
+            <option>Manava Beach Resort &#8212; Garden Pool Bungalow &#8212; Est. $2,884 total</option>
+            <option>Manava Beach Resort &#8212; Beach Bungalow &#8212; Est. $3,234 total</option>
+            <option>Manava Beach Resort &#8212; Overwater Bungalow, mountain view &#8212; Est. $4,563 total</option>
+            <option>Manava Beach Resort &#8212; Premium Overwater Bungalow, ocean view &#8212; Est. $4,913 total</option>
+            <option>Hilton Mo'orea &#8212; King Overwater Bungalow &#8212; Est. $5,769 total</option>
+            <option>Not sure yet &#8212; talk me through it</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="f-insurance">Travel insurance</label>
+          <select id="f-insurance" name="travel_insurance">
+            <option>Yes &#8212; I'd like a quote</option>
+            <option>No &#8212; not interested</option>
+            <option>Already have coverage</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="f-message">Questions or anything I should know <span class="opt">(optional)</span></label>
+          <textarea id="f-message" name="message" placeholder="Whether overwater on Mo'orea is a must-have, seat preferences, whether you want the San Francisco hotel handled, anything you'd like me to chase down&#8230;"></textarea>
+        </div>
+
+        <button type="submit" id="submit-btn">Send to Christina</button>
+      </form>
+    </div>
+
+    <div id="thank-you">
+      <h3>Got it &#8212; thank you.</h3>
+      <p>I'll come back to you shortly, and the Mo'orea options will land on this same page as soon as they're ready. If anything is time-sensitive, call or text me directly.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-name">Christina Garcia</div>
+        <div class="foot-title">Travel Advisor</div>
+        <div class="foot-line"><a id="advisor-email" href="#">email</a></div>
+        <div class="foot-line"><a href="tel:+12812290862">+1 281 229 0862</a></div>
+      </div>
+      <div>
+        <div class="foot-agency">Point Me to Paradise Travel</div>
+        <div class="foot-tag">Curated Journeys &#183; Expert Advisors</div>
+        <div class="foot-line">Quote prepared August 26, 2026</div>
+        <div class="foot-line">Air and hotel rates sourced August 26, 2026</div>
+      </div>
+    </div>
+    <div class="foot-legal">
+      Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor. Airfare is shown as a total for two travelers, round trip, and includes taxes and government fees; it is not held or guaranteed until ticketed, and schedules are subject to change by the airline. Baggage allowances, seat assignments, and change or cancellation terms are set by United Airlines and governed by their contract of carriage. Hotel pricing is estimated, shown as a total for the room at the occupancy quoted, and includes taxes and fees as presented at time of sourcing; local tourist taxes payable at the property may apply separately. Bedding and room configuration are requests and are not guaranteed by the property. Cancellation deadlines are set by the supplier and shown per room. Mo'orea accommodation, airport transfers, and any San Francisco hotel night are quoted separately and are not included in the figures above. Round-trip Pape'ete–Vaiare ferry passage is arranged and ticketed by your advisor and is included in your trip, but it is not reflected in the air or accommodation figures shown above; it is added to your final rate at confirmation. The figure shown for it is an approximation of prevailing published fares, which are set by the operators and can change. Passport validity and entry requirements for French Polynesia are the traveler's responsibility; we will flag what we know and point you to the official source.
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var addr = 'christina' + '\u0040' + 'pointmetoparadise.com';
+  var emailEl = document.getElementById('advisor-email');
+  emailEl.textContent = addr;
+  emailEl.setAttribute('href', 'mailto:' + addr);
+})();
+
+/* ── Accordions: flights + hotels ── */
+(function () {
+  var groups = document.querySelectorAll('.acc');
+  for (var g = 0; g < groups.length; g++) {
+    (function (group) {
+      var items = group.querySelectorAll('.acc-item');
+      for (var i = 0; i < items.length; i++) {
+        (function (item) {
+          item.querySelector('.acc-head').addEventListener('click', function () {
+            var wasOpen = item.classList.contains('open');
+            for (var j = 0; j < items.length; j++) {
+              items[j].classList.remove('open');
+              items[j].querySelector('.acc-head').setAttribute('aria-expanded', 'false');
+            }
+            if (!wasOpen) {
+              item.classList.add('open');
+              this.setAttribute('aria-expanded', 'true');
+              if (item.getAttribute('data-routing')) { window.pmtpPickRoute(item); }
+              if (item.getAttribute('data-hotel')) { window.pmtpPickHotel(item); }
+              if (item.getAttribute('data-mrm')) { window.pmtpPickMoorea(item); }
+            }
+          });
+        })(items[i]);
+      }
+    })(groups[g]);
+  }
+})();
+
+/* ── Live calculator: routing + fare drive both pricing bars ── */
+(function () {
+  var routeItems = document.querySelectorAll('.acc-item[data-routing]');
+  var fareCards = document.querySelectorAll('.fare');
+  var barLabel = document.getElementById('bar-label');
+  var barPrice = document.getElementById('bar-price');
+  var sumLabel = document.getElementById('summary-label');
+  var sumPrice = document.getElementById('summary-price');
+  var sumNote = document.getElementById('summary-note');
+  var optionSelect = document.getElementById('f-option');
+
+  var route = routeItems[0];
+  var fare = fareCards[0];
+
+  function money(n) { return 'Est. $' + Number(n).toLocaleString('en-US'); }
+
+  function sync() {
+    var combined = route.getAttribute('data-short') + ' \u00B7 ' + fare.getAttribute('data-fare');
+    var price = fare.getAttribute('data-price');
+    barLabel.textContent = combined;
+    barPrice.textContent = money(price);
+    sumLabel.textContent = combined;
+    sumPrice.innerHTML = money(price) + '<small>total for two</small>';
+    sumNote.textContent = route.getAttribute('data-note') + ' \u00B7 ' + fare.getAttribute('data-note');
+
+    var target = combined + ' \u2014 ';
+    for (var j = 0; j < optionSelect.options.length; j++) {
+      if (optionSelect.options[j].text.indexOf(target) === 0) { optionSelect.selectedIndex = j; break; }
+    }
+  }
+
+  function applyRoutingToFares() {
+    var code = route.getAttribute('data-routing');
+    var firstVisible = null;
+    for (var i = 0; i < fareCards.length; i++) {
+      var allowed = fareCards[i].getAttribute('data-routings').split(' ').indexOf(code) !== -1;
+      fareCards[i].hidden = !allowed;
+      if (allowed && !firstVisible) { firstVisible = fareCards[i]; }
+    }
+    if (fare.hidden) { selectFare(firstVisible, true); }
+  }
+
+  window.pmtpPickRoute = function (item) { route = item; applyRoutingToFares(); sync(); };
+
+  function selectFare(card, quiet) {
+    if (!card) { return; }
+    fare = card;
+    for (var i = 0; i < fareCards.length; i++) {
+      var on = (fareCards[i] === card);
+      fareCards[i].classList.toggle('selected', on);
+      fareCards[i].setAttribute('aria-pressed', on ? 'true' : 'false');
+      fareCards[i].querySelector('.fare-select').textContent = on ? 'Selected' : 'Select';
+    }
+    if (!quiet) { sync(); }
+  }
+
+  for (var b = 0; b < fareCards.length; b++) {
+    (function (card) {
+      card.addEventListener('click', function () { selectFare(card); });
+    })(fareCards[b]);
+  }
+
+  applyRoutingToFares();
+  sync();
+})();
+
+/* ── Tahiti hotel selection feeds the summary and the form ── */
+(function () {
+  var hotelLabel = document.getElementById('hotel-label');
+  var hotelSub = document.getElementById('hotel-sub');
+  var hotelPrice = document.getElementById('hotel-price');
+  var hotelSelect = document.getElementById('f-hotel');
+
+  window.pmtpPickHotel = function (item) {
+    hotelLabel.textContent = item.getAttribute('data-hotel-label');
+    hotelSub.innerHTML = item.getAttribute('data-hotel-sub');
+    hotelPrice.innerHTML = 'Est. $' + item.getAttribute('data-hotel-price') + '<small>total for the room</small>';
+    var keys = { ic: 'InterContinental Tahiti', hilton: 'Hilton Hotel Tahiti', kontiki: 'Boutique Hotel Kon Tiki' };
+    var key = keys[item.getAttribute('data-hotel')];
+    for (var j = 0; j < hotelSelect.options.length; j++) {
+      if (hotelSelect.options[j].text.indexOf(key) === 0) { hotelSelect.selectedIndex = j; break; }
+    }
+  };
+})();
+
+/* ── Mo'orea room selection feeds the summary and the form ── */
+(function () {
+  var mLabel = document.getElementById('mrm-label');
+  var mSub = document.getElementById('mrm-sub');
+  var mPrice = document.getElementById('mrm-price');
+  var mSelect = document.getElementById('f-moorea');
+
+  window.pmtpPickMoorea = function (item) {
+    var label = item.getAttribute('data-mrm-label');
+    mLabel.textContent = label;
+    mSub.innerHTML = item.getAttribute('data-mrm-sub');
+    mPrice.innerHTML = 'Est. $' + item.getAttribute('data-mrm-price') + '<small>total for the bungalow</small>';
+    for (var j = 0; j < mSelect.options.length; j++) {
+      if (mSelect.options[j].text.indexOf(label) === 0) { mSelect.selectedIndex = j; break; }
+    }
+  };
+})();
+
+/* ── Photo carousels ── */
+(function () {
+  var carousels = document.querySelectorAll('[data-carousel]');
+  for (var c = 0; c < carousels.length; c++) {
+    (function (root) {
+      var imgs = root.querySelectorAll('.carousel-track img');
+      var count = root.querySelector('.car-count');
+      var dotWrap = root.querySelector('.car-dots');
+      var idx = 0;
+      var dots = [];
+
+      for (var i = 0; i < imgs.length; i++) {
+        (function (n) {
+          var d = document.createElement('button');
+          d.type = 'button';
+          d.className = 'car-dot' + (n === 0 ? ' on' : '');
+          d.setAttribute('aria-label', 'Photo ' + (n + 1));
+          d.addEventListener('click', function (e) { e.stopPropagation(); go(n); });
+          dotWrap.appendChild(d);
+          dots.push(d);
+        })(i);
+      }
+
+      function go(n) {
+        idx = (n + imgs.length) % imgs.length;
+        for (var i = 0; i < imgs.length; i++) {
+          imgs[i].classList.toggle('on', i === idx);
+          dots[i].classList.toggle('on', i === idx);
+        }
+        count.textContent = (idx + 1) + ' / ' + imgs.length;
+      }
+
+      root.querySelector('.car-prev').addEventListener('click', function (e) { e.stopPropagation(); go(idx - 1); });
+      root.querySelector('.car-next').addEventListener('click', function (e) { e.stopPropagation(); go(idx + 1); });
+
+      var startX = null;
+      root.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
+      root.addEventListener('touchend', function (e) {
+        if (startX === null) { return; }
+        var dx = e.changedTouches[0].clientX - startX;
+        if (Math.abs(dx) > 40) { go(dx < 0 ? idx + 1 : idx - 1); }
+        startX = null;
+      }, { passive: true });
+    })(carousels[c]);
+  }
+})();
+
+document.getElementById('pmtp-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var btn = document.getElementById('submit-btn');
+  var err = document.getElementById('form-error');
+  btn.disabled = true; btn.textContent = 'Sending\u2026'; err.style.display = 'none';
+  fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(e.target) })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      if (data.success) {
+        document.getElementById('form-container').style.display = 'none';
+        document.getElementById('thank-you').style.display = 'block';
+      } else {
+        btn.disabled = false; btn.textContent = 'Send to Christina'; err.style.display = 'block';
+        err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    })
+    .catch(function() {
+      btn.disabled = false; btn.textContent = 'Send to Christina'; err.style.display = 'block';
+      err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+});
+</script>
+
+</body>
+</html>
