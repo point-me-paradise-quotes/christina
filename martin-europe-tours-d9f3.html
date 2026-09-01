@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Martin Family — Amalfi Coast, Paros & Santorini · Point Me to Paradise Travel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --aqua-pale:#C4E4E1;
+    --aqua-mist:#EAF3F2;
+    --aqua:#75AFB1;
+    --aqua-dark:#4F8A8C;
+    --sand:#ECE7DC;
+    --sand-light:#F4F1E9;
+    --gold-whisper:#D6C8A8;
+    --white:#FFFFFF;
+    --paper:#FBFDFD;
+    --ink:#2B2420;
+    --ink-soft:#6B6359;
+    --line:#E5E9E8;
+    /* Drop a licensed full-resolution hero URL here to replace the gradient. */
+    --hero-img:none;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'DM Sans',system-ui,-apple-system,sans-serif;
+    font-weight:400;
+    font-size:1rem;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px;}
+  .narrow{max-width:720px;margin:0 auto;}
+  h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:500;color:var(--ink);margin:0;}
+  p{margin:0 0 16px;}
+  a{color:var(--aqua-dark);}
+
+  /* ── Hero ── */
+  .pmtp-hero{
+    position:relative;
+    background-image:var(--hero-img);
+    background-size:cover;
+    background-position:center;
+    background-color:var(--aqua-mist);
+    padding:78px 32px 60px;
+    text-align:center;
+    border-bottom:1px solid var(--line);
+  }
+  .pmtp-hero::before{
+    content:"";
+    position:absolute;inset:0;
+    background:linear-gradient(160deg,var(--aqua-mist) 0%,var(--white) 45%,var(--aqua-pale) 100%);
+    opacity:.94;
+  }
+  .pmtp-hero > *{position:relative;}
+  .pmtp-wordmark{
+    font-family:'Playfair Display',serif;
+    font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--aqua-dark);
+    margin-bottom:26px;
+  }
+  .pmtp-wordmark span{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;letter-spacing:.06em;text-transform:none;color:var(--ink-soft);margin-top:6px;}
+  .hero-kicker{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem;color:var(--ink-soft);margin-bottom:10px;}
+  .pmtp-hero h1{font-size:clamp(2rem,5.2vw,3.1rem);line-height:1.12;letter-spacing:-.01em;}
+  .hero-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;color:var(--aqua-dark);margin-top:14px;}
+  .hero-rule{width:52px;height:1px;background:var(--aqua);margin:26px auto 0;}
+  .hero-promo{
+    display:inline-block;
+    margin:26px auto 0;
+    background:var(--white);
+    border:1px solid var(--aqua);
+    border-radius:8px;
+    padding:12px 22px;
+    font-size:.95rem;
+    color:var(--ink);
+    max-width:520px;
+  }
+  .hero-promo strong{font-weight:700;letter-spacing:.03em;}
+  .hero-promo em{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:var(--ink-soft);display:block;margin-top:4px;}
+
+  /* ── Sections ── */
+  section{padding:56px 0;}
+  .band{background:var(--aqua-mist);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--aqua-dark);margin-bottom:6px;}
+  h2{font-size:1.75rem;margin-bottom:18px;}
+  .lead{font-size:1.06rem;color:var(--ink-soft);}
+
+  .commitment{
+    background:var(--aqua-pale);
+    border-radius:10px;
+    padding:22px 26px;
+    font-size:1rem;
+    line-height:1.6;
+    color:var(--ink);
+    margin:26px 0 0;
+  }
+  .commitment.plain{background:var(--white);border:1px solid var(--line);}
+
+  /* ── Trip strip ── */
+  .strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:28px;}
+  .strip div{background:var(--white);padding:20px 18px;text-align:center;}
+  .strip .place{font-family:'Playfair Display',serif;font-size:1.15rem;}
+  .strip .note{font-size:.85rem;color:var(--ink-soft);margin-top:4px;}
+
+  /* ── Accordion ── */
+  details.dest{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:12px;
+    margin-bottom:18px;
+    overflow:hidden;
+  }
+  details.dest[open]{box-shadow:0 1px 0 var(--line);}
+  summary{
+    list-style:none;cursor:pointer;
+    padding:24px 26px;
+    display:flex;align-items:center;justify-content:space-between;gap:18px;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary:focus-visible{outline:2px solid var(--aqua-dark);outline-offset:-3px;}
+  .sum-title{font-family:'Playfair Display',serif;font-size:1.35rem;line-height:1.25;}
+  .sum-meta{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.02rem;color:var(--ink-soft);margin-top:3px;}
+  .chev{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:var(--aqua-mist);color:var(--aqua-dark);display:flex;align-items:center;justify-content:center;font-size:.8rem;transition:transform .2s ease;}
+  details[open] .chev{transform:rotate(180deg);}
+  .dest-body{padding:0 26px 28px;border-top:1px solid var(--line);}
+
+  details.cat{
+    border:1px solid var(--line);
+    border-radius:9px;
+    background:var(--white);
+    margin-top:14px;
+    overflow:hidden;
+  }
+  details.cat > summary{padding:15px 18px;background:var(--aqua-mist);}
+  details.cat[open] > summary{border-bottom:1px solid var(--line);}
+  .cat-title{font-family:'Playfair Display',serif;font-size:1.06rem;line-height:1.3;}
+  .cat-count{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.97rem;color:var(--ink-soft);margin-top:2px;}
+  .chev-sm{width:22px;height:22px;background:var(--white);font-size:.72rem;}
+  .cat-body{padding:2px 20px 20px;}
+  .cat-intro{padding-top:16px;margin-bottom:0;font-size:.97rem;color:var(--ink-soft);}
+  .dest-intro{padding-top:22px;color:var(--ink-soft);}
+
+  .tour{border-top:1px solid var(--line);padding:22px 0 20px;}
+  .tour:first-of-type{border-top:none;}
+  .tour h4{font-size:1.12rem;margin-bottom:4px;}
+  .tour .meta{font-size:.86rem;color:var(--ink-soft);margin-bottom:8px;}
+  .tour-photo{
+    width:100%;height:auto;display:block;
+    border-radius:8px;border:1px solid var(--line);
+    margin:0 0 16px;background:var(--aqua-mist);
+    aspect-ratio:7/5;object-fit:cover;
+  }
+  .group-head{
+    margin:26px 0 0;padding:14px 18px;
+    background:var(--aqua-mist);border-radius:8px;
+  }
+  .group-head h3{font-size:1.12rem;}
+  .group-head .sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:var(--ink-soft);margin-top:2px;}
+  .opt-label{font-size:.78rem;font-weight:600;letter-spacing:.08em;color:var(--aqua-dark);margin-bottom:3px;}
+  .price{
+    font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--ink);
+    margin:0 0 14px;
+  }
+  .price span{font-family:'DM Sans',sans-serif;font-size:.85rem;color:var(--ink-soft);display:block;margin-top:2px;}
+  .tour ul{margin:0 0 14px;padding-left:18px;font-size:.95rem;}
+  .tour ul li{margin-bottom:5px;}
+  .tour p{margin:0 0 14px;font-size:.97rem;}
+  .links{display:flex;flex-wrap:wrap;gap:10px;align-items:center;}
+  .btn{
+    display:inline-block;
+    background:var(--aqua-dark);color:var(--white);
+    text-decoration:none;
+    font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:500;
+    padding:9px 18px;border-radius:6px;
+  }
+  .btn:hover{background:var(--aqua);}
+  .btn-alt{
+    display:inline-block;background:var(--white);color:var(--aqua-dark);
+    border:1px solid var(--aqua);text-decoration:none;
+    font-size:.9rem;font-weight:500;padding:8px 17px;border-radius:6px;
+  }
+  .btn-alt:hover{background:var(--aqua-mist);}
+.promo{
+    background:var(--aqua-pale);
+    border-left:3px solid var(--gold-whisper);
+    border-radius:0 8px 8px 0;
+    padding:16px 20px;
+    margin:26px 0 0;
+    font-size:.97rem;
+    color:var(--ink);
+  }
+  .promo strong{font-family:'DM Sans',sans-serif;font-weight:700;letter-spacing:.03em;}
+  .promo .fine{display:block;font-size:.85rem;color:var(--ink-soft);margin-top:5px;}
+  .cmp{width:100%;border-collapse:collapse;margin:16px 0 4px;font-size:.88rem;}
+  .cmp th,.cmp td{padding:9px 10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;}
+  .cmp th{font-family:'DM Sans',sans-serif;font-weight:600;color:var(--ink);background:var(--aqua-pale);white-space:nowrap;}
+  .cmp td:first-child{font-weight:500;}
+  .cmp-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .cmp-note{font-size:.85rem;color:var(--ink-soft);margin:10px 0 0;}
+.caveat{
+    background:var(--sand-light);border-radius:6px;
+    padding:11px 15px;font-size:.9rem;color:var(--ink-soft);
+    margin:0 0 14px;
+  }
+  .tip{background:var(--sand-light);border-left:2px solid var(--gold-whisper);padding:12px 16px;border-radius:0 6px 6px 0;font-size:.9rem;color:var(--ink-soft);margin-top:14px;}
+
+  /* ── Form ── */
+  .form-card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:30px 28px;}
+  label{display:block;font-size:.88rem;font-weight:500;margin-bottom:6px;color:var(--ink);}
+  input,select,textarea{
+    width:100%;
+    font-family:'DM Sans',sans-serif;
+    font-size:16px;
+    color:var(--ink);
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:11px 13px;
+    margin-bottom:18px;
+  }
+  textarea{min-height:110px;resize:vertical;}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--aqua);outline-offset:1px;border-color:var(--aqua);}
+  button#submit-btn{
+    width:100%;background:var(--aqua-dark);color:var(--white);
+    border:none;border-radius:6px;padding:14px;
+    font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;cursor:pointer;
+  }
+  button#submit-btn:hover{background:var(--aqua);}
+  button#submit-btn:disabled{opacity:.65;cursor:default;}
+  #thank-you{display:none;background:var(--aqua-pale);border-radius:12px;padding:32px 28px;text-align:center;}
+
+  /* ── Footer ── */
+  footer{background:var(--sand-light);border-top:1px solid var(--line);padding:44px 0 38px;text-align:center;}
+  .adv-name{font-family:'Playfair Display',serif;font-size:1.3rem;}
+  .adv-title{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:var(--ink-soft);margin-bottom:12px;}
+  .adv-line{font-size:.94rem;color:var(--ink-soft);margin:3px 0;}
+  .adv-line a{text-decoration:none;}
+  .agency{font-family:'Playfair Display',serif;font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--aqua-dark);margin-top:20px;}
+  .disclaimer{font-size:.8rem;color:var(--ink-soft);line-height:1.6;max-width:640px;margin:22px auto 0;}
+
+  @media (max-width:640px){
+    .pmtp-hero{padding:56px 22px 44px;}
+    .strip{grid-template-columns:1fr;}
+    section{padding:44px 0;}
+    summary{padding:20px 18px;}
+    .dest-body{padding:0 18px 24px;}
+    .form-card{padding:24px 20px;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none !important;}
+    html{scroll-behavior:auto;}
+  }
+</style>
+</head>
+<body>
+
+<header class="pmtp-hero">
+  <div class="pmtp-wordmark">Point Me to Paradise Travel<span>Curated Journeys · Expert Advisors</span></div>
+  <div class="hero-kicker">Prepared for the Martin Family</div>
+  <h1>Amalfi Coast, Paros &amp; Santorini</h1>
+  <div class="hero-sub">Tours and days worth holding a spot for</div>
+  <div class="hero-rule"></div>
+  <div class="hero-promo">Save 10% with code <strong>ENDOFSUMMER2026</strong> at checkout<em>Most of these can be held now and paid later</em></div>
+</header>
+
+<section>
+  <div class="wrap narrow">
+    <div class="eyebrow">Your three stops</div>
+    <h2>What to book ahead, and what can wait</h2>
+    <p class="lead">These are the experiences I'd hold dates for in each place — the ones that sell out, run on a single daily departure, or fall apart if you leave them to a walk-up. Everything else in these towns you can decide over breakfast.</p>
+    <p>Open a destination below to see the full list. Each tour links straight to a live booking page with current dates and pricing. Book what you want on your own, or send me the list and I'll handle the reservations, spacing, and pickup logistics so nothing collides with a ferry or a check-in.</p>
+
+    <div class="strip">
+      <div><div class="place">Amalfi Coast</div><div class="note">Boats, cliffs, Pompeii day trips</div></div>
+      <div><div class="place">Paros</div><div class="note">Sailing, villages, quiet beaches</div></div>
+      <div><div class="place">Santorini</div><div class="note">Caldera, wine, Bronze Age ruins</div></div>
+    </div>
+
+    <div class="promo">Save 10% on any tour booked through the links on this page with code <strong>ENDOFSUMMER2026</strong>, entered at checkout. Most of these also let you reserve now and pay later, so you can hold the dates that sell out first without committing the money yet.<span class="fine">The code applies across every experience listed here, not just one destination. Reserve-now-pay-later and free cancellation windows are set by each operator and shown on the booking page — check them before you confirm, or ask me and I'll check for you.</span></div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+
+    <!-- ─────────── AMALFI ─────────── -->
+    <details class="dest" open>
+      <summary>
+        <div>
+          <div class="sum-title">Amalfi Coast</div>
+          <div class="sum-meta">Four tour types · fifteen experiences</div>
+        </div>
+        <div class="chev" aria-hidden="true">▾</div>
+      </summary>
+      <div class="dest-body">
+        <p class="dest-intro">You're based in Praiano, which sits between Positano and Amalfi and turns out to be the best address on this coast for doing things. Tour types below are ordered by how far you'd travel, closest first — the beach is under your hotel and most of the cooking classes are in your village. The coast also reads better from the water than from the road, so build at least one day around a boat.</p>
+
+        
+
+        
+
+        <details class="cat" open>
+          <summary>
+            <div>
+              <div class="cat-title">Beach clubs</div>
+              <div class="cat-count">Three options · all in Praiano · one included with your stay</div>
+            </div>
+            <div class="chev chev-sm" aria-hidden="true">▾</div>
+          </summary>
+          <div class="cat-body">
+            <p class="cat-intro">One is included with your stay. The other two sit on the Gavitella cove, about fifteen minutes away on foot.</p>
+
+            <div class="caveat" style="margin-top:16px;">Both paid clubs currently show <strong>October 4 as the only bookable date left</strong>. Two independent clubs stopping on the same day reads like the end of their season rather than a sell-out — they close for the winter around the end of October. If you want a day at either, take the 4th now; I'll keep checking in case more dates open.</div>
+
+            <div class="tour">
+              <h4>Your hotel's beach club</h4>
+              <div class="meta">Grand Hotel Tritone, Praiano · included with your stay · guests only</div>
+              <p>Worth saying plainly before you book anything: you already have one. The Tritone's beach club sits directly below the hotel, cut into the cliff, and it's reserved for guests. You get down by lift through the rock, or by the staircase the hotel's founder had carved into the cliff face — locally known as the impossible staircase, and worth doing once for the walk itself.</p>
+              <p>Down at the water there are loungers, a bar, and Ninò, the beach restaurant, open daily for lunch by the sea. There's a dock, so boats can collect you from the water rather than making you climb back to the road — useful on days you've booked something that starts from the sea.</p>
+              <p>Treat this as the default and pay for a beach day elsewhere only when you want the crowd and the noise, which is a real preference and not a wrong one. That's the honest difference between the two here.</p>
+              <div class="links">
+                <a class="btn-alt" href="https://www.grandhoteltritone.com/hotel-con-spiaggia-costiera-amalfitana.htm" target="_blank" rel="noopener">See the hotel's beach</a>
+              </div>
+            </div>
+
+            <div class="tour">
+              <h4>One Fire Beach, Cala della Gavitella</h4>
+              <div class="meta">Praiano · about a 15-minute walk · open May to October, 10am–8pm</div>
+              <p>The beach club in Praiano, on the cove at Gavitella, and the one that gets the afternoon sun when the rest of the coast has gone into shadow. It's cliffside rather than sandy — you go off the rocks straight into deep water, with a lifeguard on duty, showers, and changing rooms behind you. The kitchen runs on what's in season, and there's a full bar.</p>
+              <p>Sunbeds are sold by row, and the row is the decision. Sea View is the front, Exclusive is second, Orange puts you in the third or fourth where the noise is. The PPC package is the top tier, with champagne service and a set tasting menu at lunch. At 4:30 every afternoon they run Melon Time, which is exactly as chaotic as it sounds — worth knowing whether you want to be there for it or gone before it.</p>
+              <p>You reach it on foot from Praiano or by water; there's a dock for private boats, and guest shuttles run to and from Positano. The walk down is stairs rather than a stroll, so plan the return accordingly.</p>
+              <div class="links">
+                <a class="btn" href="https://new-widget.spiagge.it/stabilimenti-balneari/prenotazione/it-sa-84010-one-fire-beach/insertPeriod" target="_blank" rel="noopener">Check dates and reserve</a>
+                <a class="btn-alt" href="https://www.onefirebeach.com/" target="_blank" rel="noopener">About the club</a>
+              </div>
+            </div>
+
+            <div class="tour">
+              <h4>La Gavitella</h4>
+              <div class="meta">Praiano · same cove as One Fire · beach club and seafood restaurant</div>
+              <p>The quieter neighbour on the same cove, and the one to pick if you want the water and the lunch without the party. It faces Positano straight across the bay, which is the view people come to Gavitella for, and the kitchen leans on fish rather than beach-club snacks. They also run boat excursions from the same spot if you want to combine a swim day with time on the water.</p>
+              <p>Between the two: One Fire for the crowd and the afternoon noise, La Gavitella for a long lunch and a swim.</p>
+              <div class="links">
+                <a class="btn-alt" href="https://www.lagavitella.it/index" target="_blank" rel="noopener">About the club</a>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <details class="cat">
+          <summary>
+            <div>
+              <div class="cat-title">Cooking classes</div>
+              <div class="cat-count">Eight options · six in Praiano, one in Amalfi, one above Sorrento</div>
+            </div>
+            <div class="chev chev-sm" aria-hidden="true">▾</div>
+          </summary>
+          <div class="cat-body">
+            <p class="cat-intro">Listed by where they are. The first six are in Praiano and differ mainly in how private they get: family home restaurants, a restaurant terrace shared with a handful of other people, and private classes in a local cook's kitchen. The last two sit further along the coast — one in Amalfi town, one above Sorrento — so read the drive into the price before comparing on the ticket alone.</p>
+
+            <div class="tour">
+              <h4>Cooking class at a Praiano home restaurant</h4>
+              <div class="meta">Le Tre Colombine, Praiano · choice of Terra or Mare menu · class then dinner</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/32/38/c5/17/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Table set for a home cooking class overlooking the Amalfi Coast" loading="lazy">
+              <div class="price">From $165 <span>Per person</span></div>
+              <p>This is a family's house in Praiano, not a demonstration kitchen. You cook with them, using Nonna Colombina's recipes and whatever came in fresh that day, then sit down and eat what you made with the coast below you. Choose the Terra menu or the Mare menu when you book — land or sea, and they build the class around it.</p>
+              <p>The half that makes it worth the evening is the part you can't book separately: you're in someone's home, at their table, for a few hours. It runs small, so it fills early.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Amalfi/Authentic-Italian-restaurant-and-cooking-classes/d33601-5628556P2?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+            <div class="tour">
+              <h4>Pizza and gelato class with Positano in view</h4>
+              <div class="meta">Praiano · small group · midday or sunset seating</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/32/96/99/af/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Pizza being made at a terrace restaurant above the Amalfi Coast" loading="lazy">
+              <div class="price">From $175.99 <span>Per person</span></div>
+              <p>Dough and gelato from scratch at a restaurant terrace in Praiano, with Positano sitting across the water in front of you. You cook, then eat a full meal — starter, main, dessert — at the table where you made it. Two seatings: midday, or late enough that you're eating as the light goes.</p>
+              <p>The lighter of the two classes on the coast, and the easier sell if anyone in the group would rather eat pizza than learn a ragù. Small group, so you're cooking alongside a handful of other people rather than in someone's private kitchen.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Amalfi/Cooking-Class-Pizza-and-Gelato-at-Sunset-with-Positano-as-background/d33601-29823P14?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+            <div class="tour">
+              <h4>Private class in a local cook's kitchen</h4>
+              <div class="meta">Praiano · private · three recipes · lunch or dinner</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/2f/0f/2c/af/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Hands making fresh pasta at a home kitchen work station" loading="lazy">
+              <div class="price">From $211.42 <span>Per person</span></div>
+              <p>Run through the Cesarine network, which places you in a home cook's kitchen rather than a class. It's private — your group only — and each of you gets a work station with your own utensils and ingredients rather than watching over a shoulder. Three recipes, built around what Praiano actually cooks: a starter, a pasta, and a dessert, eaten with local reds and whites.</p>
+              <p>The one to pick if the point is learning to make the food rather than being fed it. Choose lunch or dinner when you book.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Amalfi/Private-cooking-class-at-a-locals-home-with-lunch-or-dinner-in-Praiano/d33601-68460P1551?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+            <div class="tour">
+              <h4>Market visit, then the private class</h4>
+              <div class="meta">Praiano · private · market walk plus three recipes · lunch or dinner</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/2e/c9/83/44/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Produce stall at a local market on the Amalfi Coast" loading="lazy">
+              <div class="price">From $277.56 <span>Per person</span></div>
+              <p>The same private class as the one above, with the shopping built onto the front of it. You start at the market and the food shops with your host, who picks what you'll be cooking and explains why one bunch of anything is better than the next. Then back to the kitchen for the same three courses — starter, pasta, dessert — with local wine.</p>
+              <p>It runs about $66 more per person than the class alone. Worth it if watching how someone shops is as interesting to you as the cooking; skip it if the group would rather start at the stove.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Amalfi/Market-visit-and-cooking-class-with-lunch-or-dinner-at-a-locals-home-in-Praiano/d33601-68460P1554?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+            </div>
+
+            <div class="tour">
+              <h4>Cooking with a family, meal and wine included</h4>
+              <div class="meta">Praiano · family-run · full meal with wine</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/32/cc/5c/96/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Family table set for a home cooking class on the Amalfi Coast" loading="lazy">
+              <div class="price">From $144.44 <span>Per person</span></div>
+              <p>Rocco and Carla run this one out of their own kitchen, with his mother Annamaria in it too. The family has been feeding visitors on this coast since the 1960s, when his father was doing it, and they went at it full-time in 2019. What you cook comes from their land, and you sit down to the whole meal with wine and a view when it's done.</p>
+              <p>Closer in spirit to the other Praiano home dinners than to a class, and the second-least expensive of the seven.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Amalfi/Genuine-Cooking-Class/d33601-150418P1?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+            <div class="tour">
+              <h4>The same family, with a wine tasting</h4>
+              <div class="meta">Praiano · capped at 6 travelers · aperitif on arrival · lunch or dinner</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/32/cc/5c/7d/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Wine poured at a garden table before a home cooking class in Praiano" loading="lazy">
+              <div class="price">From $177.17 <span>Per person</span></div>
+              <p>Same house, same family, with the wine made part of the afternoon rather than something poured alongside dinner. You arrive to an aperitif and homemade appetizers, walk the gardens, then cook the family recipes and sit down to what you made. The house sits in Praiano, between Amalfi and Positano.</p>
+              <p>It runs about $33 more per person than their class without the tasting, and this version caps at six travelers — worth knowing if you want the table to yourselves.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Amalfi/Genuine-Cooking-Class-Wine-Tasting/d33601-150418P4?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+            <div class="tour">
+              <h4>Farmhouse class in Amalfi town</h4>
+              <div class="meta">Amalfi · half day · capped at 10 · multi-course lunch</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/2f/0f/55/40/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Terraced farmhouse garden above the Amalfi Coast" loading="lazy">
+              <div class="price">From $152.36 <span>Per person</span></div>
+              <p>You start in the terraced gardens picking what you'll cook, then work through bruschetta, fresh pasta, and a lemon tiramisu in the farmhouse kitchen. Lunch is what you made, with local wine and limoncello. They send you home with the recipes.</p>
+              <p>The only class here based in Amalfi town rather than Praiano, which matters if you're staying at that end of the coast. Group caps at ten, so it's smaller than a standard class without being private.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Amalfi/Hands-on-Cooking-Class-and-Farmhouse-visit-in-the-Amalfi-Coast/d33601-349346P1?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+            <div class="tour">
+              <h4>Pizza school at a farm above Sorrento</h4>
+              <div class="meta">Primaluce farm, Sorrento hills · meets in Sorrento · lunch included</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/2e/fb/bf/d7/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Wood-fired pizza oven at a farmhouse above the Bay of Naples" loading="lazy">
+              <div class="price">From $94.49 <span>Per person</span></div>
+              <p>A working farm in the hills behind Sorrento, looking out over the Gulf of Naples. You get a welcome drink and time on the lawn before anything starts, then the pizza school itself, then lunch built around the pizza you made in the wood oven — cold cuts, mozzarella made fresh, vegetables out of the field, with water, wine, limoncello, and a homemade dessert.</p>
+              <p>By some distance the least expensive class here, and the only one that isn't in Praiano. It meets in Sorrento, which is a real drive along the coast road rather than a short hop — you'd need transport in both directions, and in summer traffic that's most of a day gone. Tell me if you want this one and I'll price the transfer so you're comparing the whole cost, not just the ticket.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Sorrento/Pizza-School-with-Wine-and-Limoncello-Tasting-in-a-Local-Farm/d947-220596P3?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+          </div>
+        </details>
+
+        <details class="cat">
+          <summary>
+            <div>
+              <div class="cat-title">Wine tours and farm tastings</div>
+              <div class="cat-count">Three options · an hour to a full day</div>
+            </div>
+            <div class="chev chev-sm" aria-hidden="true">▾</div>
+          </summary>
+          <div class="cat-body">
+            <div class="tour">
+              <h4>Cantine Marisa Cuomo, Furore</h4>
+              <div class="meta">About 15 minutes away · tours at 9:00 and 10:00 · booking required</div>
+              <p>The closest serious wine to where you're staying, and the one I'd send you to if you only do one. The estate sits above the Fiordo di Furore, with vines on terraces so steep they're worked by hand, and a cellar dug into the rock face. Fiorduva, the white they're known for, comes off those terraces.</p>
+              <p>Two ways to do it. The guided tour of the production area, the rock cellar, and a vineyard is <strong>free</strong>, runs at 9:00 or 10:00, and has to be booked ahead — it's shared with whoever else has booked that slot. Or book a tasting at the restaurant beside the cellars, which makes the visit private and adds the wines paired with local food over a lunch or dinner sitting. Tasting packages start at €60 per person.</p>
+              <p class="caveat">Those two morning slots are the whole schedule, so this needs to be planned into a day rather than dropped in. It's roughly fifteen minutes from you — I can arrange a driver, or a taxi from the hotel does it.</p>
+              <div class="links">
+                <a class="btn" href="https://www.marisacuomo.com/experience/#visita" target="_blank" rel="noopener">Visit and tasting details</a>
+              </div>
+            </div>
+
+            <div class="tour">
+              <h4>Farm tour with cheese, pizza, wine, and limoncello</h4>
+              <div class="meta">Sorrento hills · meets in Sorrento · tasting and meal included</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/2e/fc/66/ac/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Farm courtyard with vineyard and citrus trees above Sorrento" loading="lazy">
+              <div class="price">From $112.21 <span>Per person</span></div>
+              <p>A working family farm in the hills behind Sorrento — vineyard, citrus grove, animals. You watch mozzarella and caciotta being made and then make them yourself, get hands-on with the pizza, and sit down to what you produced with dessert, wine, and limoncello to finish. More farm day than cookery lesson, and the better pick if the group wants to be outside rather than at a stove.</p>
+              <p>Same farm as the pizza school listed under Cooking classes, about $18 more per person for the longer version with the cheese-making and the farm walk. It meets in Sorrento, so you'd need transport in both directions from the Praiano side — tell me if you want it and I'll price the transfer.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Sorrento/Gatronomic-tour-with-a-typical-peasant-family/d947-220596P1?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+            <div class="tour">
+              <h4>Irpinia wine country with a sommelier</h4>
+              <div class="meta">Full day · private driver and guide · pickup in Positano, Amalfi, or Ravello</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/2f/0d/e1/0a/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Vineyard rows in the Irpinia hills inland from the Amalfi Coast" loading="lazy">
+              <div class="price">From $398.44 <span>Per person</span></div>
+              <p>Irpinia is where Campania's serious wine is made — the hills inland from the coast that produce Taurasi, Fiano di Avellino, and Greco di Tufo. You go with a sommelier rather than a driver who waits in the car, visit two estates, walk the vineyards and the cellars, and sit two guided tastings covering six wines between them.</p>
+              <p>This is a full day by design. The wine country is well inland, not a detour off the coast road, so the driving is part of what you're paying for. If wine is the reason you're going anywhere, it's the strongest day on this page; if it's a nice-to-have, the farm visits above cover the ground for a third of the price.</p>
+              <p class="caveat">Pickup is offered from Positano, Amalfi, or Ravello. If you're staying in Praiano, ask me before you book — they cover that stretch and I'll confirm whether they'll collect you rather than have you meet them down the coast.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Positano/Private-Irpinia-Wine-Tour-from-Positano-Amalfi-or-Ravello-with-Sommelier/d33602-6868AMALFI?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+
+          </div>
+        </details>
+
+        <details class="cat">
+          <summary>
+            <div>
+              <div class="cat-title">Capri by private boat</div>
+              <div class="cat-count">A curated list · half day to full day · private charter</div>
+            </div>
+            <div class="chev chev-sm" aria-hidden="true">▾</div>
+          </summary>
+          <div class="cat-body">
+            <div class="tour">
+              <h4>Private Capri boat charters</h4>
+              <div class="meta">Private skipper · half-day and full-day formats · departures from Capri or the mainland</div>
+              <p>Capri absorbs an enormous number of day-trippers, and by late morning the town square is shoulder to shoulder. From the water it's a different island — you round the cliffs and sea arches, pull into coves the ferries can't reach, and swim where nobody else is. Every option on this list is a private charter, so the route and the pace are yours rather than a schedule you're sharing with thirty strangers.</p>
+              <p>I've pulled the charters worth considering into one list. They range from three hours to a full day, and some meet you on Capri while others pick up from the mainland — worth checking which is which against where you're staying. Book straight from the list, or tell me which one you want and I'll hold it.</p>
+              <p class="caveat">The Blue Grotto appears on most of these as an option rather than a guarantee. It closes whenever there's swell, and it's the first thing to drop off a Capri day in rough water.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/agent-trip-suggestions/W-0a2d08f5-44b5-4926-b560-c9ff2bf50e72?currency=USD&amp;allowNativeApp=false" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+              <p class="cmp-note">Two departures worth calling out separately, because the pickup point is fixed rather than flexible:</p>
+              <div class="links">
+                <a class="btn-alt" href="https://www.viator.com/tours/Amalfi/Full-day-boat-tour-to-Capri-from-Praiano/d33601-414862P8?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Private full day from Praiano</a>
+                <a class="btn-alt" href="https://www.viator.com/tours/Positano/Day-Trip-to-Capri/d33602-29823P1?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Day trip from Positano or Praiano</a>
+              </div>
+              <p class="cmp-note">The Praiano charter is private and runs a full day, priced per person on the listing. The Positano or Praiano day trip is a small group rather than a private boat, from $211.42 per person — a good deal cheaper, but you're sharing the day.</p>
+            </div>
+          </div>
+        </details>
+
+        <div class="tip">Positano is built on a staircase. Anything described as a short walk is likely 200 steps. Where a tour offers hotel pickup, take it.</div>
+      </div>
+    </details>
+
+    <!-- ─────────── PAROS ─────────── -->
+    <details class="dest">
+      <summary>
+        <div>
+          <div class="sum-title">Paros</div>
+          <div class="sum-meta">Four tour types · six experiences</div>
+        </div>
+        <div class="chev" aria-hidden="true">▾</div>
+      </summary>
+      <div class="dest-body">
+        <p class="dest-intro">Paros is the island Greeks go to when they want the Cyclades without the queue. Naoussa is the pretty fishing harbor turned evening scene; Parikia is the port town with the oldest church in Greece sitting quietly behind the ferry noise; the interior is marble villages and olive terraces. Rent a car for at least two days — the island rewards driving.</p>
+
+        <div class="caveat" style="margin-top:0;">Boat days aren't listed here yet on purpose. Paros runs dozens of them — catamarans, traditional wooden boats, private charters, half days and full days, out to Antiparos, Despotiko, and the coves you can't reach by road — and the right one depends on your group and how much of a day you want to give it. Tell me what you're after and I'll send a shortlist rather than make you wade through a hundred listings.</div>
+
+        <details class="cat" open>
+          <summary>
+            <div>
+              <div class="cat-title">Private island tours</div>
+              <div class="cat-count">One option · flexible length · driver and vehicle to your group</div>
+            </div>
+            <div class="chev chev-sm" aria-hidden="true">▾</div>
+          </summary>
+          <div class="cat-body">
+            <div class="tour">
+              <h4>Paros by private car with a local driver</h4>
+              <div class="meta">Pickup at your hotel, the port, or the airport · sedan, van, or minibus · itinerary is yours</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/2f/62/34/32/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Whitewashed lane in a Paros village" loading="lazy">
+              <div class="price">From $161.81 <span>Per person</span></div>
+              <p>Paros rewards driving more than any of your three stops — the interior is marble villages and olive terraces that the bus network barely touches. This puts a local driver and a vehicle sized to your group on it for the day, so you cover the island without anyone navigating a hire car on lanes built for donkeys.</p>
+              <p>The usual run takes in Naoussa, the old fishing harbour that fills up in the evening, and Lefkes, the inland capital built out of sight of the water because pirates couldn't see it from the sea. Between them are the viewpoints and the beaches — Kolymbithres and its wind-carved granite, Santa Maria, Golden Beach on the windward side. Stop where you want, for as long as you want; the driver works around you.</p>
+              <p>The sensible way to use it is as your one land day, with the boat day booked separately. It also solves the airport or port run at either end if you time it right — worth asking about when you book.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Paros/Paros-Road-Tour/d50333-5566869P1?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <details class="cat">
+          <summary>
+            <div>
+              <div class="cat-title">Evening experiences</div>
+              <div class="cat-count">Two options · private · sunset or after dark</div>
+            </div>
+            <div class="chev chev-sm" aria-hidden="true">▾</div>
+          </summary>
+          <div class="cat-body">
+            <div class="tour">
+              <h4>Private sunset picnic</h4>
+              <div class="meta">Two hours · private setting · seating, food, and setup provided</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/31/43/59/66/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Low table set for a sunset picnic overlooking the Aegean" loading="lazy">
+              <div class="price">From $105.12 <span>Per person</span></div>
+              <p>Someone else sets the whole thing up at a private spot facing west, and you turn up and sit down. Two hours of low seating, local food, and the Aegean going orange, with the styling handled — cushions, table, the lot. No cooking, no carrying, no finding a place before someone else takes it.</p>
+              <p>It's sold for couples and proposals, but it works just as well as a family evening, and on an island where the sunset is the event it beats fighting for a table at a restaurant with the same view. Two hours is the right length; it's an evening, not a night out.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Paros/Paros-Picnic/d50333-375260P2?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+            <div class="tour">
+              <h4>Stargazing and the myths behind the constellations</h4>
+              <div class="meta">Private · after dark · wine and nibbles included</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/2e/af/aa/b5/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Night sky over the Cyclades" loading="lazy">
+              <div class="price">From $351.42 <span>Per person</span></div>
+              <p>There is very little light on Paros once you're away from the two towns, which is the whole reason this works. Your guide runs the northern sky twice over — the Greek myths that named the constellations, and what modern astronomy says is actually up there — with wine and something to eat while you look. Private, outdoors, and slow.</p>
+              <p>Bring binoculars if you have them. If anyone wants night photographs, bring a DSLR and a tripod; a phone won't hold the exposure.</p>
+              <p class="caveat">Two things move this one: cloud and the moon. A bright moon washes out most of what you came to see, so the date matters more here than on anything else in this list — tell me when you're going and I'll check the moon phase against your nights. They refund in full for rain or a rain forecast.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Paros/Guided-star-gazing-of-the-night-sky-and-night-photos-in-Paros/d50333-232341P7?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <details class="cat">
+          <summary>
+            <div>
+              <div class="cat-title">Villages and culture</div>
+              <div class="cat-count">Two options · half day · same local operator</div>
+            </div>
+            <div class="chev chev-sm" aria-hidden="true">▾</div>
+          </summary>
+          <div class="cat-body">
+            <div class="tour">
+              <h4>Inland villages, clay beach, and a fishing harbour</h4>
+              <div class="meta">Lefkes · Prodromos · Kalogeros · Piso Livadi</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/32/d7/14/8b/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Whitewashed alley in a mountain village on Paros" loading="lazy">
+              <div class="price">From $200.79 <span>Per person</span></div>
+              <p>The inland half of Paros, which most visitors never see because the ferries and the beach clubs are all on the coast. You start in Lefkes, the old capital up in the mountains, built out of sight of the water because pirates couldn't spot it from the sea, and walk a stretch of the Byzantine Trail — a marble-paved path that has connected these villages for centuries. Then Prodromos, smaller again and still working.</p>
+              <p>From there down to Kalogeros, the beach people go to for the clay in the cliff face rather than the sand — you can smear it on, dry off in the sun, and swim it back off. The tour finishes at Piso Livadi, a fishing harbour on the east coast where the boats still come in, with the option of coffee or a long lunch by the water before you head back.</p>
+              <p>This covers the same ground as the private island tour but with a guide and a fixed route rather than a driver waiting on you. Take one or the other, not both.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Paros/Paros-Hidden-Villages-Tour-with-Local-Experience/d50333-5638604P2?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+            <div class="tour">
+              <h4>Antiparos: the cave, Agios Georgios, and the old town</h4>
+              <div class="meta">Half day · transport and English-speaking escort included</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/32/d7/32/1d/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Whitewashed lane in Antiparos old town" loading="lazy">
+              <div class="price">From $212.60 <span>Per person</span></div>
+              <p>Antiparos sits ten minutes across the channel and runs at a slower speed than Paros. The cave is the reason most people go: a descent of around 400 steps into a chamber of stalagmites where Lord Byron carved his name, and the temperature drops the moment you're inside.</p>
+              <p>From there to Agios Georgios on the south coast, looking across at uninhabited Despotiko, where the Archaic sanctuary is being reassembled column by column — a quiet spot for a swim or a long lunch by the water. The day finishes in Antiparos town, one marble street of tavernas and shops with the old castle at its centre.</p>
+              <p>Transport and a driver-escort are included throughout, which is what makes it a half day rather than a logistics exercise with two ferry crossings in it.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Paros/Antiparos-Highlights-Cave-Agios-Georgios-and-Town/d50333-5638604P3?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+          </div>
+        </details>
+
+        <details class="cat">
+          <summary>
+            <div>
+              <div class="cat-title">Food and wine</div>
+              <div class="cat-count">One option · private tasting walk</div>
+            </div>
+            <div class="chev chev-sm" aria-hidden="true">▾</div>
+          </summary>
+          <div class="cat-body">
+            <div class="tour">
+              <h4>Private tasting walk, Parikia or Naoussa</h4>
+              <div class="meta">Private · old town streets · tasting plates with water and wine</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/32/e1/83/8c/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Table of Greek tasting plates on Paros" loading="lazy">
+              <div class="price">From $329.53 <span>Per person</span></div>
+              <p>A private walk through the old town — either Parikia by the port or Naoussa around the fishing harbour, your choice — stopping at the places locals eat rather than the ones with menus in four languages. Each person gets their own tasting plate at each stop, with water and wine alongside.</p>
+              <p>The part worth knowing: they build it around vegans, vegetarians, and meat eaters equally, so a group with different diets doesn't end up watching one person pick at a salad. If anyone in your party has restrictions, this is the food tour to take.</p>
+              <p>It's among the most expensive things on the Paros list, and it's private, which is what you're paying for. If the group is easy about food and happy to wander into tavernas on their own, put the money into the boat day instead.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Paros/Authentic-foodie-tasting-experience-of-Paros-Vegan-Vegetarian-Carnivore/d50333-232341P10?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+          </div>
+        </details>
+
+        <div class="tip">The meltemi wind blows hardest in July and August, usually strongest in the afternoon. It can cancel small-boat departures with a few hours' notice — worth booking boat days early in your stay so there's room to reschedule.</div>
+      </div>
+    </details>
+
+    <!-- ─────────── SANTORINI ─────────── -->
+    <details class="dest">
+      <summary>
+        <div>
+          <div class="sum-title">Santorini</div>
+          <div class="sum-meta">Four tour types · twenty-four experiences</div>
+        </div>
+        <div class="chev" aria-hidden="true">▾</div>
+      </summary>
+      <div class="dest-body">
+        <p class="dest-intro">You're standing on the rim of a volcano that blew apart around 1600 BC. Almost everything worth doing here traces back to that: the cliff villages, the black beaches, the vines grown in baskets on the ground, and a buried city that was preserved by the ash. Cruise-ship days run roughly 9 a.m. to 5 p.m. — plan the crowded sites outside that window.</p>
+
+        <details class="cat" open>
+          <summary>
+            <div>
+              <div class="cat-title">Sunset sailing</div>
+              <div class="cat-count">Nine options · seven shared, two private charters</div>
+            </div>
+            <div class="chev chev-sm" aria-hidden="true">▾</div>
+          </summary>
+          <div class="cat-body">
+            <p class="cat-intro">Nine ways to do the same stretch of water. Most cover the red and white cliffs, the hot springs, and a meal on board, so the real variables are the boat, how many people are on it, and what's included. Prices are per person.</p>
+
+            <div class="cmp-scroll">
+              <table class="cmp">
+                <thead>
+                  <tr><th>Option</th><th>Boat</th><th>Included</th><th>Price</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Wooden sailing boat</td><td>Shared</td><td>Cruise only — food and drink unconfirmed</td><td>$53.15</td></tr>
+                  <tr><td>Catamaran with BBQ</td><td>Shared</td><td>Barbecue, drinks, transfers, swim stops</td><td>$93.31</td></tr>
+                  <tr><td>Unlimited drinks, Oia sunset</td><td>Shared</td><td>Barbecue, unlimited drinks, transfers</td><td>$112.21</td></tr>
+                  <tr><td>Small-group, seafood BBQ</td><td>Shared, smaller cap</td><td>Seafood barbecue, wine and beer, transfers</td><td>$118.11</td></tr>
+                  <tr><td>Same operator, semi-private</td><td>Semi-private</td><td>Meal with vegetarian options, transfers</td><td>$118.11</td></tr>
+                  <tr><td>Same operator, larger boat</td><td>Shared, Lagoon 560</td><td>Barbecue, drinks, transfers</td><td>$129.92</td></tr>
+                  <tr><td>Vlychada, open bar</td><td>Shared</td><td>Meal, open bar, transfers</td><td>See link</td></tr>
+                  <tr><td>Private sail with dinner</td><td>Private, up to 10</td><td>Dinner, open bar, transfers</td><td>$635.44</td></tr>
+                  <tr><td>Private cruise, Vlychada</td><td>Private</td><td>Dinner with dessert, wine, transfers</td><td>$944.90</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="cmp-note">For a party of four, the shared boats land between roughly $213 and $520 for the day. The two private charters run about $2,542 and $3,780. Nothing about the route changes between them — only who else is aboard.</p>
+
+            <div class="tour">
+              <h4>Shared sunset cruise on a wooden sailing boat</h4>
+              <div class="meta">Evening · shared departure · traditional wooden boat</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/30/b6/8c/97/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Wooden sailing boat in the Santorini caldera at sunset" loading="lazy">
+              <div class="price">From $53.15 <span>Per person</span></div>
+              <p>The same caldera and the same sunset, on a wooden sailing boat you share with other guests. You get the volcanic cliffs, the water, and the light going down over the rim — which is the reason anyone gets on a boat here — without the cost of taking the whole vessel.</p>
+              <p>For a party of four this comes to roughly $213 against about $2,540 for the private sail below. That is the entire difference: who else is on board. If the group is easy about sharing a deck, this is the sensible booking and the money goes further somewhere else on the island.</p>
+              <p class="caveat">The listing doesn't specify what food or drink is included, and shared sunset boats vary a lot on that. Ask me before booking and I'll confirm what's on board.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Santorini/Sunset-Cruise-in-Caldera-of-Santorini/d959-301437P7?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+            <div class="tour">
+              <h4>Shared catamaran with BBQ dinner and drinks</h4>
+              <div class="meta">Shared catamaran · hotel pickup and drop-off · swim stops and hot springs</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/2e/e6/c6/b6/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Catamaran under sail off the Santorini coast" loading="lazy">
+              <div class="price">From $93.31 <span>Per person</span></div>
+              <p>The fuller version of a shared day on the water. A catamaran rather than a small wooden boat, with swim and snorkel stops, the hot springs, and the beaches along the south coast, then a barbecue cooked on board with local drinks. They collect you from the hotel and take you back.</p>
+              <p>About $40 per person more than the wooden sailing boat above, and for that you get dinner, drinks, transfers, and time in the water rather than a cruise and a view. For most groups this is the better of the two shared options.</p>
+              <p class="caveat">Check the departure time carefully when you book — the sunset over Oia only comes with the later option. The earlier departures cover the same route in daylight.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Santorini/Ocean-Voyager-74-Santorini-Sailing-Sunset-Tour/d959-7207P2?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+            <div class="tour">
+              <h4>Catamaran with unlimited drinks and Oia sunset</h4>
+              <div class="meta">Shared · White Beach and hot springs · barbecue and open drinks included</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/2e/e6/ce/13/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Catamaran sailing past the Santorini cliffs at dusk" loading="lazy">
+              <div class="price">From $112.21 <span>Per person</span></div>
+              <p>A stop at the White Beach, a soak in the thermal springs, snorkelling off the boat, then the sun going down behind Oia — watched from the water rather than from the crush on the headland, which is the argument for doing this by boat at all. Greek barbecue on board, unlimited beer, wine, and soft drinks, hotel transfers both ways.</p>
+              <p>Sits between the standard catamaran and the small-group boats on price, and the drinks are unlimited rather than a set pour.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Santorini/Santorini-Sailing-Beautiful-Day-and-Romantic-Sunset-Tour/d959-22899P2?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+            <div class="tour">
+              <h4>Small-group catamaran with seafood barbecue</h4>
+              <div class="meta">Shared, capped small · morning or sunset departure · transfers included</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/2e/e6/b2/d5/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Catamaran deck in the Santorini caldera" loading="lazy">
+              <div class="price">From $118.11 <span>Per person</span></div>
+              <p>The red and white beaches, the hot springs, and Thirassia, on a catamaran that holds fewer people than the standard shared boats. Food is a seafood and barbecue spread with Greek appetisers, wine and beer included. Snorkel gear and pool noodles are on board, and they collect you from the hotel.</p>
+              <p>Two things set it apart from the other shared catamarans: the smaller cap, which is what you actually notice when everyone wants the same spot on deck at sunset, and seafood alongside the usual barbecue. The pool noodles are a small thing that matters if anyone in the group is a nervous swimmer.</p>
+              <p class="caveat">Both a morning and a sunset departure run on this boat, and only the later one ends with the sunset. Same route either way.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Santorini/Santorini-Luxury-Morning-Catamaran-Cruise/d959-122445P4?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+            <div class="tour">
+              <h4>The same operator's semi-private boat</h4>
+              <div class="meta">Semi-private · morning or afternoon departure · meal and transfers included</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/31/08/22/cb/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Semi-private catamaran anchored off a Santorini beach" loading="lazy">
+              <div class="price">From $118.11 <span>Per person</span></div>
+              <p>Same company as the boat above and the same price. This one runs semi-private, swimming at the Red Beach and the hot springs inside the caldera, then a longer stop at Mesa Pigadia where lunch or dinner is served depending on your departure. Vegetarian options are included rather than requested, snorkel gear and towels are provided, and hotel transfers are covered.</p>
+              <p class="caveat">Two boats, one operator, identical price. From the listings the differences look like the size of the group and the route — this one spends its time at Mesa Pigadia, the other adds Thirassia — but neither page spells it out. Tell me which appeals and I'll get the specifics before you commit.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Santorini/Santorini-Gold-Semi-Private-Catamaran-Cruise/d959-122445P7?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+            <div class="tour">
+              <h4>The same operator's larger catamaran</h4>
+              <div class="meta">Shared · Lagoon 560 · morning or sunset departure · transfers included</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/2e/e6/ba/d4/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Large sailing catamaran off the Santorini caldera" loading="lazy">
+              <div class="price">From $129.92 <span>Per person</span></div>
+              <p>Same company and the same day as the option above — red and white beaches, snorkelling, the hot springs, Greek barbecue and drinks on board, hotel transfers both ways — run on their bigger boat. More deck, more room to spread out, fewer people pressed together at the rail when the light goes.</p>
+              <p>It's $36.61 more per person than their standard catamaran, or about $146 across a party of four. Worth it on a full boat in high season; not worth much on a quiet sailing.</p>
+              <p class="caveat">As with their other catamaran, the sunset only comes with the later departure — the morning option covers the same route in daylight. Check which one you're selecting.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Santorini/Santorini-Lagoon-560-Sunset-Tour-with-BBQ-and-Drinks/d959-7207P3?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+            <div class="tour">
+              <h4>Vlychada catamaran with open bar</h4>
+              <div class="meta">Shared · departs Vlychada · meal, open bar, and transfers included</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/32/25/af/71/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Catamaran anchored below the Santorini caldera cliffs" loading="lazy">
+              <p>Out of Vlychada on the south coast, past the Venetian lighthouse at Akrotiri and the Indian Rocks, with the first swim stop at Mesa Pigadia below the red cliffs. Then into the caldera itself for the sulphur springs, and across to Thirassia, where a Greek meal is served on board with the water in front of you. The sail back is timed for the sunset.</p>
+              <p>The distinguishing feature against the other shared catamarans is the bar — this one runs open rather than a set list of drinks — and the route takes in the lighthouse and Indian Rocks, which the others skip.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Santorini/Santorini-Luxury-Sunset-Sailing-Cruise-Food-Drinks-and-Transfers/d959-415825P6?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+            <div class="tour">
+              <h4>Private sunset sail with dinner</h4>
+              <div class="meta">Half day · 44-foot yacht, up to 10 guests · hotel pickup and drop-off</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/2e/e6/d8/31/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Sailing yacht anchored in the Santorini caldera at sunset" loading="lazy">
+              <div class="price">From $635.44 <span>Per person</span></div>
+              <p>Your own 44-foot yacht rather than a deck shared with thirty other people, which on Santorini is the difference between a sunset and a queue for the rail. You sail the caldera past the Red Beach and White Beach cliffs, then anchor off Thirassia — the sliver of the old island left standing after the eruption — and eat dinner there as the light goes.</p>
+              <p>Dinner is cooked on board and the bar is open throughout: beer, wine, soft drinks, no tab. They collect you from your hotel and bring you back, so there's no driving and no parking in Vlychada or Ammoudi at the worst hour of the day.</p>
+              <p>Sunset departures are the ones that sell out first here, and they go weeks ahead in season. If this is the evening you want, it's the booking to make early.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Santorini/Santorini-Private-Sunset-Sailing-Tour-with-Dinner-Drinks-and-Transfer-included/d959-108399P8?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+            <div class="tour">
+              <h4>Private sunset cruise from Vlychada</h4>
+              <div class="meta">Evening · private to your party · dinner with dessert · transfers included</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/2e/e6/cf/6f/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Private cruise boat off the Santorini caldera at dusk" loading="lazy">
+              <div class="price">From $944.90 <span>Per person</span></div>
+              <p>Out of Vlychada on the south coast, past the Red Beach, White Beach, and Black Mountain Beach cliffs, then along the caldera wall and across to Thirassia, where dinner is served on board with wine and dessert before the run back to port. Private to your party, with air-conditioned transfers from the hotel at both ends.</p>
+              <p class="caveat">This runs $309 more per person than the sailing option above, and the two listings describe close to the same evening — same waters, same island, dinner on board either way. The difference is almost certainly the boat itself, but neither listing spells it out. Before you book the more expensive one, let me find out exactly what you'd be getting for the extra.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Santorini/Private-Sunset-Cruise/d959-85629P6?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <details class="cat">
+          <summary>
+            <div>
+              <div class="cat-title">Ruins and archaeology</div>
+              <div class="cat-count">Four options · private or shared, alone or paired with wine</div>
+            </div>
+            <div class="chev chev-sm" aria-hidden="true">▾</div>
+          </summary>
+          <div class="cat-body">
+            <p class="cat-intro">Akrotiri appears on five different days across this page and the pricing bases differ, so the lowest headline figure is not the cheapest day out. The first card is the one to read.</p>
+
+            <div class="tour">
+              <h4>Private tour with a licensed archaeologist</h4>
+              <div class="meta">Private · led by an archaeologist · priced by the group, up to 10</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/2e/e8/c0/d7/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Archaeologist guiding visitors through the Akrotiri excavation" loading="lazy">
+              <div class="price">From $212.60 <span>Per group, up to 10 people</span></div>
+              <p>The same buried town, walked with a licensed archaeologist rather than a general guide — the streets, the drainage, how the eruption sealed the place, and where the Atlantis argument comes from. Private to your party.</p>
+              <p class="caveat">This is the best-value Akrotiri booking on the page and it isn't close. Quoted by the group and covering up to ten people: about <strong>$53 each for four</strong>, or $21 each if you filled it. The shared tour further down is $179.53 per person — $718.12 for the same four people. Book this one.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Santorini/Discover-prehistoric-Akrotiri-a-trip-back-in-time-with-a-guide/d959-279926P1?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+
+            <div class="tour">
+              <h4>Private guided tour of the excavation</h4>
+              <div class="meta">Private guide · the site on its own · priced by the group</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/2e/e6/da/d0/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Guide explaining the Bronze Age ruins at Akrotiri" loading="lazy">
+              <div class="price">From $236.22 <span>Per group, up to 4 people</span></div>
+              <p>A private guide through the 3,600-year-old Minoan town — the day-to-day of the people who lived there, the pottery and furniture and the plumbing that startles everyone, the story of the 1967 excavation, and the argument that this is what Plato was describing when he wrote about Atlantis.</p>
+              <p class="caveat">Also priced by the group, but capped at four and $23.62 dearer than the archaeologist-led tour above, which covers up to ten. Still far better value than the shared option — about $59 each for four — but there's no reason to choose it over the first card unless it's the only one with your date available.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Santorini/Akrotiri-guided-tour/d959-64807P6?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+
+            <div class="tour">
+              <h4>Guided visit to the excavation</h4>
+              <div class="meta">About 2.5 hours · small group · transport to and from the meeting point</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/2e/e6/c8/f8/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Preserved Bronze Age buildings under cover at Akrotiri" loading="lazy">
+              <div class="price">From $179.53 <span>Per person</span></div>
+              <p>The site on its own, with a guide, in about two and a half hours. Akrotiri is a Bronze Age town on Thera buried by the eruption and dug out with its houses, rooms, and wall paintings intact. Without someone explaining it, it reads as a field of stone under a roof; with a guide it becomes a street plan you can follow, room by room.</p>
+              <p>This is the group version rather than private, which is what keeps the price down, and it leaves the rest of the day free. Transport runs from the meeting point rather than your hotel.</p>
+              <p class="caveat">Only worth booking if your party is larger than four — below that, the private tour above costs less in total and gives you a guide to yourselves. Worth weighing the villages tour in the next section too: it covers the same excavation privately and adds three inland villages.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Santorini/Santorini-Akrotiri-Excavations-Guided-Organized-tour/d959-116941P87?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+            <div class="tour">
+              <h4>Akrotiri and the wineries, private</h4>
+              <div class="meta">Private guide · the excavation plus wine estates · twelve wines</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/2e/e8/c3/82/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Excavated Bronze Age street at Akrotiri" loading="lazy">
+              <div class="price">From $472.45 <span>Per person</span></div>
+              <p>Akrotiri is a Bronze Age town buried by the eruption and dug out with its two- and three-storey buildings, drainage, and street plan intact. No bodies were found in it, which means the people who lived there saw it coming and left. The site sits under a modern roof, so it works at midday in August when nothing else does.</p>
+              <p>This pairs it with the wineries — twelve wines across the day, Assyrtiko and Nykteri among them, with local food alongside the tastings — under one private guide who shapes the day around what you're actually interested in. It's the only thing on this page that isn't purely eating, drinking, or sailing.</p>
+              <p class="caveat">At $472.45 per person it's the most expensive land day here — $212.60 more than the four-winery morning tour, and $259.85 more than the villages tour that also takes in Akrotiri. You're paying to have the ruins and the wine handled together by one guide rather than booking them separately. If the history is what you want and the wine is incidental, tell me and I'll price a guided Akrotiri visit on its own instead.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Santorini/Ancient-Akrotiri-and-Santorini-Wineries-Tour/d959-6174HISTORY?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <details class="cat">
+          <summary>
+            <div>
+              <div class="cat-title">Villages and towns</div>
+              <div class="cat-count">One option · private · three villages plus Akrotiri</div>
+            </div>
+            <div class="chev chev-sm" aria-hidden="true">▾</div>
+          </summary>
+          <div class="cat-body">
+            <div class="tour">
+              <h4>Pyrgos, Megalochori, Emporio, and Akrotiri</h4>
+              <div class="meta">Private · three inland villages and the excavation · hotel pickup</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/2e/e6/bc/e1/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Whitewashed lanes and bell tower in a Santorini village" loading="lazy">
+              <div class="price">From $212.60 <span>Per person</span></div>
+              <p>The island away from the caldera rim. Pyrgos sits highest, with the ruins of its Venetian castle at the top and the whole island laid out below — climb to the kastro late in the day and you can see both coasts. Megalochori is quieter still, bell towers and old wine estates behind walls. Emporio has the best-preserved medieval quarter in the Cyclades: the Kasteli, a defensive labyrinth of houses built wall-to-wall so the outer ring formed the fortification.</p>
+              <p>The day finishes at the Akrotiri excavation, the Bronze Age town preserved under ash. Private throughout, with pickup from your hotel.</p>
+              <p class="caveat">One Akrotiri, two ways to reach it: this tour pairs it with three villages at $212.60 per person, while the tour under Ruins and archaeology pairs it with the wineries at $472.45. That's a $259.85 difference per person — villages and history against wine and history. Don't book both.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Santorini/Santorini-Cultural-Villages-and-Flavours/d959-69212P2?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <details class="cat">
+          <summary>
+            <div>
+              <div class="cat-title">Wine and food</div>
+              <div class="cat-count">Ten options · all private, half day to full day</div>
+            </div>
+            <div class="chev chev-sm" aria-hidden="true">▾</div>
+          </summary>
+          <div class="cat-body">
+            <p class="cat-intro">Ten private wine and food days on one small island. They differ on how many estates you see, what you eat, and whether the sunset is part of the deal. Prices are per person except the last, which is quoted by the group.</p>
+
+            <div class="cmp-scroll">
+              <table class="cmp">
+                <thead>
+                  <tr><th>Tour</th><th>Estates</th><th>Food</th><th>When</th><th>Price</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Two or three estates</td><td>2–3</td><td>Tastings with bites</td><td>About six hours</td><td>$100.40</td></tr>
+                  <tr><td>With a sommelier</td><td>2–3</td><td>Tastings</td><td>You set the hours</td><td>$159.45</td></tr>
+                  <tr><td>Santo Wines, with sightseeing</td><td>1</td><td>Tasting only</td><td>Into sunset</td><td>$236.22</td></tr>
+                  <tr><td>Four wineries and lunch</td><td>4</td><td>Four-course lunch</td><td>Morning, five hours</td><td>$259.85</td></tr>
+                  <tr><td>Two wineries, lunch, and Oia</td><td>2 + Oia village</td><td>Greek lunch</td><td>About five hours</td><td>$295.28</td></tr>
+                  <tr><td>Art Space, Argyros, Venetsanos</td><td>3, named</td><td>Tastings</td><td>Flexible</td><td>$301.19</td></tr>
+                  <tr><td>Farm to table, southern villages</td><td>Canava plus producers</td><td>Bakery and local tastings</td><td>Relaxed, private</td><td>$313.00</td></tr>
+                  <tr><td>Wine, spirits, and a farm</td><td>Winery, distillery, farm</td><td>Tastings, oil and cheese</td><td>Four hours</td><td>$318.90</td></tr>
+                  <tr><td>Three wineries, caldera sunset</td><td>3</td><td>Snacks and cheese</td><td>Into sunset</td><td>$389.77</td></tr>
+                  <tr><td>Wine roads, sommelier</td><td>3, family-run</td><td>Light meal and cheeses</td><td>Half day</td><td>$732.30 per group, up to 2</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="cmp-note">One more wine day sits under Ruins and archaeology below, pairing the estates with the Akrotiri excavation. Two of the tours above end at sunset, which is an hour you can only spend once — worth settling against the boat options before booking either. If you want one recommendation: the four-winery morning tour gives you the most wine and the only proper meal, and leaves the evening free.</p>
+
+            <div class="tour">
+              <h4>Private wine tour, two or three estates</h4>
+              <div class="meta">Around six hours · private · tastings with food · sunset upgrade available</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/2e/e6/d1/63/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Vines trained in low baskets in a Santorini vineyard" loading="lazy">
+              <div class="price">From $100.40 <span>Per person</span></div>
+              <p>Santorini's vines are trained into low woven baskets called <em>kouloura</em>, coiled on the ground to shield the fruit from the wind and catch moisture from the sea fog. Some root systems are centuries old. What comes out is Assyrtiko — bone dry, mineral, and unlike anything grown on softer soil — alongside Vinsanto, the sweet sun-dried counterpart.</p>
+              <p>This is private and runs about six hours, with two or three estates depending on the option you pick. Each has its own setup and pour, and the tastings come with food rather than crackers. A driver matters here: the estates are spread across the island's interior and the pours add up.</p>
+              <p>There's a sunset upgrade if you want to finish at a winery facing west rather than back at the hotel — worth considering only if you haven't already booked a sunset boat.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Santorini/Santorini-6-hours-private-sightseeing-tour/d959-72857P8?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+            <div class="tour">
+              <h4>Private wine tour with a sommelier</h4>
+              <div class="meta">Private · two or three wineries · you set the hours · pickup anywhere</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/33/65/b1/e5/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Guided wine tasting overlooking a Santorini vineyard" loading="lazy">
+              <div class="price">From $159.45 <span>Per person</span></div>
+              <p>The same shape as the six-hour tour above — private, two or three estates, Assyrtiko and the volcanic vineyards — with one difference that does the work: your guide is a sommelier rather than a driver who waits outside. You get the tasting explained rather than poured.</p>
+              <p>You also set the length. Pick the number of hours you want and build the route around it, rather than taking a fixed six. Pickup from anywhere on the island, and a child seat if you need one.</p>
+              <p class="caveat">It runs $59.05 more per person than the six-hour tour. Worth it if you want someone who can talk properly about what's in the glass; not worth it if you'd rather see the vineyards and drink the wine without the commentary.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Santorini/Santorini-Wine-Tating-Tour-by-Brothers-Travel/d959-409620P3?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+            <div class="tour">
+              <h4>Private island tour ending at Santo Wines for sunset</h4>
+              <div class="meta">Private vehicle and guide · flexible route · one tasting, timed for sunset</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/33/b2/59/0a/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Terrace overlooking the Santorini caldera at sunset" loading="lazy">
+              <div class="price">From $236.22 <span>Per person</span></div>
+              <p>A different trade from the wine tour above: more island, one winery. You cover the caldera viewpoints and the villages by private car with the route bent to whatever you want to see, then finish at Santo Wines on the rim above Pyrgos for a guided tasting as the sun goes down.</p>
+              <p>Santo is the best-known winery on the island and its terrace is the sunset spot — which means it fills. Arriving with a booking and a guide is the difference between a table and a scrum at the rail.</p>
+              <p class="caveat">It runs $135.82 more per person than the two-or-three-estate tour, and you taste at one winery instead of several. You're paying for the sightseeing and the sunset slot, not for more wine. And as with the sunset upgrade above — if a sunset boat is already booked, this is the same hour twice.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Santorini/Santorini-Private-Insta-Tour-with-Sunset-Wine-Tasting/d959-227008P11?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+            <div class="tour">
+              <h4>Four wineries and a four-course lunch</h4>
+              <div class="meta">Five hours · morning · private · vineyard walk, production tour, and a sit-down meal</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/2e/e8/c2/67/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Table of Greek dishes and wine glasses at a Santorini winery" loading="lazy">
+              <div class="price">From $259.85 <span>Per person</span></div>
+              <p>The longest of the wine days: four estates across five hours, private throughout, with a walk through the vines and the production side at one of them rather than just the tasting room. It finishes at Anhydrous with a four-course lunch paired to the wines — Greek salad, fava, tomato fritters, a main of pork or chicken, and dessert.</p>
+              <p>Compare it to the Santo sunset tour above: $23.63 more per person, and you get four wineries and a full meal instead of one tasting and a view. On value it's the strongest of the four wine days, provided you want to spend a morning on it.</p>
+              <p>It also runs in the morning, which matters more than it sounds — it leaves your evening free for a sunset boat instead of competing with it.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Santorini/5-Hour-Private-Morning-Wine-Tour-with-4-Wineries-15-Wines/d959-471163P8?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+            <div class="tour">
+              <h4>Two wineries, lunch, and Oia</h4>
+              <div class="meta">About five hours · private · two estates plus Oia village · lunch included</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/33/67/02/17/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Table of Greek dishes at a Santorini winery" loading="lazy">
+              <div class="price">From $295.28 <span>Per person</span></div>
+              <p>Two estates with tours and tastings, a sit-down Greek lunch of several dishes and appetisers, and time in Oia, all private and with transport handled. Around five hours, so the rest of the day stays yours.</p>
+              <p class="caveat">Worth thinking about before you book: Oia is free and easy to reach on your own — a bus or a taxi, any afternoon you like. This runs $35.43 more per person than the four-winery lunch tour and visits two fewer estates, so what the extra buys is having Oia driven and guided rather than done under your own steam. If you'd have gone to Oia anyway on a free afternoon, the morning tour is the better wine day.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Santorini/Santorini-Full-Day-Land-and-Catamaran-Tour/d959-158153P6?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+            <div class="tour">
+              <h4>Three named estates: Art Space, Argyros, Venetsanos</h4>
+              <div class="meta">Private · three wineries, each a different approach · optional extra stops</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/2e/e8/bc/82/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Winery terrace built into the Santorini caldera cliffs" loading="lazy">
+              <div class="price">From $301.19 <span>Per person</span></div>
+              <p>The only wine day here that tells you where you're going, which matters more than it sounds. Art Space, a working winery inside old cave cellars with art in among the barrels. Argyros, the estate serious Assyrtiko drinkers travel for. Venetsanos, built into the caldera cliff with the drop below the terrace. Three different approaches to the same soil rather than three similar tasting rooms.</p>
+              <p>You'll go past the obvious whites too — Athiri and Aidani alongside the Assyrtiko, Mavrotragano and Mandilaria on the red side, and the sun-dried sweet wines: Vinsanto, Nama, Mezzo.</p>
+              <p class="caveat">Gavalas Winery and the Koutsogiannopoulos wine museum can be added at extra cost, so the $301.19 is a floor rather than the finished number if you take them. Ask me before adding either — the museum is a different kind of visit and not everyone wants it after two tastings.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Santorini/Wine-tours-The-Santorinian-teroir/d959-406687P4?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+            <div class="tour">
+              <h4>Farm to table through the southern villages</h4>
+              <div class="meta">Private · countryside villages, bakery, and a traditional canava · food-led</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/32/dc/9e/d8/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Table of local produce and wine in a Santorini village" loading="lazy">
+              <div class="price">From $313.00 <span>Per person</span></div>
+              <p>This one is led by the food rather than the wine. A private guide takes you through the quieter southern villages for bakery stops, regional products, and tastings of things that don't make it onto restaurant menus, with a visit to a traditional <em>canava</em> — the cave cellars dug into the pumice, where barrels were kept cool long before anyone had refrigeration.</p>
+              <p>It's the slowest day on this list by design, and the one that shows you how the island actually lives rather than how it presents itself to visitors. Good if you've already done a tasting and want something different; good too if wine is not really the point for everyone in the group.</p>
+              <p class="caveat">Close cousin to the wine-and-spirits day below at $318.90 — both are food-and-drink rather than pure wine. That one adds a distillery and a working farm; this one covers villages and a bakery. There's $5.90 between them, so pick on which day appeals rather than on price.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Santorini/Discover-the-South-of-Santorini/d959-116498P8?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+            <div class="tour">
+              <h4>Wine, spirits, and a working farm</h4>
+              <div class="meta">Four hours · private guide · winery, distillery, and farm · hotel or port pickup</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/2e/e6/b6/ff/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Barrels and bottles at a traditional Santorini producer" loading="lazy">
+              <div class="price">From $318.90 <span>Per person</span></div>
+              <p>The only one of these that isn't purely wine. You visit the island's first industrial winery and an ancient vineyard, stop at a traditional distillery to taste local spirits, and finish at a family farm for olive oil, cheese, and whatever else is coming off the land. Four hours, private guide, drinks and snacks included, pickup from your hotel or the port.</p>
+              <p>Pick this one if a fourth tasting room would bore anyone in your group. It covers how the island eats and drinks rather than how it makes wine, and the history comes with it rather than as a lecture.</p>
+              <p class="caveat">It sits $59.05 above the four-winery lunch tour and $70.87 below the sunset one. Shorter than both at four hours, and the food is tastings rather than a meal — worth knowing if you were counting on lunch being handled.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Santorini/Traditional-Taste-of-Santorini-Private-Tour/d959-21559P6?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+            <div class="tour">
+              <h4>Three wineries finishing with the caldera sunset</h4>
+              <div class="meta">Private · three estates · tastings paired with local snacks and cheese · hotel pickup</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/33/0a/02/b0/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Wine glass on a terrace above the Santorini caldera at sunset" loading="lazy">
+              <div class="price">From $389.77 <span>Per person</span></div>
+              <p>Three estates, guided tastings paired with local snacks and cheese, and a finish on the caldera rim with the sun going down and a glass in your hand. Private throughout, with hotel pickup.</p>
+              <p class="caveat">This is the most expensive wine day by a distance — $129.92 more per person than the four-winery tour above, for one fewer winery and snacks rather than a four-course lunch. What you're buying is the sunset finish. If that specific image is the thing you want, this delivers it; if you mainly want the wine, the morning tour gives you more for less. For four people the difference is about $520.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Santorini/Face-the-sunset-and-taste-the-Santorini-wines/d959-396495P1?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+            <div class="tour">
+              <h4>Wine roads with a sommelier, priced by the group</h4>
+              <div class="meta">Half day · three family-run estates · up to 15 varietals · light meal included</div>
+              <img class="tour-photo" src="https://dynamic-media.tacdn.com/media/photo-o/2e/e6/cd/e2/caption.jpg?w=1400&amp;h=1000&amp;s=1" alt="Private vehicle at a family-run Santorini winery" loading="lazy">
+              <div class="price">From $732.30 <span>Per group, up to 2 people</span></div>
+              <p>Three family-run estates with a sommelier guide, up to fifteen varietals across the afternoon, and a light meal of Cycladic cheeses and Greek dishes rather than crackers. Private vehicle, your party only.</p>
+              <p class="caveat">Read the price line carefully — this is the only wine tour here quoted by the group rather than per person, and the quoted figure covers two people. For a couple it works out to about $366 each, which puts it near the top of this list. If there are more than two of you, the price will change and I'll need to confirm what it becomes before you book. Tell me your numbers and I'll get you the real figure.</p>
+              <div class="links">
+                <a class="btn" href="https://www.viator.com/tours/Santorini/Private-Santorini-Wine-Roads-Tour-with-Wine-Tastings/d959-26477P5?pid=P00199174&amp;uid=U00547912&amp;mcid=58086&amp;currency=USD" target="_blank" rel="noopener">Viator Curated List</a>
+              </div>
+            </div>
+
+          </div>
+        </details>
+
+        <div class="tip">If you're arriving or leaving by ferry, don't book anything within three hours of the boat. The port at Athinios is a switchback road below the cliffs and the traffic after a big arrival is genuinely slow.</div>
+      </div>
+    </details>
+
+  </div>
+</section>
+<section>
+  <div class="wrap narrow">
+    <div class="eyebrow">Booking and pricing</div>
+    <h2>How this works</h2>
+    <p>Every link above opens a live booking page with current dates, durations, and pricing for your travel window. Prices move with the season, the size of your group, and whether a departure is private or shared, so the page will always be more accurate than anything printed here.</p>
+    <p>You can book directly, or send me the list and I'll reserve everything, stagger the start times against your ferries and check-ins, and keep the confirmations in one place. Booking through me costs you nothing extra and means one phone number to call when a boat cancels for wind.</p>
+
+    <div class="commitment plain">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor.</div>
+    <p style="margin-top:22px;">Two things before you book. The code <strong>ENDOFSUMMER2026</strong> takes 10% off at checkout — enter it in the promo field, it isn't applied automatically. And most of these offer reserve now, pay later, so the boat days and the classes that fill early can be held while you finish deciding on the rest.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap narrow">
+    <div class="eyebrow">Tell me what you want</div>
+    <h2>Send me your list</h2>
+
+    <div class="commitment" style="margin-top:0;margin-bottom:26px;">What's coming after this quote: a destination guide built for your trip — PDF or interactive in-app, with Google Maps links to every place we send you — a trip app where everything lives, and us when something goes sideways at midnight. You travel; we handle the rest.</div>
+
+    <div id="form-container" class="form-card">
+      <div id="form-error" style="display:none; background:#fff1f1; border:1px solid #f5c6c6; border-radius:6px; padding:14px 18px; font-size:0.875rem; color:#b91c1c; margin-bottom:16px;">
+        We weren't able to send your message. Please contact Christina directly at the address below.
+      </div>
+
+      <form id="pmtp-form">
+        <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+        <input type="hidden" name="subject" value="Quote Response — Martin Family | Amalfi Coast, Paros &amp; Santorini">
+        <input type="hidden" name="from_name" value="Martin Family Quote — Point Me to Paradise">
+        <input type="hidden" name="redirect" value="false">
+
+        <label for="f-name">Name</label>
+        <input type="text" id="f-name" name="name" required>
+
+        <label for="f-email">Email</label>
+        <input type="email" id="f-email" name="email" required>
+
+        <label for="f-phone">Phone (optional)</label>
+        <input type="tel" id="f-phone" name="phone">
+
+        <label for="f-dest">Which stop are you asking about?</label>
+        <select id="f-dest" name="destination_interest">
+          <option value="">Select one</option>
+          <option value="Amalfi Coast">Amalfi Coast</option>
+          <option value="Paros">Paros</option>
+          <option value="Santorini">Santorini</option>
+          <option value="All three">All three</option>
+        </select>
+
+        <label for="f-ins">Travel insurance</label>
+        <select id="f-ins" name="travel_insurance">
+          <option value="Yes — I'd like a quote">Yes — I'd like a quote</option>
+          <option value="No — not interested">No — not interested</option>
+          <option value="Already have coverage">Already have coverage</option>
+        </select>
+
+        <label for="f-msg">Which tours do you want held, and any questions?</label>
+        <textarea id="f-msg" name="message" placeholder="List the experiences you'd like me to book, plus travel dates and number of travelers."></textarea>
+
+        <button type="submit" id="submit-btn">Send to Christina</button>
+      </form>
+    </div>
+
+    <div id="thank-you">
+      <h2 style="margin-bottom:10px;">Got it</h2>
+      <p style="margin-bottom:0;">Your message is with me. I'll check availability on everything you listed and come back with dates, times, and what needs to be locked first.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap narrow">
+    <div class="adv-name">Christina Garcia</div>
+    <div class="adv-title">Travel Advisor</div>
+    <div class="adv-line"><a id="adv-email" href="#">Email</a></div>
+    <div class="adv-line"><a href="tel:+12812290862">+1 281 229 0862</a></div>
+    <div class="agency">Point Me to Paradise Travel</div>
+    <p class="disclaimer">Experiences shown are suggestions for your trip and are not held or confirmed until booked. Availability, departure times, durations, and pricing are set by the operator and are subject to change. Booking links open on our reservation partner's site, where their terms and cancellation policies apply.</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var user = 'christina';
+    var domain = 'pointmetoparadise.com';
+    var addr = user + '\u0040' + domain;
+    var el = document.getElementById('adv-email');
+    el.href = 'mailto:' + addr;
+    el.textContent = addr;
+  })();
+
+  Array.prototype.forEach.call(document.querySelectorAll('details.dest'), function (dest) {
+    var cats = dest.querySelectorAll('details.cat');
+    Array.prototype.forEach.call(cats, function (cat) {
+      cat.addEventListener('toggle', function () {
+        if (!cat.open) return;
+        Array.prototype.forEach.call(cats, function (other) {
+          if (other !== cat) other.open = false;
+        });
+      });
+    });
+  });
+
+  document.getElementById('pmtp-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = document.getElementById('submit-btn');
+    var err = document.getElementById('form-error');
+    btn.disabled = true; btn.textContent = 'Sending…'; err.style.display = 'none';
+    fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(e.target) })
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        if (data.success) {
+          document.getElementById('form-container').style.display = 'none';
+          document.getElementById('thank-you').style.display = 'block';
+        } else {
+          btn.disabled = false; btn.textContent = 'Send to Christina'; err.style.display = 'block';
+          err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      })
+      .catch(function() {
+        btn.disabled = false; btn.textContent = 'Send to Christina'; err.style.display = 'block';
+        err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+  });
+</script>
+
+</body>
+</html>
