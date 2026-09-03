@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Day on the Water from Praiano | Point Me to Paradise Travel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=Cormorant+Garamond:ital,wght@1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sea:#B1E6E0;
+  --sea-pale:#E4F5F2;
+  --sea-line:#CFE7E3;
+  --ink:#17403C;
+  --ink-soft:#4A6E6A;
+  --paper:#F7FAF9;
+  --paper-warm:#FFFFFF;
+  --limone:#D9A72E;
+  --limone-pale:#F6EBCE;
+}
+
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-weight:400;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+.sheet{
+  max-width:920px;
+  margin:0 auto;
+  padding:0 32px 72px;
+}
+
+/* masthead */
+.masthead{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:24px;
+  flex-wrap:wrap;
+  padding:34px 0 20px;
+  border-bottom:1px solid var(--sea-line);
+}
+.wordmark{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:1.14rem;
+  font-weight:500;
+  letter-spacing:.055em;
+  margin:0;
+}
+.tagline{
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-style:italic;
+  font-weight:400;
+  font-size:1.12rem;
+  color:var(--ink-soft);
+  margin:0;
+}
+
+/* prepared-for strip */
+.prepared{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 44px;
+  padding:16px 0 0;
+  font-family:"JetBrains Mono",ui-monospace,monospace;
+  font-size:.735rem;
+  color:var(--ink-soft);
+  letter-spacing:.01em;
+}
+.prepared b{font-weight:500;color:var(--ink);}
+
+/* hero */
+.hero{padding:52px 0 8px;}
+.hero h1{
+  font-family:"Playfair Display",Georgia,serif;
+  font-weight:400;
+  font-size:clamp(2.35rem,6vw,3.5rem);
+  line-height:1.08;
+  letter-spacing:-.014em;
+  margin:0 0 22px;
+  max-width:15ch;
+}
+.hero p{
+  max-width:62ch;
+  font-size:1.06rem;
+  color:var(--ink-soft);
+  margin:0 0 14px;
+}
+
+/* route map */
+.chart{
+  margin:40px 0 4px;
+  background:var(--paper-warm);
+  border:1px solid var(--sea-line);
+  border-radius:2px;
+  padding:26px 22px 18px;
+}
+.chart svg{width:100%;height:auto;display:block;}
+.chart figcaption{
+  font-family:"JetBrains Mono",ui-monospace,monospace;
+  font-size:.7rem;
+  color:var(--ink-soft);
+  margin-top:16px;
+  line-height:1.6;
+}
+
+/* sections */
+section{padding:58px 0 0;}
+h2{
+  font-family:"Playfair Display",Georgia,serif;
+  font-weight:400;
+  font-size:clamp(1.6rem,3.4vw,2.05rem);
+  line-height:1.2;
+  letter-spacing:-.008em;
+  margin:0 0 6px;
+}
+.lede{
+  color:var(--ink-soft);
+  max-width:64ch;
+  margin:0 0 30px;
+}
+h3{
+  font-family:"Playfair Display",Georgia,serif;
+  font-weight:500;
+  font-size:1.22rem;
+  margin:0 0 4px;
+  letter-spacing:-.004em;
+}
+.sub{
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-style:italic;
+  font-size:1.08rem;
+  color:var(--ink-soft);
+  margin:0 0 14px;
+}
+
+/* two days */
+.days{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0;
+  border:1px solid var(--sea-line);
+  background:var(--paper-warm);
+}
+.day{padding:30px 28px 32px;}
+.day + .day{border-left:1px solid var(--sea-line);}
+.day p{margin:0 0 14px;font-size:.965rem;}
+.day ul{margin:0;padding-left:1.1em;font-size:.94rem;color:var(--ink-soft);}
+.day li{margin-bottom:5px;}
+.day li::marker{color:var(--sea);}
+.stamp{
+  display:inline-block;
+  background:var(--sea-pale);
+  color:var(--ink);
+  font-family:"JetBrains Mono",ui-monospace,monospace;
+  font-size:.68rem;
+  padding:3px 9px;
+  margin-bottom:14px;
+}
+
+/* boat tiers */
+.tier{
+  border-top:1px solid var(--sea-line);
+  padding:30px 0 34px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1.32fr);
+  gap:12px 48px;
+}
+.tier:first-of-type{border-top:2px solid var(--ink);}
+.tier-note{font-size:.945rem;color:var(--ink-soft);margin:0;}
+.tier-note em{
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:1.1rem;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:.93rem;
+}
+caption{
+  text-align:left;
+  font-family:"JetBrains Mono",ui-monospace,monospace;
+  font-size:.68rem;
+  color:var(--ink-soft);
+  padding-bottom:9px;
+}
+th{
+  text-align:left;
+  font-weight:500;
+  font-size:.72rem;
+  font-family:"JetBrains Mono",ui-monospace,monospace;
+  color:var(--ink-soft);
+  border-bottom:1px solid var(--sea-line);
+  padding:0 10px 7px 0;
+}
+th:last-child,td:last-child{text-align:right;padding-right:0;}
+td{
+  padding:9px 10px 9px 0;
+  border-bottom:1px solid var(--sea-pale);
+  vertical-align:baseline;
+}
+tr:last-child td{border-bottom:none;}
+.price{
+  font-family:"JetBrains Mono",ui-monospace,monospace;
+  font-size:.9rem;
+  font-weight:500;
+  white-space:nowrap;
+}
+.hrs{
+  font-family:"JetBrains Mono",ui-monospace,monospace;
+  font-size:.76rem;
+  color:var(--ink-soft);
+  white-space:nowrap;
+}
+.dash{color:var(--sea-line);}
+
+/* included */
+.cols{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:34px 48px;
+}
+.cols ul{margin:0;padding-left:1.05em;font-size:.96rem;}
+.cols li{margin-bottom:7px;}
+.cols li::marker{color:var(--sea);}
+.extra li::marker{color:var(--limone);}
+
+/* good to know */
+.notes{display:grid;grid-template-columns:1fr 1fr;gap:26px 48px;}
+.note h4{
+  font-family:"Playfair Display",Georgia,serif;
+  font-weight:500;
+  font-size:1.02rem;
+  margin:0 0 3px;
+}
+.note p{margin:0;font-size:.93rem;color:var(--ink-soft);}
+
+/* booking */
+.booking{
+  margin-top:14px;
+  background:var(--sea-pale);
+  border-left:3px solid var(--sea);
+  padding:28px 30px 30px;
+}
+.booking h2{margin-bottom:10px;}
+.booking p{margin:0 0 12px;max-width:62ch;font-size:.985rem;}
+.booking p:last-child{margin-bottom:0;}
+
+.accuracy{
+  margin-top:34px;
+  font-size:.855rem;
+  color:var(--ink-soft);
+  max-width:70ch;
+  border-top:1px solid var(--sea-line);
+  padding-top:18px;
+}
+
+footer{
+  margin-top:56px;
+  border-top:1px solid var(--sea-line);
+  padding-top:24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:26px;
+  flex-wrap:wrap;
+}
+.sig{font-family:"Playfair Display",Georgia,serif;font-size:1.06rem;margin:0 0 2px;}
+.sig-role{font-size:.88rem;color:var(--ink-soft);margin:0;}
+.sig-meta{
+  font-family:"JetBrains Mono",ui-monospace,monospace;
+  font-size:.68rem;
+  color:var(--ink-soft);
+  text-align:right;
+  line-height:1.85;
+}
+
+@media (max-width:760px){
+  .sheet{padding:0 20px 56px;}
+  .days,.cols,.notes{grid-template-columns:1fr;}
+  .day + .day{border-left:none;border-top:1px solid var(--sea-line);}
+  .tier{grid-template-columns:1fr;gap:18px;}
+  footer{flex-direction:column;align-items:flex-start;}
+  .sig-meta{text-align:left;}
+}
+
+@media print{
+  body{background:#fff;font-size:10.5pt;}
+  .sheet{max-width:100%;padding:0;}
+  section{padding-top:26pt;break-inside:avoid;}
+  .tier,.days,.booking,.chart{break-inside:avoid;}
+  .hero{padding-top:20pt;}
+}
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <p class="wordmark">Point Me to Paradise Travel</p>
+    <p class="tagline">The world is your oyster. We are your pearl.</p>
+  </header>
+
+  <div class="prepared">
+    <span>Prepared for <b>Julie Martin</b></span>
+    <span>Travel dates <b>October 3 to 9, 2026</b></span>
+    <span>Guests <b>2</b></span>
+    <span>Departing <b>Praiano</b></span>
+  </div>
+
+  <div class="hero">
+    <h1>Two directions from Praiano</h1>
+    <p>Your hotel can arrange a private boat for you, with a skipper, for either a half day or a full day at sea. Everything below is exclusive to your party. No other guests, no fixed route, no schedule but your own.</p>
+    <p>The first decision is not which boat. It is which way you point.</p>
+  </div>
+
+  <figure class="chart">
+    <svg viewBox="0 0 900 268" role="img" aria-label="Schematic chart of the Sorrentine peninsula showing Praiano between Positano and Amalfi, with Capri to the west.">
+      <defs>
+        <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#B1E6E0" stop-opacity=".42"/>
+          <stop offset="100%" stop-color="#B1E6E0" stop-opacity=".08"/>
+        </linearGradient>
+      </defs>
+
+      <!-- sea field -->
+      <rect x="0" y="96" width="900" height="172" fill="url(#sea)"/>
+
+      <!-- coastline -->
+      <path d="M170,96 C220,74 268,104 318,94 C368,84 404,110 452,102 C502,94 546,116 598,104 C654,91 700,112 760,100 L830,96"
+            fill="none" stroke="#17403C" stroke-width="1.5"/>
+      <path d="M170,96 C220,74 268,104 318,94 C368,84 404,110 452,102 C502,94 546,116 598,104 C654,91 700,112 760,100 L830,96 L830,20 L170,20 Z"
+            fill="#E4F5F2" fill-opacity=".55"/>
+
+      <!-- capri -->
+      <path d="M44,112 C60,98 96,96 116,108 C132,118 126,132 104,136 C74,141 34,128 44,112 Z"
+            fill="#E4F5F2" stroke="#17403C" stroke-width="1.5"/>
+
+      <!-- capri crossing route -->
+      <path d="M470,120 C400,182 220,178 112,140" fill="none" stroke="#17403C"
+            stroke-width="1.4" stroke-dasharray="2 6" stroke-linecap="round"/>
+
+      <!-- coastal route -->
+      <path d="M470,120 C518,150 566,140 620,126" fill="none" stroke="#D9A72E" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M470,120 C428,146 396,136 358,122" fill="none" stroke="#D9A72E" stroke-width="2.4" stroke-linecap="round"/>
+
+      <!-- port marks -->
+      <circle cx="358" cy="122" r="3.4" fill="#17403C"/>
+      <circle cx="620" cy="126" r="3.4" fill="#17403C"/>
+      <circle cx="112" cy="140" r="3.4" fill="#17403C"/>
+      <circle cx="470" cy="120" r="6" fill="#D9A72E"/>
+      <circle cx="470" cy="120" r="11" fill="none" stroke="#D9A72E" stroke-width="1.2"/>
+
+      <g font-family="JetBrains Mono, monospace" font-size="12.5" fill="#17403C">
+        <text x="112" y="167" text-anchor="middle">Capri</text>
+        <text x="358" y="149" text-anchor="middle">Positano</text>
+        <text x="470" y="152" text-anchor="middle" font-size="14" font-weight="500">Praiano</text>
+        <text x="620" y="153" text-anchor="middle">Amalfi</text>
+      </g>
+      <g font-family="JetBrains Mono, monospace" font-size="10.5" fill="#4A6E6A">
+        <text x="270" y="196" text-anchor="middle">about 18 nautical miles west</text>
+        <text x="626" y="182" text-anchor="middle">coastal cruising, both directions</text>
+      </g>
+    </svg>
+    <figcaption>Not to scale. Praiano sits roughly midway between Positano and Amalfi, which is why both days work equally well from your door.</figcaption>
+  </figure>
+
+  <section>
+    <h2>Choosing your day</h2>
+    <p class="lede">Two genuinely different experiences. One is a crossing to an island. The other is a slow reading of the coastline you are already staying on.</p>
+
+    <div class="days">
+      <div class="day">
+        <span class="stamp">Capri &nbsp;/&nbsp; full day only</span>
+        <h3>The island crossing</h3>
+        <p class="sub">Best if Capri is on the list and you have not yet seen it</p>
+        <p>You leave the coast behind, round Punta Campanella and cross open water to the island. The boat circles Capri, passing beneath the Faraglioni sea stacks, then anchors somewhere quiet to swim before you go ashore.</p>
+        <ul>
+          <li>Roughly one hour each way on a traditional boat, closer to forty minutes on a fast one</li>
+          <li>Time ashore in Capri town or Anacapri, on foot</li>
+          <li>Swim stops in the coves along the island's south side</li>
+          <li>Offered as a full day only. The crossing does not fit a half day</li>
+        </ul>
+      </div>
+
+      <div class="day">
+        <span class="stamp">Amalfi Coast &nbsp;/&nbsp; half or full day</span>
+        <h3>The coastline</h3>
+        <p class="sub">Best for swimming, shorter runs and a slower pace</p>
+        <p>You follow the cliffs in both directions from Praiano. Positano rising out of its ravine to the west, the Fiordo di Furore and Amalfi to the east, with the whole day punctuated by swim stops in water you cannot reach from the road.</p>
+        <ul>
+          <li>Positano, the Li Galli islets, Fiordo di Furore, Conca dei Marini, Amalfi and Atrani</li>
+          <li>Short runs between stops, so more time in the water and less time under way</li>
+          <li>The better choice with children, or if anyone is uneasy in open sea</li>
+          <li>Optional stop ashore in Positano or Amalfi</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Choosing your boat</h2>
+    <p class="lede">Six boats across three quite different characters. The price gap between them is mostly about deck space and shade, not about the quality of the day.</p>
+
+    <div class="tier">
+      <div>
+        <h3>The traditional gozzo</h3>
+        <p class="sub">Aprea, built in Sorrento</p>
+        <p class="tier-note">The wooden hulled fishing boat of the Bay of Naples, adapted for pleasure. Broad in the beam, canopied against the sun, and stable in a swell. It moves at an unhurried pace, which is rather the point. This is the boat most people are picturing when they imagine this coast. <em>Our usual recommendation.</em></p>
+      </div>
+      <div>
+        <table>
+          <caption>Prices are per boat, not per person</caption>
+          <thead>
+            <tr><th>Boat</th><th>Full day Capri</th><th>Full day coast</th><th>Half day coast</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Queen<br><span class="hrs">Aprea 32</span></td>
+              <td class="price">&euro;1,400 <span class="hrs">8h</span></td>
+              <td class="price">&euro;1,200 <span class="hrs">8h</span></td>
+              <td class="price">&euro;950 <span class="hrs">4h</span></td>
+            </tr>
+            <tr>
+              <td>King<br><span class="hrs">Aprea 36</span></td>
+              <td class="price">&euro;1,800 <span class="hrs">8h</span></td>
+              <td class="price">&euro;1,600 <span class="hrs">8h</span></td>
+              <td class="dash">not offered</td>
+            </tr>
+            <tr>
+              <td>Lady Ariel<br><span class="hrs">Aprea 36</span></td>
+              <td class="price">&euro;1,800 <span class="hrs">8h</span></td>
+              <td class="price">&euro;1,450 <span class="hrs">7h</span></td>
+              <td class="price">&euro;1,000 <span class="hrs">4h</span></td>
+            </tr>
+            <tr>
+              <td>Gozzo Aprea<br><span class="hrs">7.80 m, open</span></td>
+              <td class="dash">not offered</td>
+              <td class="price">&euro;800 <span class="hrs">8h</span></td>
+              <td class="price">&euro;550 <span class="hrs">4h</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="tier">
+      <div>
+        <h3>The sport yacht</h3>
+        <p class="sub">Pershing 37</p>
+        <p class="tier-note">Low, sleek and considerably faster, from the Italian yard that more or less invented the look. It cuts the Capri crossing to around forty minutes, which buys you well over an hour more on the island. The trade is real: an open cockpit with little shade, and a firmer ride once the afternoon wind gets up.</p>
+      </div>
+      <div>
+        <table>
+          <caption>Prices are per boat, not per person</caption>
+          <thead>
+            <tr><th>Boat</th><th>Full day Capri</th><th>Full day coast</th><th>Half day coast</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pershing 37</td>
+              <td class="price">&euro;1,400 <span class="hrs">8h</span></td>
+              <td class="price">&euro;1,200 <span class="hrs">8h</span></td>
+              <td class="price">&euro;1,000 <span class="hrs">4h</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="tier-note" style="margin-top:14px;font-size:.88rem;">Worth noting: the full day is only &euro;200 more than the half day on this boat. If you were leaning toward an afternoon out, the full day is much better value.</p>
+      </div>
+    </div>
+
+    <div class="tier">
+      <div>
+        <h3>The small open boat</h3>
+        <p class="sub">Lancia C100</p>
+        <p class="tier-note">A simple open launch with a skipper. No canopy, no frills, and closer to how people here actually get up and down this coast. It is the least expensive way onto the water and perfectly pleasant for two, though it is a coastal boat rather than a crossing boat.</p>
+      </div>
+      <div>
+        <table>
+          <caption>Prices are per boat, not per person</caption>
+          <thead>
+            <tr><th>Boat</th><th>Full day Capri</th><th>Full day coast</th><th>Half day coast</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Lancia C100</td>
+              <td class="dash">not offered</td>
+              <td class="price">&euro;900 <span class="hrs">8h</span></td>
+              <td class="price">&euro;600 <span class="hrs">4h</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What is included</h2>
+    <div class="cols">
+      <div>
+        <ul>
+          <li>Private use of the boat for your party alone</li>
+          <li>Snacks and drinks on board</li>
+          <li>Beach towels</li>
+          <li>Snorkeling equipment</li>
+        </ul>
+      </div>
+      <div>
+        <ul class="extra">
+          <li>Docking at Marina Grande on Capri, &euro;100, or &euro;200 for priority disembarkation</li>
+          <li>Lunch ashore or at anchor</li>
+          <li>Blue Grotto entry, if conditions allow</li>
+          <li>Gratuity for your skipper, at your discretion</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Worth knowing before you choose</h2>
+    <div class="notes">
+      <div class="note">
+        <h4>Departure times</h4>
+        <p>Half day morning runs 9:00 to 1:00 or 10:00 to 2:00. Half day afternoon runs 2:00 to 6:00. Full days run 10:00 to 6:00.</p>
+      </div>
+      <div class="note">
+        <h4>Priority docking on Capri</h4>
+        <p>The &euro;200 option secures a faster berth at Marina Grande. On a busy summer afternoon that can save the better part of an hour. If you do not plan to go ashore, it is unnecessary.</p>
+      </div>
+      <div class="note">
+        <h4>The Blue Grotto</h4>
+        <p>It closes without warning whenever there is any swell, and entry is by small rowing boat with a separate ticket. Treat it as a happy possibility rather than a fixture of the day.</p>
+      </div>
+      <div class="note">
+        <h4>Lunch</h4>
+        <p>Several of the best places on Capri and along the coast can only be reached by sea, and they book out well ahead in season. Tell us if you would like lunch built into the day and we will arrange it.</p>
+      </div>
+      <div class="note">
+        <h4>Weather</h4>
+        <p>Your skipper makes the final call on sea conditions. If a day is called off for weather it is rescheduled where possible. We will confirm the exact terms in writing.</p>
+      </div>
+      <div class="note">
+        <h4>Cancellation</h4>
+        <p>Free cancellation up to two days before your tour.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking">
+    <h2>How to hold your day</h2>
+    <p>Tell us two things: which boat, and which date during your stay. We will confirm availability with the hotel and hold it for you.</p>
+    <p>These boats go quickly. There are only six of them and one of each, so the popular dates commit weeks ahead in high season. If a boat day matters to you, it is worth deciding early rather than waiting until you arrive.</p>
+  </section>
+
+  <p class="accuracy">Prices quoted by Grand Hotel Tritone, Praiano, and correct at the time of writing. Guest capacity varies by boat and will be confirmed against your party size before booking. Nothing here is held until we confirm it with you in writing.</p>
+
+  <footer>
+    <div>
+      <p class="sig">Christina Garcia</p>
+      <p class="sig-role">Owner and Lead Specialist, Point Me to Paradise Travel</p>
+    </div>
+    <div class="sig-meta">
+      Point Me to Paradise<br>
+      ARC ID 00046304
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
