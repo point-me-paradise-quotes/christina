@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Houston to Orlando — Flight Options | Point Me to Paradise Travel</title>
+<meta property="og:title" content="Houston to Orlando — Flight Options">
+<meta property="og:description" content="Nonstop Hobby to Orlando for two, October 28 – November 3. Six outbound and five return flights across four fare tiers, with a live total.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --aqua-pale:#C4E4E1;--aqua-mist:#EAF3F2;--aqua:#75AFB1;--aqua-dark:#4F8A8C;
+  --sand:#ECE7DC;--sand-light:#F4F1E9;--gold-whisper:#D6C8A8;--white:#FFFFFF;
+  --paper:#FBFDFD;--ink:#2B2420;--ink-soft:#6B6359;--line:#E5E9E8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;font-weight:400;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:500;line-height:1.2;color:var(--ink)}
+h1{font-size:clamp(2rem,5vw,3.1rem);font-weight:600}
+h2{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:14px}
+h3{font-size:1.2rem;margin-bottom:8px}
+p{margin-bottom:14px}
+.tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;color:var(--ink-soft)}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+section{padding:56px 0}
+.band{background:var(--aqua-mist)}
+.small{font-size:.875rem;color:var(--ink-soft)}
+a{color:var(--aqua-dark)}
+
+/* HERO */
+.pmtp-hero{position:relative;background:linear-gradient(160deg,var(--aqua-mist) 0%,var(--paper) 45%,var(--aqua-pale) 100%);background-size:cover;background-position:center;padding:78px 32px 60px;text-align:center;overflow:hidden}
+.pmtp-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(251,253,253,.35),rgba(251,253,253,.75));pointer-events:none}
+.pmtp-hero>*{position:relative}
+.pmtp-wordmark{font-family:'Playfair Display',serif;font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--aqua-dark);margin-bottom:22px}
+.hero-sub{margin-top:14px}
+.route{display:inline-flex;align-items:center;gap:16px;margin-top:26px;padding:12px 22px;background:var(--white);border:1px solid var(--line);border-radius:999px;font-size:.95rem}
+.route b{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:600}
+.route span.arrow{color:var(--aqua);font-size:1.3rem}
+.hero-line{width:64px;height:2px;background:var(--gold-whisper);margin:26px auto 0}
+
+/* OVERVIEW */
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:26px 0}
+.facts div{background:var(--white);padding:16px 18px}
+.facts .k{font-size:.78rem;color:var(--ink-soft);margin-bottom:4px}
+.facts .v{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:500}
+.callout{background:var(--aqua-pale);border-left:3px solid var(--aqua-dark);border-radius:0 8px 8px 0;padding:18px 22px;margin:22px 0}
+.callout p{margin:0}
+.callout.quiet{background:var(--aqua-mist);border-left-color:var(--aqua)}
+
+/* FARE TIER EXPLAINER */
+.tier-table{width:100%;border-collapse:collapse;background:var(--white);border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:.9rem}
+.tier-table th,.tier-table td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.tier-table th{font-family:'Playfair Display',serif;font-weight:500;font-size:1rem;background:var(--aqua-mist)}
+.tier-table tr:last-child td{border-bottom:0}
+.tier-table td:first-child{color:var(--ink-soft);width:26%}
+.tier-table .no{color:#9a3d3d}
+.tier-table .yes{color:var(--aqua-dark);font-weight:500}
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.basic-note{margin-top:28px}
+.basic-note ul{padding-left:20px;margin:10px 0 16px}
+.basic-note li{margin-bottom:8px}
+
+/* TIER PICKER */
+.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:22px 0 8px}
+.tier{position:relative;background:var(--white);border:2px solid var(--line);border-radius:10px;padding:16px 16px 14px;cursor:pointer;transition:border-color .15s}
+.tier:hover{border-color:var(--aqua)}
+.tier.on{border-color:var(--aqua-dark);background:var(--aqua-mist)}
+.tier .name{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:500}
+.tier .desc{font-size:.8rem;color:var(--ink-soft);margin-top:4px;line-height:1.45}
+.tier .pick{position:absolute;top:-10px;right:12px;background:var(--aqua-dark);color:var(--white);font-size:.68rem;font-weight:600;letter-spacing:.06em;padding:3px 9px;border-radius:999px}
+.tier.warn .name::after{content:" ·";color:var(--gold-whisper)}
+.tier-warn{display:none;margin-top:12px}
+.tier-warn.show{display:block}
+
+/* FLIGHT CARDS */
+.leg-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px;margin:34px 0 14px}
+.leg-head h3{margin:0;font-size:1.35rem}
+.leg-head .small{margin:0}
+.flights{display:grid;gap:10px}
+.flight{display:grid;grid-template-columns:1fr auto;align-items:center;gap:14px;background:var(--white);border:2px solid var(--line);border-radius:10px;padding:14px 18px;cursor:pointer;transition:border-color .15s}
+.flight:hover{border-color:var(--aqua)}
+.flight.on{border-color:var(--aqua-dark);background:var(--aqua-mist)}
+.flight .times{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:500;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.flight .times .arrow{color:var(--aqua);font-size:1rem;font-family:'DM Sans',sans-serif}
+.flight .meta{font-size:.82rem;color:var(--ink-soft);margin-top:3px;display:flex;flex-wrap:wrap;gap:6px 14px}
+.flight .tag{display:inline-block;font-size:.7rem;font-weight:600;letter-spacing:.04em;padding:2px 8px;border-radius:999px;background:var(--aqua-pale);color:var(--aqua-dark)}
+.flight .price{text-align:right}
+.flight .price .amt{font-family:'Playfair Display',serif;font-size:1.45rem;font-weight:600;white-space:nowrap}
+.flight .price .per{font-size:.72rem;color:var(--ink-soft)}
+.flight .check{width:22px;height:22px;border-radius:50%;border:2px solid var(--line);display:inline-flex;align-items:center;justify-content:center;font-size:.8rem;color:var(--white);flex:none;margin-left:auto}
+.flight.on .check{background:var(--aqua-dark);border-color:var(--aqua-dark)}
+.flight.on .check::after{content:"✓"}
+
+/* PRICING BARS */
+.pricebar{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:20px 24px;display:grid;grid-template-columns:1fr auto;gap:12px 24px;align-items:center}
+.pricebar .lbl{font-size:.8rem;color:var(--ink-soft)}
+.pricebar .sel{font-size:.95rem;line-height:1.5}
+.pricebar .tot{font-family:'Playfair Display',serif;font-size:2rem;font-weight:600;text-align:right;white-space:nowrap}
+.pricebar .basis{font-size:.75rem;color:var(--ink-soft);text-align:right}
+.sticky{position:sticky;bottom:0;z-index:20;background:var(--white);border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(43,36,32,.06);padding:12px 24px}
+.sticky .in{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.sticky .txt{font-size:.85rem;color:var(--ink-soft);line-height:1.4}
+.sticky .txt b{color:var(--ink);font-weight:500}
+.sticky .amt{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:600;white-space:nowrap}
+.sticky a.btn{white-space:nowrap}
+
+/* BUTTONS + FORM */
+.btn{display:inline-block;font-family:'DM Sans',sans-serif;font-weight:500;font-size:16px;background:var(--aqua-dark);color:var(--white);border:0;border-radius:8px;padding:14px 28px;cursor:pointer;text-decoration:none;transition:background .15s}
+.btn:hover{background:var(--aqua)}
+.btn:disabled{opacity:.6;cursor:default}
+.form{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:32px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{margin-bottom:16px}
+label{display:block;font-size:.85rem;font-weight:500;margin-bottom:6px}
+input,select,textarea{width:100%;font-family:'DM Sans',sans-serif;font-size:16px;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--aqua);outline-offset:1px;border-color:var(--aqua)}
+textarea{min-height:110px;resize:vertical}
+#thank-you{display:none;background:var(--aqua-mist);border-radius:12px;padding:36px;text-align:center}
+
+/* FOOTER */
+footer{background:var(--sand-light);padding:44px 24px;text-align:center;font-size:.9rem;color:var(--ink-soft)}
+footer .name{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:500;color:var(--ink)}
+footer .agency{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem;margin-top:14px;color:var(--ink)}
+footer .rule{width:48px;height:2px;background:var(--gold-whisper);margin:0 auto 18px}
+
+@media(max-width:640px){
+  section{padding:44px 0}
+  .grid2{grid-template-columns:1fr}
+  .flight{grid-template-columns:1fr;gap:8px}
+  .flight .price{text-align:left;display:flex;align-items:baseline;gap:8px}
+  .flight .check{margin-left:auto}
+  .pricebar{grid-template-columns:1fr}
+  .pricebar .tot,.pricebar .basis{text-align:left}
+  .sticky a.btn{padding:10px 16px}
+  .sticky .txt{display:none}
+  .form{padding:22px}
+  .route{flex-wrap:wrap;justify-content:center;border-radius:14px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="pmtp-hero">
+  <div class="pmtp-wordmark">Point Me to Paradise Travel</div>
+  <h1>Houston to Orlando</h1>
+  <p class="tagline hero-sub">Nonstop both ways · October 28 – November 3, 2026</p>
+  <div class="route"><b>HOU</b><span class="small">Hobby</span><span class="arrow">⇄</span><b>MCO</b><span class="small">Orlando</span></div>
+  <div class="hero-line"></div>
+</header>
+
+<!-- OVERVIEW -->
+<section>
+  <div class="wrap">
+    <h2>Your trip at a glance</h2>
+    <p>Six nonstop departures on Wednesday, October 28 and five nonstop returns on Tuesday, November 3. Every flight below is a little over two hours in the air. Pick a flight in each direction and a fare tier, and the total updates as you go.</p>
+    <div class="facts">
+      <div><div class="k">Outbound</div><div class="v">Wed, Oct 28</div></div>
+      <div><div class="k">Return</div><div class="v">Tue, Nov 3</div></div>
+      <div><div class="k">Airports</div><div class="v">Hobby ⇄ Orlando Intl</div></div>
+      <div><div class="k">Travelers</div><div class="v">2 adults</div></div>
+      <div><div class="k">Stops</div><div class="v">None</div></div>
+    </div>
+    <div class="callout">
+      <p>We don't book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. The work you'd hate doing — already done.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FARE TIERS EXPLAINED -->
+<section class="band">
+  <div class="wrap">
+    <h2>Four fare tiers, and why the cheapest one isn't the smart one</h2>
+    <p>Southwest sells the same seat at four price points. The difference is what happens if anything about your plans moves — and whether you get to choose where you sit.</p>
+    <div class="table-scroll">
+    <table class="tier-table">
+      <thead><tr><th></th><th>Basic</th><th>Choice</th><th>Choice Preferred</th><th>Choice Extra</th></tr></thead>
+      <tbody>
+        <tr><td>Seat</td><td class="no">Assigned at check-in — no choosing</td><td class="yes">Pick a standard seat at booking</td><td class="yes">Pick a preferred seat (front of cabin)</td><td class="yes">Extra legroom seat included</td></tr>
+        <tr><td>Change your flight</td><td class="no">Not allowed — only by upgrading the fare</td><td class="yes">Yes, pay only any fare difference</td><td class="yes">Yes, pay only any fare difference</td><td class="yes">Yes, pay only any fare difference</td></tr>
+        <tr><td>If you cancel</td><td class="no">Credit only, expires in 6 months, not transferable</td><td>Credit good 12 months, transferable</td><td class="yes">Full refund to your card</td><td class="yes">Full refund to your card</td></tr>
+        <tr><td>Same-day change or standby</td><td class="no">No</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+        <tr><td>Boarding</td><td class="no">Last group</td><td>General</td><td>Earlier</td><td class="yes">Earliest</td></tr>
+        <tr><td>Checked bags</td><td class="no">Fee applies</td><td class="no">Fee applies</td><td class="no">Fee applies</td><td class="yes">Two included</td></tr>
+        <tr><td>Rapid Rewards earn</td><td>2 points per dollar</td><td>6 points per dollar</td><td>10 points per dollar</td><td class="yes">14 points per dollar</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="basic-note">
+      <h3>The case against Basic on this trip</h3>
+      <p>Basic saves $44 per person each way against Choice — $176 round trip for the two of you on most flights below. Here's what that $176 buys back:</p>
+      <ul>
+        <li><strong>A seat you chose.</strong> Basic assigns your seat at check-in, from whatever's left. With two of you on the same booking, there is no guarantee you sit together.</li>
+        <li><strong>The right to change.</strong> A Basic ticket can't be moved to a different flight or day. If Orlando plans shift by an hour, the only fix is buying up to a higher fare at that day's price.</li>
+        <li><strong>A credit that's actually usable.</strong> Cancel a Basic fare and you get a credit that dies in six months and can't be handed to anyone else. Cancel Choice and it lives twelve months and can be transferred.</li>
+        <li><strong>Same-day flexibility.</strong> Finish early, want the 1:55 p.m. instead of the 7:45 p.m.? Choice lets you switch same-day to an open seat between the same cities. Basic doesn't.</li>
+      </ul>
+      <p>Our read: Choice is the floor for this trip. Step up to Choice Preferred if you want the ticket fully refundable and a seat toward the front. Step up to Choice Extra if you're checking two bags — the included bags and the legroom close most of the price gap on their own.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OPTIONS + CALCULATOR -->
+<section id="options">
+  <div class="wrap">
+    <h2>Build your itinerary</h2>
+    <p>Choose a fare tier first, then a flight in each direction. Prices shown are per person; the total covers both travelers.</p>
+
+    <div class="tiers" id="tiers">
+      <div class="tier warn" data-tier="0"><div class="name">Basic</div><div class="desc">Lowest fare. No changes, no seat choice, 6-month credit.</div></div>
+      <div class="tier on" data-tier="1"><span class="pick">Advisor pick</span><div class="name">Choice</div><div class="desc">Standard seat at booking, changes allowed, 12-month transferable credit.</div></div>
+      <div class="tier" data-tier="2"><div class="name">Choice Preferred</div><div class="desc">Front-of-cabin seat, refundable, earlier boarding.</div></div>
+      <div class="tier" data-tier="3"><div class="name">Choice Extra</div><div class="desc">Extra legroom, two checked bags, first to board, refundable.</div></div>
+    </div>
+    <div class="callout quiet tier-warn" id="tier-warn">
+      <p><strong>You've selected Basic.</strong> That's fine if the dates are locked and you're traveling alone with a carry-on. Otherwise, see the notes above before committing — this fare can't be changed once ticketed.</p>
+    </div>
+
+    <div class="leg-head"><h3>Outbound · Wed, Oct 28 · HOU → MCO</h3><p class="small">All nonstop</p></div>
+    <div class="flights" id="out-list"></div>
+
+    <div class="leg-head"><h3>Return · Tue, Nov 3 · MCO → HOU</h3><p class="small">All nonstop</p></div>
+    <div class="flights" id="ret-list"></div>
+
+    <div class="callout" style="margin-top:34px">
+      <p>We check every component against public rates and meet or beat them. You're not paying a premium for our convenience — you're paying for the rest of what we do.</p>
+    </div>
+
+    <div class="pricebar" id="pricebar">
+      <div>
+        <div class="lbl">Your selection</div>
+        <div class="sel" id="sel-text"></div>
+      </div>
+      <div>
+        <div class="tot" id="sel-total"></div>
+        <div class="basis">for 2 adults · round trip · airfare only<br><span id="sel-pp"></span> per person</div>
+      </div>
+    </div>
+    <p class="small" style="margin-top:14px">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor. Fares shown are per adult, two adults traveling, and exclude checked-bag fees except where bags are included in the fare tier.</p>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="band" id="respond">
+  <div class="wrap">
+    <div class="callout" style="margin-top:0">
+      <p>What's coming after this quote: a destination guide built for your trip — PDF or interactive in-app, with Google Maps links to every place we send you — a trip app where everything lives, and us when something goes sideways at midnight. You travel; we handle the rest.</p>
+    </div>
+    <h2>Tell Christina which combination you want</h2>
+    <p>Your selected flights and fare tier come through with this message. Nothing is booked until you confirm with Christina.</p>
+
+    <div id="form-container" class="form">
+      <div id="form-error" style="display:none; background:#fff1f1; border:1px solid #f5c6c6; border-radius:6px; padding:14px 18px; font-size:0.875rem; color:#b91c1c; margin-bottom:16px;">
+        We weren't able to send your message. Please contact Christina directly at the address below.
+      </div>
+      <form id="pmtp-form">
+        <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+        <input type="hidden" name="subject" value="Quote Response — Orlando Flights | HOU–MCO Oct 28–Nov 3">
+        <input type="hidden" name="from_name" value="Orlando Flights Quote — Point Me to Paradise">
+        <input type="hidden" name="redirect" value="false">
+        <input type="hidden" name="outbound_flight" id="h-out" value="">
+        <input type="hidden" name="return_flight" id="h-ret" value="">
+        <input type="hidden" name="estimated_total" id="h-tot" value="">
+
+        <div class="grid2">
+          <div class="field"><label for="f-name">Name</label><input type="text" id="f-name" name="name" required autocomplete="name"></div>
+          <div class="field"><label for="f-email">Email</label><input type="email" id="f-email" name="email" required autocomplete="email"></div>
+        </div>
+        <div class="grid2">
+          <div class="field"><label for="f-phone">Phone (optional)</label><input type="tel" id="f-phone" name="phone" autocomplete="tel"></div>
+          <div class="field"><label for="f-option">Fare tier I'm interested in</label>
+            <select id="f-option" name="option_interest">
+              <option value="Basic">Basic</option>
+              <option value="Choice" selected>Choice</option>
+              <option value="Choice Preferred">Choice Preferred</option>
+              <option value="Choice Extra">Choice Extra</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label for="f-ins">Travel insurance</label>
+          <select id="f-ins" name="travel_insurance">
+            <option value="Yes — I'd like a quote">Yes — I'd like a quote</option>
+            <option value="No — not interested">No — not interested</option>
+            <option value="Already have coverage">Already have coverage</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-msg">Message or questions (optional)</label><textarea id="f-msg" name="message" placeholder="Anything about timing, bags, or seats we should know?"></textarea></div>
+        <button type="submit" class="btn" id="submit-btn">Send to Christina</button>
+      </form>
+    </div>
+
+    <div id="thank-you">
+      <h3>Got it — thank you.</h3>
+      <p style="margin:0">Christina will confirm current fares and availability and get back to you shortly.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STICKY BAR -->
+<div class="sticky">
+  <div class="in">
+    <div class="txt" id="sticky-text"></div>
+    <div class="amt" id="sticky-total"></div>
+    <a class="btn" href="#respond">Send my picks</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="rule"></div>
+  <div class="name">Christina Garcia</div>
+  <div>Travel Advisor</div>
+  <div style="margin-top:8px"><a id="adv-email" href="#">Email Christina</a> · <a href="tel:+12812290862">281-229-0862</a></div>
+  <div class="agency">Point Me to Paradise Travel</div>
+</footer>
+
+<script>
+(function(){
+  var TIERS=['Basic','Choice','Choice Preferred','Choice Extra'];
+  var OUT=[
+    {n:'2078',dep:'6:05 AM',arr:'9:20 AM',dur:'2h 15m',p:[125,169,240,289],tag:'Fastest'},
+    {n:'578', dep:'7:35 AM',arr:'10:50 AM',dur:'2h 15m',p:[125,169,240,289],tag:'Fastest'},
+    {n:'4685',dep:'10:55 AM',arr:'2:15 PM',dur:'2h 20m',p:[198,238,308,353],tag:''},
+    {n:'2612',dep:'12:45 PM',arr:'4:00 PM',dur:'2h 15m',p:[125,169,240,289],tag:'Fastest'},
+    {n:'1079',dep:'3:00 PM',arr:'6:15 PM',dur:'2h 15m',p:[125,169,240,289],tag:'Fastest'},
+    {n:'2083',dep:'6:30 PM',arr:'9:55 PM',dur:'2h 25m',p:[125,169,240,289],tag:''}
+  ];
+  var RET=[
+    {n:'2772',dep:'6:05 AM',arr:'7:50 AM',dur:'2h 45m',p:[125,169,240,289],tag:''},
+    {n:'4532',dep:'9:25 AM',arr:'11:00 AM',dur:'2h 35m',p:[125,169,240,289],tag:'Fastest'},
+    {n:'4338',dep:'1:55 PM',arr:'3:30 PM',dur:'2h 35m',p:[125,169,241,289],tag:'Fastest'},
+    {n:'4745',dep:'6:00 PM',arr:'7:35 PM',dur:'2h 35m',p:[198,238,308,353],tag:'Fastest'},
+    {n:'2781',dep:'7:45 PM',arr:'9:25 PM',dur:'2h 40m',p:[125,169,240,289],tag:''}
+  ];
+  var state={tier:1,out:1,ret:2};
+
+  function money(n){return '$'+n.toLocaleString('en-US');}
+
+  function card(f,i,leg){
+    return '<div class="flight'+((leg==='out'?state.out:state.ret)===i?' on':'')+'" data-leg="'+leg+'" data-i="'+i+'" role="button" tabindex="0">'+
+      '<div><div class="times">'+f.dep+'<span class="arrow">→</span>'+f.arr+'</div>'+
+      '<div class="meta"><span>Flight '+f.n+'</span><span>'+f.dur+'</span><span>Nonstop</span>'+(f.tag?'<span class="tag">'+f.tag+'</span>':'')+'</div></div>'+
+      '<div class="price"><div class="amt">'+money(f.p[state.tier])+'</div><div class="per">per person · '+TIERS[state.tier]+'</div></div>'+
+      '<span class="check" aria-hidden="true"></span></div>';
+  }
+
+  function render(){
+    document.getElementById('out-list').innerHTML=OUT.map(function(f,i){return card(f,i,'out');}).join('');
+    document.getElementById('ret-list').innerHTML=RET.map(function(f,i){return card(f,i,'ret');}).join('');
+    var tiers=document.querySelectorAll('#tiers .tier');
+    for(var t=0;t<tiers.length;t++){tiers[t].classList.toggle('on',+tiers[t].getAttribute('data-tier')===state.tier);}
+    document.getElementById('tier-warn').classList.toggle('show',state.tier===0);
+
+    var o=OUT[state.out],r=RET[state.ret];
+    var total=o.p[state.tier]+r.p[state.tier];
+    var outTxt='Oct 28 · HOU '+o.dep+' → MCO '+o.arr+' (Flight '+o.n+')';
+    var retTxt='Nov 3 · MCO '+r.dep+' → HOU '+r.arr+' (Flight '+r.n+')';
+    document.getElementById('sel-text').innerHTML='<strong>'+TIERS[state.tier]+'</strong><br>'+outTxt+' — '+money(o.p[state.tier])+'<br>'+retTxt+' — '+money(r.p[state.tier]);
+    document.getElementById('sel-total').textContent='Est. '+money(total*2);document.getElementById('sel-pp').textContent=money(total);
+    document.getElementById('sticky-text').innerHTML='<b>'+TIERS[state.tier]+'</b> · Out '+o.dep+' · Back '+r.dep+' · 2 adults';
+    document.getElementById('sticky-total').textContent='Est. '+money(total*2);
+    document.getElementById('h-out').value=outTxt+' — '+money(o.p[state.tier]);
+    document.getElementById('h-ret').value=retTxt+' — '+money(r.p[state.tier]);
+    document.getElementById('h-tot').value='Est. '+money(total*2)+' for 2 adults ('+money(total)+' per person), '+TIERS[state.tier];
+    document.getElementById('f-option').value=TIERS[state.tier];
+  }
+
+  function pick(el){
+    var leg=el.getAttribute('data-leg'),i=+el.getAttribute('data-i');
+    if(leg==='out')state.out=i;else state.ret=i;
+    render();
+  }
+  document.getElementById('options').addEventListener('click',function(e){
+    var f=e.target.closest('.flight');if(f){pick(f);return;}
+    var t=e.target.closest('.tier');if(t){state.tier=+t.getAttribute('data-tier');render();}
+  });
+  document.getElementById('options').addEventListener('keydown',function(e){
+    if(e.key!=='Enter'&&e.key!==' ')return;
+    var f=e.target.closest('.flight');if(f){e.preventDefault();pick(f);}
+  });
+  document.getElementById('f-option').addEventListener('change',function(){
+    var i=TIERS.indexOf(this.value);if(i>-1){state.tier=i;render();}
+  });
+  render();
+
+  // advisor email, assembled at runtime
+  var em='christina'+'\u0040'+'pointmetoparadise.com';
+  var a=document.getElementById('adv-email');a.href='mailto:'+em;a.textContent=em;
+
+  document.getElementById('pmtp-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = document.getElementById('submit-btn');
+    var err = document.getElementById('form-error');
+    btn.disabled = true; btn.textContent = 'Sending…'; err.style.display = 'none';
+    fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(e.target) })
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        if (data.success) {
+          document.getElementById('form-container').style.display = 'none';
+          document.getElementById('thank-you').style.display = 'block';
+        } else {
+          btn.disabled = false; btn.textContent = 'Send to Christina'; err.style.display = 'block';
+          err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      })
+      .catch(function() {
+        btn.disabled = false; btn.textContent = 'Send to Christina'; err.style.display = 'block';
+        err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+  });
+})();
+</script>
+</body>
+</html>
