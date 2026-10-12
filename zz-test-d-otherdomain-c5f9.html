@@ -1,0 +1,52 @@
+<!doctype html><html><head>
+<meta name="googlebot" content="noindex, nofollow, noarchive, noimageindex">
+<meta name="bingbot" content="noindex, nofollow, noarchive, noimageindex"><meta charset="utf-8">
+<title>Test D - different domain</title>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Point Me to Paradise Travel">
+<meta property="og:title" content="Test D - different domain">
+<meta property="og:description" content="Preview test page. Safe to delete.">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://images.pexels.com/photos/13650602/pexels-photo-13650602.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940">
+<meta name="twitter:image" content="https://images.pexels.com/photos/13650602/pexels-photo-13650602.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940">
+</head><body style="font-family:Georgia,serif;padding:40px">
+<h1>Test D - different domain</h1><p>Temporary test page. Safe to delete.</p>
+<script id="pmtp-quote-beacon">
+(function(){
+  var C = {"url":"https://pmtp.eliteparadiseplanners.com/api/quote-response","agent":"christina","file":"zz-test-d-otherdomain-c5f9.html"};
+  function send(obj){
+    try{
+      if(!obj || typeof obj !== 'object') return;
+      var body = JSON.stringify({ agent:C.agent, file:C.file, payload:obj, kind:'approval' });
+      if(body.length > 20000) return;
+      fetch(C.url, { method:'POST', headers:{'Content-Type':'application/json'}, body:body, keepalive:true, mode:'cors' }).catch(function(){});
+    }catch(e){}
+  }
+  // 1. the page fetches Web3Forms
+  var _fetch = window.fetch;
+  if (typeof _fetch === 'function'){
+    window.fetch = function(input, init){
+      try{
+        var u = (typeof input === 'string') ? input : (input && input.url) || '';
+        if (u.indexOf('web3forms.com') > -1 && init && init.body){
+          var b = init.body;
+          if (typeof b === 'string'){ try{ send(JSON.parse(b)); }catch(e){} }
+          else if (typeof FormData !== 'undefined' && b instanceof FormData){
+            var o = {}; b.forEach(function(v,k){ if(typeof v === 'string') o[k]=v; }); send(o);
+          }
+        }
+      }catch(e){}
+      return _fetch.apply(this, arguments);
+    };
+  }
+  // 2. the page submits a real form straight to Web3Forms
+  document.addEventListener('submit', function(ev){
+    try{
+      var f = ev.target;
+      if(!f || String(f.action||'').indexOf('web3forms.com') < 0) return;
+      var o = {}; new FormData(f).forEach(function(v,k){ if(typeof v === 'string') o[k]=v; }); send(o);
+    }catch(e){}
+  }, true);
+})();
+</script>
+</body></html>
