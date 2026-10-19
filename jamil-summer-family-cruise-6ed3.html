@@ -314,14 +314,14 @@ footer .advisor p { margin: 0 0 4px; }
 
     <div class="selector">
       <div class="sel-group"><span class="lbl">Guests in your stateroom</span>
-        <div class="seg" data-sel="guests-a"><button type="button" data-v="2" class="on">2</button><button type="button" data-v="3">3</button><button type="button" data-v="4">4</button></div>
+        <div class="seg" data-sel="guests-a"><button type="button" data-v="1">1</button><button type="button" data-v="2" class="on">2</button><button type="button" data-v="3">3</button><button type="button" data-v="4">4</button></div>
       </div>
       <div class="sel-group"><span class="lbl">Rate</span>
         <div class="seg" data-sel="pkg-a"><button type="button" data-v="fare" class="on">Fare only</button><button type="button" data-v="pkg">With drinks &amp; Wi-Fi</button></div>
       </div>
     </div>
     <div class="rooms" id="rooms-a"></div>
-    <p class="small"><strong>Ages used for these rates:</strong> 3-guest prices assume 1 adult and 2 children ages 12 and up; 4-guest prices assume 2 adults and 2 children ages 3 and 6. Adults pay more than children, so a room with a different mix of ages will price differently — your advisor will re-quote it. Prices are the total for the stateroom at the number of guests selected, with port fees and taxes included. Where a stateroom shows "not quoted," MSC did not price it at that occupancy — your advisor can check. Photos are representative; size, layout and furnishings vary within a category. Bed configurations are requestable, not guaranteed.</p>
+    <p class="small"><strong>Ages used for these rates:</strong> 1-guest prices are for one adult traveling alone in the stateroom; 3-guest prices assume 1 adult and 2 children ages 12 and up; 4-guest prices assume 2 adults and 2 children ages 3 and 6. Adults pay more than children, so a room with a different mix of ages will price differently — your advisor will re-quote it. Prices are the total for the stateroom at the number of guests selected, with port fees and taxes included. Where a stateroom shows "not quoted," MSC did not price it at that occupancy — your advisor can check. Photos are representative; size, layout and furnishings vary within a category. Bed configurations are requestable, not guaranteed.</p>
     <div class="notice"><strong>On pricing.</strong> We check every component against public rates and meet or beat them. You're not paying a premium for our convenience — you're paying for the rest of what we do.</div>
     <p class="fineprint">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor.</p>
   </div>
@@ -430,16 +430,16 @@ footer .advisor p { margin: 0 0 4px; }
 
   // Sailing A — each room has fare-only and package pricing, keyed by guests
   var A = [
-    { name:'Interior', tier:'Bella', img:IMG.interior, decks:'Decks 5–15, location assigned by MSC', size:'151–301 sq. ft.', desc:D.interior, fare:{2:1515.58}, pkg:{2:2143.58} },
-    { name:'Deluxe Interior', tier:'Fantastica', img:IMG.interior, decks:'Decks 5–10', size:'151 sq. ft.', desc:D.interior, fare:{2:1615.58}, pkg:{2:2243.58} },
-    { name:'Deluxe Interior', tier:'Fantastica', img:IMG.interior, decks:'Decks 11–15', size:'151–172 sq. ft.', desc:D.interior, fare:{2:1635.58,3:1976.37,4:2317.16}, pkg:{2:2263.58,3:2677.37,4:3091.16} },
-    { name:'Ocean View', tier:'Bella', img:IMG.ocean, decks:'Deck 5, location assigned by MSC', size:'183 sq. ft.', desc:D.ocean, fare:{2:1895.58}, pkg:{2:2523.58} },
-    { name:'Deluxe Ocean View', tier:'Fantastica', img:IMG.ocean, decks:'Deck 5', size:'183 sq. ft.', desc:D.ocean, fare:{2:1895.58,3:2276.37,4:2657.16}, pkg:{2:2523.58,3:2977.37,4:3431.16}, pkgnote:'Ask your advisor to confirm the drinks & Wi-Fi package is included at this rate.' },
-    { name:'Balcony', tier:'Bella', img:IMG.balcony, decks:'Location assigned by MSC', size:'172–183 sq. ft. + 54–97 sq. ft. balcony', desc:D.balcony, note:'Balcony at the ocean-view rate', fare:{2:1895.58}, pkg:{2:2523.58} },
-    { name:'Deluxe Balcony', tier:'Fantastica', img:IMG.balcony, decks:'Deck range confirmed by your advisor', size:'172–183 sq. ft. + 54–65 sq. ft. balcony', desc:D.balcony, note:'Balcony at the ocean-view rate', fare:{2:2015.58,3:2456.37,4:2897.16}, pkg:{2:2643.58,3:3157.37,4:3671.16} },
-    { name:'Deluxe Balcony', tier:'Fantastica', img:IMG.balcony, decks:'Decks 11–12', size:'172–183 sq. ft. + 54–65 sq. ft. balcony', desc:D.balcony, note:'Balcony at the ocean-view rate', fare:{2:2055.58,3:2506.37,4:2957.16}, pkg:{2:2683.58,3:3207.37,4:3731.16}, pkgbasis:{4:'Basis for 4 guests to be confirmed by your advisor'} },
-    { name:'Deluxe Balcony', tier:'Aurea', img:IMG.balcony, decks:'Decks 9–15', size:'183 sq. ft. + 54–97 sq. ft. balcony', desc:D.balcony, note:'Balcony at the ocean-view rate', fare:{2:2455.58,3:2986.37,4:3517.16}, pkg:{2:3083.58,3:3687.37,4:4291.16} },
-    { name:'Premium Balcony', tier:'Aurea', img:IMG.suite, decks:'Deck 9', size:'183 sq. ft. + 172 sq. ft. balcony', desc:D.premium, note:'Balcony at the ocean-view rate · drinks & Wi-Fi package rate only', fare:{}, pkg:{2:3423.58,3:4097.37,4:4771.16} }
+    { name:'Interior', tier:'Bella', img:IMG.interior, decks:'Decks 5–15, location assigned by MSC', size:'151–301 sq. ft.', desc:D.interior, fare:{1:1318.79,2:1515.58}, pkg:{1:1946.79,2:2143.58} },
+    { name:'Deluxe Interior', tier:'Fantastica', img:IMG.interior, decks:'Decks 5–10', size:'151 sq. ft.', desc:D.interior, fare:{1:1418.79,2:1615.58}, pkg:{1:2046.79,2:2243.58} },
+    { name:'Deluxe Interior', tier:'Fantastica', img:IMG.interior, decks:'Decks 11–15', size:'151–172 sq. ft.', desc:D.interior, fare:{1:1438.79,2:1635.58,3:1976.37,4:2317.16}, pkg:{1:2066.79,2:2263.58,3:2677.37,4:3091.16} },
+    { name:'Ocean View', tier:'Bella', img:IMG.ocean, decks:'Deck 5, location assigned by MSC', size:'183 sq. ft.', desc:D.ocean, fare:{1:1698.79,2:1895.58}, pkg:{1:2326.79,2:2523.58} },
+    { name:'Deluxe Ocean View', tier:'Fantastica', img:IMG.ocean, decks:'Deck 5', size:'183 sq. ft.', desc:D.ocean, fare:{1:1698.79,2:1895.58,3:2276.37,4:2657.16}, pkg:{1:2326.79,2:2523.58,3:2977.37,4:3431.16}, pkgnote:'Ask your advisor to confirm the drinks & Wi-Fi package is included at this rate.' },
+    { name:'Balcony', tier:'Bella', img:IMG.balcony, decks:'Location assigned by MSC', size:'172–183 sq. ft. + 54–97 sq. ft. balcony', desc:D.balcony, note:'Balcony at the ocean-view rate', fare:{1:1698.79,2:1895.58}, pkg:{1:2326.79,2:2523.58} },
+    { name:'Deluxe Balcony', tier:'Fantastica', img:IMG.balcony, decks:'Deck range confirmed by your advisor', size:'172–183 sq. ft. + 54–65 sq. ft. balcony', desc:D.balcony, note:'Balcony at the ocean-view rate', fare:{1:1818.79,2:2015.58,3:2456.37,4:2897.16}, pkg:{1:2446.79,2:2643.58,3:3157.37,4:3671.16} },
+    { name:'Deluxe Balcony', tier:'Fantastica', img:IMG.balcony, decks:'Decks 11–12', size:'172–183 sq. ft. + 54–65 sq. ft. balcony', desc:D.balcony, note:'Balcony at the ocean-view rate', fare:{1:1858.79,2:2055.58,3:2506.37,4:2957.16}, pkg:{1:2486.79,2:2683.58,3:3207.37,4:3731.16}, pkgbasis:{4:'Basis for 4 guests to be confirmed by your advisor'} },
+    { name:'Deluxe Balcony', tier:'Aurea', img:IMG.balcony, decks:'Decks 9–15', size:'183 sq. ft. + 54–97 sq. ft. balcony', desc:D.balcony, note:'Balcony at the ocean-view rate', fare:{1:2558.79,2:2455.58,3:2986.37,4:3517.16}, pkg:{1:2886.79,2:3083.58,3:3687.37,4:4291.16} },
+    { name:'Premium Balcony', tier:'Aurea', img:IMG.suite, decks:'Deck 9', size:'183 sq. ft. + 172 sq. ft. balcony', desc:D.premium, note:'Balcony at the ocean-view rate · drinks & Wi-Fi package rate only', fare:{}, pkg:{1:3226.79,2:3423.58,3:4097.37,4:4771.16} }
   ];
 
   // Sailing B
@@ -474,9 +474,9 @@ footer .advisor p { margin: 0 0 4px; }
       var note = r.note ? '<div class="note">'+esc(r.note)+'</div>' : '';
       if (state.pkg === 'pkg' && r.pkgnote) note += '<div class="note">'+esc(r.pkgnote)+'</div>';
       var pb;
-      var who = state.ga===3 ? ' (1 adult + 2 kids 12+)' : state.ga===4 ? ' (2 adults + 2 kids ages 3 & 6)' : '';
-      if (p === undefined) pb = '<span class="amt na">Not quoted for '+state.ga+' guests — ask your advisor</span>';
-      else pb = '<span class="amt">'+money(p)+'</span><span class="basis">'+(basis ? esc(basis) : 'total for '+state.ga+' guests'+who+(state.pkg==='pkg' ? ' · drinks &amp; Wi-Fi included' : ''))+'</span>';
+      var who = state.ga===3 ? ' (1 adult + 2 kids 12+)' : state.ga===4 ? ' (2 adults + 2 kids ages 3 & 6)' : state.ga===1 ? ' (solo traveler, whole stateroom)' : '';
+      if (p === undefined) pb = '<span class="amt na">Not quoted for '+state.ga+(state.ga===1?' guest':' guests')+' — ask your advisor</span>';
+      else pb = '<span class="amt">'+money(p)+'</span><span class="basis">'+(basis ? esc(basis) : 'total for '+state.ga+(state.ga===1?' guest':' guests')+who+(state.pkg==='pkg' ? ' · drinks &amp; Wi-Fi included' : ''))+'</span>';
       out += '<article class="room'+(p===undefined?' dim':'')+'">'
         + '<div class="img" style="background-image:url(\''+r.img+'\')"><span class="tier">'+esc(r.tier)+'</span></div>'
         + '<div class="body"><h4>'+esc(r.name)+'</h4>'
