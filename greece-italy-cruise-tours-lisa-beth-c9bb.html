@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="googlebot" content="noindex, nofollow, noarchive, noimageindex">
+<meta name="bingbot" content="noindex, nofollow, noarchive, noimageindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Greece to Italy Cruise Tours</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  /* Layout: single column magazine page — hero, overview band, port sections with tour cards, form, footer. Light-only by brand rule. */
+  :root {
+    --aqua-pale:    #C4E4E1;
+    --aqua-mist:    #EAF3F2;
+    --aqua:         #75AFB1;
+    --aqua-dark:    #4F8A8C;
+    --sand:         #ECE7DC;
+    --sand-light:   #F4F1E9;
+    --gold-whisper: #D6C8A8;
+    --white:        #FFFFFF;
+    --paper:        #FBFDFD;
+    --ink:          #2B2420;
+    --ink-soft:     #6B6359;
+    --line:         #E5E9E8;
+    --display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --body: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+    --accent-type: 'Cormorant Garamond', Georgia, serif;
+    color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, h4 { font-family: var(--display); font-weight: 500; line-height: 1.2; margin: 0; text-wrap: balance; }
+  p { margin: 0; }
+  a { color: var(--aqua-dark); }
+  .wrap { max-width: 880px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  .pmtp-wordmark { font-family: var(--display); font-size: 11px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--aqua-dark); }
+  .eyebrow { font-family: var(--body); font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--aqua-dark); }
+  .tagline { font-family: var(--accent-type); font-style: italic; font-size: 1.35rem; color: var(--ink-soft); }
+
+  /* Hero */
+  .pmtp-hero { position: relative; background-size: cover; background-position: center; padding: 78px 32px 60px; text-align: center; background-image: linear-gradient(180deg, rgba(251,253,253,0.92) 0%, rgba(234,243,242,0.86) 55%, rgba(251,253,253,0.98) 100%), url('https://cdn.projectexpedition.com/photos/6745cb181711f_sized.jpg'); }
+  .pmtp-hero .pmtp-wordmark { margin-bottom: 22px; display: block; }
+  .pmtp-hero h1 { font-size: clamp(1.9rem, 5vw, 2.9rem); font-weight: 600; max-width: 22ch; margin: 0 auto 14px; }
+  .pmtp-hero .tagline { max-width: 40ch; margin: 0 auto; }
+  .hero-meta { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 28px; margin-top: 28px; font-size: 0.875rem; color: var(--ink-soft); }
+  .hero-meta b { color: var(--ink); font-weight: 600; }
+
+  /* Bands */
+  .band { padding-block: 56px; }
+  .band-mist { background: var(--aqua-mist); }
+  .band h2 { font-size: clamp(1.5rem, 3.4vw, 2rem); margin-bottom: 10px; }
+  .lede { max-width: 62ch; color: var(--ink-soft); font-size: 1.05rem; }
+  .callout { background: var(--aqua-pale); border-radius: 8px; padding: 20px 24px; font-family: var(--accent-type); font-style: italic; font-size: 1.25rem; line-height: 1.45; color: var(--ink); max-width: 60ch; margin-top: 28px; }
+  .callout.quiet { background: var(--white); border: 1px solid var(--line); font-family: var(--body); font-style: normal; font-size: 0.95rem; color: var(--ink-soft); }
+
+  /* Port section */
+  .port { padding-block: 48px; border-top: 1px solid var(--line); }
+  .port-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 24px; margin-bottom: 24px; }
+  .port-head h2 { font-size: clamp(1.5rem, 3.4vw, 2rem); }
+  .port-head .when { font-family: var(--accent-type); font-style: italic; font-size: 1.15rem; color: var(--ink-soft); }
+  .tours { display: grid; gap: 28px; }
+
+  /* Tour card */
+  .tour { display: grid; grid-template-columns: 1fr; background: var(--white); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  @media (min-width: 720px) { .tour { grid-template-columns: 300px 1fr; } }
+  .tour-photo { background: var(--aqua-mist) center/cover no-repeat; min-height: 220px; max-width: 100%; }
+  .tour-body { padding: 26px 26px 24px; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+  .tour-body h3 { font-size: 1.35rem; font-weight: 600; }
+  .specs { display: flex; flex-wrap: wrap; gap: 6px 10px; margin: 0; padding: 0; list-style: none; font-size: 0.8rem; color: var(--aqua-dark); font-weight: 500; }
+  .specs li { background: var(--aqua-mist); border-radius: 999px; padding: 4px 11px; }
+  .tour-body p.desc { color: var(--ink); max-width: 64ch; }
+  .fine { font-size: 0.85rem; color: var(--ink-soft); max-width: 64ch; }
+  .fine b { color: var(--ink); font-weight: 600; }
+  .tour-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; padding-top: 14px; border-top: 1px solid var(--line); margin-top: 4px; }
+  .price { font-family: var(--display); font-size: 1.45rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .price small { display: block; font-family: var(--body); font-size: 0.78rem; font-weight: 400; color: var(--ink-soft); margin-top: 2px; }
+  .btn { display: inline-block; font-family: var(--body); font-weight: 600; font-size: 0.95rem; background: var(--aqua); color: var(--white); text-decoration: none; padding: 12px 22px; border-radius: 6px; border: 0; cursor: pointer; transition: background 0.15s; }
+  .btn:hover, .btn:focus-visible { background: var(--aqua-dark); outline: none; }
+  .btn:focus-visible { box-shadow: 0 0 0 3px var(--aqua-pale); }
+  .btn.ghost { background: var(--white); color: var(--aqua-dark); border: 1px solid var(--aqua); }
+  .btn.ghost:hover { background: var(--aqua-mist); }
+
+  /* Form */
+  .form-grid { display: grid; gap: 16px; }
+  @media (min-width: 640px) { .form-grid { grid-template-columns: 1fr 1fr; } .form-grid .full { grid-column: 1 / -1; } }
+  label { display: block; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 6px; }
+  input, select, textarea { width: 100%; font-family: var(--body); font-size: 16px; color: var(--ink); background: var(--white); border: 1px solid var(--line); border-radius: 6px; padding: 12px 14px; }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: var(--aqua); box-shadow: 0 0 0 3px var(--aqua-pale); }
+  textarea { min-height: 120px; resize: vertical; }
+  .checks { display: grid; gap: 8px; }
+  @media (min-width: 640px) { .checks { grid-template-columns: 1fr 1fr; } }
+  .check { display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 400; text-transform: none; letter-spacing: 0; color: var(--ink); margin: 0; cursor: pointer; }
+  .check input { width: 18px; height: 18px; padding: 0; margin: 0; accent-color: var(--aqua-dark); flex: none; }
+  .form-card { background: var(--white); border: 1px solid var(--line); border-radius: 10px; padding: 32px; margin-top: 28px; }
+  #thank-you { display: none; background: var(--aqua-pale); border-radius: 10px; padding: 32px; margin-top: 28px; }
+  #thank-you h3 { font-size: 1.4rem; margin-bottom: 8px; }
+  .disclaimer { font-size: 0.8rem; color: var(--ink-soft); margin-top: 18px; }
+
+  /* Footer */
+  footer { background: var(--sand-light); padding-block: 44px; border-top: 1px solid var(--line); }
+  .foot-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px 40px; align-items: flex-start; }
+  .advisor { font-size: 0.95rem; line-height: 1.7; }
+  .advisor .name { font-family: var(--display); font-size: 1.25rem; font-weight: 600; display: block; }
+  .advisor .title { font-family: var(--accent-type); font-style: italic; color: var(--ink-soft); display: block; margin-bottom: 8px; }
+  .advisor a { text-decoration: none; }
+  .foot-brand { text-align: right; }
+  .foot-brand .tagline { font-size: 1.1rem; }
+  @media (max-width: 560px) { .foot-brand { text-align: left; } }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+<style>
+  img{max-width:100%}
+  [hidden]{display:none!important}
+</style>
+</head>
+<body>
+<section class="pmtp-hero">
+  <span class="pmtp-wordmark">Point Me to Paradise Travel</span>
+  <h1>Greece to Italy Mediterranean Cruise — Tours for the Ladies</h1>
+  <p class="tagline">Athens to Rome by way of the Greek islands and the Adriatic — curated days ashore, chosen for your group and ready to hold.</p>
+  <div class="hero-meta">
+    <span><b>Prepared for</b> Lisa &amp; Beth</span>
+    <span><b>Advisor</b> Christina Garcia</span>
+    <span><b>Updated</b> October 19, 2026</span>
+  </div>
+</section>
+
+<section class="band band-mist">
+  <div class="wrap">
+    <p class="eyebrow">How to read this page</p>
+    <h2>One page, every port, nothing to chase down.</h2>
+    <p class="lede">Each tour below is private to your group unless marked otherwise, includes port pickup, and carries a cruise-friendly refund policy and back-to-ship guarantee. Tap any card to read the full itinerary and photos. When you've decided, send your picks through the form at the bottom and Christina holds them.</p>
+    <div class="callout">We don't book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. The work you'd hate doing — already done.</div>
+  </div>
+</section>
+
+<!-- ===================== ATHENS / PIRAEUS ===================== -->
+<section class="port" id="athens">
+  <div class="wrap">
+    <div class="port-head">
+      <h2>Athens · Piraeus</h2>
+      <span class="when">Day in port to be confirmed</span>
+    </div>
+    <div class="tours">
+
+      <article class="tour">
+        <div class="tour-photo" style="background-image:url('https://cdn.projectexpedition.com/photos/336054touractivity95a98cba36c94848befea36c5069ed4f_sized.jpg')" role="img" aria-label="Looking up at the columns of the Academy of Athens"></div>
+        <div class="tour-body">
+          <h3>Half-Day Private Athens City Tour — Skip the Line at the Acropolis</h3>
+          <ul class="specs">
+            <li>Private · your group only</li>
+            <li>4 hours · starts 7:30 a.m.–12:30 p.m.</li>
+            <li>Pickup at the port</li>
+            <li>Acropolis skip-the-line</li>
+            <li>Cruise-friendly refund</li>
+          </ul>
+          <p class="desc">Athens in half a day, built around the one thing that can't be skipped. Your driver collects you at the port and the Acropolis comes first, early, with skip-the-line entry so you're on the rock while the coach groups are still queuing below. Then the drive-by circuit of the center with stops where you want them: the Temple of Zeus and Hadrian's Arch, the Panathenaic Stadium where the first modern Olympics were run on white marble, the changing of the Evzones at the Tomb of the Unknown Soldier, the Academy on Panepistimiou. It finishes in the Plaka and Monastiraki, the old quarter below the Acropolis, with time for a coffee or a wander before you're back at the ship. Tailor-made: your driver adjusts the route to what you want to see.</p>
+          <p class="fine"><b>Not included:</b> Acropolis entry, paid on site. Comfortable shoes for the climb; the path is marble and worn smooth.</p>
+          <p class="fine"><b>Cancellation:</b> full refund up to 1 day before.</p>
+          <div class="tour-foot">
+            <div class="price">Est. $1,042<small>total for both of you · private vehicle &amp; guide</small></div>
+            <a class="btn ghost" href="https://pe.tours/MTUwNjA3OQ==/" target="_blank" rel="noopener">Full itinerary &amp; photos</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="tour">
+        <div class="tour-photo" style="background-image:url('https://cdn.projectexpedition.com/photos/6745cb181711f_sized.jpg')" role="img" aria-label="Temple of Poseidon at Cape Sounion at sunset"></div>
+        <div class="tour-body">
+          <h3>Private Sunset at Cape Sounion &amp; the Athens Riviera</h3>
+          <ul class="specs">
+            <li>Private · your group only</li>
+            <li>5½ hours</li>
+            <li>Pickup at the port</li>
+            <li>Easy walking</li>
+          </ul>
+          <p class="desc">The road south from Piraeus runs along the Saronic coast past Glyfada, Vouliagmeni, and Varkiza before it ends at the cliff where the Temple of Poseidon has stood since 440 BC. You arrive with light to spare, walk the marble columns, then watch the sun go down behind them. On the way back your driver stops at a waterfront taverna for grilled fish and a glass of something cold. Private first-class vehicle for the two of you, Wi‑Fi and bottled water on board, English-speaking driver who knows the history.</p>
+          <p class="fine"><b>Timing:</b> October pickup is around 5:00 p.m., so the evening runs to roughly 10:30 p.m. A morning version (quieter temple, seaside lunch instead of dinner) is available if the ship sails that evening.</p>
+          <p class="fine"><b>Not included:</b> €20 per person temple entry, paid on site · dinner and drinks · gratuities. Shoulders covered at the temple — nothing sleeveless.</p>
+          <p class="fine"><b>Cancellation:</b> full refund up to 1 day before.</p>
+          <div class="tour-foot">
+            <div class="price">Est. $438<small>total for both of you · private vehicle</small></div>
+            <a class="btn ghost" href="https://pe.tours/MTQ5NTQ2MQ==/" target="_blank" rel="noopener">Full itinerary &amp; photos</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SANTORINI ===================== -->
+<section class="port" id="santorini">
+  <div class="wrap">
+    <div class="port-head">
+      <h2>Santorini · Fira</h2>
+      <span class="when">Sunday, November 1, 2026</span>
+    </div>
+    <div class="tours">
+
+      <article class="tour">
+        <div class="tour-photo" style="background-image:url('https://cdn.projectexpedition.com/photos/679cc31c224a1_sized.jpg')" role="img" aria-label="Blue-domed church and bougainvillea above the Santorini caldera"></div>
+        <div class="tour-body">
+          <h3>Private Highlights of Santorini — Skip the Line</h3>
+          <ul class="specs">
+            <li>Private · your group only</li>
+            <li>5 hours</li>
+            <li>Limited-mobility friendly</li>
+            <li>Cruise-friendly refund</li>
+          </ul>
+          <p class="desc">Santorini on a ship day is a timing problem: tender lines, a cable car queue, and thousands of other passengers heading the same direction at the same hour. This tour solves it with your own vehicle and skip-the-line access, so the day is spent looking rather than waiting. You start at Akrotiri, the Bronze Age town buried under ash 3,600 years ago and excavated with its frescoes and two-story houses intact. Then up to Profitis Ilias, the island's high point, for the whole caldera in one view; the Three Bells of Fira for the photograph everyone wants; and a glass of Assyrtiko at a winery before the drop back in Fira. Morning starts from 8:00 to 11:00 a.m., set to the tender schedule.</p>
+          <p class="fine"><b>Good for:</b> the whole group, including anyone who'd rather not do stairs. Wheelchair-friendly with limited mobility.</p>
+          <p class="fine"><b>Cancellation:</b> full refund up to 1 day before.</p>
+          <div class="tour-foot">
+            <div class="price">Est. $347<small>total for both of you · private vehicle</small></div>
+            <a class="btn ghost" href="https://pe.tours/MTQ5NTQ1Ng==/" target="_blank" rel="noopener">Full itinerary &amp; photos</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CHANIA / CRETE ===================== -->
+<section class="port" id="chania">
+  <div class="wrap">
+    <div class="port-head">
+      <h2>Chania · Crete</h2>
+      <span class="when">Monday, November 2, 2026</span>
+    </div>
+    <div class="tours">
+
+      <article class="tour">
+        <div class="tour-photo" style="background-image:url('https://cdn.projectexpedition.com/photos/69a8500c471b1_sized.jpg')" role="img" aria-label="Fishing boats in the Venetian harbor of Chania, Crete"></div>
+        <div class="tour-body">
+          <h3>Cruise-Friendly Chania Tour</h3>
+          <ul class="specs">
+            <li>Group tour</li>
+            <li>5 hours</li>
+            <li>Built around ship hours</li>
+            <li>Cruise-friendly refund</li>
+          </ul>
+          <p class="desc">Ships dock at Souda Bay, 20 minutes from the town, which is the first thing this tour handles for you. The day runs in three parts. An ancient site first, then Agia Triada, a working 17th-century monastery in the olive groves of the Akrotiri peninsula where the monks still press their own oil and pour their own wine. Then Chania itself: a Venetian harbor with a lighthouse at the end of the mole, a domed Ottoman mosque on the quay, and lanes behind it full of leather workshops, knife makers, and the covered Agora market. Guided through all of it, with time on your own at the harbor before the drive back. Starts from 8:30 a.m. to noon, timed to the ship.</p>
+          <p class="fine"><b>Good for:</b> an easy, well-paced town day with a long harbor lunch and no stress about all-aboard.</p>
+          <p class="fine"><b>Cancellation:</b> full refund up to 1 day before.</p>
+          <div class="tour-foot">
+            <div class="price">Est. $137<small>per person · group tour</small></div>
+            <a class="btn ghost" href="https://pe.tours/MTQ5Njk2MQ==/" target="_blank" rel="noopener">Full itinerary &amp; photos</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== KATAKOLON / OLYMPIA ===================== -->
+<section class="port" id="katakolon">
+  <div class="wrap">
+    <div class="port-head">
+      <h2>Katakolon · Olympia</h2>
+      <span class="when">Tuesday, November 3, 2026</span>
+    </div>
+    <div class="tours">
+
+      <article class="tour">
+        <div class="tour-photo" style="background-image:url('https://cdn.projectexpedition.com/photos/65057134beb1d_sized.jpg')" role="img" aria-label="Columns among the ruins of ancient Olympia"></div>
+        <div class="tour-body">
+          <h3>Olympia Boutique Expedition: Heritage, Wine &amp; Olive Oil Tasting</h3>
+          <ul class="specs">
+            <li>Small group</li>
+            <li>5½ hours</li>
+            <li>Pickup at the port</li>
+            <li>Wine &amp; olive oil tastings</li>
+            <li>Cruise-friendly refund</li>
+          </ul>
+          <p class="desc">Katakolon exists as a port for one reason: Olympia is 40 minutes inland. The site is a pine-shaded valley where the Games were held for a thousand years, and you walk it at your own pace, past the gymnasium, the Temple of Zeus, and onto the original stadium track where the starting line is still set in stone. The museum next door holds the Hermes of Praxiteles. Then the day turns toward what the region does now: a stop at a family estate for wine from local grapes and olive oil pressed on the property, with a table of what goes with them. Back to the ship with the afternoon in hand.</p>
+          <p class="fine"><b>Walking:</b> the site is flat but exposed and large; allow a hat and water. Timed to the ship.</p>
+          <p class="fine"><b>Cancellation:</b> full refund up to 2 days before.</p>
+          <div class="tour-foot">
+            <div class="price">Est. $228<small>per person · small group</small></div>
+            <a class="btn ghost" href="https://pe.tours/MTUwNzc2OQ==/" target="_blank" rel="noopener">Full itinerary &amp; photos</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CORFU ===================== -->
+<section class="port" id="corfu">
+  <div class="wrap">
+    <div class="port-head">
+      <h2>Corfu</h2>
+      <span class="when">Wednesday, November 4, 2026</span>
+    </div>
+    <div class="tours">
+
+      <article class="tour">
+        <div class="tour-photo" style="background-image:url('https://cdn.projectexpedition.com/photos/673dea0d18a54_sized.jpg')" role="img" aria-label="Palaiokastritsa bay on Corfu's west coast"></div>
+        <div class="tour-body">
+          <h3>Private Half Day: Angelokastro, Lakones &amp; Palaiokastritsa</h3>
+          <ul class="specs">
+            <li>Private · your group only</li>
+            <li>5 hours · 9:00 a.m. start</li>
+            <li>Pickup at the port</li>
+            <li>Cruise-friendly refund</li>
+          </ul>
+          <p class="desc">The west coast of Corfu is where the island stops being a resort and starts being Greek. The drive climbs through olive groves to Angelokastro, a 13th-century Byzantine fortress on a sea cliff roughly 300 meters up, with views back along the coast that explain why it was never taken. Lakones, the village below, has the terrace everyone photographs Palaiokastritsa from. Then you drop to the water itself: the monastery on the headland, six small coves, and if you want it, a short boat ride into the sea caves. Back at the ship with time to spare.</p>
+          <p class="fine"><b>Walking:</b> Angelokastro is a steep 10–15 minute climb on uneven steps. Good shoes; the view is the reward.</p>
+          <p class="fine"><b>Cancellation:</b> full refund up to 3 days before.</p>
+          <div class="tour-foot">
+            <div class="price">Est. $417<small>total for both of you · private vehicle</small></div>
+            <a class="btn ghost" href="https://pe.tours/MTQ5NTQ2NA==/" target="_blank" rel="noopener">Full itinerary &amp; photos</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SPLIT ===================== -->
+<section class="port" id="split">
+  <div class="wrap">
+    <div class="port-head">
+      <h2>Split</h2>
+      <span class="when">Thursday, November 5, 2026</span>
+    </div>
+    <div class="tours">
+
+      <article class="tour">
+        <div class="tour-photo" style="background-image:url('https://cdn.projectexpedition.com/photos/375032touractivityb7f27618a0054e13b078a06763b984cd_sized.jpg')" role="img" aria-label="Wine and lunch on a vineyard terrace above the sea near Split"></div>
+        <div class="tour-body">
+          <h3>Private Split &amp; Trogir: Wine Tasting &amp; Vineyard with Sea View</h3>
+          <ul class="specs">
+            <li>Private · your group only</li>
+            <li>5 hours</li>
+            <li>Pickup at the port</li>
+            <li>Cruise-friendly refund</li>
+          </ul>
+          <p class="desc">Split's old town is a Roman emperor's retirement palace that the city grew into: Diocletian's cellars, the peristyle where the cathedral was built from his mausoleum, and apartments and cafés tucked into walls that are 1,700 years old. Your guide walks you through it before the tour buses arrive. Then it's 30 minutes up the coast to Trogir, a small island town of Venetian stone with one of the best cathedral portals on the Adriatic. The last stop is the one the ladies will talk about: a hillside vineyard at Kaštela with the sea below the terrace, a flight of Dalmatian wines, and a plate of local food to go with them. Back to the ship with time to spare.</p>
+          <p class="fine"><b>Good for:</b> history in the morning, a long glass of wine with a view in the afternoon, and no one else's schedule to follow. Start times from 7:00 a.m. to 5:00 p.m., set to the ship.</p>
+          <p class="fine"><b>Cancellation:</b> full refund up to 1 day before.</p>
+          <div class="tour-foot">
+            <div class="price">Est. $510<small>total for both of you · private vehicle</small></div>
+            <a class="btn ghost" href="https://pe.tours/MTUwMjg1Nw==/" target="_blank" rel="noopener">Full itinerary &amp; photos</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DUBROVNIK ===================== -->
+<section class="port" id="dubrovnik">
+  <div class="wrap">
+    <div class="port-head">
+      <h2>Dubrovnik</h2>
+      <span class="when">Friday, November 6, 2026</span>
+    </div>
+    <div class="tours">
+
+      <article class="tour">
+        <div class="tour-photo" style="background-image:url('https://cdn.projectexpedition.com/photos/696776ad65b58_sized.jpg')" role="img" aria-label="Cavtat harbor from above, south of Dubrovnik"></div>
+        <div class="tour-body">
+          <h3>Private Food &amp; Wine Day: Dubrovnik, Cavtat &amp; Konavle</h3>
+          <ul class="specs">
+            <li>Private · your group only</li>
+            <li>6 hours · 9:00 a.m. start</li>
+            <li>Pickup at the port</li>
+            <li>Food &amp; wine tastings</li>
+            <li>Cruise-friendly refund</li>
+          </ul>
+          <p class="desc">Most ship passengers never leave the old city walls. This day goes the other direction. It opens on Srđ Hill, the ridge above Dubrovnik where the whole walled city sits below you like a model, then follows the Ombla, a short river that rises from a spring and runs straight into the sea. South along the coast is Cavtat, a small harbor town with a palm-lined waterfront and none of Dubrovnik's crowds, walked on foot with your guide. Then inland into the Konavle valley, where family farms still cure their own pršut, press their own olive oil, and pour wine from vines a few steps from the table. Expect a long, unhurried lunch and the kind of hospitality that doesn't appear on a menu.</p>
+          <p class="fine"><b>Good for:</b> the two of you sitting at a table with locals rather than standing in line for the city walls. Come hungry.</p>
+          <p class="fine"><b>Cancellation:</b> full refund up to 7 days before — the firmest policy on this page, so this one is worth deciding early.</p>
+          <div class="tour-foot">
+            <div class="price">Est. $504<small>total for both of you · private vehicle</small></div>
+            <a class="btn ghost" href="https://pe.tours/MTQ5NTQ2OA==/" target="_blank" rel="noopener">Full itinerary &amp; photos</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== KOTOR / MONTENEGRO ===================== -->
+<section class="port" id="kotor">
+  <div class="wrap">
+    <div class="port-head">
+      <h2>Kotor · Montenegro</h2>
+      <span class="when">Saturday, November 7, 2026</span>
+    </div>
+    <div class="tours">
+
+      <article class="tour">
+        <div class="tour-photo" style="background-image:url('https://cdn.projectexpedition.com/photos/5d20a01bd37f8_sized.jpg')" role="img" aria-label="Sunset over Budva and the Montenegrin coast"></div>
+        <div class="tour-body">
+          <h3>Best of Montenegro Private Day Tour from Kotor Port</h3>
+          <ul class="specs">
+            <li>Private · your group only</li>
+            <li>6½ hours</li>
+            <li>Starts 7:00 a.m.–4:00 p.m.</li>
+            <li>Cruise-friendly refund</li>
+          </ul>
+          <p class="desc">The ship sails into the Bay of Kotor at dawn, which is the best view of the day and already paid for. This tour gives you the rest of the country. The road climbs the serpentine above the bay, 25 hairpins with the fjord shrinking below you at every turn, to Cetinje, the old royal capital, and its monastery, where Montenegro's kings were crowned and relics are still kept. Then down to the Adriatic side: the Budva Riviera, a walled old town on a small peninsula, and the stop at Sveti Stefan, the fortified fishing island turned resort that is the photograph on every Montenegro postcard. Back in Kotor with time to wander the medieval walls before all-aboard.</p>
+          <p class="fine"><b>Good for:</b> three very different sides of a small country in one day, with the driving and the timing handled for you.</p>
+          <p class="fine"><b>Cancellation:</b> full refund up to 2 days before.</p>
+          <div class="tour-foot">
+            <div class="price">Est. $489<small>total for both of you · private vehicle</small></div>
+            <a class="btn ghost" href="https://pe.tours/MTQ5Njk2Nw==/" target="_blank" rel="noopener">Full itinerary &amp; photos</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== NAPLES / AMALFI COAST ===================== -->
+<section class="port" id="naples">
+  <div class="wrap">
+    <div class="port-head">
+      <h2>Naples · Amalfi Coast</h2>
+      <span class="when">Monday, November 9, 2026</span>
+    </div>
+    <div class="tours">
+
+      <article class="tour">
+        <div class="tour-photo" style="background-image:url('https://cdn.projectexpedition.com/photos/136834touractivityunnamed12_sized.jpg')" role="img" aria-label="Positano stacked above the sea on the Amalfi Coast"></div>
+        <div class="tour-body">
+          <h3>Small-Group Amalfi Coast Shore Excursion</h3>
+          <ul class="specs">
+            <li>Small group</li>
+            <li>7 hours · 8:30 a.m. start</li>
+            <li>Pickup at the port</li>
+            <li>Fully wheelchair accessible</li>
+            <li>Cruise-friendly refund</li>
+          </ul>
+          <p class="desc">From the Naples pier the van heads south past Vesuvius and over the Sorrento peninsula to the coast road, the one carved into the cliff with the sea a few hundred feet below the guardrail. Sorrento comes first, a town of lemon groves and inlaid-wood workshops above its own small harbor. Then the drive itself, done the way it should be: in a small vehicle that can take the hairpins, with stops at the lookout points. Positano is the long stop, a town stacked vertically above its beach, with free time to walk down through the shops and back up for a lemon granita. A small group means a schedule built around your ship, not a coach timetable.</p>
+          <p class="fine"><b>Walking:</b> Positano is all stairs if you go down to the beach; the main street is manageable and the tour itself is fully accessible.</p>
+          <p class="fine"><b>Cancellation:</b> full refund up to 1 day before.</p>
+          <div class="tour-foot">
+            <div class="price">Est. $133<small>per person · small group</small></div>
+            <a class="btn ghost" href="https://pe.tours/MTQ5Njk2OQ==/" target="_blank" rel="noopener">Full itinerary &amp; photos</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ROME / CIVITAVECCHIA ===================== -->
+<section class="port" id="rome">
+  <div class="wrap">
+    <div class="port-head">
+      <h2>Rome · Civitavecchia</h2>
+      <span class="when">Wednesday, November 11, 2026</span>
+    </div>
+    <p class="lede" style="margin-bottom:24px">Rome is 90 minutes from the pier, so the day is a question of where you want to spend your hours. A few different answers below; pick the one that sounds like you.</p>
+    <div class="tours">
+
+      <article class="tour">
+        <div class="tour-photo" style="background-image:url('https://cdn.projectexpedition.com/photos/64529f0cd7c00_sized.jpg')" role="img" aria-label="Ruins and umbrella pines along the Appian Way"></div>
+        <div class="tour-body">
+          <h3>Rome Catacombs &amp; Appian Way: Private Golf Cart Tour</h3>
+          <ul class="specs">
+            <li>Private · your group only</li>
+            <li>4 hours · 2:00 p.m. start</li>
+            <li>Golf cart · no walking tour</li>
+            <li>Cruise-friendly refund</li>
+          </ul>
+          <p class="desc">Everyone does the Colosseum. Almost no one does what's behind it. This one picks you up in central Rome in an electric golf cart, rolls past the Colosseum, the Forum, the Arch of Constantine, and Circus Maximus for the photographs, then leaves the traffic behind on the Via Appia Antica, the original Roman road, still paved with its basalt blocks and lined with umbrella pines, tombs, and the Aurelian Walls. The stop is the Catacombs, where you go underground with a guide into the tunnels where early Christians buried their dead. An aqueduct on the way back. Four hours, nothing crowded, nothing on foot that you don't choose.</p>
+          <p class="fine"><b>Logistics:</b> pickup is in central Rome, not at the pier. The 90-minute transfer from Civitavecchia and back is arranged separately — Christina will quote it alongside whichever Rome option you choose.</p>
+          <p class="fine"><b>Cancellation:</b> full refund up to 4 days before.</p>
+          <div class="tour-foot">
+            <div class="price">Est. $766<small>total for both of you · private golf cart</small></div>
+            <a class="btn ghost" href="https://pe.tours/MTUwODQwMQ==/" target="_blank" rel="noopener">Full itinerary &amp; photos</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="tour">
+        <div class="tour-photo" style="background-image:url('https://cdn.projectexpedition.com/photos/68a36fa1742f3_sized.jpg')" role="img" aria-label="Walking beneath the Roman aqueducts at Parco degli Acquedotti"></div>
+        <div class="tour-body">
+          <h3>Underground Rome: Catacombs, Aqueducts &amp; Appian Way</h3>
+          <ul class="specs">
+            <li>Small group · max 18</li>
+            <li>3¼ hours · 2:30 p.m. start</li>
+            <li>Private A/C transport</li>
+            <li>Cruise-friendly refund</li>
+          </ul>
+          <p class="desc">The same corner of Rome as the golf cart, on foot and at a lower price. A small group and a guide, a comfortable air-conditioned van between stops, and three places the tour buses skip: the Parco degli Acquedotti, where six Roman aqueducts still march across an open field at full height; the Catacombs, entered at closing time so you have the tunnels nearly to yourselves; and a walk on the Appian Way past the Mausoleum of Cecilia Metella, the cylindrical tomb that has anchored the road for 2,000 years. Easy walking, mostly flat, with time to look rather than hurry.</p>
+          <p class="fine"><b>Logistics:</b> meets in Rome, not at the pier. The 90-minute transfer from Civitavecchia and back is arranged separately — Christina will quote it alongside whichever Rome option you choose.</p>
+          <p class="fine"><b>Cancellation:</b> full refund up to 1 day before.</p>
+          <div class="tour-foot">
+            <div class="price">Est. $83<small>per person · small group</small></div>
+            <a class="btn ghost" href="https://pe.tours/MTUwODQwNA==/" target="_blank" rel="noopener">Full itinerary &amp; photos</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="tour">
+        <div class="tour-photo" style="background-image:url('https://cdn.projectexpedition.com/photos/6819f1ceb2b92_sized.jpg')" role="img" aria-label="Golf cart on the basalt paving of the ancient Appian Way"></div>
+        <div class="tour-body">
+          <h3>Private Golf Cart: Catacombs, Aventine &amp; the Ancient Appian Way</h3>
+          <ul class="specs">
+            <li>Private · your group only</li>
+            <li>2½ hours · 2:00 p.m. start</li>
+            <li>Fully wheelchair accessible</li>
+            <li>Cruise-friendly refund</li>
+          </ul>
+          <p class="desc">The shorter golf cart option, and the one that adds a hill. You start at Circus Maximus with the Palatine palaces above it, climb the Aventine for the Orange Garden, the terrace with the view across the Tiber to St. Peter's dome, and pass the 5th-century church of Santa Sabina and the Pyramid of Cestius, a Roman magistrate's tomb built in the Egyptian style and still standing after 2,000 years. Then out through the Baths of Caracalla and the old city gates onto the Appian Way, with the Catacombs as the underground stop. Two and a half hours seated, every stop a view.</p>
+          <p class="fine"><b>Logistics:</b> pickup is in Rome, not at the pier. The 90-minute transfer from Civitavecchia and back is arranged separately — Christina will quote it alongside whichever Rome option you choose.</p>
+          <p class="fine"><b>Cancellation:</b> full refund up to 1 day before.</p>
+          <div class="tour-foot">
+            <div class="price">Est. $695<small>total for both of you · private golf cart</small></div>
+            <a class="btn ghost" href="https://pe.tours/MTUwODQwNQ==/" target="_blank" rel="noopener">Full itinerary &amp; photos</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="tour">
+        <div class="tour-photo" style="background-image:url('https://cdn.projectexpedition.com/photos/68c95d57da114_sized.jpg')" role="img" aria-label="Guide in the Capuchin Crypt bone chapel, Rome"></div>
+        <div class="tour-body">
+          <h3>Rome Catacombs &amp; Capuchin Crypts Tour with Transport</h3>
+          <ul class="specs">
+            <li>Group tour · max 25</li>
+            <li>3½ hours · 10:10 a.m. start</li>
+            <li>Private van between sites</li>
+            <li>Cruise-friendly refund</li>
+          </ul>
+          <p class="desc">Rome from below, in the morning. The Capuchin Crypt under Via Veneto is six small chapels decorated entirely with the bones of some 3,700 friars, arranged into arches, rosettes, and a clock, with a guide to explain why the Capuchins saw it as a meditation rather than a horror. From there a van takes you out past the Aurelian Walls to the Catacomb of Callixtus on the Appian Way, the largest of Rome's early Christian cemeteries, with 12 miles of tunnels and the crypt where nine 3rd-century popes were buried. The only Rome option on this page that starts in the morning, which leaves the afternoon free.</p>
+          <p class="fine"><b>Logistics:</b> meets in Rome, not at the pier. The 90-minute transfer from Civitavecchia and back is arranged separately — Christina will quote it alongside whichever Rome option you choose. A 10:10 a.m. start means leaving the ship early.</p>
+          <p class="fine"><b>Cancellation:</b> full refund up to 1 day before.</p>
+          <div class="tour-foot">
+            <div class="price">Est. $68<small>per person · group tour</small></div>
+            <a class="btn ghost" href="https://pe.tours/MTUwODQxMA==/" target="_blank" rel="noopener">Full itinerary &amp; photos</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="tour">
+        <div class="tour-photo" style="background-image:url('https://cdn.projectexpedition.com/photos/530482touractivity1aefd50562dd4ce197dbd2ceaf5e5714_sized.jpg')" role="img" aria-label="Robed friars among the bones of the Capuchin Crypt"></div>
+        <div class="tour-body">
+          <h3>Ancient Catacombs &amp; Underground Rome — Private Tour</h3>
+          <ul class="specs">
+            <li>Private · your group only</li>
+            <li>3 hours · 9:00 a.m. or 2:00 p.m.</li>
+            <li>Three underground sites</li>
+            <li>Cruise-friendly refund</li>
+          </ul>
+          <p class="desc">The private version of underground Rome, and the one that goes deepest. Three sites, your own guide, nobody else. San Clemente is a 12th-century basilica built on a 4th-century church built on a 1st-century Roman house with a Mithraic temple in its basement; you walk down through all of it, level by level, with running water audible at the bottom. The Catacombs of Domitilla are the oldest and least visited of Rome's catacombs, with a sunken 4th-century basilica inside them. The Capuchin Crypt finishes the morning: six chapels under Via Veneto decorated with the bones of 3,700 friars. Three hours, no queue, no group to wait for.</p>
+          <p class="fine"><b>Logistics:</b> meets in Rome, not at the pier. The 90-minute transfer from Civitavecchia and back is arranged separately — Christina will quote it alongside whichever Rome option you choose.</p>
+          <p class="fine"><b>Cancellation:</b> full refund up to 1 day before.</p>
+          <div class="tour-foot">
+            <div class="price">Est. $799<small>total for both of you · private guide</small></div>
+            <a class="btn ghost" href="https://pe.tours/MTUwODQxMg==/" target="_blank" rel="noopener">Full itinerary &amp; photos</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="tour">
+        <div class="tour-photo" style="background-image:url('https://cdn.projectexpedition.com/photos/427802touractivity8200ca4d8fdf4271a0f0f18d87375ffa_sized.jpg')" role="img" aria-label="Passage inside the Roman catacombs"></div>
+        <div class="tour-body">
+          <h3>Rome Underground Private Tour: Catacombs with Transfers Included</h3>
+          <ul class="specs">
+            <li>Private · your group only</li>
+            <li>Transfers included</li>
+            <li>Cruise-friendly refund</li>
+          </ul>
+          <p class="desc">A private catacombs tour with the driving built in, which is the detail that matters for a ship day. Your guide and driver collect you, take you out to the Appian Way for the Catacombs, and bring you back, so there is no meeting point to find and no clock to watch except the ship's. Underground, it is the same Rome the other options reach: miles of 2nd-to-4th-century tunnels cut into soft tufa, with frescoes still on the walls and a guide to read them for you.</p>
+          <p class="fine"><b>Logistics:</b> transfers are included on this one — Christina is confirming whether that covers Civitavecchia or central Rome only.</p>
+          <div class="tour-foot">
+            <div class="price">Pricing to come<small>private · confirmed by Christina</small></div>
+            <a class="btn ghost" href="https://pe.tours/MTUwODQxMw==/" target="_blank" rel="noopener">Full itinerary &amp; photos</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="tour">
+        <div class="tour-photo" style="background-image:url('https://cdn.projectexpedition.com/photos/36185touractivitywalks_rome_rome_in_a_day__sized.jpg')" role="img" aria-label="Small group walking toward the Colosseum"></div>
+        <div class="tour-body">
+          <h3>Rome in a Day: Vatican, Colosseum &amp; Historic Center</h3>
+          <ul class="specs">
+            <li>Group tour · max 20</li>
+            <li>7½ hours · 9:15 a.m. start</li>
+            <li>Skip-the-line Vatican &amp; Colosseum</li>
+            <li>Cruise-friendly refund</li>
+          </ul>
+          <p class="desc">The one for a first time in Rome, or for anyone who would rather see the famous things than the obscure ones. Express entry at the Colosseum, then the Vatican Museums with the queue skipped, the Sistine Chapel, and St. Peter's, with an expert guide who keeps the pace and the stories going. In between, the historic center on foot: the Pantheon, Piazza Navona, and a coin in the Trevi Fountain. It is a full day and it is a lot of walking, but it is also most of what people mean when they say "Rome" in seven and a half hours.</p>
+          <p class="fine"><b>Logistics:</b> meets in Rome at 9:15 a.m., not at the pier, so this means an early departure from Civitavecchia. The transfer is arranged separately — Christina will quote it alongside whichever Rome option you choose. Shoulders and knees covered for the Vatican.</p>
+          <p class="fine"><b>Cancellation:</b> full refund up to 3 days before.</p>
+          <div class="tour-foot">
+            <div class="price">Est. $196<small>per person · group tour</small></div>
+            <a class="btn ghost" href="https://pe.tours/MTUwODQxNg==/" target="_blank" rel="noopener">Full itinerary &amp; photos</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="tour">
+        <div class="tour-photo" style="background-image:url('https://cdn.projectexpedition.com/photos/428229touractivity8a11ebc278af463ebca2bf5853feeba1_sized.jpg')" role="img" aria-label="The Colosseum, Rome"></div>
+        <div class="tour-body">
+          <h3>Private Rome: Vatican &amp; Colosseum with Lunch &amp; Transfers</h3>
+          <ul class="specs">
+            <li>Private · your group only</li>
+            <li>6½ hours · 9:00 a.m. start</li>
+            <li>Transfers &amp; lunch included</li>
+            <li>Cruise-friendly refund</li>
+          </ul>
+          <p class="desc">The door-to-door version of the big day. A private driver collects you at the ship, your own guide takes you through the Colosseum, the Arch of Constantine, the Arch of Titus and the Roman Forum in the morning, lunch is handled, and the afternoon is the Vatican Museums and the Sistine Chapel with the queues skipped. Then the car brings you back to Civitavecchia. No meeting points, no trains, no watching the clock. It costs what it costs because everything is in it, including the two hours of driving that every other Rome option leaves to you.</p>
+          <p class="fine"><b>Good for:</b> seeing the two most famous things in Rome with the least effort and the most time. Shoulders and knees covered for the Vatican.</p>
+          <p class="fine"><b>Cancellation:</b> per the operator's policy — Christina will confirm the deadline before booking.</p>
+          <div class="tour-foot">
+            <div class="price">Est. $1,633<small>total for both of you · private, transfers &amp; lunch included</small></div>
+            <a class="btn ghost" href="https://pe.tours/MTUwODQyMA==/" target="_blank" rel="noopener">Full itinerary &amp; photos</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="tour">
+        <div class="tour-photo" style="background-image:url('https://cdn.projectexpedition.com/photos/698c58ae80093_sized.jpg')" role="img" aria-label="Looking out over the Colosseum arena"></div>
+        <div class="tour-body">
+          <h3>Rome in a Day: Colosseum &amp; Vatican Museums (Guided Group)</h3>
+          <ul class="specs">
+            <li>Group tour · max 20</li>
+            <li>7 hours · 8:45 a.m. start</li>
+            <li>Tickets included · both sites</li>
+            <li>Cruise-friendly refund</li>
+          </ul>
+          <p class="desc">Nearly the same day as the other "Rome in a Day" above, from a different operator with a longer track record: 121 reviews at 4.9. The two hardest tickets in Rome, the Colosseum and the Vatican Museums, booked for you with one English-speaking guide for the whole day, plus the Forum, the Sistine Chapel, and the center on foot through Piazza Navona, the Pantheon, and the Trevi Fountain. Seven hours, well paced, and the cheaper of the two full-day group options by about $23 a head.</p>
+          <p class="fine"><b>Logistics:</b> meets in Rome at 8:45 a.m., not at the pier, so this means an early departure from Civitavecchia. The transfer is arranged separately — Christina will quote it alongside whichever Rome option you choose. Shoulders and knees covered for the Vatican.</p>
+          <p class="fine"><b>Cancellation:</b> full refund up to 3 days before.</p>
+          <div class="tour-foot">
+            <div class="price">Est. $173<small>per person · group tour</small></div>
+            <a class="btn ghost" href="https://pe.tours/MTUwODQyMw==/" target="_blank" rel="noopener">Full itinerary &amp; photos</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="tour">
+        <div class="tour-photo" style="background-image:url('https://cdn.projectexpedition.com/photos/5e6b9e06dca02_sized.jpg')" role="img" aria-label="Arms raised over the Rome skyline at sunset"></div>
+        <div class="tour-body">
+          <h3>1-Day Rome: Vatican &amp; Colosseum Tour with Transportation</h3>
+          <ul class="specs">
+            <li>Small group · max 10</li>
+            <li>9 hours · 9:15 a.m. start</li>
+            <li>Vehicle between sites</li>
+            <li>Cruise-friendly refund</li>
+          </ul>
+          <p class="desc">The small-group version of the big day, with the walking taken out. A group of no more than ten, an expert guide, and a comfortable vehicle that moves you between the Colosseum, the Vatican Museums, the Sistine Chapel, and St. Peter's Square, so the hours go into the sites rather than the pavement between them. Nine hours is the longest day on this page; it is also the most thorough.</p>
+          <p class="fine"><b>Logistics:</b> meets in Rome at 9:15 a.m., not at the pier, so this means an early departure from Civitavecchia and a late return. Christina will quote the transfer alongside whichever Rome option you choose, and check this one's 9-hour length against all-aboard before confirming. Shoulders and knees covered for the Vatican.</p>
+          <p class="fine"><b>Cancellation:</b> full refund up to 1 day before.</p>
+          <div class="tour-foot">
+            <div class="price">Est. $425<small>per person · small group with vehicle</small></div>
+            <a class="btn ghost" href="https://pe.tours/MTUwODQyNA==/" target="_blank" rel="noopener">Full itinerary &amp; photos</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="tour">
+        <div class="tour-photo" style="background-image:url('https://cdn.projectexpedition.com/photos/74026touractivitylarge_sized.jpg')" role="img" aria-label="Nave of St. Peter's Basilica"></div>
+        <div class="tour-body">
+          <h3>Combo Saver: Vatican &amp; Colosseum Entrance, Small Group</h3>
+          <ul class="specs">
+            <li>Small group · max 10</li>
+            <li>9 hours · 9:15 a.m. start</li>
+            <li>Escorted entry, both sites</li>
+            <li>Cruise-friendly refund</li>
+          </ul>
+          <p class="desc">The deepest Vatican visit on this page. Most tours do the Museums and the Sistine Chapel; this one adds the Pigna Courtyard, the Pio Clementino sculpture galleries, the Chandeliers and Tapestries galleries, and Raphael's Rooms before Michelangelo's ceiling, then goes inside St. Peter's Basilica itself. The Colosseum follows in the afternoon with escorted entrance. Small group, no vehicle between sites, which is why it costs a little less than the transportation version above.</p>
+          <p class="fine"><b>Logistics:</b> meets in Rome at 9:15 a.m., not at the pier, and runs 9 hours, so Christina will check it against all-aboard before confirming. The transfer is quoted separately. Bring passport or photo ID — it's required at the Colosseum. Shoulders and knees covered for the Vatican.</p>
+          <p class="fine"><b>Cancellation:</b> full refund up to 1 day before.</p>
+          <div class="tour-foot">
+            <div class="price">Est. $401<small>per person · small group</small></div>
+            <a class="btn ghost" href="https://pe.tours/MTUwODQyNg==/" target="_blank" rel="noopener">Full itinerary &amp; photos</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="tour">
+        <div class="tour-photo" style="background-image:url('https://cdn.projectexpedition.com/photos/898472touractivityef00133274d447579418e90279ac9820_sized.jpg')" role="img" aria-label="St. Peter's Square and Via della Conciliazione from above"></div>
+        <div class="tour-body">
+          <h3>Private Rome in a Day: Vatican, Colosseum &amp; Pantheon</h3>
+          <ul class="specs">
+            <li>Private · your group only</li>
+            <li>7 hours · 8:30 a.m. start</li>
+            <li>Fast-track entries</li>
+            <li>Cruise-friendly refund</li>
+          </ul>
+          <p class="desc">The private version of the full-day classic. Your own expert guide for seven hours and nobody else's pace to match: the Vatican Museums and the Sistine Chapel, fast-track into St. Peter's Basilica, then across the river for the Colosseum and the Forum, with Piazza Venezia, the Trevi Fountain, and the Pantheon on the way. Everything the group "Rome in a Day" tours cover, done as a conversation with one guide instead of a headset in a crowd of twenty. The only thing it doesn't include is the car from the pier.</p>
+          <p class="fine"><b>Logistics:</b> meets in Rome at 8:30 a.m., not at the pier, so this means an early departure from Civitavecchia. The transfer is quoted separately — if you want the car included, the $1,633 private option above is the same day with transfers and lunch built in. Shoulders and knees covered for the Vatican.</p>
+          <p class="fine"><b>Cancellation:</b> full refund up to 3 days before.</p>
+          <div class="tour-foot">
+            <div class="price">Est. $1,447<small>total for both of you · private guide</small></div>
+            <a class="btn ghost" href="https://pe.tours/MTUwODQyOA==/" target="_blank" rel="noopener">Full itinerary &amp; photos</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="tour">
+        <div class="tour-photo" style="background-image:url('https://cdn.projectexpedition.com/photos/869108touractivity6d22a9e1901f44edb9837a6178b2b8f8_sized.jpg')" role="img" aria-label="Guests with their guide in front of St. Peter's Basilica"></div>
+        <div class="tour-body">
+          <h3>Vatican &amp; Colosseum Full-Day Private Tour with Transfer</h3>
+          <ul class="specs">
+            <li>Private · your group only</li>
+            <li>7 hours · 9:00 a.m. start</li>
+            <li>Pickup &amp; car between sites</li>
+            <li>Fully wheelchair accessible</li>
+            <li>Cruise-friendly refund</li>
+          </ul>
+          <p class="desc">Private guide, private car, and the two halves of Rome joined without a taxi or a metro ride. Morning at the Vatican Museums, the Sistine Chapel, and St. Peter's Basilica; then the car across the city to the Colosseum, the Forum, and the Palatine Hill. Pickup is included at the start, and the vehicle stays with you between sites, which matters on a long day with Rome's distances. Fully wheelchair accessible, the only private full-day option on this page that is.</p>
+          <p class="fine"><b>Logistics:</b> pickup is in Rome, not at the pier; the transfer named in the title is between the Vatican and the ancient city, not from Civitavecchia. Christina will quote the port transfer alongside whichever Rome option you choose. Shoulders and knees covered for the Vatican.</p>
+          <p class="fine"><b>Cancellation:</b> full refund up to 1 day before.</p>
+          <div class="tour-foot">
+            <div class="price">Est. $1,656<small>total for both of you · private guide &amp; car</small></div>
+            <a class="btn ghost" href="https://pe.tours/MTUwODQzMQ==/" target="_blank" rel="noopener">Full itinerary &amp; photos</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="band band-mist">
+  <div class="wrap">
+    <p class="eyebrow">On pricing</p>
+    <h2>Checked against public rates.</h2>
+    <p class="lede">We check every component against public rates and meet or beat them. You're not paying a premium for our convenience — you're paying for the rest of what we do.</p>
+    <div class="callout quiet">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor.</div>
+  </div>
+</section>
+
+<section class="band" id="respond">
+  <div class="wrap">
+    <p class="eyebrow">Next step</p>
+    <h2>Tell Christina which days you want held.</h2>
+    <div class="callout">What's coming after this quote: a destination guide built for your trip — PDF or interactive in-app, with Google Maps links to every place we send you — a trip app where everything lives, and us when something goes sideways at midnight. You travel; we handle the rest.</div>
+
+    <div id="form-container" class="form-card">
+      <form id="pmtp-form">
+        <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+        <input type="hidden" name="subject" value="Quote Response — Lisa &amp; Beth | Greece to Italy Mediterranean Cruise Tours">
+        <input type="hidden" name="from_name" value="Lisa &amp; Beth Greece to Italy Cruise Quote — Point Me to Paradise">
+        <input type="hidden" name="redirect" value="false">
+        <div id="form-error" style="display:none; background:#fff1f1; border:1px solid #f5c6c6; border-radius:6px; padding:14px 18px; font-size:0.875rem; color:#b91c1c; margin-bottom:16px;">
+          We weren't able to send your message. Please contact Christina directly at the address below.
+        </div>
+        <div class="form-grid">
+          <div>
+            <label for="f-name">Name</label>
+            <input type="text" id="f-name" name="name" required autocomplete="name">
+          </div>
+          <div>
+            <label for="f-email">Email</label>
+            <input type="email" id="f-email" name="email" required autocomplete="email">
+          </div>
+          <div>
+            <label for="f-phone">Phone (optional)</label>
+            <input type="tel" id="f-phone" name="phone" autocomplete="tel">
+          </div>
+          <div>
+            <label for="f-ins">Travel insurance</label>
+            <select id="f-ins" name="travel_insurance">
+              <option>Yes — I'd like a quote</option>
+              <option>No — not interested</option>
+              <option>Already have coverage</option>
+            </select>
+          </div>
+          <div class="full">
+            <label>Tours you're interested in</label>
+            <div class="checks">
+              <label class="check"><input type="checkbox" name="tours_interested" value="Athens — Half-day private city tour (Acropolis)"> Athens — Half-day private city tour (Acropolis)</label>
+              <label class="check"><input type="checkbox" name="tours_interested" value="Athens — Cape Sounion sunset"> Athens — Cape Sounion sunset</label>
+              <label class="check"><input type="checkbox" name="tours_interested" value="Santorini — Private highlights"> Santorini — Private highlights</label>
+              <label class="check"><input type="checkbox" name="tours_interested" value="Chania — Cruise-friendly town tour"> Chania — Cruise-friendly town tour</label>
+              <label class="check"><input type="checkbox" name="tours_interested" value="Katakolon — Olympia, wine &amp; olive oil"> Katakolon — Olympia, wine &amp; olive oil</label>
+              <label class="check"><input type="checkbox" name="tours_interested" value="Corfu — Angelokastro &amp; Palaiokastritsa"> Corfu — Angelokastro &amp; Palaiokastritsa</label>
+              <label class="check"><input type="checkbox" name="tours_interested" value="Split — Trogir &amp; sea-view vineyard"> Split — Trogir &amp; sea-view vineyard</label>
+              <label class="check"><input type="checkbox" name="tours_interested" value="Dubrovnik — Cavtat &amp; Konavle food day"> Dubrovnik — Cavtat &amp; Konavle food day</label>
+              <label class="check"><input type="checkbox" name="tours_interested" value="Kotor — Best of Montenegro"> Kotor — Best of Montenegro</label>
+              <label class="check"><input type="checkbox" name="tours_interested" value="Naples — Amalfi Coast small group"> Naples — Amalfi Coast small group</label>
+              <label class="check"><input type="checkbox" name="tours_interested" value="Rome — Catacombs &amp; Appian Way golf cart"> Rome — Catacombs &amp; Appian Way golf cart</label>
+              <label class="check"><input type="checkbox" name="tours_interested" value="Rome — Underground Rome small group"> Rome — Underground Rome small group</label>
+              <label class="check"><input type="checkbox" name="tours_interested" value="Rome — Golf cart, Aventine &amp; Appian Way (2.5 hr)"> Rome — Golf cart, Aventine &amp; Appian Way (2.5 hr)</label>
+              <label class="check"><input type="checkbox" name="tours_interested" value="Rome — Catacombs &amp; Capuchin Crypts (morning)"> Rome — Catacombs &amp; Capuchin Crypts (morning)</label>
+              <label class="check"><input type="checkbox" name="tours_interested" value="Rome — Underground Rome private (3 sites)"> Rome — Underground Rome private (3 sites)</label>
+              <label class="check"><input type="checkbox" name="tours_interested" value="Rome — Private catacombs, transfers included"> Rome — Private catacombs, transfers included</label>
+              <label class="check"><input type="checkbox" name="tours_interested" value="Rome — Rome in a Day: Vatican &amp; Colosseum"> Rome — Rome in a Day: Vatican &amp; Colosseum</label>
+              <label class="check"><input type="checkbox" name="tours_interested" value="Rome — Private Vatican &amp; Colosseum with transfers"> Rome — Private Vatican &amp; Colosseum with transfers</label>
+              <label class="check"><input type="checkbox" name="tours_interested" value="Rome — Rome in a Day guided group (8:45 a.m.)"> Rome — Rome in a Day guided group (8:45 a.m.)</label>
+              <label class="check"><input type="checkbox" name="tours_interested" value="Rome — 1-Day small group with transportation (9 hr)"> Rome — 1-Day small group with transportation (9 hr)</label>
+              <label class="check"><input type="checkbox" name="tours_interested" value="Rome — Combo Saver Vatican &amp; Colosseum (9 hr)"> Rome — Combo Saver Vatican &amp; Colosseum (9 hr)</label>
+              <label class="check"><input type="checkbox" name="tours_interested" value="Rome — Private Rome in a Day: Vatican, Colosseum &amp; Pantheon"> Rome — Private Rome in a Day: Vatican, Colosseum &amp; Pantheon</label>
+              <label class="check"><input type="checkbox" name="tours_interested" value="Rome — Vatican &amp; Colosseum private with car (accessible)"> Rome — Vatican &amp; Colosseum private with car (accessible)</label>
+            </div>
+          </div>
+          <div class="full">
+            <label for="f-msg">Questions or preferences</label>
+            <textarea id="f-msg" name="message"></textarea>
+          </div>
+          <div class="full">
+            <button type="submit" id="submit-btn" class="btn">Send to Christina</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div id="thank-you">
+      <h3>Received.</h3>
+      <p>Christina will confirm availability on your picks and come back to you with next steps, usually within one business day.</p>
+    </div>
+
+    <p class="disclaimer">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="advisor">
+      <span class="name">Christina Garcia</span>
+      <span class="title">Travel Advisor</span>
+      <span id="adv-email"></span><br>
+      <a href="tel:+12812290862">281-229-0862</a><br>
+      Point Me to Paradise Travel
+    </div>
+    <div class="foot-brand">
+      <span class="pmtp-wordmark">Point Me to Paradise Travel</span><br>
+      <span class="tagline">Curated Journeys · Expert Advisors</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var u = 'christina', d = 'pointmetoparadise.com';
+    var addr = u + '@' + d;
+    var el = document.getElementById('adv-email');
+    var a = document.createElement('a');
+    a.href = 'mailto:' + addr; a.textContent = addr;
+    el.appendChild(a);
+  })();
+
+  document.getElementById('pmtp-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = document.getElementById('submit-btn');
+    var err = document.getElementById('form-error');
+    btn.disabled = true; btn.textContent = 'Sending…'; err.style.display = 'none';
+    fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(e.target) })
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        if (data.success) {
+          document.getElementById('form-container').style.display = 'none';
+          document.getElementById('thank-you').style.display = 'block';
+        } else {
+          btn.disabled = false; btn.textContent = 'Send to Christina'; err.style.display = 'block';
+          err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      })
+      .catch(function() {
+        btn.disabled = false; btn.textContent = 'Send to Christina'; err.style.display = 'block';
+        err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+  });
+</script>
+
+<script id="pmtp-quote-beacon">
+(function(){
+  var C = {"url":"https://pmtp.eliteparadiseplanners.com/api/quote-response","agent":"Christina Garcia","file":"greece-italy-cruise-tours-lisa-beth-c9bb.html"};
+  function send(obj){
+    try{
+      if(!obj || typeof obj !== 'object') return;
+      var body = JSON.stringify({ agent:C.agent, file:C.file, payload:obj, kind:'approval' });
+      if(body.length > 20000) return;
+      fetch(C.url, { method:'POST', headers:{'Content-Type':'application/json'}, body:body, keepalive:true, mode:'cors' }).catch(function(){});
+    }catch(e){}
+  }
+  // 1. the page fetches Web3Forms
+  var _fetch = window.fetch;
+  if (typeof _fetch === 'function'){
+    window.fetch = function(input, init){
+      try{
+        var u = (typeof input === 'string') ? input : (input && input.url) || '';
+        if (u.indexOf('web3forms.com') > -1 && init && init.body){
+          var b = init.body;
+          if (typeof b === 'string'){ try{ send(JSON.parse(b)); }catch(e){} }
+          else if (typeof FormData !== 'undefined' && b instanceof FormData){
+            var o = {}; b.forEach(function(v,k){ if(typeof v === 'string') o[k]=v; }); send(o);
+          }
+        }
+      }catch(e){}
+      return _fetch.apply(this, arguments);
+    };
+  }
+  // 2. the page submits a real form straight to Web3Forms
+  document.addEventListener('submit', function(ev){
+    try{
+      var f = ev.target;
+      if(!f || String(f.action||'').indexOf('web3forms.com') < 0) return;
+      var o = {}; new FormData(f).forEach(function(v,k){ if(typeof v === 'string') o[k]=v; }); send(o);
+    }catch(e){}
+  }, true);
+})();
+</script>
+</body>
+</html>
