@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!--PMTP_FRESH--><meta name="pmtp-build" content="mw4474sbgvl745"><script>(function(){var V="mw4474sbgvl745",N="pmtp-"+"build",last=0;var RX=new RegExp("<meta name=\""+N+"\" content=\"([^\"]+)\"");function read(r){if(!r.ok)return"";if(!r.body||!r.body.getReader||!window.TextDecoder)return r.text();var rd=r.body.getReader(),dec=new TextDecoder(),buf="";function pump(){return rd.read().then(function(x){if(x.done)return buf;buf+=dec.decode(x.value,{stream:true});if(RX.test(buf)||buf.length>65536){try{rd.cancel()}catch(e){}return buf}return pump()})}return pump()}function go(v){var q=new URLSearchParams(location.search),t=q.get("pv")===v?(+q.get("pt")||1):0;if(t>=3)return;q.set("pv",v);q.set("pt",String(t+1));location.replace(location.pathname+"?"+q.toString()+location.hash)}function check(){var n=Date.now();if(n-last<60000||!window.fetch)return;last=n;fetch(location.pathname+"?pmtpcheck="+n,{cache:"no-store"}).then(read).then(function(t){var m=RX.exec(t||"");if(m&&m[1]!==V)go(m[1])}).catch(function(){})}if(document.readyState==="complete")setTimeout(check,1500);else addEventListener("load",function(){setTimeout(check,1500)});document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible")check()});})();</script><!--/PMTP_FRESH-->
+<!--PMTP_FRESH--><meta name="pmtp-build" content="mw5rxnkr23g68o"><script>(function(){var V="mw5rxnkr23g68o",N="pmtp-"+"build",last=0;var RX=new RegExp("<meta name=\""+N+"\" content=\"([^\"]+)\"");function read(r){if(!r.ok)return"";if(!r.body||!r.body.getReader||!window.TextDecoder)return r.text();var rd=r.body.getReader(),dec=new TextDecoder(),buf="";function pump(){return rd.read().then(function(x){if(x.done)return buf;buf+=dec.decode(x.value,{stream:true});if(RX.test(buf)||buf.length>65536){try{rd.cancel()}catch(e){}return buf}return pump()})}return pump()}function go(v){var q=new URLSearchParams(location.search),t=q.get("pv")===v?(+q.get("pt")||1):0;if(t>=3)return;q.set("pv",v);q.set("pt",String(t+1));location.replace(location.pathname+"?"+q.toString()+location.hash)}function check(){var n=Date.now();if(n-last<60000||!window.fetch)return;last=n;fetch(location.pathname+"?pmtpcheck="+n,{cache:"no-store"}).then(read).then(function(t){var m=RX.exec(t||"");if(m&&m[1]!==V)go(m[1])}).catch(function(){})}if(document.readyState==="complete")setTimeout(check,1500);else addEventListener("load",function(){setTimeout(check,1500)});document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible")check()});})();</script><!--/PMTP_FRESH-->
 <meta name="googlebot" content="noindex, nofollow, noarchive, noimageindex">
 <meta name="bingbot" content="noindex, nofollow, noarchive, noimageindex">
 <meta charset="UTF-8">
@@ -11,7 +11,8 @@
 <!--
   INTERNAL NOTES (delete before deploy if desired — not visible to client):
   - Rates: MSC booking engine, Best Available / Escape to Sea cruise-only, 2 adults, 1 cabin, pulled 11/06/2026.
-    YC1 $6,350 · YCP $6,590 · YC4 $15,770 — displayed as cabin totals with per-person beneath.
+    UPDATED 11/06 PM for 2 adults + 1 child (8): YCP $7,362.37 · YC4 $17,922.37 (cabin totals, 3 guests). YC1 $7,092.37.
+    Child deposit assumed $199 (x3 = $597) — CONFIRM with MSC. Rates with cents likely include taxes/port fees — CONFIRM, then change footnote to "included".
     CONFIRM whether taxes/port fees are inside these totals before sending; copy currently says "taxes and port fees confirmed at booking."
   - Suite sizes/decks/occupancy from msccruisesusa.com/ships/msc-seascape/cabins-suites. Photos from assets.msccruises.com (official line CDN).
   - Yacht Club inclusions from msccruisesusa.com/msc-yacht-club.
@@ -132,6 +133,10 @@ h2{font-size:clamp(28px,4vw,36px)}
 .pill input{position:absolute;opacity:0;width:0;height:0}
 .card:has(input:checked) .pill{background:var(--aqua-dark);color:var(--white)}
 .pill svg{width:16px;height:16px}
+.card-feature{border:2px solid var(--aqua-dark)}
+.pill.pending{border-style:dashed;color:var(--ink-soft);cursor:default;background:var(--paper)}
+.price .pend{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:var(--aqua-dark);margin-top:4px}
+.card-tag{display:inline-block;background:var(--aqua-dark);color:var(--white);padding:4px 10px;border-radius:3px;letter-spacing:.14em;font-size:10px;font-weight:600;margin-right:10px;vertical-align:middle}
 
 /* Hold / payment */
 .hold{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:26px 28px;display:grid;grid-template-columns:1fr 1fr;gap:26px}
@@ -194,14 +199,14 @@ footer .disc{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:
   <div class="brand">Point Me to Paradise Travel</div>
   <h1>An Anniversary at Sea</h1>
   <div class="hairline"></div>
-  <p class="sub">Seven nights in the MSC Yacht Club aboard MSC Seascape — Galveston to the Western Caribbean, February 28 – March 7, 2027.</p>
+  <p class="sub">Seven nights in the MSC Yacht Club aboard MSC Seascape — Galveston to the Western Caribbean, February 28 – March 7, 2027, for the two of you and your 8-year-old.</p>
   <div class="sig">Prepared for Megan Collins by Christina Garcia</div>
 </header>
 
 <!-- OVERVIEW STRIP -->
 <div class="overview"><div class="wrap">
   <div class="ov-grid">
-    <div class="ov"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><circle cx="16" cy="9" r="2.6"/><path d="M3.5 19c.6-3.2 2.9-5 5.5-5s4.9 1.8 5.5 5"/><path d="M14.5 18.5c.4-2.2 1.9-3.5 3.5-3.5s2.9 1.2 3.3 3.3"/></svg><div><div class="l">Travelers</div><div class="v">2 adults · 1 suite</div></div></div>
+    <div class="ov"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><circle cx="16" cy="9" r="2.6"/><path d="M3.5 19c.6-3.2 2.9-5 5.5-5s4.9 1.8 5.5 5"/><path d="M14.5 18.5c.4-2.2 1.9-3.5 3.5-3.5s2.9 1.2 3.3 3.3"/></svg><div><div class="l">Travelers</div><div class="v">2 adults + 1 child (8) · 1 suite</div></div></div>
     <div class="ov"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l2 2h14l2-2"/><path d="M4 15h16l-2-5H6z"/><path d="M8 10V6h8v4"/><path d="M12 3v3"/></svg><div><div class="l">Ship</div><div class="v">MSC Seascape</div></div></div>
     <div class="ov"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><div><div class="l">Dates</div><div class="v">Feb 28 – Mar 7, 2027</div></div></div>
     <div class="ov"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg><div><div class="l">Sails from</div><div class="v">Galveston, Texas</div></div></div>
@@ -236,8 +241,8 @@ footer .disc{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:
   <div class="kicker">The idea</div>
   <h2>A week that asks nothing of you</h2>
   <p class="subhead">Drive to the port, hand off your bags, and let the Yacht Club handle the rest.</p>
-  <p>The MSC Yacht Club is a private, keycard-only section at the front of the ship — its own restaurant, lounge, pool deck, and a butler assigned to your suite for the week. You can walk out into the rest of MSC Seascape whenever you like; the rest of the ship cannot walk in. For an anniversary, that balance is the point: lively when you want it, quiet when you don't.</p>
-  <p>All three suites below are priced for <strong>two adults in one suite</strong> on the <strong>February 28, 2027</strong> sailing. Drinks and Wi-Fi are included with every option.</p>
+  <p>The MSC Yacht Club is a private, keycard-only section at the front of the ship — its own restaurant, lounge, pool deck, and a butler assigned to your suite for the week. You can walk out into the rest of MSC Seascape whenever you like; the rest of the ship cannot walk in. For an anniversary with an 8-year-old along, that balance is the point: the waterpark, kids' club, and full ship are a few decks away when wanted, and a quiet lounge, a private pool, and someone to bring a drink when you both just want to sit.</p>
+  <p>All suites below are priced for <strong>two adults and one child (age 8) sharing one suite</strong> on the <strong>February 28, 2027</strong> sailing. Drinks and Wi-Fi are included with every option.</p>
 </div></section>
 
 <!-- SAILING -->
@@ -269,11 +274,11 @@ footer .disc{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:
     <div class="sail-rates">
       <div class="kicker">Yacht Club rates · this sailing</div>
       <table class="rate-table">
-        <tr><td>MSC Yacht Club Deluxe Suite (YC1)<span class="pp">Decks 16–19 · balcony</span></td><td>Est. $6,350<span class="pp">Est. $3,175 per person</span></td></tr>
-        <tr><td>MSC Yacht Club Deluxe Grand Suite (YCP)<span class="pp">Decks 16–19 · larger balcony</span></td><td>Est. $6,590<span class="pp">Est. $3,295 per person</span></td></tr>
-        <tr><td>MSC Yacht Club Owner's Suite (YC4)<span class="pp">Deck 19 · private terrace</span></td><td>Est. $15,770<span class="pp">Est. $7,885 per person</span></td></tr>
+        <tr><td>MSC Yacht Club Deluxe Suite (YC1)<span class="pp">Decks 16–19 · balcony</span></td><td>Est. $7,092.37<span class="pp">Est. $2,364.12 per person</span></td></tr>
+        <tr><td>MSC Yacht Club Deluxe Grand Suite (YCP)<span class="pp">Decks 16–19 · larger balcony</span></td><td>Est. $7,362.37<span class="pp">Est. $2,454.12 per person</span></td></tr>
+        <tr><td>MSC Yacht Club Owner's Suite (YC4)<span class="pp">Deck 19 · private terrace</span></td><td>Est. $17,922.37<span class="pp">Est. $5,974.12 per person</span></td></tr>
       </table>
-      <div class="pp-note">Suite total · 2 adults · double occupancy</div>
+      <div class="pp-note">Suite total · 2 adults + 1 child · 3 guests</div>
       <p style="font-size:13px;color:var(--ink-soft);margin-top:12px">Gratuities are additional. Taxes and port fees confirmed at booking. Rates are live inventory and can change until held.</p>
     </div>
   </div></div>
@@ -298,63 +303,63 @@ footer .disc{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:
 <section><div class="wrap">
   <div class="kicker">Choose your suite</div>
   <h2>Three suites, one sailing</h2>
-  <p class="subhead">An honest look at what the extra dollars buy at each step.</p>
+  <p class="subhead">An honest look at what the extra dollars buy — every option sleeps the three of you.</p>
 
   <div class="cards">
 
     <!-- YC1 -->
     <label class="card">
-      <div class="kick">Option 1 · MSC Yacht Club · 1 suite · 2 adults</div>
+      <div class="kick">Option 1 · MSC Yacht Club · 1 suite · 2 adults + 1 child</div>
       <div class="head"><h3>MSC Yacht Club Deluxe Suite</h3><div class="tag">Category YC1 · the standard Yacht Club balcony suite</div></div>
       <img src="https://assets.msccruises.com/is/image/msccruises/msc21007823?qlt=85&wid=1400" alt="MSC Yacht Club Deluxe Suite with king bed, sitting area, and balcony" loading="lazy">
       <div class="body">
-        <p>The suite most Yacht Club guests sail in: a king bed that converts to twins on request, a sofa sitting area, a bathroom with shower or tub, and a furnished private balcony. Compact by land-hotel standards, but you will spend most of your day in the lounge, restaurant, and sundeck anyway.</p>
+        <p>The suite most Yacht Club guests sail in: a king bed that converts to twins on request, a sofa that makes up as the third bed, a bathroom with shower or tub, and a furnished private balcony. Compact by land-hotel standards with three aboard — you will spend most of the day in the lounge, restaurant, and sundeck anyway, but it is the tightest of the three at bedtime.</p>
         <div class="specs">
           <div class="spec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><path d="M3 15h18M9 3v12"/></svg><span>Suite approx. 269 sq ft</span></div>
           <div class="spec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 12v7h18v-7M6 12V8a6 6 0 0 1 12 0v4"/></svg><span>Balcony approx. 86 sq ft</span></div>
           <div class="spec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18V8h16v10"/><path d="M4 13h16M2 18h20"/></svg><span>Decks 16–19 · forward</span></div>
           <div class="spec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10l8-6 8 6v10"/><path d="M9 20v-6h6v6"/></svg><span>Bathroom with shower or bathtub</span></div>
         </div>
-        <div class="trade"><em>The honest trade.</em> Lowest entry to the full Yacht Club experience. The suite itself is the smallest of the three; every privilege outside the door is identical.</div>
+        <div class="trade"><em>The honest trade.</em> Lowest entry to the full Yacht Club experience. The suite itself is the smallest of the three and the sofa bed sits in the main room; every privilege outside the door is identical.</div>
         <div class="price">
-          <div class="k">Suite rate · 2 adults</div>
-          <div class="amt">Est. $6,350</div>
-          <div class="per">Est. $3,175 per person · double occupancy</div>
+          <div class="k">Suite rate · 2 adults + 1 child</div>
+          <div class="amt">Est. $7,092.37</div>
+          <div class="per">Est. $2,364.12 per person · 3 guests</div>
           <ul><li>7 nights in a Deluxe Suite</li><li>Premium Extra drinks package + Browse Wi-Fi</li><li>Butler, concierge, and all Yacht Club privileges</li></ul>
           <div class="fine">Deposit $199 per person · balance due November 30, 2026 · gratuities additional · final pricing confirmed by Christina before booking.</div>
         </div>
-        <span class="pill"><input type="radio" name="selection" value="MSC Yacht Club Deluxe Suite (YC1) — Feb 28, 2027" data-price="6350" data-label="Deluxe Suite (YC1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Select the Deluxe Suite</span>
+        <span class="pill"><input type="radio" name="selection" value="MSC Yacht Club Deluxe Suite (YC1) — Feb 28, 2027" data-price="7092.37" data-label="Deluxe Suite (YC1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Select the Deluxe Suite</span>
       </div>
     </label>
 
     <!-- YCP -->
-    <label class="card">
-      <div class="kick">Option 2 · MSC Yacht Club · 1 suite · 2 adults</div>
+    <label class="card card-feature">
+      <div class="kick"><span class="card-tag">Top Recommendation</span>Option 2 · MSC Yacht Club · 1 suite · 2 adults + 1 child</div>
       <div class="head"><h3>MSC Yacht Club Deluxe Grand Suite</h3><div class="tag">Category YCP · more floor and a wider balcony for a modest step up</div></div>
       <img src="https://assets.msccruises.com/is/image/msccruises/msc21007820?qlt=85&wid=1400" alt="MSC Yacht Club Deluxe Grand Suite with double bed and balcony" loading="lazy">
       <div class="body">
-        <p>Same bed, bath, and sitting-area layout as the Deluxe Suite, but in a larger footprint with a bigger balcony — MSC notes some Deluxe Grand Suites run up to 100 square feet larger than the standard Deluxe. Sizes vary by location on the ship, so the exact dimensions depend on which suite number is assigned.</p>
+        <p>Same bed, bath, and sitting-area layout as the Deluxe Suite, but in a larger footprint with a bigger balcony — MSC notes some Deluxe Grand Suites run up to 100 square feet larger than the standard Deluxe. With three sharing, that extra floor is the difference between stepping around a sofa bed and not noticing it. Sizes vary by location on the ship, so the exact dimensions depend on which suite number is assigned.</p>
         <div class="specs">
           <div class="spec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><path d="M3 15h18M9 3v12"/></svg><span>Suite approx. 269–463 sq ft</span></div>
           <div class="spec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 12v7h18v-7M6 12V8a6 6 0 0 1 12 0v4"/></svg><span>Balcony approx. 86–226 sq ft</span></div>
           <div class="spec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18V8h16v10"/><path d="M4 13h16M2 18h20"/></svg><span>Decks 16–19 · forward</span></div>
           <div class="spec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10l8-6 8 6v10"/><path d="M9 20v-6h6v6"/></svg><span>Bathroom with shower or bathtub</span></div>
         </div>
-        <div class="trade"><em>The honest trade.</em> Est. $240 more for the week buys extra room and balcony — the best value step of the three if you plan on morning coffee outside. Exact size depends on the suite number assigned.</div>
+        <div class="trade"><em>Why I'd choose this one.</em> Est. $270 more for the week buys noticeably more room and a wider balcony — the best value of the three with a child along, and the one I'd book for this trip. Exact size depends on the suite number assigned; I'll request the largest available.</div>
         <div class="price">
-          <div class="k">Suite rate · 2 adults</div>
-          <div class="amt">Est. $6,590</div>
-          <div class="per">Est. $3,295 per person · double occupancy</div>
+          <div class="k">Suite rate · 2 adults + 1 child</div>
+          <div class="amt">Est. $7,362.37</div>
+          <div class="per">Est. $2,454.12 per person · 3 guests</div>
           <ul><li>7 nights in a Deluxe Grand Suite</li><li>Premium Extra drinks package + Browse Wi-Fi</li><li>Butler, concierge, and all Yacht Club privileges</li></ul>
           <div class="fine">Deposit $199 per person · balance due November 30, 2026 · gratuities additional · final pricing confirmed by Christina before booking.</div>
         </div>
-        <span class="pill"><input type="radio" name="selection" value="MSC Yacht Club Deluxe Grand Suite (YCP) — Feb 28, 2027" data-price="6590" data-label="Deluxe Grand Suite (YCP)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Select the Deluxe Grand Suite</span>
+        <span class="pill"><input type="radio" name="selection" value="MSC Yacht Club Deluxe Grand Suite (YCP) — Feb 28, 2027" data-price="7362.37" data-label="Deluxe Grand Suite (YCP)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Select the Deluxe Grand Suite</span>
       </div>
     </label>
 
     <!-- YC4 -->
     <label class="card">
-      <div class="kick">Option 3 · MSC Yacht Club · 1 suite · 2 adults</div>
+      <div class="kick">Option 3 · MSC Yacht Club · 1 suite · 2 adults + 1 child</div>
       <div class="head"><h3>MSC Yacht Club Owner's Suite</h3><div class="tag">Category YC4 · one of two on the ship, on the top Yacht Club deck</div></div>
       <img src="https://assets.msccruises.com/is/image/msccruises/msc21007831?qlt=85&wid=1400" alt="MSC Yacht Club Owner's Suite sitting area with panoramic windows" loading="lazy">
       <div class="body">
@@ -365,15 +370,15 @@ footer .disc{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:
           <div class="spec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18V8h16v10"/><path d="M4 13h16M2 18h20"/></svg><span>Deck 19 · top of the Yacht Club</span></div>
           <div class="spec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10l8-6 8 6v10"/><path d="M9 20v-6h6v6"/></svg><span>Separate living / dining area</span></div>
         </div>
-        <div class="trade"><em>The honest trade.</em> Roughly two and a half times the price of the Deluxe Suite for the same ports, dining, lounge, and service. What you are paying for is the room — and there are only two of them.</div>
+        <div class="trade"><em>The honest trade.</em> Roughly two and a half times the Grand Suite for the same ports, dining, lounge, and service. What you are paying for is the room — a separate living area means your 8-year-old has a space of their own — and there are only two of them on the ship.</div>
         <div class="price">
-          <div class="k">Suite rate · 2 adults</div>
-          <div class="amt">Est. $15,770</div>
-          <div class="per">Est. $7,885 per person · double occupancy</div>
+          <div class="k">Suite rate · 2 adults + 1 child</div>
+          <div class="amt">Est. $17,922.37</div>
+          <div class="per">Est. $5,974.12 per person · 3 guests</div>
           <ul><li>7 nights in an Owner's Suite</li><li>Premium Extra drinks package + Browse Wi-Fi</li><li>Butler, concierge, and all Yacht Club privileges</li></ul>
           <div class="fine">Deposit $199 per person · balance due November 30, 2026 · gratuities additional · final pricing confirmed by Christina before booking.</div>
         </div>
-        <span class="pill"><input type="radio" name="selection" value="MSC Yacht Club Owner's Suite (YC4) — Feb 28, 2027" data-price="15770" data-label="Owner's Suite (YC4)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Select the Owner's Suite</span>
+        <span class="pill"><input type="radio" name="selection" value="MSC Yacht Club Owner's Suite (YC4) — Feb 28, 2027" data-price="17922.37" data-label="Owner's Suite (YC4)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Select the Owner's Suite</span>
       </div>
     </label>
 
@@ -389,13 +394,13 @@ footer .disc{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:
     <div>
       <div class="k">Complimentary 24-hour hold</div>
       <h4>Through Friday, November 7, 2026</h4>
-      <p>MSC will hold your chosen suite at today's rate at no cost for 24 hours. To place the hold, I need both travelers' <strong>legal names exactly as they appear on your passports or ID</strong> and <strong>dates of birth</strong> — there are fields for these in the form below. No payment is taken to hold.</p>
+      <p>MSC will hold your chosen suite at today's rate at no cost for 24 hours. To place the hold, I need all three travelers' <strong>legal names exactly as they appear on your passports or ID</strong> and <strong>dates of birth</strong> — there are fields for these in the form below. No payment is taken to hold.</p>
     </div>
     <div>
       <div class="k">Payment schedule</div>
       <h4>Deposit $199 per person · balance by November 30, 2026</h4>
       <ul>
-        <li><strong>Deposit:</strong> $398 total ($199 × 2) to convert the hold into a confirmed booking.</li>
+        <li><strong>Deposit:</strong> $199 per person — $597 for three — to convert the hold into a confirmed booking.</li>
         <li><strong>Balance:</strong> the remaining suite total, due <strong>November 30, 2026</strong>.</li>
         <li>Because the sailing is inside MSC's final-payment window, the balance comes due sooner than it would on a booking made further out.</li>
       </ul>
@@ -417,7 +422,7 @@ footer .disc{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:
       <input type="hidden" name="redirect" value="false">
       <input type="hidden" name="Stateroom_Choice" id="hidden_choice">
       <input type="hidden" name="Estimated_Total" id="hidden_total">
-      <input type="hidden" name="Sailing" value="MSC Seascape · Feb 28 – Mar 7, 2027 · Galveston round-trip">
+      <input type="hidden" name="Sailing" value="MSC Seascape · Feb 28 – Mar 7, 2027 · Galveston round-trip · 2 adults + 1 child (8)">
 
       <div class="row">
         <div><label class="f" for="name">Your name</label><input type="text" id="name" name="Name" required autocomplete="name"></div>
@@ -438,6 +443,10 @@ footer .disc{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:
         <div><label class="f" for="g2n">Guest 2 · legal name</label><input type="text" id="g2n" name="Guest_2_Legal_Name" autocomplete="off"></div>
         <div><label class="f" for="g2d">Guest 2 · date of birth</label><input type="date" id="g2d" name="Guest_2_DOB"></div>
       </div>
+      <div class="row">
+        <div><label class="f" for="g3n">Guest 3 (child) · legal name</label><input type="text" id="g3n" name="Guest_3_Child_Legal_Name" autocomplete="off"></div>
+        <div><label class="f" for="g3d">Guest 3 (child) · date of birth</label><input type="date" id="g3d" name="Guest_3_Child_DOB"></div>
+      </div>
 
       <div class="group-title">Travel insurance</div>
       <fieldset>
@@ -447,7 +456,7 @@ footer .disc{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:
       </fieldset>
 
       <div class="group-title">Notes</div>
-      <label class="f" for="notes">Anniversary date, bed preference, dietary needs, suite-location preferences, anything else</label>
+      <label class="f" for="notes">Anniversary date, bed setup, dietary needs, suite-location preferences, anything else</label>
       <textarea id="notes" name="Trip_Notes" placeholder="Anything I should know before placing the hold?"></textarea>
 
       <div style="height:18px"></div>
@@ -487,14 +496,14 @@ footer .disc{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:
   var hChoice = document.getElementById('hidden_choice'), hTotal = document.getElementById('hidden_total');
   var btn = document.getElementById('submitBtn'), guard = document.getElementById('guardMsg');
 
-  function fmt(n){ return '$' + Number(n).toLocaleString('en-US'); }
+  function fmt(n){ return '$' + Number(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
   function updateTotal(){
     var sel = document.querySelector('input[name="selection"]:checked');
     if(!sel){ tbLabel.textContent='No suite selected yet'; tbAmt.textContent='—'; hChoice.value=''; hTotal.value=''; btn.disabled=true; guard.style.display='block'; return; }
     var p = Number(sel.getAttribute('data-price'));
-    tbLabel.textContent = sel.getAttribute('data-label') + ' · Feb 28, 2027 · 2 adults';
-    tbAmt.textContent = 'Est. ' + fmt(p) + '  ·  ' + fmt(p/2) + ' pp';
-    hChoice.value = sel.value; hTotal.value = 'Est. ' + fmt(p) + ' (' + fmt(p/2) + ' per person)';
+    tbLabel.textContent = sel.getAttribute('data-label') + ' · Feb 28, 2027 · 2 adults + 1 child';
+    tbAmt.textContent = 'Est. ' + fmt(p) + '  ·  ' + fmt(p/3) + ' pp';
+    hChoice.value = sel.value; hTotal.value = 'Est. ' + fmt(p) + ' (' + fmt(p/3) + ' per person, 3 guests)';
     btn.disabled = false; guard.style.display='none';
   }
   for (var i=0;i<radios.length;i++){ radios[i].addEventListener('change', function(){ setTimeout(updateTotal,0); }); }
